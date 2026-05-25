@@ -22,7 +22,7 @@ import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import { useTranslation } from 'react-i18next';
-import { Unit, UnitType } from '../../types/unit';
+import { Unit, UnitType, UnitWeapon } from '../../types/unit';
 import { Weapon } from '../../types/weapon';
 
 interface Props {
@@ -45,13 +45,79 @@ const UNIT_ICONS = {
   special: MilitaryTechIcon,
 } satisfies Record<UnitType, typeof MilitaryTechIcon>;
 
+interface WeaponAssignmentsProps {
+  assignments: UnitWeapon[];
+  weapons: Weapon[];
+}
+
+function WeaponAssignments({ assignments, weapons }: WeaponAssignmentsProps) {
+  const { t } = useTranslation();
+
+  return assignments.map((assignment) => {
+    const weapon = weapons.find((entry) => entry.id === assignment.id);
+
+    return (
+      <Box
+        key={`${assignment.type}-${assignment.id}`}
+        sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 2.25, mb: 2 }}
+      >
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 1, mb: 1.5 }}>
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            {assignment.count} x {weapon?.name ?? assignment.id}
+          </Typography>
+          <Chip label={t(`units.weaponMounts.${assignment.type}`)} variant="outlined" />
+        </Box>
+        {weapon ? (
+          <Box sx={{ overflowX: 'auto' }}>
+            <Table
+              size="small"
+              aria-label={`${weapon.name} ${t('weapons.profiles')}`}
+              sx={{
+                minWidth: 560,
+                '& th': { fontSize: '0.82rem', fontWeight: 600, whiteSpace: 'nowrap' },
+                '& td': { fontSize: '0.95rem' },
+              }}
+            >
+              <TableHead>
+                <TableRow>
+                  <TableCell>{t('weapons.profile')}</TableCell>
+                  <TableCell align="right">{t('weapons.shots')}</TableCell>
+                  <TableCell align="right">{t('weapons.hitOn')}</TableCell>
+                  <TableCell>{t('weapons.range')}</TableCell>
+                  <TableCell align="right">{t('weapons.penetration')}</TableCell>
+                  <TableCell align="right">{t('weapons.suppression')}</TableCell>
+                  <TableCell>{t('weapons.characteristics')}</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {weapon.profiles.map((profile) => (
+                  <TableRow key={profile.id}>
+                    <TableCell sx={{ fontWeight: 600 }}>{profile.name}</TableCell>
+                    <TableCell align="right">{profile.shots}</TableCell>
+                    <TableCell align="right">{profile.hitOn}</TableCell>
+                    <TableCell>{profile.rangeModifier}</TableCell>
+                    <TableCell align="right">{profile.armourPenetration ?? '-'}</TableCell>
+                    <TableCell align="right">{profile.suppressionModifier ?? '-'}</TableCell>
+                    <TableCell>{profile.characteristics?.join(', ') ?? '-'}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Box>
+        ) : (
+          <Typography variant="body1" color="warning.main" sx={{ fontSize: '1.05rem' }}>
+            {t('units.detail.weaponUnavailable')}
+          </Typography>
+        )}
+      </Box>
+    );
+  });
+}
+
 export default function UnitDetail({ unit, weapons }: Props) {
   const { t } = useTranslation();
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
-  const assignedWeapons = (unit?.weapons ?? []).map((assignment) => ({
-    assignment,
-    weapon: weapons.find((weapon) => weapon.id === assignment.id),
-  }));
+  const assignedWeapons = unit?.weapons ?? [];
 
   return (
     <Paper
@@ -164,67 +230,42 @@ export default function UnitDetail({ unit, weapons }: Props) {
               </>
             )}
 
+            {unit.type === 'infantry' && (
+              <>
+                <Divider sx={{ my: 2.5 }} />
+                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+                  {t('units.detail.bases')}
+                </Typography>
+                {unit.bases.map((base, index) => (
+                  <Box
+                    key={`${unit.id}-base-${index + 1}`}
+                    sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 2.25, mb: 2 }}
+                  >
+                    <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', mb: base.weapons.length ? 2 : 0 }}>
+                      <Typography variant="h6" sx={{ fontWeight: 600, flexGrow: 1 }}>
+                        {t('units.detail.base', { number: index + 1 })}
+                      </Typography>
+                      <Chip label={`${base.members} ${t('units.detail.members')}`} color="secondary" />
+                    </Box>
+                    {base.weapons.length ? (
+                      <WeaponAssignments assignments={base.weapons} weapons={weapons} />
+                    ) : (
+                      <Typography variant="body1" color="text.secondary">
+                        {t('units.detail.unarmed')}
+                      </Typography>
+                    )}
+                  </Box>
+                ))}
+              </>
+            )}
+
             {assignedWeapons.length > 0 && (
               <>
                 <Divider sx={{ my: 2.5 }} />
                 <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
                   {t('units.detail.weapons')}
                 </Typography>
-                {assignedWeapons.map(({ assignment, weapon }) => (
-                  <Box
-                    key={`${assignment.type}-${assignment.id}`}
-                    sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 2.25, mb: 2 }}
-                  >
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 1, mb: 1.5 }}>
-                      <Typography variant="h5" sx={{ fontWeight: 600 }}>
-                        {assignment.count} x {weapon?.name ?? assignment.id}
-                      </Typography>
-                      <Chip label={t(`units.weaponMounts.${assignment.type}`)} variant="outlined" />
-                    </Box>
-                    {weapon ? (
-                      <Box sx={{ overflowX: 'auto' }}>
-                        <Table
-                          size="small"
-                          aria-label={`${weapon.name} ${t('weapons.profiles')}`}
-                          sx={{
-                            minWidth: 560,
-                            '& th': { fontSize: '0.82rem', fontWeight: 600, whiteSpace: 'nowrap' },
-                            '& td': { fontSize: '0.95rem' },
-                          }}
-                        >
-                          <TableHead>
-                            <TableRow>
-                              <TableCell>{t('weapons.profile')}</TableCell>
-                              <TableCell align="right">{t('weapons.shots')}</TableCell>
-                              <TableCell align="right">{t('weapons.hitOn')}</TableCell>
-                              <TableCell>{t('weapons.range')}</TableCell>
-                              <TableCell align="right">{t('weapons.penetration')}</TableCell>
-                              <TableCell align="right">{t('weapons.suppression')}</TableCell>
-                              <TableCell>{t('weapons.characteristics')}</TableCell>
-                            </TableRow>
-                          </TableHead>
-                          <TableBody>
-                            {weapon.profiles.map((profile) => (
-                              <TableRow key={profile.id}>
-                                <TableCell sx={{ fontWeight: 600 }}>{profile.name}</TableCell>
-                                <TableCell align="right">{profile.shots}</TableCell>
-                                <TableCell align="right">{profile.hitOn}</TableCell>
-                                <TableCell>{profile.rangeModifier}</TableCell>
-                                <TableCell align="right">{profile.armourPenetration ?? '-'}</TableCell>
-                                <TableCell align="right">{profile.suppressionModifier ?? '-'}</TableCell>
-                                <TableCell>{profile.characteristics?.join(', ') ?? '-'}</TableCell>
-                              </TableRow>
-                            ))}
-                          </TableBody>
-                        </Table>
-                      </Box>
-                    ) : (
-                      <Typography variant="body1" color="warning.main" sx={{ fontSize: '1.05rem' }}>
-                        {t('units.detail.weaponUnavailable')}
-                      </Typography>
-                    )}
-                  </Box>
-                ))}
+                <WeaponAssignments assignments={assignedWeapons} weapons={weapons} />
               </>
             )}
           </>

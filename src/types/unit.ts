@@ -1,6 +1,6 @@
 /**
  * Unit domain types for Ashes of War.
- * Defines the 12 unit types, TankProfile armour values, and the Unit entity.
+ * Defines unit categories, infantry bases, armour values, and roster entries.
  */
 
 /** All valid unit type discriminants. */
@@ -36,11 +36,16 @@ export interface UnitWeapon {
   type: UnitWeaponMountType;
 }
 
-/** A single unit entry in the unit roster. */
-export interface Unit {
+/** A grouped infantry element carrying members and assigned weapons. */
+export interface InfantryBase {
+  members: number;
+  weapons: UnitWeapon[];
+}
+
+/** Common fields included in every roster entry. */
+interface BaseUnitFields {
   id: string;
   name: string;
-  type: UnitType;
   faction: string;
   /** First year the unit was available (inclusive). */
   from: number;
@@ -52,8 +57,25 @@ export interface Unit {
   resourceCosts?: Record<string, number>;
   /** Optional public image displayed in the unit detail panel. */
   imageUrl?: string;
+}
+
+/** Infantry roster entries organised into required bases. */
+export interface InfantryUnit extends BaseUnitFields {
+  type: 'infantry';
+  bases: InfantryBase[];
+  weapons?: never;
+  profile?: never;
+}
+
+/** Roster entries that are not infantry formations. */
+export interface NonInfantryUnit extends BaseUnitFields {
+  type: Exclude<UnitType, 'infantry'>;
+  bases?: never;
   /** Optional weapon assignments resolved against the weapon catalogue. */
   weapons?: UnitWeapon[];
   /** Armour profile — only present for tank units. */
   profile?: TankProfile;
 }
+
+/** A unit roster entry, discriminated by its category. */
+export type Unit = InfantryUnit | NonInfantryUnit;

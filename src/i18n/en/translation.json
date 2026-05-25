@@ -72,6 +72,10 @@
       "exposed": "Exposed",
       "resources": "Resource Costs",
       "availability": "Availability",
+      "bases": "Bases",
+      "base": "Base {{number}}",
+      "members": "members",
+      "unarmed": "No weapons assigned.",
       "weapons": "Weapons",
       "weaponUnavailable": "Weapon information is not available in the catalogue."
     },

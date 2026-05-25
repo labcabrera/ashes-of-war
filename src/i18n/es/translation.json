@@ -72,6 +72,10 @@
       "exposed": "Expuesto",
       "resources": "Costes de recursos",
       "availability": "Disponibilidad",
+      "bases": "Peanas",
+      "base": "Peana {{number}}",
+      "members": "integrantes",
+      "unarmed": "Sin armamento asignado.",
       "weapons": "Armamento",
       "weaponUnavailable": "No existe información de esta arma en el catálogo."
     },

@@ -1,19 +1,31 @@
 {
-  "_version": 1,
+  "_version": 2,
   "units": [
     {
-      "id": "german-infantry-01",
-      "name": "Wehrmacht Grenadiers (Escuadra)",
+      "id": "panzergrenadier-squad",
+      "name": "Panzergrenadier Squad",
       "type": "infantry",
       "faction": "german",
       "from": 1939,
       "to": 1945,
       "cost": 11,
       "resourceCosts": { "logistics": 5 },
-      "weapons": [
-        { "id": "de-mg-34-42", "count": 1, "type": "normal" },
-        { "id": "de-mauser-kar-98k", "count": 6, "type": "normal" }
-      ]
+      "bases": [
+        {
+          "members": 5,
+          "weapons": [
+            { "id": "de-mg-34-42", "count": 1, "type": "normal" },
+            { "id": "de-mauser-kar-98k", "count": 3, "type": "normal" }
+          ]
+        },
+        {
+          "members": 5,
+          "weapons": [
+            { "id": "de-mauser-kar-98k", "count": 5, "type": "normal" }
+          ]
+        }
+      ],
+      "imageUrl": "/images/panzergrenadier-squad.jpg"
     },
     {
       "id": "german-panzer-iv-a",
@@ -106,9 +118,7 @@
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "imageUrl": "/images/stug-iii-a.jpg",
-      "weapons": [
-        { "id": "de-kwk-37-l24", "count": 1, "type": "hull" }
-      ]
+      "weapons": [{ "id": "de-kwk-37-l24", "count": 1, "type": "hull" }]
     },
     {
       "id": "german-stug-iii-b",
@@ -121,9 +131,7 @@
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "imageUrl": "/images/stug-iii-b.jpg",
-      "weapons": [
-        { "id": "de-kwk-37-l24", "count": 1, "type": "hull" }
-      ]
+      "weapons": [{ "id": "de-kwk-37-l24", "count": 1, "type": "hull" }]
     },
     {
       "id": "german-stug-iii-c",
@@ -136,9 +144,7 @@
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "imageUrl": "/images/stug-iii-c.jpg",
-      "weapons": [
-        { "id": "de-kwk-37-l24", "count": 1, "type": "hull" }
-      ]
+      "weapons": [{ "id": "de-kwk-37-l24", "count": 1, "type": "hull" }]
     },
     {
       "id": "german-stug-iii-d",
@@ -150,9 +156,7 @@
       "cost": 25,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [
-        { "id": "de-kwk-37-l24", "count": 1, "type": "hull" }
-      ]
+      "weapons": [{ "id": "de-kwk-37-l24", "count": 1, "type": "hull" }]
     },
     {
       "id": "german-stug-iii-e",
@@ -165,9 +169,7 @@
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "imageUrl": "/images/stug-iii-e.jpg",
-      "weapons": [
-        { "id": "de-kwk-37-l24", "count": 1, "type": "hull" }
-      ]
+      "weapons": [{ "id": "de-kwk-37-l24", "count": 1, "type": "hull" }]
     },
     {
       "id": "german-stug-iii-f",
@@ -179,9 +181,7 @@
       "cost": 30,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [
-        { "id": "de-kwk-40-l43", "count": 1, "type": "hull" }
-      ]
+      "weapons": [{ "id": "de-kwk-40-l43", "count": 1, "type": "hull" }]
     },
     {
       "id": "german-stug-iii-g",
@@ -193,9 +193,7 @@
       "cost": 34,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [
-        { "id": "de-kwk-40-l48", "count": 1, "type": "hull" }
-      ]
+      "weapons": [{ "id": "de-kwk-40-l48", "count": 1, "type": "hull" }]
     },
     {
       "id": "german-artillery-01",
@@ -283,7 +281,8 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
-      "resourceCosts": { "logistics": 5 }
+      "resourceCosts": { "logistics": 5 },
+      "bases": [{ "members": 8, "weapons": [] }]
     },
     {
       "id": "ussr-t-34-76",
@@ -319,9 +318,7 @@
       "cost": 45,
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
-      "weapons": [
-        { "id": "su-d-5t", "count": 1, "type": "turret" }
-      ],
+      "weapons": [{ "id": "su-d-5t", "count": 1, "type": "turret" }],
       "imageUrl": "/images/is-1.jpg"
     },
     {
@@ -334,9 +331,7 @@
       "cost": 52,
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
-      "weapons": [
-        { "id": "su-d-25t", "count": 1, "type": "turret" }
-      ],
+      "weapons": [{ "id": "su-d-25t", "count": 1, "type": "turret" }],
       "imageUrl": "/images/is-2.jpg"
     },
     {
@@ -358,7 +353,8 @@
       "from": 1942,
       "to": 1945,
       "cost": 14,
-      "resourceCosts": { "logistics": 5 }
+      "resourceCosts": { "logistics": 5 },
+      "bases": [{ "members": 8, "weapons": [] }]
     },
     {
       "id": "ussr-recon-01",
