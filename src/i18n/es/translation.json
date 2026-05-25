@@ -39,6 +39,19 @@
       "unitTypes": "Tipos de unidad"
     }
   },
+  "catalogue": {
+    "title": "Catálogo",
+    "tabs": {
+      "label": "Categorías del catálogo",
+      "units": "Unidades",
+      "weapons": "Armas"
+    },
+    "view": {
+      "label": "Modo de visualización",
+      "cards": "Tarjetas",
+      "table": "Tabla"
+    }
+  },
   "units": {
     "title": "Catálogo de unidades",
     "filters": {
@@ -72,6 +85,32 @@
       "medic": "Médico",
       "aircraft": "Aviación",
       "special": "Especial"
+    }
+  },
+  "weapons": {
+    "noResults": "No hay armas disponibles.",
+    "profiles": "Perfiles",
+    "profile": "Perfil",
+    "profileCount_one": "{{count}} perfil",
+    "profileCount_other": "{{count}} perfiles",
+    "shots": "Disparos",
+    "hitOn": "Hit-On",
+    "range": "Distancia",
+    "penetration": "Pen.",
+    "suppression": "Supresión",
+    "rateOfFire": "Cadencia de disparo por minuto",
+    "theoretical": "Teórica",
+    "combat": "Combate",
+    "characteristics": "Características",
+    "detail": {
+      "title": "Detalle de arma",
+      "selectPrompt": "Selecciona un arma para consultar sus perfiles."
+    },
+    "types": {
+      "soft": "Ligera",
+      "hard": "Pesada",
+      "artillery": "Artillería",
+      "anti-aircraft": "Antiaérea"
     }
   },
   "army": {

@@ -4,6 +4,7 @@
  */
 import {
   Box,
+  Avatar,
   Typography,
   Chip,
   Divider,
@@ -60,14 +61,29 @@ export default function UnitDetail({ unit }: Props) {
     >
       <Box
         sx={{
-          minHeight: 172,
+          height: { xs: 260, lg: 500 },
           bgcolor: 'primary.dark',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        <UnitIcon sx={{ fontSize: 104, color: 'secondary.main' }} />
+        <Avatar
+          variant="rounded"
+          src={unit?.imageUrl}
+          alt={unit ? unit.name : ''}
+          sx={{
+            width: '100%',
+            height: '100%',
+            borderRadius: 0,
+            bgcolor: 'primary.dark',
+            '& img': {
+              objectFit: 'cover',
+            },
+          }}
+        >
+          <UnitIcon sx={{ fontSize: { xs: 120, lg: 144 }, color: 'secondary.main' }} />
+        </Avatar>
       </Box>
 
       <Box sx={{ p: 3 }}>

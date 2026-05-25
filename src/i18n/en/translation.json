@@ -39,6 +39,19 @@
       "unitTypes": "Unit Types"
     }
   },
+  "catalogue": {
+    "title": "Catalogue",
+    "tabs": {
+      "label": "Catalogue categories",
+      "units": "Units",
+      "weapons": "Weapons"
+    },
+    "view": {
+      "label": "View mode",
+      "cards": "Cards",
+      "table": "Table"
+    }
+  },
   "units": {
     "title": "Unit Roster",
     "filters": {
@@ -72,6 +85,32 @@
       "medic": "Medic",
       "aircraft": "Aircraft",
       "special": "Special"
+    }
+  },
+  "weapons": {
+    "noResults": "No weapons available.",
+    "profiles": "Profiles",
+    "profile": "Profile",
+    "profileCount_one": "{{count}} profile",
+    "profileCount_other": "{{count}} profiles",
+    "shots": "Shots",
+    "hitOn": "Hit-On",
+    "range": "Range",
+    "penetration": "Pen.",
+    "suppression": "Suppression",
+    "rateOfFire": "Rounds per minute",
+    "theoretical": "Theoretical",
+    "combat": "Combat",
+    "characteristics": "Characteristics",
+    "detail": {
+      "title": "Weapon details",
+      "selectPrompt": "Select a weapon to view its profiles."
+    },
+    "types": {
+      "soft": "Light",
+      "hard": "Heavy",
+      "artillery": "Artillery",
+      "anti-aircraft": "Anti-aircraft"
     }
   },
   "army": {

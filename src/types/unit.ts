@@ -40,6 +40,8 @@ export interface Unit {
   cost: number;
   /** Optional resource costs keyed by ResourcePool.key. */
   resourceCosts?: Record<string, number>;
+  /** Optional public image displayed in the unit detail panel. */
+  imageUrl?: string;
   /** Armour profile — only present for tank units. */
   profile?: TankProfile;
 }

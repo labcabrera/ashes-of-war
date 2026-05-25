@@ -2,7 +2,7 @@
   "_version": 1,
   "units": [
     {
-      "id": "de-infantry-01",
+      "id": "german-infantry-01",
       "name": "Wehrmacht Grenadiers",
       "type": "infantry",
       "faction": "german",
@@ -12,7 +12,31 @@
       "resourceCosts": { "fuel": 0, "logistics": 1 }
     },
     {
-      "id": "de-tank-01",
+      "id": "german-panzer-iv-a",
+      "name": "Panzer IV Ausf. A",
+      "type": "tank",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 18,
+      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
+      "imageUrl": "/images/panzer-iv-a.jpg"
+    },
+    {
+      "id": "german-panzer-iv-bc",
+      "name": "Panzer IV Ausf. B/C",
+      "type": "tank",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 18,
+      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
+      "imageUrl": "/images/panzer-iv-bc.jpg"
+    },
+    {
+      "id": "german-tank-01",
       "name": "Panzer IV Ausf. G",
       "type": "tank",
       "faction": "german",
@@ -21,10 +45,10 @@
       "cost": 18,
       "resourceCosts": { "fuel": 3, "logistics": 1 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
-      "imageUrl": "/images/panzer-iv-a.png"
+      "imageUrl": "/images/panzer-4-a.jpg"
     },
     {
-      "id": "de-tank-02",
+      "id": "german-tank-02",
       "name": "Panzer III Ausf. J",
       "type": "tank",
       "faction": "german",
@@ -35,7 +59,7 @@
       "profile": { "front": 50, "side": 30, "rear": 20, "exposed": 10 }
     },
     {
-      "id": "de-artillery-01",
+      "id": "german-artillery-01",
       "name": "10.5 cm leFH 18 Battery",
       "type": "artillery",
       "faction": "german",
@@ -45,7 +69,7 @@
       "resourceCosts": { "fuel": 1, "logistics": 2 }
     },
     {
-      "id": "de-recon-01",
+      "id": "german-recon-01",
       "name": "Sd.Kfz. 222 Armoured Car",
       "type": "reconnaissance",
       "faction": "german",
@@ -55,7 +79,7 @@
       "resourceCosts": { "fuel": 2, "intelligence": 1 }
     },
     {
-      "id": "de-motorised-01",
+      "id": "german-motorised-01",
       "name": "Motorised Infantry Company",
       "type": "motorised",
       "faction": "german",
@@ -65,7 +89,7 @@
       "resourceCosts": { "fuel": 2, "logistics": 1 }
     },
     {
-      "id": "de-sniper-01",
+      "id": "german-sniper-01",
       "name": "Wehrmacht Sniper Team",
       "type": "sniper",
       "faction": "german",
@@ -75,7 +99,7 @@
       "resourceCosts": { "intelligence": 1 }
     },
     {
-      "id": "de-engineer-01",
+      "id": "german-engineer-01",
       "name": "Pionier Squad",
       "type": "engineer",
       "faction": "german",
@@ -85,7 +109,7 @@
       "resourceCosts": { "logistics": 2 }
     },
     {
-      "id": "de-special-01",
+      "id": "german-special-01",
       "name": "Fallschirmjäger",
       "type": "special",
       "faction": "german",
@@ -95,7 +119,7 @@
       "resourceCosts": { "logistics": 2, "intelligence": 1 }
     },
     {
-      "id": "de-tank-03",
+      "id": "german-tank-03",
       "name": "Tiger I",
       "type": "tank",
       "faction": "german",
