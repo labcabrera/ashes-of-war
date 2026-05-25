@@ -6,10 +6,10 @@
       "name": "Wehrmacht Early War",
       "description": "German forces 1939–1941. Blitzkrieg doctrine — fast, coordinated combined-arms operations.",
       "faction": "german",
-      "pointBudget": 100,
+      "pointBudget": 180,
       "resourcePools": [
-        { "key": "fuel", "label": "army.resources.fuel", "max": 12 },
-        { "key": "logistics", "label": "army.resources.logistics", "max": 10 },
+        { "key": "fuel", "label": "army.resources.fuel", "max": 30 },
+        { "key": "logistics", "label": "army.resources.logistics", "max": 50 },
         { "key": "intelligence", "label": "army.resources.intelligence", "max": 4 }
       ]
     },
@@ -18,10 +18,11 @@
       "name": "Red Army — Stalingrad",
       "description": "Soviet forces 1942–1943. Defend Stalingrad and launch Operation Uranus.",
       "faction": "soviet",
-      "pointBudget": 100,
+      "pointBudget": 180,
       "resourcePools": [
-        { "key": "fuel", "label": "army.resources.fuel", "max": 10 },
-        { "key": "logistics", "label": "army.resources.logistics", "max": 12 }
+        { "key": "fuel", "label": "army.resources.fuel", "max": 25 },
+        { "key": "logistics", "label": "army.resources.logistics", "max": 60 },
+        { "key": "intelligence", "label": "army.resources.intelligence", "max": 4 }
       ]
     }
   ]

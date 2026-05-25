@@ -3,13 +3,13 @@
   "units": [
     {
       "id": "german-infantry-01",
-      "name": "Wehrmacht Grenadiers",
+      "name": "Wehrmacht Grenadiers (Escuadra)",
       "type": "infantry",
       "faction": "german",
       "from": 1939,
       "to": 1945,
-      "cost": 6,
-      "resourceCosts": { "fuel": 0, "logistics": 1 },
+      "cost": 11,
+      "resourceCosts": { "logistics": 5 },
       "weapons": [
         { "id": "de-mg-34-42", "count": 1, "type": "normal" },
         { "id": "de-mauser-kar-98k", "count": 6, "type": "normal" }
@@ -22,8 +22,8 @@
       "faction": "german",
       "from": 1943,
       "to": 1945,
-      "cost": 18,
-      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "cost": 32,
+      "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
       "imageUrl": "/images/panzer-iv-a.jpg",
       "weapons": [
@@ -38,8 +38,8 @@
       "faction": "german",
       "from": 1943,
       "to": 1945,
-      "cost": 18,
-      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "cost": 32,
+      "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
       "imageUrl": "/images/panzer-iv-bc.jpg",
       "weapons": [
@@ -54,8 +54,8 @@
       "faction": "german",
       "from": 1943,
       "to": 1945,
-      "cost": 18,
-      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "cost": 32,
+      "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
       "imageUrl": "/images/panzer-iv-d.jpg",
       "weapons": [
@@ -70,8 +70,8 @@
       "faction": "german",
       "from": 1943,
       "to": 1945,
-      "cost": 18,
-      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "cost": 32,
+      "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
       "weapons": [
         { "id": "de-kwk-40-l48", "count": 1, "type": "turret" },
@@ -86,8 +86,8 @@
       "faction": "german",
       "from": 1941,
       "to": 1943,
-      "cost": 14,
-      "resourceCosts": { "fuel": 2, "logistics": 1 },
+      "cost": 25,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 20, "exposed": 10 },
       "imageUrl": "/images/panzer-iii-j.jpg",
       "weapons": [
@@ -102,8 +102,8 @@
       "faction": "german",
       "from": 1940,
       "to": 1940,
-      "cost": 14,
-      "resourceCosts": { "fuel": 2, "logistics": 1 },
+      "cost": 25,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "imageUrl": "/images/stug-iii-a.jpg",
       "weapons": [
@@ -117,8 +117,8 @@
       "faction": "german",
       "from": 1940,
       "to": 1941,
-      "cost": 14,
-      "resourceCosts": { "fuel": 2, "logistics": 1 },
+      "cost": 25,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "imageUrl": "/images/stug-iii-b.jpg",
       "weapons": [
@@ -132,8 +132,8 @@
       "faction": "german",
       "from": 1941,
       "to": 1941,
-      "cost": 14,
-      "resourceCosts": { "fuel": 2, "logistics": 1 },
+      "cost": 25,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "imageUrl": "/images/stug-iii-c.jpg",
       "weapons": [
@@ -147,8 +147,8 @@
       "faction": "german",
       "from": 1941,
       "to": 1941,
-      "cost": 14,
-      "resourceCosts": { "fuel": 2, "logistics": 1 },
+      "cost": 25,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [
         { "id": "de-kwk-37-l24", "count": 1, "type": "hull" }
@@ -161,8 +161,8 @@
       "faction": "german",
       "from": 1941,
       "to": 1942,
-      "cost": 14,
-      "resourceCosts": { "fuel": 2, "logistics": 1 },
+      "cost": 25,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "imageUrl": "/images/stug-iii-e.jpg",
       "weapons": [
@@ -176,8 +176,8 @@
       "faction": "german",
       "from": 1942,
       "to": 1942,
-      "cost": 17,
-      "resourceCosts": { "fuel": 2, "logistics": 1 },
+      "cost": 30,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [
         { "id": "de-kwk-40-l43", "count": 1, "type": "hull" }
@@ -190,8 +190,8 @@
       "faction": "german",
       "from": 1942,
       "to": 1945,
-      "cost": 19,
-      "resourceCosts": { "fuel": 2, "logistics": 1 },
+      "cost": 34,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [
         { "id": "de-kwk-40-l48", "count": 1, "type": "hull" }
@@ -204,8 +204,8 @@
       "faction": "german",
       "from": 1939,
       "to": 1945,
-      "cost": 12,
-      "resourceCosts": { "fuel": 1, "logistics": 2 },
+      "cost": 21,
+      "resourceCosts": { "fuel": 3, "logistics": 10 },
       "imageUrl": "/images/10.5-cm-leFH-18.jpg"
     },
     {
@@ -215,8 +215,8 @@
       "faction": "german",
       "from": 1939,
       "to": 1944,
-      "cost": 8,
-      "resourceCosts": { "fuel": 2, "intelligence": 1 }
+      "cost": 14,
+      "resourceCosts": { "fuel": 5, "intelligence": 1 }
     },
     {
       "id": "german-motorised-01",
@@ -225,8 +225,8 @@
       "faction": "german",
       "from": 1939,
       "to": 1945,
-      "cost": 9,
-      "resourceCosts": { "fuel": 2, "logistics": 1 }
+      "cost": 16,
+      "resourceCosts": { "fuel": 5, "logistics": 5 }
     },
     {
       "id": "german-sniper-01",
@@ -235,7 +235,7 @@
       "faction": "german",
       "from": 1941,
       "to": 1945,
-      "cost": 5,
+      "cost": 9,
       "resourceCosts": { "intelligence": 1 }
     },
     {
@@ -245,8 +245,8 @@
       "faction": "german",
       "from": 1939,
       "to": 1945,
-      "cost": 7,
-      "resourceCosts": { "logistics": 2 }
+      "cost": 13,
+      "resourceCosts": { "logistics": 10 }
     },
     {
       "id": "german-special-01",
@@ -255,8 +255,8 @@
       "faction": "german",
       "from": 1940,
       "to": 1944,
-      "cost": 10,
-      "resourceCosts": { "logistics": 2, "intelligence": 1 }
+      "cost": 18,
+      "resourceCosts": { "logistics": 10, "intelligence": 1 }
     },
     {
       "id": "german-tiger-1",
@@ -265,8 +265,8 @@
       "faction": "german",
       "from": 1942,
       "to": 1945,
-      "cost": 28,
-      "resourceCosts": { "fuel": 4, "logistics": 2 },
+      "cost": 50,
+      "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 102, "side": 82, "rear": 82, "exposed": 15 },
       "weapons": [
         { "id": "de-kwk-36-l56", "count": 1, "type": "turret" },
@@ -282,8 +282,8 @@
       "faction": "soviet",
       "from": 1941,
       "to": 1945,
-      "cost": 5,
-      "resourceCosts": { "logistics": 1 }
+      "cost": 9,
+      "resourceCosts": { "logistics": 5 }
     },
     {
       "id": "ussr-t-34-76",
@@ -292,8 +292,8 @@
       "faction": "soviet",
       "from": 1941,
       "to": 1944,
-      "cost": 16,
-      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "cost": 29,
+      "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 45, "side": 45, "rear": 40, "exposed": 10 },
       "imageUrl": "/images/t-34-76.jpg"
     },
@@ -304,8 +304,8 @@
       "faction": "soviet",
       "from": 1944,
       "to": 1945,
-      "cost": 20,
-      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "cost": 36,
+      "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 60, "side": 45, "rear": 40, "exposed": 12 },
       "imageUrl": "/images/t-34-85.jpg"
     },
@@ -316,8 +316,8 @@
       "faction": "soviet",
       "from": 1943,
       "to": 1944,
-      "cost": 25,
-      "resourceCosts": { "fuel": 4, "logistics": 2 },
+      "cost": 45,
+      "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
       "weapons": [
         { "id": "su-d-5t", "count": 1, "type": "turret" }
@@ -331,8 +331,8 @@
       "faction": "soviet",
       "from": 1943,
       "to": 1945,
-      "cost": 29,
-      "resourceCosts": { "fuel": 4, "logistics": 2 },
+      "cost": 52,
+      "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
       "weapons": [
         { "id": "su-d-25t", "count": 1, "type": "turret" }
@@ -346,8 +346,9 @@
       "faction": "soviet",
       "from": 1941,
       "to": 1945,
-      "cost": 13,
-      "resourceCosts": { "fuel": 1, "logistics": 2 }
+      "cost": 23,
+      "resourceCosts": { "fuel": 3, "logistics": 10 },
+      "imageUrl": "/images/ussr-122mm-howitzer.jpg"
     },
     {
       "id": "ussr-infantry-02",
@@ -356,8 +357,8 @@
       "faction": "soviet",
       "from": 1942,
       "to": 1945,
-      "cost": 8,
-      "resourceCosts": { "logistics": 1 }
+      "cost": 14,
+      "resourceCosts": { "logistics": 5 }
     },
     {
       "id": "ussr-recon-01",
@@ -366,7 +367,7 @@
       "faction": "soviet",
       "from": 1941,
       "to": 1945,
-      "cost": 7,
+      "cost": 13,
       "resourceCosts": { "intelligence": 2 }
     },
     {
@@ -376,8 +377,8 @@
       "faction": "soviet",
       "from": 1941,
       "to": 1945,
-      "cost": 4,
-      "resourceCosts": { "logistics": 1 }
+      "cost": 7,
+      "resourceCosts": { "logistics": 5 }
     },
     {
       "id": "ussr-sniper-01",
@@ -386,7 +387,7 @@
       "faction": "soviet",
       "from": 1941,
       "to": 1945,
-      "cost": 5,
+      "cost": 9,
       "resourceCosts": { "intelligence": 1 }
     }
   ]

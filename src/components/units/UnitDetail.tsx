@@ -182,45 +182,42 @@ export default function UnitDetail({ unit, weapons }: Props) {
                       <Chip label={t(`units.weaponMounts.${assignment.type}`)} variant="outlined" />
                     </Box>
                     {weapon ? (
-                      weapon.profiles.map((profile) => (
-                        <Box
-                          key={profile.id}
+                      <Box sx={{ overflowX: 'auto' }}>
+                        <Table
+                          size="small"
+                          aria-label={`${weapon.name} ${t('weapons.profiles')}`}
                           sx={{
-                            '& + &': { mt: 2 },
+                            minWidth: 560,
+                            '& th': { fontSize: '0.82rem', fontWeight: 600, whiteSpace: 'nowrap' },
+                            '& td': { fontSize: '0.95rem' },
                           }}
                         >
-                          <Typography variant="subtitle1" sx={{ mb: 1, fontWeight: 600 }}>
-                            {profile.name}
-                          </Typography>
-                          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                            <Chip label={`${t('weapons.shots')}: ${profile.shots}`} color="secondary" />
-                            <Chip label={`${t('weapons.hitOn')}: ${profile.hitOn}`} variant="outlined" />
-                            <Chip label={`${t('weapons.range')}: ${profile.rangeModifier}`} variant="outlined" />
-                            {profile.armourPenetration !== undefined && (
-                              <Chip
-                                label={`${t('weapons.penetration')}: ${profile.armourPenetration}`}
-                                color="error"
-                                variant="outlined"
-                              />
-                            )}
-                            {profile.suppressionModifier !== undefined && (
-                              <Chip
-                                label={`${t('weapons.suppression')}: ${profile.suppressionModifier}`}
-                                color="warning"
-                                variant="outlined"
-                              />
-                            )}
-                            {(profile.characteristics ?? []).map((characteristic) => (
-                              <Chip
-                                key={characteristic}
-                                label={characteristic}
-                                color="info"
-                                variant="outlined"
-                              />
+                          <TableHead>
+                            <TableRow>
+                              <TableCell>{t('weapons.profile')}</TableCell>
+                              <TableCell align="right">{t('weapons.shots')}</TableCell>
+                              <TableCell align="right">{t('weapons.hitOn')}</TableCell>
+                              <TableCell>{t('weapons.range')}</TableCell>
+                              <TableCell align="right">{t('weapons.penetration')}</TableCell>
+                              <TableCell align="right">{t('weapons.suppression')}</TableCell>
+                              <TableCell>{t('weapons.characteristics')}</TableCell>
+                            </TableRow>
+                          </TableHead>
+                          <TableBody>
+                            {weapon.profiles.map((profile) => (
+                              <TableRow key={profile.id}>
+                                <TableCell sx={{ fontWeight: 600 }}>{profile.name}</TableCell>
+                                <TableCell align="right">{profile.shots}</TableCell>
+                                <TableCell align="right">{profile.hitOn}</TableCell>
+                                <TableCell>{profile.rangeModifier}</TableCell>
+                                <TableCell align="right">{profile.armourPenetration ?? '-'}</TableCell>
+                                <TableCell align="right">{profile.suppressionModifier ?? '-'}</TableCell>
+                                <TableCell>{profile.characteristics?.join(', ') ?? '-'}</TableCell>
+                              </TableRow>
                             ))}
-                          </Box>
-                        </Box>
-                      ))
+                          </TableBody>
+                        </Table>
+                      </Box>
                     ) : (
                       <Typography variant="body1" color="warning.main" sx={{ fontSize: '1.05rem' }}>
                         {t('units.detail.weaponUnavailable')}
