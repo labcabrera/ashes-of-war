@@ -26,6 +26,16 @@ export interface TankProfile {
   exposed: number;
 }
 
+/** Classification of how a unit carries or mounts an assigned weapon. */
+export type UnitWeaponMountType = 'normal' | 'turret' | 'coaxial' | 'hull';
+
+/** A reference to a weapon from the static weapon catalogue. */
+export interface UnitWeapon {
+  id: string;
+  count: number;
+  type: UnitWeaponMountType;
+}
+
 /** A single unit entry in the unit roster. */
 export interface Unit {
   id: string;
@@ -42,6 +52,8 @@ export interface Unit {
   resourceCosts?: Record<string, number>;
   /** Optional public image displayed in the unit detail panel. */
   imageUrl?: string;
+  /** Optional weapon assignments resolved against the weapon catalogue. */
+  weapons?: UnitWeapon[];
   /** Armour profile — only present for tank units. */
   profile?: TankProfile;
 }

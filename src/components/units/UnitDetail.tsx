@@ -23,9 +23,11 @@ import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import { useTranslation } from 'react-i18next';
 import { Unit, UnitType } from '../../types/unit';
+import { Weapon } from '../../types/weapon';
 
 interface Props {
   unit: Unit | null;
+  weapons: Weapon[];
 }
 
 const UNIT_ICONS = {
@@ -43,9 +45,13 @@ const UNIT_ICONS = {
   special: MilitaryTechIcon,
 } satisfies Record<UnitType, typeof MilitaryTechIcon>;
 
-export default function UnitDetail({ unit }: Props) {
+export default function UnitDetail({ unit, weapons }: Props) {
   const { t } = useTranslation();
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
+  const assignedWeapons = (unit?.weapons ?? []).map((assignment) => ({
+    assignment,
+    weapon: weapons.find((weapon) => weapon.id === assignment.id),
+  }));
 
   return (
     <Paper
@@ -148,6 +154,55 @@ export default function UnitDetail({ unit }: Props) {
                     </TableRow>
                   </TableBody>
                 </Table>
+              </>
+            )}
+
+            {assignedWeapons.length > 0 && (
+              <>
+                <Divider sx={{ my: 1.5 }} />
+                <Typography variant="subtitle2" gutterBottom>
+                  {t('units.detail.weapons')}
+                </Typography>
+                {assignedWeapons.map(({ assignment, weapon }) => (
+                  <Box
+                    key={`${assignment.type}-${assignment.id}`}
+                    sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 1.5, mb: 1.5 }}
+                  >
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 1, mb: 1 }}>
+                      <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                        {assignment.count} x {weapon?.name ?? assignment.id}
+                      </Typography>
+                      <Chip
+                        size="small"
+                        label={t(`units.weaponMounts.${assignment.type}`)}
+                        variant="outlined"
+                      />
+                    </Box>
+                    {weapon ? (
+                      weapon.profiles.map((profile) => (
+                        <Typography
+                          key={profile.id}
+                          variant="caption"
+                          color="text.secondary"
+                          sx={{ display: 'block' }}
+                        >
+                          {profile.name}: {t('weapons.hitOn')} {profile.hitOn}, {t('weapons.range')}{' '}
+                          {profile.rangeModifier}
+                          {profile.armourPenetration !== undefined
+                            ? `, ${t('weapons.penetration')} ${profile.armourPenetration}`
+                            : ''}
+                          {profile.suppressionModifier !== undefined
+                            ? `, ${t('weapons.suppression')} ${profile.suppressionModifier}`
+                            : ''}
+                        </Typography>
+                      ))
+                    ) : (
+                      <Typography variant="caption" color="warning.main">
+                        {t('units.detail.weaponUnavailable')}
+                      </Typography>
+                    )}
+                  </Box>
+                ))}
               </>
             )}
           </>

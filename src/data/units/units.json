@@ -9,7 +9,11 @@
       "from": 1939,
       "to": 1945,
       "cost": 6,
-      "resourceCosts": { "fuel": 0, "logistics": 1 }
+      "resourceCosts": { "fuel": 0, "logistics": 1 },
+      "weapons": [
+        { "id": "de-mg-34-42", "count": 1, "type": "normal" },
+        { "id": "de-mauser-kar-98k", "count": 6, "type": "normal" }
+      ]
     },
     {
       "id": "german-panzer-iv-a",
@@ -21,7 +25,11 @@
       "cost": 18,
       "resourceCosts": { "fuel": 3, "logistics": 1 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
-      "imageUrl": "/images/panzer-iv-a.jpg"
+      "imageUrl": "/images/panzer-iv-a.jpg",
+      "weapons": [
+        { "id": "de-kwk-37-l24", "count": 1, "type": "turret" },
+        { "id": "de-mg-34-42", "count": 1, "type": "coaxial" }
+      ]
     },
     {
       "id": "german-panzer-iv-bc",
@@ -33,7 +41,27 @@
       "cost": 18,
       "resourceCosts": { "fuel": 3, "logistics": 1 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
-      "imageUrl": "/images/panzer-iv-bc.jpg"
+      "imageUrl": "/images/panzer-iv-bc.jpg",
+      "weapons": [
+        { "id": "de-kwk-37-l24", "count": 1, "type": "turret" },
+        { "id": "de-mg-34-42", "count": 1, "type": "coaxial" }
+      ]
+    },
+    {
+      "id": "german-panzer-iv-d",
+      "name": "Panzer IV Ausf. D",
+      "type": "tank",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 18,
+      "resourceCosts": { "fuel": 3, "logistics": 1 },
+      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
+      "imageUrl": "/images/panzer-iv-d.jpg",
+      "weapons": [
+        { "id": "de-kwk-37-l24", "count": 1, "type": "turret" },
+        { "id": "de-mg-34-42", "count": 1, "type": "coaxial" }
+      ]
     },
     {
       "id": "german-tank-01",
@@ -45,7 +73,11 @@
       "cost": 18,
       "resourceCosts": { "fuel": 3, "logistics": 1 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
-      "imageUrl": "/images/panzer-4-a.jpg"
+      "weapons": [
+        { "id": "de-kwk-40-l48", "count": 1, "type": "turret" },
+        { "id": "de-mg-34-42", "count": 1, "type": "coaxial" }
+      ],
+      "imageUrl": "/images/panzer-iv-g.jpg"
     },
     {
       "id": "german-tank-02",
@@ -127,7 +159,11 @@
       "to": 1945,
       "cost": 28,
       "resourceCosts": { "fuel": 4, "logistics": 2 },
-      "profile": { "front": 102, "side": 82, "rear": 82, "exposed": 15 }
+      "profile": { "front": 102, "side": 82, "rear": 82, "exposed": 15 },
+      "weapons": [
+        { "id": "de-kwk-36-l56", "count": 1, "type": "turret" },
+        { "id": "de-mg-34-42", "count": 1, "type": "coaxial" }
+      ]
     },
     {
       "id": "ussr-infantry-01",

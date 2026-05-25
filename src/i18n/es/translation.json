@@ -70,7 +70,15 @@
       "rear": "Trasero",
       "exposed": "Expuesto",
       "resources": "Costes de recursos",
-      "availability": "Disponibilidad"
+      "availability": "Disponibilidad",
+      "weapons": "Armamento",
+      "weaponUnavailable": "No existe información de esta arma en el catálogo."
+    },
+    "weaponMounts": {
+      "normal": "Normal",
+      "turret": "Torreta",
+      "coaxial": "Coaxial",
+      "hull": "Casco"
     },
     "types": {
       "infantry": "Infantería",

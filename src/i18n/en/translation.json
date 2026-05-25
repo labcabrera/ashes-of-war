@@ -70,7 +70,15 @@
       "rear": "Rear",
       "exposed": "Exposed",
       "resources": "Resource Costs",
-      "availability": "Availability"
+      "availability": "Availability",
+      "weapons": "Weapons",
+      "weaponUnavailable": "Weapon information is not available in the catalogue."
+    },
+    "weaponMounts": {
+      "normal": "Normal",
+      "turret": "Turret",
+      "coaxial": "Coaxial",
+      "hull": "Hull"
     },
     "types": {
       "infantry": "Infantry",

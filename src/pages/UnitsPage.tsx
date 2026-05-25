@@ -115,7 +115,7 @@ export default function UnitsPage() {
               onSelect={setSelectedUnit}
             />
 
-            <UnitDetail unit={selectedUnit} />
+            <UnitDetail unit={selectedUnit} weapons={weapons} />
           </Box>
         </>
       ) : (

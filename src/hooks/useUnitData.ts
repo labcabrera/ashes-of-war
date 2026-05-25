@@ -21,7 +21,9 @@ interface UseUnitDataResult {
   isOutOfYear: (unit: Unit) => boolean;
 }
 
-const allUnits = unitsData.units as unknown as Unit[];
+const allUnits = [...(unitsData.units as unknown as Unit[])].sort((first, second) =>
+  first.name.localeCompare(second.name),
+);
 
 export function useUnitData(): UseUnitDataResult {
   const [filters, setFilters] = useState<UnitFilters>({
