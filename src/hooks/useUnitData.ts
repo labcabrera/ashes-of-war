@@ -7,6 +7,7 @@ import { Unit, UnitType } from '../types/unit';
 import unitsData from '../data/units/units.json';
 
 interface UnitFilters {
+  name: string;
   faction: string;
   type: UnitType | '';
   year: number | '';
@@ -15,6 +16,7 @@ interface UnitFilters {
 interface UseUnitDataResult {
   units: Unit[];
   filters: UnitFilters;
+  setName: (name: string) => void;
   setFilaction: (faction: string) => void;
   setType: (type: UnitType | '') => void;
   setYear: (year: number | '') => void;
@@ -27,11 +29,14 @@ const allUnits = [...(unitsData.units as unknown as Unit[])].sort((first, second
 
 export function useUnitData(): UseUnitDataResult {
   const [filters, setFilters] = useState<UnitFilters>({
+    name: '',
     faction: '',
     type: '',
     year: '',
   });
 
+  const setName = (name: string) =>
+    setFilters((prev) => ({ ...prev, name }));
   const setFilaction = (faction: string) =>
     setFilters((prev) => ({ ...prev, faction }));
   const setType = (type: UnitType | '') =>
@@ -45,12 +50,15 @@ export function useUnitData(): UseUnitDataResult {
   };
 
   const units = useMemo(() => {
+    const normalizedName = filters.name.trim().toLocaleLowerCase();
+
     return allUnits.filter((unit) => {
+      if (normalizedName && !unit.name.toLocaleLowerCase().includes(normalizedName)) return false;
       if (filters.faction && unit.faction !== filters.faction) return false;
       if (filters.type && unit.type !== filters.type) return false;
       return true;
     });
-  }, [filters.faction, filters.type]);
+  }, [filters.name, filters.faction, filters.type]);
 
-  return { units, filters, setFilaction, setType, setYear, isOutOfYear };
+  return { units, filters, setName, setFilaction, setType, setYear, isOutOfYear };
 }

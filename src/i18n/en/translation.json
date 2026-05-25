@@ -55,6 +55,7 @@
   "units": {
     "title": "Unit Roster",
     "filters": {
+      "name": "Search by name",
       "faction": "Faction",
       "type": "Unit Type",
       "year": "Year"

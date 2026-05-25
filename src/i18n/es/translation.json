@@ -55,6 +55,7 @@
   "units": {
     "title": "Catálogo de unidades",
     "filters": {
+      "name": "Buscar por nombre",
       "faction": "Facción",
       "type": "Tipo de unidad",
       "year": "Año"

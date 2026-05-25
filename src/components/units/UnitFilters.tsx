@@ -1,5 +1,5 @@
 /**
- * UnitFilters — faction Select, type Select, and year TextField for filtering units.
+ * UnitFilters — name, faction, type, and year controls for filtering units.
  * Year filter is the FR-019 requirement.
  */
 import { Box, FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/material';
@@ -13,20 +13,24 @@ const UNIT_TYPES: UnitType[] = [
 ];
 
 interface Props {
+  name: string;
   faction: string;
   factions: string[];
   type: UnitType | '';
   year: number | '';
+  onNameChange: (v: string) => void;
   onFactionChange: (v: string) => void;
   onTypeChange: (v: UnitType | '') => void;
   onYearChange: (v: number | '') => void;
 }
 
 export default function UnitFilters({
+  name,
   faction,
   factions,
   type,
   year,
+  onNameChange,
   onFactionChange,
   onTypeChange,
   onYearChange,
@@ -35,6 +39,15 @@ export default function UnitFilters({
 
   return (
     <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 2 }}>
+      <TextField
+        size="small"
+        label={t('units.filters.name')}
+        type="search"
+        value={name}
+        onChange={(e) => onNameChange(e.target.value)}
+        sx={{ minWidth: 220 }}
+      />
+
       <FormControl size="small" sx={{ minWidth: 140 }}>
         <InputLabel>{t('units.filters.faction')}</InputLabel>
         <Select

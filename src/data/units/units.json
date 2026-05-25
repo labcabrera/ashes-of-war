@@ -88,7 +88,12 @@
       "to": 1943,
       "cost": 14,
       "resourceCosts": { "fuel": 2, "logistics": 1 },
-      "profile": { "front": 50, "side": 30, "rear": 20, "exposed": 10 }
+      "profile": { "front": 50, "side": 30, "rear": 20, "exposed": 10 },
+      "imageUrl": "/images/panzer-iii-j.jpg",
+      "weapons": [
+        { "id": "de-kwk-39", "count": 1, "type": "turret" },
+        { "id": "de-mg-34-42", "count": 1, "type": "coaxial" }
+      ]
     },
     {
       "id": "german-artillery-01",
@@ -151,8 +156,8 @@
       "resourceCosts": { "logistics": 2, "intelligence": 1 }
     },
     {
-      "id": "german-tank-03",
-      "name": "Tiger I",
+      "id": "german-tiger-1",
+      "name": "Tiger Ausf. H1 / E",
       "type": "tank",
       "faction": "german",
       "from": 1942,
@@ -163,7 +168,8 @@
       "weapons": [
         { "id": "de-kwk-36-l56", "count": 1, "type": "turret" },
         { "id": "de-mg-34-42", "count": 1, "type": "coaxial" }
-      ]
+      ],
+      "imageUrl": "/images/tiger-i.jpg"
     },
     {
       "id": "ussr-infantry-01",

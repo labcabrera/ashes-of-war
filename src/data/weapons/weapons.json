@@ -117,6 +117,21 @@
       ]
     },
     {
+      "id": "de-kwk-39",
+      "name": "5 cm KwK 39",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 2,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 7
+        }
+      ]
+    },
+    {
       "id": "de-kwk-40-l43",
       "name": "7.5 cm KwK 40 L/43",
       "type": "hard",

@@ -29,7 +29,7 @@ type ViewMode = 'cards' | 'table';
 
 export default function UnitsPage() {
   const { t } = useTranslation();
-  const { units, filters, setFilaction, setType, setYear, isOutOfYear } = useUnitData();
+  const { units, filters, setName, setFilaction, setType, setYear, isOutOfYear } = useUnitData();
   const [activeTab, setActiveTab] = useState<CatalogueTab>('units');
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
@@ -90,10 +90,12 @@ export default function UnitsPage() {
       {activeTab === 'units' ? (
         <>
           <UnitFilters
+            name={filters.name}
             faction={filters.faction}
             factions={factions}
             type={filters.type}
             year={filters.year}
+            onNameChange={setName}
             onFactionChange={setFilaction}
             onTypeChange={setType}
             onYearChange={setYear}
@@ -102,7 +104,7 @@ export default function UnitsPage() {
           <Box
             sx={{
               display: 'grid',
-              gridTemplateColumns: { xs: '1fr', lg: 'minmax(0, 2fr) minmax(320px, 1fr)' },
+              gridTemplateColumns: { xs: '1fr', lg: 'minmax(0, 1.65fr) minmax(420px, 1fr)' },
               alignItems: 'start',
               gap: 3,
             }}

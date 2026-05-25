@@ -92,38 +92,40 @@ export default function UnitDetail({ unit, weapons }: Props) {
         </Avatar>
       </Box>
 
-      <Box sx={{ p: 3 }}>
+      <Box sx={{ p: { xs: 3, lg: 3.5 } }}>
         {!unit ? (
           <>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h5" gutterBottom>
               {t('units.detail.title')}
             </Typography>
-            <Typography color="text.secondary">{t('units.detail.selectPrompt')}</Typography>
+            <Typography variant="body1" color="text.secondary">
+              {t('units.detail.selectPrompt')}
+            </Typography>
           </>
         ) : (
           <>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
+            <Typography variant="h4" sx={{ fontWeight: 600, mb: 2.5 }}>
               {unit.name}
             </Typography>
 
-            <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2 }}>
-              <Chip label={t(`units.types.${unit.type}`)} size="small" />
-              <Chip label={unit.faction} size="small" />
-              <Chip label={`${unit.cost} pts`} size="small" color="secondary" />
+            <Box sx={{ display: 'flex', gap: 1.25, flexWrap: 'wrap', mb: 2.5 }}>
+              <Chip label={t(`units.types.${unit.type}`)} />
+              <Chip label={unit.faction} />
+              <Chip label={`${unit.cost} pts`} color="secondary" />
             </Box>
 
-            <Typography variant="body2" color="text.secondary" gutterBottom>
+            <Typography variant="body1" color="text.secondary" gutterBottom>
               {t('units.detail.availability')}: {unit.from}–{unit.to}
             </Typography>
 
             {unit.resourceCosts && Object.keys(unit.resourceCosts).length > 0 && (
               <>
-                <Divider sx={{ my: 1.5 }} />
-                <Typography variant="subtitle2" gutterBottom>
+                <Divider sx={{ my: 2.5 }} />
+                <Typography variant="h6" gutterBottom>
                   {t('units.detail.resources')}
                 </Typography>
                 {Object.entries(unit.resourceCosts).map(([key, val]) => (
-                  <Typography key={key} variant="body2">
+                  <Typography key={key} variant="body1">
                     {t(`army.resources.${key}`)}: {val}
                   </Typography>
                 ))}
@@ -132,11 +134,16 @@ export default function UnitDetail({ unit, weapons }: Props) {
 
             {unit.type === 'tank' && unit.profile && (
               <>
-                <Divider sx={{ my: 1.5 }} />
-                <Typography variant="subtitle2" gutterBottom>
+                <Divider sx={{ my: 2.5 }} />
+                <Typography variant="h6" gutterBottom>
                   {t('units.detail.armour')}
                 </Typography>
-                <Table size="small">
+                <Table
+                  sx={{
+                    '& th': { fontSize: '0.95rem', fontWeight: 600 },
+                    '& td': { fontSize: '1.1rem', fontWeight: 600 },
+                  }}
+                >
                   <TableHead>
                     <TableRow>
                       <TableCell>{t('units.detail.front')}</TableCell>
@@ -159,32 +166,28 @@ export default function UnitDetail({ unit, weapons }: Props) {
 
             {assignedWeapons.length > 0 && (
               <>
-                <Divider sx={{ my: 1.5 }} />
-                <Typography variant="subtitle2" gutterBottom>
+                <Divider sx={{ my: 2.5 }} />
+                <Typography variant="h6" gutterBottom>
                   {t('units.detail.weapons')}
                 </Typography>
                 {assignedWeapons.map(({ assignment, weapon }) => (
                   <Box
                     key={`${assignment.type}-${assignment.id}`}
-                    sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 1.5, mb: 1.5 }}
+                    sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 2, mb: 2 }}
                   >
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 1, mb: 1 }}>
-                      <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 1, mb: 1.5 }}>
+                      <Typography variant="h6" sx={{ fontWeight: 600 }}>
                         {assignment.count} x {weapon?.name ?? assignment.id}
                       </Typography>
-                      <Chip
-                        size="small"
-                        label={t(`units.weaponMounts.${assignment.type}`)}
-                        variant="outlined"
-                      />
+                      <Chip label={t(`units.weaponMounts.${assignment.type}`)} variant="outlined" />
                     </Box>
                     {weapon ? (
                       weapon.profiles.map((profile) => (
                         <Typography
                           key={profile.id}
-                          variant="caption"
+                          variant="body2"
                           color="text.secondary"
-                          sx={{ display: 'block' }}
+                          sx={{ display: 'block', lineHeight: 1.7 }}
                         >
                           {profile.name}: {t('weapons.hitOn')} {profile.hitOn}, {t('weapons.range')}{' '}
                           {profile.rangeModifier}
@@ -197,7 +200,7 @@ export default function UnitDetail({ unit, weapons }: Props) {
                         </Typography>
                       ))
                     ) : (
-                      <Typography variant="caption" color="warning.main">
+                      <Typography variant="body2" color="warning.main">
                         {t('units.detail.weaponUnavailable')}
                       </Typography>
                     )}

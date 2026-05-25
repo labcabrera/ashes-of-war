@@ -20,13 +20,40 @@ export default function UnitCard({ unit, isOutOfYear, selected, onClick }: Props
       sx={{
         opacity: isOutOfYear ? 0.38 : 1,
         minHeight: 176,
+        position: 'relative',
+        overflow: 'hidden',
         border: 2,
         borderColor: selected ? 'secondary.main' : 'transparent',
         transition: 'opacity 0.2s, border-color 0.2s',
       }}
     >
+      {unit.imageUrl && (
+        <Box
+          component="img"
+          src={unit.imageUrl}
+          alt=""
+          aria-hidden="true"
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            filter: 'brightness(0.34) saturate(0.75)',
+          }}
+        />
+      )}
       <CardActionArea onClick={onClick} aria-pressed={selected} sx={{ height: '100%' }}>
-        <CardContent sx={{ p: 2.5 }}>
+        <CardContent
+          sx={{
+            position: 'relative',
+            minHeight: 176,
+            p: 2.5,
+            background: unit.imageUrl
+              ? 'linear-gradient(180deg, rgba(20,20,20,0.18) 0%, rgba(20,20,20,0.52) 100%)'
+              : 'transparent',
+          }}
+        >
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <Typography variant="h6" sx={{ fontWeight: 600, pr: 1 }}>
               {unit.name}
