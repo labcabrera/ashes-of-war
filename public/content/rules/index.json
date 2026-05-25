@@ -1,0 +1,21 @@
+{
+  "_version": 1,
+  "chapters": [
+    {
+      "id": "introduction",
+      "titleKey": "rules.chapter.introduction",
+      "files": {
+        "en": "/content/rules/en/01-introduction.md",
+        "es": "/content/rules/es/01-introduction.md"
+      }
+    },
+    {
+      "id": "unit-types",
+      "titleKey": "rules.chapter.unitTypes",
+      "files": {
+        "en": "/content/rules/en/02-unit-types.md",
+        "es": "/content/rules/es/02-unit-types.md"
+      }
+    }
+  ]
+}

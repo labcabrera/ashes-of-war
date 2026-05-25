@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "rules": "Reglamento",
+    "units": "Unidades",
+    "armyBuilder": "Constructor de Ejércitos",
+    "campaign": "Campaña"
+  },
+  "home": {
+    "title": "Ashes of War",
+    "subtitle": "Compañero de estrategia de mesa de la IIGM",
+    "welcome": "Bienvenido, comandante. Elige tu misión desde la navegación superior."
+  },
+  "common": {
+    "loading": "Cargando…",
+    "error": "Se ha producido un error.",
+    "comingSoon": "Próximamente",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "export": "Exportar",
+    "import": "Importar",
+    "add": "Añadir",
+    "remove": "Eliminar",
+    "close": "Cerrar",
+    "name": "Nombre",
+    "faction": "Facción",
+    "type": "Tipo",
+    "year": "Año",
+    "cost": "Puntos",
+    "all": "Todos"
+  },
+  "rules": {
+    "title": "Reglamento",
+    "chapters": "Capítulos",
+    "selectChapter": "Selecciona un capítulo para leer",
+    "chapter": {
+      "introduction": "Introducción",
+      "unitTypes": "Tipos de unidad"
+    }
+  },
+  "units": {
+    "title": "Catálogo de unidades",
+    "filters": {
+      "faction": "Facción",
+      "type": "Tipo de unidad",
+      "year": "Año"
+    },
+    "outOfYear": "Fuera de era",
+    "noResults": "Ninguna unidad coincide con los filtros actuales.",
+    "detail": {
+      "armour": "Perfil de blindaje",
+      "front": "Frontal",
+      "side": "Lateral",
+      "rear": "Trasero",
+      "exposed": "Expuesto",
+      "resources": "Costes de recursos",
+      "availability": "Disponibilidad"
+    },
+    "types": {
+      "infantry": "Infantería",
+      "tank": "Tanque",
+      "artillery": "Artillería",
+      "motorised": "Motorizado",
+      "mechanised": "Mecanizado",
+      "reconnaissance": "Reconocimiento",
+      "engineer": "Ingenieros",
+      "artillery-towed": "Artillería remolcada",
+      "sniper": "Francotirador",
+      "medic": "Médico",
+      "aircraft": "Aviación",
+      "special": "Especial"
+    }
+  },
+  "army": {
+    "title": "Constructor de Ejércitos",
+    "selectType": "Seleccionar tipo de ejército",
+    "budget": {
+      "title": "Presupuesto",
+      "points": "Puntos",
+      "overBudget": "Presupuesto excedido"
+    },
+    "units": {
+      "title": "Unidades del ejército",
+      "empty": "Aún no se han añadido unidades.",
+      "add": "Añadir al ejército",
+      "remove": "Eliminar"
+    },
+    "save": {
+      "title": "Guardar ejército",
+      "name": "Nombre del ejército",
+      "saved": "Ejército guardado.",
+      "deleted": "Ejército eliminado."
+    },
+    "export": {
+      "success": "Ejército exportado correctamente.",
+      "button": "Exportar"
+    },
+    "import": {
+      "success": "Ejército importado correctamente.",
+      "error": "Fichero de ejército inválido.",
+      "button": "Importar"
+    },
+    "resources": {
+      "fuel": "Combustible",
+      "logistics": "Logística",
+      "intelligence": "Inteligencia"
+    }
+  },
+  "campaign": {
+    "title": "Campaña",
+    "comingSoon": "El modo campaña estará disponible próximamente."
+  },
+  "language": {
+    "en": "English",
+    "es": "Español"
+  }
+}

@@ -1,4 +1,26 @@
 = Ashes of War
+:icons: font
+
+== Companion App
+
+A React SPA companion for this wargame system — rules browser, unit roster, and army builder.
+
+=== Quick Start
+
+[source,bash]
+----
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # production build
+npm test          # unit tests (watch mode)
+npm run lint      # ESLint check
+----
+
+=== Tech Stack
+
+React 18 · TypeScript 5 (strict) · Vite 5 · MUI v6 · react-router-dom v6 · react-i18next (EN/ES) · Vitest
+
+---
 
 _Borrador de propuestas del sistema de juego_
 

@@ -1,0 +1,103 @@
+# Unit Types
+
+Ashes of War features twelve distinct unit types, each with unique capabilities and limitations.
+
+## Infantry
+
+The backbone of any army. Infantry squads are versatile, cheap, and effective at holding objectives.
+
+- **Move:** 6"
+- **Strengths:** Excellent in cover, can assault and dig in.
+- **Weaknesses:** Vulnerable to indirect fire and tank assaults.
+
+## Tank
+
+Armoured vehicles are powerful offensive platforms. Each tank has an **Armour Profile** with four values:
+
+| Direction | Effect |
+|-----------|--------|
+| Front     | Shots from the front arc use this value |
+| Side      | Shots from the flank arc use this value |
+| Rear      | Shots from behind use this value |
+| Exposed   | Crew and optics — targeted by special weapons |
+
+- **Move:** 10"
+- **Strengths:** High firepower, hard to destroy from the front.
+- **Weaknesses:** Expensive, poor in close terrain, vulnerable to flanking.
+
+## Artillery
+
+Heavy guns capable of indirect fire. Artillery can engage targets beyond line of sight.
+
+- **Move:** 3"
+- **Strengths:** Long range, large blast radius.
+- **Weaknesses:** Low mobility, requires time to set up.
+
+## Motorised
+
+Infantry mounted in trucks or half-tracks for increased mobility.
+
+- **Move:** 12" (mounted), 6" (dismounted)
+- **Strengths:** High strategic mobility.
+- **Weaknesses:** Vehicles are vulnerable; must dismount to assault.
+
+## Mechanised
+
+Infantry mounted in armoured personnel carriers (APCs).
+
+- **Move:** 10" (mounted), 6" (dismounted)
+- **Strengths:** Protected transport, can fire from hatches.
+- **Weaknesses:** APCs are weaker than tanks.
+
+## Reconnaissance
+
+Fast, lightly equipped units designed to spot the enemy and gather information.
+
+- **Move:** 14"
+- **Strengths:** Can move before the initiative roll; reveals hidden units.
+- **Weaknesses:** Light armament, cannot hold objectives alone.
+
+## Engineer
+
+Specialist infantry trained in demolitions, bridge-building, and clearing obstacles.
+
+- **Move:** 6"
+- **Strengths:** Can place and clear mines, destroy obstacles, cross water features.
+- **Weaknesses:** Small unit size; not optimised for direct combat.
+
+## Towed Artillery
+
+Field guns that must be towed to reposition. Cheaper than self-propelled artillery.
+
+- **Move:** Tow vehicle speed (cannot fire when limbered)
+- **Strengths:** Good firepower at low cost.
+- **Weaknesses:** Requires a separate towing vehicle; slow to deploy.
+
+## Sniper
+
+Elite marksmen capable of eliminating high-value targets at extreme range.
+
+- **Move:** 6"
+- **Strengths:** Ignores cover penalties; can target officers and crew.
+- **Weaknesses:** Single target per activation; fragile.
+
+## Medic
+
+Support units that keep your infantry in the fight.
+
+- **Move:** 6"
+- **Strengths:** Can rally adjacent infantry for free during Rally Phase.
+- **Weaknesses:** Cannot attack; unarmed.
+
+## Aircraft
+
+Air support called in from off-board. Available once per game (or more with intelligence resources).
+
+- **Strengths:** Attacks anywhere on the table; ignores terrain.
+- **Weaknesses:** Can be shot down by AA units; limited uses.
+
+## Special
+
+Mission-specific units that do not fit standard categories — saboteurs, forward observers, command elements, etc.
+
+Special units have their own unique rules defined on their data card.

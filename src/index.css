@@ -1,0 +1,4 @@
+/* Global CSS resets — component styles are handled by MUI CssBaseline. */
+*, *::before, *::after {
+  box-sizing: border-box;
+}

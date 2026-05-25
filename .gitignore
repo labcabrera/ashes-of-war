@@ -1,0 +1,6 @@
+.github
+.specify
+.vscode
+specs
+node_modules
+dist

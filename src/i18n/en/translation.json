@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "rules": "Rules",
+    "units": "Units",
+    "armyBuilder": "Army Builder",
+    "campaign": "Campaign"
+  },
+  "home": {
+    "title": "Ashes of War",
+    "subtitle": "A WWII tabletop strategy companion",
+    "welcome": "Welcome, commander. Choose your mission from the navigation above."
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "An error occurred.",
+    "comingSoon": "Coming soon",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "export": "Export",
+    "import": "Import",
+    "add": "Add",
+    "remove": "Remove",
+    "close": "Close",
+    "name": "Name",
+    "faction": "Faction",
+    "type": "Type",
+    "year": "Year",
+    "cost": "Points",
+    "all": "All"
+  },
+  "rules": {
+    "title": "Rules",
+    "chapters": "Chapters",
+    "selectChapter": "Select a chapter to read",
+    "chapter": {
+      "introduction": "Introduction",
+      "unitTypes": "Unit Types"
+    }
+  },
+  "units": {
+    "title": "Unit Roster",
+    "filters": {
+      "faction": "Faction",
+      "type": "Unit Type",
+      "year": "Year"
+    },
+    "outOfYear": "Out of era",
+    "noResults": "No units match the current filters.",
+    "detail": {
+      "armour": "Armour Profile",
+      "front": "Front",
+      "side": "Side",
+      "rear": "Rear",
+      "exposed": "Exposed",
+      "resources": "Resource Costs",
+      "availability": "Availability"
+    },
+    "types": {
+      "infantry": "Infantry",
+      "tank": "Tank",
+      "artillery": "Artillery",
+      "motorised": "Motorised",
+      "mechanised": "Mechanised",
+      "reconnaissance": "Reconnaissance",
+      "engineer": "Engineer",
+      "artillery-towed": "Towed Artillery",
+      "sniper": "Sniper",
+      "medic": "Medic",
+      "aircraft": "Aircraft",
+      "special": "Special"
+    }
+  },
+  "army": {
+    "title": "Army Builder",
+    "selectType": "Select Army Type",
+    "budget": {
+      "title": "Budget",
+      "points": "Points",
+      "overBudget": "Over budget"
+    },
+    "units": {
+      "title": "Army Units",
+      "empty": "No units added yet.",
+      "add": "Add to Army",
+      "remove": "Remove"
+    },
+    "save": {
+      "title": "Save Army",
+      "name": "Army Name",
+      "saved": "Army saved.",
+      "deleted": "Army deleted."
+    },
+    "export": {
+      "success": "Army exported successfully.",
+      "button": "Export"
+    },
+    "import": {
+      "success": "Army imported successfully.",
+      "error": "Invalid army file.",
+      "button": "Import"
+    },
+    "resources": {
+      "fuel": "army.resources.fuel",
+      "logistics": "army.resources.logistics",
+      "intelligence": "army.resources.intelligence"
+    }
+  },
+  "campaign": {
+    "title": "Campaign",
+    "comingSoon": "Campaign mode coming soon."
+  },
+  "language": {
+    "en": "English",
+    "es": "Español"
+  }
+}
