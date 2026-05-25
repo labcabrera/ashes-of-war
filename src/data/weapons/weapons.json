@@ -1,0 +1,313 @@
+{
+  "_version": 1,
+  "weapons": [
+    {
+      "id": "de-mg-34-42",
+      "name": "MG 34 / MG 42",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "support-high",
+          "name": "Support - high cadence",
+          "shots": 18,
+          "hitOn": 9,
+          "rangeModifier": "30/20/-1",
+          "suppressionModifier": -2,
+          "characteristics": ["reliability-4-plus"]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 6,
+          "hitOn": 7,
+          "rangeModifier": "30/20/-1",
+          "suppressionModifier": -1,
+          "characteristics": ["reliability-3-plus"]
+        },
+        {
+          "id": "precision",
+          "name": "Precision",
+          "shots": 3,
+          "hitOn": 6,
+          "rangeModifier": "40/20/-1",
+          "suppressionModifier": 0
+        }
+      ]
+    },
+    {
+      "id": "de-mauser-kar-98k",
+      "name": "Mauser Kar 98k",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "suppressionModifier": 0,
+          "characteristics": ["reliability-2-plus", "saturation-2-plus"]
+        }
+      ]
+    },
+    {
+      "id": "de-mp-40",
+      "name": "MP 40",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "saturation",
+          "name": "Saturation",
+          "shots": 6,
+          "hitOn": 7,
+          "rangeModifier": "10/10/-2",
+          "suppressionModifier": -1,
+          "characteristics": ["reliability-4-plus"]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 3,
+          "hitOn": 6,
+          "rangeModifier": "10/10/-2",
+          "suppressionModifier": 0,
+          "characteristics": ["reliability-4-plus"]
+        }
+      ]
+    },
+    {
+      "id": "de-stg-44",
+      "name": "Sturmgewehr 44",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "assault",
+          "name": "Assault",
+          "shots": 4,
+          "hitOn": 6,
+          "rangeModifier": "20/20/-2",
+          "suppressionModifier": -1,
+          "characteristics": ["reliability-4-plus"]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "30/20/-1",
+          "suppressionModifier": 0,
+          "characteristics": ["reliability-4-plus"]
+        }
+      ]
+    },
+    {
+      "id": "de-kwk-37-l24",
+      "name": "7.5 cm KwK 37 L/24",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 2,
+          "hitOn": 5,
+          "rangeModifier": "40/20/-1",
+          "armourPenetration": 4,
+          "characteristics": ["area-3"]
+        }
+      ]
+    },
+    {
+      "id": "de-kwk-40-l43",
+      "name": "7.5 cm KwK 40 L/43",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 9,
+          "characteristics": ["sustained-fire-5-plus"]
+        }
+      ]
+    },
+    {
+      "id": "de-kwk-40-l48",
+      "name": "7.5 cm KwK 40 L/48",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": { "min": 10, "max": 12 },
+        "combat": { "min": 6, "max": 8 }
+      },
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 10,
+          "characteristics": ["sustained-fire-5-plus"]
+        }
+      ]
+    },
+    {
+      "id": "de-kwk-42-l70",
+      "name": "7.5 cm KwK 42 L/70",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "60/20/-1",
+          "armourPenetration": 14
+        },
+        {
+          "id": "apcr",
+          "name": "APCR",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "60/20/-1",
+          "armourPenetration": 19,
+          "characteristics": ["limited-ammunition-1"]
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "60/20/-1",
+          "armourPenetration": 3,
+          "suppressionModifier": -2,
+          "characteristics": ["area-4"]
+        }
+      ]
+    },
+    {
+      "id": "de-kwk-36-l56",
+      "name": "8.8 cm KwK 36 L/56",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": { "min": 6, "max": 8 },
+        "combat": { "min": 4, "max": 6 }
+      },
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 11
+        },
+        {
+          "id": "apcr",
+          "name": "APCR",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 14,
+          "characteristics": ["limited-ammunition-1"]
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 3,
+          "suppressionModifier": -2,
+          "characteristics": ["area-6"]
+        }
+      ]
+    },
+    {
+      "id": "de-kwk-43-l71",
+      "name": "8.8 cm KwK 43 L/71",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": { "min": 6, "max": 8 },
+        "combat": { "min": 3, "max": 5 }
+      },
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 19
+        },
+        {
+          "id": "apcr",
+          "name": "APCR",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 22,
+          "characteristics": ["limited-ammunition-1"]
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 4,
+          "suppressionModifier": -3,
+          "characteristics": ["area-8"]
+        }
+      ]
+    },
+    {
+      "id": "de-pak-40-l46",
+      "name": "7.5 cm PaK 40 L/46",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 12
+        }
+      ]
+    },
+    {
+      "id": "de-panzerfaust-60",
+      "name": "Panzerfaust 60",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "heat",
+          "name": "HEAT",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "20/10/-1",
+          "armourPenetration": 20,
+          "characteristics": ["heat", "one-shot"]
+        }
+      ]
+    },
+    {
+      "id": "de-panzerschreck-rpzb-54",
+      "name": "Panzerschreck RPzB 54",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "heat",
+          "name": "HEAT",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "30/10/-1",
+          "armourPenetration": 17,
+          "characteristics": ["heat", "one-shot"]
+        }
+      ]
+    }
+  ]
+}

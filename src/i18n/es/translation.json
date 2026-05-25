@@ -49,6 +49,8 @@
     "outOfYear": "Fuera de era",
     "noResults": "Ninguna unidad coincide con los filtros actuales.",
     "detail": {
+      "title": "Detalle de unidad",
+      "selectPrompt": "Selecciona una carta para consultar su ficha.",
       "armour": "Perfil de blindaje",
       "front": "Frontal",
       "side": "Lateral",

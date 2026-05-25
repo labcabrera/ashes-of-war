@@ -20,7 +20,8 @@
       "to": 1945,
       "cost": 18,
       "resourceCosts": { "fuel": 3, "logistics": 1 },
-      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 }
+      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
+      "imageUrl": "/images/panzer-iv-a.png"
     },
     {
       "id": "de-tank-02",

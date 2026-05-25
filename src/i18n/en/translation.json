@@ -49,6 +49,8 @@
     "outOfYear": "Out of era",
     "noResults": "No units match the current filters.",
     "detail": {
+      "title": "Unit details",
+      "selectPrompt": "Select a card to view its profile.",
       "armour": "Armour Profile",
       "front": "Front",
       "side": "Side",
@@ -102,9 +104,9 @@
       "button": "Import"
     },
     "resources": {
-      "fuel": "army.resources.fuel",
-      "logistics": "army.resources.logistics",
-      "intelligence": "army.resources.intelligence"
+      "fuel": "Fuel",
+      "logistics": "Logistics",
+      "intelligence": "Intelligence"
     }
   },
   "campaign": {

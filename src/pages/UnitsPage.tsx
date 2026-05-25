@@ -1,5 +1,5 @@
 /**
- * UnitsPage — unit roster browser with faction, type, and year filters (FR-019).
+ * UnitsPage - unit roster browser with faction, type, year filters, and detail panel (FR-019).
  */
 import { useState, useMemo } from 'react';
 import { Box, Typography } from '@mui/material';
@@ -37,9 +37,23 @@ export default function UnitsPage() {
         onYearChange={setYear}
       />
 
-      <UnitList units={units} isOutOfYear={isOutOfYear} onSelect={setSelected} />
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', lg: 'minmax(0, 2fr) minmax(320px, 1fr)' },
+          alignItems: 'start',
+          gap: 3,
+        }}
+      >
+        <UnitList
+          units={units}
+          isOutOfYear={isOutOfYear}
+          selectedId={selected?.id ?? null}
+          onSelect={setSelected}
+        />
 
-      <UnitDetail unit={selected} onClose={() => setSelected(null)} />
+        <UnitDetail unit={selected} />
+      </Box>
     </Box>
   );
 }

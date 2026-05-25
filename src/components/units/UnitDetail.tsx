@@ -1,42 +1,88 @@
 /**
- * UnitDetail — slide-in Drawer with detailed stats for a selected unit.
+ * UnitDetail - permanent information panel for a selected unit.
  * Conditionally renders the TankProfile section for tank units.
  */
 import {
-  Drawer,
   Box,
   Typography,
-  IconButton,
   Chip,
   Divider,
+  Paper,
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
 } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import FlightIcon from '@mui/icons-material/Flight';
+import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import { useTranslation } from 'react-i18next';
-import { Unit } from '../../types/unit';
+import { Unit, UnitType } from '../../types/unit';
 
 interface Props {
   unit: Unit | null;
-  onClose: () => void;
 }
 
-export default function UnitDetail({ unit, onClose }: Props) {
+const UNIT_ICONS = {
+  infantry: MilitaryTechIcon,
+  tank: DirectionsCarIcon,
+  artillery: GpsFixedIcon,
+  motorised: DirectionsCarIcon,
+  mechanised: DirectionsCarIcon,
+  reconnaissance: GpsFixedIcon,
+  engineer: EngineeringIcon,
+  'artillery-towed': GpsFixedIcon,
+  sniper: GpsFixedIcon,
+  medic: LocalHospitalIcon,
+  aircraft: FlightIcon,
+  special: MilitaryTechIcon,
+} satisfies Record<UnitType, typeof MilitaryTechIcon>;
+
+export default function UnitDetail({ unit }: Props) {
   const { t } = useTranslation();
+  const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
+
   return (
-    <Drawer anchor="right" open={unit !== null} onClose={onClose}>
-      <Box sx={{ width: 320, p: 2 }}>
-        {unit && (
+    <Paper
+      component="aside"
+      aria-label={t('units.detail.title')}
+      elevation={3}
+      sx={{
+        minHeight: { xs: 280, lg: 520 },
+        position: { lg: 'sticky' },
+        top: { lg: 16 },
+        overflow: 'hidden',
+      }}
+    >
+      <Box
+        sx={{
+          minHeight: 172,
+          bgcolor: 'primary.dark',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <UnitIcon sx={{ fontSize: 104, color: 'secondary.main' }} />
+      </Box>
+
+      <Box sx={{ p: 3 }}>
+        {!unit ? (
           <>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-              <Typography variant="h6">{unit.name}</Typography>
-              <IconButton onClick={onClose} size="small">
-                <CloseIcon />
-              </IconButton>
-            </Box>
+            <Typography variant="h6" gutterBottom>
+              {t('units.detail.title')}
+            </Typography>
+            <Typography color="text.secondary">{t('units.detail.selectPrompt')}</Typography>
+          </>
+        ) : (
+          <>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
+              {unit.name}
+            </Typography>
 
             <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2 }}>
               <Chip label={t(`units.types.${unit.type}`)} size="small" />
@@ -56,7 +102,7 @@ export default function UnitDetail({ unit, onClose }: Props) {
                 </Typography>
                 {Object.entries(unit.resourceCosts).map(([key, val]) => (
                   <Typography key={key} variant="body2">
-                    {key}: {val}
+                    {t(`army.resources.${key}`)}: {val}
                   </Typography>
                 ))}
               </>
@@ -91,6 +137,6 @@ export default function UnitDetail({ unit, onClose }: Props) {
           </>
         )}
       </Box>
-    </Drawer>
+    </Paper>
   );
 }

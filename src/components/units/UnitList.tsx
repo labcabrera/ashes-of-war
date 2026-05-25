@@ -10,10 +10,11 @@ import UnitCard from './UnitCard';
 interface Props {
   units: Unit[];
   isOutOfYear: (unit: Unit) => boolean;
+  selectedId: string | null;
   onSelect: (unit: Unit) => void;
 }
 
-export default function UnitList({ units, isOutOfYear, onSelect }: Props) {
+export default function UnitList({ units, isOutOfYear, selectedId, onSelect }: Props) {
   const { t } = useTranslation();
 
   if (units.length === 0) {
@@ -28,8 +29,8 @@ export default function UnitList({ units, isOutOfYear, onSelect }: Props) {
     <Box
       sx={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
-        gap: 2,
+        gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
+        gap: 2.5,
       }}
     >
       {units.map((unit) => (
@@ -37,6 +38,7 @@ export default function UnitList({ units, isOutOfYear, onSelect }: Props) {
           key={unit.id}
           unit={unit}
           isOutOfYear={isOutOfYear(unit)}
+          selected={selectedId === unit.id}
           onClick={() => onSelect(unit)}
         />
       ))}
