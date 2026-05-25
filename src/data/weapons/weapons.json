@@ -240,6 +240,26 @@
       ]
     },
     {
+      "id": "german-8,8-cm-kwk-43",
+      "name": "8,8 cm KwK 43",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": { "min": 10, "max": 12 },
+        "combat": { "min": 6, "max": 8 }
+      },
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 10,
+          "characteristics": ["sustained-fire-5-plus"]
+        }
+      ]
+    },
+    {
       "id": "german-kwk-43-l71",
       "name": "8.8 cm KwK 43 L/71",
       "type": "hard",

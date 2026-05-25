@@ -269,7 +269,7 @@
       "weapons": [
         { "id": "german-kwk-36-l56", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" },
-        { "id": "german-mg-34-42", "count": 1, "type": "turret" }
+        { "id": "german-mg-34-42", "count": 2, "type": "turret" }
       ],
       "imageUrl": "/images/tiger-i.jpg"
     },
@@ -286,7 +286,7 @@
       "weapons": [
         { "id": "german-8,8-cm-kwk-43", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" },
-        { "id": "german-mg-34-42", "count": 1, "type": "turret" }
+        { "id": "german-mg-34-42", "count": 2, "type": "turret" }
       ],
       "imageUrl": "/images/tiger-ii.jpg"
     },
