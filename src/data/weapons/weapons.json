@@ -323,6 +323,40 @@
           "characteristics": ["heat", "one-shot"]
         }
       ]
+    },
+    {
+      "id": "su-d-5t",
+      "name": "85 mm D-5T",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 11
+        }
+      ]
+    },
+    {
+      "id": "su-d-25t",
+      "name": "122 mm D-25T",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": { "min": 2, "max": 3 },
+        "combat": { "min": 1, "max": 2 }
+      },
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 18
+        }
+      ]
     }
   ]
 }

@@ -167,40 +167,62 @@ export default function UnitDetail({ unit, weapons }: Props) {
             {assignedWeapons.length > 0 && (
               <>
                 <Divider sx={{ my: 2.5 }} />
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
                   {t('units.detail.weapons')}
                 </Typography>
                 {assignedWeapons.map(({ assignment, weapon }) => (
                   <Box
                     key={`${assignment.type}-${assignment.id}`}
-                    sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 2, mb: 2 }}
+                    sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 2.25, mb: 2 }}
                   >
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 1, mb: 1.5 }}>
-                      <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                      <Typography variant="h5" sx={{ fontWeight: 600 }}>
                         {assignment.count} x {weapon?.name ?? assignment.id}
                       </Typography>
                       <Chip label={t(`units.weaponMounts.${assignment.type}`)} variant="outlined" />
                     </Box>
                     {weapon ? (
                       weapon.profiles.map((profile) => (
-                        <Typography
+                        <Box
                           key={profile.id}
-                          variant="body2"
-                          color="text.secondary"
-                          sx={{ display: 'block', lineHeight: 1.7 }}
+                          sx={{
+                            '& + &': { mt: 2 },
+                          }}
                         >
-                          {profile.name}: {t('weapons.hitOn')} {profile.hitOn}, {t('weapons.range')}{' '}
-                          {profile.rangeModifier}
-                          {profile.armourPenetration !== undefined
-                            ? `, ${t('weapons.penetration')} ${profile.armourPenetration}`
-                            : ''}
-                          {profile.suppressionModifier !== undefined
-                            ? `, ${t('weapons.suppression')} ${profile.suppressionModifier}`
-                            : ''}
-                        </Typography>
+                          <Typography variant="subtitle1" sx={{ mb: 1, fontWeight: 600 }}>
+                            {profile.name}
+                          </Typography>
+                          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                            <Chip label={`${t('weapons.shots')}: ${profile.shots}`} color="secondary" />
+                            <Chip label={`${t('weapons.hitOn')}: ${profile.hitOn}`} variant="outlined" />
+                            <Chip label={`${t('weapons.range')}: ${profile.rangeModifier}`} variant="outlined" />
+                            {profile.armourPenetration !== undefined && (
+                              <Chip
+                                label={`${t('weapons.penetration')}: ${profile.armourPenetration}`}
+                                color="error"
+                                variant="outlined"
+                              />
+                            )}
+                            {profile.suppressionModifier !== undefined && (
+                              <Chip
+                                label={`${t('weapons.suppression')}: ${profile.suppressionModifier}`}
+                                color="warning"
+                                variant="outlined"
+                              />
+                            )}
+                            {(profile.characteristics ?? []).map((characteristic) => (
+                              <Chip
+                                key={characteristic}
+                                label={characteristic}
+                                color="info"
+                                variant="outlined"
+                              />
+                            ))}
+                          </Box>
+                        </Box>
                       ))
                     ) : (
-                      <Typography variant="body2" color="warning.main">
+                      <Typography variant="body1" color="warning.main" sx={{ fontSize: '1.05rem' }}>
                         {t('units.detail.weaponUnavailable')}
                       </Typography>
                     )}
