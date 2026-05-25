@@ -1,0 +1,18 @@
+# Movimiento
+
+
+Cada unidad tendrá tres perfiles de movimiento:
+Movimiento normal en el que pueden realizar acciones sin problemas (excepto los tanques y unidades que necesiten estar estáticas para disparar como los cañones AT)
+Movimiento apresurado: velocidad de la infantería para realizar disparos con baja precisión para realizar asaltos y maniobrar.
+Correr: a esta velocidad las unidades sólo podrán correr lo más rápido que puedan sin realizar ninguna otra acción y serán más vulnerables al fuego recibido al no contar con coberturas posicionales.
+
+| Unidad         | Velocidad máxima teórica (carretera) | Velocidad real promedio en combate | Aproximación cm por turno |
+|----------------|--------------------------------------|-------------------------------------|---------------------------|
+| Humano andando | 4 km/h                               | 2 - 3 km/h                          | 10                        |
+| Humano trote   | 8 km/h                               | 3 - 5 km/h                          | 20                        |
+| Spring         | 15 km/h                              | 5 - 8 km/h                          | 25-30                     |
+| Tiger I        | 38 km/h                              | 15 - 20 km/h                        | 30                        |
+| Tiger II       | 41,5 km/h                            | 12 - 18 km/h                        | 20                        |
+| Panzer IV      | 40 km/h                              | 20 - 25 km/h                        | 35                        |
+| T-34           | 55 km/h                              | 25 - 30 km/h                        | 40                        |
+| IS-2           | 37 km/h                              | 18 - 25 km/h                        | 22                        |

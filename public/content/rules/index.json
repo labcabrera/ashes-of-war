@@ -5,16 +5,64 @@
       "id": "introduction",
       "titleKey": "rules.chapter.introduction",
       "files": {
-        "en": "/content/rules/en/01-introduction.md",
-        "es": "/content/rules/es/01-introduction.md"
+        "en": "/content/rules/en/introduction.md",
+        "es": "/content/rules/es/introduction.md"
       }
     },
     {
       "id": "unit-types",
       "titleKey": "rules.chapter.unitTypes",
       "files": {
-        "en": "/content/rules/en/02-unit-types.md",
-        "es": "/content/rules/es/02-unit-types.md"
+        "en": "/content/rules/en/unit-types.md",
+        "es": "/content/rules/es/unit-types.md"
+      }
+    },
+    {
+      "id": "round",
+      "titleKey": "round",
+      "files": {
+        "en": "/content/rules/es/round.md",
+        "es": "/content/rules/es/round.md"
+      }
+    },
+    {
+      "id": "movement",
+      "titleKey": "movement",
+      "files": {
+        "en": "/content/rules/es/movement.md",
+        "es": "/content/rules/es/movement.md"
+      }
+    },
+    {
+      "id": "shooting",
+      "titleKey": "shooting",
+      "files": {
+        "en": "/content/rules/es/shooting.md",
+        "es": "/content/rules/es/shooting.md"
+      }
+    },
+    {
+      "id": "actions",
+      "titleKey": "actions",
+      "files": {
+        "en": "/content/rules/es/movement.md",
+        "es": "/content/rules/es/movement.md"
+      }
+    },
+    {
+      "id": "skills",
+      "titleKey": "skills",
+      "files": {
+        "en": "/content/rules/es/skills.md",
+        "es": "/content/rules/es/skills.md"
+      }
+    },
+    {
+      "id": "morale",
+      "titleKey": "morale",
+      "files": {
+        "en": "/content/rules/es/morale.md",
+        "es": "/content/rules/es/morale.md"
       }
     }
   ]

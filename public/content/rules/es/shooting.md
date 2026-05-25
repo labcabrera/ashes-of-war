@@ -1,0 +1,189 @@
+# Disparo
+
+## Disparo pesado
+
+Primero hay que hacer una tirada para impactar. Esta tirada se verá modificada por la habilidad de la tripulación, ópticas (cada tipo de óptica añade una penalización por distancia), modificadores de ambiente (humo, niebla, explosiones), geometría del objetivo, cobertura.
+
+
+Impacto
+La idea es llegar a un número determinado, por ejemplo 10, que luego será ajustado en las pruebas. Tiras un dado, aplicas todos los bonus/malus y si llegas es un impacto con éxito. Para reflejar casos en los que es muy complejo llegar a ese número los 6 serán críticos que harás que vuelvas a tirar añadiendo el resultado a la tirada y los 1 fallos críticos.
+
+Habilidad del tirador
+Cada perfil en el juego tendrá un valor en función del arma a disparar.
+Entrenado: +6
+Sin entrenar: +1
+
+Ópticas
+Las ópticas añaden una penalización por cada 20 cm a partir de una distancia. Posteriormente ajustar el bonus en las pruebas. Este factor vendrá determinado en cada perfil y arma.
+Este valor se indicará como 40/20/-1 siendo que es un factor que sólo aplica a disparos a partir de 40 cm disminuyendo en -1 el impacto por cada 20 cm de distancia que superen el mínimo.
+
+https://wikitanks.com/index.php?title=%C3%93pticas_de_los_carros_de_combate_de_Alemania
+
+Avanzadas (Zeiss por ejemplo): -1 por cada 20 cm
+Básicas: -2 por cada 20 cm
+
+Geometría del objetivo
+Cada perfil tendrá un bonificador a ser impactado determinado por su volumen.
+	Hetzer: -1
+	KV-1: +2
+	Infantería base (armas de área): +3
+	Infantería base (armas disparos sostenidos): +2
+
+Movimiento
+Cada perfil tendrá el tipo de keyword que aplica si dispara en movimiento. Este valor por lo general hará que los carros en combate en movimiento sólo puedan usar efectivamente el armamento ligero siendo muy pocas las posibilidades de acertar con el armamento principal a menos que se dispongan de traits o equipo especial como cañones giroestabilizados.
+	Impreciso: -5
+	Asalto: 0
+
+Cobertura
+	Sin cobertura: 0
+	Cobertura parcial ligera: -1
+	Cobertura completa ligera: -3
+	Cobertura parcial sólida: -2
+	Cobertura completa sólida: -5
+
+Modificadores ambientales
+	Humo ligero / polvo: -2
+	Humo intenso: +5
+	Niebla: -1 por cada X cm de distancia determinado por el mapa
+	Recibiendo fuego: -2
+	Recibiendo fuego intenso: -5
+	Tripulación acobardada: -3
+
+Modificadores especiales
+	Armas de alta cadencia en emplazamiento fijo: +6
+
+Apuntado
+Algunas armas pueden sacrificar cadencia de tiro para un mejor apuntado. Las unidades que no han sido descubiertas en una emboscada aplicarán este bonificador sin sacrificar la cadencia. Este valor solo estará presente en armas con la keyword apuntado por ejemplo carros de combate o armas anticarro, no aplicándose a disparos de infantería o armas automáticas.
+	Disparo apresurado: -1
+	Disparo normal: 0
+	Disparo apuntado: +2
+
+
+_Ejemplo
+Un Panzer IV estático dispara a un KV-1 a 70 cm en condiciones con humo ligero sin cobertura saca un 3
+
+	Tirada: 4
+	HP Panzer IV (perfil): +6
+    KV-1: +3
+	Distancia: (ópticas 30/20/-1 a 70 cm): -1
+	Humo: -1
+	Resultado total: 11, impacto_
+
+Resolución de impactos en carros de combate
+Cada perfil tendrá 3 valores de blindaje. Frontal, lateral y trasero. Dependiendo del éxito del disparo y del ángulo desde el que recibe el disparo se determinará el tipo de blindaje.
+
+Funcionará del mismo modo que en disparo, tiras un dado, aplicas los bonificadores y resuelves el blindaje afectado.
+
+Por cada valor en la tirada de impacto que sobrepase el valor necesario de acierto tendremos un +1 en la tirada de impacto (por ejemplo, si hemos sacado un 13 tendremos un +3).
+
+Cada arma tendrá un valor base de penetración definido como 12/20/-1. Esto será un valor base de penetración de 12 afectado por -1 por cada 20 cm de distancia al objetivo.
+
+Considerar una penalización por encarado de modo que se añada un -X si el tanque está encarado a 45º.
+
+Ejemplo
+El Panzer IV utiliza un cañon KwK 40 L/43 de 75 mm que tiene una penetración 10/30/-1.
+El KV-2 tiene un blindaje frontal de 14
+
+Tirada: 3
+Penetración base: 10
+Distancia (10/30/-1 a 70 cm): -1
+Éxito en el impacto (13): +3
+Total: 15
+
+Como el valor es superior al blindaje del objetivo penetra la armadura.
+
+
+Daño en carros de combate
+Este valor vendrá dado por el valor destructivo base determinado en el perfil del arma. Se tirará un dado y se sumarán los bonificadores. Cada punto en la tirada de penetración superior a la armadura añadirá +1.
+
+
+|===
+|0-6     |Daño superficial
+|7-10    |Daño normal
+|>10     |Daño crítico
+|===
+
+_Ejemplo:
+	Tirada: 5
+	Bonificación base KwK L/43: +2
+	Bonificación penetración (15 vs 14): +1
+	Total: 8
+Se realizará una tirada en la tabla de resolución de daños normal_
+
+
+
+Tablas de daño en carros de combate:
+
+Superficial:
+1-2: Sin efecto. El proyectil no afecta a la tripulación
+3-4: Tripulación acobardada
+5: Tripulación herida (D3 integrantes a determinar)
+6: Tripulación muerta (D3 integrantes a determinar) + Chequeo de fuego/explosión -3
+
+Normal:
+1-3: D3 Tripulación muerta + daños internos
+4-5: Tripulación muerta
+6: Explosión interna
+
+Crítico:
+	1: D3 integrantes muertos
+2-3: Tripulación muerta y vehículo inutilizado
+4-5: Explosión interna. La tripulación muere
+6: Explosión completa: Las unidades sin blindaje a X cm reciben una tirada de daño de explosión
+
+
+Cadencia
+Idea de que cada turno tengas 3 puntos de acción. Cada arma principal tiene que gastar X puntos de acción en el disparo (apuntado aparte). De este modo tanques alemanes entrenados podrán disparar 3 veces en los que un ISU-152 realizará un disparo. De los sturmtiger con tiempos de recarga medios de 15 minutos no hablamos. Serán como unidades de prácticamente un uso y luego se convertirán en un bunker andante.
+
+|===
+|Carro               |Cañón principal             |Cadencia teórica (disparos/minuto) |Cadencia real en combate (disparos/minuto)
+|Tiger I             |88 mm KwK 36 L/56           |6 - 8                              |4 - 6
+|Tiger II            |88 mm KwK 43 L/71           |6 - 8                              |3 - 5
+|Panzer IV           |75 mm KwK 40 L/43 o L/48    |10 - 12                            |6 - 8
+|T-34/76             |76.2 mm F-34                |6 - 9                              |4 - 6
+|T-34/85             |85 mm ZiS-S-53              |6 - 8                              |4 - 6
+|IS-2                |122 mm D-25T                |2 - 3                              |1 - 2
+|===
+
+## Disparo ligero
+
+Los disparos ligeros implican el uso de armas de bajo calibre sin poder de penetración cubriendo armas de infantería, fusiles, subfusiles y armamento secundario de los carros de combate o aviones.
+Estas armas por lo general tienen una baja letalidad reflejando el hecho de que salvo escenarios de asalto frontal, en una batalla de intensidad moderada el número de bajas por compañía podía oscilar entre 5-10.
+
+Estas armas indicarán tendrán los siguientes perfiles:
+
+Número de ataques en cada tipo de estancia (por ejemplo una ametralladora podrá disparar ráfagas cortas apuntando o vaciar el cargador en un corto periodo de tiempo con la posibilidad de sobrecalentar el cañon y que tenga que ser cambiado).
+
+Puntería, indicador base de impacto. En la mayoría de los casos contra infantería serán valores por encima de 6 de tal modo que sólo en las tiradas abiertas se conseguirá acertar.
+
+Modificador por distancia. Este valor estará expresado de la misma forma que en las armas pesadas como 20/30/-1.
+
+Factor de supresión: número que indica el resultado de forzar un chequeo de organización en la unidad rival
+
+Modificadores base al impactar:
+Expuesto: +3 hit
+Bunker o cobertura pesada: -3 hit
+Unidad disparando en movimiento: -2 hit
+Emboscada / mejora de posición: +2 hit
+En posición elevada: +1 hit
+
+En primer lugar se calculan los impactos. Por cada impacto la unidad objetivo tiene que hacer un chequeo de supresión indicado por su perfil. En caso de fallarlo la unidad se considerará suprimida y también tendrá que hacer un chequeo para bajar la organización de la unidad.
+
+*Ejemplo:*
+
+*Un pelotón alemán formado por 10 hombres dispara una MG-34 y seis fusiles.*
+
+*La MG-34 tiene un perfil de disparo a media cadencia de 18 disparos, hit-on 9 y 30/20/-1 y un -1 en el chequeo a la supresión. Sin aplicar bonificadores el jugador necesitaría sacar un 9 para impactar (un 6 seguido de 3+), Tira 18 dados, saca 3 seis y después posteriormente saca un 2, un 5 y un 5 de modo que consigue dos impactos.*
+
+*El jugador sovietico realizará primero las tirada de supresión. La unidad es una unidad de infantería regular de modo que tiene un valor de supresión de 4+ modificado por -1 por la MG-34, saca un 4 y un 6 de modo que falla el chequeo y se considera suprimida. Al quedarse suprimida realiza un chequeo de organización a 4+ y saca un 5 con lo que supera el chequeo y no pierde organización.*
+
+*Posteriormente dispara los 6 fusiles. Cada fusil tiene 2 disparos, hit-on-10 y 40/30/-1, saca un único seis seguido de un tres de modo que no consigue ningún acierto.*
+
+
+## Sobrecalentamiento
+
+Algunas armas podrán sobrecalentarse si se utilizan disparando ráfagas continuas. En este caso estará indicado en el perfil con la keyword “Sobrecalentamiento x+ (y)”. El primer valor será el valor utilizado para realizar el chequeo, el segundo el número de chequeos fallados que inutilizarían el arma.
+
+Ejemplo:
+
+Cuando se dispara en esta modalidad por cada 1 obtenido obligará a realizar un chequeo de sobrecalentamiento. Por ejemplo, en el ejemplo anterior la MG-34 dispara con el perfil sobrecalentado y saca 3 unos en la tirada. Como tiene “Sobrecalentamiento 3+ (2)” realiza 3 chequeos sacando 1, 3, 5. Al fallar el chequeo el arma queda inutilizada hasta que se reemplace el cañón lo que consumirá acciones durante los turnos siguientes. Como no ha sacado 2 fallos el arma no queda inutilizada. 

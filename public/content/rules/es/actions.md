@@ -1,0 +1,12 @@
+# Acciones
+
+TODO
+
+* *Órdenes de ataque* (muchas unidades que no tienen orden de atacar no podrán hacerlo a menos que un oficial intermedio les de la orden). Dependiendo de la cantidad de tiempo en la planificación del ataque se tendrá un bonus a las acciones. No es lo mismo gritar: “¡Todos adelante!” que decir: “Cabo X, usted y dos hombres avanzan hasta esa esquina mientras les damos apoyo de cobertura, después Y y Z se acercarán hacia esa ruina y apoyarán con granadas las posiciones de las MGs)”.
+* *Atrincherarse*
+* *Emboscar* (para antitanques poder aplicar un disparo reactivo)
+* *Apuntado* (ganar precisión perdiendo cadencia de disparo)
+* *Comunicación por radio* (transmitir órdenes a unidades lejanas, centro de control de artillería, comandantes de tanques)
+* *Primeros auxilios*: algunas unidades morirán pero otras sufrirán daños de diferente consideración. En principio no debería influir mucho de cara a la escaramuza pero si si se plantea un modo campaña. Si que debería tener efecto sobre la moral de las tropas. No sientes lo mismo si hay unidades médicas cerca que te puedan atender que si ves que vas a estar desangrándose y agonizando sin un chute de morfina.
+* *Alentar*: maniobra para subir la moral de unidades.
+* *TODO*

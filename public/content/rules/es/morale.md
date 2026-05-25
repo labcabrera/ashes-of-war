@@ -1,0 +1,12 @@
+# Moral
+
+Cada unidad comienza la partida con un D10 de moral definido por su perfil. Este valor puede modificarse por el tipo de partida y el desgaste. Utilizaremos un dado al lado de la unidad para llevar este contador.
+Cuando una unidad recibe fuego o a su alrededor otras unidades amigas sufren daño se restará el valor al dado. Del mismo modo, cada turno recuperará un D3/D6 puntos de moral.
+
+Si la moral baja de 5 la unidad tiene que chequear una tirada de acobardamiento.
+Si la moral baja de 1 la unidad intentará huir del campo de batalla o se quedará en una posición a cubierto si es posible no realizando otras acciones.
+
+Modificadores:
+Por cada baja en los miembros de la unidad: -D3
+Por cada baja en unidades cercanas: -1
+Siendo objetivo de armas de supresión o artillería (infantería): -2

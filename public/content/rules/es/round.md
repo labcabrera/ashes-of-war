@@ -1,0 +1,12 @@
+# Turnos
+
+Cada turno representa una secuencia de 10 sg de combate.
+
+* Fase de moral (comprobar el estado de cada unidad afectada por el combate)
+* Fase de acciones (declarar órdenes y acciones como cuerpo tierra, comunicación entre unidades para detectar unidades o solicitar apoyo de artillería)
+* Fase de movimiento
+* Fase de disparo
+
+_Nota: como muchas unidades pueden tener diferentes interacciones con puntos de acción complejas de llevar podría estudiarse un sistema de activación simultáneo unidad por unidad en el que cuando seleccionas una unidad realiza todas las acciones (moral, acciones, movimiento, etc) hasta realizar la activación de la siguiente unidad._
+
+Jugando a una escala 1:100 en una mesa de 2x2 metros tendremos que las distancias de bordes son 200 metros. A estas distancias no aplicarían las tablas de penetración en función de la distancia ya que estas suelen escalar para distancias de tiro mucho mayores (penetraciones a 1km por ejemplo). No obstante, y aunque la mayoría de cañones que no estuvieran obsoletos a esas distancias penetraban prácticamente todo, la idea de perforar en función de la distancia parece interesante de jugar y representar las diferentes perforaciones y blindajes de cada carro.
