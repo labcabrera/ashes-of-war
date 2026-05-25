@@ -3,6 +3,8 @@
  * Defines unit categories, infantry bases, armour values, and roster entries.
  */
 
+import type { WeaponFeatureModifier } from './weapon';
+
 /** All valid unit type discriminants. */
 export type UnitType =
   | 'infantry'
@@ -34,6 +36,7 @@ export interface UnitWeapon {
   id: string;
   count: number;
   type: UnitWeaponMountType;
+  features?: WeaponFeatureModifier[];
 }
 
 /** A grouped infantry element carrying members and assigned weapons. */

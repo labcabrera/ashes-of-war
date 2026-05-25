@@ -2,7 +2,7 @@
   "_version": 1,
   "weapons": [
     {
-      "id": "de-mg-34-42",
+      "id": "german-mg-34-42",
       "name": "MG 34 / MG 42",
       "type": "soft",
       "profiles": [
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "id": "de-mauser-kar-98k",
+      "id": "german-mauser-kar-98k",
       "name": "Mauser Kar 98k",
       "type": "soft",
       "profiles": [
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "id": "de-mp-40",
+      "id": "german-mp-40",
       "name": "MP 40",
       "type": "soft",
       "profiles": [
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "id": "de-stg-44",
+      "id": "german-stg-44",
       "name": "Sturmgewehr 44",
       "type": "soft",
       "profiles": [
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "id": "de-kwk-37-l24",
+      "id": "german-kwk-37-l24",
       "name": "7.5 cm KwK 37 L/24",
       "type": "hard",
       "profiles": [
@@ -117,7 +117,7 @@
       ]
     },
     {
-      "id": "de-kwk-39",
+      "id": "german-kwk-39",
       "name": "5 cm KwK 39",
       "type": "hard",
       "profiles": [
@@ -132,7 +132,7 @@
       ]
     },
     {
-      "id": "de-kwk-40-l43",
+      "id": "german-kwk-40-l43",
       "name": "7.5 cm KwK 40 L/43",
       "type": "hard",
       "profiles": [
@@ -148,7 +148,7 @@
       ]
     },
     {
-      "id": "de-kwk-40-l48",
+      "id": "german-kwk-40-l48",
       "name": "7.5 cm KwK 40 L/48",
       "type": "hard",
       "rateOfFirePerMinute": {
@@ -168,7 +168,7 @@
       ]
     },
     {
-      "id": "de-kwk-42-l70",
+      "id": "german-kwk-42-l70",
       "name": "7.5 cm KwK 42 L/70",
       "type": "hard",
       "profiles": [
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "id": "de-kwk-36-l56",
+      "id": "german-kwk-36-l56",
       "name": "8.8 cm KwK 36 L/56",
       "type": "hard",
       "rateOfFirePerMinute": {
@@ -240,7 +240,7 @@
       ]
     },
     {
-      "id": "de-kwk-43-l71",
+      "id": "german-kwk-43-l71",
       "name": "8.8 cm KwK 43 L/71",
       "type": "hard",
       "rateOfFirePerMinute": {
@@ -278,7 +278,7 @@
       ]
     },
     {
-      "id": "de-pak-40-l46",
+      "id": "german-pak-40-l46",
       "name": "7.5 cm PaK 40 L/46",
       "type": "hard",
       "profiles": [
@@ -293,7 +293,7 @@
       ]
     },
     {
-      "id": "de-panzerfaust-60",
+      "id": "german-panzerfaust-60",
       "name": "Panzerfaust 60",
       "type": "hard",
       "profiles": [
@@ -309,7 +309,7 @@
       ]
     },
     {
-      "id": "de-panzerschreck-rpzb-54",
+      "id": "german-panzerschreck-rpzb-54",
       "name": "Panzerschreck RPzB 54",
       "type": "hard",
       "profiles": [

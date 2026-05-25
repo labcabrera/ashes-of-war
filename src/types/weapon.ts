@@ -4,6 +4,13 @@
 
 export type WeaponType = 'soft' | 'hard' | 'artillery' | 'anti-aircraft';
 
+export type WeaponFeature = 'supression' | 'overheat' | 'area';
+
+export interface WeaponFeatureModifier {
+  feature: WeaponFeature;
+  modifier: string | number | null;
+}
+
 export interface RateRange {
   min: number;
   max: number;
