@@ -77,7 +77,11 @@
       "members": "members",
       "unarmed": "No weapons assigned.",
       "weapons": "Weapons",
+      "keywords": "Special Rules",
       "weaponUnavailable": "Weapon information is not available in the catalogue."
+    },
+    "keywords": {
+      "low-reliability": "Low Reliability"
     },
     "weaponMounts": {
       "normal": "Normal",

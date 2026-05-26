@@ -33,7 +33,9 @@ interface Props {
 const UNIT_ICONS = {
   infantry: MilitaryTechIcon,
   tank: DirectionsCarIcon,
-  artillery: GpsFixedIcon,
+  'tank-destroyer': DirectionsCarIcon,
+  'assault-gun': DirectionsCarIcon,
+  'self-propelled-artillery': GpsFixedIcon,
   motorised: DirectionsCarIcon,
   mechanised: DirectionsCarIcon,
   reconnaissance: GpsFixedIcon,
@@ -183,6 +185,20 @@ export default function UnitDetail({ unit, weapons }: Props) {
             <Typography variant="body1" color="text.secondary" gutterBottom>
               {t('units.detail.availability')}: {unit.from}–{unit.to}
             </Typography>
+
+            {unit.keywords && unit.keywords.length > 0 && (
+              <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mt: 1.5 }}>
+                {unit.keywords.map((kw) => (
+                  <Chip
+                    key={kw}
+                    label={t(`units.keywords.${kw}`, kw)}
+                    color="warning"
+                    variant="outlined"
+                    size="small"
+                  />
+                ))}
+              </Box>
+            )}
 
             {unit.resourceCosts && Object.keys(unit.resourceCosts).length > 0 && (
               <>

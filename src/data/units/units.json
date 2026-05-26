@@ -121,19 +121,6 @@
       "imageUrl": "/images/units/german-stug-iii-a.jpg"
     },
     {
-      "id": "german-stug-iii-e",
-      "name": "StuG III Ausf. G",
-      "type": "assault-gun",
-      "faction": "german",
-      "from": 1941,
-      "to": 1942,
-      "cost": 25,
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
-      "imageUrl": "/images/units/german-stug-iii-e.jpg"
-    },
-    {
       "id": "german-stug-iii-f",
       "name": "StuG III Ausf. F",
       "type": "assault-gun",
@@ -156,18 +143,19 @@
       "cost": 34,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-40-l48", "count": 1, "type": "hull" }]
+      "weapons": [{ "id": "german-kwk-40-l48", "count": 1, "type": "hull" }],
+      "imageUrl": "/images/units/german-stug-iii-e.jpg"
     },
     {
-      "id": "german-artillery-01",
-      "name": "10.5 cm leFH 18 Battery",
-      "type": "self-propelled-artillery",
+      "id": "german-10.5-cm-lefH-18",
+      "name": "10.5 cm leFH 18",
+      "type": "artillery-towed",
       "faction": "german",
       "from": 1939,
       "to": 1945,
       "cost": 21,
       "resourceCosts": { "fuel": 3, "logistics": 10 },
-      "imageUrl": "/images/units/10.5-cm-leFH-18.jpg"
+      "imageUrl": "/images/units/german-10.5-cm-lefH-18.jpg"
     },
     {
       "id": "german-recon-01",
@@ -285,7 +273,8 @@
       "weapons": [
         { "id": "german-kwk-42-l70", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
-      ]
+      ],
+      "imageUrl": "/images/units/german-panther-a.jpg"
     },
     {
       "id": "german-panther-g",
@@ -385,7 +374,8 @@
       "profile": { "front": 12, "side": 10, "rear": 8, "exposed": 5 },
       "weapons": [
         { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
-      ]
+      ],
+      "imageUrl": "/images/units/german-marder-i.jpg"
     },
     {
       "id": "german-marder-ii",
@@ -399,7 +389,8 @@
       "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
       "weapons": [
         { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
-      ]
+      ],
+      "imageUrl": "/images/units/german-marder-ii.jpg"
     },
     {
       "id": "german-marder-iii",
@@ -413,7 +404,8 @@
       "profile": { "front": 50, "side": 15, "rear": 10, "exposed": 5 },
       "weapons": [
         { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
-      ]
+      ],
+      "imageUrl": "/images/units/german-marder-iii.jpg"
     },
     {
       "id": "german-sturmtiger",

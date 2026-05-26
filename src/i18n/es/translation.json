@@ -77,7 +77,11 @@
       "members": "integrantes",
       "unarmed": "Sin armamento asignado.",
       "weapons": "Armamento",
+      "keywords": "Reglas especiales",
       "weaponUnavailable": "No existe información de esta arma en el catálogo."
+    },
+    "keywords": {
+      "low-reliability": "Baja fiabilidad"
     },
     "weaponMounts": {
       "normal": "Normal",
