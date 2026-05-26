@@ -214,7 +214,8 @@
       "from": 1939,
       "to": 1944,
       "cost": 14,
-      "resourceCosts": { "fuel": 5, "intelligence": 1 }
+      "resourceCosts": { "fuel": 5, "intelligence": 1 },
+      "imageUrl": "/images/german-sd-kfz-222.jpg"
     },
     {
       "id": "german-motorised-01",
@@ -402,7 +403,7 @@
       ]
     },
     {
-      "id": "ussr-infantry-01",
+      "id": "soviet-infantry-01",
       "name": "Red Army Rifle Section",
       "type": "infantry",
       "faction": "soviet",
@@ -413,7 +414,7 @@
       "bases": [{ "members": 8, "weapons": [] }]
     },
     {
-      "id": "ussr-t-34-76",
+      "id": "soviet-t-34-76",
       "name": "T-34/76",
       "type": "tank",
       "faction": "soviet",
@@ -425,7 +426,7 @@
       "imageUrl": "/images/t-34-76.jpg"
     },
     {
-      "id": "ussr-t-34-85",
+      "id": "soviet-t-34-85",
       "name": "T-34/85",
       "type": "tank",
       "faction": "soviet",
@@ -437,7 +438,7 @@
       "imageUrl": "/images/t-34-85.jpg"
     },
     {
-      "id": "ussr-is-1",
+      "id": "soviet-is-1",
       "name": "IS-1",
       "type": "tank",
       "faction": "soviet",
@@ -450,7 +451,7 @@
       "imageUrl": "/images/is-1.jpg"
     },
     {
-      "id": "ussr-is-2",
+      "id": "soviet-is-2",
       "name": "IS-2",
       "type": "tank",
       "faction": "soviet",
@@ -463,7 +464,7 @@
       "imageUrl": "/images/is-2.jpg"
     },
     {
-      "id": "ussr-artillery-01",
+      "id": "soviet-artillery-01",
       "name": "122mm Howitzer Battery",
       "type": "artillery",
       "faction": "soviet",
@@ -471,10 +472,10 @@
       "to": 1945,
       "cost": 23,
       "resourceCosts": { "fuel": 3, "logistics": 10 },
-      "imageUrl": "/images/ussr-122mm-howitzer.jpg"
+      "imageUrl": "/images/soviet-122mm-howitzer.jpg"
     },
     {
-      "id": "ussr-infantry-02",
+      "id": "soviet-infantry-02",
       "name": "Guards Infantry Company",
       "type": "infantry",
       "faction": "soviet",
@@ -485,7 +486,7 @@
       "bases": [{ "members": 8, "weapons": [] }]
     },
     {
-      "id": "ussr-recon-01",
+      "id": "soviet-recon-01",
       "name": "Soviet Scout Squad",
       "type": "reconnaissance",
       "faction": "soviet",
@@ -495,7 +496,7 @@
       "resourceCosts": { "intelligence": 2 }
     },
     {
-      "id": "ussr-medic-01",
+      "id": "soviet-medic-01",
       "name": "Field Medic",
       "type": "medic",
       "faction": "soviet",
@@ -505,7 +506,7 @@
       "resourceCosts": { "logistics": 5 }
     },
     {
-      "id": "ussr-sniper-01",
+      "id": "soviet-sniper-01",
       "name": "Soviet Sniper",
       "type": "sniper",
       "faction": "soviet",

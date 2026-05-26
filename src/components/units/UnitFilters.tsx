@@ -3,6 +3,11 @@
  * Year filter is the FR-019 requirement.
  */
 import { Box, FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/material';
+
+const FACTION_FLAGS: Record<string, string> = {
+  german: '/images/german.png',
+  soviet: '/images/soviet.png',
+};
 import { useTranslation } from 'react-i18next';
 import { UnitType } from '../../types/unit';
 
@@ -58,7 +63,17 @@ export default function UnitFilters({
           <MenuItem value="">{t('common.all')}</MenuItem>
           {factions.map((f) => (
             <MenuItem key={f} value={f}>
-              {f}
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                {FACTION_FLAGS[f] && (
+                  <Box
+                    component="img"
+                    src={FACTION_FLAGS[f]}
+                    alt={f}
+                    sx={{ height: 16, width: 'auto', borderRadius: 0.5 }}
+                  />
+                )}
+                {f}
+              </Box>
             </MenuItem>
           ))}
         </Select>
