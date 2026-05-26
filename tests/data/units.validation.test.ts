@@ -11,7 +11,9 @@ type UnknownRecord = Record<string, unknown>;
 const UNIT_TYPES = new Set<UnitType>([
   'infantry',
   'tank',
-  'artillery',
+  'tank-destroyer',
+  'assault-gun',
+  'self-propelled-artillery',
   'motorised',
   'mechanised',
   'reconnaissance',
@@ -97,6 +99,18 @@ function validateTankProfile(value: unknown, path: string): string[] {
   );
 }
 
+function validateMovement(value: unknown, path: string): string[] {
+  if (!isRecord(value)) {
+    return [`${path} must be an object.`];
+  }
+
+  return ['tactical', 'cruise', 'maximum', 'offRoad'].flatMap((field) =>
+    typeof value[field] === 'number' && Number.isFinite(value[field]) && Number(value[field]) >= 0
+      ? []
+      : [`${path}.${field} must be a non-negative number.`],
+  );
+}
+
 function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<string>): string[] {
   const path = `units[${index}]`;
   if (!isRecord(value)) {
@@ -115,6 +129,7 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
   if (!isNonNegativeInteger(value.cost)) {
     errors.push(`${path}.cost must be a non-negative integer.`);
   }
+  errors.push(...validateMovement(value.movement, `${path}.movement`));
   if (!Number.isInteger(value.from) || !Number.isInteger(value.to)) {
     errors.push(`${path}.from and ${path}.to must be integer years.`);
   } else if (Number(value.from) > Number(value.to)) {
@@ -175,8 +190,8 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
   }
 
   const errors: string[] = [];
-  if (catalogue._version !== 2) {
-    errors.push('Unit catalogue _version must be 2.');
+  if (catalogue._version !== 3) {
+    errors.push('Unit catalogue _version must be 3.');
   }
   if (!Array.isArray(catalogue.units)) {
     errors.push('Unit catalogue units must be an array.');
@@ -208,7 +223,7 @@ describe('static unit catalogue validation', () => {
 
   it('reports multiple model and weapon-reference errors together', () => {
     const invalidCatalogue = {
-      _version: 2,
+      _version: 3,
       units: [
         {
           id: 'broken-infantry',
@@ -218,6 +233,7 @@ describe('static unit catalogue validation', () => {
           from: 1945,
           to: 1941,
           cost: 1,
+          movement: { tactical: -1, cruise: 2, maximum: 3, offRoad: 1 },
           weapons: [],
           bases: [{ members: 0, weapons: [{ id: 'missing-weapon', count: 0, type: 'normal' }] }],
         },
@@ -228,6 +244,7 @@ describe('static unit catalogue validation', () => {
     expect(errors).toEqual(
       expect.arrayContaining([
         'units[0].name must be a non-empty string.',
+        'units[0].movement.tactical must be a non-negative number.',
         'units[0].from must be less than or equal to units[0].to.',
         'units[0].bases[0].members must be a positive integer.',
         'units[0].bases[0].weapons[0].id references unknown weapon "missing-weapon".',

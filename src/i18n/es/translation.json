@@ -86,6 +86,13 @@
       "exposed": "Expuesto",
       "resources": "Costes de recursos",
       "availability": "Disponibilidad",
+      "movement": {
+        "title": "Movimiento",
+        "tactical": "Táctico",
+        "cruise": "Crucero",
+        "maximum": "Máximo",
+        "offRoad": "Campo a través"
+      },
       "bases": "Peanas",
       "base": "Peana {{number}}",
       "members": "integrantes",

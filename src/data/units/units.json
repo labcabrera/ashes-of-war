@@ -1,5 +1,5 @@
 {
-  "_version": 2,
+  "_version": 3,
   "units": [
     {
       "id": "panzergrenadier-squad",
@@ -9,6 +9,7 @@
       "from": 1939,
       "to": 1945,
       "cost": 11,
+      "movement": { "tactical": 10, "cruise": 20, "maximum": 30, "offRoad": 10 },
       "resourceCosts": { "logistics": 5 },
       "bases": [
         {
@@ -35,6 +36,7 @@
       "from": 1934,
       "to": 1941,
       "cost": 12,
+      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
       "resourceCosts": { "fuel": 3, "logistics": 3 },
       "profile": { "front": 13, "side": 13, "rear": 13, "exposed": 5 },
       "weapons": [
@@ -50,6 +52,7 @@
       "from": 1936,
       "to": 1942,
       "cost": 18,
+      "movement": { "tactical": 20, "cruise": 35, "maximum": 40, "offRoad": 20 },
       "resourceCosts": { "fuel": 4, "logistics": 4 },
       "profile": { "front": 14, "side": 14, "rear": 14, "exposed": 5 },
       "weapons": [
@@ -66,6 +69,7 @@
       "from": 1939,
       "to": 1942,
       "cost": 20,
+      "movement": { "tactical": 18, "cruise": 34, "maximum": 42, "offRoad": 18 },
       "resourceCosts": { "fuel": 4, "logistics": 4 },
       "profile": { "front": 25, "side": 15, "rear": 15, "exposed": 5 },
       "weapons": [
@@ -83,6 +87,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 32,
+      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
       "weapons": [
@@ -99,6 +104,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 32,
+      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
       "weapons": [
@@ -115,6 +121,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 32,
+      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
       "weapons": [
@@ -131,6 +138,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 32,
+      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
       "weapons": [
@@ -147,6 +155,7 @@
       "from": 1941,
       "to": 1943,
       "cost": 25,
+      "movement": { "tactical": 20, "cruise": 35, "maximum": 40, "offRoad": 20 },
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 20, "exposed": 10 },
       "weapons": [
@@ -163,6 +172,7 @@
       "from": 1940,
       "to": 1940,
       "cost": 25,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
@@ -176,6 +186,7 @@
       "from": 1942,
       "to": 1942,
       "cost": 30,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [{ "id": "german-kwk-40-l43", "count": 1, "type": "hull" }],
@@ -189,6 +200,7 @@
       "from": 1942,
       "to": 1945,
       "cost": 34,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [{ "id": "german-kwk-40-l48", "count": 1, "type": "hull" }],
@@ -202,6 +214,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 36,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [
@@ -218,6 +231,7 @@
       "from": 1939,
       "to": 1945,
       "cost": 21,
+      "movement": { "tactical": 0, "cruise": 8, "maximum": 12, "offRoad": 0 },
       "resourceCosts": { "fuel": 3, "logistics": 10 },
       "imageUrl": "/images/units/german-10.5-cm-lefH-18.jpg"
     },
@@ -229,6 +243,7 @@
       "from": 1939,
       "to": 1944,
       "cost": 14,
+      "movement": { "tactical": 25, "cruise": 55, "maximum": 80, "offRoad": 25 },
       "resourceCosts": { "fuel": 5, "intelligence": 1 },
       "imageUrl": "/images/units/german-sd-kfz-222.jpg"
     },
@@ -240,6 +255,7 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
+      "movement": { "tactical": 8, "cruise": 16, "maximum": 25, "offRoad": 8 },
       "resourceCosts": { "intelligence": 1 },
       "imageUrl": "/images/units/german-sniper.jpg"
     },
@@ -251,6 +267,7 @@
       "from": 1939,
       "to": 1945,
       "cost": 13,
+      "movement": { "tactical": 8, "cruise": 16, "maximum": 24, "offRoad": 8 },
       "resourceCosts": { "logistics": 10 },
       "imageUrl": "/images/units/german-pionier-squad.jpg"
     },
@@ -262,6 +279,7 @@
       "from": 1940,
       "to": 1944,
       "cost": 18,
+      "movement": { "tactical": 12, "cruise": 24, "maximum": 36, "offRoad": 12 },
       "resourceCosts": { "logistics": 10, "intelligence": 1 },
       "imageUrl": "/images/units/german-fallschirmjager.jpg"
     },
@@ -273,6 +291,7 @@
       "from": 1944,
       "to": 1945,
       "cost": 80,
+      "movement": { "tactical": 12, "cruise": 24, "maximum": 38, "offRoad": 12 },
       "resourceCosts": { "fuel": 15, "logistics": 15 },
       "profile": { "front": 150, "side": 90, "rear": 90, "exposed": 30 },
       "weapons": [
@@ -290,6 +309,7 @@
       "from": 1942,
       "to": 1945,
       "cost": 50,
+      "movement": { "tactical": 10, "cruise": 20, "maximum": 41, "offRoad": 10 },
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 102, "side": 82, "rear": 82, "exposed": 15 },
       "weapons": [
@@ -307,6 +327,7 @@
       "from": 1943,
       "to": 1943,
       "cost": 55,
+      "movement": { "tactical": 18, "cruise": 35, "maximum": 46, "offRoad": 18 },
       "resourceCosts": { "fuel": 12, "logistics": 10 },
       "profile": { "front": 80, "side": 40, "rear": 30, "exposed": 15 },
       "weapons": [
@@ -324,6 +345,7 @@
       "from": 1943,
       "to": 1944,
       "cost": 60,
+      "movement": { "tactical": 18, "cruise": 35, "maximum": 46, "offRoad": 18 },
       "resourceCosts": { "fuel": 12, "logistics": 10 },
       "profile": { "front": 80, "side": 40, "rear": 30, "exposed": 15 },
       "weapons": [
@@ -340,6 +362,7 @@
       "from": 1944,
       "to": 1945,
       "cost": 62,
+      "movement": { "tactical": 18, "cruise": 35, "maximum": 46, "offRoad": 18 },
       "resourceCosts": { "fuel": 12, "logistics": 10 },
       "profile": { "front": 80, "side": 50, "rear": 30, "exposed": 15 },
       "weapons": [
@@ -356,6 +379,7 @@
       "from": 1943,
       "to": 1944,
       "cost": 45,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 42, "offRoad": 15 },
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
       "weapons": [
@@ -371,6 +395,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 45,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 42, "offRoad": 15 },
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
       "weapons": [
@@ -386,6 +411,7 @@
       "from": 1944,
       "to": 1945,
       "cost": 40,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
       "resourceCosts": { "fuel": 8, "logistics": 8 },
       "profile": { "front": 60, "side": 30, "rear": 20, "exposed": 10 },
       "weapons": [
@@ -401,6 +427,7 @@
       "from": 1944,
       "to": 1945,
       "cost": 60,
+      "movement": { "tactical": 16, "cruise": 32, "maximum": 46, "offRoad": 17 },
       "resourceCosts": { "fuel": 12, "logistics": 12 },
       "profile": { "front": 80, "side": 50, "rear": 40, "exposed": 15 },
       "weapons": [
@@ -416,6 +443,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 28,
+      "movement": { "tactical": 12, "cruise": 24, "maximum": 40, "offRoad": 12 },
       "resourceCosts": { "fuel": 5, "logistics": 10 },
       "profile": { "front": 18, "side": 8, "rear": 8, "exposed": 5 },
       "imageUrl": "/images/units/german-wespe.jpg"
@@ -428,6 +456,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 38,
+      "movement": { "tactical": 12, "cruise": 24, "maximum": 40, "offRoad": 12 },
       "resourceCosts": { "fuel": 8, "logistics": 12 },
       "profile": { "front": 30, "side": 20, "rear": 15, "exposed": 5 },
       "weapons": [
@@ -443,6 +472,7 @@
       "from": 1943,
       "to": 1944,
       "cost": 30,
+      "movement": { "tactical": 12, "cruise": 24, "maximum": 40, "offRoad": 12 },
       "resourceCosts": { "fuel": 5, "logistics": 10 },
       "profile": { "front": 25, "side": 15, "rear": 10, "exposed": 5 },
       "weapons": [
@@ -458,6 +488,7 @@
       "from": 1942,
       "to": 1945,
       "cost": 26,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 14 },
       "resourceCosts": { "fuel": 5, "logistics": 8 },
       "profile": { "front": 12, "side": 10, "rear": 8, "exposed": 5 },
       "weapons": [
@@ -473,6 +504,7 @@
       "from": 1942,
       "to": 1945,
       "cost": 30,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 14 },
       "resourceCosts": { "fuel": 5, "logistics": 8 },
       "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
       "weapons": [
@@ -488,6 +520,7 @@
       "from": 1942,
       "to": 1945,
       "cost": 33,
+      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 14 },
       "resourceCosts": { "fuel": 5, "logistics": 8 },
       "profile": { "front": 50, "side": 15, "rear": 10, "exposed": 5 },
       "weapons": [
@@ -503,6 +536,7 @@
       "from": 1944,
       "to": 1945,
       "cost": 75,
+      "movement": { "tactical": 8, "cruise": 18, "maximum": 40, "offRoad": 8 },
       "resourceCosts": { "fuel": 15, "logistics": 15 },
       "profile": { "front": 150, "side": 80, "rear": 80, "exposed": 25 },
       "weapons": [
@@ -518,6 +552,7 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
+      "movement": { "tactical": 10, "cruise": 20, "maximum": 30, "offRoad": 10 },
       "resourceCosts": { "logistics": 5 },
       "bases": [{ "members": 8, "weapons": [] }]
     },
@@ -529,6 +564,7 @@
       "from": 1941,
       "to": 1944,
       "cost": 29,
+      "movement": { "tactical": 22, "cruise": 40, "maximum": 55, "offRoad": 24 },
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 45, "side": 45, "rear": 40, "exposed": 10 },
       "imageUrl": "/images/units/soviet-t-34-76.jpg"
@@ -541,6 +577,7 @@
       "from": 1944,
       "to": 1945,
       "cost": 36,
+      "movement": { "tactical": 22, "cruise": 40, "maximum": 55, "offRoad": 24 },
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 60, "side": 45, "rear": 40, "exposed": 12 },
       "imageUrl": "/images/units/soviet-t-34-85.jpg"
@@ -553,6 +590,7 @@
       "from": 1943,
       "to": 1944,
       "cost": 45,
+      "movement": { "tactical": 14, "cruise": 25, "maximum": 37, "offRoad": 14 },
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
       "weapons": [{ "id": "su-d-5t", "count": 1, "type": "turret" }],
@@ -566,6 +604,7 @@
       "from": 1943,
       "to": 1945,
       "cost": 52,
+      "movement": { "tactical": 14, "cruise": 25, "maximum": 37, "offRoad": 14 },
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
       "weapons": [{ "id": "su-d-25t", "count": 1, "type": "turret" }],
@@ -579,6 +618,7 @@
       "from": 1941,
       "to": 1945,
       "cost": 23,
+      "movement": { "tactical": 0, "cruise": 8, "maximum": 12, "offRoad": 0 },
       "resourceCosts": { "fuel": 3, "logistics": 10 },
       "imageUrl": "/images/units/soviet-122mm-howitzer.jpg"
     },
@@ -590,6 +630,7 @@
       "from": 1942,
       "to": 1945,
       "cost": 14,
+      "movement": { "tactical": 10, "cruise": 20, "maximum": 30, "offRoad": 10 },
       "resourceCosts": { "logistics": 5 },
       "bases": [{ "members": 8, "weapons": [] }]
     },
@@ -601,6 +642,7 @@
       "from": 1941,
       "to": 1945,
       "cost": 13,
+      "movement": { "tactical": 12, "cruise": 24, "maximum": 36, "offRoad": 12 },
       "resourceCosts": { "intelligence": 2 }
     },
     {
@@ -611,6 +653,7 @@
       "from": 1941,
       "to": 1945,
       "cost": 7,
+      "movement": { "tactical": 8, "cruise": 16, "maximum": 25, "offRoad": 8 },
       "resourceCosts": { "logistics": 5 }
     },
     {
@@ -621,6 +664,7 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
+      "movement": { "tactical": 8, "cruise": 16, "maximum": 25, "offRoad": 8 },
       "resourceCosts": { "intelligence": 1 }
     }
   ]

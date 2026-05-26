@@ -186,6 +186,36 @@ export default function UnitDetail({ unit, weapons }: Props) {
               {t('units.detail.availability')}: {unit.from}–{unit.to}
             </Typography>
 
+            <Divider sx={{ my: 2.5 }} />
+            <Typography variant="h6" gutterBottom>
+              {t('units.detail.movement.title')}
+            </Typography>
+            <Table
+              size="small"
+              aria-label={t('units.detail.movement.title')}
+              sx={{
+                '& th': { fontSize: '0.9rem', fontWeight: 600 },
+                '& td': { fontSize: '1.05rem', fontWeight: 600 },
+              }}
+            >
+              <TableHead>
+                <TableRow>
+                  <TableCell>{t('units.detail.movement.tactical')}</TableCell>
+                  <TableCell>{t('units.detail.movement.cruise')}</TableCell>
+                  <TableCell>{t('units.detail.movement.maximum')}</TableCell>
+                  <TableCell>{t('units.detail.movement.offRoad')}</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>{unit.movement.tactical}</TableCell>
+                  <TableCell>{unit.movement.cruise}</TableCell>
+                  <TableCell>{unit.movement.maximum}</TableCell>
+                  <TableCell>{unit.movement.offRoad}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+
             {unit.keywords && unit.keywords.length > 0 && (
               <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mt: 1.5 }}>
                 {unit.keywords.map((kw) => (

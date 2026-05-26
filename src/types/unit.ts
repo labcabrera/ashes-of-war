@@ -30,6 +30,14 @@ export interface TankProfile {
   exposed: number;
 }
 
+/** Movement ratings used by the game for each terrain and operating pace. */
+export interface MovementProfile {
+  tactical: number;
+  cruise: number;
+  maximum: number;
+  offRoad: number;
+}
+
 /** Classification of how a unit carries or mounts an assigned weapon. */
 export type UnitWeaponMountType = 'normal' | 'turret' | 'coaxial' | 'hull';
 
@@ -58,6 +66,8 @@ interface BaseUnitFields {
   to: number;
   /** Point cost. */
   cost: number;
+  /** Required movement ratings for the unit. */
+  movement: MovementProfile;
   /** Optional resource costs keyed by ResourcePool.key. */
   resourceCosts?: Record<string, number>;
   /** Optional public image displayed in the unit detail panel. */

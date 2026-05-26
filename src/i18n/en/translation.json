@@ -86,6 +86,13 @@
       "exposed": "Exposed",
       "resources": "Resource Costs",
       "availability": "Availability",
+      "movement": {
+        "title": "Movement",
+        "tactical": "Tactical",
+        "cruise": "Cruise",
+        "maximum": "Maximum",
+        "offRoad": "Off-road"
+      },
       "bases": "Bases",
       "base": "Base {{number}}",
       "members": "members",
