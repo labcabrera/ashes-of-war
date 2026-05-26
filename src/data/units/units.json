@@ -147,6 +147,22 @@
       "imageUrl": "/images/units/german-stug-iii-e.jpg"
     },
     {
+      "id": "german-stug-iv",
+      "name": "StuG IV",
+      "type": "assault-gun",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 36,
+      "resourceCosts": { "fuel": 5, "logistics": 5 },
+      "profile": { "front": 80, "side": 30, "rear": 30, "exposed": 10 },
+      "weapons": [
+        { "id": "german-kwk-40-l48", "count": 1, "type": "hull" },
+        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+      ],
+      "imageUrl": "/images/units/german-stug-iv.jpg"
+    },
+    {
       "id": "german-10.5-cm-lefH-18",
       "name": "10.5 cm leFH 18",
       "type": "artillery-towed",
