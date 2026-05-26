@@ -202,17 +202,19 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
-      "resourceCosts": { "intelligence": 1 }
+      "resourceCosts": { "intelligence": 1 },
+      "imageUrl": "/images/units/german-sniper.jpg"
     },
     {
-      "id": "german-engineer-01",
+      "id": "german-pionier-squad",
       "name": "Pionier Squad",
       "type": "engineer",
       "faction": "german",
       "from": 1939,
       "to": 1945,
       "cost": 13,
-      "resourceCosts": { "logistics": 10 }
+      "resourceCosts": { "logistics": 10 },
+      "imageUrl": "/images/units/german-pionier-squad.jpg"
     },
     {
       "id": "german-fallschirmjager",
@@ -350,7 +352,8 @@
       "profile": { "front": 60, "side": 30, "rear": 20, "exposed": 10 },
       "weapons": [
         { "id": "german-kwk-40-l48", "count": 1, "type": "hull" }
-      ]
+      ],
+      "imageUrl": "/images/units/german-jagdpanzer-iv.jpg"
     },
     {
       "id": "german-jagdpanther",
@@ -364,7 +367,8 @@
       "profile": { "front": 80, "side": 50, "rear": 40, "exposed": 15 },
       "weapons": [
         { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
-      ]
+      ],
+      "imageUrl": "/images/units/german-jagdpanther.jpg"
     },
     {
       "id": "german-wespe",
@@ -502,7 +506,7 @@
     {
       "id": "soviet-artillery-01",
       "name": "122mm Howitzer Battery",
-      "type": "self-propelled-artillery",
+      "type": "artillery-towed",
       "faction": "soviet",
       "from": 1941,
       "to": 1945,
