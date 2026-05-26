@@ -22,10 +22,27 @@ export interface ArmyType {
   faction?: string;
 }
 
-/** A unit instance inside an army, with its quantity. */
-export interface ArmyUnit {
-  unitId: string;
-  quantity: number;
+/** Kinds of hierarchical organization elements available in the visual editor. */
+export type ArmyNodeKind = 'army' | 'company' | 'platoon' | 'section' | 'unit';
+
+/** Persisted canvas coordinates for one organization element. */
+export interface ArmyNodePosition {
+  x: number;
+  y: number;
+}
+
+/** An organizational element or individual catalogue-unit occurrence in an army graph. */
+export interface ArmyNode {
+  id: string;
+  kind: ArmyNodeKind;
+  label: string;
+  /** The army node is the only element without a parent. */
+  parentId: string | null;
+  position: ArmyNodePosition;
+  /** Defined only for nodes of kind `unit`. */
+  unitId?: string;
+  /** Defined only for nodes of kind `unit`. */
+  quantity?: number;
 }
 
 /** A saved army. */
@@ -33,7 +50,7 @@ export interface Army {
   id: string;
   name: string;
   armyTypeId: string;
-  units: ArmyUnit[];
+  nodes: ArmyNode[];
   savedAt: string;
 }
 

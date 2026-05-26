@@ -160,6 +160,30 @@
       "add": "Add to Army",
       "remove": "Remove"
     },
+    "graph": {
+      "title": "Command Structure",
+      "instructions": "Select a node to add units. Drag to arrange and connect a command node to a subordinate to change hierarchy.",
+      "createPrompt": "Create or select an army to begin its hierarchical structure.",
+      "addFormation": "Add subordinate formation",
+      "addTo": "Add under: {{parent}}",
+      "selectParent": "Select a command node in the graph before adding units.",
+      "edit": "Edit",
+      "label": "Element name",
+      "formationType": "Formation type",
+      "quantity": "Quantity",
+      "deleteTitle": "Delete element",
+      "deletePrompt": "This element and its full subordinate branch will be deleted.",
+      "invalidConnectionTitle": "Invalid connection",
+      "invalidConnection": "A unit cannot command subordinates, and a formation cannot report to itself or its descendants.",
+      "unknownUnit": "Unavailable unit",
+      "kinds": {
+        "army": "Army",
+        "company": "Company",
+        "platoon": "Platoon",
+        "section": "Section",
+        "unit": "Unit"
+      }
+    },
     "save": {
       "title": "Save Army",
       "name": "Army Name",

@@ -11,10 +11,12 @@ import { ArmyType } from '../../types/army';
 interface Props {
   allUnits: Unit[];
   armyType: ArmyType;
+  selectedParentLabel?: string;
+  canAdd: boolean;
   onAdd: (unitId: string) => void;
 }
 
-export default function ArmyUnitPicker({ allUnits, armyType, onAdd }: Props) {
+export default function ArmyUnitPicker({ allUnits, armyType, selectedParentLabel, canAdd, onAdd }: Props) {
   const { t } = useTranslation();
 
   const available = armyType.faction
@@ -26,6 +28,11 @@ export default function ArmyUnitPicker({ allUnits, armyType, onAdd }: Props) {
       <Typography variant="subtitle2" gutterBottom>
         {t('army.units.title')}
       </Typography>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+        {canAdd && selectedParentLabel
+          ? t('army.graph.addTo', { parent: selectedParentLabel })
+          : t('army.graph.selectParent')}
+      </Typography>
       <List dense sx={{ maxHeight: 320, overflowY: 'auto' }}>
         {available.map((unit) => (
           <ListItemButton key={unit.id} sx={{ pr: 6 }}>
@@ -35,7 +42,12 @@ export default function ArmyUnitPicker({ allUnits, armyType, onAdd }: Props) {
             />
             <ListItemSecondaryAction>
               <Chip label={`${unit.cost}`} size="small" sx={{ mr: 1 }} />
-              <IconButton size="small" onClick={() => onAdd(unit.id)} aria-label={t('army.units.add')}>
+              <IconButton
+                size="small"
+                onClick={() => onAdd(unit.id)}
+                aria-label={t('army.units.add')}
+                disabled={!canAdd}
+              >
                 <AddIcon fontSize="small" />
               </IconButton>
             </ListItemSecondaryAction>

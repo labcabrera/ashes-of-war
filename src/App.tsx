@@ -2,16 +2,18 @@
  * Application router definition.
  * Declares application routes and wraps them with the shared AppLayout shell.
  */
+import { lazy } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './components/layout/AppLayout';
 import HomePage from './pages/HomePage';
 import RulesPage from './pages/RulesPage';
 import RulesChapterPage from './pages/RulesChapterPage';
 import UnitsPage from './pages/UnitsPage';
-import ArmyBuilderPage from './pages/ArmyBuilderPage';
 import CampaignPage from './pages/CampaignPage';
 import WikiPage from './pages/WikiPage';
 import WikiArticlePage from './pages/WikiArticlePage';
+
+const ArmyBuilderPage = lazy(() => import('./pages/ArmyBuilderPage'));
 
 const router = createBrowserRouter([
   {

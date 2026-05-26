@@ -160,6 +160,30 @@
       "add": "Añadir al ejército",
       "remove": "Eliminar"
     },
+    "graph": {
+      "title": "Estructura de mando",
+      "instructions": "Selecciona un nodo para añadir unidades. Arrastra para ordenar y conecta un mando a un subordinado para cambiar la jerarquía.",
+      "createPrompt": "Crea o selecciona un ejército para comenzar su estructura jerárquica.",
+      "addFormation": "Añadir formación subordinada",
+      "addTo": "Añadir bajo: {{parent}}",
+      "selectParent": "Selecciona un nodo de mando en el grafo para añadir unidades.",
+      "edit": "Modificar",
+      "label": "Nombre del elemento",
+      "formationType": "Tipo de formación",
+      "quantity": "Cantidad",
+      "deleteTitle": "Eliminar elemento",
+      "deletePrompt": "Se eliminará este elemento y toda su estructura subordinada.",
+      "invalidConnectionTitle": "Enlace no válido",
+      "invalidConnection": "Una unidad no puede mandar subordinados ni una formación depender de sí misma o de sus descendientes.",
+      "unknownUnit": "Unidad no disponible",
+      "kinds": {
+        "army": "Ejército",
+        "company": "Compañía",
+        "platoon": "Pelotón",
+        "section": "Sección",
+        "unit": "Unidad"
+      }
+    },
     "save": {
       "title": "Guardar ejército",
       "name": "Nombre del ejército",

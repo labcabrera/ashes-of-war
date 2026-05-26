@@ -1,18 +1,17 @@
 /**
- * ArmyBuilderPage — full army builder combining all army components.
- * Handles army type selection, unit picking, budget tracking, save/load, and export/import.
+ * ArmyBuilderPage composes saved forces, budgets, catalogue selection and the organization graph.
  */
 import { useMemo, useState } from 'react';
-import { Box, Typography, Paper, Snackbar, Alert, Divider } from '@mui/material';
+import { Alert, Box, Paper, Snackbar, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useArmyList } from '../hooks/useArmyList';
 import ArmyTypeSelector from '../components/army/ArmyTypeSelector';
 import ArmyBudgetBar from '../components/army/ArmyBudgetBar';
 import ArmyUnitPicker from '../components/army/ArmyUnitPicker';
-import ArmyUnitList from '../components/army/ArmyUnitList';
 import ArmySaveManager from '../components/army/ArmySaveManager';
 import ArmyExportImport from '../components/army/ArmyExportImport';
-import { Army, ArmyType } from '../types/army';
+import ArmyFlowEditor from '../components/army/ArmyFlowEditor';
+import { Army, ArmyNode, ArmyType } from '../types/army';
 import { Unit } from '../types/unit';
 import armyTypesData from '../data/army-types/army-types.json';
 import unitsData from '../data/units/units.json';
@@ -20,86 +19,90 @@ import unitsData from '../data/units/units.json';
 const allArmyTypes = armyTypesData.armyTypes as unknown as ArmyType[];
 const allUnits = unitsData.units as unknown as Unit[];
 
+function rootNode(army: Army): ArmyNode | undefined {
+  return army.nodes.find((node) => node.kind === 'army');
+}
+
 export default function ArmyBuilderPage() {
   const { t } = useTranslation();
-  const { armies, createArmy, deleteArmy, addUnit, removeUnit, computeBudget, exportArmy, importArmy } =
-    useArmyList();
+  const {
+    armies,
+    createArmy,
+    deleteArmy,
+    addFormation,
+    addUnit,
+    updateNode,
+    deleteNode,
+    positionNode,
+    reparentNode,
+    computeBudget,
+    exportArmy,
+    importArmy,
+  } = useArmyList();
 
   const [selectedArmyTypeId, setSelectedArmyTypeId] = useState(allArmyTypes[0]?.id ?? '');
-  const [activeArmy, setActiveArmy] = useState<Army | null>(null);
+  const [activeArmyId, setActiveArmyId] = useState<string | null>(null);
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [snack, setSnack] = useState<{ open: boolean; severity: 'success' | 'error'; message: string }>({
-    open: false, severity: 'success', message: '',
+    open: false,
+    severity: 'success',
+    message: '',
   });
 
   const armyType = useMemo(
-    () => allArmyTypes.find((at) => at.id === selectedArmyTypeId) ?? allArmyTypes[0],
-    [selectedArmyTypeId]
+    () => allArmyTypes.find((type) => type.id === selectedArmyTypeId) ?? allArmyTypes[0],
+    [selectedArmyTypeId],
   ) as ArmyType;
-
-  const unitMap = useMemo(
-    () => new Map(allUnits.map((u) => [u.id, u])),
-    []
+  const activeArmy = useMemo(
+    () => armies.find((army) => army.id === activeArmyId) ?? null,
+    [activeArmyId, armies],
   );
-
+  const unitMap = useMemo(() => new Map(allUnits.map((unit) => [unit.id, unit])), []);
   const budget = useMemo(
-    () => (activeArmy && armyType ? computeBudget(activeArmy, armyType) : null),
-    [activeArmy, armyType, computeBudget]
+    () => (activeArmy ? computeBudget(activeArmy, armyType) : null),
+    [activeArmy, armyType, computeBudget],
   );
+  const effectiveSelectedNodeId = activeArmy?.nodes.some((node) => node.id === selectedNodeId)
+    ? selectedNodeId
+    : activeArmy ? rootNode(activeArmy)?.id ?? null : null;
+  const selectedNode = activeArmy?.nodes.find((node) => node.id === effectiveSelectedNodeId);
+  const canAttachUnit = !!selectedNode && selectedNode.kind !== 'unit';
 
   const handleCreate = (name: string) => {
     const army = createArmy(name, selectedArmyTypeId);
-    setActiveArmy(army);
+    setActiveArmyId(army.id);
+    setSelectedNodeId(rootNode(army)?.id ?? null);
   };
 
   const handleSelect = (army: Army) => {
     setSelectedArmyTypeId(army.armyTypeId);
-    setActiveArmy(army);
+    setActiveArmyId(army.id);
+    setSelectedNodeId(rootNode(army)?.id ?? null);
   };
 
   const handleDelete = (id: string) => {
     deleteArmy(id);
-    if (activeArmy?.id === id) setActiveArmy(null);
+    if (activeArmyId === id) {
+      setActiveArmyId(null);
+      setSelectedNodeId(null);
+    }
   };
 
   const handleAddUnit = (unitId: string) => {
-    if (!activeArmy) return;
-    addUnit(activeArmy.id, unitId);
-    setActiveArmy((prev) => {
-      if (!prev) return prev;
-      const existing = prev.units.find((u) => u.unitId === unitId);
-      const updatedUnits = existing
-        ? prev.units.map((u) => u.unitId === unitId ? { ...u, quantity: u.quantity + 1 } : u)
-        : [...prev.units, { unitId, quantity: 1 }];
-      return { ...prev, units: updatedUnits };
-    });
-  };
-
-  const handleRemoveUnit = (unitId: string) => {
-    if (!activeArmy) return;
-    removeUnit(activeArmy.id, unitId);
-    setActiveArmy((prev) => {
-      if (!prev) return prev;
-      const updatedUnits = prev.units
-        .map((u) => u.unitId === unitId ? { ...u, quantity: u.quantity - 1 } : u)
-        .filter((u) => u.quantity > 0);
-      return { ...prev, units: updatedUnits };
-    });
-  };
-
-  const handleExport = () => {
-    if (!activeArmy) return;
-    exportArmy(activeArmy);
+    if (!activeArmy || !selectedNode || !canAttachUnit) return;
+    addUnit(activeArmy.id, selectedNode.id, unitId);
   };
 
   const handleImport = (file: File) => {
     importArmy(
       file,
       (imported) => {
-        setActiveArmy(imported);
+        setActiveArmyId(imported.id);
         setSelectedArmyTypeId(imported.armyTypeId);
+        setSelectedNodeId(rootNode(imported)?.id ?? null);
         setSnack({ open: true, severity: 'success', message: t('army.import.success') });
       },
-      () => setSnack({ open: true, severity: 'error', message: t('army.import.error') })
+      () => setSnack({ open: true, severity: 'error', message: t('army.import.error') }),
     );
   };
 
@@ -107,7 +110,11 @@ export default function ArmyBuilderPage() {
     <Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, flexWrap: 'wrap', gap: 1 }}>
         <Typography variant="h4">{t('army.title')}</Typography>
-        <ArmyExportImport army={activeArmy} onExport={handleExport} onImport={handleImport} />
+        <ArmyExportImport
+          army={activeArmy}
+          onExport={() => { if (activeArmy) exportArmy(activeArmy); }}
+          onImport={handleImport}
+        />
       </Box>
 
       <Box sx={{ mb: 2 }}>
@@ -127,57 +134,57 @@ export default function ArmyBuilderPage() {
         </Paper>
       )}
 
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, alignItems: 'flex-start' }}>
-        <Box sx={{ flex: '1 1 280px' }}>
+      <Stack direction={{ xs: 'column', lg: 'row' }} spacing={2} sx={{ alignItems: 'flex-start' }}>
+        <Stack spacing={2} sx={{ width: { xs: '100%', lg: 320 }, flexShrink: 0 }}>
           <Paper sx={{ p: 2 }}>
             <ArmySaveManager
               armies={armies}
-              selectedId={activeArmy?.id ?? null}
+              selectedId={activeArmyId}
               armyTypeId={selectedArmyTypeId}
               onSelect={handleSelect}
               onCreate={handleCreate}
               onDelete={handleDelete}
             />
           </Paper>
-        </Box>
 
-        <Box sx={{ flex: '1 1 280px' }}>
           <Paper sx={{ p: 2 }}>
             <ArmyUnitPicker
               allUnits={allUnits}
               armyType={armyType}
+              selectedParentLabel={selectedNode?.label}
+              canAdd={canAttachUnit}
               onAdd={handleAddUnit}
             />
           </Paper>
-        </Box>
+        </Stack>
 
-        <Box sx={{ flex: '1 1 280px' }}>
-          <Paper sx={{ p: 2 }}>
-            <Typography variant="subtitle2" gutterBottom>
-              {t('army.units.title')}
-            </Typography>
-            <Divider sx={{ mb: 1 }} />
-            {activeArmy ? (
-              <ArmyUnitList
-                armyUnits={activeArmy.units}
-                unitMap={unitMap}
-                onRemove={handleRemoveUnit}
-              />
-            ) : (
-              <Typography color="text.secondary" variant="body2">
-                {t('army.save.title')}
-              </Typography>
-            )}
-          </Paper>
-        </Box>
-      </Box>
+        <Paper sx={{ p: 2, flex: 1, width: { xs: '100%', lg: 'auto' }, minWidth: 0 }}>
+          {activeArmy ? (
+            <ArmyFlowEditor
+              army={activeArmy}
+              unitMap={unitMap}
+              selectedNodeId={effectiveSelectedNodeId}
+              onSelectedNodeChange={setSelectedNodeId}
+              onAddFormation={(parentId, kind, label) => addFormation(activeArmy.id, parentId, kind, label)}
+              onUpdateNode={(nodeId, label, quantity) => updateNode(activeArmy.id, nodeId, label, quantity)}
+              onDeleteNode={(nodeId) => deleteNode(activeArmy.id, nodeId)}
+              onPositionNode={(nodeId, position) => positionNode(activeArmy.id, nodeId, position)}
+              onReparentNode={(nodeId, parentId) => reparentNode(activeArmy.id, nodeId, parentId)}
+            />
+          ) : (
+            <Box sx={{ p: 4, textAlign: 'center' }}>
+              <Typography color="text.secondary">{t('army.graph.createPrompt')}</Typography>
+            </Box>
+          )}
+        </Paper>
+      </Stack>
 
       <Snackbar
         open={snack.open}
         autoHideDuration={3000}
-        onClose={() => setSnack((s) => ({ ...s, open: false }))}
+        onClose={() => setSnack((state) => ({ ...state, open: false }))}
       >
-        <Alert severity={snack.severity} onClose={() => setSnack((s) => ({ ...s, open: false }))}>
+        <Alert severity={snack.severity} onClose={() => setSnack((state) => ({ ...state, open: false }))}>
           {snack.message}
         </Alert>
       </Snackbar>
