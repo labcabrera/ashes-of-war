@@ -291,6 +291,117 @@
       "imageUrl": "/images/tiger-ii.jpg"
     },
     {
+      "id": "german-hornisse",
+      "name": "Hornisse",
+      "type": "tank",
+      "faction": "german",
+      "from": 1943,
+      "to": 1944,
+      "cost": 45,
+      "resourceCosts": { "fuel": 10, "logistics": 10 },
+      "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
+      "weapons": [
+        { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
+      ],
+      "imageUrl": "/images/german-hornisse.jpg"
+    },
+    {
+      "id": "german-nashorn",
+      "name": "Nashorn",
+      "type": "tank",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 45,
+      "resourceCosts": { "fuel": 10, "logistics": 10 },
+      "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
+      "weapons": [
+        { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
+      ],
+      "imageUrl": "/images/german-nashorn.jpg"
+    },
+    {
+      "id": "german-jagdpanzer-iv",
+      "name": "Jagdpanzer IV",
+      "type": "tank",
+      "faction": "german",
+      "from": 1944,
+      "to": 1945,
+      "cost": 40,
+      "resourceCosts": { "fuel": 8, "logistics": 8 },
+      "profile": { "front": 60, "side": 30, "rear": 20, "exposed": 10 },
+      "weapons": [
+        { "id": "german-kwk-40-l48", "count": 1, "type": "hull" }
+      ]
+    },
+    {
+      "id": "german-jagdpanther",
+      "name": "Jagdpanther",
+      "type": "tank",
+      "faction": "german",
+      "from": 1944,
+      "to": 1945,
+      "cost": 60,
+      "resourceCosts": { "fuel": 12, "logistics": 12 },
+      "profile": { "front": 80, "side": 50, "rear": 40, "exposed": 15 },
+      "weapons": [
+        { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
+      ]
+    },
+    {
+      "id": "german-wespe",
+      "name": "Wespe",
+      "type": "artillery",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 28,
+      "resourceCosts": { "fuel": 5, "logistics": 10 },
+      "profile": { "front": 18, "side": 8, "rear": 8, "exposed": 5 }
+    },
+    {
+      "id": "german-marder-i",
+      "name": "Marder I",
+      "type": "tank",
+      "faction": "german",
+      "from": 1942,
+      "to": 1945,
+      "cost": 26,
+      "resourceCosts": { "fuel": 5, "logistics": 8 },
+      "profile": { "front": 12, "side": 10, "rear": 8, "exposed": 5 },
+      "weapons": [
+        { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
+      ]
+    },
+    {
+      "id": "german-marder-ii",
+      "name": "Marder II",
+      "type": "tank",
+      "faction": "german",
+      "from": 1942,
+      "to": 1945,
+      "cost": 30,
+      "resourceCosts": { "fuel": 5, "logistics": 8 },
+      "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
+      "weapons": [
+        { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
+      ]
+    },
+    {
+      "id": "german-marder-iii",
+      "name": "Marder III",
+      "type": "tank",
+      "faction": "german",
+      "from": 1942,
+      "to": 1945,
+      "cost": 33,
+      "resourceCosts": { "fuel": 5, "logistics": 8 },
+      "profile": { "front": 50, "side": 15, "rear": 10, "exposed": 5 },
+      "weapons": [
+        { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
+      ]
+    },
+    {
       "id": "ussr-infantry-01",
       "name": "Red Army Rifle Section",
       "type": "infantry",
