@@ -19,6 +19,7 @@ import UnitList from '../components/units/UnitList';
 import UnitDetail from '../components/units/UnitDetail';
 import WeaponList from '../components/weapons/WeaponList';
 import WeaponDetail from '../components/weapons/WeaponDetail';
+import WeaponFilters from '../components/weapons/WeaponFilters';
 import { Unit } from '../types/unit';
 import { Weapon } from '../types/weapon';
 import unitsData from '../data/units/units.json';
@@ -34,6 +35,14 @@ export default function UnitsPage() {
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
   const [selectedWeapon, setSelectedWeapon] = useState<Weapon | null>(null);
+  const [weaponName, setWeaponName] = useState('');
+  const [weaponFaction, setWeaponFaction] = useState('');
+
+  function getWeaponFaction(id: string): string {
+    if (id.startsWith('german-')) return 'german';
+    if (id.startsWith('su-')) return 'soviet';
+    return '';
+  }
 
   const factions = useMemo(() => {
     const all = (unitsData.units as unknown as Unit[]).map((u) => u.faction);
@@ -41,6 +50,19 @@ export default function UnitsPage() {
   }, []);
 
   const weapons = weaponsData.weapons as unknown as Weapon[];
+
+  const weaponFactions = useMemo(() => {
+    const all = weapons.map((w) => getWeaponFaction(w.id)).filter(Boolean);
+    return [...new Set(all)].sort();
+  }, [weapons]);
+
+  const filteredWeapons = useMemo(() => {
+    return weapons.filter((w) => {
+      const matchesName = weaponName === '' || w.name.toLowerCase().includes(weaponName.toLowerCase());
+      const matchesFaction = weaponFaction === '' || getWeaponFaction(w.id) === weaponFaction;
+      return matchesName && matchesFaction;
+    });
+  }, [weapons, weaponName, weaponFaction]);
 
   return (
     <Box>
@@ -129,12 +151,21 @@ export default function UnitsPage() {
             gap: 3,
           }}
         >
-          <WeaponList
-            weapons={weapons}
-            selectedId={selectedWeapon?.id ?? null}
-            viewMode={viewMode}
-            onSelect={setSelectedWeapon}
-          />
+          <Box>
+            <WeaponFilters
+              name={weaponName}
+              faction={weaponFaction}
+              factions={weaponFactions}
+              onNameChange={setWeaponName}
+              onFactionChange={setWeaponFaction}
+            />
+            <WeaponList
+              weapons={filteredWeapons}
+              selectedId={selectedWeapon?.id ?? null}
+              viewMode={viewMode}
+              onSelect={setSelectedWeapon}
+            />
+          </Box>
 
           <WeaponDetail weapon={selectedWeapon} />
         </Box>

@@ -109,8 +109,8 @@
     },
     {
       "id": "german-stug-iii-a",
-      "name": "StuG III Ausf. A",
-      "type": "tank",
+      "name": "StuG III Ausf. A-E",
+      "type": "assault-gun",
       "faction": "german",
       "from": 1940,
       "to": 1940,
@@ -121,47 +121,9 @@
       "imageUrl": "/images/german-stug-iii-a.jpg"
     },
     {
-      "id": "german-stug-iii-b",
-      "name": "StuG III Ausf. B",
-      "type": "tank",
-      "faction": "german",
-      "from": 1940,
-      "to": 1941,
-      "cost": 25,
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
-      "imageUrl": "/images/german-stug-iii-b.jpg"
-    },
-    {
-      "id": "german-stug-iii-c",
-      "name": "StuG III Ausf. C",
-      "type": "tank",
-      "faction": "german",
-      "from": 1941,
-      "to": 1941,
-      "cost": 25,
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
-      "imageUrl": "/images/german-stug-iii-c.jpg"
-    },
-    {
-      "id": "german-stug-iii-d",
-      "name": "StuG III Ausf. D",
-      "type": "tank",
-      "faction": "german",
-      "from": 1941,
-      "to": 1941,
-      "cost": 25,
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }]
-    },
-    {
       "id": "german-stug-iii-e",
-      "name": "StuG III Ausf. E",
-      "type": "tank",
+      "name": "StuG III Ausf. G",
+      "type": "assault-gun",
       "faction": "german",
       "from": 1941,
       "to": 1942,
@@ -174,19 +136,20 @@
     {
       "id": "german-stug-iii-f",
       "name": "StuG III Ausf. F",
-      "type": "tank",
+      "type": "assault-gun",
       "faction": "german",
       "from": 1942,
       "to": 1942,
       "cost": 30,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-40-l43", "count": 1, "type": "hull" }]
+      "weapons": [{ "id": "german-kwk-40-l43", "count": 1, "type": "hull" }],
+      "imageUrl": "/images/german-stug-iii-f.jpg"
     },
     {
       "id": "german-stug-iii-g",
       "name": "StuG III Ausf. G",
-      "type": "tank",
+      "type": "assault-gun",
       "faction": "german",
       "from": 1942,
       "to": 1945,
@@ -272,7 +235,7 @@
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" },
         { "id": "german-mg-34-42", "count": 2, "type": "turret" }
       ],
-      "imageUrl": "/images/tiger-i.jpg"
+      "imageUrl": "/images/german-tiger-i.jpg"
     },
     {
       "id": "german-tiger-ii",
@@ -289,7 +252,7 @@
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" },
         { "id": "german-mg-34-42", "count": 2, "type": "turret" }
       ],
-      "imageUrl": "/images/tiger-ii.jpg"
+      "imageUrl": "/images/german-tiger-ii.jpg"
     },
     {
       "id": "german-hornisse",
@@ -423,7 +386,7 @@
       "cost": 29,
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 45, "side": 45, "rear": 40, "exposed": 10 },
-      "imageUrl": "/images/t-34-76.jpg"
+      "imageUrl": "/images/soviet-t-34-76.jpg"
     },
     {
       "id": "soviet-t-34-85",
@@ -435,7 +398,7 @@
       "cost": 36,
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 60, "side": 45, "rear": 40, "exposed": 12 },
-      "imageUrl": "/images/t-34-85.jpg"
+      "imageUrl": "/images/soviet-t-34-85.jpg"
     },
     {
       "id": "soviet-is-1",
@@ -448,7 +411,7 @@
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
       "weapons": [{ "id": "su-d-5t", "count": 1, "type": "turret" }],
-      "imageUrl": "/images/is-1.jpg"
+      "imageUrl": "/images/soviet-is-1.jpg"
     },
     {
       "id": "soviet-is-2",
@@ -461,7 +424,7 @@
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
       "weapons": [{ "id": "su-d-25t", "count": 1, "type": "turret" }],
-      "imageUrl": "/images/is-2.jpg"
+      "imageUrl": "/images/soviet-is-2.jpg"
     },
     {
       "id": "soviet-artillery-01",
