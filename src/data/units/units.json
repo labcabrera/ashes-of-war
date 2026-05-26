@@ -25,7 +25,7 @@
           ]
         }
       ],
-      "imageUrl": "/images/german-panzergrenadier-squad.jpg"
+      "imageUrl": "/images/units/german-panzergrenadier-squad.jpg"
     },
     {
       "id": "german-panzer-iv-a",
@@ -41,7 +41,7 @@
         { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
       ],
-      "imageUrl": "/images/german-panzer-iv-a.jpg"
+      "imageUrl": "/images/units/german-panzer-iv-a.jpg"
     },
     {
       "id": "german-panzer-iv-bc",
@@ -57,7 +57,7 @@
         { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
       ],
-      "imageUrl": "/images/german-panzer-iv-bc.jpg"
+      "imageUrl": "/images/units/german-panzer-iv-bc.jpg"
     },
     {
       "id": "german-panzer-iv-d",
@@ -73,7 +73,7 @@
         { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
       ],
-      "imageUrl": "/images/german-panzer-iv-d.jpg"
+      "imageUrl": "/images/units/german-panzer-iv-d.jpg"
     },
     {
       "id": "german-tank-01",
@@ -89,7 +89,7 @@
         { "id": "german-kwk-40-l48", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
       ],
-      "imageUrl": "/images/german-panzer-iv-g.jpg"
+      "imageUrl": "/images/units/german-panzer-iv-g.jpg"
     },
     {
       "id": "german-tank-02",
@@ -105,7 +105,7 @@
         { "id": "german-kwk-39", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
       ],
-      "imageUrl": "/images/german-panzer-iii-j.jpg"
+      "imageUrl": "/images/units/german-panzer-iii-j.jpg"
     },
     {
       "id": "german-stug-iii-a",
@@ -118,7 +118,7 @@
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
-      "imageUrl": "/images/german-stug-iii-a.jpg"
+      "imageUrl": "/images/units/german-stug-iii-a.jpg"
     },
     {
       "id": "german-stug-iii-e",
@@ -131,7 +131,7 @@
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
-      "imageUrl": "/images/german-stug-iii-e.jpg"
+      "imageUrl": "/images/units/german-stug-iii-e.jpg"
     },
     {
       "id": "german-stug-iii-f",
@@ -144,7 +144,7 @@
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
       "weapons": [{ "id": "german-kwk-40-l43", "count": 1, "type": "hull" }],
-      "imageUrl": "/images/german-stug-iii-f.jpg"
+      "imageUrl": "/images/units/german-stug-iii-f.jpg"
     },
     {
       "id": "german-stug-iii-g",
@@ -167,7 +167,7 @@
       "to": 1945,
       "cost": 21,
       "resourceCosts": { "fuel": 3, "logistics": 10 },
-      "imageUrl": "/images/10.5-cm-leFH-18.jpg"
+      "imageUrl": "/images/units/10.5-cm-leFH-18.jpg"
     },
     {
       "id": "german-recon-01",
@@ -178,7 +178,7 @@
       "to": 1944,
       "cost": 14,
       "resourceCosts": { "fuel": 5, "intelligence": 1 },
-      "imageUrl": "/images/german-sd-kfz-222.jpg"
+      "imageUrl": "/images/units/german-sd-kfz-222.jpg"
     },
     {
       "id": "german-motorised-01",
@@ -235,7 +235,7 @@
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" },
         { "id": "german-mg-34-42", "count": 2, "type": "turret" }
       ],
-      "imageUrl": "/images/german-tiger-i.jpg"
+      "imageUrl": "/images/units/german-tiger-i.jpg"
     },
     {
       "id": "german-tiger-ii",
@@ -252,7 +252,7 @@
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" },
         { "id": "german-mg-34-42", "count": 2, "type": "turret" }
       ],
-      "imageUrl": "/images/german-tiger-ii.jpg"
+      "imageUrl": "/images/units/german-tiger-ii.jpg"
     },
     {
       "id": "german-hornisse",
@@ -267,7 +267,7 @@
       "weapons": [
         { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
       ],
-      "imageUrl": "/images/german-hornisse.jpg"
+      "imageUrl": "/images/units/german-hornisse.jpg"
     },
     {
       "id": "german-nashorn",
@@ -282,7 +282,7 @@
       "weapons": [
         { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
       ],
-      "imageUrl": "/images/german-nashorn.jpg"
+      "imageUrl": "/images/units/german-nashorn.jpg"
     },
     {
       "id": "german-jagdpanzer-iv",
@@ -386,7 +386,7 @@
       "cost": 29,
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 45, "side": 45, "rear": 40, "exposed": 10 },
-      "imageUrl": "/images/soviet-t-34-76.jpg"
+      "imageUrl": "/images/units/soviet-t-34-76.jpg"
     },
     {
       "id": "soviet-t-34-85",
@@ -398,7 +398,7 @@
       "cost": 36,
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 60, "side": 45, "rear": 40, "exposed": 12 },
-      "imageUrl": "/images/soviet-t-34-85.jpg"
+      "imageUrl": "/images/units/soviet-t-34-85.jpg"
     },
     {
       "id": "soviet-is-1",
@@ -411,7 +411,7 @@
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
       "weapons": [{ "id": "su-d-5t", "count": 1, "type": "turret" }],
-      "imageUrl": "/images/soviet-is-1.jpg"
+      "imageUrl": "/images/units/soviet-is-1.jpg"
     },
     {
       "id": "soviet-is-2",
@@ -424,7 +424,7 @@
       "resourceCosts": { "fuel": 10, "logistics": 10 },
       "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
       "weapons": [{ "id": "su-d-25t", "count": 1, "type": "turret" }],
-      "imageUrl": "/images/soviet-is-2.jpg"
+      "imageUrl": "/images/units/soviet-is-2.jpg"
     },
     {
       "id": "soviet-artillery-01",
@@ -435,7 +435,7 @@
       "to": 1945,
       "cost": 23,
       "resourceCosts": { "fuel": 3, "logistics": 10 },
-      "imageUrl": "/images/soviet-122mm-howitzer.jpg"
+      "imageUrl": "/images/units/soviet-122mm-howitzer.jpg"
     },
     {
       "id": "soviet-infantry-02",
