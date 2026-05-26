@@ -88,6 +88,7 @@
     "types": {
       "infantry": "Infantería",
       "tank": "Tanque",
+      "tank-destroyer": "Cazacarros",
       "artillery": "Artillería",
       "motorised": "Motorizado",
       "mechanised": "Mecanizado",

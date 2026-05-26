@@ -9,6 +9,7 @@ import type { WeaponFeatureModifier } from './weapon';
 export type UnitType =
   | 'infantry'
   | 'tank'
+  | 'tank-destroyer'
   | 'artillery'
   | 'motorised'
   | 'mechanised'

@@ -88,6 +88,7 @@
     "types": {
       "infantry": "Infantry",
       "tank": "Tank",
+      "tank-destroyer": "Tank Destroyer",
       "artillery": "Artillery",
       "motorised": "Motorised",
       "mechanised": "Mechanised",

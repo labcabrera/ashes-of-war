@@ -25,7 +25,7 @@
           ]
         }
       ],
-      "imageUrl": "/images/panzergrenadier-squad.jpg"
+      "imageUrl": "/images/german-panzergrenadier-squad.jpg"
     },
     {
       "id": "german-panzer-iv-a",
@@ -37,11 +37,11 @@
       "cost": 32,
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
-      "imageUrl": "/images/panzer-iv-a.jpg",
       "weapons": [
         { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
-      ]
+      ],
+      "imageUrl": "/images/german-panzer-iv-a.jpg"
     },
     {
       "id": "german-panzer-iv-bc",
@@ -53,11 +53,11 @@
       "cost": 32,
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
-      "imageUrl": "/images/panzer-iv-bc.jpg",
       "weapons": [
         { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
-      ]
+      ],
+      "imageUrl": "/images/german-panzer-iv-bc.jpg"
     },
     {
       "id": "german-panzer-iv-d",
@@ -69,11 +69,11 @@
       "cost": 32,
       "resourceCosts": { "fuel": 8, "logistics": 5 },
       "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
-      "imageUrl": "/images/panzer-iv-d.jpg",
       "weapons": [
         { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
-      ]
+      ],
+      "imageUrl": "/images/german-panzer-iv-d.jpg"
     },
     {
       "id": "german-tank-01",
@@ -89,7 +89,7 @@
         { "id": "german-kwk-40-l48", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
       ],
-      "imageUrl": "/images/panzer-iv-g.jpg"
+      "imageUrl": "/images/german-panzer-iv-g.jpg"
     },
     {
       "id": "german-tank-02",
@@ -101,11 +101,11 @@
       "cost": 25,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 20, "exposed": 10 },
-      "imageUrl": "/images/panzer-iii-j.jpg",
       "weapons": [
         { "id": "german-kwk-39", "count": 1, "type": "turret" },
         { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
-      ]
+      ],
+      "imageUrl": "/images/german-panzer-iii-j.jpg"
     },
     {
       "id": "german-stug-iii-a",
@@ -117,8 +117,8 @@
       "cost": 25,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "imageUrl": "/images/stug-iii-a.jpg",
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }]
+      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
+      "imageUrl": "/images/german-stug-iii-a.jpg"
     },
     {
       "id": "german-stug-iii-b",
@@ -130,8 +130,8 @@
       "cost": 25,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "imageUrl": "/images/stug-iii-b.jpg",
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }]
+      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
+      "imageUrl": "/images/german-stug-iii-b.jpg"
     },
     {
       "id": "german-stug-iii-c",
@@ -143,8 +143,8 @@
       "cost": 25,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "imageUrl": "/images/stug-iii-c.jpg",
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }]
+      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
+      "imageUrl": "/images/german-stug-iii-c.jpg"
     },
     {
       "id": "german-stug-iii-d",
@@ -168,8 +168,8 @@
       "cost": 25,
       "resourceCosts": { "fuel": 5, "logistics": 5 },
       "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "imageUrl": "/images/stug-iii-e.jpg",
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }]
+      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
+      "imageUrl": "/images/german-stug-iii-e.jpg"
     },
     {
       "id": "german-stug-iii-f",
@@ -293,7 +293,7 @@
     {
       "id": "german-hornisse",
       "name": "Hornisse",
-      "type": "tank",
+      "type": "tank-destroyer",
       "faction": "german",
       "from": 1943,
       "to": 1944,
@@ -308,7 +308,7 @@
     {
       "id": "german-nashorn",
       "name": "Nashorn",
-      "type": "tank",
+      "type": "tank-destroyer",
       "faction": "german",
       "from": 1943,
       "to": 1945,
@@ -323,7 +323,7 @@
     {
       "id": "german-jagdpanzer-iv",
       "name": "Jagdpanzer IV",
-      "type": "tank",
+      "type": "tank-destroyer",
       "faction": "german",
       "from": 1944,
       "to": 1945,
@@ -337,7 +337,7 @@
     {
       "id": "german-jagdpanther",
       "name": "Jagdpanther",
-      "type": "tank",
+      "type": "tank-destroyer",
       "faction": "german",
       "from": 1944,
       "to": 1945,
@@ -362,7 +362,7 @@
     {
       "id": "german-marder-i",
       "name": "Marder I",
-      "type": "tank",
+      "type": "tank-destroyer",
       "faction": "german",
       "from": 1942,
       "to": 1945,
@@ -376,7 +376,7 @@
     {
       "id": "german-marder-ii",
       "name": "Marder II",
-      "type": "tank",
+      "type": "tank-destroyer",
       "faction": "german",
       "from": 1942,
       "to": 1945,
@@ -390,7 +390,7 @@
     {
       "id": "german-marder-iii",
       "name": "Marder III",
-      "type": "tank",
+      "type": "tank-destroyer",
       "faction": "german",
       "from": 1942,
       "to": 1945,
