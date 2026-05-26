@@ -1,0 +1,55 @@
+= Compañías alemanas del Heer
+:toc: left
+:toclevels: 3
+:sectnums:
+:icons: font
+:doctype: article
+:lang: es
+:revdate: 2026-05-26
+
+== Alcance
+
+Esta entrada presenta estructuras *teóricas* representativas del Heer para jugar y consultar unidades a escala de compañía. Una `KStN` era una tabla autorizada de organización y dotación; la fuerza disponible en combate podía ser mucho menor por bajas, reemplazos, vehículos averiados o reorganizaciones locales.
+
+== Compañía de infantería (granaderos) a pie, 1944
+
+La compañía de infantería de finales de guerra, representada por `KStN 131n` de 1 de mayo de 1944, concentraba fusileros y armas automáticas en tres pelotones, manteniendo armas pesadas y apoyo administrativo bajo control de compañía.
+
+|===
+|Elemento |Función en la compañía |Uso de referencia
+|Mando de compañía |Jefe, enlaces, comunicaciones y administración inmediata |Coordinación y moral
+|Tres pelotones de granaderos |Elemento principal de maniobra y ocupación del terreno |Infantería de línea
+|Sección de ametralladoras pesadas |Fuego sostenido de apoyo para la maniobra |Apoyo fijo o defensivo
+|Tren de compañía |Munición, víveres, transporte hipomóvil o motorizado disponible |Logística fuera de primera línea
+|===
+
+=== Pelotón de granaderos
+
+El pelotón articulaba el combate inmediato de la compañía. La distribución exacta de fusiles, subfusiles, granadas y ametralladoras ligeras dependía de la versión de la plantilla y del material realmente recibido.
+
+* Mando de pelotón para transmitir órdenes y enlazar con la compañía.
+* Escuadras de granaderos construidas alrededor de su ametralladora ligera.
+* Capacidad anticarro próxima basada progresivamente en armas desechables o lanzacohetes al final de la guerra.
+
+== Compañía Panzergrenadier
+
+Los *Panzergrenadiere* combatían con las formaciones acorazadas. Su compañía podía ser transportada en camiones o, en las unidades mejor dotadas, en semiorugas blindados; esa diferencia cambia la movilidad y la protección, no su papel básico de infantería de apoyo a carros.
+
+|===
+|Elemento |Compañía transportada |Compañía blindada
+|Mando |Mando y enlaces móviles |Mando embarcado y radio
+|Maniobra |Pelotones de infantería en camión |Pelotones embarcados en semiorugas
+|Apoyo |Armas automáticas y armas pesadas de compañía |Fuego desde vehículos y armas de compañía
+|Misión típica |Marcha rápida y combate desmontado |Acompañar a los carros bajo mayor protección
+|===
+
+== Aplicación en Ashes of War
+
+* Una compañía de granaderos ofrece varios pelotones de fusileros y apoyo de ametralladora para defender o avanzar con cautela.
+* Una compañía Panzergrenadier justifica transporte motorizado o mecanizado y coordinación con carros.
+* Una lista histórica debe indicar año y tipo de transporte; no toda división Panzer dispuso de suficientes semiorugas para todas sus compañías.
+
+== Referencias
+
+* War Department, *Handbook on German Military Forces*, `TM-E 30-451`, 15 de marzo de 1945: link:https://openlibrary.org/works/OL62568W/Handbook_on_German_Military_Forces[registro y copias digitales].
+* *Kriegstärkenachweisung 131n, Infanterie-Kompanie*, 1 de mayo de 1944: link:https://www.militaryresearch.org/Kstn%20131n%20Inf%20Co.pdf[reproducción de la tabla].

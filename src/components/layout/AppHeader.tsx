@@ -1,6 +1,6 @@
 /**
  * AppHeader — top navigation bar with route links and language switcher.
- * Navigation: Home, Rules, Units, Army Builder, Campaign.
+ * Navigation: Home, Rules, Units, Army Builder, Campaign, Wiki.
  * Language switcher persists selection to localStorage key "aow:i18n-locale".
  */
 import { AppBar, Toolbar, Typography, Button, ToggleButton, ToggleButtonGroup, Box } from '@mui/material';
@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { to: '/units', label: 'nav.units', end: false },
   { to: '/army-builder', label: 'nav.armyBuilder', end: false },
   { to: '/campaign', label: 'nav.campaign', end: false },
+  { to: '/wiki', label: 'nav.wiki', end: false },
 ];
 
 export default function AppHeader() {

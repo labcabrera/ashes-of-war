@@ -233,16 +233,6 @@
       "imageUrl": "/images/units/german-sd-kfz-222.jpg"
     },
     {
-      "id": "german-motorised-01",
-      "name": "Motorised Infantry Company",
-      "type": "motorised",
-      "faction": "german",
-      "from": 1939,
-      "to": 1945,
-      "cost": 16,
-      "resourceCosts": { "fuel": 5, "logistics": 5 }
-    },
-    {
       "id": "german-sniper-01",
       "name": "Wehrmacht Sniper Team",
       "type": "sniper",

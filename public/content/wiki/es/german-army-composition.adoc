@@ -1,0 +1,66 @@
+= Composición de ejércitos: Heer alemán
+:toc: left
+:toclevels: 3
+:sectnums:
+:icons: font
+:doctype: article
+:lang: es
+:revdate: 2026-05-26
+
+== Propósito
+
+El Heer no fue una organización fija durante toda la Segunda Guerra Mundial. Esta guía resume la cadena habitual de mando de campaña y ofrece como referencia divisiones de infantería y Panzer; las denominaciones y componentes variaron por año, oleada de movilización y situación del frente.
+
+== Jerarquía operativa habitual
+
+|===
+|Nivel |Nombre alemán |Composición orientativa |Función
+|Grupo de ejércitos |`Heeresgruppe` |Varios ejércitos |Dirección de un teatro o gran sector
+|Ejército |`Armee` |Varios cuerpos y apoyos de ejército |Conducción operacional
+|Cuerpo |`Armeekorps` |Varias divisiones |Control táctico-operacional
+|División |`Division` |Regimientos y unidades divisionales |Principal formación combinada sostenible
+|Regimiento |`Regiment` |Batallones |Agrupa infantería o carros
+|Batallón |`Bataillon` / `Abteilung` |Compañías |Unidad táctica de maniobra
+|Compañía |`Kompanie` |Pelotones y apoyos inmediatos |Escala básica de una fuerza de juego
+|Pelotón |`Zug` |Escuadras o vehículos |Maniobra próxima
+|Escuadra |`Gruppe` |Soldados y arma automática |Elemento mínimo de infantería
+|===
+
+== División de infantería representativa
+
+Una división de infantería del Heer giraba alrededor de sus regimientos de granaderos. Artillería, reconocimiento, ingenieros, transmisiones, defensa anticarro y servicios permitían que la infantería combatiera como formación, aunque a finales de guerra las plantillas se redujeron y la fuerza real fue muy irregular.
+
+|===
+|Componente divisional |Subestructura característica |Papel
+|Regimientos de granaderos |Batallones y compañías de granaderos |Tomar y mantener terreno
+|Regimiento de artillería |Grupos de artillería |Apoyo indirecto
+|Batallón anticarro |Cañones remolcados o autopropulsados según dotación |Defensa contra blindados
+|Batallón de ingenieros |Compañías de zapadores |Obstáculos, pasos y asalto
+|Reconocimiento y transmisiones |Destacamentos especializados |Información y mando
+|Servicios divisionales |Suministro, mantenimiento y sanidad |Sostener operaciones
+|===
+
+== División Panzer representativa
+
+La división Panzer combinaba un regimiento de carros con infantería Panzergrenadier y numerosos apoyos. No era únicamente una colección de tanques: reconocimiento, artillería, ingenieros, anticarros, antiaéreos y logística eran esenciales para explotar la movilidad.
+
+|===
+|Componente |Elementos subordinados habituales |Papel
+|Regimiento Panzer |Batallones y compañías de carros |Golpe blindado principal
+|Regimientos Panzergrenadier |Batallones motorizados o parcialmente blindados |Apoyo de infantería móvil
+|Artillería divisional |Piezas remolcadas o autopropulsadas |Fuego de apoyo móvil
+|Reconocimiento Panzer |Vehículos y tropas móviles |Exploración y seguridad
+|Ingenieros y cazacarros |Apoyo técnico y antiblindado |Abrir pasos y proteger la fuerza
+|Servicios |Talleres, combustible, munición y sanidad |Mantener el ritmo operacional
+|===
+
+== Lectura para escenarios
+
+* Un escenario a escala de compañía representa sólo el extremo inferior de una organización mucho mayor.
+* Apoyo artillero, anticarro o de carros puede modelar elementos divisionales agregados temporalmente a un batallón o compañía.
+* La designación de una división no garantiza su dotación real: fecha y batalla deben acompañar cualquier orden de batalla histórico.
+
+== Referencias
+
+* War Department, *Handbook on German Military Forces*, `TM-E 30-451`, 15 de marzo de 1945, capítulos sobre organización de campaña: link:https://openlibrary.org/works/OL62568W/Handbook_on_German_Military_Forces[registro y copias digitales].
+* *Kriegstärkenachweisung 131n, Infanterie-Kompanie*, 1 de mayo de 1944, ejemplo del nivel compañía: link:https://www.militaryresearch.org/Kstn%20131n%20Inf%20Co.pdf[reproducción de la tabla].

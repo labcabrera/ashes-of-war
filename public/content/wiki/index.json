@@ -1,0 +1,40 @@
+{
+  "_version": 1,
+  "articles": [
+    {
+      "id": "german-companies",
+      "titleKey": "wiki.article.germanCompanies",
+      "files": {
+        "es": "/content/wiki/es/german-companies.adoc"
+      }
+    },
+    {
+      "id": "soviet-companies",
+      "titleKey": "wiki.article.sovietCompanies",
+      "files": {
+        "es": "/content/wiki/es/soviet-companies.adoc"
+      }
+    },
+    {
+      "id": "army-composition",
+      "titleKey": "wiki.article.armyComposition",
+      "files": {
+        "es": "/content/wiki/es/army-composition.adoc"
+      }
+    },
+    {
+      "id": "german-army-composition",
+      "titleKey": "wiki.article.germanArmy",
+      "files": {
+        "es": "/content/wiki/es/german-army-composition.adoc"
+      }
+    },
+    {
+      "id": "soviet-army-composition",
+      "titleKey": "wiki.article.sovietArmy",
+      "files": {
+        "es": "/content/wiki/es/soviet-army-composition.adoc"
+      }
+    }
+  ]
+}

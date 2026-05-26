@@ -4,7 +4,8 @@
     "rules": "Rules",
     "units": "Units",
     "armyBuilder": "Army Builder",
-    "campaign": "Campaign"
+    "campaign": "Campaign",
+    "wiki": "Wiki"
   },
   "home": {
     "title": "Ashes of War",
@@ -37,6 +38,19 @@
     "chapter": {
       "introduction": "Introduction",
       "unitTypes": "Unit Types"
+    }
+  },
+  "wiki": {
+    "title": "Historical Wiki",
+    "description": "World War II unit and formation structures.",
+    "articles": "Articles",
+    "openArticles": "Open Wiki articles",
+    "article": {
+      "germanCompanies": "German companies",
+      "sovietCompanies": "Soviet companies",
+      "armyComposition": "Army composition",
+      "germanArmy": "Army composition: German",
+      "sovietArmy": "Army composition: Soviet"
     }
   },
   "catalogue": {

@@ -1,0 +1,52 @@
+= Compañías soviéticas del Ejército Rojo
+:toc: left
+:toclevels: 3
+:sectnums:
+:icons: font
+:doctype: article
+:lang: es
+:revdate: 2026-05-26
+
+== Alcance
+
+Las plantillas soviéticas, denominadas `shtat`, cambiaron repetidamente entre 1941 y 1945 para responder a pérdidas, disponibilidad de armamento y experiencia de combate. Esta entrada utiliza como referencia la organización de 1944-1945 descrita en el manual aliado `TM 30-430`; representa organización autorizada, no efectivos presentes en cada batalla.
+
+== Compañía de fusileros, 1944-1945
+
+La compañía de fusileros era el núcleo de maniobra del regimiento de fusileros. La simplificación de guerra mantenía tres pelotones de fusileros y armas de apoyo cercanas, mientras morteros y ametralladoras adicionales podían depender del batallón.
+
+|===
+|Elemento |Función |Representación de juego
+|Mando de compañía |Control, enlace y transmisión de órdenes |Oficial y enlaces
+|Tres pelotones de fusileros |Maniobra, asalto y ocupación del terreno |Pelotones de infantería
+|Armas automáticas asignadas |Fuego de supresión inmediato |Ametralladoras ligeras o pesadas según escenario
+|Defensa anticarro próxima |Respuesta de corto alcance contra blindados |Equipo anticarro si corresponde al año
+|===
+
+=== Pelotón de fusileros
+
+* Mando de pelotón y escuadras de fusileros como elementos de maniobra.
+* Ametralladoras ligeras y subfusiles distribuidos según dotación disponible y tarea.
+* En unidades de Guardias o asalto urbano podía aumentar el peso práctico de subfusiles, sin convertirlo en regla para toda compañía.
+
+== Compañía de carros T-34 en una brigada de carros
+
+En las brigadas de carros soviéticas de la última fase de la guerra, una compañía media podía organizar sus carros alrededor del vehículo del mando y varios pelotones. El `shtat` concreto y las pérdidas determinaban el número desplegado.
+
+|===
+|Elemento |Función |Relación superior
+|Carro del comandante |Mando y enlace de la compañía |Reporta al batallón de carros
+|Pelotones de carros T-34 |Maniobra blindada y fuego directo |Actúan coordinados por compañía
+|Apoyo no orgánico inmediato |Infantería, zapadores y artillería en operación combinada |Proviene de brigada o unidades agregadas
+|===
+
+== Aplicación en Ashes of War
+
+* La compañía de fusileros es apropiada para escenarios con varias secciones de infantería y apoyo limitado inmediato.
+* La compañía de carros no debe interpretarse como una fuerza autosuficiente: los ataques soviéticos integraban fusileros, zapadores y artillería cuando la situación lo permitía.
+* Para representar 1941 o 1942 conviene usar una entrada de escenario específica, pues la plantilla de 1944 no describe las primeras campañas.
+
+== Referencias
+
+* War Department, *Handbook on U.S.S.R. Military Forces*, `TM 30-430`, capítulo III, 1946: link:https://docslib.org/doc/5785974/handbook-on-ussr-military-forces-chapter-iii-field-organization-war-department-usa[Field Organization].
+* El mismo `TM 30-430`, capítulo III, incluye tablas para regimientos, batallones, brigadas de carros y cuerpos mecanizados, útiles para contextualizar la compañía.

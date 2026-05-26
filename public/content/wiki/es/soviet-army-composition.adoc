@@ -1,0 +1,65 @@
+= Composición de ejércitos: Ejército Rojo soviético
+:toc: left
+:toclevels: 3
+:sectnums:
+:icons: font
+:doctype: article
+:lang: es
+:revdate: 2026-05-26
+
+== Propósito
+
+El Ejército Rojo transformó profundamente su organización entre la invasión alemana de 1941 y las ofensivas de 1944-1945. La jerarquía siguiente sirve como referencia de la fase final de la guerra; la presencia de cuerpos, brigadas y apoyos varía por tipo de ejército y momento.
+
+== Jerarquía operativa habitual
+
+|===
+|Nivel |Denominación |Composición orientativa |Función
+|Mando supremo |`Stavka` |Frentes y reservas estratégicas |Dirección estratégica
+|Frente |Frente |Varios ejércitos y apoyos |Gran dirección operacional
+|Ejército |Ejército de armas combinadas o de carros |Cuerpos, divisiones o brigadas y apoyos |Operación en un sector
+|Cuerpo |Cuerpo de fusileros, carros o mecanizado |Divisiones o brigadas según tipo |Agrupación táctica-operacional
+|División |División de fusileros |Regimientos y unidades divisionales |Formación de infantería principal
+|Regimiento |Regimiento de fusileros |Batallones |Maniobra de infantería
+|Batallón |Batallón de fusileros |Compañías y apoyos |Combate táctico
+|Compañía |Compañía de fusileros |Pelotones |Escala básica de una fuerza de juego
+|Pelotón y escuadra |Pelotón / escuadra de fusileros |Soldados y armas asignadas |Maniobra inmediata
+|===
+
+== División de fusileros
+
+La división de fusileros fue la formación de infantería más común. Sus regimientos proporcionaban la maniobra; artillería, anticarros, zapadores, reconocimiento, transmisiones y servicios sostenían su capacidad de combate. Las divisiones de Guardias empleaban denominaciones prestigiosas y plantillas relacionadas, pero también sufrían desgaste real.
+
+|===
+|Componente divisional |Subestructura característica |Papel
+|Regimientos de fusileros |Batallones y compañías de fusileros |Maniobra principal
+|Artillería divisional |Regimiento o elementos de artillería |Preparación y apoyo de fuego
+|Elementos anticarro |Cañones y medios asignados |Defensa frente a carros
+|Zapadores |Batallón o compañías especializadas |Minas, obstáculos y asalto
+|Reconocimiento y transmisiones |Unidades especializadas |Información y control
+|Servicios |Transporte, sanidad y suministro |Sostenimiento
+|===
+
+== Fuerzas móviles: ejército de carros
+
+En 1944-1945 un ejército de carros era una agrupación operacional destinada a penetrar y explotar, compuesta principalmente por cuerpos de carros y mecanizados, más artillería, ingenieros, defensa antiaérea y servicios agregados.
+
+|===
+|Formación |Componentes característicos |Uso
+|Ejército de carros |Cuerpos móviles y apoyos de ejército |Explotación operacional
+|Cuerpo de carros |Brigadas de carros y apoyos |Concentración blindada
+|Cuerpo mecanizado |Brigadas mecanizadas y carros |Infantería móvil y blindados
+|Brigada de carros |Batallones de carros y elementos de apoyo |Unidad blindada táctica
+|Batallón de carros |Compañías de carros |Maniobra próxima de vehículos
+|===
+
+== Lectura para escenarios
+
+* Las compañías representadas en mesa podían recibir ametralladoras, morteros, cañones, carros o zapadores procedentes de escalones superiores.
+* La artillería era central en las ofensivas soviéticas y puede aparecer como apoyo fuera del tablero aunque la fuerza visible sea una compañía.
+* Debe especificarse si una fuerza representa una plantilla de fusileros, de Guardias, blindada o mecanizada y el año elegido.
+
+== Referencias
+
+* War Department, *Handbook on U.S.S.R. Military Forces*, `TM 30-430`, capítulo III, *Field Organization*, 1946: link:https://docslib.org/doc/5785974/handbook-on-ussr-military-forces-chapter-iii-field-organization-war-department-usa[consulta digital].
+* El mismo `TM 30-430`, capítulo III, detalla frente, ejército, cuerpo, división de fusileros, regimiento, batallón, brigada de carros y cuerpo mecanizado.
