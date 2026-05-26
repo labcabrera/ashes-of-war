@@ -43,6 +43,39 @@
       "imageUrl": "/images/units/german-panzer-i-a.jpg"
     },
     {
+      "id": "german-panzer-ii-a",
+      "name": "Panzer II Ausf. A",
+      "type": "tank",
+      "faction": "german",
+      "from": 1936,
+      "to": 1942,
+      "cost": 18,
+      "resourceCosts": { "fuel": 4, "logistics": 4 },
+      "profile": { "front": 14, "side": 14, "rear": 14, "exposed": 5 },
+      "weapons": [
+        { "id": "german-kwk-30-l55", "count": 1, "type": "turret" },
+        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+      ],
+      "imageUrl": "/images/units/german-panzer-ii-a.jpg"
+    },
+    {
+      "id": "german-panzer-38t-a",
+      "name": "Panzer 38(t) Ausf. A",
+      "type": "tank",
+      "faction": "german",
+      "from": 1939,
+      "to": 1942,
+      "cost": 20,
+      "resourceCosts": { "fuel": 4, "logistics": 4 },
+      "profile": { "front": 25, "side": 15, "rear": 15, "exposed": 5 },
+      "weapons": [
+        { "id": "german-kwk-38t", "count": 1, "type": "turret" },
+        { "id": "german-mg-37t", "count": 1, "type": "coaxial" },
+        { "id": "german-mg-37t", "count": 1, "type": "hull" }
+      ],
+      "imageUrl": "/images/units/german-panzer-38t-a.jpg"
+    },
+    {
       "id": "german-panzer-iv-a",
       "name": "Panzer IV Ausf. A",
       "type": "tank",

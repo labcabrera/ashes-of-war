@@ -126,6 +126,75 @@
       ]
     },
     {
+      "id": "german-kwk-30-l55",
+      "name": "2 cm KwK 30 L/55",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "ap",
+          "name": "AP",
+          "shots": 3,
+          "hitOn": 6,
+          "rangeModifier": "30/15/-1",
+          "armourPenetration": 3
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 3,
+          "hitOn": 6,
+          "rangeModifier": "30/15/-1",
+          "suppressionModifier": -1
+        }
+      ]
+    },
+    {
+      "id": "german-kwk-38t",
+      "name": "3,7 cm KwK 38(t)",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "ap",
+          "name": "AP",
+          "shots": 2,
+          "hitOn": 6,
+          "rangeModifier": "40/20/-1",
+          "armourPenetration": 4
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 2,
+          "hitOn": 6,
+          "rangeModifier": "40/20/-1",
+          "suppressionModifier": -1
+        }
+      ]
+    },
+    {
+      "id": "german-mg-37t",
+      "name": "MG 37(t)",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 4,
+          "hitOn": 7,
+          "rangeModifier": "25/15/-1",
+          "suppressionModifier": -1
+        },
+        {
+          "id": "precision",
+          "name": "Precision",
+          "shots": 2,
+          "hitOn": 6,
+          "rangeModifier": "30/15/-1",
+          "suppressionModifier": 0
+        }
+      ]
+    },
+    {
       "id": "german-kwk-37-l24",
       "name": "7.5 cm KwK 37 L/24",
       "type": "hard",
