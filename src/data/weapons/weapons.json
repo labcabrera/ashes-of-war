@@ -32,7 +32,8 @@
           "rangeModifier": "40/20/-1",
           "suppressionModifier": 0
         }
-      ]
+      ],
+      "imageUrl": "/images/weapons/german-mg-42.jpg"
     },
     {
       "id": "german-mauser-kar-98k",
@@ -48,7 +49,8 @@
           "suppressionModifier": 0,
           "characteristics": ["reliability-2-plus", "saturation-2-plus"]
         }
-      ]
+      ],
+      "imageUrl": "/images/weapons/german-mauser-kar-98k.jpg"
     },
     {
       "id": "german-mp-40",
@@ -375,6 +377,27 @@
           "hitOn": 5,
           "rangeModifier": "50/20/-1",
           "armourPenetration": 18
+        }
+      ]
+    },
+    {
+      "id": "german-rw-61",
+      "name": "38 cm Raketen-Werfer 61",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": { "min": 1, "max": 2 },
+        "combat": { "min": 1, "max": 1 }
+      },
+      "profiles": [
+        {
+          "id": "rocket",
+          "name": "Rocket",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "20/10/-1",
+          "armourPenetration": 14,
+          "suppressionModifier": -4,
+          "characteristics": ["area-12", "one-shot", "limited-ammunition-1"]
         }
       ]
     }

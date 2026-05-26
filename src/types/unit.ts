@@ -11,7 +11,7 @@ export type UnitType =
   | 'tank'
   | 'tank-destroyer'
   | 'assault-gun'
-  | 'artillery'
+  | 'self-propelled-artillery'
   | 'motorised'
   | 'mechanised'
   | 'reconnaissance'

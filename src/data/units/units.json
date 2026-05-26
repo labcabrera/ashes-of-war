@@ -161,7 +161,7 @@
     {
       "id": "german-artillery-01",
       "name": "10.5 cm leFH 18 Battery",
-      "type": "artillery",
+      "type": "self-propelled-artillery",
       "faction": "german",
       "from": 1939,
       "to": 1945,
@@ -315,7 +315,7 @@
     {
       "id": "german-wespe",
       "name": "Wespe",
-      "type": "artillery",
+      "type": "self-propelled-artillery",
       "faction": "german",
       "from": 1943,
       "to": 1945,
@@ -364,6 +364,21 @@
       "weapons": [
         { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
       ]
+    },
+    {
+      "id": "german-sturmtiger",
+      "name": "Sturmtiger",
+      "type": "assault-gun",
+      "faction": "german",
+      "from": 1944,
+      "to": 1945,
+      "cost": 75,
+      "resourceCosts": { "fuel": 15, "logistics": 15 },
+      "profile": { "front": 150, "side": 80, "rear": 80, "exposed": 25 },
+      "weapons": [
+        { "id": "german-rw-61", "count": 1, "type": "hull" }
+      ],
+      "imageUrl": "/images/units/german-sturmtiger.jpg"
     },
     {
       "id": "soviet-infantry-01",
@@ -429,7 +444,7 @@
     {
       "id": "soviet-artillery-01",
       "name": "122mm Howitzer Battery",
-      "type": "artillery",
+      "type": "self-propelled-artillery",
       "faction": "soviet",
       "from": 1941,
       "to": 1945,

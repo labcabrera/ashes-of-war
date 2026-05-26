@@ -7,6 +7,7 @@ import {
   Card,
   CardActionArea,
   CardContent,
+  CardMedia,
   Chip,
   Paper,
   Table,
@@ -25,6 +26,17 @@ interface Props {
   selectedId: string | null;
   viewMode: 'cards' | 'table';
   onSelect: (weapon: Weapon) => void;
+}
+
+const FACTION_FLAGS: Record<string, string> = {
+  german: '/images/german.png',
+  soviet: '/images/soviet.png',
+};
+
+function getWeaponFaction(id: string): string {
+  if (id.startsWith('german-')) return 'german';
+  if (id.startsWith('su-')) return 'soviet';
+  return '';
 }
 
 export default function WeaponList({ weapons, selectedId, viewMode, onSelect }: Props) {
@@ -81,37 +93,67 @@ export default function WeaponList({ weapons, selectedId, viewMode, onSelect }: 
         gap: 2.5,
       }}
     >
-      {weapons.map((weapon) => (
-        <Card
-          key={weapon.id}
-          sx={{
-            minHeight: 166,
-            border: 2,
-            borderColor: selectedId === weapon.id ? 'secondary.main' : 'transparent',
-          }}
-        >
-          <CardActionArea
-            onClick={() => onSelect(weapon)}
-            aria-pressed={selectedId === weapon.id}
-            sx={{ height: '100%' }}
+      {weapons.map((weapon) => {
+        const faction = getWeaponFaction(weapon.id);
+        const flagUrl = FACTION_FLAGS[faction];
+        const topImageUrl = weapon.imageUrl ?? flagUrl;
+        const isFlag = !weapon.imageUrl && !!flagUrl;
+        return (
+          <Card
+            key={weapon.id}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              border: 2,
+              borderColor: selectedId === weapon.id ? 'secondary.main' : 'transparent',
+              transition: 'border-color 0.2s',
+            }}
           >
-            <CardContent sx={{ p: 2.5 }}>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                {weapon.name}
-              </Typography>
-              <Box sx={{ display: 'flex', gap: 1, mt: 2, flexWrap: 'wrap' }}>
-                <Chip label={t(`weapons.types.${weapon.type}`)} size="small" color="secondary" />
-                <Chip
-                  label={t('weapons.profileCount', { count: weapon.profiles.length })}
-                  size="small"
-                  variant="outlined"
+            <CardActionArea
+              onClick={() => onSelect(weapon)}
+              aria-pressed={selectedId === weapon.id}
+              sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', flex: 1 }}
+            >
+              {topImageUrl && (
+                <CardMedia
+                  component="img"
+                  height={isFlag ? 100 : 140}
+                  image={topImageUrl}
+                  alt=""
+                  aria-hidden="true"
+                  sx={{
+                    objectFit: isFlag ? 'contain' : 'cover',
+                    p: isFlag ? 1.5 : 0,
+                    bgcolor: 'background.default',
+                  }}
                 />
-                <Chip label={weapon.profiles[0]?.rangeModifier} size="small" variant="outlined" />
-              </Box>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      ))}
+              )}
+              <CardContent sx={{ flex: 1, p: 2, '&:last-child': { pb: 2 } }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, fontSize: '1rem', mb: 1.5 }}>
+                  {weapon.name}
+                </Typography>
+                <Box sx={{ display: 'flex', gap: 0.75, flexWrap: 'wrap', alignItems: 'center' }}>
+                  {flagUrl && (
+                    <Box
+                      component="img"
+                      src={flagUrl}
+                      alt={faction}
+                      title={faction}
+                      sx={{ height: 14, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
+                    />
+                  )}
+                  <Chip label={t(`weapons.types.${weapon.type}`)} size="small" color="secondary" />
+                  <Chip
+                    label={t('weapons.profileCount', { count: weapon.profiles.length })}
+                    size="small"
+                    variant="outlined"
+                  />
+                </Box>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        );
+      })}
     </Box>
   );
 }

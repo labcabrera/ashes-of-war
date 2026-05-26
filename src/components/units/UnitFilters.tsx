@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { UnitType } from '../../types/unit';
 
 const UNIT_TYPES: UnitType[] = [
-  'infantry', 'tank', 'tank-destroyer', 'assault-gun', 'artillery', 'motorised', 'mechanised',
+  'infantry', 'tank', 'tank-destroyer', 'assault-gun', 'self-propelled-artillery', 'motorised', 'mechanised',
   'reconnaissance', 'engineer', 'artillery-towed', 'sniper', 'medic',
   'aircraft', 'special',
 ];

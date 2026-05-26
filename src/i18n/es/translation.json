@@ -90,7 +90,7 @@
       "tank": "Tanque",
       "tank-destroyer": "Cazacarros",
       "assault-gun": "Cañón de asalto",
-      "artillery": "Artillería",
+      "self-propelled-artillery": "Artillería autopropulsada",
       "motorised": "Motorizado",
       "mechanised": "Mecanizado",
       "reconnaissance": "Reconocimiento",

@@ -36,6 +36,7 @@ export interface Weapon {
   id: string;
   name: string;
   type: WeaponType;
+  imageUrl?: string;
   rateOfFirePerMinute?: WeaponRateOfFire;
   profiles: WeaponProfile[];
 }
