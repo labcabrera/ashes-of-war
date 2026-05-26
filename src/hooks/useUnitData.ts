@@ -8,8 +8,8 @@ import unitsData from '../data/units/units.json';
 
 interface UnitFilters {
   name: string;
-  faction: string;
-  type: UnitType | '';
+  factions: string[];
+  types: UnitType[];
   year: number | '';
 }
 
@@ -17,8 +17,8 @@ interface UseUnitDataResult {
   units: Unit[];
   filters: UnitFilters;
   setName: (name: string) => void;
-  setFilaction: (faction: string) => void;
-  setType: (type: UnitType | '') => void;
+  toggleFaction: (faction: string) => void;
+  toggleType: (type: UnitType) => void;
   setYear: (year: number | '') => void;
   isOutOfYear: (unit: Unit) => boolean;
 }
@@ -30,17 +30,27 @@ const allUnits = [...(unitsData.units as unknown as Unit[])].sort((first, second
 export function useUnitData(): UseUnitDataResult {
   const [filters, setFilters] = useState<UnitFilters>({
     name: '',
-    faction: '',
-    type: '',
+    factions: [],
+    types: [],
     year: '',
   });
 
   const setName = (name: string) =>
     setFilters((prev) => ({ ...prev, name }));
-  const setFilaction = (faction: string) =>
-    setFilters((prev) => ({ ...prev, faction }));
-  const setType = (type: UnitType | '') =>
-    setFilters((prev) => ({ ...prev, type }));
+  const toggleFaction = (faction: string) =>
+    setFilters((prev) => ({
+      ...prev,
+      factions: prev.factions.includes(faction)
+        ? prev.factions.filter((f) => f !== faction)
+        : [...prev.factions, faction],
+    }));
+  const toggleType = (type: UnitType) =>
+    setFilters((prev) => ({
+      ...prev,
+      types: prev.types.includes(type)
+        ? prev.types.filter((t) => t !== type)
+        : [...prev.types, type],
+    }));
   const setYear = (year: number | '') =>
     setFilters((prev) => ({ ...prev, year }));
 
@@ -54,11 +64,11 @@ export function useUnitData(): UseUnitDataResult {
 
     return allUnits.filter((unit) => {
       if (normalizedName && !unit.name.toLocaleLowerCase().includes(normalizedName)) return false;
-      if (filters.faction && unit.faction !== filters.faction) return false;
-      if (filters.type && unit.type !== filters.type) return false;
+      if (filters.factions.length > 0 && !filters.factions.includes(unit.faction)) return false;
+      if (filters.types.length > 0 && !filters.types.includes(unit.type)) return false;
       return true;
     });
-  }, [filters.name, filters.faction, filters.type]);
+  }, [filters.name, filters.factions, filters.types]);
 
-  return { units, filters, setName, setFilaction, setType, setYear, isOutOfYear };
+  return { units, filters, setName, toggleFaction, toggleType, setYear, isOutOfYear };
 }

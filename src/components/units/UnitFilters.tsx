@@ -1,8 +1,7 @@
 /**
- * UnitFilters — name, faction, type, and year controls for filtering units.
- * Year filter is the FR-019 requirement.
+ * UnitFilters — name, faction (chips), type (chips), and year controls for filtering units.
  */
-import { Box, FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/material';
+import { Avatar, Box, Chip, TextField, Typography } from '@mui/material';
 
 const FACTION_FLAGS: Record<string, string> = {
   german: '/images/german.png',
@@ -19,94 +18,96 @@ const UNIT_TYPES: UnitType[] = [
 
 interface Props {
   name: string;
-  faction: string;
+  selectedFactions: string[];
   factions: string[];
-  type: UnitType | '';
+  selectedTypes: UnitType[];
   year: number | '';
   onNameChange: (v: string) => void;
-  onFactionChange: (v: string) => void;
-  onTypeChange: (v: UnitType | '') => void;
+  onFactionToggle: (v: string) => void;
+  onTypeToggle: (v: UnitType) => void;
   onYearChange: (v: number | '') => void;
 }
 
 export default function UnitFilters({
   name,
-  faction,
+  selectedFactions,
   factions,
-  type,
+  selectedTypes,
   year,
   onNameChange,
-  onFactionChange,
-  onTypeChange,
+  onFactionToggle,
+  onTypeToggle,
   onYearChange,
 }: Props) {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 2 }}>
-      <TextField
-        size="small"
-        label={t('units.filters.name')}
-        type="search"
-        value={name}
-        onChange={(e) => onNameChange(e.target.value)}
-        sx={{ minWidth: 220 }}
-      />
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mb: 2 }}>
+      <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+        <TextField
+          size="small"
+          label={t('units.filters.name')}
+          type="search"
+          value={name}
+          onChange={(e) => onNameChange(e.target.value)}
+          sx={{ minWidth: 220 }}
+        />
+        <TextField
+          size="small"
+          label={t('units.filters.year')}
+          type="number"
+          value={year}
+          onChange={(e) => {
+            const val = e.target.value;
+            onYearChange(val === '' ? '' : Number(val));
+          }}
+          slotProps={{ htmlInput: { min: 1939, max: 1945 } }}
+          sx={{ width: 100 }}
+        />
+      </Box>
 
-      <FormControl size="small" sx={{ minWidth: 140 }}>
-        <InputLabel>{t('units.filters.faction')}</InputLabel>
-        <Select
-          value={faction}
-          label={t('units.filters.faction')}
-          onChange={(e) => onFactionChange(e.target.value)}
-        >
-          <MenuItem value="">{t('common.all')}</MenuItem>
-          {factions.map((f) => (
-            <MenuItem key={f} value={f}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                {FACTION_FLAGS[f] && (
-                  <Box
-                    component="img"
-                    src={FACTION_FLAGS[f]}
-                    alt={f}
-                    sx={{ height: 16, width: 'auto', borderRadius: 0.5 }}
-                  />
-                )}
-                {f}
-              </Box>
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      {factions.length > 0 && (
+        <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', alignItems: 'center' }}>
+          <Typography variant="caption" color="text.secondary" sx={{ minWidth: 60 }}>
+            {t('units.filters.faction')}:
+          </Typography>
+          {factions.map((f) => {
+            const selected = selectedFactions.includes(f);
+            return (
+              <Chip
+                key={f}
+                label={f}
+                onClick={() => onFactionToggle(f)}
+                color={selected ? 'primary' : 'default'}
+                variant={selected ? 'filled' : 'outlined'}
+                avatar={
+                  FACTION_FLAGS[f]
+                    ? <Avatar src={FACTION_FLAGS[f]} alt={f} />
+                    : undefined
+                }
+              />
+            );
+          })}
+        </Box>
+      )}
 
-      <FormControl size="small" sx={{ minWidth: 160 }}>
-        <InputLabel>{t('units.filters.type')}</InputLabel>
-        <Select
-          value={type}
-          label={t('units.filters.type')}
-          onChange={(e) => onTypeChange(e.target.value as UnitType | '')}
-        >
-          <MenuItem value="">{t('common.all')}</MenuItem>
-          {UNIT_TYPES.map((ut) => (
-            <MenuItem key={ut} value={ut}>
-              {t(`units.types.${ut}`)}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-
-      <TextField
-        size="small"
-        label={t('units.filters.year')}
-        type="number"
-        value={year}
-        onChange={(e) => {
-          const val = e.target.value;
-          onYearChange(val === '' ? '' : Number(val));
-        }}
-        slotProps={{ htmlInput: { min: 1939, max: 1945 } }}
-        sx={{ width: 100 }}
-      />
+      <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', alignItems: 'center' }}>
+        <Typography variant="caption" color="text.secondary" sx={{ minWidth: 60 }}>
+          {t('units.filters.type')}:
+        </Typography>
+        {UNIT_TYPES.map((ut) => {
+          const selected = selectedTypes.includes(ut);
+          return (
+            <Chip
+              key={ut}
+              label={t(`units.types.${ut}`)}
+              onClick={() => onTypeToggle(ut)}
+              color={selected ? 'primary' : 'default'}
+              variant={selected ? 'filled' : 'outlined'}
+            />
+          );
+        })}
+      </Box>
     </Box>
   );
 }

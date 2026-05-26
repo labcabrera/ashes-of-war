@@ -62,6 +62,8 @@ interface BaseUnitFields {
   resourceCosts?: Record<string, number>;
   /** Optional public image displayed in the unit detail panel. */
   imageUrl?: string;
+  /** Optional rule keywords (e.g. 'low-reliability', 'veteran'). */
+  keywords?: string[];
 }
 
 /** Infantry roster entries organised into required bases. */

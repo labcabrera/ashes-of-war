@@ -211,14 +211,15 @@
       "resourceCosts": { "logistics": 10 }
     },
     {
-      "id": "german-special-01",
+      "id": "german-fallschirmjager",
       "name": "Fallschirmjäger",
       "type": "special",
       "faction": "german",
       "from": 1940,
       "to": 1944,
       "cost": 18,
-      "resourceCosts": { "logistics": 10, "intelligence": 1 }
+      "resourceCosts": { "logistics": 10, "intelligence": 1 },
+      "imageUrl": "/images/units/german-fallschirmjager.jpg"
     },
     {
       "id": "german-tiger-i",
@@ -253,6 +254,54 @@
         { "id": "german-mg-34-42", "count": 2, "type": "turret" }
       ],
       "imageUrl": "/images/units/german-tiger-ii.jpg"
+    },
+    {
+      "id": "german-panther-d",
+      "name": "Panther Ausf. D",
+      "type": "tank",
+      "faction": "german",
+      "from": 1943,
+      "to": 1943,
+      "cost": 55,
+      "resourceCosts": { "fuel": 12, "logistics": 10 },
+      "profile": { "front": 80, "side": 40, "rear": 30, "exposed": 15 },
+      "weapons": [
+        { "id": "german-kwk-42-l70", "count": 1, "type": "turret" },
+        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+      ],
+      "keywords": ["low-reliability"],
+      "imageUrl": "/images/units/german-panther-d.jpg"
+    },
+    {
+      "id": "german-panther-a",
+      "name": "Panther Ausf. A",
+      "type": "tank",
+      "faction": "german",
+      "from": 1943,
+      "to": 1944,
+      "cost": 60,
+      "resourceCosts": { "fuel": 12, "logistics": 10 },
+      "profile": { "front": 80, "side": 40, "rear": 30, "exposed": 15 },
+      "weapons": [
+        { "id": "german-kwk-42-l70", "count": 1, "type": "turret" },
+        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+      ]
+    },
+    {
+      "id": "german-panther-g",
+      "name": "Panther Ausf. G",
+      "type": "tank",
+      "faction": "german",
+      "from": 1944,
+      "to": 1945,
+      "cost": 62,
+      "resourceCosts": { "fuel": 12, "logistics": 10 },
+      "profile": { "front": 80, "side": 50, "rear": 30, "exposed": 15 },
+      "weapons": [
+        { "id": "german-kwk-42-l70", "count": 1, "type": "turret" },
+        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+      ],
+      "imageUrl": "/images/units/german-panther-g.jpg"
     },
     {
       "id": "german-hornisse",
@@ -321,7 +370,8 @@
       "to": 1945,
       "cost": 28,
       "resourceCosts": { "fuel": 5, "logistics": 10 },
-      "profile": { "front": 18, "side": 8, "rear": 8, "exposed": 5 }
+      "profile": { "front": 18, "side": 8, "rear": 8, "exposed": 5 },
+      "imageUrl": "/images/units/german-wespe.jpg"
     },
     {
       "id": "german-marder-i",

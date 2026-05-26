@@ -30,7 +30,7 @@ type ViewMode = 'cards' | 'table';
 
 export default function UnitsPage() {
   const { t } = useTranslation();
-  const { units, filters, setName, setFilaction, setType, setYear, isOutOfYear } = useUnitData();
+  const { units, filters, setName, toggleFaction, toggleType, setYear, isOutOfYear } = useUnitData();
   const [activeTab, setActiveTab] = useState<CatalogueTab>('units');
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
@@ -113,13 +113,13 @@ export default function UnitsPage() {
         <>
           <UnitFilters
             name={filters.name}
-            faction={filters.faction}
+            selectedFactions={filters.factions}
             factions={factions}
-            type={filters.type}
+            selectedTypes={filters.types}
             year={filters.year}
             onNameChange={setName}
-            onFactionChange={setFilaction}
-            onTypeChange={setType}
+            onFactionToggle={toggleFaction}
+            onTypeToggle={toggleType}
             onYearChange={setYear}
           />
 
