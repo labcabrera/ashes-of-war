@@ -2,6 +2,29 @@
   "_version": 1,
   "weapons": [
     {
+      "id": "german-mg-13",
+      "name": "MG 13",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 4,
+          "hitOn": 7,
+          "rangeModifier": "25/15/-1",
+          "suppressionModifier": -1
+        },
+        {
+          "id": "precision",
+          "name": "Precision",
+          "shots": 2,
+          "hitOn": 6,
+          "rangeModifier": "30/15/-1",
+          "suppressionModifier": 0
+        }
+      ]
+    },
+    {
       "id": "german-mg-34-42",
       "name": "MG 34 / MG 42",
       "type": "soft",
@@ -398,6 +421,48 @@
           "armourPenetration": 14,
           "suppressionModifier": -4,
           "characteristics": ["area-12", "one-shot", "limited-ammunition-1"]
+        }
+      ]
+    },
+    {
+      "id": "german-sfh-18",
+      "name": "15 cm sFH 18 L/30",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": { "min": 4, "max": 6 },
+        "combat": { "min": 2, "max": 3 }
+      },
+      "profiles": [
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "60/30/-2",
+          "armourPenetration": 6,
+          "suppressionModifier": -5,
+          "characteristics": ["area-14", "indirect"]
+        }
+      ]
+    },
+    {
+      "id": "german-sig-33",
+      "name": "15 cm sIG 33",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": { "min": 2, "max": 3 },
+        "combat": { "min": 1, "max": 2 }
+      },
+      "profiles": [
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "40/20/-2",
+          "armourPenetration": 5,
+          "suppressionModifier": -5,
+          "characteristics": ["area-14", "indirect"]
         }
       ]
     }

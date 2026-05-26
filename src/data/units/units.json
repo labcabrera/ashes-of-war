@@ -28,6 +28,21 @@
       "imageUrl": "/images/units/german-panzergrenadier-squad.jpg"
     },
     {
+      "id": "german-panzer-i-a",
+      "name": "Panzer I Ausf. A",
+      "type": "tank",
+      "faction": "german",
+      "from": 1934,
+      "to": 1941,
+      "cost": 12,
+      "resourceCosts": { "fuel": 3, "logistics": 3 },
+      "profile": { "front": 13, "side": 13, "rear": 13, "exposed": 5 },
+      "weapons": [
+        { "id": "german-mg-13", "count": 2, "type": "turret" }
+      ],
+      "imageUrl": "/images/units/german-panzer-i-a.jpg"
+    },
+    {
       "id": "german-panzer-iv-a",
       "name": "Panzer IV Ausf. A",
       "type": "tank",
@@ -381,6 +396,36 @@
       "resourceCosts": { "fuel": 5, "logistics": 10 },
       "profile": { "front": 18, "side": 8, "rear": 8, "exposed": 5 },
       "imageUrl": "/images/units/german-wespe.jpg"
+    },
+    {
+      "id": "german-hummel",
+      "name": "Hummel",
+      "type": "self-propelled-artillery",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 38,
+      "resourceCosts": { "fuel": 8, "logistics": 12 },
+      "profile": { "front": 30, "side": 20, "rear": 15, "exposed": 5 },
+      "weapons": [
+        { "id": "german-sfh-18", "count": 1, "type": "hull" }
+      ],
+      "imageUrl": "/images/units/german-hummel.jpg"
+    },
+    {
+      "id": "german-grille",
+      "name": "Sturmpanzer 38(t) Grille",
+      "type": "self-propelled-artillery",
+      "faction": "german",
+      "from": 1943,
+      "to": 1944,
+      "cost": 30,
+      "resourceCosts": { "fuel": 5, "logistics": 10 },
+      "profile": { "front": 25, "side": 15, "rear": 10, "exposed": 5 },
+      "weapons": [
+        { "id": "german-sig-33", "count": 1, "type": "hull" }
+      ],
+      "imageUrl": "/images/units/german-grille.jpg"
     },
     {
       "id": "german-marder-i",
