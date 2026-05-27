@@ -1,0 +1,45 @@
+id;name;type;faction;from;to;cost;fuel;logistics;armor_front;armor_side;armor_rear;armor_exposed;bases_count;bases_members;bases_weapons;weapons;keywords;imageUrl
+panzergrenadier-squad;Panzergrenadier Squad;infantry;german;1939;1945;11;;5;;;;;2;5|5;1xgerman-mg-34-42(normal),3xgerman-mauser-kar-98k(normal)|5xgerman-mauser-kar-98k(normal);;;/images/units/german-panzergrenadier-squad.jpg
+german-panzer-i-a;Panzer I Ausf. A;tank;german;1934;1941;12;3;3;13;13;13;5;;;;2xgerman-mg-13(turret);;/images/units/german-panzer-i-a.jpg
+german-panzer-ii-a;Panzer II Ausf. A;tank;german;1936;1942;18;4;4;14;14;14;5;;;;1xgerman-kwk-30-l55(turret)|1xgerman-mg-34-42(coaxial);;/images/units/german-panzer-ii-a.jpg
+german-panzer-38t-a;Panzer 38(t) Ausf. A;tank;german;1939;1942;20;4;4;25;15;15;5;;;;1xgerman-kwk-38t(turret)|1xgerman-mg-37t(coaxial)|1xgerman-mg-37t(hull);;/images/units/german-panzer-38t-a.jpg
+german-panzer-iv-a;Panzer IV Ausf. A;tank;german;1943;1945;32;8;5;80;30;20;10;;;;1xgerman-kwk-37-l24(turret)|1xgerman-mg-34-42(coaxial);;/images/units/german-panzer-iv-a.jpg
+german-panzer-iv-bc;Panzer IV Ausf. B/C;tank;german;1943;1945;32;8;5;80;30;20;10;;;;1xgerman-kwk-37-l24(turret)|1xgerman-mg-34-42(coaxial);;/images/units/german-panzer-iv-bc.jpg
+german-panzer-iv-d;Panzer IV Ausf. D;tank;german;1943;1945;32;8;5;80;30;20;10;;;;1xgerman-kwk-37-l24(turret)|1xgerman-mg-34-42(coaxial);;/images/units/german-panzer-iv-d.jpg
+german-tank-01;Panzer IV Ausf. G;tank;german;1943;1945;32;8;5;80;30;20;10;;;;1xgerman-kwk-40-l48(turret)|1xgerman-mg-34-42(coaxial);;/images/units/german-panzer-iv-g.jpg
+german-tank-02;Panzer III Ausf. J;tank;german;1941;1943;25;5;5;50;30;20;10;;;;1xgerman-kwk-39(turret)|1xgerman-mg-34-42(coaxial);;/images/units/german-panzer-iii-j.jpg
+german-stug-iii-a;StuG III Ausf. A-E;assault-gun;german;1940;1940;25;5;5;50;30;30;10;;;;1xgerman-kwk-37-l24(hull);;/images/units/german-stug-iii-a.jpg
+german-stug-iii-f;StuG III Ausf. F;assault-gun;german;1942;1942;30;5;5;50;30;30;10;;;;1xgerman-kwk-40-l43(hull);;/images/units/german-stug-iii-f.jpg
+german-stug-iii-g;StuG III Ausf. G;assault-gun;german;1942;1945;34;5;5;80;30;30;10;;;;1xgerman-kwk-40-l48(hull);;/images/units/german-stug-iii-e.jpg
+german-stug-iv;StuG IV;assault-gun;german;1943;1945;36;5;5;80;30;30;10;;;;1xgerman-kwk-40-l48(hull)|1xgerman-mg-34-42(coaxial);;/images/units/german-stug-iv.jpg
+german-10.5-cm-lefH-18;10.5 cm leFH 18;artillery-towed;german;1939;1945;21;3;10;;;;;;;;;;/images/units/german-10.5-cm-lefH-18.jpg
+german-recon-01;Sd.Kfz. 222 Armoured Car;reconnaissance;german;1939;1944;14;5;;;;;;;;;;;/images/units/german-sd-kfz-222.jpg
+german-sniper-01;Wehrmacht Sniper Team;sniper;german;1941;1945;9;;;;;;;;;;;;/images/units/german-sniper.jpg
+german-pionier-squad;Pionier Squad;engineer;german;1939;1945;13;;10;;;;;;;;;;/images/units/german-pionier-squad.jpg
+german-fallschirmjager;Fallschirmjäger;special;german;1940;1944;18;;10;;;;;;;;;;/images/units/german-fallschirmjager.jpg
+german-tiger-i;Tiger Ausf. H1 / E;tank;german;1944;1945;80;15;15;150;90;90;30;;;;1xgerman-kwk-36-l56(turret)|1xgerman-mg-34-42(coaxial)|2xgerman-mg-34-42(turret);;/images/units/german-tiger-i.jpg
+german-tiger-ii;Tiger II;tank;german;1942;1945;50;10;10;102;82;82;15;;;;1xgerman-8,8-cm-kwk-43(turret)|1xgerman-mg-34-42(coaxial)|2xgerman-mg-34-42(turret);;/images/units/german-tiger-ii.jpg
+german-panther-d;Panther Ausf. D;tank;german;1943;1943;55;12;10;80;40;30;15;;;;1xgerman-kwk-42-l70(turret)|1xgerman-mg-34-42(coaxial);low-reliability;/images/units/german-panther-d.jpg
+german-panther-a;Panther Ausf. A;tank;german;1943;1944;60;12;10;80;40;30;15;;;;1xgerman-kwk-42-l70(turret)|1xgerman-mg-34-42(coaxial);;/images/units/german-panther-a.jpg
+german-panther-g;Panther Ausf. G;tank;german;1944;1945;62;12;10;80;50;30;15;;;;1xgerman-kwk-42-l70(turret)|1xgerman-mg-34-42(coaxial);;/images/units/german-panther-g.jpg
+german-hornisse;Hornisse;tank-destroyer;german;1943;1944;45;10;10;30;15;10;5;;;;1xgerman-kwk-43-l71(hull);;/images/units/german-hornisse.jpg
+german-nashorn;Nashorn;tank-destroyer;german;1943;1945;45;10;10;30;15;10;5;;;;1xgerman-kwk-43-l71(hull);;/images/units/german-nashorn.jpg
+german-jagdpanzer-iv;Jagdpanzer IV;tank-destroyer;german;1944;1945;40;8;8;60;30;20;10;;;;1xgerman-kwk-40-l48(hull);;/images/units/german-jagdpanzer-iv.jpg
+german-jagdpanther;Jagdpanther;tank-destroyer;german;1944;1945;60;12;12;80;50;40;15;;;;1xgerman-kwk-43-l71(hull);;/images/units/german-jagdpanther.jpg
+german-wespe;Wespe;self-propelled-artillery;german;1943;1945;28;5;10;18;8;8;5;;;;;;/images/units/german-wespe.jpg
+german-hummel;Hummel;self-propelled-artillery;german;1943;1945;38;8;12;30;20;15;5;;;;1xgerman-sfh-18(hull);;/images/units/german-hummel.jpg
+german-grille;Sturmpanzer 38(t) Grille;self-propelled-artillery;german;1943;1944;30;5;10;25;15;10;5;;;;1xgerman-sig-33(hull);;/images/units/german-grille.jpg
+german-marder-i;Marder I;tank-destroyer;german;1942;1945;26;5;8;12;10;8;5;;;;1xgerman-pak-40-l46(hull);;/images/units/german-marder-i.jpg
+german-marder-ii;Marder II;tank-destroyer;german;1942;1945;30;5;8;30;15;10;5;;;;1xgerman-pak-40-l46(hull);;/images/units/german-marder-ii.jpg
+german-marder-iii;Marder III;tank-destroyer;german;1942;1945;33;5;8;50;15;10;5;;;;1xgerman-pak-40-l46(hull);;/images/units/german-marder-iii.jpg
+german-sturmtiger;Sturmtiger;assault-gun;german;1944;1945;75;15;15;150;80;80;25;;;;1xgerman-rw-61(hull);;/images/units/german-sturmtiger.jpg
+soviet-infantry-01;Red Army Rifle Section;infantry;soviet;1941;1945;9;;5;;;;;1;8;;;;
+soviet-t-34-76;T-34/76;tank;soviet;1941;1944;29;8;5;45;45;40;10;;;;;;/images/units/soviet-t-34-76.jpg
+soviet-t-34-85;T-34/85;tank;soviet;1944;1945;36;8;5;60;45;40;12;;;;;;/images/units/soviet-t-34-85.jpg
+soviet-is-1;IS-1;tank;soviet;1943;1944;45;10;10;120;90;60;15;;;;1xsu-d-5t(turret);;/images/units/soviet-is-1.jpg
+soviet-is-2;IS-2;tank;soviet;1943;1945;52;10;10;120;90;60;15;;;;1xsu-d-25t(turret);;/images/units/soviet-is-2.jpg
+soviet-artillery-01;122mm Howitzer Battery;artillery-towed;soviet;1941;1945;23;3;10;;;;;;;;;;/images/units/soviet-122mm-howitzer.jpg
+soviet-infantry-02;Guards Infantry Company;infantry;soviet;1942;1945;14;;5;;;;;1;8;;;;
+soviet-recon-01;Soviet Scout Squad;reconnaissance;soviet;1941;1945;13;;;;;;;;;;;;
+soviet-medic-01;Field Medic;medic;soviet;1941;1945;7;;5;;;;;;;;;;
+soviet-sniper-01;Soviet Sniper;sniper;soviet;1941;1945;9;;;;;;;;;;;;
