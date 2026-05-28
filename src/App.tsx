@@ -24,6 +24,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: 'rules', element: <RulesPage /> },
       { path: 'rules/:chapterId', element: <RulesChapterPage /> },
+      { path: 'rules/:chapterId/:subchapterId', element: <RulesChapterPage /> },
       { path: 'units', element: <UnitsPage /> },
       { path: 'units/:unitId', element: <UnitFullPage /> },
       { path: 'army-builder', element: <ArmyBuilderPage /> },

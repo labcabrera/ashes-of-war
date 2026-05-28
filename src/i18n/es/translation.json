@@ -35,9 +35,12 @@
     "title": "Reglamento",
     "chapters": "Capítulos",
     "selectChapter": "Selecciona un capítulo para leer",
+    "subchapters": "Subcategorías",
     "chapter": {
       "introduction": "Introducción",
-      "unitTypes": "Tipos de unidad"
+      "unitTypes": "Tipos de unidad",
+      "infantry": "Infantería",
+      "vehicles": "Vehículos"
     }
   },
   "wiki": {

@@ -11,8 +11,16 @@ import RulesChapterList from '../components/rules/RulesChapterList';
 import RulesContent from '../components/rules/RulesContent';
 import { RulesIndex, RulesChapter } from '../types/rules';
 
+function findChapter(chapters: RulesChapter[], path: string[]): RulesChapter | null {
+  const [currentId, ...rest] = path;
+  const current = chapters.find((candidate) => candidate.id === currentId);
+  if (!current) return null;
+  if (rest.length === 0) return current;
+  return current.children ? findChapter(current.children, rest) : null;
+}
+
 export default function RulesChapterPage() {
-  const { chapterId } = useParams<{ chapterId: string }>();
+  const { chapterId, subchapterId } = useParams<{ chapterId: string; subchapterId?: string }>();
   const { t } = useTranslation();
   const navigate = useNavigate();
   const theme = useTheme();
@@ -20,27 +28,28 @@ export default function RulesChapterPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [index, setIndex] = useState<RulesIndex | null>(null);
   const [chapter, setChapter] = useState<RulesChapter | null>(null);
+  const selectedPath = [chapterId, subchapterId].filter(Boolean).join('/');
 
   useEffect(() => {
     fetch('/content/rules/index.json')
       .then((r) => r.json())
       .then((data: RulesIndex) => {
         setIndex(data);
-        const found = data.chapters.find((c) => c.id === chapterId) ?? null;
+        const found = chapterId ? findChapter(data.chapters, [chapterId, subchapterId].filter(Boolean) as string[]) : null;
         setChapter(found);
       })
       .catch(() => setIndex(null));
-  }, [chapterId]);
+  }, [chapterId, subchapterId]);
 
-  const handleSelect = (id: string) => {
-    navigate(`/rules/${id}`);
+  const handleSelect = (path: string) => {
+    navigate(`/rules/${path}`);
     setDrawerOpen(false);
   };
 
   const sidebar = index ? (
     <RulesChapterList
       chapters={index.chapters}
-      selectedId={chapterId ?? null}
+      selectedId={selectedPath || null}
       onSelect={handleSelect}
     />
   ) : null;
@@ -62,7 +71,7 @@ export default function RulesChapterPage() {
 
       <Box sx={{ flex: 1 }}>
         {chapter ? (
-          <RulesContent chapter={chapter} />
+          <RulesContent chapter={chapter} basePath={selectedPath} />
         ) : (
           <Typography sx={{ mt: 4 }} color="text.secondary">
             {chapterId ? t('common.error') : t('rules.selectChapter')}

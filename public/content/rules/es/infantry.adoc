@@ -1,0 +1,25 @@
+= Infantería
+
+Las escuadras de infantería son el núcleo de la mayoría de fuerzas en Ashes of War. Son flexibles, relativamente económicas y fiables para tomar o mantener objetivos.
+
+== Rol en batalla
+
+La infantería funciona mejor en cobertura, edificios, posiciones preparadas y terreno cerrado. Puede asaltar, atrincherarse, proteger vehículos y mantener terreno con más eficiencia que las unidades blindadas.
+
+== Perfil básico
+
+* *Movimiento:* 6"
+* *Fortalezas:* Excelentes en cobertura; pueden asaltar y atrincherarse.
+* *Debilidades:* Vulnerables al fuego indirecto, la supresión y los asaltos de blindados.
+
+== Peanas
+
+Las unidades de infantería se organizan en peanas. Cada peana define el número de soldados representados y el armamento asignado a ese grupo.
+
+== Acciones comunes
+
+* Mover
+* Disparar
+* Asaltar
+* Atrincherarse
+* Reagruparse o reorganizarse cuando le afecten las reglas de moral

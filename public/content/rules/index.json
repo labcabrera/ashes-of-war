@@ -15,7 +15,25 @@
       "files": {
         "en": "/content/rules/en/unit-types.adoc",
         "es": "/content/rules/es/unit-types.adoc"
-      }
+      },
+      "children": [
+        {
+          "id": "infantry",
+          "titleKey": "rules.chapter.infantry",
+          "files": {
+            "en": "/content/rules/en/infantry.adoc",
+            "es": "/content/rules/es/infantry.adoc"
+          }
+        },
+        {
+          "id": "vehicles",
+          "titleKey": "rules.chapter.vehicles",
+          "files": {
+            "en": "/content/rules/en/vehicles.adoc",
+            "es": "/content/rules/es/vehicles.adoc"
+          }
+        }
+      ]
     },
     {
       "id": "round",

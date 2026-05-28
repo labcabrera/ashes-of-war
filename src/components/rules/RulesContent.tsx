@@ -17,11 +17,13 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { RulesChapter } from '../../types/rules';
 
 interface Props {
   chapter: RulesChapter;
+  basePath: string;
 }
 
 type Block =
@@ -263,7 +265,7 @@ function renderBlock(block: Block, index: number) {
   return <Divider key={index} sx={{ my: 2 }} />;
 }
 
-export default function RulesContent({ chapter }: Props) {
+export default function RulesContent({ chapter, basePath }: Props) {
   const { i18n, t } = useTranslation();
 
   type ChapterState = { key: string; content: string | null; error: boolean };
@@ -279,8 +281,16 @@ export default function RulesContent({ chapter }: Props) {
   useEffect(() => {
     let cancelled = false;
     const currentLang = i18n.resolvedLanguage ?? 'en';
-    const url = currentLang === 'es' && chapter.files.es ? chapter.files.es : chapter.files.en;
+    const url = currentLang === 'es' && chapter.files?.es ? chapter.files.es : chapter.files?.en;
     const key = `${chapter.id}-${currentLang}`;
+    if (!url) {
+      Promise.resolve().then(() => {
+        if (!cancelled) setChapterState({ key, content: '', error: false });
+      });
+      return () => {
+        cancelled = true;
+      };
+    }
     fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -306,5 +316,25 @@ export default function RulesContent({ chapter }: Props) {
     );
   }
 
-  return <Box sx={{ maxWidth: 880, px: 2, pb: 4 }}>{blocks.map(renderBlock)}</Box>;
+  return (
+    <Box sx={{ maxWidth: 880, px: 2, pb: 4 }}>
+      {blocks.map(renderBlock)}
+      {chapter.children && chapter.children.length > 0 && (
+        <Box sx={{ mt: 3 }}>
+          <Typography variant="h6" gutterBottom>
+            {t('rules.subchapters')}
+          </Typography>
+          <Box component="ul" sx={{ pl: 3, mb: 0 }}>
+            {chapter.children.map((child) => (
+              <Typography key={child.id} component="li" variant="body1" sx={{ mb: 0.75 }}>
+                <Link component={RouterLink} to={`/rules/${basePath}/${child.id}`}>
+                  {t(child.titleKey)}
+                </Link>
+              </Typography>
+            ))}
+          </Box>
+        </Box>
+      )}
+    </Box>
+  );
 }

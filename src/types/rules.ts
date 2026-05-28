@@ -9,10 +9,12 @@ export interface RulesChapter {
   /** i18n key used to display the chapter title. */
   titleKey: string;
   /** Language-to-file mapping. ES is optional; falls back to EN. */
-  files: {
+  files?: {
     en: string;
     es?: string;
   };
+  /** Optional nested subchapters displayed below this chapter. */
+  children?: RulesChapter[];
 }
 
 /** Top-level rules index loaded from public/content/rules/index.json. */

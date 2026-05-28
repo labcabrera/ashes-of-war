@@ -1,0 +1,25 @@
+= Infantry
+
+Infantry squads are the backbone of most forces in Ashes of War. They are flexible, relatively cheap, and reliable for taking or holding objectives.
+
+== Battlefield Role
+
+Infantry operates best in cover, buildings, prepared positions, and close terrain. Infantry can assault, dig in, screen vehicles, and hold ground more efficiently than armoured units.
+
+== Basic Profile
+
+* *Movement:* 6"
+* *Strengths:* Excellent in cover; can assault and dig in.
+* *Weaknesses:* Vulnerable to indirect fire, suppression, and tank assaults.
+
+== Bases
+
+Infantry units are organised into bases. Each base defines the number of soldiers represented and the weapons assigned to that group.
+
+== Common Actions
+
+* Move
+* Shoot
+* Assault
+* Dig in
+* Rally or reorganise when affected by morale rules

@@ -1,0 +1,26 @@
+= Vehicles
+
+Vehicles cover tanks, assault guns, tank destroyers, armoured cars, and self-propelled artillery.
+
+== Armour
+
+Vehicles use four armour facings:
+
+* *Front*
+* *Side*
+* *Rear*
+* *Exposed*
+
+These values average the relevant protected areas of the vehicle when the hull, superstructure, turret, mantlet, or other parts differ.
+
+Exposed armour represents the weakest vulnerable areas, such as top armour, hatches, ventilation systems, optics, open fighting compartments, or attacks resolved from above.
+
+=== Calculating Armour Values
+
+To keep the game values coherent with real data, effective armour can be estimated as follows:
+
+*Effective armour = Scale x (armour in mm / cos(theta))*
+
+For example, an 80 mm plate sloped at 55 degrees gives this unscaled value:
+
+*Ef = 80 / cos(55 degrees) approximately 139 mm*

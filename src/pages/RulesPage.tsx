@@ -31,7 +31,7 @@ export default function RulesPage() {
           <RulesChapterList
             chapters={index.chapters}
             selectedId={null}
-            onSelect={(id) => navigate(`/rules/${id}`)}
+            onSelect={(path) => navigate(`/rules/${path}`)}
           />
         ) : (
           <Typography sx={{ p: 2 }} color="text.secondary">

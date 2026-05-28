@@ -9,18 +9,31 @@
 
 == Alcance
 
-Esta entrada presenta estructuras *teóricas* representativas del Heer para jugar y consultar unidades a escala de compañía. Una `KStN` era una tabla autorizada de organización y dotación; la fuerza disponible en combate podía ser mucho menor por bajas, reemplazos, vehículos averiados o reorganizaciones locales.
+Esta entrada presenta estructuras *teóricas* representativas del Heer para jugar a modo de referencia a escala de compañía. Una _K.St.N._ (link:https://www.wwiidaybyday.com/kstn/kstnmain.htm[Kriegsstärkenachweisungen]) era una tabla autorizada de organización y dotación. La fuerza disponible en combate podía ser mucho menor por bajas, reemplazos, vehículos averiados o reorganizaciones locales.
 
-== Compañía de infantería (granaderos) a pie, 1944
+En estas plantillas se han omitido elementos de apoyo como sanidad, transmisiones o zapadores así como otros elementos de logistica o administración que no suelen aparecer en el juego. En algunos casos se han simplificado o agrupado elementos para facilitar su uso como referencia rápida.
+
+== Panzergrenadier 1944
+
+link:https://www.wwiidaybyday.com/kstn/kstn131n1mai44.htm[KStN 131n (1.5.1944)]
 
 La compañía de infantería de finales de guerra, representada por `KStN 131n` de 1 de mayo de 1944, concentraba fusileros y armas automáticas en tres pelotones, manteniendo armas pesadas y apoyo administrativo bajo control de compañía.
 
 |===
-|Elemento |Función en la compañía |Uso de referencia
-|Mando de compañía |Jefe, enlaces, comunicaciones y administración inmediata |Coordinación y moral
-|Tres pelotones de granaderos |Elemento principal de maniobra y ocupación del terreno |Infantería de línea
-|Sección de ametralladoras pesadas |Fuego sostenido de apoyo para la maniobra |Apoyo fijo o defensivo
-|Tren de compañía |Munición, víveres, transporte hipomóvil o motorizado disponible |Logística fuera de primera línea
+
+|Nº|Elemento |Estructura
+
+|1
+|Mando de compañía
+|Jefe, enlaces, comunicaciones. Dos escuadras de 
+
+|3
+|Pelotón de granaderos (Zug)
+|
+
+|1
+|Sección de ametralladoras pesadas
+|Fuego sostenido de apoyo para la maniobra |Apoyo fijo o defensivo
 |===
 
 === Pelotón de granaderos

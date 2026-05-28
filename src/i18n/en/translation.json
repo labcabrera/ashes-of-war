@@ -35,9 +35,12 @@
     "title": "Rules",
     "chapters": "Chapters",
     "selectChapter": "Select a chapter to read",
+    "subchapters": "Subchapters",
     "chapter": {
       "introduction": "Introduction",
-      "unitTypes": "Unit Types"
+      "unitTypes": "Unit Types",
+      "infantry": "Infantry",
+      "vehicles": "Vehicles"
     }
   },
   "wiki": {
