@@ -20,21 +20,34 @@ link:https://www.wwiidaybyday.com/kstn/kstn131n1mai44.htm[KStN 131n (1.5.1944)]
 La compañía de infantería de finales de guerra, representada por `KStN 131n` de 1 de mayo de 1944, concentraba fusileros y armas automáticas en tres pelotones, manteniendo armas pesadas y apoyo administrativo bajo control de compañía.
 
 |===
-
-|Nº|Elemento |Estructura
-
-|1
-|Mando de compañía
-|Jefe, enlaces, comunicaciones. Dos escuadras de 
-
-|3
-|Pelotón de granaderos (Zug)
-|
-
-|1
-|Sección de ametralladoras pesadas
-|Fuego sostenido de apoyo para la maniobra |Apoyo fijo o defensivo
+|Nº |Elemento |Composición según KStN 131n
+|1 |Mando de compañía (_Gruppe Führer_) |Kompaniefüher (1 MPi, 1 Pistola); Kompanietrupp: jefe de tropas (1 MPi), sanitario (en bicicleta), 4 mensajeros/enlaces (Kar.), 1 radiotelegrafista con 4 radios de campaña, 1 cuidador de caballos. _Total: 1 oficial, 3 suboficiales, 8 soldados._
+|3 |Pelotón de granaderos (_Zug_) |Zugführer (1 MPi, 1 Pistola) con carro de munición. Tres escuadras (_Gruppen_): cada una con Gruppenführer (1 MPi), 7 granaderos y tiradores de MG (6 Kar., 1 MPi, 1 Pistola) y 1 ametralladora ligera (l.M.G.). _Por pelotón: 1 oficial, 3 suboficiales, 29 soldados, 4 l.M.G. (1 como reserva)._
+|1 |Sección de ametralladoras pesadas (_s.M.G.-Gruppe_) |Gruppenführer (1 MPi), mensajero (Kar.), ayudante de armero (Kar.); 2 equipos de ametralladora pesada (_s.M.G._): cada uno con jefe de pieza (1 MPi), tirador (1 Pistola), 3 sirvientes (Kar.) y carro de munición con caballo. _Total: 3 suboficiales, 15 soldados, 2 s.M.G._
+|1 |Tren de abastecimiento (_Troß_) |Hauptfeldwebel (en bicicleta), suboficial de material, cocinero de campaña, escribiente, zapatero, sastre, conductores; cocina de campaña de 4 caballos (Hf.11 o Hf.13), carros de víveres y munición. _Total: 4 suboficiales, 9 soldados, 1 l.M.G._
 |===
+
+*Plantilla total (sin Sperrstellen):* 2 oficiales, 21 suboficiales, 115 soldados — 96 Karabiner, 22 Pistolas, 28 MPi, 13 l.M.G., 2 s.M.G.
+
+=== Equivalencia en peanas (escala 1:100)
+
+A escala 1:100 cada peana de sección agrupa 5 figuras con armamento mixto.
+Los jefes se representan en peanas independientes de 1-2 figuras.
+El tren de abastecimiento (_Troß_) no se representa en la mesa de juego.
+
+|===
+|Elemento |Peanas |Figuras por peana
+|Mando de compañía |1× Jefe de compañía |Oficial (MPi) + ordenanza (Kar.)
+|Pelotón de granaderos (×3) |1× Jefe de pelotón |Suboficial (MPi) + enlace (Kar.)
+|Pelotón de granaderos (×3) |3× Sección de fusileros _(por escuadra)_ |Gruppenführer (SMG) + 3 fusileros (Kar.) + 1 fusilero/SMG
+|Pelotón de granaderos (×3) |3× Sección de ametralladora ligera _(por escuadra)_ |1 l.MG + 1 sirviente + 3 fusileros (Kar.)
+|Sección de aMG pesadas |1× Jefe de sección |Suboficial (MPi) + mensajero (Kar.)
+|Sección de aMG pesadas |2× Ametralladora pesada |1 s.MG + 1 tirador (Pistola) + 3 sirvientes (Kar.)
+|===
+
+La compañía completa requiere aproximadamente *23 peanas de combate*:
+1 mando de compañía, 3 mandos de pelotón, 9 peanas de fusileros, 9 peanas de l.MG, 1 mando de sección pesada y 2 peanas de s.MG.
+Esto representa unos 110-115 combatientes, coherente con la dotación teórica de la KStN 131n.
 
 === Pelotón de granaderos
 

@@ -52,7 +52,7 @@ function parseAsciiDoc(content: string): WikiBlock[] {
       continue;
     }
 
-    if (trimmed.startsWith(':')) {
+    if (trimmed.startsWith(':') || (trimmed.startsWith('[') && trimmed.endsWith(']'))) {
       flushParagraph();
       lineIndex += 1;
       continue;
@@ -101,7 +101,7 @@ function parseAsciiDoc(content: string): WikiBlock[] {
 }
 
 function renderInline(text: string): ReactNode[] {
-  const tokens = /(link:(https?:\/\/[^[]+)\[([^]]+)\]|\*([^*]+)\*|`([^`]+)`)/g;
+  const tokens = /(link:(https?:\/\/[^[]+)\[([^]]+)\]|\*([^*]+)\*|_([^_]+)_|`([^`]+)`)/g;
   const nodes: ReactNode[] = [];
   let cursor = 0;
   let match: RegExpExecArray | null;
@@ -118,8 +118,10 @@ function renderInline(text: string): ReactNode[] {
       );
     } else if (match[4]) {
       nodes.push(<Box key={`${match.index}-strong`} component="strong">{match[4]}</Box>);
+    } else if (match[5]) {
+      nodes.push(<Box key={`${match.index}-em`} component="em">{match[5]}</Box>);
     } else {
-      nodes.push(<Box key={`${match.index}-code`} component="code" sx={{ fontFamily: 'monospace' }}>{match[5]}</Box>);
+      nodes.push(<Box key={`${match.index}-code`} component="code" sx={{ fontFamily: 'monospace' }}>{match[6]}</Box>);
     }
     cursor = match.index + match[0].length;
   }
