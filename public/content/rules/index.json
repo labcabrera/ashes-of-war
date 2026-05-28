@@ -5,64 +5,64 @@
       "id": "introduction",
       "titleKey": "rules.chapter.introduction",
       "files": {
-        "en": "/content/rules/en/introduction.md",
-        "es": "/content/rules/es/introduction.md"
+        "en": "/content/rules/en/introduction.adoc",
+        "es": "/content/rules/es/introduction.adoc"
       }
     },
     {
       "id": "unit-types",
       "titleKey": "rules.chapter.unitTypes",
       "files": {
-        "en": "/content/rules/en/unit-types.md",
-        "es": "/content/rules/es/unit-types.md"
+        "en": "/content/rules/en/unit-types.adoc",
+        "es": "/content/rules/es/unit-types.adoc"
       }
     },
     {
       "id": "round",
       "titleKey": "round",
       "files": {
-        "en": "/content/rules/es/round.md",
-        "es": "/content/rules/es/round.md"
+        "en": "/content/rules/es/round.adoc",
+        "es": "/content/rules/es/round.adoc"
       }
     },
     {
       "id": "movement",
       "titleKey": "movement",
       "files": {
-        "en": "/content/rules/es/movement.md",
-        "es": "/content/rules/es/movement.md"
+        "en": "/content/rules/es/movement.adoc",
+        "es": "/content/rules/es/movement.adoc"
       }
     },
     {
       "id": "shooting",
       "titleKey": "shooting",
       "files": {
-        "en": "/content/rules/es/shooting.md",
-        "es": "/content/rules/es/shooting.md"
+        "en": "/content/rules/es/shooting.adoc",
+        "es": "/content/rules/es/shooting.adoc"
       }
     },
     {
       "id": "actions",
       "titleKey": "actions",
       "files": {
-        "en": "/content/rules/es/actions.md",
-        "es": "/content/rules/es/actions.md"
+        "en": "/content/rules/es/actions.adoc",
+        "es": "/content/rules/es/actions.adoc"
       }
     },
     {
       "id": "skills",
       "titleKey": "skills",
       "files": {
-        "en": "/content/rules/es/skills.md",
-        "es": "/content/rules/es/skills.md"
+        "en": "/content/rules/es/skills.adoc",
+        "es": "/content/rules/es/skills.adoc"
       }
     },
     {
       "id": "morale",
       "titleKey": "morale",
       "files": {
-        "en": "/content/rules/es/morale.md",
-        "es": "/content/rules/es/morale.md"
+        "en": "/content/rules/es/morale.adoc",
+        "es": "/content/rules/es/morale.adoc"
       }
     }
   ]

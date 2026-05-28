@@ -89,13 +89,34 @@ function validateWeaponAssignments(
   });
 }
 
+function validateArmor(value: unknown, path: string): string[] {
+  if (!isRecord(value)) {
+    return [`${path} must be an armor object.`];
+  }
+
+  const errors: string[] = [];
+  if (!isNonNegativeInteger(value.value)) {
+    errors.push(`${path}.value must be a non-negative integer.`);
+  }
+  if (!isNonNegativeInteger(value.armorMM)) {
+    errors.push(`${path}.armorMM must be a non-negative integer.`);
+  }
+  if (typeof value.armorInclination !== 'number' || !Number.isFinite(value.armorInclination)) {
+    errors.push(`${path}.armorInclination must be a finite number.`);
+  }
+  if (value.notes !== undefined && !isNonEmptyString(value.notes)) {
+    errors.push(`${path}.notes must be a non-empty string when provided.`);
+  }
+  return errors;
+}
+
 function validateTankProfile(value: unknown, path: string): string[] {
   if (!isRecord(value)) {
     return [`${path} must be an object for tank units.`];
   }
 
   return ['front', 'side', 'rear', 'exposed'].flatMap((field) =>
-    isNonNegativeInteger(value[field]) ? [] : [`${path}.${field} must be a non-negative integer.`],
+    validateArmor(value[field], `${path}.${field}`),
   );
 }
 
@@ -153,6 +174,8 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
 
   if (value.type === 'tank') {
     errors.push(...validateTankProfile(value.profile, `${path}.profile`));
+  } else if (value.profile !== undefined) {
+    errors.push(...validateTankProfile(value.profile, `${path}.profile`));
   }
 
   if (value.type === 'infantry') {
@@ -190,8 +213,8 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
   }
 
   const errors: string[] = [];
-  if (catalogue._version !== 3) {
-    errors.push('Unit catalogue _version must be 3.');
+  if (catalogue._version !== 4) {
+    errors.push('Unit catalogue _version must be 4.');
   }
   if (!Array.isArray(catalogue.units)) {
     errors.push('Unit catalogue units must be an array.');
@@ -223,7 +246,7 @@ describe('static unit catalogue validation', () => {
 
   it('reports multiple model and weapon-reference errors together', () => {
     const invalidCatalogue = {
-      _version: 3,
+      _version: 4,
       units: [
         {
           id: 'broken-infantry',

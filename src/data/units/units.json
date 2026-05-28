@@ -1,5 +1,5 @@
 {
-  "_version": 3,
+  "_version": 4,
   "units": [
     {
       "id": "panzergrenadier-squad",
@@ -9,20 +9,39 @@
       "from": 1939,
       "to": 1945,
       "cost": 11,
-      "movement": { "tactical": 10, "cruise": 20, "maximum": 30, "offRoad": 10 },
-      "resourceCosts": { "logistics": 5 },
+      "movement": {
+        "tactical": 10,
+        "cruise": 20,
+        "maximum": 30,
+        "offRoad": 10
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
       "bases": [
         {
           "members": 5,
           "weapons": [
-            { "id": "german-mg-34-42", "count": 1, "type": "normal" },
-            { "id": "german-mauser-kar-98k", "count": 3, "type": "normal" }
+            {
+              "id": "german-mg-34-42",
+              "count": 1,
+              "type": "normal"
+            },
+            {
+              "id": "german-mauser-kar-98k",
+              "count": 3,
+              "type": "normal"
+            }
           ]
         },
         {
           "members": 5,
           "weapons": [
-            { "id": "german-mauser-kar-98k", "count": 5, "type": "normal" }
+            {
+              "id": "german-mauser-kar-98k",
+              "count": 5,
+              "type": "normal"
+            }
           ]
         }
       ],
@@ -36,11 +55,44 @@
       "from": 1934,
       "to": 1941,
       "cost": 12,
-      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
-      "resourceCosts": { "fuel": 3, "logistics": 3 },
-      "profile": { "front": 13, "side": 13, "rear": 13, "exposed": 5 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 32,
+        "maximum": 40,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 3
+      },
+      "profile": {
+        "front": {
+          "value": 13,
+          "armorMM": 13,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 13,
+          "armorMM": 13,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 13,
+          "armorMM": 13,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-mg-13", "count": 2, "type": "turret" }
+        {
+          "id": "german-mg-13",
+          "count": 2,
+          "type": "turret"
+        }
       ],
       "imageUrl": "/images/units/german-panzer-i-a.jpg"
     },
@@ -52,12 +104,49 @@
       "from": 1936,
       "to": 1942,
       "cost": 18,
-      "movement": { "tactical": 20, "cruise": 35, "maximum": 40, "offRoad": 20 },
-      "resourceCosts": { "fuel": 4, "logistics": 4 },
-      "profile": { "front": 14, "side": 14, "rear": 14, "exposed": 5 },
+      "movement": {
+        "tactical": 20,
+        "cruise": 35,
+        "maximum": 40,
+        "offRoad": 20
+      },
+      "resourceCosts": {
+        "fuel": 4,
+        "logistics": 4
+      },
+      "profile": {
+        "front": {
+          "value": 14,
+          "armorMM": 14,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 14,
+          "armorMM": 14,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 14,
+          "armorMM": 14,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-30-l55", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-30-l55",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-panzer-ii-a.jpg"
     },
@@ -69,13 +158,54 @@
       "from": 1939,
       "to": 1942,
       "cost": 20,
-      "movement": { "tactical": 18, "cruise": 34, "maximum": 42, "offRoad": 18 },
-      "resourceCosts": { "fuel": 4, "logistics": 4 },
-      "profile": { "front": 25, "side": 15, "rear": 15, "exposed": 5 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 34,
+        "maximum": 42,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 4,
+        "logistics": 4
+      },
+      "profile": {
+        "front": {
+          "value": 25,
+          "armorMM": 25,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-38t", "count": 1, "type": "turret" },
-        { "id": "german-mg-37t", "count": 1, "type": "coaxial" },
-        { "id": "german-mg-37t", "count": 1, "type": "hull" }
+        {
+          "id": "german-kwk-38t",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-37t",
+          "count": 1,
+          "type": "coaxial"
+        },
+        {
+          "id": "german-mg-37t",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-panzer-38t-a.jpg"
     },
@@ -87,12 +217,49 @@
       "from": 1943,
       "to": 1945,
       "cost": 32,
-      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
-      "resourceCosts": { "fuel": 8, "logistics": 5 },
-      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 32,
+        "maximum": 40,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-37-l24",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-panzer-iv-a.jpg"
     },
@@ -104,12 +271,49 @@
       "from": 1943,
       "to": 1945,
       "cost": 32,
-      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
-      "resourceCosts": { "fuel": 8, "logistics": 5 },
-      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 32,
+        "maximum": 40,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-37-l24",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-panzer-iv-bc.jpg"
     },
@@ -121,12 +325,50 @@
       "from": 1943,
       "to": 1945,
       "cost": 32,
-      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
-      "resourceCosts": { "fuel": 8, "logistics": 5 },
-      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 32,
+        "maximum": 40,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0,
+          "notes": "Turret: 30mm-80º, Superstructure: 30mm-81º, Hull: 20mm-18º"
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-37-l24", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-37-l24",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-panzer-iv-d.jpg"
     },
@@ -138,12 +380,49 @@
       "from": 1943,
       "to": 1945,
       "cost": 32,
-      "movement": { "tactical": 18, "cruise": 32, "maximum": 40, "offRoad": 18 },
-      "resourceCosts": { "fuel": 8, "logistics": 5 },
-      "profile": { "front": 80, "side": 30, "rear": 20, "exposed": 10 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 32,
+        "maximum": 40,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-40-l48", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-40-l48",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-panzer-iv-g.jpg"
     },
@@ -155,12 +434,49 @@
       "from": 1941,
       "to": 1943,
       "cost": 25,
-      "movement": { "tactical": 20, "cruise": 35, "maximum": 40, "offRoad": 20 },
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 50, "side": 30, "rear": 20, "exposed": 10 },
+      "movement": {
+        "tactical": 20,
+        "cruise": 35,
+        "maximum": 40,
+        "offRoad": 20
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 50,
+          "armorMM": 50,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-39", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-39",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-panzer-iii-j.jpg"
     },
@@ -172,10 +488,45 @@
       "from": 1940,
       "to": 1940,
       "cost": 25,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-37-l24", "count": 1, "type": "hull" }],
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 40,
+        "offRoad": 16
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 50,
+          "armorMM": 50,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-kwk-37-l24",
+          "count": 1,
+          "type": "hull"
+        }
+      ],
       "imageUrl": "/images/units/german-stug-iii-a.jpg"
     },
     {
@@ -186,10 +537,45 @@
       "from": 1942,
       "to": 1942,
       "cost": 30,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 50, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-40-l43", "count": 1, "type": "hull" }],
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 40,
+        "offRoad": 16
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 50,
+          "armorMM": 50,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-kwk-40-l43",
+          "count": 1,
+          "type": "hull"
+        }
+      ],
       "imageUrl": "/images/units/german-stug-iii-f.jpg"
     },
     {
@@ -200,10 +586,45 @@
       "from": 1942,
       "to": 1945,
       "cost": 34,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 80, "side": 30, "rear": 30, "exposed": 10 },
-      "weapons": [{ "id": "german-kwk-40-l48", "count": 1, "type": "hull" }],
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 40,
+        "offRoad": 16
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-kwk-40-l48",
+          "count": 1,
+          "type": "hull"
+        }
+      ],
       "imageUrl": "/images/units/german-stug-iii-e.jpg"
     },
     {
@@ -214,12 +635,49 @@
       "from": 1943,
       "to": 1945,
       "cost": 36,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
-      "resourceCosts": { "fuel": 5, "logistics": 5 },
-      "profile": { "front": 80, "side": 30, "rear": 30, "exposed": 10 },
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 40,
+        "offRoad": 16
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-40-l48", "count": 1, "type": "hull" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-40-l48",
+          "count": 1,
+          "type": "hull"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-stug-iv.jpg"
     },
@@ -231,8 +689,16 @@
       "from": 1939,
       "to": 1945,
       "cost": 21,
-      "movement": { "tactical": 0, "cruise": 8, "maximum": 12, "offRoad": 0 },
-      "resourceCosts": { "fuel": 3, "logistics": 10 },
+      "movement": {
+        "tactical": 0,
+        "cruise": 8,
+        "maximum": 12,
+        "offRoad": 0
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 10
+      },
       "imageUrl": "/images/units/german-10.5-cm-lefH-18.jpg"
     },
     {
@@ -243,8 +709,16 @@
       "from": 1939,
       "to": 1944,
       "cost": 14,
-      "movement": { "tactical": 25, "cruise": 55, "maximum": 80, "offRoad": 25 },
-      "resourceCosts": { "fuel": 5, "intelligence": 1 },
+      "movement": {
+        "tactical": 25,
+        "cruise": 55,
+        "maximum": 80,
+        "offRoad": 25
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "intelligence": 1
+      },
       "imageUrl": "/images/units/german-sd-kfz-222.jpg"
     },
     {
@@ -255,8 +729,15 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
-      "movement": { "tactical": 8, "cruise": 16, "maximum": 25, "offRoad": 8 },
-      "resourceCosts": { "intelligence": 1 },
+      "movement": {
+        "tactical": 8,
+        "cruise": 16,
+        "maximum": 25,
+        "offRoad": 8
+      },
+      "resourceCosts": {
+        "intelligence": 1
+      },
       "imageUrl": "/images/units/german-sniper.jpg"
     },
     {
@@ -267,8 +748,15 @@
       "from": 1939,
       "to": 1945,
       "cost": 13,
-      "movement": { "tactical": 8, "cruise": 16, "maximum": 24, "offRoad": 8 },
-      "resourceCosts": { "logistics": 10 },
+      "movement": {
+        "tactical": 8,
+        "cruise": 16,
+        "maximum": 24,
+        "offRoad": 8
+      },
+      "resourceCosts": {
+        "logistics": 10
+      },
       "imageUrl": "/images/units/german-pionier-squad.jpg"
     },
     {
@@ -279,8 +767,16 @@
       "from": 1940,
       "to": 1944,
       "cost": 18,
-      "movement": { "tactical": 12, "cruise": 24, "maximum": 36, "offRoad": 12 },
-      "resourceCosts": { "logistics": 10, "intelligence": 1 },
+      "movement": {
+        "tactical": 12,
+        "cruise": 24,
+        "maximum": 36,
+        "offRoad": 12
+      },
+      "resourceCosts": {
+        "logistics": 10,
+        "intelligence": 1
+      },
       "imageUrl": "/images/units/german-fallschirmjager.jpg"
     },
     {
@@ -291,13 +787,54 @@
       "from": 1944,
       "to": 1945,
       "cost": 80,
-      "movement": { "tactical": 12, "cruise": 24, "maximum": 38, "offRoad": 12 },
-      "resourceCosts": { "fuel": 15, "logistics": 15 },
-      "profile": { "front": 150, "side": 90, "rear": 90, "exposed": 30 },
+      "movement": {
+        "tactical": 12,
+        "cruise": 24,
+        "maximum": 38,
+        "offRoad": 12
+      },
+      "resourceCosts": {
+        "fuel": 15,
+        "logistics": 15
+      },
+      "profile": {
+        "front": {
+          "value": 150,
+          "armorMM": 150,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 90,
+          "armorMM": 90,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 90,
+          "armorMM": 90,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-36-l56", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" },
-        { "id": "german-mg-34-42", "count": 2, "type": "turret" }
+        {
+          "id": "german-kwk-36-l56",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 2,
+          "type": "turret"
+        }
       ],
       "imageUrl": "/images/units/german-tiger-i.jpg"
     },
@@ -309,13 +846,54 @@
       "from": 1942,
       "to": 1945,
       "cost": 50,
-      "movement": { "tactical": 10, "cruise": 20, "maximum": 41, "offRoad": 10 },
-      "resourceCosts": { "fuel": 10, "logistics": 10 },
-      "profile": { "front": 102, "side": 82, "rear": 82, "exposed": 15 },
+      "movement": {
+        "tactical": 10,
+        "cruise": 20,
+        "maximum": 41,
+        "offRoad": 10
+      },
+      "resourceCosts": {
+        "fuel": 10,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 102,
+          "armorMM": 102,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 82,
+          "armorMM": 82,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 82,
+          "armorMM": 82,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-8,8-cm-kwk-43", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" },
-        { "id": "german-mg-34-42", "count": 2, "type": "turret" }
+        {
+          "id": "german-8,8-cm-kwk-43",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 2,
+          "type": "turret"
+        }
       ],
       "imageUrl": "/images/units/german-tiger-ii.jpg"
     },
@@ -327,14 +905,53 @@
       "from": 1943,
       "to": 1943,
       "cost": 55,
-      "movement": { "tactical": 18, "cruise": 35, "maximum": 46, "offRoad": 18 },
-      "resourceCosts": { "fuel": 12, "logistics": 10 },
-      "profile": { "front": 80, "side": 40, "rear": 30, "exposed": 15 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 35,
+        "maximum": 46,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 12,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 40,
+          "armorMM": 40,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-42-l70", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-42-l70",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
-      "keywords": ["low-reliability"],
+      "keywords": [
+        "low-reliability"
+      ],
       "imageUrl": "/images/units/german-panther-d.jpg"
     },
     {
@@ -345,12 +962,49 @@
       "from": 1943,
       "to": 1944,
       "cost": 60,
-      "movement": { "tactical": 18, "cruise": 35, "maximum": 46, "offRoad": 18 },
-      "resourceCosts": { "fuel": 12, "logistics": 10 },
-      "profile": { "front": 80, "side": 40, "rear": 30, "exposed": 15 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 35,
+        "maximum": 46,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 12,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 40,
+          "armorMM": 40,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-42-l70", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-42-l70",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-panther-a.jpg"
     },
@@ -362,12 +1016,49 @@
       "from": 1944,
       "to": 1945,
       "cost": 62,
-      "movement": { "tactical": 18, "cruise": 35, "maximum": 46, "offRoad": 18 },
-      "resourceCosts": { "fuel": 12, "logistics": 10 },
-      "profile": { "front": 80, "side": 50, "rear": 30, "exposed": 15 },
+      "movement": {
+        "tactical": 18,
+        "cruise": 35,
+        "maximum": 46,
+        "offRoad": 18
+      },
+      "resourceCosts": {
+        "fuel": 12,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 50,
+          "armorMM": 50,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-42-l70", "count": 1, "type": "turret" },
-        { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+        {
+          "id": "german-kwk-42-l70",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
       ],
       "imageUrl": "/images/units/german-panther-g.jpg"
     },
@@ -379,11 +1070,44 @@
       "from": 1943,
       "to": 1944,
       "cost": 45,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 42, "offRoad": 15 },
-      "resourceCosts": { "fuel": 10, "logistics": 10 },
-      "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 42,
+        "offRoad": 15
+      },
+      "resourceCosts": {
+        "fuel": 10,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
+        {
+          "id": "german-kwk-43-l71",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-hornisse.jpg"
     },
@@ -395,11 +1119,44 @@
       "from": 1943,
       "to": 1945,
       "cost": 45,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 42, "offRoad": 15 },
-      "resourceCosts": { "fuel": 10, "logistics": 10 },
-      "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 42,
+        "offRoad": 15
+      },
+      "resourceCosts": {
+        "fuel": 10,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
+        {
+          "id": "german-kwk-43-l71",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-nashorn.jpg"
     },
@@ -411,11 +1168,44 @@
       "from": 1944,
       "to": 1945,
       "cost": 40,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 16 },
-      "resourceCosts": { "fuel": 8, "logistics": 8 },
-      "profile": { "front": 60, "side": 30, "rear": 20, "exposed": 10 },
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 40,
+        "offRoad": 16
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 8
+      },
+      "profile": {
+        "front": {
+          "value": 60,
+          "armorMM": 60,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-40-l48", "count": 1, "type": "hull" }
+        {
+          "id": "german-kwk-40-l48",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-jagdpanzer-iv.jpg"
     },
@@ -427,11 +1217,44 @@
       "from": 1944,
       "to": 1945,
       "cost": 60,
-      "movement": { "tactical": 16, "cruise": 32, "maximum": 46, "offRoad": 17 },
-      "resourceCosts": { "fuel": 12, "logistics": 12 },
-      "profile": { "front": 80, "side": 50, "rear": 40, "exposed": 15 },
+      "movement": {
+        "tactical": 16,
+        "cruise": 32,
+        "maximum": 46,
+        "offRoad": 17
+      },
+      "resourceCosts": {
+        "fuel": 12,
+        "logistics": 12
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 50,
+          "armorMM": 50,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 40,
+          "armorMM": 40,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-kwk-43-l71", "count": 1, "type": "hull" }
+        {
+          "id": "german-kwk-43-l71",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-jagdpanther.jpg"
     },
@@ -443,9 +1266,38 @@
       "from": 1943,
       "to": 1945,
       "cost": 28,
-      "movement": { "tactical": 12, "cruise": 24, "maximum": 40, "offRoad": 12 },
-      "resourceCosts": { "fuel": 5, "logistics": 10 },
-      "profile": { "front": 18, "side": 8, "rear": 8, "exposed": 5 },
+      "movement": {
+        "tactical": 12,
+        "cruise": 24,
+        "maximum": 40,
+        "offRoad": 12
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 18,
+          "armorMM": 18,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "imageUrl": "/images/units/german-wespe.jpg"
     },
     {
@@ -456,11 +1308,44 @@
       "from": 1943,
       "to": 1945,
       "cost": 38,
-      "movement": { "tactical": 12, "cruise": 24, "maximum": 40, "offRoad": 12 },
-      "resourceCosts": { "fuel": 8, "logistics": 12 },
-      "profile": { "front": 30, "side": 20, "rear": 15, "exposed": 5 },
+      "movement": {
+        "tactical": 12,
+        "cruise": 24,
+        "maximum": 40,
+        "offRoad": 12
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 12
+      },
+      "profile": {
+        "front": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-sfh-18", "count": 1, "type": "hull" }
+        {
+          "id": "german-sfh-18",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-hummel.jpg"
     },
@@ -472,11 +1357,44 @@
       "from": 1943,
       "to": 1944,
       "cost": 30,
-      "movement": { "tactical": 12, "cruise": 24, "maximum": 40, "offRoad": 12 },
-      "resourceCosts": { "fuel": 5, "logistics": 10 },
-      "profile": { "front": 25, "side": 15, "rear": 10, "exposed": 5 },
+      "movement": {
+        "tactical": 12,
+        "cruise": 24,
+        "maximum": 40,
+        "offRoad": 12
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 25,
+          "armorMM": 25,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-sig-33", "count": 1, "type": "hull" }
+        {
+          "id": "german-sig-33",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-grille.jpg"
     },
@@ -488,11 +1406,44 @@
       "from": 1942,
       "to": 1945,
       "cost": 26,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 14 },
-      "resourceCosts": { "fuel": 5, "logistics": 8 },
-      "profile": { "front": 12, "side": 10, "rear": 8, "exposed": 5 },
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 40,
+        "offRoad": 14
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 8
+      },
+      "profile": {
+        "front": {
+          "value": 12,
+          "armorMM": 12,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
+        {
+          "id": "german-pak-40-l46",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-marder-i.jpg"
     },
@@ -504,11 +1455,44 @@
       "from": 1942,
       "to": 1945,
       "cost": 30,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 14 },
-      "resourceCosts": { "fuel": 5, "logistics": 8 },
-      "profile": { "front": 30, "side": 15, "rear": 10, "exposed": 5 },
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 40,
+        "offRoad": 14
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 8
+      },
+      "profile": {
+        "front": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
+        {
+          "id": "german-pak-40-l46",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-marder-ii.jpg"
     },
@@ -520,11 +1504,44 @@
       "from": 1942,
       "to": 1945,
       "cost": 33,
-      "movement": { "tactical": 15, "cruise": 30, "maximum": 40, "offRoad": 14 },
-      "resourceCosts": { "fuel": 5, "logistics": 8 },
-      "profile": { "front": 50, "side": 15, "rear": 10, "exposed": 5 },
+      "movement": {
+        "tactical": 15,
+        "cruise": 30,
+        "maximum": 40,
+        "offRoad": 14
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 8
+      },
+      "profile": {
+        "front": {
+          "value": 50,
+          "armorMM": 50,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-pak-40-l46", "count": 1, "type": "hull" }
+        {
+          "id": "german-pak-40-l46",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-marder-iii.jpg"
     },
@@ -536,11 +1553,44 @@
       "from": 1944,
       "to": 1945,
       "cost": 75,
-      "movement": { "tactical": 8, "cruise": 18, "maximum": 40, "offRoad": 8 },
-      "resourceCosts": { "fuel": 15, "logistics": 15 },
-      "profile": { "front": 150, "side": 80, "rear": 80, "exposed": 25 },
+      "movement": {
+        "tactical": 8,
+        "cruise": 18,
+        "maximum": 40,
+        "offRoad": 8
+      },
+      "resourceCosts": {
+        "fuel": 15,
+        "logistics": 15
+      },
+      "profile": {
+        "front": {
+          "value": 150,
+          "armorMM": 150,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 25,
+          "armorMM": 25,
+          "armorInclination": 0
+        }
+      },
       "weapons": [
-        { "id": "german-rw-61", "count": 1, "type": "hull" }
+        {
+          "id": "german-rw-61",
+          "count": 1,
+          "type": "hull"
+        }
       ],
       "imageUrl": "/images/units/german-sturmtiger.jpg"
     },
@@ -552,9 +1602,21 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
-      "movement": { "tactical": 10, "cruise": 20, "maximum": 30, "offRoad": 10 },
-      "resourceCosts": { "logistics": 5 },
-      "bases": [{ "members": 8, "weapons": [] }]
+      "movement": {
+        "tactical": 10,
+        "cruise": 20,
+        "maximum": 30,
+        "offRoad": 10
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "bases": [
+        {
+          "members": 8,
+          "weapons": []
+        }
+      ]
     },
     {
       "id": "soviet-t-34-76",
@@ -564,9 +1626,38 @@
       "from": 1941,
       "to": 1944,
       "cost": 29,
-      "movement": { "tactical": 22, "cruise": 40, "maximum": 55, "offRoad": 24 },
-      "resourceCosts": { "fuel": 8, "logistics": 5 },
-      "profile": { "front": 45, "side": 45, "rear": 40, "exposed": 10 },
+      "movement": {
+        "tactical": 22,
+        "cruise": 40,
+        "maximum": 55,
+        "offRoad": 24
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 40,
+          "armorMM": 40,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
       "imageUrl": "/images/units/soviet-t-34-76.jpg"
     },
     {
@@ -577,9 +1668,38 @@
       "from": 1944,
       "to": 1945,
       "cost": 36,
-      "movement": { "tactical": 22, "cruise": 40, "maximum": 55, "offRoad": 24 },
-      "resourceCosts": { "fuel": 8, "logistics": 5 },
-      "profile": { "front": 60, "side": 45, "rear": 40, "exposed": 12 },
+      "movement": {
+        "tactical": 22,
+        "cruise": 40,
+        "maximum": 55,
+        "offRoad": 24
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 60,
+          "armorMM": 60,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 40,
+          "armorMM": 40,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 12,
+          "armorMM": 12,
+          "armorInclination": 0
+        }
+      },
       "imageUrl": "/images/units/soviet-t-34-85.jpg"
     },
     {
@@ -590,10 +1710,45 @@
       "from": 1943,
       "to": 1944,
       "cost": 45,
-      "movement": { "tactical": 14, "cruise": 25, "maximum": 37, "offRoad": 14 },
-      "resourceCosts": { "fuel": 10, "logistics": 10 },
-      "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
-      "weapons": [{ "id": "su-d-5t", "count": 1, "type": "turret" }],
+      "movement": {
+        "tactical": 14,
+        "cruise": 25,
+        "maximum": 37,
+        "offRoad": 14
+      },
+      "resourceCosts": {
+        "fuel": 10,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 120,
+          "armorMM": 120,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 90,
+          "armorMM": 90,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 60,
+          "armorMM": 60,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "su-d-5t",
+          "count": 1,
+          "type": "turret"
+        }
+      ],
       "imageUrl": "/images/units/soviet-is-1.jpg"
     },
     {
@@ -604,10 +1759,45 @@
       "from": 1943,
       "to": 1945,
       "cost": 52,
-      "movement": { "tactical": 14, "cruise": 25, "maximum": 37, "offRoad": 14 },
-      "resourceCosts": { "fuel": 10, "logistics": 10 },
-      "profile": { "front": 120, "side": 90, "rear": 60, "exposed": 15 },
-      "weapons": [{ "id": "su-d-25t", "count": 1, "type": "turret" }],
+      "movement": {
+        "tactical": 14,
+        "cruise": 25,
+        "maximum": 37,
+        "offRoad": 14
+      },
+      "resourceCosts": {
+        "fuel": 10,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 120,
+          "armorMM": 120,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 90,
+          "armorMM": 90,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 60,
+          "armorMM": 60,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "su-d-25t",
+          "count": 1,
+          "type": "turret"
+        }
+      ],
       "imageUrl": "/images/units/soviet-is-2.jpg"
     },
     {
@@ -618,8 +1808,16 @@
       "from": 1941,
       "to": 1945,
       "cost": 23,
-      "movement": { "tactical": 0, "cruise": 8, "maximum": 12, "offRoad": 0 },
-      "resourceCosts": { "fuel": 3, "logistics": 10 },
+      "movement": {
+        "tactical": 0,
+        "cruise": 8,
+        "maximum": 12,
+        "offRoad": 0
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 10
+      },
       "imageUrl": "/images/units/soviet-122mm-howitzer.jpg"
     },
     {
@@ -630,9 +1828,21 @@
       "from": 1942,
       "to": 1945,
       "cost": 14,
-      "movement": { "tactical": 10, "cruise": 20, "maximum": 30, "offRoad": 10 },
-      "resourceCosts": { "logistics": 5 },
-      "bases": [{ "members": 8, "weapons": [] }]
+      "movement": {
+        "tactical": 10,
+        "cruise": 20,
+        "maximum": 30,
+        "offRoad": 10
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "bases": [
+        {
+          "members": 8,
+          "weapons": []
+        }
+      ]
     },
     {
       "id": "soviet-recon-01",
@@ -642,8 +1852,15 @@
       "from": 1941,
       "to": 1945,
       "cost": 13,
-      "movement": { "tactical": 12, "cruise": 24, "maximum": 36, "offRoad": 12 },
-      "resourceCosts": { "intelligence": 2 }
+      "movement": {
+        "tactical": 12,
+        "cruise": 24,
+        "maximum": 36,
+        "offRoad": 12
+      },
+      "resourceCosts": {
+        "intelligence": 2
+      }
     },
     {
       "id": "soviet-medic-01",
@@ -653,8 +1870,15 @@
       "from": 1941,
       "to": 1945,
       "cost": 7,
-      "movement": { "tactical": 8, "cruise": 16, "maximum": 25, "offRoad": 8 },
-      "resourceCosts": { "logistics": 5 }
+      "movement": {
+        "tactical": 8,
+        "cruise": 16,
+        "maximum": 25,
+        "offRoad": 8
+      },
+      "resourceCosts": {
+        "logistics": 5
+      }
     },
     {
       "id": "soviet-sniper-01",
@@ -664,8 +1888,15 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
-      "movement": { "tactical": 8, "cruise": 16, "maximum": 25, "offRoad": 8 },
-      "resourceCosts": { "intelligence": 1 }
+      "movement": {
+        "tactical": 8,
+        "cruise": 16,
+        "maximum": 25,
+        "offRoad": 8
+      },
+      "resourceCosts": {
+        "intelligence": 1
+      }
     }
   ]
 }

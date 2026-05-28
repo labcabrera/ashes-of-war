@@ -1,33 +1,37 @@
 /**
- * UnitDetail - permanent information panel for a selected unit.
- * Conditionally renders the TankProfile section for tank units.
+ * UnitDetail - compact collapsible side menu for the selected unit.
  */
 import {
-  Box,
   Avatar,
-  Typography,
+  Box,
+  Button,
   Chip,
   Divider,
+  IconButton,
   Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
+  Stack,
+  Tooltip,
+  Typography,
 } from '@mui/material';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import FlightIcon from '@mui/icons-material/Flight';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Unit, UnitType, UnitWeapon } from '../../types/unit';
-import { Weapon } from '../../types/weapon';
+import type { Unit, UnitType, UnitWeapon } from '../../types/unit';
+import type { Weapon } from '../../types/weapon';
 
 interface Props {
   unit: Unit | null;
   weapons: Weapon[];
+  collapsed: boolean;
+  onCollapsedChange: (collapsed: boolean) => void;
 }
 
 const UNIT_ICONS = {
@@ -47,276 +51,196 @@ const UNIT_ICONS = {
   special: MilitaryTechIcon,
 } satisfies Record<UnitType, typeof MilitaryTechIcon>;
 
-interface WeaponAssignmentsProps {
-  assignments: UnitWeapon[];
-  weapons: Weapon[];
+function weaponLabel(assignment: UnitWeapon, weapons: Weapon[]) {
+  const weapon = weapons.find((entry) => entry.id === assignment.id);
+  return `${assignment.count} x ${weapon?.name ?? assignment.id}`;
 }
 
-function WeaponAssignments({ assignments, weapons }: WeaponAssignmentsProps) {
-  const { t } = useTranslation();
-
-  return assignments.map((assignment) => {
-    const weapon = weapons.find((entry) => entry.id === assignment.id);
-
-    return (
-      <Box
-        key={`${assignment.type}-${assignment.id}`}
-        sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 2.25, mb: 2 }}
-      >
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 1, mb: 1.5 }}>
-          <Typography variant="h5" sx={{ fontWeight: 600 }}>
-            {assignment.count} x {weapon?.name ?? assignment.id}
-          </Typography>
-          <Chip label={t(`units.weaponMounts.${assignment.type}`)} variant="outlined" />
-        </Box>
-        {weapon ? (
-          <Box sx={{ overflowX: 'auto' }}>
-            <Table
-              size="small"
-              aria-label={`${weapon.name} ${t('weapons.profiles')}`}
-              sx={{
-                minWidth: 560,
-                '& th': { fontSize: '0.82rem', fontWeight: 600, whiteSpace: 'nowrap' },
-                '& td': { fontSize: '0.95rem' },
-              }}
-            >
-              <TableHead>
-                <TableRow>
-                  <TableCell>{t('weapons.profile')}</TableCell>
-                  <TableCell align="right">{t('weapons.shots')}</TableCell>
-                  <TableCell align="right">{t('weapons.hitOn')}</TableCell>
-                  <TableCell>{t('weapons.range')}</TableCell>
-                  <TableCell align="right">{t('weapons.penetration')}</TableCell>
-                  <TableCell align="right">{t('weapons.suppression')}</TableCell>
-                  <TableCell>{t('weapons.characteristics')}</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {weapon.profiles.map((profile) => (
-                  <TableRow key={profile.id}>
-                    <TableCell sx={{ fontWeight: 600 }}>{profile.name}</TableCell>
-                    <TableCell align="right">{profile.shots}</TableCell>
-                    <TableCell align="right">{profile.hitOn}</TableCell>
-                    <TableCell>{profile.rangeModifier}</TableCell>
-                    <TableCell align="right">{profile.armourPenetration ?? '-'}</TableCell>
-                    <TableCell align="right">{profile.suppressionModifier ?? '-'}</TableCell>
-                    <TableCell>{profile.characteristics?.join(', ') ?? '-'}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </Box>
-        ) : (
-          <Typography variant="body1" color="warning.main" sx={{ fontSize: '1.05rem' }}>
-            {t('units.detail.weaponUnavailable')}
-          </Typography>
-        )}
-      </Box>
-    );
-  });
-}
-
-export default function UnitDetail({ unit, weapons }: Props) {
+export default function UnitDetail({ unit, weapons, collapsed, onCollapsedChange }: Props) {
   const { t } = useTranslation();
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
   const assignedWeapons = unit?.weapons ?? [];
 
+  if (collapsed) {
+    return (
+      <Paper
+        component="aside"
+        aria-label={t('units.detail.compactTitle')}
+        elevation={3}
+        sx={{
+          width: { xs: '100%', lg: 72 },
+          minHeight: { xs: 'auto', lg: 520 },
+          position: { lg: 'sticky' },
+          top: { lg: 16 },
+          p: 1,
+        }}
+      >
+        <Stack direction={{ xs: 'row', lg: 'column' }} spacing={1} sx={{ alignItems: 'center' }}>
+          <Tooltip title={t('units.detail.expandPanel')}>
+            <IconButton
+              onClick={() => onCollapsedChange(false)}
+              aria-label={t('units.detail.expandPanel')}
+              size="small"
+            >
+              <ChevronLeftIcon sx={{ display: { xs: 'none', lg: 'block' } }} />
+              <ChevronRightIcon sx={{ display: { xs: 'block', lg: 'none' } }} />
+            </IconButton>
+          </Tooltip>
+          <Avatar src={unit?.imageUrl} alt={unit?.name ?? ''} variant="rounded" sx={{ width: 48, height: 48 }}>
+            <UnitIcon />
+          </Avatar>
+          {unit && (
+            <Chip
+              label={unit.cost}
+              size="small"
+              color="secondary"
+              sx={{ width: { lg: 48 }, '& .MuiChip-label': { px: 0.5 } }}
+            />
+          )}
+        </Stack>
+      </Paper>
+    );
+  }
+
   return (
     <Paper
       component="aside"
-      aria-label={t('units.detail.title')}
+      aria-label={t('units.detail.compactTitle')}
       elevation={3}
       sx={{
-        minHeight: { xs: 280, lg: 520 },
+        minHeight: { xs: 240, lg: 520 },
         position: { lg: 'sticky' },
         top: { lg: 16 },
         overflow: 'hidden',
       }}
     >
-      <Box
-        sx={{
-          height: { xs: 260, lg: 500 },
-          bgcolor: 'primary.dark',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Avatar
-          variant="rounded"
-          src={unit?.imageUrl}
-          alt={unit ? unit.name : ''}
-          sx={{
-            width: '100%',
-            height: '100%',
-            borderRadius: 0,
-            bgcolor: 'primary.dark',
-            '& img': {
-              objectFit: 'cover',
-            },
-          }}
-        >
-          <UnitIcon sx={{ fontSize: { xs: 120, lg: 144 }, color: 'secondary.main' }} />
-        </Avatar>
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', p: 1 }}>
+        <Typography variant="subtitle2" sx={{ px: 1, fontWeight: 700 }}>
+          {t('units.detail.compactTitle')}
+        </Typography>
+        <Tooltip title={t('units.detail.collapsePanel')}>
+          <IconButton
+            onClick={() => onCollapsedChange(true)}
+            aria-label={t('units.detail.collapsePanel')}
+            size="small"
+          >
+            <ChevronRightIcon />
+          </IconButton>
+        </Tooltip>
       </Box>
 
-      <Box sx={{ p: { xs: 3, lg: 3.5 } }}>
-        {!unit ? (
-          <>
-            <Typography variant="h5" gutterBottom>
-              {t('units.detail.title')}
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              {t('units.detail.selectPrompt')}
-            </Typography>
-          </>
-        ) : (
-          <>
-            <Typography variant="h4" sx={{ fontWeight: 600, mb: 2.5 }}>
-              {unit.name}
-            </Typography>
-
-            <Box sx={{ display: 'flex', gap: 1.25, flexWrap: 'wrap', mb: 2.5 }}>
-              <Chip label={t(`units.types.${unit.type}`)} />
-              <Chip label={unit.faction} />
-              <Chip label={`${unit.cost} pts`} color="secondary" />
-            </Box>
-
-            <Typography variant="body1" color="text.secondary" gutterBottom>
-              {t('units.detail.availability')}: {unit.from}–{unit.to}
-            </Typography>
-
-            <Divider sx={{ my: 2.5 }} />
-            <Typography variant="h6" gutterBottom>
-              {t('units.detail.movement.title')}
-            </Typography>
-            <Table
-              size="small"
-              aria-label={t('units.detail.movement.title')}
+      {!unit ? (
+        <Box sx={{ p: 2.5 }}>
+          <Typography variant="body2" color="text.secondary">
+            {t('units.detail.selectPrompt')}
+          </Typography>
+        </Box>
+      ) : (
+        <>
+          <Box
+            sx={{
+              height: 112,
+              bgcolor: 'primary.dark',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Avatar
+              variant="rounded"
+              src={unit.imageUrl}
+              alt={unit.name}
               sx={{
-                '& th': { fontSize: '0.9rem', fontWeight: 600 },
-                '& td': { fontSize: '1.05rem', fontWeight: 600 },
+                width: '100%',
+                height: '100%',
+                borderRadius: 0,
+                bgcolor: 'primary.dark',
+                '& img': { objectFit: 'cover' },
               }}
             >
-              <TableHead>
-                <TableRow>
-                  <TableCell>{t('units.detail.movement.tactical')}</TableCell>
-                  <TableCell>{t('units.detail.movement.cruise')}</TableCell>
-                  <TableCell>{t('units.detail.movement.maximum')}</TableCell>
-                  <TableCell>{t('units.detail.movement.offRoad')}</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                <TableRow>
-                  <TableCell>{unit.movement.tactical}</TableCell>
-                  <TableCell>{unit.movement.cruise}</TableCell>
-                  <TableCell>{unit.movement.maximum}</TableCell>
-                  <TableCell>{unit.movement.offRoad}</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+              <UnitIcon sx={{ fontSize: 72, color: 'secondary.main' }} />
+            </Avatar>
+          </Box>
 
-            {unit.keywords && unit.keywords.length > 0 && (
-              <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mt: 1.5 }}>
-                {unit.keywords.map((kw) => (
+          <Box sx={{ p: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 700, lineHeight: 1.2, mb: 1 }}>
+              {unit.name}
+            </Typography>
+            <Stack direction="row" spacing={0.75} useFlexGap sx={{ mb: 1.5, flexWrap: 'wrap' }}>
+              <Chip label={t(`units.types.${unit.type}`)} size="small" />
+              <Chip label={`${unit.cost} pts`} color="secondary" size="small" />
+              <Chip label={`${unit.from}-${unit.to}`} variant="outlined" size="small" />
+            </Stack>
+
+            <Stack direction="row" spacing={1} sx={{ mb: 1.5 }}>
+              <Box>
+                <Typography variant="caption" color="text.secondary">
+                  {t('units.detail.movement.maximum')}
+                </Typography>
+                <Typography variant="body2" sx={{ fontWeight: 700 }}>
+                  {unit.movement.maximum}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography variant="caption" color="text.secondary">
+                  {t('units.detail.movement.offRoad')}
+                </Typography>
+                <Typography variant="body2" sx={{ fontWeight: 700 }}>
+                  {unit.movement.offRoad}
+                </Typography>
+              </Box>
+            </Stack>
+
+            {unit.profile && (
+              <Stack direction="row" spacing={0.75} useFlexGap sx={{ mb: 1.5, flexWrap: 'wrap' }}>
+                {(['front', 'side', 'rear', 'exposed'] as const).map((facing) => (
                   <Chip
-                    key={kw}
-                    label={t(`units.keywords.${kw}`, kw)}
-                    color="warning"
-                    variant="outlined"
+                    key={facing}
+                    label={`${t(`units.detail.${facing}`)} ${unit.profile?.[facing].value}`}
                     size="small"
+                    variant="outlined"
                   />
                 ))}
-              </Box>
-            )}
-
-            {unit.resourceCosts && Object.keys(unit.resourceCosts).length > 0 && (
-              <>
-                <Divider sx={{ my: 2.5 }} />
-                <Typography variant="h6" gutterBottom>
-                  {t('units.detail.resources')}
-                </Typography>
-                {Object.entries(unit.resourceCosts).map(([key, val]) => (
-                  <Typography key={key} variant="body1">
-                    {t(`army.resources.${key}`)}: {val}
-                  </Typography>
-                ))}
-              </>
-            )}
-
-            {unit.type === 'tank' && unit.profile && (
-              <>
-                <Divider sx={{ my: 2.5 }} />
-                <Typography variant="h6" gutterBottom>
-                  {t('units.detail.armour')}
-                </Typography>
-                <Table
-                  sx={{
-                    '& th': { fontSize: '0.95rem', fontWeight: 600 },
-                    '& td': { fontSize: '1.1rem', fontWeight: 600 },
-                  }}
-                >
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>{t('units.detail.front')}</TableCell>
-                      <TableCell>{t('units.detail.side')}</TableCell>
-                      <TableCell>{t('units.detail.rear')}</TableCell>
-                      <TableCell>{t('units.detail.exposed')}</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell>{unit.profile.front}</TableCell>
-                      <TableCell>{unit.profile.side}</TableCell>
-                      <TableCell>{unit.profile.rear}</TableCell>
-                      <TableCell>{unit.profile.exposed}</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </>
-            )}
-
-            {unit.type === 'infantry' && (
-              <>
-                <Divider sx={{ my: 2.5 }} />
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-                  {t('units.detail.bases')}
-                </Typography>
-                {unit.bases.map((base, index) => (
-                  <Box
-                    key={`${unit.id}-base-${index + 1}`}
-                    sx={{ border: 1, borderColor: 'divider', borderRadius: 1, p: 2.25, mb: 2 }}
-                  >
-                    <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', mb: base.weapons.length ? 2 : 0 }}>
-                      <Typography variant="h6" sx={{ fontWeight: 600, flexGrow: 1 }}>
-                        {t('units.detail.base', { number: index + 1 })}
-                      </Typography>
-                      <Chip label={`${base.members} ${t('units.detail.members')}`} color="secondary" />
-                    </Box>
-                    {base.weapons.length ? (
-                      <WeaponAssignments assignments={base.weapons} weapons={weapons} />
-                    ) : (
-                      <Typography variant="body1" color="text.secondary">
-                        {t('units.detail.unarmed')}
-                      </Typography>
-                    )}
-                  </Box>
-                ))}
-              </>
+              </Stack>
             )}
 
             {assignedWeapons.length > 0 && (
               <>
-                <Divider sx={{ my: 2.5 }} />
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
+                <Divider sx={{ my: 1.5 }} />
+                <Typography variant="subtitle2" sx={{ mb: 1 }}>
                   {t('units.detail.weapons')}
                 </Typography>
-                <WeaponAssignments assignments={assignedWeapons} weapons={weapons} />
+                <Stack spacing={0.75}>
+                  {assignedWeapons.map((assignment) => (
+                    <Button
+                      key={`${assignment.type}-${assignment.id}`}
+                      component={RouterLink}
+                      to={`/units?tab=weapons&weapon=${encodeURIComponent(assignment.id)}`}
+                      variant="text"
+                      size="small"
+                      endIcon={<OpenInNewIcon fontSize="small" />}
+                      sx={{ justifyContent: 'space-between', textTransform: 'none', px: 0 }}
+                    >
+                      {weaponLabel(assignment, weapons)}
+                    </Button>
+                  ))}
+                </Stack>
               </>
             )}
-          </>
-        )}
-      </Box>
+
+            <Divider sx={{ my: 1.5 }} />
+            <Button
+              component={RouterLink}
+              to={`/units/${encodeURIComponent(unit.id)}`}
+              variant="contained"
+              fullWidth
+              endIcon={<OpenInNewIcon />}
+            >
+              {t('units.detail.openFull')}
+            </Button>
+          </Box>
+        </>
+      )}
     </Paper>
   );
 }

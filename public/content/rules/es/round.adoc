@@ -1,4 +1,4 @@
-# Turnos
+= Turnos
 
 Cada turno representa una secuencia de 10 sg de combate.
 

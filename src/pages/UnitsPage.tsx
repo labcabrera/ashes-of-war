@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import GridViewIcon from '@mui/icons-material/GridView';
 import TableRowsIcon from '@mui/icons-material/TableRows';
+import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useUnitData } from '../hooks/useUnitData';
 import UnitFilters from '../components/units/UnitFilters';
@@ -30,11 +31,12 @@ type ViewMode = 'cards' | 'table';
 
 export default function UnitsPage() {
   const { t } = useTranslation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { units, filters, setName, toggleFaction, toggleType, setYear, isOutOfYear } = useUnitData();
-  const [activeTab, setActiveTab] = useState<CatalogueTab>('units');
+  const activeTab: CatalogueTab = searchParams.get('tab') === 'weapons' ? 'weapons' : 'units';
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
-  const [selectedWeapon, setSelectedWeapon] = useState<Weapon | null>(null);
+  const [isUnitPanelCollapsed, setIsUnitPanelCollapsed] = useState(false);
   const [weaponName, setWeaponName] = useState('');
   const [weaponFaction, setWeaponFaction] = useState('');
 
@@ -50,6 +52,10 @@ export default function UnitsPage() {
   }, []);
 
   const weapons = weaponsData.weapons as unknown as Weapon[];
+  const selectedWeapon = useMemo(() => {
+    const weaponId = searchParams.get('weapon');
+    return weaponId ? (weapons.find((weapon) => weapon.id === weaponId) ?? null) : null;
+  }, [searchParams, weapons]);
 
   const weaponFactions = useMemo(() => {
     const all = weapons.map((w) => getWeaponFaction(w.id)).filter(Boolean);
@@ -63,6 +69,14 @@ export default function UnitsPage() {
       return matchesName && matchesFaction;
     });
   }, [weapons, weaponName, weaponFaction]);
+
+  function handleTabChange(value: CatalogueTab) {
+    setSearchParams(value === 'weapons' ? { tab: 'weapons' } : {});
+  }
+
+  function handleWeaponSelect(weapon: Weapon) {
+    setSearchParams({ tab: 'weapons', weapon: weapon.id });
+  }
 
   return (
     <Box>
@@ -84,7 +98,7 @@ export default function UnitsPage() {
       >
         <Tabs
           value={activeTab}
-          onChange={(_event, value: CatalogueTab) => setActiveTab(value)}
+          onChange={(_event, value: CatalogueTab) => handleTabChange(value)}
           aria-label={t('catalogue.tabs.label')}
         >
           <Tab value="units" label={t('catalogue.tabs.units')} />
@@ -126,7 +140,10 @@ export default function UnitsPage() {
           <Box
             sx={{
               display: 'grid',
-              gridTemplateColumns: { xs: '1fr', lg: 'minmax(0, 1.65fr) minmax(420px, 1fr)' },
+              gridTemplateColumns: {
+                xs: '1fr',
+                lg: isUnitPanelCollapsed ? 'minmax(0, 1fr) 72px' : 'minmax(0, 1fr) minmax(280px, 340px)',
+              },
               alignItems: 'start',
               gap: 3,
             }}
@@ -139,7 +156,12 @@ export default function UnitsPage() {
               onSelect={setSelectedUnit}
             />
 
-            <UnitDetail unit={selectedUnit} weapons={weapons} />
+            <UnitDetail
+              unit={selectedUnit}
+              weapons={weapons}
+              collapsed={isUnitPanelCollapsed}
+              onCollapsedChange={setIsUnitPanelCollapsed}
+            />
           </Box>
         </>
       ) : (
@@ -163,7 +185,7 @@ export default function UnitsPage() {
               weapons={filteredWeapons}
               selectedId={selectedWeapon?.id ?? null}
               viewMode={viewMode}
-              onSelect={setSelectedWeapon}
+              onSelect={handleWeaponSelect}
             />
           </Box>
 

@@ -22,12 +22,24 @@ export type UnitType =
   | 'aircraft'
   | 'special';
 
-/** Armour ratings for tank units (all values in mm). */
+/** Armour details for one vehicle facing. */
+export interface Armor {
+  /** Game-facing armour rating used by combat resolution. */
+  value: number;
+  /** Historical or representative armour thickness in millimetres. */
+  armorMM: number;
+  /** Representative armour plate inclination in degrees. */
+  armorInclination: number;
+  /** Optional context for ranges, curved mantlets, or exposed weak spots. */
+  notes?: string;
+}
+
+/** Armour ratings for armoured vehicle units. */
 export interface TankProfile {
-  front: number;
-  side: number;
-  rear: number;
-  exposed: number;
+  front: Armor;
+  side: Armor;
+  rear: Armor;
+  exposed: Armor;
 }
 
 /** Movement ratings used by the game for each terrain and operating pace. */
@@ -84,15 +96,15 @@ export interface InfantryUnit extends BaseUnitFields {
   profile?: never;
 }
 
-/** Roster entries that are not infantry formations. */
-export interface NonInfantryUnit extends BaseUnitFields {
+/** Vehicle and support roster entries that are not infantry formations. */
+export interface VehicleUnit extends BaseUnitFields {
   type: Exclude<UnitType, 'infantry'>;
   bases?: never;
   /** Optional weapon assignments resolved against the weapon catalogue. */
   weapons?: UnitWeapon[];
-  /** Armour profile — only present for tank units. */
+  /** Optional armour profile for armoured vehicle entries. */
   profile?: TankProfile;
 }
 
 /** A unit roster entry, discriminated by its category. */
-export type Unit = InfantryUnit | NonInfantryUnit;
+export type Unit = InfantryUnit | VehicleUnit;
