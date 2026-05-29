@@ -22,3 +22,6 @@ De cara a mantener una coherencia y verosimilutud con los datos reales el blinda
 *Por ejemplo para un blindaje de 80mm inclinado 55º tendremos sin aplicar escala:*
 
 *Ef = 80 / cos(55º) ≈ 139 mm*
+
+
+WARNING: TODO: indicar que los vehiculos no se retiran de la mesa cuando son destruidos... salvo que sean destruidos por armas de escala atómica o cañones ferroviarios.

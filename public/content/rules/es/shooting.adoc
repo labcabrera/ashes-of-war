@@ -1,4 +1,7 @@
 = Disparo
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
 == Tipos de disparo
 
@@ -22,19 +25,21 @@ Al realizar una acción de disparo tiraremos un D6 sumando a este valor el valor
 
 Un impacto de 6 se considera un impacto crítico y dependiendo del arma puede añadir efectos adicionales.
 
-== Distancia al objetivo
+=== Distancia al objetivo
 
 La mayoría de armas ven reducida su efectividad a medida que aumenta la distancia al objetivo. Este efecto se refleja en el perfil de cada arma con un modificador de impacto por distancia expresado como:
 
-_{Initial range}/{Increment}/{Penalty}_
+----
+{Rango}/{Incremento}/{Penalizador}
+----
 
 Siendo:
 
-- *[.underline]#Initial range#:* distancia en la que el arma no sufre penalización por distancia.
+- *[.underline]#Rango#:* distancia en la que el arma no sufre penalización por distancia.
 
-- *[.underline]#Increment#:* rango de distancia que utilizado para calcular la penalización por distancia. Por ejemplo, si el valor es 6 pulgadas, cada 6 pulgadas adicionales a la distancia inicial se aplicará una penalización.
+- *[.underline]#Incremento#:* rango de distancia que utilizado para calcular la penalización por distancia. Por ejemplo, si el valor es 6 pulgadas, cada 6 pulgadas adicionales a la distancia inicial se aplicará una penalización.
 
-- *[.underline]#Penalty#:* penalización por cada incremento de distancia. Este valor se aplicará a la tirada de impacto por cada incremento de distancia que supere la distancia inicial.
+- *[.underline]#Penalizador#:* penalización por cada incremento de distancia. Este valor se aplicará a la tirada de impacto por cada incremento de distancia que supere la distancia inicial.
 
 [NOTE]
 ====
@@ -47,105 +52,126 @@ Ejemplo: Al disparar con arma con un perfil de 24/6/-1 la penalización de dispa
 
 ====
 
-TIP: foo bar+
-test
+// TIP: foo bar+
+// test
 
-NOTE: note
+// NOTE: note
 
-TIP: tip
+// TIP: tip
 
-IMPORTANT: important
+// IMPORTANT: important
 
-CAUTION: caution
+// CAUTION: caution
 
-WARNING: warning
-
-
+// WARNING: warning
 
 
+WARNING: sección sin actualizar copiada de las notas iniciales.
 
-
-
-donde X es el valor de impacto a corta distancia, Y a media distancia y Z a larga distancia. Por ejemplo, un arma con un perfil de 30/20/-1 tendrá un bonificador de +30 para disparos a corta distancia, +20 para disparos a media distancia y -1 para disparos a larga distancia.
-
-== Modificadores de disparo
+=== Modificadores de disparo
 
 |===
-|Modificador |Valor |Descripción
+|Modificador                         |Valor |Descripción
+|Nivel de organización               |-X    |6 menos el nivel de organización de la unidad que dispara.
+|Cobertura ligera                    |-2    |Cobertura parcial o ligera.
+|Cobertura pesada                    |-4    |Cobertura parcial o ligera.
+|Bunker / emplazamiento atrincherado |-6    |Cobertura parcial o ligera.
+|Disparando en movimiento            |-X    |Dependiente del perfil del arma. Por ejemplo "Heavy 2" indicará un -2 al disparo si la unidad no permanece estacionaria.
+|Humo / Polvo ligero                 |-2    |Condiciones de humo, polvo o niebla que dificultan la visibilidad.
+|Humo / Polvo intenso                |-4    |Condiciones de humo, polvo o niebla que dificultan la visibilidad.
+|Aputado preciso                     |+X    |Algunos perfiles de arma pueden sacrificar cadencia de fuego para mejorar la puntería. Por ejemplo "Aimed +2" indicará que el arma obtiene un bonus de +2 al disparo si realiza un disparo apuntado.
 |
 |===
 
 
-Al realizar una acción de disparo el jugador deberá realizar una tirada para impactar sumando los modificadores. Cada unidad tendrá determinado en su perfil el valor "To-Hit" que indicará la dificultad base para impactar a un objetivo. Este será un valor base dependiente de la geometría del objetivo, por ejemplo un KV-2 tendrá un valor muy fácil de ser impactado mientras que las unidades de infantería tendrán valores más altos.
+// Al realizar una acción de disparo el jugador deberá realizar una tirada para impactar sumando los modificadores. Cada unidad tendrá determinado en su perfil el valor "To-Hit" que indicará la dificultad base para impactar a un objetivo. Este será un valor base dependiente de la geometría del objetivo, por ejemplo un KV-2 tendrá un valor muy fácil de ser impactado mientras que las unidades de infantería tendrán valores más altos.
 
 
 
-Primero hay que hacer una tirada para impactar. Esta tirada se verá modificada por la habilidad de la tripulación, ópticas (cada tipo de óptica añade una penalización por distancia), modificadores de ambiente (humo, niebla, explosiones), geometría del objetivo, cobertura.
+// Primero hay que hacer una tirada para impactar. Esta tirada se verá modificada por la habilidad de la tripulación, ópticas (cada tipo de óptica añade una penalización por distancia), modificadores de ambiente (humo, niebla, explosiones), geometría del objetivo, cobertura.
 
 
-Impacto
-La idea es llegar a un número determinado, por ejemplo 10, que luego será ajustado en las pruebas. Tiras un dado, aplicas todos los bonus/malus y si llegas es un impacto con éxito. Para reflejar casos en los que es muy complejo llegar a ese número los 6 serán críticos que harás que vuelvas a tirar añadiendo el resultado a la tirada y los 1 fallos críticos.
+// Impacto
+// La idea es llegar a un número determinado, por ejemplo 10, que luego será ajustado en las pruebas. Tiras un dado, aplicas todos los bonus/malus y si llegas es un impacto con éxito. Para reflejar casos en los que es muy complejo llegar a ese número los 6 serán críticos que harás que vuelvas a tirar añadiendo el resultado a la tirada y los 1 fallos críticos.
 
-Habilidad del tirador
-Cada perfil en el juego tendrá un valor en función del arma a disparar.
-Entrenado: +6
-Sin entrenar: +1
+// Habilidad del tirador
+// Cada perfil en el juego tendrá un valor en función del arma a disparar.
+// Entrenado: +6
+// Sin entrenar: +1
 
-Ópticas
-Las ópticas añaden una penalización por cada 20 cm a partir de una distancia. Posteriormente ajustar el bonus en las pruebas. Este factor vendrá determinado en cada perfil y arma.
-Este valor se indicará como 40/20/-1 siendo que es un factor que sólo aplica a disparos a partir de 40 cm disminuyendo en -1 el impacto por cada 20 cm de distancia que superen el mínimo.
+// Ópticas
+// Las ópticas añaden una penalización por cada 20 cm a partir de una distancia. Posteriormente ajustar el bonus en las pruebas. Este factor vendrá determinado en cada perfil y arma.
+// Este valor se indicará como 40/20/-1 siendo que es un factor que sólo aplica a disparos a partir de 40 cm disminuyendo en -1 el impacto por cada 20 cm de distancia que superen el mínimo.
 
-https://wikitanks.com/index.php?title=%C3%93pticas_de_los_carros_de_combate_de_Alemania
+// https://wikitanks.com/index.php?title=%C3%93pticas_de_los_carros_de_combate_de_Alemania
 
-Avanzadas (Zeiss por ejemplo): -1 por cada 20 cm
-Básicas: -2 por cada 20 cm
+// Avanzadas (Zeiss por ejemplo): -1 por cada 20 cm
+// Básicas: -2 por cada 20 cm
 
-Geometría del objetivo
-Cada perfil tendrá un bonificador a ser impactado determinado por su volumen.
-	Hetzer: -1
-	KV-1: +2
-	Infantería base (armas de área): +3
-	Infantería base (armas disparos sostenidos): +2
+// Geometría del objetivo
+// Cada perfil tendrá un bonificador a ser impactado determinado por su volumen.
+// 	Hetzer: -1
+// 	KV-1: +2
+// 	Infantería base (armas de área): +3
+// 	Infantería base (armas disparos sostenidos): +2
 
-Movimiento
-Cada perfil tendrá el tipo de keyword que aplica si dispara en movimiento. Este valor por lo general hará que los carros en combate en movimiento sólo puedan usar efectivamente el armamento ligero siendo muy pocas las posibilidades de acertar con el armamento principal a menos que se dispongan de traits o equipo especial como cañones giroestabilizados.
-	Impreciso: -5
-	Asalto: 0
+// Movimiento
+// Cada perfil tendrá el tipo de keyword que aplica si dispara en movimiento. Este valor por lo general hará que los carros en combate en movimiento sólo puedan usar efectivamente el armamento ligero siendo muy pocas las posibilidades de acertar con el armamento principal a menos que se dispongan de traits o equipo especial como cañones giroestabilizados.
+// 	Impreciso: -5
+// 	Asalto: 0
 
-Cobertura
-	Sin cobertura: 0
-	Cobertura parcial ligera: -1
-	Cobertura completa ligera: -3
-	Cobertura parcial sólida: -2
-	Cobertura completa sólida: -5
+// Cobertura
+// 	Sin cobertura: 0
+// 	Cobertura parcial ligera: -1
+// 	Cobertura completa ligera: -3
+// 	Cobertura parcial sólida: -2
+// 	Cobertura completa sólida: -5
 
-Modificadores ambientales
-	Humo ligero / polvo: -2
-	Humo intenso: +5
-	Niebla: -1 por cada X cm de distancia determinado por el mapa
-	Recibiendo fuego: -2
-	Recibiendo fuego intenso: -5
-	Tripulación acobardada: -3
+// Modificadores ambientales
+// 	Humo ligero / polvo: -2
+// 	Humo intenso: +5
+// 	Niebla: -1 por cada X cm de distancia determinado por el mapa
+// 	Recibiendo fuego: -2
+// 	Recibiendo fuego intenso: -5
+// 	Tripulación acobardada: -3
 
-Modificadores especiales
-	Armas de alta cadencia en emplazamiento fijo: +6
+// Modificadores especiales
+// 	Armas de alta cadencia en emplazamiento fijo: +6
 
-Apuntado
-Algunas armas pueden sacrificar cadencia de tiro para un mejor apuntado. Las unidades que no han sido descubiertas en una emboscada aplicarán este bonificador sin sacrificar la cadencia. Este valor solo estará presente en armas con la keyword apuntado por ejemplo carros de combate o armas anticarro, no aplicándose a disparos de infantería o armas automáticas.
-	Disparo apresurado: -1
-	Disparo normal: 0
-	Disparo apuntado: +2
+// Apuntado
+// Algunas armas pueden sacrificar cadencia de tiro para un mejor apuntado. Las unidades que no han sido descubiertas en una emboscada aplicarán este bonificador sin sacrificar la cadencia. Este valor solo estará presente en armas con la keyword apuntado por ejemplo carros de combate o armas anticarro, no aplicándose a disparos de infantería o armas automáticas.
+// 	Disparo apresurado: -1
+// 	Disparo normal: 0
+// 	Disparo apuntado: +2
 
 
-_Ejemplo
-Un Panzer IV estático dispara a un KV-1 a 70 cm en condiciones con humo ligero sin cobertura saca un 3
+[NOTE]
+====
+*Ejemplo de un disparo de vehículo*
 
-	Tirada: 4
-	HP Panzer IV (perfil): +6
-    KV-1: +3
-	Distancia: (ópticas 30/20/-1 a 70 cm): -1
-	Humo: -1
-	Resultado total: 11, impacto_
+Un Panzer IV estático dispara a un KV-1 a 32' en condiciones con humo ligero sin cobertura saca un 4
+
+* Tirada: 4
+* HP Panzer IV (Balistic +3)
+* Distancia (30/10/-1): -1
+* Humo: -1
+* KV-1: Hit-On 3
+* Resultado total: 5 (4+3-1-1), como el resultado es igual o superior al hit-on del objetivo el disparo impacta con éxito.
+
+*Ejemplo de un disparo de una MG-34 contra una unidad de infantería*
+
+TODO
+
+====
+
+== Resultados del impacto
+
+Dependiendo del tipo de arma disparada y el objetivo los impactos se resolverán de forma diferente.
+
+
+WARNING: notas antiguas pendientes de mover de seccion
+
+El resultado de los impactos dependenderá del tipo de disparo.
 
 Resolución de impactos en carros de combate
 Cada perfil tendrá 3 valores de blindaje. Frontal, lateral y trasero. Dependiendo del éxito del disparo y del ángulo desde el que recibe el disparo se determinará el tipo de blindaje.

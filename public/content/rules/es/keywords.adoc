@@ -6,4 +6,28 @@ WARNING: Borrador en desarrollo.
 [unreliable]
 ## Unreliable X
 
+_Representa la escasa fiablidad de algunos vehículos para realizar maniobras a velocidades elevadas._
+
 Al realizar un movimiento de velocidad apresurada la unidad deberá tirar un D6. Si el resultado es igual o inferior a X la unidad deberá tirar un chequeo de avería mecánica.
+
+## Overheat X
+
+_Algunas armas pueden presentar problemas de sobrecalentamiento si se disparan a máxima cadencia como una MG-42._
+
+Al disparar la unidad, si el número de unos en la tirada de impacto es igual o superior a X el arma se considerará sobrecalentada y quedará inoperativa durante el siguiente turno (o hasta que se realice con éxito una maniobra de reparación).
+
+## Stationary
+
+Las unidades con esta palabra clave no pueden realizar ningún movimiento durante la partida. Estas unidades por lo general serán emplazamientos fijos de armas pesadas que requieren de una preparación previa para ser desplegadas.
+
+## Heavy X
+
+Las armas con este perfil tendrán una penalización de -X a su tirada de impacto cuando el disparo no se efectúe desde una posición estática. Esto representa la dificultad de apuntar con precisión a objetivos lejanos o en movimiento con armas pesadas.
+
+## Area X
+
+_Representa la naturaleza de las armas de área como morteros, artillería o lanzacohetes que pueden causar daños significativos en un área amplia._
+
+Las armas con esta palabra afectarán a las unidades dentro de un área determinada alrededor del punto de impacto. El radio de esta área se determinará por el valor de X en pulgadas.
+
+Tanto los impactos con éxito como los fallidos deberán resolver el punto de impacto para calcular las unidades afectadas por la explosicón.

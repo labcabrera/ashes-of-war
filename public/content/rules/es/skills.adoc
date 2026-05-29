@@ -1,5 +1,7 @@
 = Habilidades
 
+WARNING: Borrador en desarrollo.
+
 Algunas acciones requieren de una determinada habilidad para realizar un éxito. Estos ejemplos pueden ser:
 Coordinar un ataque de infantería
 Realizar una comunicación con el centro de coordinación de artillería

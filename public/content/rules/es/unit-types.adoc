@@ -5,23 +5,21 @@
 
 WARNING: Borrador en desarrollo.
 
-// * link:/rules/unit-types/infantry[Infantería]: el núcleo de cualquier ejército. Las escuadras de infantería son versátiles, económicas y eficaces en la captura de objetivos. La infantería funciona mejor en cobertura, edificios, posiciones preparadas y terreno cerrado. Puede asaltar, atrincherarse, proteger vehículos y mantener terreno con más eficiencia que las unidades blindadas.
+Esta sección describe los tipos de unidad disponibles en el juego, sus características generales y su función en el campo de batalla.
 
-// * link:/rules/unit-types/vehicles[Vehículos]: dentro de vehículos encontramos diferentes categorías como carros de combate, artillería autopropulsada, vehículos de transporte de personal, etc. Los vehículos tienen un perfil de blindaje que determina su resistencia a los disparos desde diferentes ángulos. Son plataformas ofensivas potentes, pero pueden ser costosos, vulnerables al flanqueo, complicados de maniobrar en terreno cerrado y no pueden realizar determinadas acciones.
-
-// * link:/rules/unit-types/towed[Armas remolcadas]: piezas de campaña que deben ser remolcadas para reposicionarse tales como armas antitanque, cañones de campaña o morteros pesados. Son más baratas que la artillería autopropulsada pero requieren un vehículo tractor separado, son difícules de maniobrar y sus operadores están expuestos al fuego enemigo.
-
-// Adicionalmente a estas categorías básicas también podremos contar con otras unidades con reglas especiales como:
-
-// * *Soporte de artillería*: apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero.
-
-// * *Aviación de apoyo cercano*: apoyo aéreo solicitado que no se despliega inicialmente en el tablero. La aviación puede ser devastadora contra unidades expuestas, pero su uso es limitado y puede ser derribada por unidades antiaéreas o interceptada por unidades voladoras del defensor.
-
-== Infantería
+== link:/rules/unit-types/infantry[Infantería]
 
 La infantería es el núcleo de cualquier ejército. Las escuadras de infantería son versátiles, económicas y eficaces en la captura de objetivos. La infantería funciona mejor en cobertura, edificios, posiciones preparadas y terreno cerrado. Puede asaltar, atrincherarse, proteger vehículos y mantener terreno con más eficiencia que las unidades blindadas.
 
 La infantería es particularmente vulnerable en campo abierto donde armas con altas cadencias de disparo harán estragos en estas unidades con esasa protección.
+
+=== Oficiales y suboficiales
+
+Unidades de mando que proporcionan bonificaciones a la moral, organización y habilidades de las unidades cercanas. Estas unidades son objetivos prioritarios para el enemigo, ya que su eliminación puede desmoralizar a las tropas y reducir su eficacia en combate.
+
+Generalmente cada ejercito tendrá un oficial (aunque podemos tener casos de varias compañiasa independientes) con varios suboficiales a su mando con una estructura jerárquica. Los oficiales podrán coordinar las acciones del campo de batalla dando órdenes a las unidades subordinadas.
+
+Cada ejército tendrá su propia estructura de mando y organización en la que quedará reflejado el grado de flexibilidad táctica, entrenamiento adecuado y capacidades de mando. Por ejemplo, las tropas de la Wehrmacht contaban con una estructura de mando más flexible y descentralizada que les permitía reaccionar rápidamente a las cambiantes condiciones del campo de batalla, mientras que las tropas soviéticas tenían una estructura de mando más rígida y centralizada que a menudo resultaba en una menor capacidad de adaptación y coordinación en el campo de batalla.
 
 === Fusileros
 
@@ -51,7 +49,7 @@ Unidades de apoyo que mantienen a tu infantería en combate. Estas unidades apor
 
 Tiradores de élite capaces de eliminar objetivos de alto valor a gran distancia. Estas unidades tienen valores de ocultación elevados pero son frágiles y tienen una capacidad de ataque limitada.
 
-== Vehículos
+== link:/rules/unit-types/vehicles[Vehículos]
 
 Dentro de vehículos encontramos diferentes categorías como carros de combate, artillería autopropulsada, vehículos de transporte de personal, etc. Los vehículos tienen un perfil de blindaje que determina su resistencia a los disparos desde diferentes ángulos. Son plataformas ofensivas potentes, pero pueden ser costosos, vulnerables al flanqueo, complicados de maniobrar en terreno cerrado y no pueden realizar determinadas acciones.
 
@@ -83,7 +81,7 @@ TODO
 
 TODO
 
-== Armas remolcadas
+== link:/rules/unit-types/towed-weapons[Armas remolcadas]
 
 Piezas de campaña que deben ser remolcadas para reposicionarse tales como armas antitanque, cañones de campaña o morteros pesados. Son más baratas que la artillería autopropulsada pero requieren un vehículo tractor separado, son difícules de maniobrar y sus operadores están expuestos al fuego enemigo.
 
