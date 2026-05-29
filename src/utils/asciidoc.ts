@@ -33,10 +33,34 @@ export function convertToHtml(source: string): string {
  */
 export const asciidocSx = {
   color: 'text.primary',
-  '& h1': { fontSize: '1.6rem', fontWeight: 600, mt: 1, mb: 1.5 },
-  '& h2': { fontSize: '1.25rem', fontWeight: 600, mt: 3, mb: 1 },
-  '& h3': { fontSize: '1.05rem', fontWeight: 600, mt: 2, mb: 0.75 },
-  '& h4, & h5, & h6': { fontWeight: 600, mt: 1.5, mb: 0.5 },
+  // ── Headings ───────────────────────────────────────────────────────────────
+  // h1 = document title (= in AsciiDoc)
+  '& h1': { fontSize: '1.75rem', fontWeight: 700, mt: 1, mb: 2, lineHeight: 1.2 },
+  // h2 = top-level section (==): prominent with a bottom divider
+  '& h2': {
+    fontSize: '1.35rem',
+    fontWeight: 700,
+    mt: 5,
+    mb: 1.5,
+    pb: 0.75,
+    borderBottom: '1px solid',
+    borderColor: 'divider',
+    lineHeight: 1.3,
+  },
+  // h3 = subsection (===): left accent bar to show nesting
+  '& h3': {
+    fontSize: '1.05rem',
+    fontWeight: 700,
+    mt: 3,
+    mb: 1,
+    pl: 1.5,
+    borderLeft: '3px solid',
+    borderLeftColor: 'primary.main',
+    lineHeight: 1.4,
+  },
+  // h4+ = deep headings: smaller, muted
+  '& h4': { fontSize: '0.95rem', fontWeight: 600, mt: 2, mb: 0.75, color: 'text.secondary' },
+  '& h5, & h6': { fontSize: '0.875rem', fontWeight: 600, mt: 1.5, mb: 0.5, color: 'text.secondary' },
   '& p': { mb: 1.5, lineHeight: 1.75 },
   '& ul, & ol': { pl: 3, mb: 2 },
   '& li': { mb: 0.5, lineHeight: 1.6 },
@@ -140,5 +164,6 @@ export const asciidocSx = {
     '& li': { mb: 0.25, lineHeight: 1.5 },
     '& a': { fontSize: '0.875rem', color: 'text.secondary', textDecoration: 'none', '&:hover': { color: 'primary.main', textDecoration: 'underline' } },
   },
-  '& .sect1': { mb: 1 },
+  '& .sect1': { mb: 3 },
+  '& .sect2': { mb: 2 },
 } as const;

@@ -103,7 +103,7 @@ TODO
 
 TODO
 
-== Artillería de campaña
+== Artillería de apoyo
 
 Apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero.
 
