@@ -12,6 +12,8 @@ Hay varios aspectos que afectan negativamente a la organización de la unidad ta
 - Ser objetivo de fuego de supresión o artillería
 - Rotura de la cadena de mando
 
+Durante la fase de mantenimiento cada unidad recuperará una cantidad de puntos de organización dependiendo del valor indicado en su perfil así como de otros factores externos.
+
 La organización se podrá ir recuperando en las fases de mantenimiento en función de las capacidades de los oficiales y suboficiales de la unidad, experiencia y otros valores establecidos del perfil de la unidad.
 
 ## TODO - Consideraciones de diseño

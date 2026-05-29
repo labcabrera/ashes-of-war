@@ -1,40 +1,11 @@
 = Introducción
 
-*Ashes of War* es un wargame táctico ambientado en la Segunda Guerra Mundial ajustado a una escala 1:100.
+*Ashes of War* es un juego de miniaturas táctico ambientado en la Segunda Guerra Mundial ajustado a una escala 1:100.
 
-Cada jugador liderará un ejercito de un tamaño similar a una compañía y mediante un sistema de combate por turnos 
+En esta guía de juego, cada jugador asume el papel de comandante de una o varias compañías de combate y a través de un sistema de juego por turnos dirige sus unidades en el campo de batalla. El juego se centra en la gestión de recursos, la toma de decisiones estratégicas y la ejecución táctica para lograr los objetivos establecidos en cada escenario.
 
+== Acerca de las reglas y la escala
 
-== Visión general
+Aunque las reglas de juego y los perfiles de las unidades se han creado a partir de los valores reales, de cara a mejorar la jugabilidad algunos de estos factores se han corregido aplicando una compresión espacial teniendo en cuenta las limitaciones de espacio en un tablero de juego. De este modo, por ejemplo, a escala 1:100 el cañón de un Tiger I tendría un alcance operativo de 15 metros (1.500 metros en escala real), unas dimensiones un poco complicadas de aplicar en la mesa de juego de nuestro salón... a menos que alquiles un campo de fúbol para jugar la partida.
 
-Ashes of War está diseñado para 2 jugadores. Cada jugador comanda un ejército compuesto por escuadras de infantería, vehículos blindados, baterías de artillería y elementos de apoyo. El objetivo es alcanzar los objetivos de misión mientras se neutraliza al enemigo.
-
-== Conceptos básicos
-
-=== Puntos de mando
-Cada turno recibes *Puntos de Mando (PM)* según el tipo de ejército y los recursos disponibles. Gástalos para activar unidades, llamar apoyo de fuego o desencadenar habilidades especiales.
-
-=== Activación
-En tu turno, selecciona una unidad y actívala. Una unidad activada puede:
-* *Mover* hasta su valor de movimiento en pulgadas.
-* *Disparar* a una unidad enemiga en línea de visión.
-* *Asaltar* al combate cuerpo a cuerpo.
-* *Atrincherarse* para obtener un bonus defensivo.
-
-=== Dados
-Ashes of War utiliza dados estándar de seis caras (d6). La mayoría de acciones requieren superar un número objetivo; los resultados iguales o superiores tienen éxito.
-
-== Estructura del turno
-
-. *Iniciativa* — Ambos jugadores tiran 1d6. El resultado más alto actúa primero (repite en empate).
-. *Fase de activación* — Los jugadores se alternan activando unidades hasta que todas hayan sido activadas.
-. *Fase de reagrupamiento* — Las unidades suprimidas intentan recuperarse.
-. *Fase de recursos* — Recoge ingresos y repón los puntos de mando.
-. *Fase final* — Comprueba las condiciones de victoria.
-
-== Condiciones de victoria
-
-Los escenarios definen objetivos específicos. Los más comunes son:
-* *Mantener la línea* — Controla más objetivos que el enemigo al final de la partida.
-* *Aniquilar* — Destruye el 75 % o más del valor en puntos del enemigo.
-* *Reconocimiento* — Mueve una unidad más allá del borde de la mesa enemiga.
+WARNING: Borrador en desarrollo.

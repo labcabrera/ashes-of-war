@@ -6,6 +6,14 @@
 
 * link:/rules/unit-types/towed[Armas remolcadas]: piezas de campaña que deben ser remolcadas para reposicionarse tales como armas antitanque, cañones de campaña o morteros pesados. Son más baratas que la artillería autopropulsada pero requieren un vehículo tractor separado, son difícules de maniobrar y sus operadores están expuestos al fuego enemigo.
 
+Adicionalmente a estas categorías básicas también podremos contar con otras unidades con reglas especiales como:
+
+* *Soporte de artillería*: apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero.
+
+* *Aviación de apoyo cercano*: apoyo aéreo solicitado desde fuera del tablero. Disponible una vez por partida.
+
+WARNING: Borrador en desarrollo.
+
 Ashes of War incluye doce tipos de unidad distintos, cada uno con capacidades y limitaciones únicas.
 
 == Infantería
@@ -109,3 +117,4 @@ Apoyo aéreo solicitado desde fuera del tablero. Disponible una vez por partida 
 Unidades específicas de misión que no encajan en categorías estándar — saboteadores, observadores avanzados, mandos, etc.
 
 Las unidades especiales tienen sus propias reglas únicas definidas en su ficha de datos.
+
