@@ -1,18 +1,21 @@
 = Tipos de unidad
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
 WARNING: Borrador en desarrollo.
 
-* link:/rules/unit-types/infantry[Infantería]: el núcleo de cualquier ejército. Las escuadras de infantería son versátiles, económicas y eficaces en la captura de objetivos. La infantería funciona mejor en cobertura, edificios, posiciones preparadas y terreno cerrado. Puede asaltar, atrincherarse, proteger vehículos y mantener terreno con más eficiencia que las unidades blindadas.
+// * link:/rules/unit-types/infantry[Infantería]: el núcleo de cualquier ejército. Las escuadras de infantería son versátiles, económicas y eficaces en la captura de objetivos. La infantería funciona mejor en cobertura, edificios, posiciones preparadas y terreno cerrado. Puede asaltar, atrincherarse, proteger vehículos y mantener terreno con más eficiencia que las unidades blindadas.
 
-* link:/rules/unit-types/vehicles[Vehículos]: dentro de vehículos encontramos diferentes categorías como carros de combate, artillería autopropulsada, vehículos de transporte de personal, etc. Los vehículos tienen un perfil de blindaje que determina su resistencia a los disparos desde diferentes ángulos. Son plataformas ofensivas potentes, pero pueden ser costosos, vulnerables al flanqueo, complicados de maniobrar en terreno cerrado y no pueden realizar determinadas acciones.
+// * link:/rules/unit-types/vehicles[Vehículos]: dentro de vehículos encontramos diferentes categorías como carros de combate, artillería autopropulsada, vehículos de transporte de personal, etc. Los vehículos tienen un perfil de blindaje que determina su resistencia a los disparos desde diferentes ángulos. Son plataformas ofensivas potentes, pero pueden ser costosos, vulnerables al flanqueo, complicados de maniobrar en terreno cerrado y no pueden realizar determinadas acciones.
 
-* link:/rules/unit-types/towed[Armas remolcadas]: piezas de campaña que deben ser remolcadas para reposicionarse tales como armas antitanque, cañones de campaña o morteros pesados. Son más baratas que la artillería autopropulsada pero requieren un vehículo tractor separado, son difícules de maniobrar y sus operadores están expuestos al fuego enemigo.
+// * link:/rules/unit-types/towed[Armas remolcadas]: piezas de campaña que deben ser remolcadas para reposicionarse tales como armas antitanque, cañones de campaña o morteros pesados. Son más baratas que la artillería autopropulsada pero requieren un vehículo tractor separado, son difícules de maniobrar y sus operadores están expuestos al fuego enemigo.
 
-Adicionalmente a estas categorías básicas también podremos contar con otras unidades con reglas especiales como:
+// Adicionalmente a estas categorías básicas también podremos contar con otras unidades con reglas especiales como:
 
-* *Soporte de artillería*: apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero.
+// * *Soporte de artillería*: apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero.
 
-* *Aviación de apoyo cercano*: apoyo aéreo solicitado que no se despliega inicialmente en el tablero. La aviación puede ser devastadora contra unidades expuestas, pero su uso es limitado y puede ser derribada por unidades antiaéreas o interceptada por unidades voladoras del defensor.
+// * *Aviación de apoyo cercano*: apoyo aéreo solicitado que no se despliega inicialmente en el tablero. La aviación puede ser devastadora contra unidades expuestas, pero su uso es limitado y puede ser derribada por unidades antiaéreas o interceptada por unidades voladoras del defensor.
 
 == Infantería
 
@@ -20,106 +23,184 @@ La infantería es el núcleo de cualquier ejército. Las escuadras de infanterí
 
 La infantería es particularmente vulnerable en campo abierto donde armas con altas cadencias de disparo harán estragos en estas unidades con esasa protección.
 
-=== Subtipos principals de infantería
+=== Fusileros
 
-* *Fusileros*: la infantería estándar, equipada con fusiles. Son la base de cualquier fuerza terrestre y pueden realizar una amplia variedad de tareas, desde asaltar posiciones hasta mantener el terreno.
-* *Tropas de asalto (SMG)*: infantería equipada con subfusiles, granadas o armas anti-carro. Estasa unidades tienen altas cadencias de fuego pero escaso rango como la MP40. Son especialmente eficaces en combate urbano, asalto de edificios y terreno cerrado, pero pierden eficacia a medida que aumenta la distancia.
-* *Escuadras de ametralladoras pesadas (HMG)*: infantería equipada con ametralladoras pesadas como la MG42. Estas unidades proporcionan fuego de supresión efectivo, pero son vulnerables a ataques rápidos y a la infantería de asalto que puede flanquearlas.
-* *Ingenieros*: infantería especialista en demoliciones, construcción de puentes y eliminación de obstáculos. Pueden colocar y desactivar minas, destruir obstáculos y cruzar accidentes acuáticos. Si bien estas unidades tienen capacidad combativa, no están optimizadas para el combate directo y su función principal es el apoyo a otras unidades.
-* *Médicos de campaña*: unidades de apoyo que mantienen a tu infantería en combate. Estas unidades aportan mejoras en la capacidad de recuperación de tus tropas y la organización pero sus valores combativos son limitados.
-* *Francotiradores*: tiradores de élite capaces de eliminar objetivos de alto valor a gran distancia. Estas unidades tienen valores de ocultación elevados pero son frágiles y tienen una capacidad de ataque limitada.
+La infantería estándar, equipada con fusiles. Son la base de cualquier fuerza terrestre y pueden realizar una amplia variedad de tareas, desde asaltar posiciones hasta mantener el terreno.
 
-== Tanque
+=== Tropas de choque (SMG)
 
-Los vehículos blindados son plataformas ofensivas potentes. Cada tanque tiene un *Perfil de blindaje* con cuatro valores:
+_Submachine Gun Troops_
 
-[cols="1,1,1,1", options="header"]
-|===
-|Dirección |Efecto
-|Frontal |Los disparos desde el arco frontal usan este valor
-|Lateral |Los disparos desde el flanco usan este valor
-|Trasero |Los disparos por detrás usan este valor
-|Expuesto |Tripulación y ópticas — objetivo de armas especiales
-|===
+Infantería equipada con subfusiles, granadas o armas anti-carro. Estasa unidades tienen altas cadencias de fuego pero escaso rango como la MP40. Son especialmente eficaces en combate urbano, asalto de edificios y terreno cerrado, pero pierden eficacia a medida que aumenta la distancia.
 
-* *Movimiento:* 10"
-* *Fortalezas:* Gran potencia de fuego; difícil de destruir desde el frente.
-* *Debilidades:* Costoso; mal en terreno cerrado; vulnerable al flanqueo.
+=== Escuadras de ametralladoras pesadas (HMG)
 
-== Artillería
+_Heavy Machine Gun Team_
 
-Piezas pesadas capaces de fuego indirecto. La artillería puede batir objetivos más allá de la línea de visión.
+Infantería equipada con ametralladoras pesadas como la MG42. Estas unidades proporcionan fuego de supresión efectivo, pero son vulnerables a ataques rápidos y a la infantería de asalto que puede flanquearlas.
 
-* *Movimiento:* 3"
-* *Fortalezas:* Gran alcance y radio de explosión.
-* *Debilidades:* Baja movilidad; requiere tiempo de despliegue.
+=== Ingenieros
 
-== Motorizado
+Infantería especialista en demoliciones, construcción de puentes y eliminación de obstáculos. Pueden colocar y desactivar minas, destruir obstáculos y cruzar accidentes acuáticos. Si bien estas unidades tienen capacidad combativa, no están optimizadas para el combate directo y su función principal es el apoyo a otras unidades.
 
-Infantería embarcada en camiones o semiorugas para mayor movilidad.
+=== Médicos de campaña
 
-* *Movimiento:* 12" (embarcado), 6" (desembarcado)
-* *Fortalezas:* Alta movilidad estratégica.
-* *Debilidades:* Los vehículos son vulnerables; deben desembarcar para asaltar.
+Unidades de apoyo que mantienen a tu infantería en combate. Estas unidades aportan mejoras en la capacidad de recuperación de tus tropas y la organización pero sus valores combativos son limitados.
 
-== Mecanizado
+=== Francotiradores
 
-Infantería embarcada en vehículos blindados de transporte de personal (APC).
+Tiradores de élite capaces de eliminar objetivos de alto valor a gran distancia. Estas unidades tienen valores de ocultación elevados pero son frágiles y tienen una capacidad de ataque limitada.
 
-* *Movimiento:* 10" (embarcado), 6" (desembarcado)
-* *Fortalezas:* Transporte protegido; pueden disparar desde las escotillas.
-* *Debilidades:* Los APC son más débiles que los tanques.
+== Vehículos
 
-== Reconocimiento
+Dentro de vehículos encontramos diferentes categorías como carros de combate, artillería autopropulsada, vehículos de transporte de personal, etc. Los vehículos tienen un perfil de blindaje que determina su resistencia a los disparos desde diferentes ángulos. Son plataformas ofensivas potentes, pero pueden ser costosos, vulnerables al flanqueo, complicados de maniobrar en terreno cerrado y no pueden realizar determinadas acciones.
 
-Unidades rápidas y ligeras diseñadas para localizar al enemigo y obtener información.
+=== Carros de combate
 
-* *Movimiento:* 14"
-* *Fortalezas:* Puede moverse antes de la tirada de iniciativa; revela unidades ocultas.
-* *Debilidades:* Armamento ligero; no puede mantener objetivos en solitario.
+TODO
 
-== Ingenieros
+=== Caza carros
 
-Infantería especialista en demoliciones, construcción de puentes y eliminación de obstáculos.
+TODO
 
-* *Movimiento:* 6"
-* *Fortalezas:* Puede colocar y desactivar minas, destruir obstáculos y cruzar accidentes acuáticos.
-* *Debilidades:* Unidad pequeña; no optimizada para combate directo.
+=== Cañones de asalto
 
-== Artillería remolcada
+TODO
 
-Piezas de campaña que deben ser remolcadas para reposicionarse. Más baratas que la artillería autopropulsada.
+=== Artillería autopropulsada
 
-* *Movimiento:* Velocidad del vehículo tractor (no puede disparar cuando está enjaezada)
-* *Fortalezas:* Buena potencia de fuego a bajo coste.
-* *Debilidades:* Requiere un vehículo tractor separado; lenta en despliegue.
+TODO
 
-== Francotirador
+=== Transportes
 
-Tiradores de élite capaces de eliminar objetivos de alto valor a gran distancia.
+TODO
 
-* *Movimiento:* 6"
-* *Fortalezas:* Ignora las penalizaciones de cobertura; puede seleccionar oficiales y tripulaciones.
-* *Debilidades:* Un único objetivo por activación; frágil.
+=== Vehículos ligeros de reconocimiento
 
-== Médico
+TODO
 
-Unidades de apoyo que mantienen a tu infantería en combate.
+=== Vehículos de apoyo antiaéreo
 
-* *Movimiento:* 6"
-* *Fortalezas:* Puede reagrupar infantería adyacente sin coste durante la Fase de reagrupamiento.
-* *Debilidades:* No puede atacar; desarmado.
+TODO
 
-== Aviación
+== Armas remolcadas
 
-Apoyo aéreo solicitado desde fuera del tablero. Disponible una vez por partida (o más con recursos de inteligencia).
+Piezas de campaña que deben ser remolcadas para reposicionarse tales como armas antitanque, cañones de campaña o morteros pesados. Son más baratas que la artillería autopropulsada pero requieren un vehículo tractor separado, son difícules de maniobrar y sus operadores están expuestos al fuego enemigo.
 
-* *Fortalezas:* Ataca en cualquier punto del tablero; ignora el terreno.
-* *Debilidades:* Puede ser derribado por unidades AA; usos limitados.
+=== Cañones anti-tanque
 
-== Especial
+TODO
 
-Unidades específicas de misión que no encajan en categorías estándar — saboteadores, observadores avanzados, mandos, etc.
+=== Morteros pesados
 
-Las unidades especiales tienen sus propias reglas únicas definidas en su ficha de datos.
+TODO
+
+=== Artilleria
+
+TODO
+
+=== Armas antiaéreas
+
+TODO
+
+== Artillería de campaña
+
+Apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero.
+
+== Apoyo aéreo cercano
+
+Apoyo aéreo solicitado que no se despliega inicialmente en el tablero. La aviación puede ser devastadora contra unidades expuestas, pero su uso es limitado y puede ser derribada por unidades antiaéreas o interceptada por unidades voladoras del defensor.
+
+
+// WARNING: apuntes viejos pendientes de integrar y eliminar
+
+// [cols="1,1,1,1", options="header"]
+// |===
+// |Dirección |Efecto
+// |Frontal |Los disparos desde el arco frontal usan este valor
+// |Lateral |Los disparos desde el flanco usan este valor
+// |Trasero |Los disparos por detrás usan este valor
+// |Expuesto |Tripulación y ópticas — objetivo de armas especiales
+// |===
+
+// * *Movimiento:* 10"
+// * *Fortalezas:* Gran potencia de fuego; difícil de destruir desde el frente.
+// * *Debilidades:* Costoso; mal en terreno cerrado; vulnerable al flanqueo.
+
+// == Artillería
+
+// Piezas pesadas capaces de fuego indirecto. La artillería puede batir objetivos más allá de la línea de visión.
+
+// * *Movimiento:* 3"
+// * *Fortalezas:* Gran alcance y radio de explosión.
+// * *Debilidades:* Baja movilidad; requiere tiempo de despliegue.
+
+// == Motorizado
+
+// Infantería embarcada en camiones o semiorugas para mayor movilidad.
+
+// * *Movimiento:* 12" (embarcado), 6" (desembarcado)
+// * *Fortalezas:* Alta movilidad estratégica.
+// * *Debilidades:* Los vehículos son vulnerables; deben desembarcar para asaltar.
+
+// == Mecanizado
+
+// Infantería embarcada en vehículos blindados de transporte de personal (APC).
+
+// * *Movimiento:* 10" (embarcado), 6" (desembarcado)
+// * *Fortalezas:* Transporte protegido; pueden disparar desde las escotillas.
+// * *Debilidades:* Los APC son más débiles que los tanques.
+
+// == Reconocimiento
+
+// Unidades rápidas y ligeras diseñadas para localizar al enemigo y obtener información.
+
+// * *Movimiento:* 14"
+// * *Fortalezas:* Puede moverse antes de la tirada de iniciativa; revela unidades ocultas.
+// * *Debilidades:* Armamento ligero; no puede mantener objetivos en solitario.
+
+// == Ingenieros
+
+// Infantería especialista en demoliciones, construcción de puentes y eliminación de obstáculos.
+
+// * *Movimiento:* 6"
+// * *Fortalezas:* Puede colocar y desactivar minas, destruir obstáculos y cruzar accidentes acuáticos.
+// * *Debilidades:* Unidad pequeña; no optimizada para combate directo.
+
+// == Artillería remolcada
+
+// Piezas de campaña que deben ser remolcadas para reposicionarse. Más baratas que la artillería autopropulsada.
+
+// * *Movimiento:* Velocidad del vehículo tractor (no puede disparar cuando está enjaezada)
+// * *Fortalezas:* Buena potencia de fuego a bajo coste.
+// * *Debilidades:* Requiere un vehículo tractor separado; lenta en despliegue.
+
+// == Francotirador
+
+// Tiradores de élite capaces de eliminar objetivos de alto valor a gran distancia.
+
+// * *Movimiento:* 6"
+// * *Fortalezas:* Ignora las penalizaciones de cobertura; puede seleccionar oficiales y tripulaciones.
+// * *Debilidades:* Un único objetivo por activación; frágil.
+
+// == Médico
+
+// Unidades de apoyo que mantienen a tu infantería en combate.
+
+// * *Movimiento:* 6"
+// * *Fortalezas:* Puede reagrupar infantería adyacente sin coste durante la Fase de reagrupamiento.
+// * *Debilidades:* No puede atacar; desarmado.
+
+// == Aviación
+
+// Apoyo aéreo solicitado desde fuera del tablero. Disponible una vez por partida (o más con recursos de inteligencia).
+
+// * *Fortalezas:* Ataca en cualquier punto del tablero; ignora el terreno.
+// * *Debilidades:* Puede ser derribado por unidades AA; usos limitados.
+
+// == Especial
+
+// Unidades específicas de misión que no encajan en categorías estándar — saboteadores, observadores avanzados, mandos, etc.
+
+// Las unidades especiales tienen sus propias reglas únicas definidas en su ficha de datos.
 
