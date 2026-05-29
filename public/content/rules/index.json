@@ -82,6 +82,14 @@
         "en": "/content/rules/es/morale.adoc",
         "es": "/content/rules/es/morale.adoc"
       }
+    },
+    {
+      "id": "missions",
+      "titleKey": "missions",
+      "files": {
+        "en": "/content/rules/es/missions.adoc",
+        "es": "/content/rules/es/missions.adoc"
+      }
     }
   ]
 }

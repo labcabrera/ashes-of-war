@@ -1,0 +1,22 @@
+# Organización
+
+La organización de una unidad determina el factor combativo de esta y su capacidad para realizar acciones tales como disparar, cargar o maniobrar.
+
+Unidades bien entrenadas y experimentadas mantendrán niveles de organización más altos, mientras que unidades con poca experiencia o que hayan sufrido bajas importantes verán su organización reducida.
+
+Hay varios aspectos que afectan negativamente a la organización de la unidad tales como:
+
+- Realizar acciones en situación de combate o cambios de formación
+- Bajas en la unidad
+- Bajas en unidades cercanas
+- Ser objetivo de fuego de supresión o artillería
+- Rotura de la cadena de mando
+
+La organización se podrá ir recuperando en las fases de mantenimiento en función de las capacidades de los oficiales y suboficiales de la unidad, experiencia y otros valores establecidos del perfil de la unidad.
+
+## TODO - Consideraciones de diseño
+
+* Considerar la organización a nivel de escuadra o sección.
+* Representar la organización de la unidad de 1-6 con un dado azul al lado de cada unidad.
+* Tablas de bonus de organización a diferentes tipos de acciones.
+* Definir modo de recuperación de organización en función de la experiencia y otros factores (por ejemplo +D2, +D3+1, +D6).

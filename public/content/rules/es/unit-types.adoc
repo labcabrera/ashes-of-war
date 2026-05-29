@@ -1,5 +1,10 @@
 = Tipos de unidad
 
+* link:/rules/unit-types/infantry[Infantería]: el núcleo de cualquier ejército. Las escuadras de infantería son versátiles, económicas y eficaces en la captura de objetivos. La infantería funciona mejor en cobertura, edificios, posiciones preparadas y terreno cerrado. Puede asaltar, atrincherarse, proteger vehículos y mantener terreno con más eficiencia que las unidades blindadas.
+
+* link:/rules/unit-types/tank[Vehículos]: dentro de vehículos encontramos diferentes categorías como carros de combate, artillería autopropulsada, vehículos de transporte de personal, etc. Los vehículos tienen un perfil de blindaje que determina su resistencia a los disparos desde diferentes ángulos. Son plataformas ofensivas potentes, pero pueden ser costosos, vulnerables al flanqueo, complicados de maniobrar en terreno cerrado y no pueden realizar determinadas acciones.
+
+
 Ashes of War incluye doce tipos de unidad distintos, cada uno con capacidades y limitaciones únicas.
 
 == Infantería

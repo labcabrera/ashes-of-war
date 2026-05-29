@@ -24,7 +24,6 @@ La compañía de infantería de finales de guerra, representada por `KStN 131n` 
 |1 |Mando de compañía (_Gruppe Führer_) |Kompaniefüher (1 MPi, 1 Pistola); Kompanietrupp: jefe de tropas (1 MPi), sanitario (en bicicleta), 4 mensajeros/enlaces (Kar.), 1 radiotelegrafista con 4 radios de campaña, 1 cuidador de caballos. _Total: 1 oficial, 3 suboficiales, 8 soldados._
 |3 |Pelotón de granaderos (_Zug_) |Zugführer (1 MPi, 1 Pistola) con carro de munición. Tres escuadras (_Gruppen_): cada una con Gruppenführer (1 MPi), 7 granaderos y tiradores de MG (6 Kar., 1 MPi, 1 Pistola) y 1 ametralladora ligera (l.M.G.). _Por pelotón: 1 oficial, 3 suboficiales, 29 soldados, 4 l.M.G. (1 como reserva)._
 |1 |Sección de ametralladoras pesadas (_s.M.G.-Gruppe_) |Gruppenführer (1 MPi), mensajero (Kar.), ayudante de armero (Kar.); 2 equipos de ametralladora pesada (_s.M.G._): cada uno con jefe de pieza (1 MPi), tirador (1 Pistola), 3 sirvientes (Kar.) y carro de munición con caballo. _Total: 3 suboficiales, 15 soldados, 2 s.M.G._
-|1 |Tren de abastecimiento (_Troß_) |Hauptfeldwebel (en bicicleta), suboficial de material, cocinero de campaña, escribiente, zapatero, sastre, conductores; cocina de campaña de 4 caballos (Hf.11 o Hf.13), carros de víveres y munición. _Total: 4 suboficiales, 9 soldados, 1 l.M.G._
 |===
 
 *Plantilla total (sin Sperrstellen):* 2 oficiales, 21 suboficiales, 115 soldados — 96 Karabiner, 22 Pistolas, 28 MPi, 13 l.M.G., 2 s.M.G.
@@ -32,8 +31,7 @@ La compañía de infantería de finales de guerra, representada por `KStN 131n` 
 === Equivalencia en peanas (escala 1:100)
 
 A escala 1:100 cada peana de sección agrupa 5 figuras con armamento mixto.
-Los jefes se representan en peanas independientes de 1-2 figuras.
-El tren de abastecimiento (_Troß_) no se representa en la mesa de juego.
+Los jefes se representan en peanas independientes de 1-3 figuras.
 
 |===
 |Elemento |Peanas |Figuras por peana
