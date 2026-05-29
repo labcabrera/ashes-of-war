@@ -1,16 +1,39 @@
 = Turnos
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
-WARNING: Considerar sistemas de activación simultánea.
+// WARNING: Considerar sistemas de activación simultánea.
 
-WARNING: Considerar cambio de fases por activación completa de una unidad (mover, hacer acciones, disparar, etc) en lugar de fases globales para todas las unidades.
+WARNING: Considerar modelo sin turnos fijos para que la activación de ambos jugadores sea simultánea.
 
-Cada turno representa una secuencia de 10 sg de combate.
+Cada turno representa una secuencia aproximada de 30 segundos de combate.
 
-* Fase de moral (comprobar el estado de cada unidad afectada por el combate)
-* Fase de acciones (declarar órdenes y acciones como cuerpo tierra, comunicación entre unidades para detectar unidades o solicitar apoyo de artillería)
-* Fase de movimiento
-* Fase de disparo
+El turno se divide en varias fases:
 
-_Nota: como muchas unidades pueden tener diferentes interacciones con puntos de acción complejas de llevar podría estudiarse un sistema de activación simultáneo unidad por unidad en el que cuando seleccionas una unidad realiza todas las acciones (moral, acciones, movimiento, etc) hasta realizar la activación de la siguiente unidad._
+* Fase de organización
+//  (comprobar el estado de cada unidad afectada por el combate)
+* Fase de activación
+//  (declarar órdenes y acciones como cuerpo tierra, comunicación entre unidades para detectar unidades o solicitar apoyo de artillería)
+* Fase de recuperación
 
-Jugando a una escala 1:100 en una mesa de 2x2 metros tendremos que las distancias de bordes son 200 metros. A estas distancias no aplicarían las tablas de penetración en función de la distancia ya que estas suelen escalar para distancias de tiro mucho mayores (penetraciones a 1km por ejemplo). No obstante, y aunque la mayoría de cañones que no estuvieran obsoletos a esas distancias penetraban prácticamente todo, la idea de perforar en función de la distancia parece interesante de jugar y representar las diferentes perforaciones y blindajes de cada carro.
+NOTE: Como muchas unidades pueden tener diferentes interacciones con puntos de acción complejas de llevar podría estudiarse un sistema de activación simultáneo unidad por unidad en el que cuando seleccionas una unidad realiza todas las acciones (moral, acciones, movimiento, etc) hasta realizar la activación de la siguiente unidad.
+
+== Fase de organización
+
+En esta fase realizaremos las acciones de recuperación de organización, declaración de acciones de comandancia y otras acciones de mantenimiento de las unidades.
+
+Los oficiales que puedan realizar acciones de mando aplicarán las bonificaciones de mando a las unidades bajo su control.
+
+== Fase de activación
+
+Esta es la fase principal donde iremos, unidad por unidad, declarando las acciones que va a realizar cada unidad presente durante la partida.
+
+Para agilizar la partida, en lugar de tener una fase de movimiento, una fase de disparo, etc, realizaremos todas las acciones de una unidad durante su activación. Es decir, cuando seleccionamos una unidad, esta realizará todas las acciones que pueda realizar (mover, disparar, etc) y luego pasaremos a la siguiente unidad.
+
+== Fase de recuperación
+
+TODO: moral y demás
+
+// En esta fase se aplicarán los efectos de las acciones realizadas durante la fase de activación, como el daño recibido, la supresión, etc. También se podrán realizar acciones de recuperación como reagruparse o reorganizarse para recuperar moral o reducir los efectos de la supresión.
+

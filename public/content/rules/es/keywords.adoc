@@ -1,5 +1,7 @@
 # Keywords
-
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
 WARNING: Borrador en desarrollo.
 
@@ -31,3 +33,17 @@ _Representa la naturaleza de las armas de área como morteros, artillería o lan
 Las armas con esta palabra afectarán a las unidades dentro de un área determinada alrededor del punto de impacto. El radio de esta área se determinará por el valor de X en pulgadas.
 
 Tanto los impactos con éxito como los fallidos deberán resolver el punto de impacto para calcular las unidades afectadas por la explosicón.
+
+## Radio
+
+Las unidades con esta palabra clave pueden comunicarse a distancia con otras unidades aliadas para coordinar ataques, solicitar apoyo o compartir información sobre el campo de batalla. Estas unidades pueden ser oficiales de mando, operadores de radio o cualquier unidad equipada con un dispositivo de comunicación. Esto mejora la capacidad de mando y organización al no tener que depender de la línea de visión directa para transmitir órdenes o información entre unidades.
+
+Alguna características del juego como por ejemplo solicitar apoyo de artillería requieren que la unidad tenga esta palabra clave para poder realizar esa acción.
+
+## Ambush
+
+TODO
+
+## Hidden X
+
+TODO

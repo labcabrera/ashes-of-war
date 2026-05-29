@@ -1,29 +1,89 @@
 = Movimiento
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
 WARNING: Borrador en desarrollo.
 
-== Valorese de movimiento
+== Velocidades de movimiento
 
-Cada unidad tiene definido en su perfil los siguientes valores de movimiento:
+La mayoría de unidades pueden elegir entre diferentes velocidades de movimiento durante su activación.
 
-[cols="1,3"]
+// Durante la partida las unidades podrán moverse a tres diferentes velocidades:
+
+// - Tactical: 
+// - Cruise: velocidad superior a la táctica que aún permite realizar determinadas acciones de combate con determinadas limitaciones.
+// - Dash: velocidad máxima que no permite realizar ninguna acción de combate y aumenta la vulnerabilidad al fuego enemigo y el riesgo de problemas mecánicos y pérdida de organización.
+
+// En cada perfil tendremos indicado el valor de movimiento en pulgadas para cada uno de los tipos de terreno:
+
+=== Tactical
+
+Velocidad a la que una unidad puede moverse realizando acciones como disparar, asaltar, etc. Esta es la velocidad a la que se moverán normalmente las unidades.
+
+=== Cruise
+
+Velocidad superior a la táctica que aún permite realizar determinadas acciones de combate con determinadas limitaciones. Esta es la velocidad con la que realizaremos maniobras de posicionamiento fuera del rango de disparo enemigo o para realizar asaltos a posiciones enemigas.
+
+=== Dash
+
+Velocidad máxima que no permite realizar ninguna acción de combate y aumenta la vulnerabilidad al fuego enemigo y el riesgo de problemas mecánicos y pérdida de organización. Esta velocidad se utiliza para maniobrar, asaltar o correr en situaciones de emergencia. Esta acción tendrá un impacto negativo en la organización de la unidad y en determinados vehículos puede suponer un riesgo de avería.
+
+== Perfiles de terreno
+
+El terreno del campo de batalla se clasifica en los siguientes tipos.
+
+=== Road
+
+Carreteras y lugares pavimentados con buenas condiciones de movilidad.
+
+
+=== Cross-Country
+
+Terreno abierto sin caminos definidos, como campos, praderas o áreas rurales.
+
+=== Rough
+
+Terreno accidentado o difícil, como bosques densos, colinas, escombros, cráteres o cualquier otro elemento que complique la movilidad.
+
+=== Impassable
+
+Terreno que no puede ser atravesado por unidades salvo excepciones muy puntuales, como ríos profundos o acantilados.
+
+== Perfiles de movimiento
+
+Cada unidad tendrá definido el su perfil los diferentes valores de movimiento expresados en pulgadas para cada tipo de terreno. Por ejemplo, un tanque puede moverse a su velocidad táctica por carretera pero a una velocidad reducida por terreno accidentado.
+
+De este modo en el perfil de una unidad tendremos:
+
+[cols="1,1,1,1", options="header"]
+|===
+|Velocidad |Road |CC |Rough
+|Tactical |8' |6' |3'
+|Cruise |16' |12' |6'
+|Dash |24' |18' |9'
 |===
 
-a|*Tactico*
-|Velocidad a la que una unidad puede moverse realizando acciones como disparar, asaltar, etc. Esta es la velocidad a la que se moverán normalmente las unidades.
 
-a|*Off-road*
-|Velocidad a la que un vehículo puede moverse por terreno difícil o sin carretera. Esta velocidad se aplica a vehículos como tanques o artillería que pueden tener dificultades para moverse por terreno accidentado.
 
-a|*Crucero*
-|Velocidad de movimiento a la que una unidad puede moverse sin realizar ninguna acción de forma segura. Esta velocidad se utiliza para maniobrar, asaltar o correr.
+// [cols="1,3"]
+// |===
 
-a|*Apresurado*
-|Velocidad máxima a la que una unidad puede moverse sin realizar ninguna acción pero con una mayor vulnerabilidad al fuego enemigo. Esta velocidad se utiliza para maniobrar, asaltar o correr en situaciones de emergencia. Esta acción tendrá un impacto negativo en la organización de la unidad y en determinados vehículos puede suponer un riesgo de avería.
+// a|*Tactical*
+// |Velocidad a la que una unidad puede moverse realizando acciones como disparar, asaltar, etc. Esta es la velocidad a la que se moverán normalmente las unidades.
 
-|===
+// a|*Off-road*
+// |Velocidad a la que un vehículo puede moverse por terreno difícil o sin carretera. Esta velocidad se aplica a vehículos como tanques o artillería que pueden tener dificultades para moverse por terreno accidentado.
 
-== Keywords
+// a|*Cruise*
+// |Velocidad de movimiento a la que una unidad puede moverse sin realizar ninguna acción de forma segura. Esta velocidad se utiliza para maniobrar, asaltar o correr.
+
+// a|*Apresurado*
+// |Velocidad máxima a la que una unidad puede moverse sin realizar ninguna acción pero con una mayor vulnerabilidad al fuego enemigo. Esta velocidad se utiliza para maniobrar, asaltar o correr en situaciones de emergencia. Esta acción tendrá un impacto negativo en la organización de la unidad y en determinados vehículos puede suponer un riesgo de avería.
+
+// |===
+
+== Keywords que afectal al movimiento
 
 * *Unreliable*: aumenta el riesgo de avería en vehículos al moverse a velocidad de crucero o apresurada.
 
@@ -32,26 +92,30 @@ a|*Apresurado*
 * *Off-road*: el vehículo puede moverse a su velocidad off-road sin penalización por terreno difícil.
 
 
-
-
-
-
 // Cada unidad tendrá tres perfiles de movimiento:
 // Movimiento normal en el que pueden realizar acciones sin problemas (excepto los tanques y unidades que necesiten estar estáticas para disparar como los cañones AT)
 // Movimiento apresurado: velocidad de la infantería para realizar disparos con baja precisión para realizar asaltos y maniobrar.
 // Correr: a esta velocidad las unidades sólo podrán correr lo más rápido que puedan sin realizar ninguna otra acción y serán más vulnerables al fuego recibido al no contar con coberturas posicionales.
 
-=== Ejemplos de velocidades de movimiento reales
+== Cálculos de la velocidad de movimiento
+
+Los valores de movimiento generalmente se obtendrán a partir de una conversión de la velocidad real aplicando un coeficiente multiplicativo para adaptar las velocidades a la escala de juego en pulgadas.
+
+== Ejemplos de velocidades de movimiento reales
+
+Tabla orientativa de velocidades reales de movimiento en combate para diferentes unidades en Km/h.
 
 [cols="1,1,1,1", options="header"]
 |===
 |Unidad |Velocidad máxima teórica (carretera) |Velocidad real promedio en combate |Aproximación cm por turno
 |Humano andando |4 km/h |2 - 3 km/h |10
 |Humano trote |8 km/h |3 - 5 km/h |20
-|Spring |15 km/h |5 - 8 km/h |25-30
+|Humano esprintando |15 km/h |5 - 8 km/h |25-30
 |Tiger I |38 km/h |15 - 20 km/h |30
 |Tiger II |41,5 km/h |12 - 18 km/h |20
 |Panzer IV |40 km/h |20 - 25 km/h |35
 |T-34 |55 km/h |25 - 30 km/h |40
 |IS-2 |37 km/h |18 - 25 km/h |22
 |===
+
+WARNING: La infanteria moviendose a velocidad dash deberia quedar agotada y requerir de cierta recuperación para volver a estar operativa. Esto podemos representarlo con el nivel de orgaización de la unidad.

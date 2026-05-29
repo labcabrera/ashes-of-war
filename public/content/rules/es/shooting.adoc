@@ -169,7 +169,7 @@ TODO
 Dependiendo del tipo de arma disparada y el objetivo los impactos se resolverán de forma diferente.
 
 
-WARNING: notas antiguas pendientes de mover de seccion
+WARNING: notas antiguas pendientes de mover a las secciones correspondientes y eliminar.
 
 El resultado de los impactos dependenderá del tipo de disparo.
 

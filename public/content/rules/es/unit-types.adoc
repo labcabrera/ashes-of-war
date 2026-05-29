@@ -25,11 +25,11 @@ Cada ejército tendrá su propia estructura de mando y organización en la que q
 
 La infantería estándar, equipada con fusiles. Son la base de cualquier fuerza terrestre y pueden realizar una amplia variedad de tareas, desde asaltar posiciones hasta mantener el terreno.
 
-=== Tropas de choque (SMG)
+=== Infantería de asalto (SMG)
 
 _Submachine Gun Troops_
 
-Infantería equipada con subfusiles, granadas o armas anti-carro. Estasa unidades tienen altas cadencias de fuego pero escaso rango como la MP40. Son especialmente eficaces en combate urbano, asalto de edificios y terreno cerrado, pero pierden eficacia a medida que aumenta la distancia.
+Infantería equipada con subfusiles, granadas, armas anti-carro y otro equipamiento efectivo en el combate cercano. Habitualmente estas unidades tendrán altas cadencias de fuego pero escaso rango como la MP40. Son especialmente eficaces en combate urbano, asalto de edificios y terreno cerrado, pero pierden eficacia a medida que aumenta la distancia.
 
 === Escuadras de ametralladoras pesadas (HMG)
 
@@ -40,6 +40,10 @@ Infantería equipada con ametralladoras pesadas como la MG42. Estas unidades pro
 === Ingenieros
 
 Infantería especialista en demoliciones, construcción de puentes y eliminación de obstáculos. Pueden colocar y desactivar minas, destruir obstáculos y cruzar accidentes acuáticos. Si bien estas unidades tienen capacidad combativa, no están optimizadas para el combate directo y su función principal es el apoyo a otras unidades.
+
+=== Unidades de morteros ligeros
+
+Infantería equipada con morteros ligeros de 50mm o 60mm. Estas unidades proporcionan apoyo de fuego indirecto a corta distancia, ideal para suprimir posiciones enemigas o atacar objetivos en cobertura. Son vulnerables al fuego directo y a la infantería de asalto, por lo que deben ser protegidos adecuadamente.
 
 === Médicos de campaña
 
@@ -55,31 +59,41 @@ Dentro de vehículos encontramos diferentes categorías como carros de combate, 
 
 === Carros de combate
 
-TODO
+Los carros de combate son la punta de lanza de cualquier ofensiva blindada. Combinan potencia de fuego, blindaje y movilidad en proporciones variables según el modelo y su función táctica. Los carros pesados como el Tiger I o el IS-2 dominan el campo de batalla con su grueso blindaje y sus potentes cañones, pero son lentos y costosos. Los medios como el Panzer IV, el T-34 o el M4 Sherman ofrecen un equilibrio versátil entre capacidad ofensiva y movilidad. Los ligeros como el Panzer II son más económicos, con capacidades anti-material limitadas pero excelentes en movilidad y supresión de la infantería enemiga.
 
 === Caza carros
 
-TODO
+Los cazacarros son vehículos optimizados para la destrucción de blindados enemigos. A diferencia de los carros de combate convencionales, suelen carecer de torreta giratoria, lo que limita su campo de tiro pero reduce su silueta y coste de producción. Modelos como el Hetzer, el Marder III o el M10 Wolverine son exponentes representativos. Son especialmente eficaces en posiciones defensivas o emboscadas, pero su escasa protección lateral y trasera los hace vulnerables en combate de movimiento o cuando son flanqueados por infantería.
 
 === Cañones de asalto
 
-TODO
+Los cañones de asalto son vehículos de apoyo directo a la infantería. Suelen estar equipados con cañones de baja velocidad y gran capacidad de fragmentación, ideales para dar fuego de apoyo a la infantería y destruir objetivos blandos como fortificaciones, posiciones preparadas y concentraciones de infantería. Modelos como los iniciales StuG III o el SU-76 son ejemplos típicos. Son efectivos en combate urbano y terreno cerrado, pero su falta de torreta los hace vulnerables a objetivos móviles y a ataques desde ángulos inesperados.
+
+TIP: En ocasiones los roles de cazacarros y cañones de asalto pueden solaparse como en modelos como el ISU-152 que con el cañón de 152mm puede destruir tanto carros como para el asalto de posiciones fortificadas y áreas urbanas.
 
 === Artillería autopropulsada
 
-TODO
+La artillería autopropulsada monta obuses o cañones pesados sobre chasis blindados, combinando la potencia de fuego de la artillería convencional con mayor movilidad táctica. Piezas como la Wespe, la Hummel o el M7 Priest proporcionan apoyo de fuego indirecto de largo alcance. Su blindaje es generalmente ligero y no están diseñadas para el combate directo.
+
+Estas unidades pueden estar desplegadas sobre el tablero representando el apoyo directo de fuego tenso o estar fuera de la mesa representando el apoyo de fuego indirecto. En este segundo caso se aplicarán las reglas de artillería y disparo indirecto.
+
+TIP: En algunas ocasiones al utilizar una mesa muy grande podremos contar con las capacidades de fuego indirecto de las unidades desplegadas en mesa aunque para aplicar este modo de disparo tendrán unos rangos mínimos de ataque indirecto elevados.
 
 === Transportes
 
-TODO
+Los transportes permiten mover infantería de forma rápida y relativamente segura por el campo de batalla. Los semiorugas como el Sd.Kfz. 251 o el M3 Half-Track protegen a las tropas embarcadas del fuego de armas ligeras, pero la infantería debe desembarcar antes de poder asaltar posiciones enemigas. Los camiones de ruedas son más rápidos y económicos pero ofrecen muy poca protección. Un transporte destruido puede dejar a la infantería expuesta en campo abierto, por lo que su uso requiere coordinación con unidades de apoyo.
 
 === Vehículos ligeros de reconocimiento
 
-TODO
+Vehículos rápidos y de bajo perfil diseñados para explorar el terreno, localizar posiciones enemigas y cubrir los flancos de la línea de avance. Su armamento ligero y su escaso blindaje no les permiten enfrentarse a unidades acorazadas. Suelen aportar ventajas de reconomiento, comunicación con los mandos y centros de cálculos de tiro además de ofrecer buena capacidad de movimiento y capacidades anti infantería.
+
+Ejemplos representativos son el Sd.Kfz. 222, el M3A1 Scout Car o el Bren Carrier.
 
 === Vehículos de apoyo antiaéreo
 
-TODO
+Plataformas armadas con cañones o ametralladoras de alta cadencia de tiro diseñadas para interceptar aeronaves enemigas y proteger las columnas en movimiento. Sistemas como el Wirbelwind, el Flakpanzer IV o el M16 MGMC son igualmente eficaces contra infantería en campo abierto y vehículos ligeros dada su alta cadencia de fuego y el calibre de sus armas.
+
+Generalmente estas unidades no están diseñadas para el combate directo y tienen niveles de protección limitados, por lo que su uso requiere coordinación con otras unidades para evitar ser flanqueados o atacados por unidades acorazadas mientras pueden ser emplazadas cerca de unidades como posiciones defensivas con artillería remolcada o cañones de asalto.
 
 == link:/rules/unit-types/towed-weapons[Armas remolcadas]
 
@@ -87,28 +101,29 @@ Piezas de campaña que deben ser remolcadas para reposicionarse tales como armas
 
 === Cañones anti-tanque
 
-TODO
+Los cañones anticarro remolcados como el Pak 40, el 6-pounder británico o el ZiS-3 soviético son las principales armas anticarro desplegadas por la infantería. Tienen excelentes capacidades de penetración y son relativamente baratos, pero su movilidad es mínima una vez emplazados. Son más eficaces en posiciones defensivas fijas. Reposicionarlos durante el combate es lento y arriesgado, ya que los operadores quedan completamente expuestos al fuego enemigo durante la maniobra.
 
 === Morteros pesados
 
-TODO
+Los morteros pesados como el 81mm alemán, el 82mm soviético o el 4.2" estadounidense proporcionan fuego indirecto de apoyo cercano a la infantería. Su trayectoria en parábola les permite batir posiciones enemigas en cobertura defiladas a otras armas. Son lentos de desplegar y relocalizar, y requieren observadores avanzados para ser efectivos a larga distancia, pero su capacidad para saturar una zona con proyectiles de fragmentación los convierte en un arma de supresión formidable para el combate cercano.
 
-=== Artilleria
+=== Artillería
 
-TODO
+Los cañones y obuses de campaña como el leFH 18 de 105mm, el M101 estadounidense o el obús M-30 soviético de 122mm proporcionan fuego indirecto de largo alcance y alta potencia destructiva. Estas piezas requieren un vehículo tractor para moverse y tiempo de emplazamiento antes de abrir fuego. Son eficaces contra posiciones fortificadas, concentraciones de infantería y objetivos de área, pero son especialmente vulnerables al fuego de contrabatería y a los ataques aéreos.
+
+Al igual que la artilerría autopropulsada pueden desplegarse tanto dentro del tablero de juego como fuera de él representando el apoyo de fuego indirecto.
 
 === Armas antiaéreas
 
-TODO
+Los sistemas antiaéreos remolcados como el Bofors 40mm, el 20mm Flak 38 alemán o el 37mm M1 estadounidense están diseñados para derribar aeronaves enemigas en vuelo rasante o picado, pero también resultan eficaces contra vehículos ligeros e infantería en campo abierto.
 
 == Artillería de apoyo
 
-Apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero.
+Apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero que no pertenece a las categorías de artillería anteriores. Apoyo de artillería naval durante una operación próxima a la costa puede ser un ejemplo de este tipo de artillería.
 
 == Apoyo aéreo cercano
 
-Apoyo aéreo solicitado que no se despliega inicialmente en el tablero. La aviación puede ser devastadora contra unidades expuestas, pero su uso es limitado y puede ser derribada por unidades antiaéreas o interceptada por unidades voladoras del defensor.
-
+Apoyo aéreo solicitado que no se despliega inicialmente en el tablero. La aviación puede ser devastadora contra unidades expuestas y es una amenaza contra la mayor parte de los vehículos blindados, pero su uso es limitado y puede ser derribada por unidades antiaéreas o interceptada por otras unidades voladoras.
 
 // WARNING: apuntes viejos pendientes de integrar y eliminar
 
