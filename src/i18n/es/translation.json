@@ -21,25 +21,25 @@
     "features": [
       {
         "title": "Variedad de unidades",
-        "text": "Dentro del juego encontraremos un gran número de unidades de infantería, vehículos, artillería y apoyo logístico, cada una con su propio perfil de juego y referencias históricas."
+        "text": "Gran número de tipos de unidades tales como infantería, vehículos, artillería, aviación que ofrecen un alto nivel de variedad táctica."
       },
       {
         "title": "Datos listos para jugar",
-        "text": "Los catálogos de unidades y armas conectan sabor histórico con perfiles utilizables directamente durante la partida."
+        "text": "Perfiles históricos diseñados para combinar autenticidad y jugabilidad. Los datos de las unidades se han adaptado a partir de los perfiles reales de las unidades consultando fuentes históricas para ofrecer una experiencia de juego equilibrada y veraz."
       },
       {
         "title": "Partidas y campañas",
-        "text": "El sistema de juego está diseñado para jugar partidas independientes como para jugar una campaña donde cada comandante tiene que gestionar astutamente sus recursos."
+        "text": "El sistema de juego está diseñado para jugar partidas independientes como para jugar una campaña donde cada comandante tiene que gestionar prudentemente como gestiona sus recursos."
       }
     ],
     "indie": {
       "eyebrow": "Juego independiente de estrategia",
-      "title": "Diseñado en abierto, para la mesa",
-      "text": "Ashes of War no es un producto comercial. Es un proyecto abierto en desarrollo para jugadores que disfrutan de los wargames y la historia de la Segunda Guerra Mundial.",
+      "title": "Juego Abierto",
+      "text": "Ashes of War no es un producto comercial. Es un proyecto abierto aún en estado de desarrollo para todo jugador que disfrute de los wargames y la historia de este complejo conficto.",
       "sourceAction": "Ver repositorio"
     },
     "next": {
-      "title": "Crea tu ejército, busca un amigo y prepara la mesa de juego",
+      "title": "Crea tu ejército, júntate con un amigo y comienza a tirar dados",
       "text": "Consulta el reglamento, compara vehículos y armas, y después esboza una estructura de ejército para tu próximo escenario.",
       "armyBuilder": "Abrir constructor",
       "wiki": "Leer wiki histórica"

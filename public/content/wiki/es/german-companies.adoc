@@ -28,52 +28,80 @@ La compañía de infantería de finales de guerra, representada por `KStN 131n` 
 
 *Plantilla total (sin Sperrstellen):* 2 oficiales, 21 suboficiales, 115 soldados — 96 Karabiner, 22 Pistolas, 28 MPi, 13 l.M.G., 2 s.M.G.
 
-=== Equivalencia en peanas (escala 1:100)
+=== Equivalencia en peanas
 
 A escala 1:100 cada peana de sección agrupa 5 figuras con armamento mixto.
 Los jefes se representan en peanas independientes de 1-3 figuras.
 
 |===
 |Elemento |Peanas |Figuras por peana
-|Mando de compañía |1× Jefe de compañía |Oficial (MPi) + ordenanza (Kar.)
-|Pelotón de granaderos (×3) |1× Jefe de pelotón |Suboficial (MPi) + enlace (Kar.)
-|Pelotón de granaderos (×3) |3× Sección de fusileros _(por escuadra)_ |Gruppenführer (SMG) + 3 fusileros (Kar.) + 1 fusilero/SMG
-|Pelotón de granaderos (×3) |3× Sección de ametralladora ligera _(por escuadra)_ |1 l.MG + 1 sirviente + 3 fusileros (Kar.)
-|Sección de aMG pesadas |1× Jefe de sección |Suboficial (MPi) + mensajero (Kar.)
-|Sección de aMG pesadas |2× Ametralladora pesada |1 s.MG + 1 tirador (Pistola) + 3 sirvientes (Kar.)
+
+|Mando de compañía
+|2
+a|
+- Peana de Oficial
+- Peana de Oficial secundario
+
+|Pelotón de granaderos
+|7
+a|
+- Peana de suboficial
+- 3 peanas de fusileros
+- 3 peanas de HMG
+
+|Pelotón de granaderos
+|7
+a|
+- Peana de suboficial
+- 3 peanas de fusileros
+- 3 peanas de HMG
+
+|Pelotón de granaderos
+|7
+a|
+- Peana de suboficial
+- 3 peanas de fusileros
+- 3 peanas de HMG
+
+|Sección de HMG
+|3
+a|
+- Peana de suboficial
+- 2 peanas de HMG
+
 |===
 
-La compañía completa requiere aproximadamente *23 peanas de combate*:
-1 mando de compañía, 3 mandos de pelotón, 9 peanas de fusileros, 9 peanas de l.MG, 1 mando de sección pesada y 2 peanas de s.MG.
-Esto representa unos 110-115 combatientes, coherente con la dotación teórica de la KStN 131n.
+WARNING: Incluir diferentes tipos de compañias (motorizada, mecanizada, etc.) y referencias a otras KStN. Pendiente de revisión y ampliación.
 
-=== Pelotón de granaderos
+// === Pelotón de granaderos
 
-El pelotón articulaba el combate inmediato de la compañía. La distribución exacta de fusiles, subfusiles, granadas y ametralladoras ligeras dependía de la versión de la plantilla y del material realmente recibido.
+// El pelotón articulaba el combate inmediato de la compañía. La distribución exacta de fusiles, subfusiles, granadas y ametralladoras ligeras dependía de la versión de la plantilla y del material realmente recibido.
 
-* Mando de pelotón para transmitir órdenes y enlazar con la compañía.
-* Escuadras de granaderos construidas alrededor de su ametralladora ligera.
-* Capacidad anticarro próxima basada progresivamente en armas desechables o lanzacohetes al final de la guerra.
+// * Mando de pelotón para transmitir órdenes y enlazar con la compañía.
+// * Escuadras de granaderos construidas alrededor de su ametralladora ligera.
+// * Capacidad anticarro próxima basada progresivamente en armas desechables o lanzacohetes al final de la guerra.
 
-== Compañía Panzergrenadier
+// == Compañía Panzergrenadier
 
-Los *Panzergrenadiere* combatían con las formaciones acorazadas. Su compañía podía ser transportada en camiones o, en las unidades mejor dotadas, en semiorugas blindados; esa diferencia cambia la movilidad y la protección, no su papel básico de infantería de apoyo a carros.
+// Los *Panzergrenadiere* combatían con las formaciones acorazadas. Su compañía podía ser transportada en camiones o, en las unidades mejor dotadas, en semiorugas blindados; esa diferencia cambia la movilidad y la protección, no su papel básico de infantería de apoyo a carros.
 
-|===
-|Elemento |Compañía transportada |Compañía blindada
-|Mando |Mando y enlaces móviles |Mando embarcado y radio
-|Maniobra |Pelotones de infantería en camión |Pelotones embarcados en semiorugas
-|Apoyo |Armas automáticas y armas pesadas de compañía |Fuego desde vehículos y armas de compañía
-|Misión típica |Marcha rápida y combate desmontado |Acompañar a los carros bajo mayor protección
-|===
+// |===
+// |Elemento |Compañía transportada |Compañía blindada
+// |Mando |Mando y enlaces móviles |Mando embarcado y radio
+// |Maniobra |Pelotones de infantería en camión |Pelotones embarcados en semiorugas
+// |Apoyo |Armas automáticas y armas pesadas de compañía |Fuego desde vehículos y armas de compañía
+// |Misión típica |Marcha rápida y combate desmontado |Acompañar a los carros bajo mayor protección
+// |===
 
-== Aplicación en Ashes of War
+// == Aplicación en Ashes of War
 
-* Una compañía de granaderos ofrece varios pelotones de fusileros y apoyo de ametralladora para defender o avanzar con cautela.
-* Una compañía Panzergrenadier justifica transporte motorizado o mecanizado y coordinación con carros.
-* Una lista histórica debe indicar año y tipo de transporte; no toda división Panzer dispuso de suficientes semiorugas para todas sus compañías.
+// * Una compañía de granaderos ofrece varios pelotones de fusileros y apoyo de ametralladora para defender o avanzar con cautela.
+// * Una compañía Panzergrenadier justifica transporte motorizado o mecanizado y coordinación con carros.
+// * Una lista histórica debe indicar año y tipo de transporte; no toda división Panzer dispuso de suficientes semiorugas para todas sus compañías.
 
 == Referencias
 
-* War Department, *Handbook on German Military Forces*, `TM-E 30-451`, 15 de marzo de 1945: link:https://openlibrary.org/works/OL62568W/Handbook_on_German_Military_Forces[registro y copias digitales].
+WARNING: TODO: estructurar referencias por tipo (libros, documentos, etc.) y añadir más fuentes.
+
+* War Department, *Handbook on German Military Forces*, _TM-E 30-451_, 15 de marzo de 1945: link:https://openlibrary.org/works/OL62568W/Handbook_on_German_Military_Forces[registro y copias digitales].
 * *Kriegstärkenachweisung 131n, Infanterie-Kompanie*, 1 de mayo de 1944: link:https://www.militaryresearch.org/Kstn%20131n%20Inf%20Co.pdf[reproducción de la tabla].

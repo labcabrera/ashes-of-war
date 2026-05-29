@@ -7,51 +7,53 @@
 :lang: es
 :revdate: 2026-05-26
 
-== Cómo leer esta comparación
+WARNING: Este documento está en desarrollo. Quiero establecer las diferentes escalas organizativas de los principales ejercitos (cuerpo, division, regimiento, compañias, etc.) para ofrecer una información de referencia.
 
-Esta entrada resume las cadenas organizativas terrestres de Alemania y la Unión Soviética durante la Segunda Guerra Mundial, especialmente en 1944-1945. Son estructuras de referencia: el año, el tipo de formación, las pérdidas y las unidades agregadas alteraban la composición real.
+// == Cómo leer esta comparación
 
-== De mando operacional a unidad táctica
+// Esta entrada resume las cadenas organizativas terrestres de Alemania y la Unión Soviética durante la Segunda Guerra Mundial, especialmente en 1944-1945. Son estructuras de referencia: el año, el tipo de formación, las pérdidas y las unidades agregadas alteraban la composición real.
 
-|===
-|Escalón aproximado |Ejército alemán, Heer |Ejército Rojo soviético
-|Dirección superior de campaña |Grupo de ejércitos (`Heeresgruppe`) |Frente
-|Gran formación operacional |Ejército (`Armee`) |Ejército de armas combinadas o ejército de carros
-|Agrupación de formaciones |Cuerpo (`Armeekorps`) |Cuerpo de fusileros, de carros o mecanizado
-|Formación principal |División de infantería o Panzer |División de fusileros o cuerpo móvil compuesto por brigadas
-|Agrupación táctica |Regimiento |Regimiento de fusileros o brigada de carros
-|Unidad táctica |Batallón / `Abteilung` |Batallón
-|Unidad de juego habitual |Compañía (`Kompanie`) |Compañía
-|Maniobra próxima |Pelotón (`Zug`) y escuadra (`Gruppe`) |Pelotón y escuadra
-|===
+// == De mando operacional a unidad táctica
 
-== Fuerza de infantería representativa
+// |===
+// |Escalón aproximado |Ejército alemán, Heer |Ejército Rojo soviético
+// |Dirección superior de campaña |Grupo de ejércitos (`Heeresgruppe`) |Frente
+// |Gran formación operacional |Ejército (`Armee`) |Ejército de armas combinadas o ejército de carros
+// |Agrupación de formaciones |Cuerpo (`Armeekorps`) |Cuerpo de fusileros, de carros o mecanizado
+// |Formación principal |División de infantería o Panzer |División de fusileros o cuerpo móvil compuesto por brigadas
+// |Agrupación táctica |Regimiento |Regimiento de fusileros o brigada de carros
+// |Unidad táctica |Batallón / `Abteilung` |Batallón
+// |Unidad de juego habitual |Compañía (`Kompanie`) |Compañía
+// |Maniobra próxima |Pelotón (`Zug`) y escuadra (`Gruppe`) |Pelotón y escuadra
+// |===
 
-|===
-|Nivel |Alemania |Unión Soviética
-|División |Regimientos de granaderos, artillería, anticarros, ingenieros, reconocimiento y servicios |Regimientos de fusileros, artillería, anticarros, zapadores, reconocimiento y servicios
-|Regimiento |Batallones de granaderos y apoyos regimental/divisional |Batallones de fusileros y apoyos regimental/divisional
-|Batallón |Compañías de granaderos y armas de apoyo |Compañías de fusileros y armas de apoyo
-|Compañía |Mando, tres pelotones y apoyo pesado según plantilla |Mando, tres pelotones y apoyo disponible según `shtat`
-|===
+// == Fuerza de infantería representativa
 
-== Fuerza acorazada representativa
+// |===
+// |Nivel |Alemania |Unión Soviética
+// |División |Regimientos de granaderos, artillería, anticarros, ingenieros, reconocimiento y servicios |Regimientos de fusileros, artillería, anticarros, zapadores, reconocimiento y servicios
+// |Regimiento |Batallones de granaderos y apoyos regimental/divisional |Batallones de fusileros y apoyos regimental/divisional
+// |Batallón |Compañías de granaderos y armas de apoyo |Compañías de fusileros y armas de apoyo
+// |Compañía |Mando, tres pelotones y apoyo pesado según plantilla |Mando, tres pelotones y apoyo disponible según `shtat`
+// |===
 
-|===
-|Aspecto |Alemania |Unión Soviética
-|Formación móvil de referencia |División Panzer |Ejército de carros con cuerpos de carros y mecanizados
-|Núcleo blindado táctico |Regimiento Panzer con batallones de carros |Brigada de carros con batallones de carros
-|Infantería móvil |Regimientos Panzergrenadier |Brigadas mecanizadas o fusileros agregados
-|Apoyos necesarios |Artillería, reconocimiento, ingenieros, cazacarros y logística |Artillería, zapadores, defensa antiaérea, infantería y logística
-|===
+// == Fuerza acorazada representativa
 
-== Uso en escenarios
+// |===
+// |Aspecto |Alemania |Unión Soviética
+// |Formación móvil de referencia |División Panzer |Ejército de carros con cuerpos de carros y mecanizados
+// |Núcleo blindado táctico |Regimiento Panzer con batallones de carros |Brigada de carros con batallones de carros
+// |Infantería móvil |Regimientos Panzergrenadier |Brigadas mecanizadas o fusileros agregados
+// |Apoyos necesarios |Artillería, reconocimiento, ingenieros, cazacarros y logística |Artillería, zapadores, defensa antiaérea, infantería y logística
+// |===
 
-* Para una partida a escala de compañía, seleccionar primero año, frente y tipo de compañía.
-* Las entradas *Compañías alemanas* y *Compañías soviéticas* detallan unidades que pueden desplegarse directamente.
-* Las entradas nacionales ampliadas explican de qué división, brigada o ejército pueden proceder los apoyos agregados.
+// == Uso en escenarios
 
-== Referencias
+// * Para una partida a escala de compañía, seleccionar primero año, frente y tipo de compañía.
+// * Las entradas *Compañías alemanas* y *Compañías soviéticas* detallan unidades que pueden desplegarse directamente.
+// * Las entradas nacionales ampliadas explican de qué división, brigada o ejército pueden proceder los apoyos agregados.
 
-* War Department, *Handbook on German Military Forces*, `TM-E 30-451`, 15 de marzo de 1945: link:https://openlibrary.org/works/OL62568W/Handbook_on_German_Military_Forces[registro y copias digitales].
-* War Department, *Handbook on U.S.S.R. Military Forces*, `TM 30-430`, capítulo III, 1 de marzo de 1946: link:https://docslib.org/doc/5785974/handbook-on-ussr-military-forces-chapter-iii-field-organization-war-department-usa[Field Organization].
+// == Referencias
+
+// * War Department, *Handbook on German Military Forces*, `TM-E 30-451`, 15 de marzo de 1945: link:https://openlibrary.org/works/OL62568W/Handbook_on_German_Military_Forces[registro y copias digitales].
+// * War Department, *Handbook on U.S.S.R. Military Forces*, `TM 30-430`, capítulo III, 1 de marzo de 1946: link:https://docslib.org/doc/5785974/handbook-on-ussr-military-forces-chapter-iii-field-organization-war-department-usa[Field Organization].

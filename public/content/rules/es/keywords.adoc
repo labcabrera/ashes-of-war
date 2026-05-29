@@ -1,49 +1,64 @@
-# Keywords
+= Keywords
 :toc:
 :toclevels: 3
 :toc-title: Contenido
 
 WARNING: Borrador en desarrollo.
 
-[unreliable]
-## Unreliable X
+[#ambush]
+== Ambush
 
-_Representa la escasa fiablidad de algunos vehículos para realizar maniobras a velocidades elevadas._
+Estas unidades pueden permanecer ocultas en el tablero hasta que se cumplan ciertas condiciones para revelar su posición. Esto representa la capacidad de emboscar al enemigo, lo que les permite atacar con ventaja o evitar ser detectados por completo.
 
-Al realizar un movimiento de velocidad apresurada la unidad deberá tirar un D6. Si el resultado es igual o inferior a X la unidad deberá tirar un chequeo de avería mecánica.
+NOTE: Pendiente de revisión. Considerar modelo de despliegue fuera del tablero y luego entrar en el tablero al atacar o ser detectados. Podría ser necesario definir de forma secreta su localización para evitar que aparezcan en cualquier lado. Otra opción es que estas unidades no puedan ser detectadas inicialmente y ser objetivo de disparos enemigos. 
 
-## Overheat X
-
-_Algunas armas pueden presentar problemas de sobrecalentamiento si se disparan a máxima cadencia como una MG-42._
-
-Al disparar la unidad, si el número de unos en la tirada de impacto es igual o superior a X el arma se considerará sobrecalentada y quedará inoperativa durante el siguiente turno (o hasta que se realice con éxito una maniobra de reparación).
-
-## Stationary
-
-Las unidades con esta palabra clave no pueden realizar ningún movimiento durante la partida. Estas unidades por lo general serán emplazamientos fijos de armas pesadas que requieren de una preparación previa para ser desplegadas.
-
-## Heavy X
-
-Las armas con este perfil tendrán una penalización de -X a su tirada de impacto cuando el disparo no se efectúe desde una posición estática. Esto representa la dificultad de apuntar con precisión a objetivos lejanos o en movimiento con armas pesadas.
-
-## Area X
+[#area]
+== Area X
 
 _Representa la naturaleza de las armas de área como morteros, artillería o lanzacohetes que pueden causar daños significativos en un área amplia._
 
 Las armas con esta palabra afectarán a las unidades dentro de un área determinada alrededor del punto de impacto. El radio de esta área se determinará por el valor de X en pulgadas.
 
-Tanto los impactos con éxito como los fallidos deberán resolver el punto de impacto para calcular las unidades afectadas por la explosicón.
+Tanto los impactos con éxito como los fallidos deberán resolver el punto de impacto para calcular las unidades afectadas por la explosión.
 
-## Radio
+[#heavy]
+== Heavy X
+
+Las armas con este perfil tendrán una penalización de -X a su tirada de impacto cuando el disparo no se efectúe desde una posición estática. Esto representa la dificultad de apuntar con precisión a objetivos lejanos o en movimiento con armas pesadas.
+
+[#hidden]
+== Hidden X
+
+TODO
+
+[#overheat]
+== Overheat X
+
+_Algunas armas pueden presentar problemas de sobrecalentamiento si se disparan a máxima cadencia como una MG-42._
+
+Al disparar la unidad, si el número de unos en la tirada de impacto es igual o superior a X el arma se considerará sobrecalentada y quedará inoperativa durante el siguiente turno (o hasta que se realice con éxito una maniobra de reparación).
+
+[#radio]
+== Radio
 
 Las unidades con esta palabra clave pueden comunicarse a distancia con otras unidades aliadas para coordinar ataques, solicitar apoyo o compartir información sobre el campo de batalla. Estas unidades pueden ser oficiales de mando, operadores de radio o cualquier unidad equipada con un dispositivo de comunicación. Esto mejora la capacidad de mando y organización al no tener que depender de la línea de visión directa para transmitir órdenes o información entre unidades.
 
 Alguna características del juego como por ejemplo solicitar apoyo de artillería requieren que la unidad tenga esta palabra clave para poder realizar esa acción.
 
-## Ambush
+== Recon X
 
-TODO
+_Algunas unidades están especializadas en el reconocimiento y la obtención de información sobre el enemigo, lo que les permite revelar la posición de unidades enemigas ocultas o proporcionar información valiosa sobre el terreno._
 
-## Hidden X
+Estas unidades pueden desplegarse fuera del área de despliegue hasta X pulgadas de este.
 
-TODO
+[#stationary]
+== Stationary
+
+Las unidades con esta palabra clave no pueden realizar ningún movimiento durante la partida. Estas unidades por lo general serán emplazamientos fijos de armas pesadas que requieren de una preparación previa para ser desplegadas.
+
+[#unreliable]
+== Unreliable X
+
+_Representa la escasa fiabilidad de algunos vehículos para realizar maniobras a velocidades elevadas._
+
+Al realizar un movimiento de velocidad apresurada la unidad deberá tirar un D6. Si el resultado es igual o inferior a X la unidad deberá tirar un chequeo de avería mecánica.

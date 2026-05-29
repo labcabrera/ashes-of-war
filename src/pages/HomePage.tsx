@@ -3,7 +3,6 @@
  */
 import { Box, Button, Container, Paper, Stack, Typography } from '@mui/material';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import GroupsIcon from '@mui/icons-material/Groups';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import ShieldIcon from '@mui/icons-material/Shield';
@@ -82,7 +81,7 @@ export default function HomePage() {
                 <Typography variant="h6" sx={{ fontWeight: 800, mb: 1 }}>
                   {t(`home.features.${index}.title`)}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body1" color="text.secondary">
                   {t(`home.features.${index}.text`)}
                 </Typography>
               </Paper>
@@ -100,25 +99,12 @@ export default function HomePage() {
           }}
         >
           <Box>
-            <Typography variant="overline" color="secondary.main">
-              {t('home.indie.eyebrow')}
-            </Typography>
-            <Typography variant="h3" sx={{ fontWeight: 850, mb: 2 }}>
+            <Typography variant="h3" sx={{ fontWeight: 650, mb: 2 }}>
               {t('home.indie.title')}
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
               {t('home.indie.text')}
             </Typography>
-            <Button
-              href="https://github.com/labcabrera/ashes-of-war"
-              target="_blank"
-              rel="noreferrer"
-              variant="text"
-              startIcon={<GitHubIcon />}
-              sx={{ px: 0 }}
-            >
-              {t('home.indie.sourceAction')}
-            </Button>
           </Box>
 
           <Box
@@ -157,7 +143,7 @@ export default function HomePage() {
             }}
           >
             <Box>
-              <Typography variant="h4" sx={{ fontWeight: 850, mb: 1.5 }}>
+              <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
                 {t('home.next.title')}
               </Typography>
               <Typography variant="body1" color="text.secondary">

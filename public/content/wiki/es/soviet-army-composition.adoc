@@ -9,7 +9,7 @@
 
 == Propósito
 
-El Ejército Rojo transformó profundamente su organización entre la invasión alemana de 1941 y las ofensivas de 1944-1945. La jerarquía siguiente sirve como referencia de la fase final de la guerra; la presencia de cuerpos, brigadas y apoyos varía por tipo de ejército y momento.
+El Ejército Rojo transformó profundamente su organización entre la invasión alemana de 1941 y las ofensivas de 1944-1945. La jerarquía siguiente sirve como referencia de la fase final de la guerra. La presencia de cuerpos, brigadas y apoyos varía por tipo de ejército y momento.
 
 == Jerarquía operativa habitual
 
@@ -53,13 +53,13 @@ En 1944-1945 un ejército de carros era una agrupación operacional destinada a 
 |Batallón de carros |Compañías de carros |Maniobra próxima de vehículos
 |===
 
-== Lectura para escenarios
+// == Lectura para escenarios
 
-* Las compañías representadas en mesa podían recibir ametralladoras, morteros, cañones, carros o zapadores procedentes de escalones superiores.
-* La artillería era central en las ofensivas soviéticas y puede aparecer como apoyo fuera del tablero aunque la fuerza visible sea una compañía.
-* Debe especificarse si una fuerza representa una plantilla de fusileros, de Guardias, blindada o mecanizada y el año elegido.
+// * Las compañías representadas en mesa podían recibir ametralladoras, morteros, cañones, carros o zapadores procedentes de escalones superiores.
+// * La artillería era central en las ofensivas soviéticas y puede aparecer como apoyo fuera del tablero aunque la fuerza visible sea una compañía.
+// * Debe especificarse si una fuerza representa una plantilla de fusileros, de Guardias, blindada o mecanizada y el año elegido.
 
-== Referencias
+// == Referencias
 
-* War Department, *Handbook on U.S.S.R. Military Forces*, `TM 30-430`, capítulo III, *Field Organization*, 1946: link:https://docslib.org/doc/5785974/handbook-on-ussr-military-forces-chapter-iii-field-organization-war-department-usa[consulta digital].
-* El mismo `TM 30-430`, capítulo III, detalla frente, ejército, cuerpo, división de fusileros, regimiento, batallón, brigada de carros y cuerpo mecanizado.
+// * War Department, *Handbook on U.S.S.R. Military Forces*, `TM 30-430`, capítulo III, *Field Organization*, 1946: link:https://docslib.org/doc/5785974/handbook-on-ussr-military-forces-chapter-iii-field-organization-war-department-usa[consulta digital].
+// * El mismo `TM 30-430`, capítulo III, detalla frente, ejército, cuerpo, división de fusileros, regimiento, batallón, brigada de carros y cuerpo mecanizado.

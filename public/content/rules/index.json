@@ -87,8 +87,8 @@
           "id": "indirectFire",
           "titleKey": "rules.chapter.indirectFire",
           "files": {
-            "en": "/content/rules/en/indirectFire.adoc",
-            "es": "/content/rules/es/indirectFire.adoc"
+            "en": "/content/rules/en/indirect-fire.adoc",
+            "es": "/content/rules/es/indirect-fire.adoc"
           }
         }
       ]
