@@ -2,7 +2,6 @@
  * ArmyTypeSelector — two linked dropdowns: faction then year range.
  * Selecting a faction filters the year options; together they determine the army type.
  */
-import { useEffect, useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { ArmyType } from '../../types/army';
@@ -17,19 +16,12 @@ export default function ArmyTypeSelector({ armyTypes, selectedId, onChange }: Pr
   const { t } = useTranslation();
 
   const selectedType = armyTypes.find((at) => at.id === selectedId);
-  const [faction, setFaction] = useState(selectedType?.faction ?? armyTypes[0]?.faction ?? '');
-
-  // Keep faction in sync when selectedId is changed externally (e.g. loading a saved army).
-  useEffect(() => {
-    const type = armyTypes.find((at) => at.id === selectedId);
-    if (type?.faction && type.faction !== faction) setFaction(type.faction);
-  }, [selectedId, armyTypes]); // eslint-disable-line react-hooks/exhaustive-deps
+  const faction = selectedType?.faction ?? armyTypes[0]?.faction ?? '';
 
   const factions = [...new Set(armyTypes.map((at) => at.faction).filter((f): f is string => !!f))];
   const factionTypes = armyTypes.filter((at) => at.faction === faction);
 
   const handleFactionChange = (newFaction: string) => {
-    setFaction(newFaction);
     const first = armyTypes.find((at) => at.faction === newFaction);
     if (first) onChange(first.id);
   };

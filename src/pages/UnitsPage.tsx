@@ -9,10 +9,12 @@ import {
   ToggleButton,
   ToggleButtonGroup,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import GridViewIcon from '@mui/icons-material/GridView';
 import TableRowsIcon from '@mui/icons-material/TableRows';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useUnitData } from '../hooks/useUnitData';
 import UnitFilters from '../components/units/UnitFilters';
@@ -31,6 +33,9 @@ type ViewMode = 'cards' | 'table';
 
 export default function UnitsPage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const [searchParams, setSearchParams] = useSearchParams();
   const { units, filters, setName, toggleFaction, toggleType, setYear, isOutOfYear } = useUnitData();
   const activeTab: CatalogueTab = searchParams.get('tab') === 'weapons' ? 'weapons' : 'units';
@@ -75,6 +80,14 @@ export default function UnitsPage() {
 
   function handleWeaponSelect(weapon: Weapon) {
     setSearchParams({ tab: 'weapons', weapon: weapon.id });
+  }
+
+  function handleUnitSelect(unit: Unit) {
+    if (isDesktop) {
+      setSelectedUnit(unit);
+      return;
+    }
+    navigate(`/units/${encodeURIComponent(unit.id)}`);
   }
 
   return (
@@ -152,14 +165,16 @@ export default function UnitsPage() {
               isOutOfYear={isOutOfYear}
               selectedId={selectedUnit?.id ?? null}
               viewMode={viewMode}
-              onSelect={setSelectedUnit}
+              onSelect={handleUnitSelect}
             />
 
-            <UnitDetail
-              unit={selectedUnit}
-              weapons={weapons}
-              onClose={() => setSelectedUnit(null)}
-            />
+            {isDesktop && (
+              <UnitDetail
+                unit={selectedUnit}
+                weapons={weapons}
+                onClose={() => setSelectedUnit(null)}
+              />
+            )}
           </Box>
         </>
       ) : (
