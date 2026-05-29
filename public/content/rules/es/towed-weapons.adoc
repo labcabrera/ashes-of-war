@@ -1,0 +1,9 @@
+# Armas remolcadas
+
+Esta categoría engloba piezas de campaña que deben ser remolcadas para reposicionarse, como armas antitanque, cañones de campaña o morteros pesados. Son más baratas que la artillería autopropulsada pero requieren un vehículo tractor separado, son difíciles de maniobrar y sus operadores están expuestos al fuego enemigo.
+
+Dentro de esta categoría también se incluyen unidades estáticas como Flak 88 cm o cañones de campaña que no se mueven durante la partida.
+
+Estas armas pueden tener una ligera capacidad de blindaje o camuflaje, pero no pueden realizar acciones como asaltar, atrincherarse o proteger vehículos. Su función principal es proporcionar apoyo de fuego indirecto o antitanque desde posiciones fijas o tras un movimiento limitado.
+
+TIP: Las armas remolcadas son bastante vulnerables a la mayoría de los ataques y deben ser protegidas por otras unidades. Su movilidad limitada las hace ideales para defender posiciones clave o proporcionar fuego de apoyo, pero no para maniobrar en el campo de batalla.

@@ -32,12 +32,20 @@
             "en": "/content/rules/en/vehicles.adoc",
             "es": "/content/rules/es/vehicles.adoc"
           }
+        },
+        {
+          "id": "towed-weapons",
+          "titleKey": "rules.chapter.towedWeapons",
+          "files": {
+            "en": "/content/rules/en/towed-weapons.adoc",
+            "es": "/content/rules/es/towed-weapons.adoc"
+          }
         }
       ]
     },
     {
       "id": "round",
-      "titleKey": "round",
+      "titleKey": "rules.chapter.round",
       "files": {
         "en": "/content/rules/es/round.adoc",
         "es": "/content/rules/es/round.adoc"
@@ -45,7 +53,7 @@
     },
     {
       "id": "movement",
-      "titleKey": "movement",
+      "titleKey": "rules.chapter.movement",
       "files": {
         "en": "/content/rules/es/movement.adoc",
         "es": "/content/rules/es/movement.adoc"
@@ -53,15 +61,41 @@
     },
     {
       "id": "shooting",
-      "titleKey": "shooting",
+      "titleKey": "rules.chapter.shooting",
       "files": {
         "en": "/content/rules/es/shooting.adoc",
         "es": "/content/rules/es/shooting.adoc"
-      }
+      },
+      "children": [
+        {
+          "id": "light-fire",
+          "titleKey": "rules.chapter.lightFire",
+          "files": {
+            "en": "/content/rules/en/light-fire.adoc",
+            "es": "/content/rules/es/light-fire.adoc"
+          }
+        },
+        {
+          "id": "heavyFire",
+          "titleKey": "rules.chapter.heavyFire",
+          "files": {
+            "en": "/content/rules/en/heavy-fire.adoc",
+            "es": "/content/rules/es/heavy-fire.adoc"
+          }
+        },
+        {
+          "id": "indirectFire",
+          "titleKey": "rules.chapter.indirectFire",
+          "files": {
+            "en": "/content/rules/en/indirectFire.adoc",
+            "es": "/content/rules/es/indirectFire.adoc"
+          }
+        }
+      ]
     },
     {
       "id": "actions",
-      "titleKey": "actions",
+      "titleKey": "rules.chapter.actions",
       "files": {
         "en": "/content/rules/es/actions.adoc",
         "es": "/content/rules/es/actions.adoc"
@@ -69,7 +103,7 @@
     },
     {
       "id": "skills",
-      "titleKey": "skills",
+      "titleKey": "rules.chapter.skills",
       "files": {
         "en": "/content/rules/es/skills.adoc",
         "es": "/content/rules/es/skills.adoc"
@@ -77,7 +111,7 @@
     },
     {
       "id": "morale",
-      "titleKey": "morale",
+      "titleKey": "rules.chapter.morale",
       "files": {
         "en": "/content/rules/es/morale.adoc",
         "es": "/content/rules/es/morale.adoc"
@@ -85,7 +119,7 @@
     },
     {
       "id": "missions",
-      "titleKey": "missions",
+      "titleKey": "rules.chapter.missions",
       "files": {
         "en": "/content/rules/es/missions.adoc",
         "es": "/content/rules/es/missions.adoc"
@@ -93,7 +127,7 @@
     },
     {
       "id": "keywords",
-      "titleKey": "keywords",
+      "titleKey": "rules.chapter.keywords",
       "files": {
         "en": "/content/rules/es/keywords.adoc",
         "es": "/content/rules/es/keywords.adoc"

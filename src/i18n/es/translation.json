@@ -40,7 +40,19 @@
       "introduction": "Introducción",
       "unitTypes": "Tipos de unidad",
       "infantry": "Infantería",
-      "vehicles": "Vehículos"
+      "vehicles": "Vehículos",
+      "towedWeapons": "Armas remolcadas",
+      "round": "Turno de juego",
+      "movement": "Movimiento",
+      "shooting": "Disparo",
+      "actions": "Acciones",
+      "skills": "Habilidades",
+      "morale": "Moral",
+      "missions": "Misiones",
+      "keywords": "Claves de unidad",
+      "lightFire": "Fuego ligero",
+      "heavyFire": "Fuego pesado",
+      "indirectFire": "Fuego indirecto"
     }
   },
   "wiki": {

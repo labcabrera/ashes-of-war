@@ -4,6 +4,7 @@
 
 * link:/rules/unit-types/vehicles[Vehículos]: dentro de vehículos encontramos diferentes categorías como carros de combate, artillería autopropulsada, vehículos de transporte de personal, etc. Los vehículos tienen un perfil de blindaje que determina su resistencia a los disparos desde diferentes ángulos. Son plataformas ofensivas potentes, pero pueden ser costosos, vulnerables al flanqueo, complicados de maniobrar en terreno cerrado y no pueden realizar determinadas acciones.
 
+* link:/rules/unit-types/towed[Armas remolcadas]: piezas de campaña que deben ser remolcadas para reposicionarse tales como armas antitanque, cañones de campaña o morteros pesados. Son más baratas que la artillería autopropulsada pero requieren un vehículo tractor separado, son difícules de maniobrar y sus operadores están expuestos al fuego enemigo.
 
 Ashes of War incluye doce tipos de unidad distintos, cada uno con capacidades y limitaciones únicas.
 

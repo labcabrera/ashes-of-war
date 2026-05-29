@@ -1,6 +1,31 @@
 = Disparo
 
-== Disparo pesado
+== Tipos de disparo
+
+Las armas de disparo se dividen en las siguientes categorías:
+
+* link:/rules/shooting/light-fire[Fuego ligero]: armas de pequeño calibre con penetraciones muy limitadas como fusiles, subfusiles, ametralladoras ligeras o armamento secundario de carros de combate o aviones. Estas armas suelen ser ineficaces contra vehículos blindados y su función principal es suprimir a la infantería enemiga y dar fuego de apoyo a las unidades amigas.
+
+* link:/rules/shooting/light-fire[Fuego pesado]: armas de mayor calibre con capacidad de penetración o daño de área como cañones de carros de combate, armas anticarro, artillería o ametralladoras pesadas. Estas armas son efectivas contra vehículos blindados y pueden causar bajas significativas a la infantería enemiga, pero suelen tener una cadencia de fuego más baja y requieren más tiempo para apuntar.
+
+* link:/rules/shooting/light-fire[Fuego indirecto]: categoría de armas de fuego parabólico tales como artillería o morteros que pueden disparar sin visión directa al objetivo saturando un área. Estas arms tienen una precisión más limitada y requieren de mecánicas de observación y corrección de fuego, pero pueden ser devastadoras contra formaciones enemigas agrupadas y posiciones estáticas.
+
+== Tirada para impactar
+
+El disparo involucra dos valores definidos en el perfil de las unidades:
+
+- *To-Hit:* determina la facilidad o dificultad de un blanco para ser impactado por un disparo. Objetivos grandes y estáticos como un _KV-2_ tendrán valores bajos, mientras que objetivos pequeños, móviles tales como la infantería tendrán valores más altos.
+
+- *Balistic:* bonificación base del arma para lograr un impacto. Este valor combinará tanto la capacidad de apuntado del arma como la habilidad del tirador. En el caso de armas con diferentes perfiles de disparo este valor podrá ser diferente. Por ejemplo, una ametralladora pesada podrá realizar ráfagas cortas y precisas con un valor de _balistic_ que siendo utilizada para dar fuego de apoyo donde tendrá mayor cadencia de disparo a costa de un menor valor de _balistic_.
+
+Al realizar una acción de disparo tiraremos un D6 sumando a este valor el valor de _balistic_ del atacante y los modificadores adicionales y si el resultado es igual o superior al valor de _to-hit_ del objetivo, el disparo impacta con éxito.
+
+Un impacto de 6 se considera un impacto crítico y dependiendo del arma puede añadir efectos adicionales.
+
+
+Al realizar una acción de disparo el jugador deberá realizar una tirada para impactar sumando los modificadores. Cada unidad tendrá determinado en su perfil el valor "To-Hit" que indicará la dificultad base para impactar a un objetivo. Este será un valor base dependiente de la geometría del objetivo, por ejemplo un KV-2 tendrá un valor muy fácil de ser impactado mientras que las unidades de infantería tendrán valores más altos.
+
+
 
 Primero hay que hacer una tirada para impactar. Esta tirada se verá modificada por la habilidad de la tripulación, ópticas (cada tipo de óptica añade una penalización por distancia), modificadores de ambiente (humo, niebla, explosiones), geometría del objetivo, cobertura.
 
