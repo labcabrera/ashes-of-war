@@ -13,8 +13,7 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import CloseIcon from '@mui/icons-material/Close';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import FlightIcon from '@mui/icons-material/Flight';
@@ -30,8 +29,7 @@ import type { Weapon } from '../../types/weapon';
 interface Props {
   unit: Unit | null;
   weapons: Weapon[];
-  collapsed: boolean;
-  onCollapsedChange: (collapsed: boolean) => void;
+  onClose: () => void;
 }
 
 const UNIT_ICONS = {
@@ -56,51 +54,12 @@ function weaponLabel(assignment: UnitWeapon, weapons: Weapon[]) {
   return `${assignment.count} x ${weapon?.name ?? assignment.id}`;
 }
 
-export default function UnitDetail({ unit, weapons, collapsed, onCollapsedChange }: Props) {
+export default function UnitDetail({ unit, weapons, onClose }: Props) {
   const { t } = useTranslation();
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
   const assignedWeapons = unit?.weapons ?? [];
 
-  if (collapsed) {
-    return (
-      <Paper
-        component="aside"
-        aria-label={t('units.detail.compactTitle')}
-        elevation={3}
-        sx={{
-          width: { xs: '100%', lg: 72 },
-          minHeight: { xs: 'auto', lg: 520 },
-          position: { lg: 'sticky' },
-          top: { lg: 16 },
-          p: 1,
-        }}
-      >
-        <Stack direction={{ xs: 'row', lg: 'column' }} spacing={1} sx={{ alignItems: 'center' }}>
-          <Tooltip title={t('units.detail.expandPanel')}>
-            <IconButton
-              onClick={() => onCollapsedChange(false)}
-              aria-label={t('units.detail.expandPanel')}
-              size="small"
-            >
-              <ChevronLeftIcon sx={{ display: { xs: 'none', lg: 'block' } }} />
-              <ChevronRightIcon sx={{ display: { xs: 'block', lg: 'none' } }} />
-            </IconButton>
-          </Tooltip>
-          <Avatar src={unit?.imageUrl} alt={unit?.name ?? ''} variant="rounded" sx={{ width: 48, height: 48 }}>
-            <UnitIcon />
-          </Avatar>
-          {unit && (
-            <Chip
-              label={unit.cost}
-              size="small"
-              color="secondary"
-              sx={{ width: { lg: 48 }, '& .MuiChip-label': { px: 0.5 } }}
-            />
-          )}
-        </Stack>
-      </Paper>
-    );
-  }
+  if (!unit) return null;
 
   return (
     <Paper
@@ -118,25 +77,18 @@ export default function UnitDetail({ unit, weapons, collapsed, onCollapsedChange
         <Typography variant="subtitle2" sx={{ px: 1, fontWeight: 700 }}>
           {t('units.detail.compactTitle')}
         </Typography>
-        <Tooltip title={t('units.detail.collapsePanel')}>
+        <Tooltip title={t('common.close')}>
           <IconButton
-            onClick={() => onCollapsedChange(true)}
-            aria-label={t('units.detail.collapsePanel')}
+            onClick={onClose}
+            aria-label={t('common.close')}
             size="small"
           >
-            <ChevronRightIcon />
+            <CloseIcon />
           </IconButton>
         </Tooltip>
       </Box>
 
-      {!unit ? (
-        <Box sx={{ p: 2.5 }}>
-          <Typography variant="body2" color="text.secondary">
-            {t('units.detail.selectPrompt')}
-          </Typography>
-        </Box>
-      ) : (
-        <>
+      <>
           <Box
             sx={{
               height: 112,
@@ -240,7 +192,6 @@ export default function UnitDetail({ unit, weapons, collapsed, onCollapsedChange
             </Button>
           </Box>
         </>
-      )}
     </Paper>
   );
 }

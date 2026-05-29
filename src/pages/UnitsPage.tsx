@@ -36,7 +36,6 @@ export default function UnitsPage() {
   const activeTab: CatalogueTab = searchParams.get('tab') === 'weapons' ? 'weapons' : 'units';
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
-  const [isUnitPanelCollapsed, setIsUnitPanelCollapsed] = useState(false);
   const [weaponName, setWeaponName] = useState('');
   const [weaponFaction, setWeaponFaction] = useState('');
 
@@ -142,7 +141,7 @@ export default function UnitsPage() {
               display: 'grid',
               gridTemplateColumns: {
                 xs: '1fr',
-                lg: isUnitPanelCollapsed ? 'minmax(0, 1fr) 72px' : 'minmax(0, 1fr) minmax(280px, 340px)',
+                lg: selectedUnit ? 'minmax(0, 1fr) minmax(280px, 340px)' : '1fr',
               },
               alignItems: 'start',
               gap: 3,
@@ -159,8 +158,7 @@ export default function UnitsPage() {
             <UnitDetail
               unit={selectedUnit}
               weapons={weapons}
-              collapsed={isUnitPanelCollapsed}
-              onCollapsedChange={setIsUnitPanelCollapsed}
+              onClose={() => setSelectedUnit(null)}
             />
           </Box>
         </>
