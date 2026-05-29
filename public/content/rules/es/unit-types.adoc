@@ -1,5 +1,7 @@
 = Tipos de unidad
 
+WARNING: Borrador en desarrollo.
+
 * link:/rules/unit-types/infantry[Infantería]: el núcleo de cualquier ejército. Las escuadras de infantería son versátiles, económicas y eficaces en la captura de objetivos. La infantería funciona mejor en cobertura, edificios, posiciones preparadas y terreno cerrado. Puede asaltar, atrincherarse, proteger vehículos y mantener terreno con más eficiencia que las unidades blindadas.
 
 * link:/rules/unit-types/vehicles[Vehículos]: dentro de vehículos encontramos diferentes categorías como carros de combate, artillería autopropulsada, vehículos de transporte de personal, etc. Los vehículos tienen un perfil de blindaje que determina su resistencia a los disparos desde diferentes ángulos. Son plataformas ofensivas potentes, pero pueden ser costosos, vulnerables al flanqueo, complicados de maniobrar en terreno cerrado y no pueden realizar determinadas acciones.
@@ -10,19 +12,22 @@ Adicionalmente a estas categorías básicas también podremos contar con otras u
 
 * *Soporte de artillería*: apoyo de fuego indirecto del que dispone cada bando y que podrá no estar representado por unidades en el tablero.
 
-* *Aviación de apoyo cercano*: apoyo aéreo solicitado desde fuera del tablero. Disponible una vez por partida.
-
-WARNING: Borrador en desarrollo.
-
-Ashes of War incluye doce tipos de unidad distintos, cada uno con capacidades y limitaciones únicas.
+* *Aviación de apoyo cercano*: apoyo aéreo solicitado que no se despliega inicialmente en el tablero. La aviación puede ser devastadora contra unidades expuestas, pero su uso es limitado y puede ser derribada por unidades antiaéreas o interceptada por unidades voladoras del defensor.
 
 == Infantería
 
-El núcleo de cualquier ejército. Las escuadras de infantería son versátiles, económicas y eficaces en la captura de objetivos.
+La infantería es el núcleo de cualquier ejército. Las escuadras de infantería son versátiles, económicas y eficaces en la captura de objetivos. La infantería funciona mejor en cobertura, edificios, posiciones preparadas y terreno cerrado. Puede asaltar, atrincherarse, proteger vehículos y mantener terreno con más eficiencia que las unidades blindadas.
 
-* *Movimiento:* 6"
-* *Fortalezas:* Excelentes en cobertura; pueden asaltar y atrincherarse.
-* *Debilidades:* Vulnerables al fuego indirecto y los asaltos de blindados.
+La infantería es particularmente vulnerable en campo abierto donde armas con altas cadencias de disparo harán estragos en estas unidades con esasa protección.
+
+=== Subtipos principals de infantería
+
+* *Fusileros*: la infantería estándar, equipada con fusiles. Son la base de cualquier fuerza terrestre y pueden realizar una amplia variedad de tareas, desde asaltar posiciones hasta mantener el terreno.
+* *Tropas de asalto (SMG)*: infantería equipada con subfusiles, granadas o armas anti-carro. Estasa unidades tienen altas cadencias de fuego pero escaso rango como la MP40. Son especialmente eficaces en combate urbano, asalto de edificios y terreno cerrado, pero pierden eficacia a medida que aumenta la distancia.
+* *Escuadras de ametralladoras pesadas (HMG)*: infantería equipada con ametralladoras pesadas como la MG42. Estas unidades proporcionan fuego de supresión efectivo, pero son vulnerables a ataques rápidos y a la infantería de asalto que puede flanquearlas.
+* *Ingenieros*: infantería especialista en demoliciones, construcción de puentes y eliminación de obstáculos. Pueden colocar y desactivar minas, destruir obstáculos y cruzar accidentes acuáticos. Si bien estas unidades tienen capacidad combativa, no están optimizadas para el combate directo y su función principal es el apoyo a otras unidades.
+* *Médicos de campaña*: unidades de apoyo que mantienen a tu infantería en combate. Estas unidades aportan mejoras en la capacidad de recuperación de tus tropas y la organización pero sus valores combativos son limitados.
+* *Francotiradores*: tiradores de élite capaces de eliminar objetivos de alto valor a gran distancia. Estas unidades tienen valores de ocultación elevados pero son frágiles y tienen una capacidad de ataque limitada.
 
 == Tanque
 

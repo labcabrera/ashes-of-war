@@ -31,7 +31,7 @@ export default function RulesChapterList({ chapters, selectedId, onSelect }: Pro
         >
           <ListItemText
             primary={
-              <Typography variant={depth === 0 ? 'body2' : 'caption'}>
+              <Typography variant={depth === 0 ? 'body1' : 'body2'}>
                 {t(chapter.titleKey)}
               </Typography>
             }

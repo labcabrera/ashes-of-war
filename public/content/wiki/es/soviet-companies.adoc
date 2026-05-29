@@ -9,7 +9,7 @@
 
 == Alcance
 
-Las plantillas soviéticas, denominadas `shtat`, cambiaron repetidamente entre 1941 y 1945 para responder a pérdidas, disponibilidad de armamento y experiencia de combate. Esta entrada utiliza como referencia la organización de 1944-1945 descrita en el manual aliado `TM 30-430`; representa organización autorizada, no efectivos presentes en cada batalla.
+Las plantillas soviéticas, denominadas Shtat (штат), cambiaron repetidamente entre 1941 y 1945 para responder a pérdidas, disponibilidad de armamento y experiencia de combate. Esta entrada utiliza como referencia la organización de 1944-1945 descrita en el manual aliado _TM 30-430_; representa organización autorizada, no efectivos presentes en cada batalla.
 
 == Compañía de fusileros, 1944-1945
 
