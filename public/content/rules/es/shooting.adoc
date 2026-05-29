@@ -14,13 +14,50 @@ Las armas de disparo se dividen en las siguientes categorías:
 
 El disparo involucra dos valores definidos en el perfil de las unidades:
 
-- *To-Hit:* determina la facilidad o dificultad de un blanco para ser impactado por un disparo. Objetivos grandes y estáticos como un _KV-2_ tendrán valores bajos, mientras que objetivos pequeños, móviles tales como la infantería tendrán valores más altos.
+- *[.underline]#To-Hit#:* determina la facilidad o dificultad de un blanco para ser impactado por un disparo. Objetivos grandes y estáticos como un _KV-2_ tendrán valores bajos, mientras que objetivos pequeños, móviles tales como la infantería tendrán valores más altos.
 
-- *Balistic:* bonificación base del arma para lograr un impacto. Este valor combinará tanto la capacidad de apuntado del arma como la habilidad del tirador. En el caso de armas con diferentes perfiles de disparo este valor podrá ser diferente. Por ejemplo, una ametralladora pesada podrá realizar ráfagas cortas y precisas con un valor de _balistic_ que siendo utilizada para dar fuego de apoyo donde tendrá mayor cadencia de disparo a costa de un menor valor de _balistic_.
+- *[.underline]#Balistic#:* bonificación base del arma para lograr un impacto. Este valor combinará tanto la capacidad de apuntado del arma como la habilidad del tirador. En el caso de armas con diferentes perfiles de disparo este valor podrá ser diferente. Por ejemplo, una ametralladora pesada podrá realizar ráfagas cortas y precisas con un valor de _balistic_ que siendo utilizada para dar fuego de apoyo donde tendrá mayor cadencia de disparo a costa de un menor valor de _balistic_.
 
 Al realizar una acción de disparo tiraremos un D6 sumando a este valor el valor de _balistic_ del atacante y los modificadores adicionales y si el resultado es igual o superior al valor de _to-hit_ del objetivo, el disparo impacta con éxito.
 
 Un impacto de 6 se considera un impacto crítico y dependiendo del arma puede añadir efectos adicionales.
+
+== Distancia al objetivo
+
+La mayoría de armas ven reducida su efectividad a medida que aumenta la distancia al objetivo. Este efecto se refleja en el perfil de cada arma con un modificador de impacto por distancia expresado como:
+
+_{Initial range}/{Increment}/{Penalty}_
+
+Siendo:
+
+- *[.underline]#Initial range#:* distancia en la que el arma no sufre penalización por distancia.
+
+- *[.underline]#Increment#:* rango de distancia que utilizado para calcular la penalización por distancia. Por ejemplo, si el valor es 6 pulgadas, cada 6 pulgadas adicionales a la distancia inicial se aplicará una penalización.
+
+- *[.underline]#Penalty#:* penalización por cada incremento de distancia. Este valor se aplicará a la tirada de impacto por cada incremento de distancia que supere la distancia inicial.
+
+_Ejemplo: Al disparar con arma con un perfil de 24/6/-1 la penalización de disparo será:_
+
+- 0-24': 0
+- 25-30': -1
+- 31-36': -2
+- 37-42': -3
+- ...
+
+
+
+
+
+
+
+donde X es el valor de impacto a corta distancia, Y a media distancia y Z a larga distancia. Por ejemplo, un arma con un perfil de 30/20/-1 tendrá un bonificador de +30 para disparos a corta distancia, +20 para disparos a media distancia y -1 para disparos a larga distancia.
+
+== Modificadores de disparo
+
+|===
+|Modificador |Valor |Descripción
+|
+|===
 
 
 Al realizar una acción de disparo el jugador deberá realizar una tirada para impactar sumando los modificadores. Cada unidad tendrá determinado en su perfil el valor "To-Hit" que indicará la dificultad base para impactar a un objetivo. Este será un valor base dependiente de la geometría del objetivo, por ejemplo un KV-2 tendrá un valor muy fácil de ser impactado mientras que las unidades de infantería tendrán valores más altos.

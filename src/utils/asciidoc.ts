@@ -43,6 +43,8 @@ export const asciidocSx = {
   '& a': { color: 'primary.main', textDecorationColor: 'primary.main', '&:hover': { opacity: 0.85 } },
   '& strong': { fontWeight: 700 },
   '& em': { fontStyle: 'italic' },
+  '& .underline': { textDecoration: 'underline' },
+  '& .line-through': { textDecoration: 'line-through' },
   '& code': {
     fontFamily: 'monospace',
     fontSize: '0.875em',
