@@ -107,7 +107,8 @@
       "keywords": "Claves de unidad",
       "lightFire": "Fuego ligero",
       "heavyFire": "Fuego pesado",
-      "indirectFire": "Fuego indirecto"
+      "indirectFire": "Fuego indirecto",
+      "organization": "Organización y bajas"
     }
   },
   "wiki": {

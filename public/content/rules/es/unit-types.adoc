@@ -73,7 +73,7 @@ TIP: En ocasiones los roles de cazacarros y cañones de asalto pueden solaparse 
 
 === Artillería autopropulsada
 
-La artillería autopropulsada monta obuses o cañones pesados sobre chasis blindados, combinando la potencia de fuego de la artillería convencional con mayor movilidad táctica. Piezas como la Wespe, la Hummel o el M7 Priest proporcionan apoyo de fuego indirecto de largo alcance. Su blindaje es generalmente ligero y no están diseñadas para el combate directo.
+La artillería autopropulsada monta obuses o cañones pesados sobre chasis blindados, combinando la potencia de fuego de la artillería convencional con mayor movilidad táctica. Piezas como el Hummel o el M7 Priest proporcionan apoyo de fuego indirecto de largo alcance. Su blindaje es generalmente ligero y no están diseñadas para el combate directo.
 
 Estas unidades pueden estar desplegadas sobre el tablero representando el apoyo directo de fuego tenso o estar fuera de la mesa representando el apoyo de fuego indirecto. En este segundo caso se aplicarán las reglas de artillería y disparo indirecto.
 

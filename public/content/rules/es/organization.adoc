@@ -1,10 +1,42 @@
-# Organización
+# Organización y bajas
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
-WARNING: Borrador en desarrollo.
+A nivel de juego las unidades tendrán dos valores que determinarán el estado de la unidad:
 
-La organización de una unidad determina el factor combativo de esta y su capacidad para realizar acciones tales como disparar, cargar o maniobrar.
+- *Organización*: Representa la capacidad de la unidad para mantener la cohesión y efectividad en combate.
+- *Bajas*: Representa el número de bajas sufridas por una unidad de infantería.
 
-Unidades bien entrenadas y experimentadas mantendrán niveles de organización más altos, mientras que unidades con poca experiencia o que hayan sufrido bajas importantes verán su organización reducida.
+Ambos valores en la partida se representarán con contadores asociados a cada unidad.
+
+A diferencia de la infantería, el daño de los vehículos se resolverá de otro modo tirando en las tablas de daños estructurales.
+
+Cada unidad tendrá un valor máximo de pérdida de organización y bajas. Superado este valor la unidad se considerará baja y será retirada del campo de batalla.
+
+TIP: Podemos usar dados de colores para representar ambos valores, por ejemplo un dado azul para la organización y un dado rojo para las bajas.
+
+## Organización
+
+El valor de organización de una unidad representa su capacidad para mantener la *cohesión y efectividad en combate*.
+
+Una unidad con valores bajos de organización tendrá un bajo desempeño a la hora de realizar acciones representado por modificadores negativos a las tiradas de acciones.
+
+Hay muchos valores que determinarán el nivel de organización de una unidad, como su experiencia, entrenamiento, liderazgo, cercanía a unidades de mando. Esto se representará en la fase de organización como un bonus en la recuperación de los puntos de organización perdidos.
+
+TIP: Mientras que una unidad bien entrenada de la Wehrmacht en 1941 podría recuperar por ejemplo 3 puntos de organización por turno, una unidad de infantería inexperta podría recuperar solo 1 punto de organización por turno.
+
+A nivel de juego funciona como un contador asociado a cada unidad donde reflejaremos la pérdida de puntos de organización de una unidad.
+
+Al realizar acciones, sufrir fuego enemigo, sufrir bajas u otras situaciones del campo de batalla la unidad perderá puntos de organización.
+
+Las unidades de oficiales y suboficiales podrán contribuir a la recuperación de organización de la unidad representando su capacidad de liderazgo y toma de decisiones.
+
+// La organización de una unidad en un instante determina las capacidades combativas de esta y su capacidad para realizar acciones tales como disparar, cargar o maniobrar.
+
+// Unidades bien entrenadas y experimentadas mantendrán niveles de organización más altos, mientras que unidades con poca experiencia o que hayan sufrido bajas importantes verán su organización reducida.
+
+Cuando una unidad realiza determinadas acciones o sufre determinadas situaciones en el campo de batalla, esta podrá perder puntos de organización en función del resultado de una tirada de pericia.
 
 Hay varios aspectos que afectan negativamente a la organización de la unidad tales como:
 
@@ -16,11 +48,49 @@ Hay varios aspectos que afectan negativamente a la organización de la unidad ta
 
 Durante la fase de mantenimiento cada unidad recuperará una cantidad de puntos de organización dependiendo del valor indicado en su perfil así como de otros factores externos.
 
-La organización se podrá ir recuperando en las fases de mantenimiento en función de las capacidades de los oficiales y suboficiales de la unidad, experiencia y otros valores establecidos del perfil de la unidad.
+// La organización se podrá ir recuperando en las fases de mantenimiento en función de las capacidades de los oficiales y suboficiales de la unidad, experiencia y otros valores establecidos del perfil de la unidad.
 
-## TODO - Consideraciones de diseño
+## Bajas (Casualties)
+
+A diferencia de la organización, las bajas de una unidad representan el número de bajas no recuperables sufridas por una unidad de infantería ya sean muertos, heridos o simplemente en un estado de shock emocional incapacitante.
+
+El valor de organización de una unidad nunca podrá ser superior al número de bajas sufridas por la unidad. Por ejemplo, si una unidad de infantería sufre 3 bajas, el valor máximo de organización que podrá tener esta unidad será 3.
+
+## Pericia (Proficiency)
+
+Este valor representa la capacidad de una unidad para realizar acciones de forma cohesionada y efectiva. El valor de competencia de una unidad se representará como un valor numérico que se usará para ver si al realizar una acción la unidad pierde puntos de organización o no.
+
+[NOTE]
+====
+*Ejemplo*
+
+Una unidad entrenada de la Wehrmacht podría tener un valor de pericia de 3+ de modo que cuando realice una acción, con una tirada de D6, si el resultado es 3 o más la unidad no pierde puntos de organización, pero si el resultado es 2 o menos la unidad pierde X punto de organización en función del tipo de acción.
+====
+
+La tirada de chequeo de pericia sólo deberá llevarse a cabo cuando la unidad cambie la acción que está realizando en ese momento. Por ejemplo, una unidad de infantería puede declarar una acción de avance hacia una determinada posición que puede llevarle varios turnos. En ese caso sólo necesitará realizar la tirada de pericia en el momento de declarar la acción, pero no en los turnos siguientes mientras siga realizando la misma acción.
+
+## Retales del ejército
+
+Tanto en la construcción de la lista como resultado de la partida podremos encontrarnos con unidades que no tienen una capacidad organizativa completa.
+
+Una unidad que pierde su cadena de mando (o que no la tenía al comienzo de la partida) se considerará un retal del ejército y tendrá tasas de recuperación de la organización limitadas.
+
+Una unidad que haya perdido su cadena de mando podrá ser integrada dentro de otra cadena de mando si la unidad es del mismo tipo. Por ejemplo, en una carga frontal del Ejercíto Rojo muchas escuadras pueden sufrid bajas en el pelotón del que forman parte pero un Sargento cercano podría tomar el mando de esta escuadra para sustituir una escuadra que haya causado baja.
+
+[NOTE]
+====
+
+Para mantener una coherencia histórica en la construcción de listas y evitar listas extremas (llevo 5 Elefants y apoyo aereo cercano o 20 ISU-152), estas unidades que no están integradas dentro de la estructura del ejército seguirán teniendo unos perfil de estadísticas de unidad muy elevados pero no estarán muy cohesionados dentro de lo que es la estructura del ejército.
+
+¿Quién no quiere meter un Konigstiger en la lista?
+
+====
+
+## Consideraciones de diseño
 
 * Considerar la organización a nivel de escuadra o sección.
 * Representar la organización de la unidad de 1-6 con un dado azul al lado de cada unidad.
 * Tablas de bonus de organización a diferentes tipos de acciones.
 * Definir modo de recuperación de organización en función de la experiencia y otros factores (por ejemplo +D2, +D3+1, +D6).
+
+WARNING: Borrador en desarrollo.

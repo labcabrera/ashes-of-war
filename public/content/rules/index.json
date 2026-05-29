@@ -44,6 +44,14 @@
       ]
     },
     {
+      "id": "organizacion",
+      "titleKey": "rules.chapter.organization",
+      "files": {
+        "en": "/content/rules/es/organization.adoc",
+        "es": "/content/rules/es/organization.adoc"
+      }
+    },
+    {
       "id": "round",
       "titleKey": "rules.chapter.round",
       "files": {

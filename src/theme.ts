@@ -20,6 +20,28 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontSize: 16,
+    body1: {
+      fontSize: '1rem',
+      lineHeight: 1.7,
+    },
+    body2: {
+      fontSize: '0.95rem',
+      lineHeight: 1.65,
+    },
+    button: {
+      fontSize: '0.95rem',
+      textTransform: 'none',
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          fontSize: '17px',
+        },
+      },
+    },
   },
 });
 
