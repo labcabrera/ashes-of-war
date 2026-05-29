@@ -31,6 +31,28 @@
     "cost": "Points",
     "all": "All"
   },
+  "footer": {
+    "project": {
+      "title": "Ashes of War",
+      "description": "An open-source tabletop strategy project for players interested in tactical wargames and the history of the Second World War.",
+      "nonProfit": "This is an open, non-profit initiative created for hobbyists, scenario designers, and strategy-game enthusiasts."
+    },
+    "links": {
+      "title": "Useful links",
+      "rules": "Rules",
+      "units": "Unit catalogue",
+      "armyBuilder": "Army builder",
+      "wiki": "Historical wiki",
+      "source": "Source code"
+    },
+    "legal": {
+      "title": "Legal information",
+      "disclaimer": "Ashes of War is an independent fan project and is not affiliated with any commercial publisher, military institution, museum, or official historical body.",
+      "historical": "References to historical units, armies, weapons, and events are used for educational, documentary, and game-design purposes."
+    },
+    "about": "Created as an open rules system for strategy-game fans and Second World War history enthusiasts.",
+    "copyright": "© {{year}} Ashes of War"
+  },
   "rules": {
     "title": "Rules",
     "chapters": "Chapters",

@@ -5,6 +5,7 @@
 import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import AppHeader from './AppHeader';
+import AppFooter from './AppFooter';
 
 export default function AppLayout() {
   return (
@@ -13,6 +14,7 @@ export default function AppLayout() {
       <Box component="main" sx={{ flex: 1, p: 2 }}>
         <Outlet />
       </Box>
+      <AppFooter />
     </Box>
   );
 }
