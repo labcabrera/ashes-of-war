@@ -2,8 +2,9 @@
 .codex
 .github
 .specify
-.vscode
-specs
-node_modules
-dist
 .vite
+.vscode
+dist
+node_modules
+specs
+.env.aws

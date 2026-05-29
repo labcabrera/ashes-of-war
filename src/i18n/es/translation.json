@@ -10,7 +10,40 @@
   "home": {
     "title": "Ashes of War",
     "subtitle": "Compañero de estrategia de mesa de la IIGM",
-    "welcome": "Bienvenido, comandante. Elige tu misión desde la navegación superior."
+    "welcome": "Bienvenido, comandante. Elige tu misión desde la navegación superior.",
+    "hero": {
+      "openSource": "Sistema de reglas open-source",
+      "nonProfit": "Proyecto aficionado sin ánimo de lucro",
+      "lead": "Juego de miniaturas ambientado en la Segunda Guerra Mundial para librar batallas a nivel táctico.",
+      "primaryAction": "Leer reglamento",
+      "secondaryAction": "Explorar unidades"
+    },
+    "features": [
+      {
+        "title": "Variedad de unidades",
+        "text": "Dentro del juego encontraremos un gran número de unidades de infantería, vehículos, artillería y apoyo logístico, cada una con su propio perfil de juego y referencias históricas."
+      },
+      {
+        "title": "Datos listos para jugar",
+        "text": "Los catálogos de unidades y armas conectan sabor histórico con perfiles utilizables directamente durante la partida."
+      },
+      {
+        "title": "Partidas y campañas",
+        "text": "El sistema de juego está diseñado para jugar partidas independientes como para jugar una campaña donde cada comandante tiene que gestionar astutamente sus recursos."
+      }
+    ],
+    "indie": {
+      "eyebrow": "Juego independiente de estrategia",
+      "title": "Diseñado en abierto, para la mesa",
+      "text": "Ashes of War no es un producto comercial. Es un proyecto abierto en desarrollo para jugadores que disfrutan de los wargames y la historia de la Segunda Guerra Mundial.",
+      "sourceAction": "Ver repositorio"
+    },
+    "next": {
+      "title": "Crea tu ejército, busca un amigo y prepara la mesa de juego",
+      "text": "Consulta el reglamento, compara vehículos y armas, y después esboza una estructura de ejército para tu próximo escenario.",
+      "armyBuilder": "Abrir constructor",
+      "wiki": "Leer wiki histórica"
+    }
   },
   "common": {
     "loading": "Cargando…",
@@ -204,6 +237,16 @@
   "army": {
     "title": "Constructor de Ejércitos",
     "selectType": "Seleccionar tipo de ejército",
+    "faction": {
+      "label": "Facción",
+      "german": "Alemán (Wehrmacht)",
+      "soviet": "Soviético (Ejército Rojo)",
+      "british": "Británico",
+      "american": "Americano"
+    },
+    "year": {
+      "label": "Año"
+    },
     "budget": {
       "title": "Presupuesto",
       "points": "Puntos",

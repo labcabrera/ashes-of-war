@@ -1,13 +1,9 @@
 # Misiones
 
+
+WARNING: Borrador en desarrollo.
+
 * Aniquilación
-
-* Ruptura del frente
-
+* Ruptura del frente / defensa de posición
 * Destrucción de objetivo
-
 * Recuperación de inteligencia
-
-
-
-TODO

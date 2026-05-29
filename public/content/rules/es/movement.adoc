@@ -1,5 +1,7 @@
 = Movimiento
 
+WARNING: Borrador en desarrollo.
+
 == Valorese de movimiento
 
 Cada unidad tiene definido en su perfil los siguientes valores de movimiento:

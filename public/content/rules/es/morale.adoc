@@ -1,5 +1,7 @@
 = Moral
 
+WARNING: Borrador en desarrollo.
+
 Cada unidad comienza la partida con un D10 de moral definido por su perfil. Este valor puede modificarse por el tipo de partida y el desgaste. Utilizaremos un dado al lado de la unidad para llevar este contador.
 Cuando una unidad recibe fuego o a su alrededor otras unidades amigas sufren daño se restará el valor al dado. Del mismo modo, cada turno recuperará un D3/D6 puntos de moral.
 

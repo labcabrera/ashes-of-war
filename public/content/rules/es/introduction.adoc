@@ -1,5 +1,7 @@
 = Introducción
 
+WARNING: Borrador en desarrollo.
+
 *Ashes of War* es un juego de miniaturas táctico ambientado en la Segunda Guerra Mundial ajustado a una escala 1:100.
 
 En esta guía de juego, cada jugador asume el papel de comandante de una o varias compañías de combate y a través de un sistema de juego por turnos dirige sus unidades en el campo de batalla. El juego se centra en la gestión de recursos, la toma de decisiones estratégicas y la ejecución táctica para lograr los objetivos establecidos en cada escenario.
@@ -7,5 +9,3 @@ En esta guía de juego, cada jugador asume el papel de comandante de una o varia
 == Acerca de las reglas y la escala
 
 Aunque las reglas de juego y los perfiles de las unidades se han creado a partir de los valores reales, de cara a mejorar la jugabilidad algunos de estos factores se han corregido aplicando una compresión espacial teniendo en cuenta las limitaciones de espacio en un tablero de juego. De este modo, por ejemplo, a escala 1:100 el cañón de un Tiger I tendría un alcance operativo de 15 metros (1.500 metros en escala real), unas dimensiones un poco complicadas de aplicar en la mesa de juego de nuestro salón... a menos que alquiles un campo de fúbol para jugar la partida.
-
-WARNING: Borrador en desarrollo.

@@ -3,10 +3,9 @@
  * Declares application routes and wraps them with the shared AppLayout shell.
  */
 import { lazy } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import AppLayout from './components/layout/AppLayout';
 import HomePage from './pages/HomePage';
-import RulesPage from './pages/RulesPage';
 import RulesChapterPage from './pages/RulesChapterPage';
 import UnitsPage from './pages/UnitsPage';
 import UnitFullPage from './pages/UnitFullPage';
@@ -22,7 +21,7 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'rules', element: <RulesPage /> },
+      { path: 'rules', element: <Navigate to="/rules/introduction" replace /> },
       { path: 'rules/:chapterId', element: <RulesChapterPage /> },
       { path: 'rules/:chapterId/:subchapterId', element: <RulesChapterPage /> },
       { path: 'units', element: <UnitsPage /> },

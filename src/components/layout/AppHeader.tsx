@@ -1,6 +1,7 @@
 /**
  * AppHeader — top navigation bar with route links and language switcher.
- * Navigation: Home, Rules, Units, Army Builder, Campaign, Wiki.
+ * Navigation: Rules, Units, Army Builder, Campaign, Wiki.
+ * The "AoW" title links to the home page.
  * Language switcher persists selection to localStorage key "aow:i18n-locale".
  */
 import { AppBar, Toolbar, Typography, Button, ToggleButton, ToggleButtonGroup, Box } from '@mui/material';
@@ -9,8 +10,7 @@ import { useTranslation } from 'react-i18next';
 import { LOCALE_KEY } from '../../i18n';
 
 const NAV_LINKS = [
-  { to: '/', label: 'nav.home', end: true },
-  { to: '/rules', label: 'nav.rules', end: false },
+  { to: '/rules/introduction', label: 'nav.rules', end: false },
   { to: '/units', label: 'nav.units', end: false },
   { to: '/army-builder', label: 'nav.armyBuilder', end: false },
   { to: '/campaign', label: 'nav.campaign', end: false },
@@ -31,8 +31,9 @@ export default function AppHeader() {
       <Toolbar sx={{ gap: 1, flexWrap: 'wrap' }}>
         <Typography
           variant="h6"
-          component="div"
-          sx={{ mr: 2, fontWeight: 700, letterSpacing: 1 }}
+          component={NavLink}
+          to="/"
+          sx={{ mr: 2, fontWeight: 700, letterSpacing: 1, color: 'inherit', textDecoration: 'none' }}
         >
           AoW
         </Typography>

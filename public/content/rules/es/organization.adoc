@@ -1,5 +1,7 @@
 # Organización
 
+WARNING: Borrador en desarrollo.
+
 La organización de una unidad determina el factor combativo de esta y su capacidad para realizar acciones tales como disparar, cargar o maniobrar.
 
 Unidades bien entrenadas y experimentadas mantendrán niveles de organización más altos, mientras que unidades con poca experiencia o que hayan sufrido bajas importantes verán su organización reducida.

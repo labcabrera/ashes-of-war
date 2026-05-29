@@ -1,5 +1,7 @@
 = Infantería
 
+WARNING: Borrador en desarrollo.
+
 Las escuadras de infantería son el núcleo de la mayoría de fuerzas en Ashes of War. Son flexibles, relativamente económicas y fiables para tomar o mantener objetivos.
 
 == Rol en batalla

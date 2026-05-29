@@ -20,6 +20,8 @@ export interface ArmyType {
   resourcePools: ResourcePool[];
   /** Optional faction filter applied when building this army. */
   faction?: string;
+  /** Year range this army type covers. */
+  yearRange?: { start: number; end: number };
 }
 
 /** Kinds of hierarchical organization elements available in the visual editor. */

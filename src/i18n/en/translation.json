@@ -10,7 +10,40 @@
   "home": {
     "title": "Ashes of War",
     "subtitle": "A WWII tabletop strategy companion",
-    "welcome": "Welcome, commander. Choose your mission from the navigation above."
+    "welcome": "Welcome, commander. Choose your mission from the navigation above.",
+    "hero": {
+      "openSource": "Open-source rules system",
+      "nonProfit": "Non-profit fan project",
+      "lead": "A miniature wargame set in World War II to fight battles at the tactical level.",
+      "primaryAction": "Read the rules",
+      "secondaryAction": "Explore units"
+    },
+    "features": [
+      {
+        "title": "Armour that matters",
+        "text": "Vehicles use front, side, rear, and exposed armour profiles so positioning and flanking become part of the game."
+      },
+      {
+        "title": "Playable reference data",
+        "text": "Unit and weapon catalogues connect historical flavour with profiles that can be used directly at the table."
+      },
+      {
+        "title": "Built for scenarios",
+        "text": "The project is shaped around squads, vehicles, artillery, command structure, and campaign-friendly army lists."
+      }
+    ],
+    "indie": {
+      "eyebrow": "Independent strategy game",
+      "title": "Designed in the open, for the table",
+      "text": "Ashes of War is not a commercial product. It is a living, open project for players who enjoy historical research, tactical choices, and adaptable rules they can inspect, discuss, and improve.",
+      "sourceAction": "View the repository"
+    },
+    "next": {
+      "title": "Start with a force, a mission, and a table",
+      "text": "Browse the rules, compare vehicles and weapons, then sketch an army structure for your next scenario.",
+      "armyBuilder": "Open army builder",
+      "wiki": "Read the historical wiki"
+    }
   },
   "common": {
     "loading": "Loading…",
@@ -192,6 +225,16 @@
   "army": {
     "title": "Army Builder",
     "selectType": "Select Army Type",
+    "faction": {
+      "label": "Faction",
+      "german": "German (Wehrmacht)",
+      "soviet": "Soviet (Red Army)",
+      "british": "British",
+      "american": "American"
+    },
+    "year": {
+      "label": "Year"
+    },
     "budget": {
       "title": "Budget",
       "points": "Points",
