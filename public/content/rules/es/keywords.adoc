@@ -1,0 +1,6 @@
+# Keywords
+
+[unreliable]
+## Unreliable X
+
+Al realizar un movimiento de velocidad apresurada la unidad deberá tirar un D6. Si el resultado es igual o inferior a X la unidad deberá tirar un chequeo de avería mecánica.

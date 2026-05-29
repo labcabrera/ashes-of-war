@@ -1,5 +1,9 @@
 = Turnos
 
+WARNING: Considerar sistemas de activación simultánea.
+
+WARNING: Considerar cambio de fases por activación completa de una unidad (mover, hacer acciones, disparar, etc) en lugar de fases globales para todas las unidades.
+
 Cada turno representa una secuencia de 10 sg de combate.
 
 * Fase de moral (comprobar el estado de cada unidad afectada por el combate)

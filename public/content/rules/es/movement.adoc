@@ -1,10 +1,45 @@
 = Movimiento
 
+== Valorese de movimiento
 
-Cada unidad tendrá tres perfiles de movimiento:
-Movimiento normal en el que pueden realizar acciones sin problemas (excepto los tanques y unidades que necesiten estar estáticas para disparar como los cañones AT)
-Movimiento apresurado: velocidad de la infantería para realizar disparos con baja precisión para realizar asaltos y maniobrar.
-Correr: a esta velocidad las unidades sólo podrán correr lo más rápido que puedan sin realizar ninguna otra acción y serán más vulnerables al fuego recibido al no contar con coberturas posicionales.
+Cada unidad tiene definido en su perfil los siguientes valores de movimiento:
+
+[cols="1,3"]
+|===
+
+a|*Tactico*
+|Velocidad a la que una unidad puede moverse realizando acciones como disparar, asaltar, etc. Esta es la velocidad a la que se moverán normalmente las unidades.
+
+a|*Off-road*
+|Velocidad a la que un vehículo puede moverse por terreno difícil o sin carretera. Esta velocidad se aplica a vehículos como tanques o artillería que pueden tener dificultades para moverse por terreno accidentado.
+
+a|*Crucero*
+|Velocidad de movimiento a la que una unidad puede moverse sin realizar ninguna acción de forma segura. Esta velocidad se utiliza para maniobrar, asaltar o correr.
+
+a|*Apresurado*
+|Velocidad máxima a la que una unidad puede moverse sin realizar ninguna acción pero con una mayor vulnerabilidad al fuego enemigo. Esta velocidad se utiliza para maniobrar, asaltar o correr en situaciones de emergencia. Esta acción tendrá un impacto negativo en la organización de la unidad y en determinados vehículos puede suponer un riesgo de avería.
+
+|===
+
+== Keywords
+
+* *Unreliable*: aumenta el riesgo de avería en vehículos al moverse a velocidad de crucero o apresurada.
+
+* *Stationary*: la unidad no puede moverse como por ejemplo un emplazamiento de artillería.
+
+* *Off-road*: el vehículo puede moverse a su velocidad off-road sin penalización por terreno difícil.
+
+
+
+
+
+
+// Cada unidad tendrá tres perfiles de movimiento:
+// Movimiento normal en el que pueden realizar acciones sin problemas (excepto los tanques y unidades que necesiten estar estáticas para disparar como los cañones AT)
+// Movimiento apresurado: velocidad de la infantería para realizar disparos con baja precisión para realizar asaltos y maniobrar.
+// Correr: a esta velocidad las unidades sólo podrán correr lo más rápido que puedan sin realizar ninguna otra acción y serán más vulnerables al fuego recibido al no contar con coberturas posicionales.
+
+=== Ejemplos de velocidades de movimiento reales
 
 [cols="1,1,1,1", options="header"]
 |===

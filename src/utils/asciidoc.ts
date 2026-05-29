@@ -2,6 +2,19 @@ import Asciidoctor from '@asciidoctor/core';
 
 const asciidoctor = Asciidoctor();
 
+// Mark links whose href is an internal absolute path (/...) so that the
+// useRouterLinks hook can intercept them via event delegation.
+asciidoctor.Extensions.register(function () {
+  this.postprocessor(function () {
+    this.process(function (_doc, output) {
+      return output.replace(
+        /<a ([^>]*)href="(\/[^"]+)"([^>]*)>/g,
+        '<a $1href="$2"$3 data-router-link="true">',
+      );
+    });
+  });
+});
+
 /**
  * Converts an AsciiDoc source string to an HTML string using the official
  * Asciidoctor.js library. Safe mode is used to restrict potentially dangerous

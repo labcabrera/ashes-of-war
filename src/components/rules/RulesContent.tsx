@@ -12,6 +12,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { RulesChapter } from '../../types/rules';
 import { convertToHtml, asciidocSx } from '../../utils/asciidoc';
+import { useRouterLinks } from '../../hooks/useRouterLinks';
 
 interface Props {
   chapter: RulesChapter;
@@ -20,6 +21,7 @@ interface Props {
 
 export default function RulesContent({ chapter, basePath }: Props) {
   const { i18n, t } = useTranslation();
+  const contentRef = useRouterLinks();
 
   type ChapterState = { key: string; content: string | null; error: boolean };
   const [chapterState, setChapterState] = useState<ChapterState>({ key: '', content: null, error: false });
@@ -71,7 +73,7 @@ export default function RulesContent({ chapter, basePath }: Props) {
 
   return (
     <Box sx={{ maxWidth: 880, px: 2, pb: 4 }}>
-      <Box sx={asciidocSx} dangerouslySetInnerHTML={{ __html: html }} />
+      <Box ref={contentRef} sx={asciidocSx} dangerouslySetInnerHTML={{ __html: html }} />
       {chapter.children && chapter.children.length > 0 && (
         <Box sx={{ mt: 3 }}>
           <Typography variant="h6" gutterBottom>

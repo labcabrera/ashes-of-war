@@ -90,6 +90,14 @@
         "en": "/content/rules/es/missions.adoc",
         "es": "/content/rules/es/missions.adoc"
       }
+    },
+    {
+      "id": "keywords",
+      "titleKey": "keywords",
+      "files": {
+        "en": "/content/rules/es/keywords.adoc",
+        "es": "/content/rules/es/keywords.adoc"
+      }
     }
   ]
 }

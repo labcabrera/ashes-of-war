@@ -7,6 +7,7 @@ import { Box, CircularProgress, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { WikiArticle } from '../../types/wiki';
 import { convertToHtml, asciidocSx } from '../../utils/asciidoc';
+import { useRouterLinks } from '../../hooks/useRouterLinks';
 
 interface Props {
   article: WikiArticle;
@@ -15,6 +16,7 @@ interface Props {
 export default function WikiContent({ article }: Props) {
   const { i18n, t } = useTranslation();
   const language = i18n.resolvedLanguage ?? 'es';
+  const contentRef = useRouterLinks();
   const articleKey = `${article.id}-${language}`;
   const [state, setState] = useState<{ key: string; content: string | null; error: boolean }>({
     key: '',
@@ -52,7 +54,7 @@ export default function WikiContent({ article }: Props) {
 
   return (
     <Box component="article" sx={{ maxWidth: 900, px: { xs: 1, sm: 2 }, pb: 4 }}>
-      <Box sx={asciidocSx} dangerouslySetInnerHTML={{ __html: html }} />
+      <Box ref={contentRef} sx={asciidocSx} dangerouslySetInnerHTML={{ __html: html }} />
     </Box>
   );
 }
