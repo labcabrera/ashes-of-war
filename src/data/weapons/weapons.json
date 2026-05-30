@@ -223,6 +223,37 @@
       "imageUrl": "/images/weapons/soviet-ppsh-41.jpg"
     },
     {
+      "id": "soviet-maxim-m1910",
+      "name": "Maxim M1910",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 8,
+          "hitOn": 7,
+          "rangeModifier": "35/20/-1",
+          "suppressionModifier": -2,
+          "characteristics": [
+            "reliability-3-plus"
+          ]
+        },
+        {
+          "id": "sustained",
+          "name": "Sustained fire",
+          "shots": 12,
+          "hitOn": 8,
+          "rangeModifier": "35/20/-1",
+          "suppressionModifier": -2,
+          "characteristics": [
+            "reliability-3-plus",
+            "overheat"
+          ]
+        }
+      ],
+      "imageUrl": "/images/weapons/soviet-maxim-m1910.jpg"
+    },
+    {
       "id": "german-kwk-30-l55",
       "name": "2 cm KwK 30 L/55",
       "type": "hard",

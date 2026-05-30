@@ -2082,6 +2082,51 @@
       "imageUrl": "/images/units/soviet-assault-squad.jpg"
     },
     {
+      "id": "soviet-heavy-mg-team",
+      "name": "Red Army Heavy MG Team",
+      "type": "infantry",
+      "faction": "soviet",
+      "from": 1941,
+      "to": 1945,
+      "cost": 11,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 24,
+          "crossCountry": 18,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 5,
+      "weapons": [
+        {
+          "id": "soviet-maxim-m1910",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "soviet-mosin-nagant-m1891-30",
+          "count": 4,
+          "type": "normal"
+        }
+      ],
+      "imageUrl": "/images/units/soviet-heavy-mg-team.jpg"
+    },
+    {
       "id": "soviet-t-34-76-1940",
       "name": "T-34-76 (1940)",
       "type": "tank",
