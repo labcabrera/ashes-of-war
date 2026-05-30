@@ -169,6 +169,12 @@
       "armourNotes": "Notas",
       "resources": "Costes de recursos",
       "availability": "Disponibilidad",
+      "thresholds": "Umbrales",
+      "combatants": "Combatientes",
+      "organizationThreshold": "Organización",
+      "organizationThresholdShort": "Org",
+      "casualtiesThreshold": "Bajas",
+      "casualtiesThresholdShort": "Bajas",
       "movement": {
         "title": "Movimiento",
         "speed": "Velocidad",

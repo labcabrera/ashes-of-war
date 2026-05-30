@@ -86,6 +86,8 @@ interface BaseUnitFields {
   cost: number;
   /** Required movement ratings for the unit. */
   movement: MovementProfile;
+  /** Organization loss threshold used by morale and disruption rules. */
+  organizationThreshold: number;
   /** Optional resource costs keyed by ResourcePool.key. */
   resourceCosts?: Record<string, number>;
   /** Optional public image displayed in the unit detail panel. */
@@ -97,6 +99,8 @@ interface BaseUnitFields {
 /** Infantry roster entries organised into required bases. */
 export interface InfantryUnit extends BaseUnitFields {
   type: 'infantry';
+  combatants: number;
+  casualtiesThreshold: number;
   bases: InfantryBase[];
   weapons?: never;
   profile?: never;
@@ -106,6 +110,8 @@ export interface InfantryUnit extends BaseUnitFields {
 export interface VehicleUnit extends BaseUnitFields {
   type: Exclude<UnitType, 'infantry'>;
   bases?: never;
+  /** Required for non-vehicle support units that do not have an armour profile. */
+  casualtiesThreshold?: number;
   /** Optional weapon assignments resolved against the weapon catalogue. */
   weapons?: UnitWeapon[];
   /** Optional armour profile for armoured vehicle entries. */

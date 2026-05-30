@@ -156,6 +156,12 @@
       "armourNotes": "Notes",
       "resources": "Resource Costs",
       "availability": "Availability",
+      "thresholds": "Thresholds",
+      "combatants": "Combatants",
+      "organizationThreshold": "Organization",
+      "organizationThresholdShort": "Org",
+      "casualtiesThreshold": "Casualties",
+      "casualtiesThresholdShort": "Cas",
       "movement": {
         "title": "Movement",
         "speed": "Speed",

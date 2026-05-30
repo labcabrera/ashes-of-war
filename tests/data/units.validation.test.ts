@@ -160,6 +160,9 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
   if (!isNonNegativeInteger(value.cost)) {
     errors.push(`${path}.cost must be a non-negative integer.`);
   }
+  if (!isPositiveInteger(value.organizationThreshold)) {
+    errors.push(`${path}.organizationThreshold must be a positive integer.`);
+  }
   errors.push(...validateMovement(value.movement, `${path}.movement`));
   if (!Number.isInteger(value.from) || !Number.isInteger(value.to)) {
     errors.push(`${path}.from and ${path}.to must be integer years.`);
@@ -189,6 +192,12 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
   }
 
   if (value.type === 'infantry') {
+    if (!isPositiveInteger(value.combatants)) {
+      errors.push(`${path}.combatants must be a positive integer for infantry units.`);
+    }
+    if (!isPositiveInteger(value.casualtiesThreshold)) {
+      errors.push(`${path}.casualtiesThreshold must be a positive integer for non-vehicle units.`);
+    }
     if (!Array.isArray(value.bases) || value.bases.length === 0) {
       errors.push(`${path}.bases must contain at least one infantry base.`);
     } else {
@@ -211,6 +220,16 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
     if (value.bases !== undefined) {
       errors.push(`${path}.bases is only supported for infantry units.`);
     }
+    if (value.combatants !== undefined) {
+      errors.push(`${path}.combatants is only supported for infantry units.`);
+    }
+    if (value.profile === undefined) {
+      if (!isPositiveInteger(value.casualtiesThreshold)) {
+        errors.push(`${path}.casualtiesThreshold must be a positive integer for non-vehicle units.`);
+      }
+    } else if (value.casualtiesThreshold !== undefined) {
+      errors.push(`${path}.casualtiesThreshold is only supported for non-vehicle units.`);
+    }
     errors.push(...validateWeaponAssignments(value.weapons, `${path}.weapons`, weaponIds, false));
   }
 
@@ -223,8 +242,8 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
   }
 
   const errors: string[] = [];
-  if (catalogue._version !== 5) {
-    errors.push('Unit catalogue _version must be 5.');
+  if (catalogue._version !== 7) {
+    errors.push('Unit catalogue _version must be 7.');
   }
   if (!Array.isArray(catalogue.units)) {
     errors.push('Unit catalogue units must be an array.');
@@ -256,7 +275,7 @@ describe('static unit catalogue validation', () => {
 
   it('reports multiple model and weapon-reference errors together', () => {
     const invalidCatalogue = {
-      _version: 5,
+      _version: 7,
       units: [
         {
           id: 'broken-infantry',
@@ -266,6 +285,9 @@ describe('static unit catalogue validation', () => {
           from: 1945,
           to: 1941,
           cost: 1,
+          organizationThreshold: 0,
+          combatants: 0,
+          casualtiesThreshold: 0,
           movement: {
             tactical: { road: -1, crossCountry: 6, rough: 3 },
             cruise: { road: 16, crossCountry: 12, rough: 6 },
@@ -281,6 +303,9 @@ describe('static unit catalogue validation', () => {
     expect(errors).toEqual(
       expect.arrayContaining([
         'units[0].name must be a non-empty string.',
+        'units[0].organizationThreshold must be a positive integer.',
+        'units[0].combatants must be a positive integer for infantry units.',
+        'units[0].casualtiesThreshold must be a positive integer for non-vehicle units.',
         'units[0].movement.tactical.road must be a non-negative number.',
         'units[0].from must be less than or equal to units[0].to.',
         'units[0].bases[0].members must be a positive integer.',

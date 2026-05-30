@@ -58,6 +58,10 @@ function movementValue(value: number) {
   return `${value}'`;
 }
 
+function isNonVehicleUnit(unit: Unit) {
+  return !unit.profile;
+}
+
 export default function UnitDetail({ unit, weapons, onClose }: Props) {
   const { t } = useTranslation();
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
@@ -126,6 +130,25 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
               <Chip label={t(`units.types.${unit.type}`)} size="small" />
               <Chip label={`${unit.cost} pts`} color="secondary" size="small" />
               <Chip label={`${unit.from}-${unit.to}`} variant="outlined" size="small" />
+              {unit.type === 'infantry' && (
+                <Chip
+                  label={`${unit.combatants} ${t('units.detail.combatants')}`}
+                  variant="outlined"
+                  size="small"
+                />
+              )}
+              <Chip
+                label={`${t('units.detail.organizationThresholdShort')} ${unit.organizationThreshold}`}
+                variant="outlined"
+                size="small"
+              />
+              {isNonVehicleUnit(unit) && (
+                <Chip
+                  label={`${t('units.detail.casualtiesThresholdShort')} ${unit.casualtiesThreshold}`}
+                  variant="outlined"
+                  size="small"
+                />
+              )}
             </Stack>
 
             <Stack direction="row" spacing={1} sx={{ mb: 1.5 }}>

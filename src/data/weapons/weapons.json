@@ -128,6 +128,32 @@
       ]
     },
     {
+      "id": "german-fg-42",
+      "name": "FG 42",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "assault",
+          "name": "Assault",
+          "shots": 4,
+          "hitOn": 6,
+          "rangeModifier": "20/20/-2",
+          "suppressionModifier": -1,
+          "characteristics": ["reliability-3-plus"]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 2,
+          "hitOn": 5,
+          "rangeModifier": "40/20/-1",
+          "suppressionModifier": 0,
+          "characteristics": ["reliability-3-plus"]
+        }
+      ],
+      "imageUrl": "/images/weapons/german-fg-42.jpg"
+    },
+    {
       "id": "german-kwk-30-l55",
       "name": "2 cm KwK 30 L/55",
       "type": "hard",

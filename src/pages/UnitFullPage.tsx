@@ -78,6 +78,10 @@ function movementValue(value: number) {
   return `${value}'`;
 }
 
+function isNonVehicleUnit(unit: Unit) {
+  return !unit.profile;
+}
+
 function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
   const { t } = useTranslation();
 
@@ -274,6 +278,31 @@ export default function UnitFullPage() {
               </Stack>
             </>
           )}
+
+          <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
+            {t('units.detail.thresholds')}
+          </Typography>
+          <Stack direction="row" spacing={1} useFlexGap sx={{ mb: 3, flexWrap: 'wrap' }}>
+            <Chip
+              label={`${t('units.detail.organizationThreshold')}: ${unit.organizationThreshold}`}
+              color="secondary"
+              variant="outlined"
+            />
+            {isNonVehicleUnit(unit) && (
+              <Chip
+                label={`${t('units.detail.casualtiesThreshold')}: ${unit.casualtiesThreshold}`}
+                color="secondary"
+                variant="outlined"
+              />
+            )}
+            {unit.type === 'infantry' && (
+              <Chip
+                label={`${t('units.detail.combatants')}: ${unit.combatants}`}
+                color="secondary"
+                variant="outlined"
+              />
+            )}
+          </Stack>
 
           {unit.profile && (
             <>
