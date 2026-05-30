@@ -576,7 +576,7 @@
       "organizationThreshold": 10
     },
     {
-      "id": "german-stug-iii-a",
+      "id": "german-stug-iii-a-e",
       "name": "StuG III Ausf. A-E",
       "type": "assault-gun",
       "faction": "german",
@@ -1418,69 +1418,8 @@
       "organizationThreshold": 10
     },
     {
-      "id": "german-hornisse",
-      "name": "Hornisse",
-      "type": "tank-destroyer",
-      "faction": "german",
-      "from": 1943,
-      "to": 1944,
-      "cost": 45,
-      "movement": {
-        "tactical": {
-          "road": 15,
-          "crossCountry": 11,
-          "rough": 6
-        },
-        "cruise": {
-          "road": 30,
-          "crossCountry": 23,
-          "rough": 11
-        },
-        "dash": {
-          "road": 42,
-          "crossCountry": 32,
-          "rough": 16
-        }
-      },
-      "resourceCosts": {
-        "fuel": 10,
-        "logistics": 10
-      },
-      "profile": {
-        "front": {
-          "value": 30,
-          "armorMM": 30,
-          "armorInclination": 0
-        },
-        "side": {
-          "value": 15,
-          "armorMM": 15,
-          "armorInclination": 0
-        },
-        "rear": {
-          "value": 10,
-          "armorMM": 10,
-          "armorInclination": 0
-        },
-        "exposed": {
-          "value": 5,
-          "armorMM": 5,
-          "armorInclination": 0
-        }
-      },
-      "weapons": [
-        {
-          "id": "german-kwk-43-l71",
-          "count": 1,
-          "type": "hull"
-        }
-      ],
-      "imageUrl": "/images/units/german-hornisse.jpg",
-      "organizationThreshold": 10
-    },
-    {
       "id": "german-nashorn",
-      "name": "Nashorn",
+      "name": "Nashorn (Hornisse)",
       "type": "tank-destroyer",
       "faction": "german",
       "from": 1943,
@@ -2627,8 +2566,8 @@
       "imageUrl": "/images/units/soviet-is-2.jpg"
     },
     {
-      "id": "soviet-artillery-01",
-      "name": "122mm Howitzer Battery",
+      "id": "soviet-122mm-howitzer-m1938",
+      "name": "122 mm howitzer M1938 (M-30)",
       "type": "artillery-towed",
       "faction": "soviet",
       "from": 1941,
@@ -2655,7 +2594,7 @@
         "fuel": 3,
         "logistics": 10
       },
-      "imageUrl": "/images/units/soviet-122mm-howitzer.jpg",
+      "imageUrl": "/images/units/soviet-122mm-howitzer-m1938.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
