@@ -55,6 +55,7 @@ export default function UnitsPage() {
     return [...new Set(all)].sort();
   }, []);
 
+  const catalogueUnits = unitsData.units as unknown as Unit[];
   const weapons = weaponsData.weapons as unknown as Weapon[];
   const selectedWeapon = useMemo(() => {
     const weaponId = searchParams.get('weapon');
@@ -202,7 +203,7 @@ export default function UnitsPage() {
             />
           </Box>
 
-          <WeaponDetail weapon={selectedWeapon} />
+          <WeaponDetail weapon={selectedWeapon} units={catalogueUnits} />
         </Box>
       )}
     </Box>

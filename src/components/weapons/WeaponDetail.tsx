@@ -3,9 +3,11 @@
  */
 import {
   Box,
+  Button,
   Chip,
   Divider,
   Paper,
+  Stack,
   Table,
   TableBody,
   TableCell,
@@ -15,15 +17,38 @@ import {
   Typography,
 } from '@mui/material';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import type { Unit, UnitWeapon } from '../../types/unit';
 import { Weapon } from '../../types/weapon';
 
 interface Props {
   weapon: Weapon | null;
+  units: Unit[];
 }
 
-export default function WeaponDetail({ weapon }: Props) {
+function weaponAssignments(unit: Unit): UnitWeapon[] {
+  if (unit.type === 'infantry') {
+    return unit.bases.flatMap((base) => base.weapons);
+  }
+
+  return unit.weapons ?? [];
+}
+
+function unitWeaponCount(unit: Unit, weaponId: string) {
+  return weaponAssignments(unit)
+    .filter((assignment) => assignment.id === weaponId)
+    .reduce((total, assignment) => total + assignment.count, 0);
+}
+
+export default function WeaponDetail({ weapon, units }: Props) {
   const { t } = useTranslation();
+  const weaponUnits = weapon
+    ? units
+        .map((unit) => ({ unit, count: unitWeaponCount(unit, weapon.id) }))
+        .filter(({ count }) => count > 0)
+    : [];
 
   return (
     <Paper
@@ -101,6 +126,51 @@ export default function WeaponDetail({ weapon }: Props) {
                 </TableBody>
               </Table>
             </TableContainer>
+
+            <Divider sx={{ my: 2 }} />
+            <Typography variant="subtitle2" gutterBottom>
+              {t('weapons.carriedBy')}
+            </Typography>
+            {weaponUnits.length > 0 ? (
+              <Stack spacing={0.75}>
+                {weaponUnits.map(({ unit, count }) => (
+                  <Button
+                    key={unit.id}
+                    component={RouterLink}
+                    to={`/units/${encodeURIComponent(unit.id)}`}
+                    variant="text"
+                    size="small"
+                    endIcon={<OpenInNewIcon fontSize="small" />}
+                    sx={{
+                      width: '100%',
+                      justifyContent: 'space-between',
+                      textTransform: 'none',
+                      px: 0,
+                      gap: 1,
+                      '& .MuiButton-endIcon': { ml: 0 },
+                    }}
+                  >
+                    <Box
+                      component="span"
+                      sx={{
+                        flex: 1,
+                        minWidth: 0,
+                        overflow: 'hidden',
+                        textAlign: 'left',
+                        textOverflow: 'ellipsis',
+                      }}
+                    >
+                      {unit.name}
+                    </Box>
+                    <Chip label={`x${count}`} size="small" variant="outlined" sx={{ flexShrink: 0 }} />
+                  </Button>
+                ))}
+              </Stack>
+            ) : (
+              <Typography variant="body2" color="text.secondary">
+                {t('weapons.noCarriers')}
+              </Typography>
+            )}
 
             {weapon.profiles.some((profile) => profile.characteristics?.length) && (
               <>

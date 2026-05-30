@@ -11,7 +11,7 @@ export default function AppLayout() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <AppHeader />
-      <Box component="main" sx={{ flex: 1, p: 2 }}>
+      <Box component="main" sx={{ flex: 1, p: { xs: 1.25, sm: 2 } }}>
         <Outlet />
       </Box>
       <AppFooter />

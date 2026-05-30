@@ -1,6 +1,9 @@
 = Acciones
 
+
 WARNING: Borrador en desarrollo.
+
+
 
 * *Órdenes de ataque* (muchas unidades que no tienen orden de atacar no podrán hacerlo a menos que un oficial intermedio les de la orden). Dependiendo de la cantidad de tiempo en la planificación del ataque se tendrá un bonus a las acciones. No es lo mismo gritar: “¡Todos adelante!” que decir: “Cabo X, usted y dos hombres avanzan hasta esa esquina mientras les damos apoyo de cobertura, después Y y Z se acercarán hacia esa ruina y apoyarán con granadas las posiciones de las MGs)”.
 * *Atrincherarse*

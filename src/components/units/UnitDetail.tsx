@@ -54,6 +54,10 @@ function weaponLabel(assignment: UnitWeapon, weapons: Weapon[]) {
   return `${assignment.count} x ${weapon?.name ?? assignment.id}`;
 }
 
+function movementValue(value: number) {
+  return `${value}'`;
+}
+
 export default function UnitDetail({ unit, weapons, onClose }: Props) {
   const { t } = useTranslation();
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
@@ -127,18 +131,18 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
             <Stack direction="row" spacing={1} sx={{ mb: 1.5 }}>
               <Box>
                 <Typography variant="caption" color="text.secondary">
-                  {t('units.detail.movement.maximum')}
+                  {t('units.detail.movement.dash')}
                 </Typography>
                 <Typography variant="body2" sx={{ fontWeight: 700 }}>
-                  {unit.movement.maximum}
+                  {movementValue(unit.movement.dash.road)}
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="caption" color="text.secondary">
-                  {t('units.detail.movement.offRoad')}
+                  {t('units.detail.movement.rough')}
                 </Typography>
                 <Typography variant="body2" sx={{ fontWeight: 700 }}>
-                  {unit.movement.offRoad}
+                  {movementValue(unit.movement.tactical.rough)}
                 </Typography>
               </Box>
             </Stack>

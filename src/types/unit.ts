@@ -42,12 +42,18 @@ export interface TankProfile {
   exposed: Armor;
 }
 
-/** Movement ratings used by the game for each terrain and operating pace. */
+/** Movement rating for one operating pace across terrain types. */
+export interface MovementSpeedProfile {
+  road: number;
+  crossCountry: number;
+  rough: number;
+}
+
+/** Movement ratings used by the game for each operating pace and terrain. */
 export interface MovementProfile {
-  tactical: number;
-  cruise: number;
-  maximum: number;
-  offRoad: number;
+  tactical: MovementSpeedProfile;
+  cruise: MovementSpeedProfile;
+  dash: MovementSpeedProfile;
 }
 
 /** Classification of how a unit carries or mounts an assigned weapon. */

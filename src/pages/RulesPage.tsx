@@ -26,7 +26,7 @@ export default function RulesPage() {
       <Typography variant="h4" gutterBottom>
         {t('rules.title')}
       </Typography>
-      <Paper sx={{ maxWidth: 360 }}>
+      <Paper sx={{ maxWidth: 420, overflow: 'hidden' }}>
         {index ? (
           <RulesChapterList
             chapters={index.chapters}

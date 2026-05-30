@@ -2,8 +2,7 @@
  * WikiArticlePage renders one Wiki article alongside responsive article navigation.
  */
 import { useEffect, useState } from 'react';
-import { Box, Drawer, IconButton, Paper, Typography, useMediaQuery, useTheme } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Box, Paper, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import WikiArticleList from '../components/wiki/WikiArticleList';
@@ -16,7 +15,6 @@ export default function WikiArticlePage() {
   const navigate = useNavigate();
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const [index, setIndex] = useState<WikiIndex | null>(null);
   const [error, setError] = useState(false);
 
@@ -33,7 +31,6 @@ export default function WikiArticlePage() {
   const article = index?.articles.find((entry) => entry.id === articleId);
   const handleSelect = (id: string) => {
     navigate(`/wiki/${id}`);
-    setDrawerOpen(false);
   };
 
   const sidebar = index ? (
@@ -45,22 +42,22 @@ export default function WikiArticlePage() {
   ) : null;
 
   return (
-    <Box sx={{ display: 'flex', gap: 2 }}>
+    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
       {isDesktop ? (
-        <Paper sx={{ minWidth: 260, alignSelf: 'flex-start' }}>{sidebar}</Paper>
+        <Paper sx={{ width: 300, flexShrink: 0, alignSelf: 'flex-start', position: 'sticky', top: 82 }}>
+          {sidebar}
+        </Paper>
       ) : (
-        <>
-          <IconButton
-            onClick={() => setDrawerOpen(true)}
-            sx={{ alignSelf: 'flex-start' }}
-            aria-label={t('wiki.openArticles')}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-            <Box sx={{ width: 300 }}>{sidebar}</Box>
-          </Drawer>
-        </>
+        <Paper sx={{ p: 1, position: 'sticky', top: 58, zIndex: 1 }}>
+          {index ? (
+            <WikiArticleList
+              articles={index.articles}
+              selectedId={articleId ?? null}
+              onSelect={handleSelect}
+              variant="rail"
+            />
+          ) : null}
+        </Paper>
       )}
 
       <Box sx={{ flex: 1, minWidth: 0 }}>

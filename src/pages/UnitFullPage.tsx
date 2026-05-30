@@ -74,6 +74,10 @@ function armorRows(profile: NonNullable<Unit['profile']>): Array<[string, Armor]
   ];
 }
 
+function movementValue(value: number) {
+  return `${value}'`;
+}
+
 function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
   const { t } = useTranslation();
 
@@ -237,11 +241,21 @@ export default function UnitFullPage() {
           </Typography>
           <TableContainer component={Paper} sx={{ mb: 3 }}>
             <Table size="small">
+              <TableHead>
+                <TableRow>
+                  <TableCell>{t('units.detail.movement.speed')}</TableCell>
+                  <TableCell align="right">{t('units.detail.movement.road')}</TableCell>
+                  <TableCell align="right">{t('units.detail.movement.crossCountry')}</TableCell>
+                  <TableCell align="right">{t('units.detail.movement.rough')}</TableCell>
+                </TableRow>
+              </TableHead>
               <TableBody>
-                {(['tactical', 'cruise', 'maximum', 'offRoad'] as const).map((field) => (
-                  <TableRow key={field}>
-                    <TableCell>{t(`units.detail.movement.${field}`)}</TableCell>
-                    <TableCell align="right">{unit.movement[field]}</TableCell>
+                {(['tactical', 'cruise', 'dash'] as const).map((speed) => (
+                  <TableRow key={speed}>
+                    <TableCell>{t(`units.detail.movement.${speed}`)}</TableCell>
+                    <TableCell align="right">{movementValue(unit.movement[speed].road)}</TableCell>
+                    <TableCell align="right">{movementValue(unit.movement[speed].crossCountry)}</TableCell>
+                    <TableCell align="right">{movementValue(unit.movement[speed].rough)}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

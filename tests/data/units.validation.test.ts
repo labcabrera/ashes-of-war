@@ -125,11 +125,21 @@ function validateMovement(value: unknown, path: string): string[] {
     return [`${path} must be an object.`];
   }
 
-  return ['tactical', 'cruise', 'maximum', 'offRoad'].flatMap((field) =>
-    typeof value[field] === 'number' && Number.isFinite(value[field]) && Number(value[field]) >= 0
-      ? []
-      : [`${path}.${field} must be a non-negative number.`],
-  );
+  return ['tactical', 'cruise', 'dash'].flatMap((speed) => {
+    const speedPath = `${path}.${speed}`;
+    const speedValue = value[speed];
+    if (!isRecord(speedValue)) {
+      return [`${speedPath} must be an object.`];
+    }
+
+    return ['road', 'crossCountry', 'rough'].flatMap((terrain) =>
+      typeof speedValue[terrain] === 'number' &&
+      Number.isFinite(speedValue[terrain]) &&
+      Number(speedValue[terrain]) >= 0
+        ? []
+        : [`${speedPath}.${terrain} must be a non-negative number.`],
+    );
+  });
 }
 
 function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<string>): string[] {
@@ -213,8 +223,8 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
   }
 
   const errors: string[] = [];
-  if (catalogue._version !== 4) {
-    errors.push('Unit catalogue _version must be 4.');
+  if (catalogue._version !== 5) {
+    errors.push('Unit catalogue _version must be 5.');
   }
   if (!Array.isArray(catalogue.units)) {
     errors.push('Unit catalogue units must be an array.');
@@ -246,7 +256,7 @@ describe('static unit catalogue validation', () => {
 
   it('reports multiple model and weapon-reference errors together', () => {
     const invalidCatalogue = {
-      _version: 4,
+      _version: 5,
       units: [
         {
           id: 'broken-infantry',
@@ -256,7 +266,11 @@ describe('static unit catalogue validation', () => {
           from: 1945,
           to: 1941,
           cost: 1,
-          movement: { tactical: -1, cruise: 2, maximum: 3, offRoad: 1 },
+          movement: {
+            tactical: { road: -1, crossCountry: 6, rough: 3 },
+            cruise: { road: 16, crossCountry: 12, rough: 6 },
+            dash: { road: 24, crossCountry: 18, rough: 9 },
+          },
           weapons: [],
           bases: [{ members: 0, weapons: [{ id: 'missing-weapon', count: 0, type: 'normal' }] }],
         },
@@ -267,7 +281,7 @@ describe('static unit catalogue validation', () => {
     expect(errors).toEqual(
       expect.arrayContaining([
         'units[0].name must be a non-empty string.',
-        'units[0].movement.tactical must be a non-negative number.',
+        'units[0].movement.tactical.road must be a non-negative number.',
         'units[0].from must be less than or equal to units[0].to.',
         'units[0].bases[0].members must be a positive integer.',
         'units[0].bases[0].weapons[0].id references unknown weapon "missing-weapon".',

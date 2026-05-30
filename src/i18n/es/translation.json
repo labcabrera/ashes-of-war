@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Inicio",
+    "menu": "Abrir navegación",
     "rules": "Reglamento",
     "units": "Unidades",
     "armyBuilder": "Constructor de Ejércitos",
@@ -170,10 +171,13 @@
       "availability": "Disponibilidad",
       "movement": {
         "title": "Movimiento",
+        "speed": "Velocidad",
         "tactical": "Táctico",
         "cruise": "Crucero",
-        "maximum": "Máximo",
-        "offRoad": "Campo a través"
+        "dash": "Dash",
+        "road": "Carretera",
+        "crossCountry": "CC",
+        "rough": "Terreno difícil"
       },
       "bases": "Peanas",
       "base": "Peana {{number}}",
@@ -224,6 +228,8 @@
     "theoretical": "Teórica",
     "combat": "Combate",
     "characteristics": "Características",
+    "carriedBy": "Unidades que la llevan",
+    "noCarriers": "Ninguna unidad del catálogo lleva esta arma.",
     "detail": {
       "title": "Detalle de arma",
       "selectPrompt": "Selecciona un arma para consultar sus perfiles."
@@ -309,6 +315,7 @@
     "comingSoon": "El modo campaña estará disponible próximamente."
   },
   "language": {
+    "select": "Cambiar idioma",
     "en": "English",
     "es": "Español"
   }

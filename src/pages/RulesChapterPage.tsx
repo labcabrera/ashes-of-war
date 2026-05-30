@@ -3,8 +3,7 @@
  * Loads the rules index to resolve the chapter file path.
  */
 import { useEffect, useState } from 'react';
-import { Box, Typography, Paper, Drawer, useMediaQuery, useTheme, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Box, Typography, Paper, useMediaQuery, useTheme } from '@mui/material';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import RulesChapterList from '../components/rules/RulesChapterList';
@@ -25,7 +24,6 @@ export default function RulesChapterPage() {
   const navigate = useNavigate();
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const [index, setIndex] = useState<RulesIndex | null>(null);
   const [chapter, setChapter] = useState<RulesChapter | null>(null);
   const selectedPath = [chapterId, subchapterId].filter(Boolean).join('/');
@@ -43,7 +41,6 @@ export default function RulesChapterPage() {
 
   const handleSelect = (path: string) => {
     navigate(`/rules/${path}`);
-    setDrawerOpen(false);
   };
 
   const sidebar = index ? (
@@ -55,21 +52,25 @@ export default function RulesChapterPage() {
   ) : null;
 
   return (
-    <Box sx={{ display: 'flex', gap: 2 }}>
+    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
       {isDesktop ? (
-        <Paper sx={{ minWidth: 220, alignSelf: 'flex-start' }}>{sidebar}</Paper>
+        <Paper sx={{ width: 280, flexShrink: 0, alignSelf: 'flex-start', position: 'sticky', top: 82, maxHeight: 'calc(100vh - 98px)', overflow: 'auto' }}>
+          {sidebar}
+        </Paper>
       ) : (
-        <>
-          <IconButton onClick={() => setDrawerOpen(true)} sx={{ alignSelf: 'flex-start' }}>
-            <MenuIcon />
-          </IconButton>
-          <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-            <Box sx={{ width: 260 }}>{sidebar}</Box>
-          </Drawer>
-        </>
+        <Paper sx={{ p: 1, position: 'sticky', top: 58, zIndex: 1 }}>
+          {index ? (
+            <RulesChapterList
+              chapters={index.chapters}
+              selectedId={selectedPath || null}
+              onSelect={handleSelect}
+              variant="rail"
+            />
+          ) : null}
+        </Paper>
       )}
 
-      <Box sx={{ flex: 1 }}>
+      <Box sx={{ flex: 1, minWidth: 0 }}>
         {chapter ? (
           <RulesContent chapter={chapter} basePath={selectedPath} />
         ) : (

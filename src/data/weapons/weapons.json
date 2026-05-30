@@ -22,7 +22,8 @@
           "rangeModifier": "30/15/-1",
           "suppressionModifier": 0
         }
-      ]
+      ],
+      "imageUrl": "/images/weapons/german-mg-13.jpg"
     },
     {
       "id": "german-mg-34-42",
@@ -77,7 +78,7 @@
     },
     {
       "id": "german-mp-40",
-      "name": "MP 40",
+      "name": "MP40",
       "type": "soft",
       "profiles": [
         {
@@ -98,7 +99,8 @@
           "suppressionModifier": 0,
           "characteristics": ["reliability-4-plus"]
         }
-      ]
+      ],
+      "imageUrl": "/images/weapons/german-mp40.jpg"
     },
     {
       "id": "german-stg-44",
@@ -146,7 +148,8 @@
           "rangeModifier": "30/15/-1",
           "suppressionModifier": -1
         }
-      ]
+      ],
+      "imageUrl": "/images/weapons/german-kwk-30-l55.png"
     },
     {
       "id": "german-kwk-38t",
@@ -436,7 +439,8 @@
           "armourPenetration": 17,
           "characteristics": ["heat", "one-shot"]
         }
-      ]
+      ],
+      "imageUrl": "/images/weapons/german-panzerschreck-rpzb-54.jpg"
     },
     {
       "id": "su-d-5t",
@@ -491,7 +495,8 @@
           "suppressionModifier": -4,
           "characteristics": ["area-12", "one-shot", "limited-ammunition-1"]
         }
-      ]
+      ],
+      "imageUrl": "/images/weapons/german-rw-61.jpg"
     },
     {
       "id": "german-sfh-18",

@@ -32,7 +32,7 @@ export default function WikiPage() {
       <Typography color="text.secondary" sx={{ mb: 2 }}>
         {t('wiki.description')}
       </Typography>
-      <Paper sx={{ maxWidth: 420 }}>
+      <Paper sx={{ maxWidth: 460, overflow: 'hidden' }}>
         {index ? (
           <WikiArticleList
             articles={index.articles}

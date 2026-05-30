@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "menu": "Open navigation",
     "rules": "Rules",
     "units": "Units",
     "armyBuilder": "Army Builder",
@@ -157,10 +158,13 @@
       "availability": "Availability",
       "movement": {
         "title": "Movement",
+        "speed": "Speed",
         "tactical": "Tactical",
         "cruise": "Cruise",
-        "maximum": "Maximum",
-        "offRoad": "Off-road"
+        "dash": "Dash",
+        "road": "Road",
+        "crossCountry": "CC",
+        "rough": "Rough"
       },
       "bases": "Bases",
       "base": "Base {{number}}",
@@ -211,6 +215,8 @@
     "theoretical": "Theoretical",
     "combat": "Combat",
     "characteristics": "Characteristics",
+    "carriedBy": "Carried by",
+    "noCarriers": "No catalogue units carry this weapon.",
     "detail": {
       "title": "Weapon details",
       "selectPrompt": "Select a weapon to view its profiles."
@@ -296,6 +302,7 @@
     "comingSoon": "Campaign mode coming soon."
   },
   "language": {
+    "select": "Change language",
     "en": "English",
     "es": "Español"
   }

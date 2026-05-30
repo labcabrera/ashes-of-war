@@ -1,5 +1,5 @@
 {
-  "_version": 4,
+  "_version": 5,
   "units": [
     {
       "id": "panzergrenadier-squad",
@@ -10,10 +10,21 @@
       "to": 1945,
       "cost": 11,
       "movement": {
-        "tactical": 10,
-        "cruise": 20,
-        "maximum": 30,
-        "offRoad": 10
+        "tactical": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 20,
+          "crossCountry": 15,
+          "rough": 8
+        },
+        "dash": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        }
       },
       "resourceCosts": {
         "logistics": 5
@@ -56,10 +67,21 @@
       "to": 1941,
       "cost": 12,
       "movement": {
-        "tactical": 18,
-        "cruise": 32,
-        "maximum": 40,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 24,
+          "rough": 12
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 3,
@@ -105,10 +127,21 @@
       "to": 1942,
       "cost": 18,
       "movement": {
-        "tactical": 20,
-        "cruise": 35,
-        "maximum": 40,
-        "offRoad": 20
+        "tactical": {
+          "road": 20,
+          "crossCountry": 15,
+          "rough": 8
+        },
+        "cruise": {
+          "road": 35,
+          "crossCountry": 26,
+          "rough": 13
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 4,
@@ -159,10 +192,21 @@
       "to": 1942,
       "cost": 20,
       "movement": {
-        "tactical": 18,
-        "cruise": 34,
-        "maximum": 42,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 34,
+          "crossCountry": 26,
+          "rough": 13
+        },
+        "dash": {
+          "road": 42,
+          "crossCountry": 32,
+          "rough": 16
+        }
       },
       "resourceCosts": {
         "fuel": 4,
@@ -218,10 +262,21 @@
       "to": 1945,
       "cost": 32,
       "movement": {
-        "tactical": 18,
-        "cruise": 32,
-        "maximum": 40,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 24,
+          "rough": 12
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 8,
@@ -272,10 +327,21 @@
       "to": 1945,
       "cost": 32,
       "movement": {
-        "tactical": 18,
-        "cruise": 32,
-        "maximum": 40,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 24,
+          "rough": 12
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 8,
@@ -326,10 +392,21 @@
       "to": 1945,
       "cost": 32,
       "movement": {
-        "tactical": 18,
-        "cruise": 32,
-        "maximum": 40,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 24,
+          "rough": 12
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 8,
@@ -381,10 +458,21 @@
       "to": 1945,
       "cost": 32,
       "movement": {
-        "tactical": 18,
-        "cruise": 32,
-        "maximum": 40,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 24,
+          "rough": 12
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 8,
@@ -435,10 +523,21 @@
       "to": 1943,
       "cost": 25,
       "movement": {
-        "tactical": 20,
-        "cruise": 35,
-        "maximum": 40,
-        "offRoad": 20
+        "tactical": {
+          "road": 20,
+          "crossCountry": 15,
+          "rough": 8
+        },
+        "cruise": {
+          "road": 35,
+          "crossCountry": 26,
+          "rough": 13
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -489,10 +588,21 @@
       "to": 1940,
       "cost": 25,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 40,
-        "offRoad": 16
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -538,10 +648,21 @@
       "to": 1942,
       "cost": 30,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 40,
-        "offRoad": 16
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -587,10 +708,21 @@
       "to": 1945,
       "cost": 34,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 40,
-        "offRoad": 16
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -636,10 +768,21 @@
       "to": 1945,
       "cost": 36,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 40,
-        "offRoad": 16
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -690,10 +833,21 @@
       "to": 1945,
       "cost": 21,
       "movement": {
-        "tactical": 0,
-        "cruise": 8,
-        "maximum": 12,
-        "offRoad": 0
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "dash": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        }
       },
       "resourceCosts": {
         "fuel": 3,
@@ -710,10 +864,21 @@
       "to": 1944,
       "cost": 14,
       "movement": {
-        "tactical": 25,
-        "cruise": 55,
-        "maximum": 80,
-        "offRoad": 25
+        "tactical": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        },
+        "cruise": {
+          "road": 55,
+          "crossCountry": 41,
+          "rough": 21
+        },
+        "dash": {
+          "road": 80,
+          "crossCountry": 60,
+          "rough": 30
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -730,10 +895,21 @@
       "to": 1945,
       "cost": 9,
       "movement": {
-        "tactical": 8,
-        "cruise": 16,
-        "maximum": 25,
-        "offRoad": 8
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
       },
       "resourceCosts": {
         "intelligence": 1
@@ -749,10 +925,21 @@
       "to": 1945,
       "cost": 13,
       "movement": {
-        "tactical": 8,
-        "cruise": 16,
-        "maximum": 24,
-        "offRoad": 8
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 24,
+          "crossCountry": 18,
+          "rough": 9
+        }
       },
       "resourceCosts": {
         "logistics": 10
@@ -768,10 +955,21 @@
       "to": 1944,
       "cost": 18,
       "movement": {
-        "tactical": 12,
-        "cruise": 24,
-        "maximum": 36,
-        "offRoad": 12
+        "tactical": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 24,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 36,
+          "crossCountry": 27,
+          "rough": 14
+        }
       },
       "resourceCosts": {
         "logistics": 10,
@@ -788,10 +986,21 @@
       "to": 1945,
       "cost": 80,
       "movement": {
-        "tactical": 12,
-        "cruise": 24,
-        "maximum": 38,
-        "offRoad": 12
+        "tactical": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 24,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 38,
+          "crossCountry": 29,
+          "rough": 14
+        }
       },
       "resourceCosts": {
         "fuel": 15,
@@ -847,10 +1056,21 @@
       "to": 1945,
       "cost": 50,
       "movement": {
-        "tactical": 10,
-        "cruise": 20,
-        "maximum": 41,
-        "offRoad": 10
+        "tactical": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 20,
+          "crossCountry": 15,
+          "rough": 8
+        },
+        "dash": {
+          "road": 41,
+          "crossCountry": 31,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 10,
@@ -906,10 +1126,21 @@
       "to": 1943,
       "cost": 55,
       "movement": {
-        "tactical": 18,
-        "cruise": 35,
-        "maximum": 46,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 35,
+          "crossCountry": 26,
+          "rough": 13
+        },
+        "dash": {
+          "road": 46,
+          "crossCountry": 35,
+          "rough": 17
+        }
       },
       "resourceCosts": {
         "fuel": 12,
@@ -963,10 +1194,21 @@
       "to": 1944,
       "cost": 60,
       "movement": {
-        "tactical": 18,
-        "cruise": 35,
-        "maximum": 46,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 35,
+          "crossCountry": 26,
+          "rough": 13
+        },
+        "dash": {
+          "road": 46,
+          "crossCountry": 35,
+          "rough": 17
+        }
       },
       "resourceCosts": {
         "fuel": 12,
@@ -1017,10 +1259,21 @@
       "to": 1945,
       "cost": 62,
       "movement": {
-        "tactical": 18,
-        "cruise": 35,
-        "maximum": 46,
-        "offRoad": 18
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 35,
+          "crossCountry": 26,
+          "rough": 13
+        },
+        "dash": {
+          "road": 46,
+          "crossCountry": 35,
+          "rough": 17
+        }
       },
       "resourceCosts": {
         "fuel": 12,
@@ -1071,10 +1324,21 @@
       "to": 1944,
       "cost": 45,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 42,
-        "offRoad": 15
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 42,
+          "crossCountry": 32,
+          "rough": 16
+        }
       },
       "resourceCosts": {
         "fuel": 10,
@@ -1120,10 +1384,21 @@
       "to": 1945,
       "cost": 45,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 42,
-        "offRoad": 15
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 42,
+          "crossCountry": 32,
+          "rough": 16
+        }
       },
       "resourceCosts": {
         "fuel": 10,
@@ -1169,10 +1444,21 @@
       "to": 1945,
       "cost": 40,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 40,
-        "offRoad": 16
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 8,
@@ -1218,10 +1504,21 @@
       "to": 1945,
       "cost": 60,
       "movement": {
-        "tactical": 16,
-        "cruise": 32,
-        "maximum": 46,
-        "offRoad": 17
+        "tactical": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 24,
+          "rough": 12
+        },
+        "dash": {
+          "road": 46,
+          "crossCountry": 35,
+          "rough": 17
+        }
       },
       "resourceCosts": {
         "fuel": 12,
@@ -1267,10 +1564,21 @@
       "to": 1945,
       "cost": 28,
       "movement": {
-        "tactical": 12,
-        "cruise": 24,
-        "maximum": 40,
-        "offRoad": 12
+        "tactical": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 24,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -1309,10 +1617,21 @@
       "to": 1945,
       "cost": 38,
       "movement": {
-        "tactical": 12,
-        "cruise": 24,
-        "maximum": 40,
-        "offRoad": 12
+        "tactical": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 24,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 8,
@@ -1358,10 +1677,21 @@
       "to": 1944,
       "cost": 30,
       "movement": {
-        "tactical": 12,
-        "cruise": 24,
-        "maximum": 40,
-        "offRoad": 12
+        "tactical": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 24,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -1407,10 +1737,21 @@
       "to": 1945,
       "cost": 26,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 40,
-        "offRoad": 14
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -1456,10 +1797,21 @@
       "to": 1945,
       "cost": 30,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 40,
-        "offRoad": 14
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -1505,10 +1857,21 @@
       "to": 1945,
       "cost": 33,
       "movement": {
-        "tactical": 15,
-        "cruise": 30,
-        "maximum": 40,
-        "offRoad": 14
+        "tactical": {
+          "road": 15,
+          "crossCountry": 11,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 5,
@@ -1554,10 +1917,21 @@
       "to": 1945,
       "cost": 75,
       "movement": {
-        "tactical": 8,
-        "cruise": 18,
-        "maximum": 40,
-        "offRoad": 8
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
       },
       "resourceCosts": {
         "fuel": 15,
@@ -1603,10 +1977,21 @@
       "to": 1945,
       "cost": 9,
       "movement": {
-        "tactical": 10,
-        "cruise": 20,
-        "maximum": 30,
-        "offRoad": 10
+        "tactical": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 20,
+          "crossCountry": 15,
+          "rough": 8
+        },
+        "dash": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        }
       },
       "resourceCosts": {
         "logistics": 5
@@ -1627,10 +2012,21 @@
       "to": 1944,
       "cost": 29,
       "movement": {
-        "tactical": 22,
-        "cruise": 40,
-        "maximum": 55,
-        "offRoad": 24
+        "tactical": {
+          "road": 22,
+          "crossCountry": 17,
+          "rough": 8
+        },
+        "cruise": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        },
+        "dash": {
+          "road": 55,
+          "crossCountry": 41,
+          "rough": 21
+        }
       },
       "resourceCosts": {
         "fuel": 8,
@@ -1669,10 +2065,21 @@
       "to": 1945,
       "cost": 36,
       "movement": {
-        "tactical": 22,
-        "cruise": 40,
-        "maximum": 55,
-        "offRoad": 24
+        "tactical": {
+          "road": 22,
+          "crossCountry": 17,
+          "rough": 8
+        },
+        "cruise": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        },
+        "dash": {
+          "road": 55,
+          "crossCountry": 41,
+          "rough": 21
+        }
       },
       "resourceCosts": {
         "fuel": 8,
@@ -1711,10 +2118,21 @@
       "to": 1944,
       "cost": 45,
       "movement": {
-        "tactical": 14,
-        "cruise": 25,
-        "maximum": 37,
-        "offRoad": 14
+        "tactical": {
+          "road": 14,
+          "crossCountry": 11,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        },
+        "dash": {
+          "road": 37,
+          "crossCountry": 28,
+          "rough": 14
+        }
       },
       "resourceCosts": {
         "fuel": 10,
@@ -1760,10 +2178,21 @@
       "to": 1945,
       "cost": 52,
       "movement": {
-        "tactical": 14,
-        "cruise": 25,
-        "maximum": 37,
-        "offRoad": 14
+        "tactical": {
+          "road": 14,
+          "crossCountry": 11,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        },
+        "dash": {
+          "road": 37,
+          "crossCountry": 28,
+          "rough": 14
+        }
       },
       "resourceCosts": {
         "fuel": 10,
@@ -1809,10 +2238,21 @@
       "to": 1945,
       "cost": 23,
       "movement": {
-        "tactical": 0,
-        "cruise": 8,
-        "maximum": 12,
-        "offRoad": 0
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "dash": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        }
       },
       "resourceCosts": {
         "fuel": 3,
@@ -1829,10 +2269,21 @@
       "to": 1945,
       "cost": 14,
       "movement": {
-        "tactical": 10,
-        "cruise": 20,
-        "maximum": 30,
-        "offRoad": 10
+        "tactical": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 20,
+          "crossCountry": 15,
+          "rough": 8
+        },
+        "dash": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        }
       },
       "resourceCosts": {
         "logistics": 5
@@ -1853,10 +2304,21 @@
       "to": 1945,
       "cost": 13,
       "movement": {
-        "tactical": 12,
-        "cruise": 24,
-        "maximum": 36,
-        "offRoad": 12
+        "tactical": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 24,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 36,
+          "crossCountry": 27,
+          "rough": 14
+        }
       },
       "resourceCosts": {
         "intelligence": 2
@@ -1871,10 +2333,21 @@
       "to": 1945,
       "cost": 7,
       "movement": {
-        "tactical": 8,
-        "cruise": 16,
-        "maximum": 25,
-        "offRoad": 8
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
       },
       "resourceCosts": {
         "logistics": 5
@@ -1889,10 +2362,21 @@
       "to": 1945,
       "cost": 9,
       "movement": {
-        "tactical": 8,
-        "cruise": 16,
-        "maximum": 25,
-        "offRoad": 8
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
       },
       "resourceCosts": {
         "intelligence": 1
