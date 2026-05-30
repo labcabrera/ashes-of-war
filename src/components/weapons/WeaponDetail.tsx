@@ -29,10 +29,6 @@ interface Props {
 }
 
 function weaponAssignments(unit: Unit): UnitWeapon[] {
-  if (unit.type === 'infantry') {
-    return unit.bases.flatMap((base) => base.weapons);
-  }
-
   return unit.weapons ?? [];
 }
 

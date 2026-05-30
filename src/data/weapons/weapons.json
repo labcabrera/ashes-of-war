@@ -154,6 +154,49 @@
       "imageUrl": "/images/weapons/german-fg-42.jpg"
     },
     {
+      "id": "soviet-mosin-nagant-m1891-30",
+      "name": "Mosin–Nagant M1891/30",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "suppressionModifier": 0,
+          "characteristics": ["reliability-2-plus", "saturation-2-plus"]
+        }
+      ],
+      "imageUrl": "/images/weapons/soviet-mosin-nagant-m1891-30.jpg"
+    },
+    {
+      "id": "soviet-ppsh-41",
+      "name": "PPSh-41",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "saturation",
+          "name": "Saturation",
+          "shots": 7,
+          "hitOn": 7,
+          "rangeModifier": "10/10/-2",
+          "suppressionModifier": -1,
+          "characteristics": ["reliability-4-plus"]
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 3,
+          "hitOn": 6,
+          "rangeModifier": "10/10/-2",
+          "suppressionModifier": 0,
+          "characteristics": ["reliability-4-plus"]
+        }
+      ],
+      "imageUrl": "/images/weapons/soviet-ppsh-41.jpg"
+    },
+    {
       "id": "german-kwk-30-l55",
       "name": "2 cm KwK 30 L/55",
       "type": "hard",

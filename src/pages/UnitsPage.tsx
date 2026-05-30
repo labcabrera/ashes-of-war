@@ -155,7 +155,7 @@ export default function UnitsPage() {
               display: 'grid',
               gridTemplateColumns: {
                 xs: '1fr',
-                lg: selectedUnit ? 'minmax(0, 1fr) minmax(280px, 340px)' : '1fr',
+                lg: selectedUnit ? 'minmax(0, 1fr) minmax(360px, 460px)' : '1fr',
               },
               alignItems: 'start',
               gap: 3,

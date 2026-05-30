@@ -1,6 +1,6 @@
 /**
  * Unit domain types for Ashes of War.
- * Defines unit categories, infantry bases, armour values, and roster entries.
+ * Defines unit categories, armour values, movement, weapons, and roster entries.
  */
 
 import type { WeaponFeatureModifier } from './weapon';
@@ -67,12 +67,6 @@ export interface UnitWeapon {
   features?: WeaponFeatureModifier[];
 }
 
-/** A grouped infantry element carrying members and assigned weapons. */
-export interface InfantryBase {
-  members: number;
-  weapons: UnitWeapon[];
-}
-
 /** Common fields included in every roster entry. */
 interface BaseUnitFields {
   id: string;
@@ -96,20 +90,18 @@ interface BaseUnitFields {
   keywords?: string[];
 }
 
-/** Infantry roster entries organised into required bases. */
+/** Infantry roster entries with combatants and assigned weapons. */
 export interface InfantryUnit extends BaseUnitFields {
   type: 'infantry';
   combatants: number;
   casualtiesThreshold: number;
-  bases: InfantryBase[];
-  weapons?: never;
+  weapons?: UnitWeapon[];
   profile?: never;
 }
 
 /** Vehicle and support roster entries that are not infantry formations. */
 export interface VehicleUnit extends BaseUnitFields {
   type: Exclude<UnitType, 'infantry'>;
-  bases?: never;
   /** Required for non-vehicle support units that do not have an armour profile. */
   casualtiesThreshold?: number;
   /** Optional weapon assignments resolved against the weapon catalogue. */

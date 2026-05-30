@@ -1,5 +1,5 @@
 {
-  "_version": 7,
+  "_version": 8,
   "units": [
     {
       "id": "panzergrenadier-squad",
@@ -29,37 +29,22 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "bases": [
-        {
-          "members": 5,
-          "weapons": [
-            {
-              "id": "german-mg-34-42",
-              "count": 1,
-              "type": "normal"
-            },
-            {
-              "id": "german-mauser-kar-98k",
-              "count": 3,
-              "type": "normal"
-            }
-          ]
-        },
-        {
-          "members": 5,
-          "weapons": [
-            {
-              "id": "german-mauser-kar-98k",
-              "count": 5,
-              "type": "normal"
-            }
-          ]
-        }
-      ],
       "imageUrl": "/images/units/german-panzergrenadier-squad.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10
+      "combatants": 10,
+      "weapons": [
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-mauser-kar-98k",
+          "count": 8,
+          "type": "normal"
+        }
+      ]
     },
     {
       "id": "german-panzer-i-a",
@@ -1001,7 +986,7 @@
       "weapons": [
         {
           "id": "german-fg-42",
-          "count": 5,
+          "count": 10,
           "type": "normal"
         }
       ],
@@ -2017,8 +2002,8 @@
       "organizationThreshold": 10
     },
     {
-      "id": "soviet-infantry-01",
-      "name": "Red Army Rifle Section",
+      "id": "soviet-rifle-squad",
+      "name": "Red Army Rifle Squad",
       "type": "infantry",
       "faction": "soviet",
       "from": 1941,
@@ -2044,15 +2029,57 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "bases": [
-        {
-          "members": 8,
-          "weapons": []
-        }
-      ],
       "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10
+      "combatants": 10,
+      "weapons": [
+        {
+          "id": "soviet-mosin-nagant-m1891-30",
+          "count": 10,
+          "type": "normal"
+        }
+      ],
+      "imageUrl": "/images/units/soviet-rifle-squad.jpg"
+    },
+    {
+      "id": "soviet-assault-squad",
+      "name": "Red Army Assault Squad",
+      "type": "infantry",
+      "faction": "soviet",
+      "from": 1941,
+      "to": 1945,
+      "cost": 12,
+      "movement": {
+        "tactical": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 20,
+          "crossCountry": 15,
+          "rough": 8
+        },
+        "dash": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        }
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 10,
+      "weapons": [
+        {
+          "id": "soviet-ppsh-41",
+          "count": 10,
+          "type": "normal"
+        }
+      ],
+      "imageUrl": "/images/units/soviet-assault-squad.jpg"
     },
     {
       "id": "soviet-t-34-76",
@@ -2318,8 +2345,8 @@
       "casualtiesThreshold": 3
     },
     {
-      "id": "soviet-guards-infantry-squad",
-      "name": "Guards Infantry Squad",
+      "id": "soviet-guards-rifle-squad",
+      "name": "Red Army Guards Rifle Squad",
       "type": "infantry",
       "faction": "soviet",
       "from": 1942,
@@ -2345,47 +2372,11 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "bases": [
-        {
-          "members": 8,
-          "weapons": []
-        }
-      ],
       "organizationThreshold": 10,
       "casualtiesThreshold": 3,
       "combatants": 10,
-      "imageUrl": "/images/units/soviet-guards-infantry-squad.jpg"
-    },
-    {
-      "id": "soviet-recon-01",
-      "name": "Soviet Scout Squad",
-      "type": "reconnaissance",
-      "faction": "soviet",
-      "from": 1941,
-      "to": 1945,
-      "cost": 13,
-      "movement": {
-        "tactical": {
-          "road": 12,
-          "crossCountry": 9,
-          "rough": 5
-        },
-        "cruise": {
-          "road": 24,
-          "crossCountry": 18,
-          "rough": 9
-        },
-        "dash": {
-          "road": 36,
-          "crossCountry": 27,
-          "rough": 14
-        }
-      },
-      "resourceCosts": {
-        "intelligence": 2
-      },
-      "organizationThreshold": 10,
-      "casualtiesThreshold": 3
+      "imageUrl": "/images/units/soviet-guards-rifle-squad.jpg",
+      "weapons": []
     },
     {
       "id": "soviet-field-medic",
@@ -2420,7 +2411,7 @@
       "imageUrl": "/images/units/soviet-field-medic.jpg"
     },
     {
-      "id": "soviet-sniper-01",
+      "id": "soviet-sniper",
       "name": "Soviet Sniper",
       "type": "sniper",
       "faction": "soviet",
@@ -2447,8 +2438,9 @@
       "resourceCosts": {
         "intelligence": 1
       },
-      "organizationThreshold": 10,
-      "casualtiesThreshold": 3
+      "organizationThreshold": 5,
+      "casualtiesThreshold": 1,
+      "imageUrl": "/images/units/soviet-sniper.jpg"
     }
   ]
 }

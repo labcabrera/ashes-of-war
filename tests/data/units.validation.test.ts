@@ -198,27 +198,13 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
     if (!isPositiveInteger(value.casualtiesThreshold)) {
       errors.push(`${path}.casualtiesThreshold must be a positive integer for non-vehicle units.`);
     }
-    if (!Array.isArray(value.bases) || value.bases.length === 0) {
-      errors.push(`${path}.bases must contain at least one infantry base.`);
-    } else {
-      value.bases.forEach((base, baseIndex) => {
-        const basePath = `${path}.bases[${baseIndex}]`;
-        if (!isRecord(base)) {
-          errors.push(`${basePath} must be an object.`);
-          return;
-        }
-        if (!isPositiveInteger(base.members)) {
-          errors.push(`${basePath}.members must be a positive integer.`);
-        }
-        errors.push(...validateWeaponAssignments(base.weapons, `${basePath}.weapons`, weaponIds, true));
-      });
+    if (value.bases !== undefined) {
+      errors.push(`${path}.bases is no longer supported for infantry units.`);
     }
-    if (value.weapons !== undefined) {
-      errors.push(`${path}.weapons must be assigned inside bases for infantry units.`);
-    }
+    errors.push(...validateWeaponAssignments(value.weapons, `${path}.weapons`, weaponIds, false));
   } else {
     if (value.bases !== undefined) {
-      errors.push(`${path}.bases is only supported for infantry units.`);
+      errors.push(`${path}.bases is no longer supported.`);
     }
     if (value.combatants !== undefined) {
       errors.push(`${path}.combatants is only supported for infantry units.`);
@@ -242,8 +228,8 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
   }
 
   const errors: string[] = [];
-  if (catalogue._version !== 7) {
-    errors.push('Unit catalogue _version must be 7.');
+  if (catalogue._version !== 8) {
+    errors.push('Unit catalogue _version must be 8.');
   }
   if (!Array.isArray(catalogue.units)) {
     errors.push('Unit catalogue units must be an array.');
@@ -275,7 +261,7 @@ describe('static unit catalogue validation', () => {
 
   it('reports multiple model and weapon-reference errors together', () => {
     const invalidCatalogue = {
-      _version: 7,
+      _version: 8,
       units: [
         {
           id: 'broken-infantry',
@@ -293,8 +279,8 @@ describe('static unit catalogue validation', () => {
             cruise: { road: 16, crossCountry: 12, rough: 6 },
             dash: { road: 24, crossCountry: 18, rough: 9 },
           },
-          weapons: [],
-          bases: [{ members: 0, weapons: [{ id: 'missing-weapon', count: 0, type: 'normal' }] }],
+          weapons: [{ id: 'missing-weapon', count: 0, type: 'normal' }],
+          bases: [],
         },
       ],
     };
@@ -308,10 +294,9 @@ describe('static unit catalogue validation', () => {
         'units[0].casualtiesThreshold must be a positive integer for non-vehicle units.',
         'units[0].movement.tactical.road must be a non-negative number.',
         'units[0].from must be less than or equal to units[0].to.',
-        'units[0].bases[0].members must be a positive integer.',
-        'units[0].bases[0].weapons[0].id references unknown weapon "missing-weapon".',
-        'units[0].bases[0].weapons[0].count must be a positive integer.',
-        'units[0].weapons must be assigned inside bases for infantry units.',
+        'units[0].bases is no longer supported for infantry units.',
+        'units[0].weapons[0].id references unknown weapon "missing-weapon".',
+        'units[0].weapons[0].count must be a positive integer.',
       ]),
     );
   });

@@ -10,6 +10,11 @@ import {
   IconButton,
   Paper,
   Stack,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
   Tooltip,
   Typography,
 } from '@mui/material';
@@ -62,6 +67,15 @@ function isNonVehicleUnit(unit: Unit) {
   return !unit.profile;
 }
 
+function armorLabel(unit: Unit) {
+  if (!unit.profile) {
+    return '';
+  }
+
+  const { front, side, rear, exposed } = unit.profile;
+  return `Armor: ${front.value}/${side.value}/${rear.value}/${exposed.value}`;
+}
+
 export default function UnitDetail({ unit, weapons, onClose }: Props) {
   const { t } = useTranslation();
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
@@ -75,7 +89,7 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
       aria-label={t('units.detail.compactTitle')}
       elevation={3}
       sx={{
-        minHeight: { xs: 240, lg: 520 },
+        minHeight: { xs: 240, lg: 600 },
         position: { lg: 'sticky' },
         top: { lg: 16 },
         overflow: 'hidden',
@@ -99,7 +113,7 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
       <>
           <Box
             sx={{
-              height: 112,
+              height: 132,
               bgcolor: 'primary.dark',
               display: 'flex',
               alignItems: 'center',
@@ -151,35 +165,42 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
               )}
             </Stack>
 
-            <Stack direction="row" spacing={1} sx={{ mb: 1.5 }}>
-              <Box>
-                <Typography variant="caption" color="text.secondary">
-                  {t('units.detail.movement.dash')}
-                </Typography>
-                <Typography variant="body2" sx={{ fontWeight: 700 }}>
-                  {movementValue(unit.movement.dash.road)}
-                </Typography>
-              </Box>
-              <Box>
-                <Typography variant="caption" color="text.secondary">
-                  {t('units.detail.movement.rough')}
-                </Typography>
-                <Typography variant="body2" sx={{ fontWeight: 700 }}>
-                  {movementValue(unit.movement.tactical.rough)}
-                </Typography>
-              </Box>
-            </Stack>
+            <Table size="small" sx={{ mb: 1.5 }}>
+              <TableHead>
+                <TableRow>
+                  <TableCell sx={{ px: 0.75, py: 0.5 }}>{t('units.detail.movement.speed')}</TableCell>
+                  <TableCell align="right" sx={{ px: 0.75, py: 0.5 }}>
+                    {t('units.detail.movement.road')}
+                  </TableCell>
+                  <TableCell align="right" sx={{ px: 0.75, py: 0.5 }}>
+                    {t('units.detail.movement.crossCountry')}
+                  </TableCell>
+                  <TableCell align="right" sx={{ px: 0.75, py: 0.5 }}>
+                    {t('units.detail.movement.rough')}
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {(['tactical', 'cruise', 'dash'] as const).map((speed) => (
+                  <TableRow key={speed}>
+                    <TableCell sx={{ px: 0.75, py: 0.5 }}>{t(`units.detail.movement.${speed}`)}</TableCell>
+                    <TableCell align="right" sx={{ px: 0.75, py: 0.5 }}>
+                      {movementValue(unit.movement[speed].road)}
+                    </TableCell>
+                    <TableCell align="right" sx={{ px: 0.75, py: 0.5 }}>
+                      {movementValue(unit.movement[speed].crossCountry)}
+                    </TableCell>
+                    <TableCell align="right" sx={{ px: 0.75, py: 0.5 }}>
+                      {movementValue(unit.movement[speed].rough)}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
 
             {unit.profile && (
               <Stack direction="row" spacing={0.75} useFlexGap sx={{ mb: 1.5, flexWrap: 'wrap' }}>
-                {(['front', 'side', 'rear', 'exposed'] as const).map((facing) => (
-                  <Chip
-                    key={facing}
-                    label={`${t(`units.detail.${facing}`)} ${unit.profile?.[facing].value}`}
-                    size="small"
-                    variant="outlined"
-                  />
-                ))}
+                <Chip label={armorLabel(unit)} size="small" variant="outlined" />
               </Stack>
             )}
 

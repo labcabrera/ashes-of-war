@@ -185,9 +185,6 @@
         "crossCountry": "CC",
         "rough": "Terreno difícil"
       },
-      "bases": "Peanas",
-      "base": "Peana {{number}}",
-      "members": "integrantes",
       "unarmed": "Sin armamento asignado.",
       "weapons": "Armamento",
       "keywords": "Reglas especiales",

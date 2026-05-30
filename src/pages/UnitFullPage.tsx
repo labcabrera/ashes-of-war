@@ -30,7 +30,7 @@ import { Link as RouterLink, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import unitsData from '../data/units/units.json';
 import weaponsData from '../data/weapons/weapons.json';
-import type { Armor, InfantryBase, Unit, UnitType, UnitWeapon } from '../types/unit';
+import type { Armor, Unit, UnitType, UnitWeapon } from '../types/unit';
 import type { Weapon } from '../types/weapon';
 
 const UNIT_ICONS = {
@@ -152,26 +152,6 @@ function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
           </Box>
         );
       })}
-    </Stack>
-  );
-}
-
-function InfantryBases({ bases }: { bases: InfantryBase[] }) {
-  const { t } = useTranslation();
-
-  return (
-    <Stack spacing={2}>
-      {bases.map((base, index) => (
-        <Box key={`base-${index + 1}`} sx={{ borderTop: 1, borderColor: 'divider', pt: 1.25 }}>
-          <Stack direction="row" spacing={1} sx={{ alignItems: 'center', mb: 1 }}>
-            <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-              {t('units.detail.base', { number: index + 1 })}
-            </Typography>
-            <Chip label={`${base.members} ${t('units.detail.members')}`} size="small" color="secondary" />
-          </Stack>
-          <WeaponAssignments assignments={base.weapons} />
-        </Box>
-      ))}
     </Stack>
   );
 }
@@ -339,14 +319,10 @@ export default function UnitFullPage() {
 
         <Box>
           <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-            {unit.type === 'infantry' ? t('units.detail.bases') : t('units.detail.weapons')}
+            {t('units.detail.weapons')}
           </Typography>
           <Paper sx={{ p: 2.25 }}>
-            {unit.type === 'infantry' ? (
-              <InfantryBases bases={unit.bases} />
-            ) : (
-              <WeaponAssignments assignments={assignedWeapons} />
-            )}
+            <WeaponAssignments assignments={assignedWeapons} />
           </Paper>
 
           {unit.keywords && unit.keywords.length > 0 && (
