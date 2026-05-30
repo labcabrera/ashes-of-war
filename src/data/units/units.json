@@ -510,7 +510,7 @@
       "organizationThreshold": 10
     },
     {
-      "id": "german-tank-02",
+      "id": "german-panzer-iii-j",
       "name": "Panzer III Ausf. J",
       "type": "tank",
       "faction": "german",
@@ -938,7 +938,7 @@
       "casualtiesThreshold": 3
     },
     {
-      "id": "german-recon-01",
+      "id": "german-sd-kfz-222",
       "name": "Sd.Kfz. 222 Armoured Car",
       "type": "reconnaissance",
       "faction": "german",

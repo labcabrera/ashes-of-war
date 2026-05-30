@@ -11,7 +11,8 @@
     "test:run": "vitest run",
     "coverage": "vitest run --coverage",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "create-release": "bash scripts/create-release.sh"
   },
   "dependencies": {
     "@asciidoctor/core": "^3.0.4",
