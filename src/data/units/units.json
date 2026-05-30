@@ -2082,13 +2082,196 @@
       "imageUrl": "/images/units/soviet-assault-squad.jpg"
     },
     {
-      "id": "soviet-t-34-76",
-      "name": "T-34/76",
+      "id": "soviet-t-34-76-1940",
+      "name": "T-34-76 (1940)",
+      "type": "tank",
+      "faction": "soviet",
+      "from": 1940,
+      "to": 1944,
+      "cost": 29,
+      "movement": {
+        "tactical": {
+          "road": 22,
+          "crossCountry": 17,
+          "rough": 8
+        },
+        "cruise": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        },
+        "dash": {
+          "road": 55,
+          "crossCountry": 41,
+          "rough": 21
+        }
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
+      "imageUrl": "/images/units/soviet-t-34-76-1940.jpg",
+      "organizationThreshold": 10,
+      "weapons": [
+        {
+          "id": "su-l-11-76-2",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
+    },
+    {
+      "id": "soviet-t-34-76-1941",
+      "name": "T-34-76 (1941)",
       "type": "tank",
       "faction": "soviet",
       "from": 1941,
       "to": 1944,
-      "cost": 29,
+      "cost": 39,
+      "movement": {
+        "tactical": {
+          "road": 22,
+          "crossCountry": 17,
+          "rough": 8
+        },
+        "cruise": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        },
+        "dash": {
+          "road": 55,
+          "crossCountry": 41,
+          "rough": 21
+        }
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 52,
+          "armorMM": 52,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
+      "imageUrl": "/images/units/soviet-t-34-76-1941.jpg",
+      "organizationThreshold": 10,
+      "weapons": [
+        {
+          "id": "su-f-32-76-2",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
+    },
+    {
+      "id": "soviet-t-34-76-1942",
+      "name": "T-34-76 (1942)",
+      "type": "tank",
+      "faction": "soviet",
+      "from": 1942,
+      "to": 1944,
+      "cost": 28,
+      "movement": {
+        "tactical": {
+          "road": 22,
+          "crossCountry": 17,
+          "rough": 8
+        },
+        "cruise": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        },
+        "dash": {
+          "road": 55,
+          "crossCountry": 41,
+          "rough": 21
+        }
+      },
+      "resourceCosts": {
+        "fuel": 6,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 65,
+          "armorMM": 65,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        }
+      },
+      "imageUrl": "/images/units/soviet-t-34-76-1942.jpg",
+      "organizationThreshold": 10,
+      "weapons": [
+        {
+          "id": "su-f-32-76-2",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
+    },
+    {
+      "id": "soviet-t-34-76-1943",
+      "name": "T-34-76 (1943)",
+      "type": "tank",
+      "faction": "soviet",
+      "from": 1943,
+      "to": 1944,
+      "cost": 20,
       "movement": {
         "tactical": {
           "road": 22,
@@ -2112,18 +2295,18 @@
       },
       "profile": {
         "front": {
-          "value": 45,
-          "armorMM": 45,
+          "value": 70,
+          "armorMM": 70,
           "armorInclination": 0
         },
         "side": {
-          "value": 45,
-          "armorMM": 45,
+          "value": 20,
+          "armorMM": 20,
           "armorInclination": 0
         },
         "rear": {
-          "value": 40,
-          "armorMM": 40,
+          "value": 20,
+          "armorMM": 20,
           "armorInclination": 0
         },
         "exposed": {
@@ -2132,8 +2315,15 @@
           "armorInclination": 0
         }
       },
-      "imageUrl": "/images/units/soviet-t-34-76.jpg",
-      "organizationThreshold": 10
+      "imageUrl": "/images/units/soviet-t-34-76-1943.jpg",
+      "organizationThreshold": 10,
+      "weapons": [
+        {
+          "id": "su-f-34-76-2",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
     },
     {
       "id": "soviet-t-34-85",

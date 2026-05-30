@@ -37,7 +37,9 @@
           "hitOn": 9,
           "rangeModifier": "30/20/-1",
           "suppressionModifier": -2,
-          "characteristics": ["reliability-4-plus"]
+          "characteristics": [
+            "reliability-4-plus"
+          ]
         },
         {
           "id": "support",
@@ -46,7 +48,9 @@
           "hitOn": 7,
           "rangeModifier": "30/20/-1",
           "suppressionModifier": -1,
-          "characteristics": ["reliability-3-plus"]
+          "characteristics": [
+            "reliability-3-plus"
+          ]
         },
         {
           "id": "precision",
@@ -71,7 +75,10 @@
           "hitOn": 5,
           "rangeModifier": "50/10/-1",
           "suppressionModifier": 0,
-          "characteristics": ["reliability-2-plus", "saturation-2-plus"]
+          "characteristics": [
+            "reliability-2-plus",
+            "saturation-2-plus"
+          ]
         }
       ],
       "imageUrl": "/images/weapons/german-mauser-kar-98k.jpg"
@@ -88,7 +95,9 @@
           "hitOn": 7,
           "rangeModifier": "10/10/-2",
           "suppressionModifier": -1,
-          "characteristics": ["reliability-4-plus"]
+          "characteristics": [
+            "reliability-4-plus"
+          ]
         },
         {
           "id": "support",
@@ -97,7 +106,9 @@
           "hitOn": 6,
           "rangeModifier": "10/10/-2",
           "suppressionModifier": 0,
-          "characteristics": ["reliability-4-plus"]
+          "characteristics": [
+            "reliability-4-plus"
+          ]
         }
       ],
       "imageUrl": "/images/weapons/german-mp40.jpg"
@@ -114,7 +125,9 @@
           "hitOn": 6,
           "rangeModifier": "20/20/-2",
           "suppressionModifier": -1,
-          "characteristics": ["reliability-4-plus"]
+          "characteristics": [
+            "reliability-4-plus"
+          ]
         },
         {
           "id": "support",
@@ -123,7 +136,9 @@
           "hitOn": 5,
           "rangeModifier": "30/20/-1",
           "suppressionModifier": 0,
-          "characteristics": ["reliability-4-plus"]
+          "characteristics": [
+            "reliability-4-plus"
+          ]
         }
       ]
     },
@@ -139,7 +154,9 @@
           "hitOn": 6,
           "rangeModifier": "20/20/-2",
           "suppressionModifier": -1,
-          "characteristics": ["reliability-3-plus"]
+          "characteristics": [
+            "reliability-3-plus"
+          ]
         },
         {
           "id": "support",
@@ -148,7 +165,9 @@
           "hitOn": 5,
           "rangeModifier": "40/20/-1",
           "suppressionModifier": 0,
-          "characteristics": ["reliability-3-plus"]
+          "characteristics": [
+            "reliability-3-plus"
+          ]
         }
       ],
       "imageUrl": "/images/weapons/german-fg-42.jpg"
@@ -165,7 +184,10 @@
           "hitOn": 5,
           "rangeModifier": "50/10/-1",
           "suppressionModifier": 0,
-          "characteristics": ["reliability-2-plus", "saturation-2-plus"]
+          "characteristics": [
+            "reliability-2-plus",
+            "saturation-2-plus"
+          ]
         }
       ],
       "imageUrl": "/images/weapons/soviet-mosin-nagant-m1891-30.jpg"
@@ -182,7 +204,9 @@
           "hitOn": 7,
           "rangeModifier": "10/10/-2",
           "suppressionModifier": -1,
-          "characteristics": ["reliability-4-plus"]
+          "characteristics": [
+            "reliability-4-plus"
+          ]
         },
         {
           "id": "support",
@@ -191,7 +215,9 @@
           "hitOn": 6,
           "rangeModifier": "10/10/-2",
           "suppressionModifier": 0,
-          "characteristics": ["reliability-4-plus"]
+          "characteristics": [
+            "reliability-4-plus"
+          ]
         }
       ],
       "imageUrl": "/images/weapons/soviet-ppsh-41.jpg"
@@ -278,7 +304,9 @@
           "hitOn": 5,
           "rangeModifier": "40/20/-1",
           "armourPenetration": 4,
-          "characteristics": ["area-3"]
+          "characteristics": [
+            "area-3"
+          ]
         }
       ]
     },
@@ -309,7 +337,9 @@
           "hitOn": 5,
           "rangeModifier": "50/10/-1",
           "armourPenetration": 9,
-          "characteristics": ["sustained-fire-5-plus"]
+          "characteristics": [
+            "sustained-fire-5-plus"
+          ]
         }
       ]
     },
@@ -318,8 +348,14 @@
       "name": "7.5 cm KwK 40 L/48",
       "type": "hard",
       "rateOfFirePerMinute": {
-        "theoretical": { "min": 10, "max": 12 },
-        "combat": { "min": 6, "max": 8 }
+        "theoretical": {
+          "min": 10,
+          "max": 12
+        },
+        "combat": {
+          "min": 6,
+          "max": 8
+        }
       },
       "profiles": [
         {
@@ -329,7 +365,9 @@
           "hitOn": 5,
           "rangeModifier": "50/10/-1",
           "armourPenetration": 10,
-          "characteristics": ["sustained-fire-5-plus"]
+          "characteristics": [
+            "sustained-fire-5-plus"
+          ]
         }
       ]
     },
@@ -353,7 +391,9 @@
           "hitOn": 4,
           "rangeModifier": "60/20/-1",
           "armourPenetration": 19,
-          "characteristics": ["limited-ammunition-1"]
+          "characteristics": [
+            "limited-ammunition-1"
+          ]
         },
         {
           "id": "he",
@@ -363,7 +403,9 @@
           "rangeModifier": "60/20/-1",
           "armourPenetration": 3,
           "suppressionModifier": -2,
-          "characteristics": ["area-4"]
+          "characteristics": [
+            "area-4"
+          ]
         }
       ]
     },
@@ -372,8 +414,14 @@
       "name": "8.8 cm KwK 36 L/56",
       "type": "hard",
       "rateOfFirePerMinute": {
-        "theoretical": { "min": 6, "max": 8 },
-        "combat": { "min": 4, "max": 6 }
+        "theoretical": {
+          "min": 6,
+          "max": 8
+        },
+        "combat": {
+          "min": 4,
+          "max": 6
+        }
       },
       "profiles": [
         {
@@ -391,7 +439,9 @@
           "hitOn": 4,
           "rangeModifier": "50/20/-1",
           "armourPenetration": 14,
-          "characteristics": ["limited-ammunition-1"]
+          "characteristics": [
+            "limited-ammunition-1"
+          ]
         },
         {
           "id": "he",
@@ -401,7 +451,9 @@
           "rangeModifier": "50/20/-1",
           "armourPenetration": 3,
           "suppressionModifier": -2,
-          "characteristics": ["area-6"]
+          "characteristics": [
+            "area-6"
+          ]
         }
       ]
     },
@@ -410,8 +462,14 @@
       "name": "8,8 cm KwK 43",
       "type": "hard",
       "rateOfFirePerMinute": {
-        "theoretical": { "min": 10, "max": 12 },
-        "combat": { "min": 6, "max": 8 }
+        "theoretical": {
+          "min": 10,
+          "max": 12
+        },
+        "combat": {
+          "min": 6,
+          "max": 8
+        }
       },
       "profiles": [
         {
@@ -421,7 +479,9 @@
           "hitOn": 5,
           "rangeModifier": "50/10/-1",
           "armourPenetration": 10,
-          "characteristics": ["sustained-fire-5-plus"]
+          "characteristics": [
+            "sustained-fire-5-plus"
+          ]
         }
       ]
     },
@@ -430,8 +490,14 @@
       "name": "8.8 cm KwK 43 L/71",
       "type": "hard",
       "rateOfFirePerMinute": {
-        "theoretical": { "min": 6, "max": 8 },
-        "combat": { "min": 3, "max": 5 }
+        "theoretical": {
+          "min": 6,
+          "max": 8
+        },
+        "combat": {
+          "min": 3,
+          "max": 5
+        }
       },
       "profiles": [
         {
@@ -449,7 +515,9 @@
           "hitOn": 4,
           "rangeModifier": "50/20/-1",
           "armourPenetration": 22,
-          "characteristics": ["limited-ammunition-1"]
+          "characteristics": [
+            "limited-ammunition-1"
+          ]
         },
         {
           "id": "he",
@@ -459,7 +527,9 @@
           "rangeModifier": "50/20/-1",
           "armourPenetration": 4,
           "suppressionModifier": -3,
-          "characteristics": ["area-8"]
+          "characteristics": [
+            "area-8"
+          ]
         }
       ]
     },
@@ -490,7 +560,10 @@
           "hitOn": 5,
           "rangeModifier": "20/10/-1",
           "armourPenetration": 20,
-          "characteristics": ["heat", "one-shot"]
+          "characteristics": [
+            "heat",
+            "one-shot"
+          ]
         }
       ]
     },
@@ -506,10 +579,91 @@
           "hitOn": 5,
           "rangeModifier": "30/10/-1",
           "armourPenetration": 17,
-          "characteristics": ["heat", "one-shot"]
+          "characteristics": [
+            "heat",
+            "one-shot"
+          ]
         }
       ],
       "imageUrl": "/images/weapons/german-panzerschreck-rpzb-54.jpg"
+    },
+    {
+      "id": "su-l-11-76-2",
+      "name": "76.2 mm L-11",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 7
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "suppressionModifier": -2,
+          "characteristics": [
+            "area-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "su-f-32-76-2",
+      "name": "76.2 mm F-32",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 8
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "suppressionModifier": -2,
+          "characteristics": [
+            "area-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "su-f-34-76-2",
+      "name": "76.2 mm F-34",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 9
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "suppressionModifier": -2,
+          "characteristics": [
+            "area-3"
+          ]
+        }
+      ]
     },
     {
       "id": "su-d-5t",
@@ -531,8 +685,14 @@
       "name": "122 mm D-25T",
       "type": "hard",
       "rateOfFirePerMinute": {
-        "theoretical": { "min": 2, "max": 3 },
-        "combat": { "min": 1, "max": 2 }
+        "theoretical": {
+          "min": 2,
+          "max": 3
+        },
+        "combat": {
+          "min": 1,
+          "max": 2
+        }
       },
       "profiles": [
         {
@@ -550,8 +710,14 @@
       "name": "38 cm Raketen-Werfer 61",
       "type": "artillery",
       "rateOfFirePerMinute": {
-        "theoretical": { "min": 1, "max": 2 },
-        "combat": { "min": 1, "max": 1 }
+        "theoretical": {
+          "min": 1,
+          "max": 2
+        },
+        "combat": {
+          "min": 1,
+          "max": 1
+        }
       },
       "profiles": [
         {
@@ -562,7 +728,11 @@
           "rangeModifier": "20/10/-1",
           "armourPenetration": 14,
           "suppressionModifier": -4,
-          "characteristics": ["area-12", "one-shot", "limited-ammunition-1"]
+          "characteristics": [
+            "area-12",
+            "one-shot",
+            "limited-ammunition-1"
+          ]
         }
       ],
       "imageUrl": "/images/weapons/german-rw-61.jpg"
@@ -572,8 +742,14 @@
       "name": "15 cm sFH 18 L/30",
       "type": "artillery",
       "rateOfFirePerMinute": {
-        "theoretical": { "min": 4, "max": 6 },
-        "combat": { "min": 2, "max": 3 }
+        "theoretical": {
+          "min": 4,
+          "max": 6
+        },
+        "combat": {
+          "min": 2,
+          "max": 3
+        }
       },
       "profiles": [
         {
@@ -584,7 +760,10 @@
           "rangeModifier": "60/30/-2",
           "armourPenetration": 6,
           "suppressionModifier": -5,
-          "characteristics": ["area-14", "indirect"]
+          "characteristics": [
+            "area-14",
+            "indirect"
+          ]
         }
       ]
     },
@@ -593,8 +772,14 @@
       "name": "15 cm sIG 33",
       "type": "artillery",
       "rateOfFirePerMinute": {
-        "theoretical": { "min": 2, "max": 3 },
-        "combat": { "min": 1, "max": 2 }
+        "theoretical": {
+          "min": 2,
+          "max": 3
+        },
+        "combat": {
+          "min": 1,
+          "max": 2
+        }
       },
       "profiles": [
         {
@@ -605,7 +790,10 @@
           "rangeModifier": "40/20/-2",
           "armourPenetration": 5,
           "suppressionModifier": -5,
-          "characteristics": ["area-14", "indirect"]
+          "characteristics": [
+            "area-14",
+            "indirect"
+          ]
         }
       ]
     }
