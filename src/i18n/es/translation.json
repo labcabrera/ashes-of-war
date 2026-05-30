@@ -169,6 +169,7 @@
       "armourNotes": "Notas",
       "resources": "Costes de recursos",
       "availability": "Disponibilidad",
+      "description": "Descripción",
       "thresholds": "Umbrales",
       "combatants": "Combatientes",
       "organizationThreshold": "Organización",
@@ -231,6 +232,7 @@
     "theoretical": "Teórica",
     "combat": "Combate",
     "characteristics": "Características",
+    "description": "Descripción",
     "carriedBy": "Unidades que la llevan",
     "noCarriers": "Ninguna unidad del catálogo lleva esta arma.",
     "detail": {

@@ -580,6 +580,54 @@
       ]
     },
     {
+      "id": "german-pak-43-l71",
+      "name": "8.8 cm PaK 43 L/71",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 6,
+          "max": 8
+        },
+        "combat": {
+          "min": 3,
+          "max": 5
+        }
+      },
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 19
+        },
+        {
+          "id": "apcr",
+          "name": "APCR",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 22,
+          "characteristics": [
+            "limited-ammunition-1"
+          ]
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/20/-1",
+          "armourPenetration": 4,
+          "suppressionModifier": -3,
+          "characteristics": [
+            "area-8"
+          ]
+        }
+      ]
+    },
+    {
       "id": "german-panzerfaust-60",
       "name": "Panzerfaust 60",
       "type": "hard",

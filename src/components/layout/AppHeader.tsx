@@ -21,7 +21,7 @@ import {
   Stack,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import TranslateIcon from '@mui/icons-material/Translate';
+import LanguageIcon from '@mui/icons-material/Language';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { LOCALE_KEY } from '../../i18n';
@@ -109,7 +109,7 @@ export default function AppHeader() {
           aria-haspopup="menu"
           aria-expanded={languageAnchor ? 'true' : undefined}
         >
-          <TranslateIcon />
+          <LanguageIcon />
           <Typography component="span" sx={{ ml: 0.75, fontSize: '0.82rem', fontWeight: 700 }}>
             {(i18n.resolvedLanguage ?? 'en').toUpperCase()}
           </Typography>

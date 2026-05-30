@@ -29,9 +29,12 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link as RouterLink, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import unitsData from '../data/units/units.json';
+import unitDescriptionsData from '../data/units/unit-descriptions.json';
 import weaponsData from '../data/weapons/weapons.json';
 import type { Armor, Unit, UnitType, UnitWeapon } from '../types/unit';
 import type { Weapon } from '../types/weapon';
+
+type LocalizedText = Partial<Record<'en' | 'es', string>>;
 
 const UNIT_ICONS = {
   infantry: MilitaryTechIcon,
@@ -52,6 +55,19 @@ const UNIT_ICONS = {
 
 const units = unitsData.units as unknown as Unit[];
 const weapons = weaponsData.weapons as unknown as Weapon[];
+const unitDescriptions = unitDescriptionsData as {
+  units: Record<string, LocalizedText>;
+  types: Record<UnitType, LocalizedText>;
+};
+
+function currentLanguage(language: string | undefined): 'en' | 'es' {
+  return language?.startsWith('es') ? 'es' : 'en';
+}
+
+function localizedText(value: LocalizedText | undefined, language: string | undefined) {
+  const lang = currentLanguage(language);
+  return value?.[lang] ?? value?.en ?? value?.es;
+}
 
 function getWeapon(assignment: UnitWeapon) {
   return weapons.find((weapon) => weapon.id === assignment.id);
@@ -157,7 +173,7 @@ function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
 }
 
 export default function UnitFullPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { unitId } = useParams();
   const unit = units.find((candidate) => candidate.id === unitId);
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
@@ -174,6 +190,9 @@ export default function UnitFullPage() {
   }
 
   const assignedWeapons = unit.weapons ?? [];
+  const description =
+    localizedText(unitDescriptions.units[unit.id], i18n.resolvedLanguage) ??
+    localizedText(unitDescriptions.types[unit.type], i18n.resolvedLanguage);
 
   return (
     <Container maxWidth="lg">
@@ -340,6 +359,18 @@ export default function UnitFullPage() {
           )}
         </Box>
       </Box>
+
+      {description && (
+        <>
+          <Divider sx={{ my: 3 }} />
+          <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
+            {t('units.detail.description')}
+          </Typography>
+          <Typography color="text.secondary" sx={{ whiteSpace: 'pre-line' }}>
+            {description}
+          </Typography>
+        </>
+      )}
     </Container>
   );
 }

@@ -156,6 +156,7 @@
       "armourNotes": "Notes",
       "resources": "Resource Costs",
       "availability": "Availability",
+      "description": "Description",
       "thresholds": "Thresholds",
       "combatants": "Combatants",
       "organizationThreshold": "Organization",
@@ -218,6 +219,7 @@
     "theoretical": "Theoretical",
     "combat": "Combat",
     "characteristics": "Characteristics",
+    "description": "Description",
     "carriedBy": "Carried by",
     "noCarriers": "No catalogue units carry this weapon.",
     "detail": {

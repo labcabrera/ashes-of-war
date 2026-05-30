@@ -858,6 +858,86 @@
       "casualtiesThreshold": 3
     },
     {
+      "id": "german-7.5-cm-pak-40",
+      "name": "7.5 cm PaK 40",
+      "type": "artillery-towed",
+      "faction": "german",
+      "from": 1942,
+      "to": 1945,
+      "cost": 24,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "dash": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 8
+      },
+      "weapons": [
+        {
+          "id": "german-pak-40-l46",
+          "count": 1,
+          "type": "normal"
+        }
+      ],
+      "imageUrl": "/images/units/german-pak-40.jpg",
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3
+    },
+    {
+      "id": "german-8.8-cm-pak-43",
+      "name": "8.8 cm PaK 43",
+      "type": "artillery-towed",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 42,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "dash": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 12
+      },
+      "weapons": [
+        {
+          "id": "german-pak-43-l71",
+          "count": 1,
+          "type": "normal"
+        }
+      ],
+      "imageUrl": "/images/units/german-pak-43.jpg",
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3
+    },
+    {
       "id": "german-recon-01",
       "name": "Sd.Kfz. 222 Armoured Car",
       "type": "reconnaissance",
