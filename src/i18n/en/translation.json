@@ -143,6 +143,7 @@
       "name": "Search by name",
       "faction": "Faction",
       "type": "Unit Type",
+      "keyword": "Keywords",
       "year": "Year"
     },
     "outOfYear": "Out of era",
@@ -191,7 +192,13 @@
       "weaponUnavailable": "Weapon information is not available in the catalogue."
     },
     "keywords": {
-      "low-reliability": "Low Reliability"
+      "low-reliability": "Low Reliability",
+      "air-support": "Air Support",
+      "half-track": "Half-track",
+      "medic": "Medic",
+      "open-topped": "Open-topped",
+      "sniper": "Sniper",
+      "transport-10": "Transport (10)"
     },
     "weaponMounts": {
       "normal": "Normal",

@@ -31,6 +31,11 @@ Las armas con este perfil tendrán una penalización de -X a su tirada de impact
 
 TODO
 
+[#medic]
+== Medic
+
+TODO
+
 [#overheat]
 == Overheat X
 
@@ -55,6 +60,11 @@ Estas unidades pueden desplegarse fuera del área de despliegue hasta X pulgadas
 == Stationary
 
 Las unidades con esta palabra clave no pueden realizar ningún movimiento durante la partida. Estas unidades por lo general serán emplazamientos fijos de armas pesadas que requieren de una preparación previa para ser desplegadas.
+
+[#transport]
+== Transport X
+
+Este vehículo puede transportar hasta X unidades de infantería. Estas unidades pueden ser transportadas a través del tablero y desplegadas en cualquier lugar dentro del alcance de movimiento del vehículo. Esto representa la capacidad de transportar tropas de manera rápida y segura a través del campo de batalla, lo que les permite realizar ataques sorpresa o evacuar unidades en peligro.
 
 [#unreliable]
 == Unreliable X

@@ -64,6 +64,22 @@ De este modo en el perfil de una unidad tendremos:
 |Dash |24' |18' |9'
 |===
 
+== Transportes
+
+WARNING: TODO
+
+=== Desembarcar unidades
+
+TODO
+
+=== Embarcar unidades
+
+TODO
+
+=== Destrucción de transportes
+
+TODO
+
 
 
 // [cols="1,3"]

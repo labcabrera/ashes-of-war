@@ -981,6 +981,7 @@
       "resourceCosts": {
         "intelligence": 1
       },
+      "keywords": ["sniper"],
       "organizationThreshold": 6,
       "casualtiesThreshold": 1
     },
@@ -2038,7 +2039,7 @@
       },
       "organizationThreshold": 8,
       "casualtiesThreshold": 3,
-      "keywords": ["open-topped", "half-track"],
+      "keywords": ["open-topped", "half-track", "transport-10"],
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -2700,6 +2701,7 @@
       "from": 1941,
       "to": 1945,
       "cost": 7,
+      "keywords": ["medic"],
       "movement": {
         "tactical": {
           "road": 8,
@@ -2731,6 +2733,7 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
+      "keywords": ["sniper"],
       "movement": {
         "tactical": {
           "road": 8,

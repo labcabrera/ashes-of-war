@@ -156,6 +156,7 @@
       "name": "Buscar por nombre",
       "faction": "Facción",
       "type": "Tipo de unidad",
+      "keyword": "Palabras clave",
       "year": "Año"
     },
     "outOfYear": "Fuera de era",
@@ -204,7 +205,13 @@
       "weaponUnavailable": "No existe información de esta arma en el catálogo."
     },
     "keywords": {
-      "low-reliability": "Baja fiabilidad"
+      "low-reliability": "Baja fiabilidad",
+      "air-support": "Apoyo aéreo",
+      "half-track": "Semioruga",
+      "medic": "Médico",
+      "open-topped": "Descubierto",
+      "sniper": "Francotirador",
+      "transport-10": "Transporte (10)"
     },
     "weaponMounts": {
       "normal": "Normal",
