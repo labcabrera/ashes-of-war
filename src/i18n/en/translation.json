@@ -198,6 +198,8 @@
       "half-track": "Half-track",
       "medic": "Medic",
       "open-topped": "Open-topped",
+      "explosives": "Explosives",
+      "indirect-fire": "Indirect Fire",
       "reconnaissance": "Reconnaissance",
       "sniper": "Sniper",
       "transport-10": "Transport (10)",

@@ -1665,6 +1665,55 @@
           ]
         }
       ]
+    },
+    {
+      "id": "german-5cm-granatwerfer-36",
+      "name": "5 cm Granatwerfer 36",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 15,
+          "max": 25
+        },
+        "combat": {
+          "min": 10,
+          "max": 15
+        }
+      },
+      "profiles": [
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 2,
+          "hitOn": 5,
+          "rangeModifier": "25/13/-2",
+          "armourPenetration": 2,
+          "suppressionModifier": -2,
+          "characteristics": [
+            "area-4",
+            "indirect"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "german-flammenwerfer-41",
+      "name": "Flammenwerfer 41",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "flame",
+          "name": "Flame",
+          "shots": 3,
+          "hitOn": 4,
+          "rangeModifier": "8/4/-3",
+          "suppressionModifier": -4,
+          "characteristics": [
+            "area-6",
+            "limited-ammunition-3"
+          ]
+        }
+      ]
     }
   ]
 }

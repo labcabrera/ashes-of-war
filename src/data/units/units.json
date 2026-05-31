@@ -1837,6 +1837,50 @@
       ]
     },
     {
+      "id": "german-mg42-team",
+      "name": "MG42 Team",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1942,
+      "to": 1945,
+      "cost": 13,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 5,
+      "weapons": [
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-mauser-kar-98k",
+          "count": 4,
+          "type": "normal"
+        }
+      ]
+    },
+    {
       "id": "german-nashorn",
       "name": "Nashorn (Hornisse)",
       "type": "tank-destroyer",
@@ -3280,6 +3324,41 @@
       ]
     },
     {
+      "id": "german-sanitatsunteroffizier",
+      "name": "Sanitätsunteroffizier",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 8,
+      "keywords": [
+        "medic"
+      ],
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 4
+      },
+      "combatants": 5,
+      "organizationThreshold": 6,
+      "casualtiesThreshold": 2
+    },
+    {
       "id": "german-sd-kfz-222",
       "name": "Sd.Kfz. 222 Armoured Car",
       "type": "mechanised",
@@ -4185,6 +4264,58 @@
       ]
     },
     {
+      "id": "german-sturmpionier-squad",
+      "name": "Sturmpionier Squad",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 17,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 6
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 8,
+      "keywords": [
+        "explosives"
+      ],
+      "weapons": [
+        {
+          "id": "german-flammenwerfer-41",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-mp-40",
+          "count": 6,
+          "type": "normal"
+        }
+      ]
+    },
+    {
       "id": "german-sturmtiger",
       "name": "Sturmtiger",
       "type": "assault-gun",
@@ -4865,6 +4996,185 @@
       "keywords": [
         "open-topped",
         "transport-12"
+      ]
+    },
+    {
+      "id": "german-wehrmacht-assault-squad",
+      "name": "Wehrmacht Assault Squad",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1940,
+      "to": 1945,
+      "cost": 14,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 10,
+      "weapons": [
+        {
+          "id": "german-mp-40",
+          "count": 10,
+          "type": "normal"
+        }
+      ]
+    },
+    {
+      "id": "german-wehrmacht-grenadier-squad",
+      "name": "Wehrmacht Grenadier Squad",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 10,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 10,
+      "weapons": [
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-mauser-kar-98k",
+          "count": 8,
+          "type": "normal"
+        }
+      ]
+    },
+    {
+      "id": "german-wehrmacht-light-mortar-team",
+      "name": "Wehrmacht Light Mortar Team",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 10,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 4
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 5,
+      "keywords": [
+        "indirect-fire"
+      ],
+      "weapons": [
+        {
+          "id": "german-5cm-granatwerfer-36",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-mauser-kar-98k",
+          "count": 4,
+          "type": "normal"
+        }
+      ]
+    },
+    {
+      "id": "german-wehrmacht-volksgrenadier-squad",
+      "name": "Wehrmacht Volksgrenadier Squad",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1944,
+      "to": 1945,
+      "cost": 13,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 10,
+      "weapons": [
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-stg-44",
+          "count": 8,
+          "type": "normal"
+        },
+        {
+          "id": "german-panzerfaust-60",
+          "count": 1,
+          "type": "normal"
+        }
       ]
     }
   ]
