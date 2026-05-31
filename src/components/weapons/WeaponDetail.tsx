@@ -22,26 +22,11 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { Unit, UnitWeapon } from '../../types/unit';
 import { Weapon } from '../../types/weapon';
-import weaponDescriptionsData from '../../data/weapons/weapon-descriptions.json';
-
-type LocalizedText = Partial<Record<'en' | 'es', string>>;
+import { getDescription } from '../../i18n/descriptions';
 
 interface Props {
   weapon: Weapon | null;
   units: Unit[];
-}
-
-const weaponDescriptions = weaponDescriptionsData as {
-  weapons: Record<string, LocalizedText>;
-};
-
-function currentLanguage(language: string | undefined): 'en' | 'es' {
-  return language?.startsWith('es') ? 'es' : 'en';
-}
-
-function localizedText(value: LocalizedText | undefined, language: string | undefined) {
-  const lang = currentLanguage(language);
-  return value?.[lang] ?? value?.en ?? value?.es;
 }
 
 function weaponAssignments(unit: Unit): UnitWeapon[] {
@@ -62,7 +47,7 @@ export default function WeaponDetail({ weapon, units }: Props) {
         .filter(({ count }) => count > 0)
     : [];
   const description = weapon
-    ? localizedText(weaponDescriptions.weapons[weapon.id], i18n.resolvedLanguage)
+    ? getDescription('weapons', weapon.id, i18n.resolvedLanguage)
     : undefined;
 
   return (

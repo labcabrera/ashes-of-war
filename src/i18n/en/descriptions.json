@@ -1,0 +1,37 @@
+{
+  "_version": 1,
+  "types": {
+    "infantry": "Infantry units represent soldiers fighting on foot, usually organised around rifles, automatic weapons, and close-range battlefield tasks.",
+    "tank": "Tanks combine armour, mobility, and direct-fire weapons to break through enemy positions and support manoeuvre.",
+    "tank-destroyer": "Tank destroyers prioritise anti-armour firepower, often trading turret flexibility or protection for a stronger gun.",
+    "assault-gun": "Assault guns provide armoured direct fire support, especially against fortified positions and infantry-held ground.",
+    "self-propelled-artillery": "Self-propelled artillery mounts heavier guns on mobile chassis, allowing fire support to keep pace with armoured formations.",
+    "motorised": "Motorised troops rely on trucks or similar transport to move quickly between engagements.",
+    "mechanised": "Mechanised units fight in close cooperation with armoured carriers, improving battlefield mobility and protection.",
+    "reconnaissance": "Reconnaissance units scout ahead, screen friendly forces, and identify enemy positions before the main engagement.",
+    "engineer": "Engineer units handle obstacles, fortifications, demolitions, and close assault tasks that require specialist equipment.",
+    "artillery-towed": "Towed artillery delivers powerful fire support but depends on crews and transport for repositioning.",
+    "sniper": "Snipers are small specialist teams focused on precision fire, disruption, and target denial.",
+    "medic": "Medics support nearby troops by treating casualties and preserving the fighting strength of the force.",
+    "aircraft": "Aircraft represent air assets that influence the battlefield through attack, interdiction, or support missions.",
+    "special": "Special units cover elite, unusual, or scenario-specific formations with distinctive roles."
+  },
+  "units": {
+    "german-8.8-cm-pak-43": "El 8.8 cm Panzerabwehrkanone 43 (PaK 43) fue el cañón antitanque más potente desplegado por Alemania durante la Segunda Guerra Mundial. Desarrollado a partir del exitoso calibre de 88 mm, combinaba una altísima velocidad inicial con una extraordinaria capacidad de penetración, permitiéndole destruir cualquier carro aliado o soviético a largas distancias. Su largo tubo de 71 calibres y sus avanzadas municiones lo convertían en un arma temible, capaz de perforar incluso los blindajes más pesados del conflicto. Aunque su gran tamaño y peso complicaban su despliegue y movilidad táctica, el PaK 43 destacó por su precisión y potencia de fuego, siendo considerado uno de los mejores cañones antitanque de la guerra. También sirvió de base para el armamento principal de algunos de los cazacarros alemanes más eficaces de los últimos años del conflicto.\n\n3.000 unidades producidas entre 1943 y 1945.",
+    "german-tiger-i": "El Tiger I fue el carro pesado más temido de Alemania durante gran parte de la Segunda Guerra Mundial. Armado con el poderoso cañón de 88 mm KwK 36 L/56 y protegido por un grueso blindaje frontal de hasta 100 mm, era capaz de destruir la mayoría de los carros aliados a largas distancias mientras permanecía prácticamente invulnerable a muchos de sus adversarios. Aunque su elevado peso y complejidad mecánica limitaban su movilidad y fiabilidad, el Tiger se ganó una reputación legendaria por su potencia de fuego, resistencia y capacidad para dominar el campo de batalla. Producido entre 1942 y 1944, fue empleado por los batallones pesados de carros alemanes en todos los frentes principales del conflicto.\n\n1.347 unidades producidas entre agosto de 1942 y agosto de 1944.",
+    "german-panther-d": "El Panther Ausf. D fue la primera versión producida en serie del Panther. Diseñado para contrarrestar a los T-34 soviéticos, combinaba un potente cañón de 75 mm KwK 42 L/70 con un blindaje frontal fuertemente inclinado que proporcionaba una excelente protección para su peso. Sin embargo, los primeros vehículos sufrieron numerosos problemas mecánicos derivados de una introducción apresurada al servicio, especialmente en la transmisión, el motor y el sistema de dirección. A pesar de sus dificultades iniciales, demostró el enorme potencial del diseño Panther y sentó las bases para las versiones posteriores.\n\n842 unidades producidas entre enero de 1943 y septiembre de 1943.",
+    "german-panther-a": "El Panther Ausf. A incorporó numerosas mejoras destinadas a resolver los problemas detectados en los primeros Panther. Se introdujo una nueva cúpula para el comandante con mejor visibilidad, mejoras en la fiabilidad mecánica y modificaciones en diversos sistemas internos. Mantuvo el mismo blindaje y armamento principal que el Ausf. D, conservando su capacidad para destruir la mayoría de los carros aliados a largas distancias. Esta versión representó la maduración inicial del diseño y participó en gran número en los combates de 1944.\n\n2.200 unidades producidas entre agosto de 1943 y mayo de 1944.",
+    "german-panther-g": "El Panther Ausf. G fue la variante más numerosa y evolucionada producida durante la guerra. Incorporó un casco rediseñado con laterales simplificados para facilitar la fabricación y mejorar la protección lateral. También recibió numerosas mejoras menores orientadas a aumentar la fiabilidad, reducir los costes de producción y simplificar el mantenimiento en campaña. Conservó el excelente cañón KwK 42 L/70 y el potente blindaje frontal que habían convertido al Panther en uno de los carros medios más temidos de la guerra. La mayoría de los Panther desplegados durante los últimos meses del conflicto pertenecían a esta versión.\n\n2.950 unidades producidas entre marzo de 1944 y abril de 1945.",
+    "soviet-rifle-squad": "A standard Red Army rifle squad built around bolt-action rifles and simple battlefield staying power.",
+    "soviet-assault-squad": "An assault-oriented Red Army squad armed with PPSh-41 submachine guns for short-range firepower."
+  },
+  "weapons": {
+    "soviet-mosin-nagant-m1891-30": "The Mosin–Nagant M1891/30 was the standard Soviet bolt-action rifle, rugged, simple, and produced in enormous numbers.",
+    "soviet-ppsh-41": "The PPSh-41 was a high-rate submachine gun well suited to urban fighting, assaults, and close-range firefights.",
+    "soviet-maxim-m1910": "The Maxim M1910 was a water-cooled heavy machine gun used for sustained defensive and support fire.",
+    "su-l-11-76-2": "The 76.2 mm L-11 equipped early T-34 tanks before being replaced by more capable 76 mm guns.",
+    "su-f-32-76-2": "The 76.2 mm F-32 was an intermediate Soviet tank gun used before the widespread adoption of the F-34.",
+    "su-f-34-76-2": "The 76.2 mm F-34 became the best-known main gun of the T-34-76, improving anti-armour performance and reliability.",
+    "german-fg-42": "The FG 42 was an advanced automatic rifle developed for German airborne troops, combining compact handling with strong firepower."
+  }
+}
