@@ -26,11 +26,11 @@ const theme = createTheme({
       lineHeight: 1.7,
     },
     body2: {
-      fontSize: '0.95rem',
+      fontSize: '1rem',
       lineHeight: 1.65,
     },
     button: {
-      fontSize: '0.95rem',
+      fontSize: '1rem',
       textTransform: 'none',
     },
   },
@@ -38,7 +38,7 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         html: {
-          fontSize: '17px',
+          fontSize: '18px',
         },
       },
     },

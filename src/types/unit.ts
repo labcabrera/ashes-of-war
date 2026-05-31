@@ -17,6 +17,7 @@ export type UnitType =
   | 'engineer'
   | 'artillery-towed'
   | 'anti-tank-towed'
+  | 'anti-aircraft-towed'
   | 'aircraft';
 
 /** Ordered list of all UnitType values for use in filters and UI. */
@@ -30,6 +31,7 @@ export const UNIT_TYPES: UnitType[] = [
   'engineer',
   'artillery-towed',
   'anti-tank-towed',
+  'anti-aircraft-towed',
   'aircraft',
 ];
 

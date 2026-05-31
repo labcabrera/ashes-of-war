@@ -2,7 +2,7 @@
   "_version": 8,
   "units": [
     {
-      "id": "panzergrenadier-squad",
+      "id": "german-panzergrenadier-squad",
       "name": "Panzergrenadier Squad",
       "type": "infantry",
       "faction": "german",
@@ -4332,6 +4332,93 @@
       "weapons": [
         {
           "id": "german-leig-18",
+          "count": 1,
+          "type": "normal"
+        }
+      ]
+    },
+    {
+      "id": "german-kompanietrupp",
+      "name": "Kompanietrupp (HQ)",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 10,
+      "movement": {
+        "tactical": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 20,
+          "crossCountry": 15,
+          "rough": 8
+        },
+        "dash": {
+          "road": 30,
+          "crossCountry": 23,
+          "rough": 11
+        }
+      },
+      "resourceCosts": {
+        "logistics": 4
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 10,
+      "weapons": [
+        {
+          "id": "german-mp-40",
+          "count": 5,
+          "type": "normal"
+        },
+        {
+          "id": "german-mauser-kar-98k",
+          "count": 5,
+          "type": "normal"
+        }
+      ],
+      "keywords": [
+        "radio",
+        "hq"
+      ]
+    },
+    {
+      "id": "german-88mm-flak-36",
+      "name": "8.8 cm FlaK 36",
+      "type": "anti-aircraft-towed",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 35,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 6,
+          "crossCountry": 4,
+          "rough": 2
+        },
+        "dash": {
+          "road": 9,
+          "crossCountry": 6,
+          "rough": 4
+        }
+      },
+      "resourceCosts": {
+        "fuel": 4,
+        "logistics": 12
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "weapons": [
+        {
+          "id": "german-88mm-flak-36",
           "count": 1,
           "type": "normal"
         }

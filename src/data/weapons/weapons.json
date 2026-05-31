@@ -1513,6 +1513,55 @@
           ]
         }
       ]
+    },
+    {
+      "id": "german-88mm-flak-36",
+      "name": "8.8 cm FlaK 36",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 15,
+          "max": 20
+        },
+        "combat": {
+          "min": 8,
+          "max": 12
+        }
+      },
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "45/15/-1",
+          "armourPenetration": 16
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "50/25/-2",
+          "armourPenetration": 4,
+          "suppressionModifier": -4,
+          "characteristics": [
+            "area-10",
+            "indirect"
+          ]
+        },
+        {
+          "id": "aa",
+          "name": "AA",
+          "shots": 2,
+          "hitOn": 5,
+          "rangeModifier": "40/30/-2",
+          "armourPenetration": 2,
+          "characteristics": [
+            "anti-aircraft"
+          ]
+        }
+      ]
     }
   ]
 }
