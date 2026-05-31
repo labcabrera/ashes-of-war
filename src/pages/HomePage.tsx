@@ -10,6 +10,7 @@ import TableRowsIcon from '@mui/icons-material/TableRows';
 import type { SvgIconComponent } from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { unitImageUrl } from '../utils/images';
 
 const FEATURE_ICONS: SvgIconComponent[] = [ShieldIcon, TableRowsIcon, GroupsIcon];
 
@@ -114,16 +115,16 @@ export default function HomePage() {
               gap: 1.5,
             }}
           >
-            {[
+            {([
               ['german', 'german-panzer-iv-g'],
               ['german', 'german-tiger-i'],
               ['soviet-union', 'soviet-union-t-34-85'],
               ['soviet-union', 'soviet-union-is-2'],
-            ].map(([factionId, unitId]) => (
+            ] as const).map(([factionId, unitId]) => (
               <Box
                 key={unitId}
                 component="img"
-                src={`/images/units/${factionId}/${unitId}.jpg`}
+                src={unitImageUrl(factionId, unitId)}
                 alt=""
                 sx={{
                   width: '100%',

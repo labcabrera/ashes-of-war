@@ -2,13 +2,14 @@
  * UnitFilters — name, faction (chips), type (chips), and year controls for filtering units.
  */
 import { Avatar, Box, Chip, TextField, Typography } from '@mui/material';
-
-const FACTION_FLAGS: Record<string, string> = {
-  german: '/images/factions/germany.jpg',
-  'soviet-union': '/images/factions/soviet-union.jpg',
-};
 import { useTranslation } from 'react-i18next';
 import { UnitType } from '../../types/unit';
+import { factionFlagUrl } from '../../utils/images';
+
+const FACTION_FLAGS: Record<string, string> = {
+  german: factionFlagUrl('german'),
+  'soviet-union': factionFlagUrl('soviet-union'),
+};
 
 const UNIT_TYPES: UnitType[] = [
   'infantry', 'tank', 'tank-destroyer', 'assault-gun', 'self-propelled-artillery', 'motorised', 'mechanised',

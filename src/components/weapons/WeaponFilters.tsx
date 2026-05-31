@@ -1,20 +1,17 @@
 /**
  * WeaponFilters — name and faction controls for filtering the weapon catalogue.
  */
-import { Box, FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-
-const FACTION_FLAGS: Record<string, string> = {
-  german: '/images/factions/germany.jpg',
-  'soviet-union': '/images/factions/soviet-union.jpg',
-};
+import type { FactionId } from '../../types/faction';
+import FactionSelect from '../factions/FactionSelect';
 
 interface Props {
   name: string;
-  faction: string;
-  factions: string[];
+  faction: FactionId | '';
+  factions: FactionId[];
   onNameChange: (v: string) => void;
-  onFactionChange: (v: string) => void;
+  onFactionChange: (v: FactionId | '') => void;
 }
 
 export default function WeaponFilters({ name, faction, factions, onNameChange, onFactionChange }: Props) {
@@ -31,34 +28,14 @@ export default function WeaponFilters({ name, faction, factions, onNameChange, o
         sx={{ minWidth: 220 }}
       />
 
-      <FormControl size="small" sx={{ minWidth: 140 }}>
-        <InputLabel>{t('units.filters.faction')}</InputLabel>
-        <Select
-          value={faction}
-          label={t('units.filters.faction')}
-          onChange={(e) => onFactionChange(e.target.value)}
-        >
-          <MenuItem value="">{t('common.all')}</MenuItem>
-          {factions.map((f) => {
-            const label = t(`factions.${f}`, f);
-            return (
-              <MenuItem key={f} value={f}>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  {FACTION_FLAGS[f] && (
-                    <Box
-                      component="img"
-                      src={FACTION_FLAGS[f]}
-                      alt={label}
-                      sx={{ height: 16, width: 'auto', borderRadius: 0.5 }}
-                    />
-                  )}
-                  {label}
-                </Box>
-              </MenuItem>
-            );
-          })}
-        </Select>
-      </FormControl>
+      <FactionSelect
+        value={faction}
+        label={t('units.filters.faction')}
+        allLabel={t('common.all')}
+        allowedFactionIds={factions}
+        minWidth={160}
+        onChange={onFactionChange}
+      />
     </Box>
   );
 }

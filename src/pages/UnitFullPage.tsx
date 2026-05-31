@@ -33,6 +33,7 @@ import weaponsData from '../data/weapons/weapons.json';
 import { getDescription } from '../i18n/descriptions';
 import type { Armor, Unit, UnitType, UnitWeapon } from '../types/unit';
 import type { Weapon } from '../types/weapon';
+import { unitImageUrl } from '../utils/images';
 
 const UNIT_ICONS = {
   infantry: MilitaryTechIcon,
@@ -196,7 +197,7 @@ export default function UnitFullPage() {
         >
           <Avatar
             variant="rounded"
-            src={unit.imageUrl}
+            src={unitImageUrl(unit.faction, unit.id)}
             alt={unit.name}
             sx={{
               width: '100%',

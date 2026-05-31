@@ -30,6 +30,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { Unit, UnitType, UnitWeapon } from '../../types/unit';
 import type { Weapon } from '../../types/weapon';
+import { unitImageUrl } from '../../utils/images';
 
 interface Props {
   unit: Unit | null;
@@ -122,7 +123,7 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
           >
             <Avatar
               variant="rounded"
-              src={unit.imageUrl}
+              src={unitImageUrl(unit.faction, unit.id)}
               alt={unit.name}
               sx={{
                 width: '100%',

@@ -5,8 +5,8 @@
 import { FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { ArmyType } from '../../types/army';
-import { Faction } from '../../types/faction';
-import factionsData from '../../data/factions/factions.json';
+import type { FactionId } from '../../types/faction';
+import FactionSelect from '../factions/FactionSelect';
 
 interface Props {
   armyTypes: ArmyType[];
@@ -20,33 +20,37 @@ export default function ArmyTypeSelector({ armyTypes, selectedId, onChange }: Pr
   const selectedType = armyTypes.find((at) => at.id === selectedId);
   const faction = selectedType?.faction ?? armyTypes[0]?.faction ?? '';
 
-  const factions = factionsData.factions as Faction[];
-  const availableFactions = new Set(
-    armyTypes.map((at) => at.faction).filter((f): f is NonNullable<ArmyType['faction']> => !!f),
-  );
+  const availableFactions = armyTypes.map((at) => at.faction).filter((f): f is FactionId => !!f);
   const factionTypes = armyTypes.filter((at) => at.faction === faction);
+  const enabledFactionIds = new Set(availableFactions);
+  const disabledFactionIds = (
+    [
+      'german',
+      'soviet-union',
+      'united-states',
+      'united-kingdom',
+      'france',
+      'italy',
+      'japan',
+      'finland',
+      'romania',
+      'china',
+    ] as const
+  ).filter((factionId) => !enabledFactionIds.has(factionId));
 
-  const handleFactionChange = (newFaction: string) => {
+  const handleFactionChange = (newFaction: FactionId | '') => {
     const first = armyTypes.find((at) => at.faction === newFaction);
     if (first) onChange(first.id);
   };
 
   return (
     <Stack direction="row" spacing={1.5}>
-      <FormControl size="small" sx={{ minWidth: 190 }}>
-        <InputLabel>{t('army.faction.label')}</InputLabel>
-        <Select
-          value={faction}
-          label={t('army.faction.label')}
-          onChange={(e) => handleFactionChange(e.target.value)}
-        >
-          {factions.map((f) => (
-            <MenuItem key={f.id} value={f.id} disabled={!availableFactions.has(f.id)}>
-              {t(f.label)}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      <FactionSelect
+        value={faction}
+        label={t('army.faction.label')}
+        disabledFactionIds={disabledFactionIds}
+        onChange={handleFactionChange}
+      />
 
       <FormControl size="small" sx={{ minWidth: 130 }}>
         <InputLabel>{t('army.year.label')}</InputLabel>

@@ -3,8 +3,10 @@
  * Renders at reduced opacity when the unit is outside the selected year range (FR-019).
  */
 import { Card, CardActionArea, CardContent, CardMedia, Typography, Chip, Box } from '@mui/material';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Unit } from '../../types/unit';
+import { factionFlagUrl, unitImageUrl } from '../../utils/images';
 
 interface Props {
   unit: Unit;
@@ -14,16 +16,15 @@ interface Props {
 }
 
 const FACTION_FLAGS: Record<string, string> = {
-  german: '/images/factions/germany.jpg',
-  'soviet-union': '/images/factions/soviet-union.jpg',
+  german: factionFlagUrl('german'),
+  'soviet-union': factionFlagUrl('soviet-union'),
 };
 
 export default function UnitCard({ unit, isOutOfYear, selected, onClick }: Props) {
   const { t } = useTranslation();
   const flagUrl = FACTION_FLAGS[unit.faction];
   const factionLabel = t(`factions.${unit.faction}`, unit.faction);
-  const topImageUrl = unit.imageUrl ?? flagUrl;
-  const isFlag = !unit.imageUrl && !!flagUrl;
+  const [topImageUrl, setTopImageUrl] = useState(unitImageUrl(unit.faction, unit.id));
 
   return (
     <Card
@@ -44,13 +45,14 @@ export default function UnitCard({ unit, isOutOfYear, selected, onClick }: Props
         {topImageUrl && (
           <CardMedia
             component="img"
-            height={isFlag ? 100 : 140}
+            height={140}
             image={topImageUrl}
             alt=""
             aria-hidden="true"
+            onError={() => flagUrl && setTopImageUrl(flagUrl)}
             sx={{
-              objectFit: isFlag ? 'contain' : 'cover',
-              p: isFlag ? 1.5 : 0,
+              objectFit: topImageUrl === flagUrl ? 'contain' : 'cover',
+              p: topImageUrl === flagUrl ? 1.5 : 0,
               bgcolor: 'background.default',
             }}
           />

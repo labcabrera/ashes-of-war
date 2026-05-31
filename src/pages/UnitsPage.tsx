@@ -25,8 +25,10 @@ import WeaponDetail from '../components/weapons/WeaponDetail';
 import WeaponFilters from '../components/weapons/WeaponFilters';
 import { Unit } from '../types/unit';
 import { Weapon } from '../types/weapon';
+import type { FactionId } from '../types/faction';
 import unitsData from '../data/units/units.json';
 import weaponsData from '../data/weapons/weapons.json';
+import { weaponFactionId } from '../utils/images';
 
 type CatalogueTab = 'units' | 'weapons';
 type ViewMode = 'cards' | 'table';
@@ -42,12 +44,10 @@ export default function UnitsPage() {
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
   const [weaponName, setWeaponName] = useState('');
-  const [weaponFaction, setWeaponFaction] = useState('');
+  const [weaponFaction, setWeaponFaction] = useState<FactionId | ''>('');
 
-  function getWeaponFaction(id: string): string {
-    if (id.startsWith('german-')) return 'german';
-    if (id.startsWith('soviet-union-') || id.startsWith('su-')) return 'soviet-union';
-    return '';
+  function getWeaponFaction(id: string): FactionId | '' {
+    return weaponFactionId(id) ?? '';
   }
 
   const factions = useMemo(() => {
@@ -63,7 +63,7 @@ export default function UnitsPage() {
   }, [searchParams, weapons]);
 
   const weaponFactions = useMemo(() => {
-    const all = weapons.map((w) => getWeaponFaction(w.id)).filter(Boolean);
+    const all = weapons.map((w) => getWeaponFaction(w.id)).filter((f): f is FactionId => !!f);
     return [...new Set(all)].sort();
   }, [weapons]);
 

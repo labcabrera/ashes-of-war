@@ -29,7 +29,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "imageUrl": "/images/units/german/german-panzergrenadier-squad.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3,
       "combatants": 10,
@@ -104,7 +103,6 @@
           "type": "turret"
         }
       ],
-      "imageUrl": "/images/units/german/german-panzer-i-a.jpg",
       "organizationThreshold": 10
     },
     {
@@ -170,7 +168,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-panzer-ii-a.jpg",
       "organizationThreshold": 10
     },
     {
@@ -241,7 +238,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-panzer-38t-a.jpg",
       "organizationThreshold": 10
     },
     {
@@ -307,7 +303,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-panzer-iv-a.jpg",
       "organizationThreshold": 10
     },
     {
@@ -373,7 +368,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-panzer-iv-bc.jpg",
       "organizationThreshold": 10
     },
     {
@@ -440,7 +434,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-panzer-iv-d.jpg",
       "organizationThreshold": 10
     },
     {
@@ -506,7 +499,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-panzer-iv-g.jpg",
       "organizationThreshold": 10
     },
     {
@@ -572,7 +564,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-panzer-iii-j.jpg",
       "organizationThreshold": 10
     },
     {
@@ -633,7 +624,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-stug-iii-a.jpg",
       "organizationThreshold": 10
     },
     {
@@ -694,7 +684,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-stug-iii-f.jpg",
       "organizationThreshold": 10
     },
     {
@@ -755,7 +744,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-stug-iii-e.jpg",
       "organizationThreshold": 10
     },
     {
@@ -821,7 +809,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-stug-iv.jpg",
       "organizationThreshold": 10
     },
     {
@@ -853,7 +840,6 @@
         "fuel": 3,
         "logistics": 10
       },
-      "imageUrl": "/images/units/german/german-10.5-cm-lefH-18.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
@@ -893,7 +879,6 @@
           "type": "normal"
         }
       ],
-      "imageUrl": "/images/units/german/german-pak-40.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
@@ -933,7 +918,6 @@
           "type": "normal"
         }
       ],
-      "imageUrl": "/images/units/german/german-pak-43.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
@@ -966,7 +950,6 @@
         "fuel": 5,
         "intelligence": 1
       },
-      "imageUrl": "/images/units/german/german-sd-kfz-222.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
@@ -998,7 +981,6 @@
       "resourceCosts": {
         "intelligence": 1
       },
-      "imageUrl": "/images/units/german/german-sniper.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
@@ -1030,7 +1012,6 @@
       "resourceCosts": {
         "logistics": 10
       },
-      "imageUrl": "/images/units/german/german-pionier-squad.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
@@ -1070,7 +1051,6 @@
           "type": "normal"
         }
       ],
-      "imageUrl": "/images/units/german/german-fallschirmjager.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
@@ -1142,7 +1122,6 @@
           "type": "turret"
         }
       ],
-      "imageUrl": "/images/units/german/german-tiger-i.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1213,7 +1192,6 @@
           "type": "turret"
         }
       ],
-      "imageUrl": "/images/units/german/german-tiger-ii.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1282,7 +1260,6 @@
       "keywords": [
         "low-reliability"
       ],
-      "imageUrl": "/images/units/german/german-panther-d.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1348,7 +1325,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-panther-a.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1414,7 +1390,6 @@
           "type": "coaxial"
         }
       ],
-      "imageUrl": "/images/units/german/german-panther-g.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1475,7 +1450,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-nashorn.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1536,7 +1510,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-jagdpanzer-iv.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1597,7 +1570,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-jagdpanther.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1651,7 +1623,6 @@
           "armorInclination": 0
         }
       },
-      "imageUrl": "/images/units/german/german-wespe.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1712,7 +1683,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-hummel.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1773,7 +1743,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-grille.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1834,7 +1803,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-marder-i.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1895,7 +1863,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-marder-ii.jpg",
       "organizationThreshold": 10
     },
     {
@@ -1956,7 +1923,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-marder-iii.jpg",
       "organizationThreshold": 10
     },
     {
@@ -2017,7 +1983,6 @@
           "type": "hull"
         }
       ],
-      "imageUrl": "/images/units/german/german-sturmtiger.jpg",
       "organizationThreshold": 10
     },
     {
@@ -2057,8 +2022,7 @@
           "count": 10,
           "type": "normal"
         }
-      ],
-      "imageUrl": "/images/units/soviet-union/soviet-union-rifle-squad.jpg"
+      ]
     },
     {
       "id": "soviet-union-assault-squad",
@@ -2097,8 +2061,7 @@
           "count": 10,
           "type": "normal"
         }
-      ],
-      "imageUrl": "/images/units/soviet-union/soviet-union-assault-squad.jpg"
+      ]
     },
     {
       "id": "soviet-union-heavy-mg-team",
@@ -2142,8 +2105,7 @@
           "count": 4,
           "type": "normal"
         }
-      ],
-      "imageUrl": "/images/units/soviet-union/soviet-union-heavy-mg-team.jpg"
+      ]
     },
     {
       "id": "soviet-union-t-34-76-1940",
@@ -2196,7 +2158,6 @@
           "armorInclination": 0
         }
       },
-      "imageUrl": "/images/units/soviet-union/soviet-union-t-34-76-1940.jpg",
       "organizationThreshold": 10,
       "weapons": [
         {
@@ -2257,7 +2218,6 @@
           "armorInclination": 0
         }
       },
-      "imageUrl": "/images/units/soviet-union/soviet-union-t-34-76-1941.jpg",
       "organizationThreshold": 10,
       "weapons": [
         {
@@ -2318,7 +2278,6 @@
           "armorInclination": 0
         }
       },
-      "imageUrl": "/images/units/soviet-union/soviet-union-t-34-76-1942.jpg",
       "organizationThreshold": 10,
       "weapons": [
         {
@@ -2379,7 +2338,6 @@
           "armorInclination": 0
         }
       },
-      "imageUrl": "/images/units/soviet-union/soviet-union-t-34-76-1943.jpg",
       "organizationThreshold": 10,
       "weapons": [
         {
@@ -2440,7 +2398,6 @@
           "armorInclination": 0
         }
       },
-      "imageUrl": "/images/units/soviet-union/soviet-union-t-34-85.jpg",
       "organizationThreshold": 10
     },
     {
@@ -2501,7 +2458,6 @@
           "type": "turret"
         }
       ],
-      "imageUrl": "/images/units/soviet-union/soviet-union-is-1.jpg",
       "organizationThreshold": 10
     },
     {
@@ -2562,8 +2518,7 @@
           "type": "turret"
         }
       ],
-      "organizationThreshold": 10,
-      "imageUrl": "/images/units/soviet-union/soviet-union-is-2.jpg"
+      "organizationThreshold": 10
     },
     {
       "id": "soviet-union-122mm-howitzer-m1938",
@@ -2594,7 +2549,6 @@
         "fuel": 3,
         "logistics": 10
       },
-      "imageUrl": "/images/units/soviet-union/soviet-union-122mm-howitzer-m1938.jpg",
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
     },
@@ -2629,7 +2583,6 @@
       "organizationThreshold": 10,
       "casualtiesThreshold": 3,
       "combatants": 10,
-      "imageUrl": "/images/units/soviet-union/soviet-union-guards-rifle-squad.jpg",
       "weapons": []
     },
     {
@@ -2661,8 +2614,7 @@
         "logistics": 5
       },
       "organizationThreshold": 6,
-      "casualtiesThreshold": 2,
-      "imageUrl": "/images/units/soviet-union/soviet-union-field-medic.jpg"
+      "casualtiesThreshold": 2
     },
     {
       "id": "soviet-union-sniper",
@@ -2693,8 +2645,7 @@
         "intelligence": 1
       },
       "organizationThreshold": 5,
-      "casualtiesThreshold": 1,
-      "imageUrl": "/images/units/soviet-union/soviet-union-sniper.jpg"
+      "casualtiesThreshold": 1
     }
   ]
 }

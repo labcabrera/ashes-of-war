@@ -18,8 +18,10 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Weapon } from '../../types/weapon';
+import { factionFlagUrl, weaponFactionId, weaponImageUrl } from '../../utils/images';
 
 interface Props {
   weapons: Weapon[];
@@ -29,14 +31,32 @@ interface Props {
 }
 
 const FACTION_FLAGS: Record<string, string> = {
-  german: '/images/factions/germany.jpg',
-  'soviet-union': '/images/factions/soviet-union.jpg',
+  german: factionFlagUrl('german'),
+  'soviet-union': factionFlagUrl('soviet-union'),
 };
 
-function getWeaponFaction(id: string): string {
-  if (id.startsWith('german-')) return 'german';
-  if (id.startsWith('soviet-union-') || id.startsWith('su-')) return 'soviet-union';
-  return '';
+function WeaponCardMedia({ weaponId, flagUrl }: { weaponId: string; flagUrl: string | undefined }) {
+  const [topImageUrl, setTopImageUrl] = useState(weaponImageUrl(weaponId) ?? flagUrl);
+
+  if (!topImageUrl) return null;
+
+  const isFlag = topImageUrl === flagUrl;
+
+  return (
+    <CardMedia
+      component="img"
+      height={isFlag ? 100 : 140}
+      image={topImageUrl}
+      alt=""
+      aria-hidden="true"
+      onError={() => flagUrl && setTopImageUrl(flagUrl)}
+      sx={{
+        objectFit: isFlag ? 'contain' : 'cover',
+        p: isFlag ? 1.5 : 0,
+        bgcolor: 'background.default',
+      }}
+    />
+  );
 }
 
 export default function WeaponList({ weapons, selectedId, viewMode, onSelect }: Props) {
@@ -94,11 +114,9 @@ export default function WeaponList({ weapons, selectedId, viewMode, onSelect }: 
       }}
     >
       {weapons.map((weapon) => {
-        const faction = getWeaponFaction(weapon.id);
+        const faction = weaponFactionId(weapon.id) ?? '';
         const flagUrl = FACTION_FLAGS[faction];
         const factionLabel = t(`factions.${faction}`, faction);
-        const topImageUrl = weapon.imageUrl ?? flagUrl;
-        const isFlag = !weapon.imageUrl && !!flagUrl;
         return (
           <Card
             key={weapon.id}
@@ -115,20 +133,7 @@ export default function WeaponList({ weapons, selectedId, viewMode, onSelect }: 
               aria-pressed={selectedId === weapon.id}
               sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', flex: 1 }}
             >
-              {topImageUrl && (
-                <CardMedia
-                  component="img"
-                  height={isFlag ? 100 : 140}
-                  image={topImageUrl}
-                  alt=""
-                  aria-hidden="true"
-                  sx={{
-                    objectFit: isFlag ? 'contain' : 'cover',
-                    p: isFlag ? 1.5 : 0,
-                    bgcolor: 'background.default',
-                  }}
-                />
-              )}
+              <WeaponCardMedia weaponId={weapon.id} flagUrl={flagUrl} />
               <CardContent sx={{ flex: 1, p: 2, '&:last-child': { pb: 2 } }}>
                 <Typography variant="h6" sx={{ fontWeight: 600, fontSize: '1rem', mb: 1.5 }}>
                   {weapon.name}

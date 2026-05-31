@@ -181,10 +181,6 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
       }
     }
   }
-  if (value.imageUrl !== undefined && !isNonEmptyString(value.imageUrl)) {
-    errors.push(`${path}.imageUrl must be a non-empty string when provided.`);
-  }
-
   if (value.type === 'tank') {
     errors.push(...validateTankProfile(value.profile, `${path}.profile`));
   } else if (value.profile !== undefined) {

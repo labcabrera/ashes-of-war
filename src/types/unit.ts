@@ -85,8 +85,6 @@ interface BaseUnitFields {
   organizationThreshold: number;
   /** Optional resource costs keyed by ResourcePool.key. */
   resourceCosts?: Record<string, number>;
-  /** Optional public image displayed in the unit detail panel. */
-  imageUrl?: string;
   /** Optional rule keywords (e.g. 'low-reliability', 'veteran'). */
   keywords?: string[];
 }

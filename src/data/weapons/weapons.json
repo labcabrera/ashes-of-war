@@ -22,8 +22,7 @@
           "rangeModifier": "30/15/-1",
           "suppressionModifier": 0
         }
-      ],
-      "imageUrl": "/images/weapons/german/german-mg-13.jpg"
+      ]
     },
     {
       "id": "german-mg-34-42",
@@ -60,8 +59,7 @@
           "rangeModifier": "40/20/-1",
           "suppressionModifier": 0
         }
-      ],
-      "imageUrl": "/images/weapons/german/german-mg-42.jpg"
+      ]
     },
     {
       "id": "german-mauser-kar-98k",
@@ -80,8 +78,7 @@
             "saturation-2-plus"
           ]
         }
-      ],
-      "imageUrl": "/images/weapons/german/german-mauser-kar-98k.jpg"
+      ]
     },
     {
       "id": "german-mp-40",
@@ -110,8 +107,7 @@
             "reliability-4-plus"
           ]
         }
-      ],
-      "imageUrl": "/images/weapons/german/german-mp40.jpg"
+      ]
     },
     {
       "id": "german-stg-44",
@@ -169,8 +165,7 @@
             "reliability-3-plus"
           ]
         }
-      ],
-      "imageUrl": "/images/weapons/german/german-fg-42.jpg"
+      ]
     },
     {
       "id": "soviet-union-mosin-nagant-m1891-30",
@@ -189,8 +184,7 @@
             "saturation-2-plus"
           ]
         }
-      ],
-      "imageUrl": "/images/weapons/soviet-union/soviet-union-mosin-nagant-m1891-30.jpg"
+      ]
     },
     {
       "id": "soviet-union-ppsh-41",
@@ -219,8 +213,7 @@
             "reliability-4-plus"
           ]
         }
-      ],
-      "imageUrl": "/images/weapons/soviet-union/soviet-union-ppsh-41.jpg"
+      ]
     },
     {
       "id": "soviet-union-maxim-m1910",
@@ -273,8 +266,7 @@
           "rangeModifier": "30/15/-1",
           "suppressionModifier": -1
         }
-      ],
-      "imageUrl": "/images/weapons/german/german-kwk-30-l55.png"
+      ]
     },
     {
       "id": "german-kwk-38t",
@@ -662,8 +654,7 @@
             "one-shot"
           ]
         }
-      ],
-      "imageUrl": "/images/weapons/german/german-panzerschreck-rpzb-54.jpg"
+      ]
     },
     {
       "id": "su-l-11-76-2",
@@ -812,8 +803,7 @@
             "limited-ammunition-1"
           ]
         }
-      ],
-      "imageUrl": "/images/weapons/german/german-rw-61.jpg"
+      ]
     },
     {
       "id": "german-sfh-18",
