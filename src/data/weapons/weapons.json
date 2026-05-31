@@ -735,6 +735,32 @@
       ]
     },
     {
+      "id": "su-zis-3",
+      "name": "76.2 mm ZiS-3 L/41.6",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "45/10/-1",
+          "armourPenetration": 7
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "45/10/-1",
+          "suppressionModifier": -2,
+          "characteristics": [
+            "area-4"
+          ]
+        }
+      ]
+    },
+    {
       "id": "su-d-5t",
       "name": "85 mm D-5T",
       "type": "hard",
@@ -746,6 +772,32 @@
           "hitOn": 5,
           "rangeModifier": "50/10/-1",
           "armourPenetration": 11
+        }
+      ]
+    },
+    {
+      "id": "su-d-10s",
+      "name": "100 mm D-10S",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/15/-1",
+          "armourPenetration": 15
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/15/-1",
+          "suppressionModifier": -3,
+          "characteristics": [
+            "area-4"
+          ]
         }
       ]
     },
@@ -1121,6 +1173,44 @@
             "area-12",
             "indirect"
           ]
+        }
+      ]
+    },
+    {
+      "id": "su-ml-20s",
+      "name": "152 mm ML-20S",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 3,
+          "max": 4
+        },
+        "combat": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      "profiles": [
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "55/28/-2",
+          "armourPenetration": 8,
+          "suppressionModifier": -6,
+          "characteristics": [
+            "area-16",
+            "indirect"
+          ]
+        },
+        {
+          "id": "heat",
+          "name": "HEAT",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "35/15/-2",
+          "armourPenetration": 14
         }
       ]
     },

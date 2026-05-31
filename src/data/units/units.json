@@ -2933,6 +2933,259 @@
       "organizationThreshold": 10
     },
     {
+      "id": "soviet-union-su-76",
+      "name": "SU-76",
+      "type": "tank-destroyer",
+      "faction": "soviet-union",
+      "from": 1942,
+      "to": 1945,
+      "cost": 18,
+      "movement": {
+        "tactical": {
+          "road": 16,
+          "crossCountry": 11,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 33,
+          "crossCountry": 18,
+          "rough": 7
+        },
+        "dash": {
+          "road": 45,
+          "crossCountry": 25,
+          "rough": 10
+        }
+      },
+      "resourceCosts": {
+        "fuel": 4,
+        "logistics": 4
+      },
+      "profile": {
+        "front": {
+          "value": 35,
+          "armorMM": 35,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 5,
+          "armorMM": 5,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 8,
+      "keywords": [
+        "open-topped",
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-zis-3",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
+    },
+    {
+      "id": "soviet-union-su-85",
+      "name": "SU-85",
+      "type": "tank-destroyer",
+      "faction": "soviet-union",
+      "from": 1943,
+      "to": 1945,
+      "cost": 30,
+      "movement": {
+        "tactical": {
+          "road": 20,
+          "crossCountry": 14,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 41,
+          "crossCountry": 22,
+          "rough": 9
+        },
+        "dash": {
+          "road": 55,
+          "crossCountry": 30,
+          "rough": 12
+        }
+      },
+      "resourceCosts": {
+        "fuel": 7,
+        "logistics": 7
+      },
+      "profile": {
+        "front": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 50
+        },
+        "side": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-d-5t",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
+    },
+    {
+      "id": "soviet-union-su-100",
+      "name": "SU-100",
+      "type": "tank-destroyer",
+      "faction": "soviet-union",
+      "from": 1944,
+      "to": 1945,
+      "cost": 38,
+      "movement": {
+        "tactical": {
+          "road": 18,
+          "crossCountry": 12,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 37,
+          "crossCountry": 20,
+          "rough": 8
+        },
+        "dash": {
+          "road": 50,
+          "crossCountry": 28,
+          "rough": 11
+        }
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 8
+      },
+      "profile": {
+        "front": {
+          "value": 75,
+          "armorMM": 75,
+          "armorInclination": 50
+        },
+        "side": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 45,
+          "armorMM": 45,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-d-10s",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
+    },
+    {
+      "id": "soviet-union-isu-152",
+      "name": "ISU-152",
+      "type": "assault-gun",
+      "faction": "soviet-union",
+      "from": 1943,
+      "to": 1945,
+      "cost": 50,
+      "movement": {
+        "tactical": {
+          "road": 13,
+          "crossCountry": 8,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 27,
+          "crossCountry": 14,
+          "rough": 6
+        },
+        "dash": {
+          "road": 37,
+          "crossCountry": 20,
+          "rough": 8
+        }
+      },
+      "resourceCosts": {
+        "fuel": 10,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 90,
+          "armorMM": 90,
+          "armorInclination": 30
+        },
+        "side": {
+          "value": 60,
+          "armorMM": 60,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 60,
+          "armorMM": 60,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-ml-20s",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
+    },
+    {
       "id": "united-states-m3-stuart",
       "name": "M3 Stuart",
       "type": "tank",
