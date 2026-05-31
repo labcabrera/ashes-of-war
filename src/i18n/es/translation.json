@@ -211,6 +211,7 @@
       "half-track": "Semioruga",
       "medic": "Médico",
       "open-topped": "Descubierto",
+      "reconnaissance": "Reconocimiento",
       "sniper": "Francotirador",
       "transport-10": "Transporte (10)",
       "transport-12": "Transporte (12)"
@@ -226,11 +227,12 @@
       "tank": "Tanque",
       "tank-destroyer": "Cazacarros",
       "assault-gun": "Cañón de asalto",
-      "self-propelled-artillery": "Artillería autopropulsada",
+      "sp-artillery": "Artillería autopropulsada",
+      "sp-anti-aircraft": "Antiaéreo autopropulsado",
       "mechanised": "Mecanizado",
-      "engineer": "Ingenieros",
-      "artillery-towed": "Artillería remolcada",
-      "anti-tank-towed": "Antitanque remolcado",
+      "towed-artillery": "Artillería remolcada",
+      "towed-anti-tank": "Antitanque remolcado",
+      "towed-anti-aircraft": "Antiaéreo remolcado",
       "aircraft": "Aviación"
     }
   },

@@ -1562,6 +1562,78 @@
           ]
         }
       ]
+    },
+    {
+      "id": "german-37mm-flak-43",
+      "name": "3.7 cm FlaK 43 L/89",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 150,
+          "max": 250
+        },
+        "combat": {
+          "min": 60,
+          "max": 80
+        }
+      },
+      "profiles": [
+        {
+          "id": "ap",
+          "name": "AP",
+          "shots": 5,
+          "hitOn": 6,
+          "rangeModifier": "25/12/-1",
+          "armourPenetration": 6
+        },
+        {
+          "id": "aa",
+          "name": "AA",
+          "shots": 5,
+          "hitOn": 5,
+          "rangeModifier": "25/20/-1",
+          "armourPenetration": 2,
+          "characteristics": [
+            "anti-aircraft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "german-2cm-flakvierling-38",
+      "name": "2 cm Flakvierling 38",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 1400,
+          "max": 1800
+        },
+        "combat": {
+          "min": 700,
+          "max": 900
+        }
+      },
+      "profiles": [
+        {
+          "id": "ap",
+          "name": "AP",
+          "shots": 6,
+          "hitOn": 6,
+          "rangeModifier": "20/10/-1",
+          "armourPenetration": 3
+        },
+        {
+          "id": "aa",
+          "name": "AA",
+          "shots": 8,
+          "hitOn": 4,
+          "rangeModifier": "20/15/-1",
+          "armourPenetration": 2,
+          "characteristics": [
+            "anti-aircraft"
+          ]
+        }
+      ]
     }
   ]
 }

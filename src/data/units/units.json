@@ -850,7 +850,7 @@
     {
       "id": "german-10.5-cm-lefH-18",
       "name": "10.5 cm leFH 18",
-      "type": "artillery-towed",
+      "type": "towed-artillery",
       "faction": "german",
       "from": 1939,
       "to": 1945,
@@ -889,7 +889,7 @@
     {
       "id": "german-7.5-cm-pak-40",
       "name": "7.5 cm PaK 40",
-      "type": "anti-tank-towed",
+      "type": "towed-anti-tank",
       "faction": "german",
       "from": 1942,
       "to": 1945,
@@ -928,7 +928,7 @@
     {
       "id": "german-8.8-cm-pak-43",
       "name": "8.8 cm PaK 43",
-      "type": "anti-tank-towed",
+      "type": "towed-anti-tank",
       "faction": "german",
       "from": 1943,
       "to": 1945,
@@ -1781,7 +1781,7 @@
     {
       "id": "german-wespe",
       "name": "Wespe",
-      "type": "self-propelled-artillery",
+      "type": "sp-artillery",
       "faction": "german",
       "from": 1943,
       "to": 1945,
@@ -1837,7 +1837,7 @@
     {
       "id": "german-hummel",
       "name": "Hummel",
-      "type": "self-propelled-artillery",
+      "type": "sp-artillery",
       "faction": "german",
       "from": 1943,
       "to": 1945,
@@ -1901,7 +1901,7 @@
     {
       "id": "german-grille",
       "name": "Sturmpanzer 38(t) Grille",
-      "type": "self-propelled-artillery",
+      "type": "sp-artillery",
       "faction": "german",
       "from": 1943,
       "to": 1944,
@@ -3629,7 +3629,7 @@
     {
       "id": "soviet-union-122mm-howitzer-m1938",
       "name": "122 mm howitzer M1938 (M-30)",
-      "type": "artillery-towed",
+      "type": "towed-artillery",
       "faction": "soviet-union",
       "from": 1941,
       "to": 1945,
@@ -3818,7 +3818,7 @@
     {
       "id": "soviet-union-100mm-bs-3",
       "name": "100 mm BS-3",
-      "type": "anti-tank-towed",
+      "type": "towed-anti-tank",
       "faction": "soviet-union",
       "from": 1944,
       "to": 1945,
@@ -3857,7 +3857,7 @@
     {
       "id": "soviet-union-76mm-zis-3",
       "name": "76 mm ZiS-3",
-      "type": "anti-tank-towed",
+      "type": "towed-anti-tank",
       "faction": "soviet-union",
       "from": 1942,
       "to": 1945,
@@ -3896,7 +3896,7 @@
     {
       "id": "soviet-union-57mm-zis-2",
       "name": "57 mm ZiS-2",
-      "type": "anti-tank-towed",
+      "type": "towed-anti-tank",
       "faction": "soviet-union",
       "from": 1943,
       "to": 1945,
@@ -3935,7 +3935,7 @@
     {
       "id": "soviet-union-45mm-m1937",
       "name": "45 mm M1937 (53-K)",
-      "type": "anti-tank-towed",
+      "type": "towed-anti-tank",
       "faction": "soviet-union",
       "from": 1941,
       "to": 1943,
@@ -3974,7 +3974,7 @@
     {
       "id": "soviet-union-45mm-m1942",
       "name": "45 mm M1942 (M-42)",
-      "type": "anti-tank-towed",
+      "type": "towed-anti-tank",
       "faction": "soviet-union",
       "from": 1942,
       "to": 1945,
@@ -4012,7 +4012,7 @@
     },
     {
       "id": "german-sturmpanzer-iv",
-      "name": "Sturmpanzer IV",
+      "name": "Sturmpanzer IV (Brummbär)",
       "type": "assault-gun",
       "faction": "german",
       "from": 1943,
@@ -4223,7 +4223,7 @@
     {
       "id": "german-nebelwerfer-41",
       "name": "15 cm Nebelwerfer 41",
-      "type": "artillery-towed",
+      "type": "towed-artillery",
       "faction": "german",
       "from": 1941,
       "to": 1945,
@@ -4262,7 +4262,7 @@
     {
       "id": "german-15cm-sfh-18",
       "name": "15 cm sFH 18",
-      "type": "artillery-towed",
+      "type": "towed-artillery",
       "faction": "german",
       "from": 1939,
       "to": 1945,
@@ -4301,7 +4301,7 @@
     {
       "id": "german-7.5cm-leig-18",
       "name": "7.5 cm leIG 18",
-      "type": "artillery-towed",
+      "type": "towed-artillery",
       "faction": "german",
       "from": 1939,
       "to": 1945,
@@ -4388,7 +4388,7 @@
     {
       "id": "german-88mm-flak-36",
       "name": "8.8 cm FlaK 36",
-      "type": "anti-aircraft-towed",
+      "type": "towed-anti-aircraft",
       "faction": "german",
       "from": 1939,
       "to": 1945,
@@ -4422,6 +4422,319 @@
           "count": 1,
           "type": "normal"
         }
+      ]
+    },
+    {
+      "id": "german-ostwind",
+      "name": "Ostwind (Flakpanzer IV)",
+      "type": "sp-anti-aircraft",
+      "faction": "german",
+      "from": 1944,
+      "to": 1945,
+      "cost": 30,
+      "movement": {
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 24,
+          "rough": 12
+        },
+        "dash": {
+          "road": 40,
+          "crossCountry": 30,
+          "rough": 15
+        }
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 3,
+          "armorMM": 3,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-37mm-flak-43",
+          "count": 1,
+          "type": "turret"
+        }
+      ],
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "keywords": [
+        "open-topped",
+        "radio"
+      ]
+    },
+    {
+      "id": "german-sd-kfz-234-2",
+      "name": "Sd.Kfz. 234/2 Puma",
+      "type": "mechanised",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 26,
+      "movement": {
+        "tactical": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        },
+        "cruise": {
+          "road": 36,
+          "crossCountry": 22,
+          "rough": 11
+        },
+        "dash": {
+          "road": 56,
+          "crossCountry": 34,
+          "rough": 14
+        }
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 40,
+          "armorMM": 30,
+          "armorInclination": 20
+        },
+        "side": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 3,
+          "armorMM": 3,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-kwk-39",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
+      ],
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "keywords": [
+        "open-topped",
+        "radio",
+        "reconnaissance"
+      ]
+    },
+    {
+      "id": "german-sd-kfz-231",
+      "name": "Sd.Kfz. 231",
+      "type": "mechanised",
+      "faction": "german",
+      "from": 1937,
+      "to": 1943,
+      "cost": 18,
+      "movement": {
+        "tactical": {
+          "road": 18,
+          "crossCountry": 10,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 34,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 50,
+          "crossCountry": 24,
+          "rough": 11
+        }
+      },
+      "resourceCosts": {
+        "fuel": 4,
+        "logistics": 4
+      },
+      "profile": {
+        "front": {
+          "value": 18,
+          "armorMM": 15,
+          "armorInclination": 15
+        },
+        "side": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 10,
+          "armorMM": 10,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 3,
+          "armorMM": 3,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-kwk-38",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
+      ],
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "keywords": [
+        "radio",
+        "reconnaissance"
+      ]
+    },
+    {
+      "id": "german-panzerschreck-team",
+      "name": "Panzerschreck Team",
+      "type": "infantry",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 12,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "dash": {
+          "road": 25,
+          "crossCountry": 19,
+          "rough": 9
+        }
+      },
+      "combatants": 3,
+      "weapons": [
+        {
+          "id": "german-panzerschreck-rpzb-54",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-kar98k",
+          "count": 2,
+          "type": "normal"
+        }
+      ],
+      "organizationThreshold": 6,
+      "casualtiesThreshold": 1
+    },
+    {
+      "id": "german-sd-kfz-7-1",
+      "name": "Sd.Kfz. 7/1",
+      "type": "sp-anti-aircraft",
+      "faction": "german",
+      "from": 1940,
+      "to": 1945,
+      "cost": 22,
+      "movement": {
+        "tactical": {
+          "road": 14,
+          "crossCountry": 10,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 25,
+          "crossCountry": 16,
+          "rough": 7
+        },
+        "dash": {
+          "road": 38,
+          "crossCountry": 20,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "fuel": 4,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 3,
+          "armorMM": 3,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-2cm-flakvierling-38",
+          "count": 1,
+          "type": "hull"
+        }
+      ],
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "keywords": [
+        "open-topped",
+        "half-track",
+        "radio"
       ]
     }
   ]

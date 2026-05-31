@@ -40,6 +40,10 @@ export default function UnitFilters({
 }: Props) {
   const { t } = useTranslation();
 
+  const sortedUnitTypes = [...UNIT_TYPES].sort((a, b) =>
+    t(`units.types.${a}`).localeCompare(t(`units.types.${b}`)),
+  );
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mb: 2 }}>
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
@@ -78,7 +82,7 @@ export default function UnitFilters({
           disableCloseOnSelect
           size="small"
           limitTags={2}
-          options={UNIT_TYPES}
+          options={sortedUnitTypes}
           value={selectedTypes}
           getOptionLabel={(option) => t(`units.types.${option}`)}
           onChange={(_event, value) => onTypesChange(value)}

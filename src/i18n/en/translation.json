@@ -198,6 +198,7 @@
       "half-track": "Half-track",
       "medic": "Medic",
       "open-topped": "Open-topped",
+      "reconnaissance": "Reconnaissance",
       "sniper": "Sniper",
       "transport-10": "Transport (10)",
       "transport-12": "Transport (12)"
@@ -213,11 +214,12 @@
       "tank": "Tank",
       "tank-destroyer": "Tank Destroyer",
       "assault-gun": "Assault Gun",
-      "self-propelled-artillery": "Self-Propelled Artillery",
+      "sp-artillery": "SP Artillery",
+      "sp-anti-aircraft": "SP Anti-Aircraft",
       "mechanised": "Mechanised",
-      "engineer": "Engineer",
-      "artillery-towed": "Towed Artillery",
-      "anti-tank-towed": "Towed Anti-Tank",
+      "towed-artillery": "Towed Artillery",
+      "towed-anti-tank": "Towed Anti-Tank",
+      "towed-anti-aircraft": "Towed Anti-Aircraft",
       "aircraft": "Aircraft"
     }
   },

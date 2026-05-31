@@ -12,12 +12,12 @@ export type UnitType =
   | 'tank'
   | 'tank-destroyer'
   | 'assault-gun'
-  | 'self-propelled-artillery'
+  | 'sp-artillery'
+  | 'sp-anti-aircraft'
   | 'mechanised'
-  | 'engineer'
-  | 'artillery-towed'
-  | 'anti-tank-towed'
-  | 'anti-aircraft-towed'
+  | 'towed-artillery'
+  | 'towed-anti-tank'
+  | 'towed-anti-aircraft'
   | 'aircraft';
 
 /** Ordered list of all UnitType values for use in filters and UI. */
@@ -26,12 +26,12 @@ export const UNIT_TYPES: UnitType[] = [
   'tank',
   'tank-destroyer',
   'assault-gun',
-  'self-propelled-artillery',
+  'sp-artillery',
+  'sp-anti-aircraft',
   'mechanised',
-  'engineer',
-  'artillery-towed',
-  'anti-tank-towed',
-  'anti-aircraft-towed',
+  'towed-artillery',
+  'towed-anti-tank',
+  'towed-anti-aircraft',
   'aircraft',
 ];
 
@@ -43,6 +43,7 @@ export type UnitKeyword =
   | 'medic'
   | 'open-topped'
   | 'radio'
+  | 'reconnaissance'
   | 'sniper'
   | `transport-${number}`;
 

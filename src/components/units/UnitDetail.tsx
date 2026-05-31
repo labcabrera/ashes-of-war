@@ -20,7 +20,6 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import EngineeringIcon from '@mui/icons-material/Engineering';
 import FlightIcon from '@mui/icons-material/Flight';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
@@ -42,11 +41,12 @@ const UNIT_ICONS = {
   tank: DirectionsCarIcon,
   'tank-destroyer': DirectionsCarIcon,
   'assault-gun': DirectionsCarIcon,
-  'self-propelled-artillery': GpsFixedIcon,
+  'sp-artillery': GpsFixedIcon,
+  'sp-anti-aircraft': GpsFixedIcon,
   mechanised: DirectionsCarIcon,
-  engineer: EngineeringIcon,
-  'artillery-towed': GpsFixedIcon,
-  'anti-tank-towed': GpsFixedIcon,
+  'towed-artillery': GpsFixedIcon,
+  'towed-anti-tank': GpsFixedIcon,
+  'towed-anti-aircraft': GpsFixedIcon,
   aircraft: FlightIcon,
 } satisfies Record<UnitType, typeof MilitaryTechIcon>;
 

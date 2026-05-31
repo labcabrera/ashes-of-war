@@ -3,6 +3,7 @@
  * Returns filtered units and filter state setters.
  */
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Unit, UnitType, UnitKeyword } from '../types/unit';
 import unitsData from '../data/units/units.json';
 import type { FactionId } from '../types/faction';
@@ -27,15 +28,14 @@ interface UseUnitDataResult {
   isOutOfYear: (unit: Unit) => boolean;
 }
 
-const allUnits = [...(unitsData.units as unknown as Unit[])].sort((first, second) =>
-  first.name.localeCompare(second.name),
-);
+const allUnits = unitsData.units as unknown as Unit[];
 
 const availableKeywords = [...new Set(allUnits.flatMap((u) => u.keywords ?? []))]
   .filter((kw) => !/-\d+$/.test(kw))
   .sort() as UnitKeyword[];
 
 export function useUnitData(): UseUnitDataResult {
+  const { t } = useTranslation();
   const [filters, setFilters] = useState<UnitFilters>({
     name: '',
     factions: [],
@@ -63,14 +63,21 @@ export function useUnitData(): UseUnitDataResult {
   const units = useMemo(() => {
     const normalizedName = filters.name.trim().toLocaleLowerCase();
 
-    return allUnits.filter((unit) => {
-      if (normalizedName && !unit.name.toLocaleLowerCase().includes(normalizedName)) return false;
-      if (filters.factions.length > 0 && !filters.factions.includes(unit.faction)) return false;
-      if (filters.types.length > 0 && !filters.types.includes(unit.type)) return false;
-      if (filters.keywords.length > 0 && !filters.keywords.some((kw) => unit.keywords?.includes(kw))) return false;
-      return true;
-    });
-  }, [filters.name, filters.factions, filters.types, filters.keywords]);
+    return allUnits
+      .filter((unit) => {
+        if (normalizedName && !unit.name.toLocaleLowerCase().includes(normalizedName)) return false;
+        if (filters.factions.length > 0 && !filters.factions.includes(unit.faction)) return false;
+        if (filters.types.length > 0 && !filters.types.includes(unit.type)) return false;
+        if (filters.keywords.length > 0 && !filters.keywords.some((kw) => unit.keywords?.includes(kw))) return false;
+        return true;
+      })
+      .sort((a, b) => {
+        const typeA = t(`units.types.${a.type}`);
+        const typeB = t(`units.types.${b.type}`);
+        const typeCmp = typeA.localeCompare(typeB);
+        return typeCmp !== 0 ? typeCmp : a.name.localeCompare(b.name);
+      });
+  }, [filters.name, filters.factions, filters.types, filters.keywords, t]);
 
   return { units, filters, availableKeywords, setName, setFaction, setTypes, setKeywords, setYear, isOutOfYear };
 }
