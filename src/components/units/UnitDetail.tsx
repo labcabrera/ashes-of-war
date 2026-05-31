@@ -120,7 +120,7 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
       <>
           <Box
             sx={{
-              height: 132,
+              height: 200,
               bgcolor: 'primary.dark',
               display: 'flex',
               alignItems: 'center',

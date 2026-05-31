@@ -438,6 +438,9 @@
       "from": 1939,
       "to": 1945,
       "cost": 35,
+      "keywords": [
+        "anti-air"
+      ],
       "movement": {
         "tactical": {
           "road": 0,
@@ -741,6 +744,7 @@
       "organizationThreshold": 10,
       "casualtiesThreshold": 3,
       "keywords": [
+        "anti-air",
         "open-topped",
         "radio"
       ]
@@ -1259,6 +1263,53 @@
       "keywords": [
         "radio",
         "hq"
+      ]
+    },
+    {
+      "id": "german-kradschutzen",
+      "name": "Kradschützen",
+      "type": "motorised",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 12,
+      "movement": {
+        "tactical": {
+          "road": 12,
+          "crossCountry": 8,
+          "rough": 3
+        },
+        "cruise": {
+          "road": 24,
+          "crossCountry": 14,
+          "rough": 6
+        },
+        "dash": {
+          "road": 35,
+          "crossCountry": 20,
+          "rough": 9
+        }
+      },
+      "resourceCosts": {
+        "logistics": 5
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "combatants": 10,
+      "keywords": [
+        "reconnaissance"
+      ],
+      "weapons": [
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "normal"
+        },
+        {
+          "id": "german-mauser-kar-98k",
+          "count": 8,
+          "type": "normal"
+        }
       ]
     },
     {
@@ -2004,6 +2055,7 @@
       "organizationThreshold": 10,
       "casualtiesThreshold": 3,
       "keywords": [
+        "anti-air",
         "open-topped",
         "radio"
       ]
@@ -2835,7 +2887,7 @@
           "type": "normal"
         },
         {
-          "id": "german-kar98k",
+          "id": "german-mauser-kar-98k",
           "count": 2,
           "type": "normal"
         }
@@ -3870,6 +3922,7 @@
       "organizationThreshold": 8,
       "casualtiesThreshold": 3,
       "keywords": [
+        "anti-air",
         "open-topped",
         "half-track",
         "radio"

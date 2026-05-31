@@ -18,6 +18,7 @@ export type UnitType =
   | 'sp-artillery'
   | 'sp-anti-aircraft'
   | 'mechanised'
+  | 'motorised'
   | 'towed-artillery'
   | 'towed-anti-tank'
   | 'towed-anti-aircraft'
@@ -32,6 +33,7 @@ export const UNIT_TYPES: UnitType[] = [
   'sp-artillery',
   'sp-anti-aircraft',
   'mechanised',
+  'motorised',
   'towed-artillery',
   'towed-anti-tank',
   'towed-anti-aircraft',

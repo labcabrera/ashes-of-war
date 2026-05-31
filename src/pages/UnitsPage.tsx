@@ -136,7 +136,12 @@ export default function UnitsPage() {
           value={viewMode}
           exclusive
           size="small"
-          onChange={(_event, value: ViewMode | null) => value && setViewMode(value)}
+          onChange={(_event, value: ViewMode | null) => {
+            if (value) {
+              setViewMode(value);
+              setUnitPage(1);
+            }
+          }}
           aria-label={t('catalogue.view.label')}
           sx={{ mb: { xs: 2, sm: 0 } }}
         >
