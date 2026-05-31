@@ -67,7 +67,7 @@
   },
   "factions": {
     "german": "Alemania",
-    "soviet": "Unión Soviética",
+    "soviet-union": "Unión Soviética",
     "united-states": "Estados Unidos",
     "united-kingdom": "Reino Unido",
     "france": "Francia",
@@ -264,7 +264,7 @@
     "faction": {
       "label": "Facción",
       "german": "Alemán (Wehrmacht)",
-      "soviet": "Soviético (Ejército Rojo)"
+      "soviet-union": "Soviético (Ejército Rojo)"
     },
     "year": {
       "label": "Año"

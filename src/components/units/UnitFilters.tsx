@@ -4,8 +4,8 @@
 import { Avatar, Box, Chip, TextField, Typography } from '@mui/material';
 
 const FACTION_FLAGS: Record<string, string> = {
-  german: '/images/german.png',
-  soviet: '/images/soviet.png',
+  german: '/images/factions/germany.jpg',
+  'soviet-union': '/images/factions/soviet-union.jpg',
 };
 import { useTranslation } from 'react-i18next';
 import { UnitType } from '../../types/unit';

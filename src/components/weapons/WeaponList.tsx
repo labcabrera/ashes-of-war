@@ -29,13 +29,13 @@ interface Props {
 }
 
 const FACTION_FLAGS: Record<string, string> = {
-  german: '/images/german.png',
-  soviet: '/images/soviet.png',
+  german: '/images/factions/germany.jpg',
+  'soviet-union': '/images/factions/soviet-union.jpg',
 };
 
 function getWeaponFaction(id: string): string {
   if (id.startsWith('german-')) return 'german';
-  if (id.startsWith('su-')) return 'soviet';
+  if (id.startsWith('soviet-union-') || id.startsWith('su-')) return 'soviet-union';
   return '';
 }
 

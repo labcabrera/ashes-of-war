@@ -14,8 +14,8 @@ interface Props {
 }
 
 const FACTION_FLAGS: Record<string, string> = {
-  german: '/images/german.png',
-  soviet: '/images/soviet.png',
+  german: '/images/factions/germany.jpg',
+  'soviet-union': '/images/factions/soviet-union.jpg',
 };
 
 export default function UnitCard({ unit, isOutOfYear, selected, onClick }: Props) {

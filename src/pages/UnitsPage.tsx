@@ -46,7 +46,7 @@ export default function UnitsPage() {
 
   function getWeaponFaction(id: string): string {
     if (id.startsWith('german-')) return 'german';
-    if (id.startsWith('su-')) return 'soviet';
+    if (id.startsWith('soviet-union-') || id.startsWith('su-')) return 'soviet-union';
     return '';
   }
 

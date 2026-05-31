@@ -23,7 +23,7 @@
           "suppressionModifier": 0
         }
       ],
-      "imageUrl": "/images/weapons/german-mg-13.jpg"
+      "imageUrl": "/images/weapons/german/german-mg-13.jpg"
     },
     {
       "id": "german-mg-34-42",
@@ -61,7 +61,7 @@
           "suppressionModifier": 0
         }
       ],
-      "imageUrl": "/images/weapons/german-mg-42.jpg"
+      "imageUrl": "/images/weapons/german/german-mg-42.jpg"
     },
     {
       "id": "german-mauser-kar-98k",
@@ -81,7 +81,7 @@
           ]
         }
       ],
-      "imageUrl": "/images/weapons/german-mauser-kar-98k.jpg"
+      "imageUrl": "/images/weapons/german/german-mauser-kar-98k.jpg"
     },
     {
       "id": "german-mp-40",
@@ -111,7 +111,7 @@
           ]
         }
       ],
-      "imageUrl": "/images/weapons/german-mp40.jpg"
+      "imageUrl": "/images/weapons/german/german-mp40.jpg"
     },
     {
       "id": "german-stg-44",
@@ -170,10 +170,10 @@
           ]
         }
       ],
-      "imageUrl": "/images/weapons/german-fg-42.jpg"
+      "imageUrl": "/images/weapons/german/german-fg-42.jpg"
     },
     {
-      "id": "soviet-mosin-nagant-m1891-30",
+      "id": "soviet-union-mosin-nagant-m1891-30",
       "name": "Mosin–Nagant M1891/30",
       "type": "soft",
       "profiles": [
@@ -190,10 +190,10 @@
           ]
         }
       ],
-      "imageUrl": "/images/weapons/soviet-mosin-nagant-m1891-30.jpg"
+      "imageUrl": "/images/weapons/soviet-union/soviet-union-mosin-nagant-m1891-30.jpg"
     },
     {
-      "id": "soviet-ppsh-41",
+      "id": "soviet-union-ppsh-41",
       "name": "PPSh-41",
       "type": "soft",
       "profiles": [
@@ -220,10 +220,10 @@
           ]
         }
       ],
-      "imageUrl": "/images/weapons/soviet-ppsh-41.jpg"
+      "imageUrl": "/images/weapons/soviet-union/soviet-union-ppsh-41.jpg"
     },
     {
-      "id": "soviet-maxim-m1910",
+      "id": "soviet-union-maxim-m1910",
       "name": "Maxim M1910",
       "type": "soft",
       "profiles": [
@@ -250,8 +250,7 @@
             "overheat"
           ]
         }
-      ],
-      "imageUrl": "/images/weapons/soviet-maxim-m1910.jpg"
+      ]
     },
     {
       "id": "german-kwk-30-l55",
@@ -275,7 +274,7 @@
           "suppressionModifier": -1
         }
       ],
-      "imageUrl": "/images/weapons/german-kwk-30-l55.png"
+      "imageUrl": "/images/weapons/german/german-kwk-30-l55.png"
     },
     {
       "id": "german-kwk-38t",
@@ -664,7 +663,7 @@
           ]
         }
       ],
-      "imageUrl": "/images/weapons/german-panzerschreck-rpzb-54.jpg"
+      "imageUrl": "/images/weapons/german/german-panzerschreck-rpzb-54.jpg"
     },
     {
       "id": "su-l-11-76-2",
@@ -814,7 +813,7 @@
           ]
         }
       ],
-      "imageUrl": "/images/weapons/german-rw-61.jpg"
+      "imageUrl": "/images/weapons/german/german-rw-61.jpg"
     },
     {
       "id": "german-sfh-18",

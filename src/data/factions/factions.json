@@ -1,15 +1,45 @@
 {
   "_version": 1,
   "factions": [
-    { "id": "german", "label": "factions.german" },
-    { "id": "soviet", "label": "factions.soviet" },
-    { "id": "united-states", "label": "factions.united-states" },
-    { "id": "united-kingdom", "label": "factions.united-kingdom" },
-    { "id": "france", "label": "factions.france" },
-    { "id": "italy", "label": "factions.italy" },
-    { "id": "japan", "label": "factions.japan" },
-    { "id": "finland", "label": "factions.finland" },
-    { "id": "romania", "label": "factions.romania" },
-    { "id": "china", "label": "factions.china" }
+    {
+      "id": "german",
+      "label": "factions.german"
+    },
+    {
+      "id": "soviet-union",
+      "label": "factions.soviet-union"
+    },
+    {
+      "id": "united-states",
+      "label": "factions.united-states"
+    },
+    {
+      "id": "united-kingdom",
+      "label": "factions.united-kingdom"
+    },
+    {
+      "id": "france",
+      "label": "factions.france"
+    },
+    {
+      "id": "italy",
+      "label": "factions.italy"
+    },
+    {
+      "id": "japan",
+      "label": "factions.japan"
+    },
+    {
+      "id": "finland",
+      "label": "factions.finland"
+    },
+    {
+      "id": "romania",
+      "label": "factions.romania"
+    },
+    {
+      "id": "china",
+      "label": "factions.china"
+    }
   ]
 }

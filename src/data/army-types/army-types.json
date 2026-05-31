@@ -6,25 +6,55 @@
       "name": "Wehrmacht Early War",
       "description": "German forces 1939–1941. Blitzkrieg doctrine — fast, coordinated combined-arms operations.",
       "faction": "german",
-      "yearRange": { "start": 1939, "end": 1941 },
+      "yearRange": {
+        "start": 1939,
+        "end": 1941
+      },
       "pointBudget": 180,
       "resourcePools": [
-        { "key": "fuel", "label": "army.resources.fuel", "max": 30 },
-        { "key": "logistics", "label": "army.resources.logistics", "max": 50 },
-        { "key": "intelligence", "label": "army.resources.intelligence", "max": 4 }
+        {
+          "key": "fuel",
+          "label": "army.resources.fuel",
+          "max": 30
+        },
+        {
+          "key": "logistics",
+          "label": "army.resources.logistics",
+          "max": 50
+        },
+        {
+          "key": "intelligence",
+          "label": "army.resources.intelligence",
+          "max": 4
+        }
       ]
     },
     {
       "id": "ussr-stalingrad",
       "name": "Red Army — Stalingrad",
       "description": "Soviet forces 1942–1943. Defend Stalingrad and launch Operation Uranus.",
-      "faction": "soviet",
-      "yearRange": { "start": 1942, "end": 1943 },
+      "faction": "soviet-union",
+      "yearRange": {
+        "start": 1942,
+        "end": 1943
+      },
       "pointBudget": 180,
       "resourcePools": [
-        { "key": "fuel", "label": "army.resources.fuel", "max": 25 },
-        { "key": "logistics", "label": "army.resources.logistics", "max": 60 },
-        { "key": "intelligence", "label": "army.resources.intelligence", "max": 4 }
+        {
+          "key": "fuel",
+          "label": "army.resources.fuel",
+          "max": 25
+        },
+        {
+          "key": "logistics",
+          "label": "army.resources.logistics",
+          "max": 60
+        },
+        {
+          "key": "intelligence",
+          "label": "army.resources.intelligence",
+          "max": 4
+        }
       ]
     }
   ]

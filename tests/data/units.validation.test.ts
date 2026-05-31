@@ -267,7 +267,7 @@ describe('static unit catalogue validation', () => {
           id: 'broken-infantry',
           name: '',
           type: 'infantry',
-          faction: 'soviet',
+          faction: 'soviet-union',
           from: 1945,
           to: 1941,
           cost: 1,

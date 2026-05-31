@@ -1,6 +1,6 @@
 export type FactionId =
   | 'german'
-  | 'soviet'
+  | 'soviet-union'
   | 'united-states'
   | 'united-kingdom'
   | 'france'

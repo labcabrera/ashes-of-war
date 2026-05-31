@@ -5,8 +5,8 @@ import { Box, FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/
 import { useTranslation } from 'react-i18next';
 
 const FACTION_FLAGS: Record<string, string> = {
-  german: '/images/german.png',
-  soviet: '/images/soviet.png',
+  german: '/images/factions/germany.jpg',
+  'soviet-union': '/images/factions/soviet-union.jpg',
 };
 
 interface Props {

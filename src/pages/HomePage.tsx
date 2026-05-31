@@ -27,8 +27,8 @@ export default function HomePage() {
           overflow: 'hidden',
           bgcolor: 'background.default',
           backgroundImage: {
-            xs: 'linear-gradient(180deg, rgba(28,28,28,0.18) 0%, rgba(28,28,28,0.92) 66%, rgba(28,28,28,1) 100%), url("/images/units/german-panther-g.jpg")',
-            md: 'linear-gradient(90deg, rgba(28,28,28,0.94) 0%, rgba(28,28,28,0.72) 43%, rgba(28,28,28,0.16) 100%), url("/images/units/german-panther-g.jpg")',
+            xs: 'linear-gradient(180deg, rgba(28,28,28,0.18) 0%, rgba(28,28,28,0.92) 66%, rgba(28,28,28,1) 100%), url("/images/units/german/german-panther-g.jpg")',
+            md: 'linear-gradient(90deg, rgba(28,28,28,0.94) 0%, rgba(28,28,28,0.72) 43%, rgba(28,28,28,0.16) 100%), url("/images/units/german/german-panther-g.jpg")',
           },
           backgroundSize: 'cover',
           backgroundPosition: { xs: 'center top', md: 'center' },
@@ -114,11 +114,16 @@ export default function HomePage() {
               gap: 1.5,
             }}
           >
-            {['german-panzer-iv-g', 'german-tiger-i', 'soviet-t-34-85', 'soviet-is-2'].map((unitId) => (
+            {[
+              ['german', 'german-panzer-iv-g'],
+              ['german', 'german-tiger-i'],
+              ['soviet-union', 'soviet-union-t-34-85'],
+              ['soviet-union', 'soviet-union-is-2'],
+            ].map(([factionId, unitId]) => (
               <Box
                 key={unitId}
                 component="img"
-                src={`/images/units/${unitId}.jpg`}
+                src={`/images/units/${factionId}/${unitId}.jpg`}
                 alt=""
                 sx={{
                   width: '100%',
