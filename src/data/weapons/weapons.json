@@ -866,6 +866,52 @@
       ]
     },
     {
+      "id": "german-mg-17",
+      "name": "MG 17",
+      "type": "soft",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 1100,
+          "max": 1200
+        },
+        "combat": {
+          "min": 600,
+          "max": 800
+        }
+      },
+      "profiles": [
+        {
+          "id": "strafing",
+          "name": "Strafing",
+          "shots": 6,
+          "hitOn": 7,
+          "rangeModifier": "20/10/-2",
+          "suppressionModifier": -2
+        }
+      ]
+    },
+    {
+      "id": "german-sc-250",
+      "name": "SC 250",
+      "type": "artillery",
+      "profiles": [
+        {
+          "id": "dive-bomb",
+          "name": "Dive Bomb",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "5/5/-3",
+          "armourPenetration": 6,
+          "suppressionModifier": -6,
+          "characteristics": [
+            "area-16",
+            "one-shot",
+            "limited-ammunition-1"
+          ]
+        }
+      ]
+    },
+    {
       "id": "su-vya-23",
       "name": "23 mm VYa-23",
       "type": "hard",

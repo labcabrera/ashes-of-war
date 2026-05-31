@@ -956,7 +956,7 @@
     {
       "id": "german-sniper-01",
       "name": "Wehrmacht Sniper Team",
-      "type": "sniper",
+      "type": "infantry",
       "faction": "german",
       "from": 1941,
       "to": 1945,
@@ -981,12 +981,12 @@
       "resourceCosts": {
         "intelligence": 1
       },
-      "organizationThreshold": 10,
-      "casualtiesThreshold": 3
+      "organizationThreshold": 6,
+      "casualtiesThreshold": 1
     },
     {
       "id": "german-pionier-squad",
-      "name": "Pionier Squad",
+      "name": "Wehrmacht Pionier Squad",
       "type": "infantry",
       "faction": "german",
       "from": 1939,
@@ -1986,6 +1986,113 @@
       "organizationThreshold": 10
     },
     {
+      "id": "german-sd-kfz-251-1",
+      "name": "Sd.Kfz. 251/1",
+      "type": "mechanised",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 12,
+      "movement": {
+        "tactical": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 35,
+          "crossCountry": 20,
+          "rough": 10
+        },
+        "dash": {
+          "road": 53,
+          "crossCountry": 25,
+          "rough": 12
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 3
+      },
+      "profile": {
+        "front": {
+          "value": 15,
+          "armorMM": 14,
+          "armorInclination": 19
+        },
+        "side": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 3,
+          "armorMM": 3,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "keywords": ["open-topped", "half-track"],
+      "weapons": [
+        {
+          "id": "german-mg-34-42",
+          "count": 2,
+          "type": "hull"
+        }
+      ]
+    },
+    {
+      "id": "german-ju-87",
+      "name": "Junkers Ju 87 Stuka",
+      "type": "aircraft",
+      "faction": "german",
+      "from": 1939,
+      "to": 1944,
+      "cost": 22,
+      "movement": {
+        "tactical": {
+          "road": 150,
+          "crossCountry": 150,
+          "rough": 150
+        },
+        "cruise": {
+          "road": 280,
+          "crossCountry": 280,
+          "rough": 280
+        },
+        "dash": {
+          "road": 370,
+          "crossCountry": 370,
+          "rough": 370
+        }
+      },
+      "resourceCosts": {
+        "fuel": 7,
+        "logistics": 5
+      },
+      "organizationThreshold": 3,
+      "casualtiesThreshold": 1,
+      "keywords": ["air-support"],
+      "weapons": [
+        {
+          "id": "german-mg-17",
+          "count": 2,
+          "type": "hull"
+        },
+        {
+          "id": "german-sc-250",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
+    },
+    {
       "id": "soviet-union-rifle-squad",
       "name": "Red Army Rifle Squad",
       "type": "infantry",
@@ -2587,8 +2694,8 @@
     },
     {
       "id": "soviet-union-field-medic",
-      "name": "Soviet Field Medic",
-      "type": "medic",
+      "name": "Red Army Field Medic",
+      "type": "infantry",
       "faction": "soviet-union",
       "from": 1941,
       "to": 1945,
@@ -2618,8 +2725,8 @@
     },
     {
       "id": "soviet-union-sniper",
-      "name": "Soviet Sniper",
-      "type": "sniper",
+      "name": "Red Army Sniper",
+      "type": "infantry",
       "faction": "soviet-union",
       "from": 1941,
       "to": 1945,
