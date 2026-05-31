@@ -6,6 +6,45 @@ WARNING: Borrador en desarrollo.
 
 En esta guía de juego, cada jugador asume el papel de comandante de una o varias compañías de combate y a través de un sistema de juego por turnos dirige sus unidades en el campo de batalla. El juego se centra en la gestión de recursos, la toma de decisiones estratégicas y la ejecución táctica para lograr los objetivos establecidos en cada escenario.
 
-== Acerca de las reglas y la escala
+== Consideraciones de diseño y jugabilidad
+
+=== Acerca de las reglas y la escala
 
 Aunque las reglas de juego y los perfiles de las unidades se han creado a partir de los valores reales, de cara a mejorar la jugabilidad algunos de estos factores se han corregido aplicando una compresión espacial teniendo en cuenta las limitaciones de espacio en un tablero de juego. De este modo, por ejemplo, a escala 1:100 el cañón de un Tiger I tendría un alcance operativo de 15 metros (1.500 metros en escala real), unas dimensiones un poco complicadas de aplicar en la mesa de juego de nuestro salón... a menos que alquiles un campo de fúbol para jugar la partida.
+
+=== Evitar el piedra papel y tijera
+
+Habitualmente estos juegos se basan en un sistema en el que:
+
+* La infantería es débil contra los tanques pero fuerte contra la artillería y las armas remolcadas.
+* La artillería es fuerte contra la infantería pero fuerte contra los tanques.
+* Los tanques con fuertes contra todo excepto otros tanques y las piezas antitanques remolcadas.
+
+Con más variantes y unidades como unidades motorizadas, artillería auto-propulsada, aviación, etc. Esto hace que la experiencia de juego muchas veces resulte aburrida y repetitiva, especialmente con versiones de lista que explotan alguna de estas ventajas. Y aunque debiera ser posible crear escenarios desbalanceados de juego donde la victoria y la derrota no pasen por el desempeño absoluto sino por los objetivos de cada misión, el elemento central de diseño del juego es evitar este tipo de situaciones. Un pelotón de Tiger I deberá poder pasearse sobre la mesa contra infantería y T-34-76 pero deberá respetar las armas anti-tanque del rival y no jugar alrededor de beneficiarse de su invulnerabilidad.
+
+=== Rangos
+
+Asumiendo que la mayor parte de las partidas se jugarán en una mesa de cerca de dos metros de largo y un metro y algo de ancho el los objetivos del modelo de alcance son:
+
+- Favorecer las listas de juego realistas que representen la realidad histórica y penalizar listas extremas.
+
+- Representar la disparidad de fuerzas. Normalmente el atacante no se lanza a la ofensiva sin tener una ventaja significativa y esto puede llevar a situaciones en las que las condiciones de victoria no sean simétricas. Esto se representará a nivel de juego con las condiciones de puntuación de cada misión.
+
+- Mantener las ventajas tácticas de la distancia, es decir, que las unidades con mayor alcance sigan teniendo una ventaja sobre las unidades con menor alcance. Un arma que sea incapaz de penetrar frontalmente un Tiger lo seguirá siendo mientras que este tendrá una ventaja significativa de alcance sobre las armas capaces de penetrar su blindaje.
+
+- Evitar que las unidades con mayor alcance tengan un alcance tan grande que puedan atacar a cualquier unidad en la mesa sin importar su posición.
+
+
+- Hacer un escalado progresivo de los factores de penetración de modo que unidades con un gran blindaje sigan siendo muy efectivas en rangos cortos pero no sean invulnerables.
+
+=== Letalidad y organización
+
+El diseño de las reglas se centra más en la capacidad de las unidades para operar en conjunto y adoptar estrategias de combate que en la mera letalidad de las unidades.
+
+La organización representa el grado de cohesión y coordinación entre las unidades desempeñando un determinado objetivo. El desempeño de cada unidad no será la suma de todas las individualidades tratando de ganar la guerra por si mismas sino de la elaboración de una táctica conjunta en la que esté representada la capacidad de la cadena de mando para realizar las maniobras necesarias para alcanzar los objetivos.
+
+=== Escenografía
+
+El diseño de las reglas está pensado para un escenario donde existe una densidad significativa de escenografía que hace que el modo de juego no sean cargas frontales en la primera guerra mundial. Esto es complejo de representar en la mayoría de los casos donde pequeñas pendientes pueden representar ventajas significativas para el atacante o el defensor.
+
+El diseño de reglas para estos casos simplificará esta representación para aspectos tales como el tipo de cobertura.

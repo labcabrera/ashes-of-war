@@ -101,12 +101,13 @@
   },
   "rules": {
     "title": "Reglamento",
-    "chapters": "Capítulos",
+    "chapters": "Reglamento",
     "selectChapter": "Selecciona un capítulo para leer",
     "subchapters": "Subcategorías",
     "chapter": {
       "introduction": "Introducción",
       "unitTypes": "Tipos de unidad",
+      "unitProfile": "Perfiles de unidad",
       "infantry": "Infantería",
       "vehicles": "Vehículos",
       "towedWeapons": "Armas remolcadas",

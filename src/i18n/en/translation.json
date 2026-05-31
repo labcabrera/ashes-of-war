@@ -107,6 +107,7 @@
     "chapter": {
       "introduction": "Introduction",
       "unitTypes": "Unit Types",
+      "unitProfile": "Unit Profiles",
       "infantry": "Infantry",
       "vehicles": "Vehicles"
     }

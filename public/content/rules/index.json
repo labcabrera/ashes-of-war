@@ -44,6 +44,14 @@
       ]
     },
     {
+      "id": "unit-profile",
+      "titleKey": "rules.chapter.unitProfile",
+      "files": {
+        "en": "/content/rules/es/unit-profile.adoc",
+        "es": "/content/rules/es/unit-profile.adoc"
+      }
+    },
+    {
       "id": "organizacion",
       "titleKey": "rules.chapter.organization",
       "files": {

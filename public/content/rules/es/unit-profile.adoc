@@ -1,0 +1,262 @@
+= Perfiles de unidad
+:toc:
+:toclevels: 3
+:toc-title: Contenido
+
+WARNING: Borrador en desarrollo.
+
+Esta sección recoge la información actual de los perfiles de unidad definidos en el catálogo estático `src/data/units/units.json` versión 8. Los valores son una referencia de consulta y deben mantenerse sincronizados con los datos del catálogo.
+
+== Leyenda
+
+* *Mov.* usa el formato `T/C/D carretera/campo a través/terreno difícil`, donde `T` es movimiento táctico, `C` es movimiento de crucero y `D` es movimiento rápido.
+* *Org.* indica el umbral de organización.
+* *Bajas/Combatientes* muestra el umbral de bajas y, para infantería, el número de combatientes.
+* *Blindaje* usa el formato `F/L/R/Exp valor (mm/inclinación)` para frontal, lateral, trasero y expuesto.
+
+== Alemania
+
+=== Aeronave
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Junkers Ju 87 Stuka |1939-1944 |22 |3 |1/- |fuel 7, logistics 5 |T 150/150/150; C 280/280/280; D 370/370/370 |- |2x MG 17 (hull); 1x SC 250 (hull) |air-support, radio
+|===
+
+=== Cañón de asalto
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|StuG III Ausf. A-E |1940-1940 |25 |10 |-/- |fuel 5, logistics 5 |T 15/11/6; C 30/23/11; D 40/30/15 |F 50 (50 mm/0°); L 30 (30 mm/0°); R 30 (30 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 37 L/24 (hull) |radio
+|StuG III Ausf. F |1942-1942 |30 |10 |-/- |fuel 5, logistics 5 |T 15/11/6; C 30/23/11; D 40/30/15 |F 50 (50 mm/0°); L 30 (30 mm/0°); R 30 (30 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 40 L/43 (hull) |radio
+|StuG III Ausf. G |1942-1945 |34 |10 |-/- |fuel 5, logistics 5 |T 15/11/6; C 30/23/11; D 40/30/15 |F 80 (80 mm/0°); L 30 (30 mm/0°); R 30 (30 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 40 L/48 (hull) |radio
+|StuG IV |1943-1945 |36 |10 |-/- |fuel 5, logistics 5 |T 15/11/6; C 30/23/11; D 40/30/15 |F 80 (80 mm/0°); L 30 (30 mm/0°); R 30 (30 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 40 L/48 (hull); 1x MG 34 / MG 42 (coaxial) |radio
+|Sturmpanzer IV (Brummbär) |1943-1945 |42 |10 |-/- |fuel 8, logistics 10 |T 12/9/5; C 25/18/9; D 38/28/14 |F 100 (100 mm/0°); L 50 (50 mm/0°); R 20 (20 mm/0°); Exp 15 (15 mm/0°) |1x 15 cm StuH 43 L/12 (hull); 1x MG 34 / MG 42 (hull) |radio
+|Sturmtiger |1944-1945 |75 |10 |-/- |fuel 15, logistics 15 |T 8/6/3; C 18/14/7; D 40/30/15 |F 150 (150 mm/0°); L 80 (80 mm/0°); R 80 (80 mm/0°); Exp 25 (25 mm/0°) |1x 38 cm Raketen-Werfer 61 (hull) |radio
+|===
+
+=== Infantería
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Fallschirmjäger Squad |1940-1944 |18 |10 |3/10 |logistics 10, intelligence 1 |T 12/9/5; C 24/18/9; D 36/27/14 |- |10x FG 42 |-
+|Kompanietrupp (HQ) |1939-1945 |10 |10 |3/10 |logistics 4 |T 10/8/4; C 20/15/8; D 30/23/11 |- |5x MP40; 5x Mauser Kar 98k |radio, hq
+|MG42 Team |1942-1945 |13 |10 |3/5 |logistics 5 |T 8/6/3; C 16/12/6; D 25/19/9 |- |1x MG 34 / MG 42; 4x Mauser Kar 98k |-
+|Panzergrenadier Squad |1939-1945 |11 |10 |3/10 |logistics 5 |T 10/8/4; C 20/15/8; D 30/23/11 |- |1x MG 34 / MG 42; 8x Mauser Kar 98k |-
+|Panzerschreck Team |1943-1945 |12 |6 |1/3 |- |T 8/6/3; C 16/12/6; D 25/19/9 |- |1x Panzerschreck RPzB 54; 2x Mauser Kar 98k |-
+|Sanitätsunteroffizier |1939-1945 |8 |6 |2/5 |logistics 4 |T 8/6/3; C 16/12/6; D 25/19/9 |- |- |medic
+|Sturmpionier Squad |1939-1945 |17 |10 |3/8 |logistics 6 |T 8/6/3; C 16/12/6; D 25/19/9 |- |1x Flammenwerfer 41; 1x MG 34 / MG 42; 6x MP40 |explosives
+|Wehrmacht Assault Squad |1940-1945 |14 |10 |3/10 |logistics 5 |T 8/6/3; C 16/12/6; D 25/19/9 |- |10x MP40 |-
+|Wehrmacht Grenadier Squad |1939-1945 |10 |10 |3/10 |logistics 5 |T 8/6/3; C 16/12/6; D 25/19/9 |- |1x MG 34 / MG 42; 8x Mauser Kar 98k |-
+|Wehrmacht Light Mortar Team |1939-1945 |10 |10 |3/5 |logistics 4 |T 8/6/3; C 16/12/6; D 25/19/9 |- |1x 5 cm Granatwerfer 36; 4x Mauser Kar 98k |indirect-fire
+|Wehrmacht Pionier Squad |1939-1945 |13 |10 |3/10 |logistics 10 |T 8/6/3; C 16/12/6; D 24/18/9 |- |- |-
+|Wehrmacht Sniper Team |1941-1945 |9 |6 |1/2 |intelligence 1 |T 8/6/3; C 16/12/6; D 25/19/9 |- |- |sniper
+|Wehrmacht Volksgrenadier Squad |1944-1945 |13 |10 |3/10 |logistics 5 |T 8/6/3; C 16/12/6; D 25/19/9 |- |1x MG 34 / MG 42; 8x Sturmgewehr 44; 1x Panzerfaust 60 |-
+|===
+
+=== Mecanizado
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Sd.Kfz. 222 Armoured Car |1939-1944 |14 |10 |3/- |fuel 5, intelligence 1 |T 25/19/9; C 55/41/21; D 80/60/30 |- |- |radio
+|Sd.Kfz. 231 |1937-1943 |18 |8 |3/- |fuel 4, logistics 4 |T 18/10/5; C 34/18/9; D 50/24/11 |F 18 (15 mm/15°); L 8 (8 mm/0°); R 10 (10 mm/0°); Exp 3 (3 mm/0°) |1x 2 cm KwK 38 L/55 (turret); 1x MG 34 / MG 42 (coaxial) |radio, reconnaissance
+|Sd.Kfz. 234/2 Puma |1943-1945 |26 |8 |3/- |fuel 5, logistics 5 |T 18/14/7; C 36/22/11; D 56/34/14 |F 40 (30 mm/20°); L 8 (8 mm/0°); R 8 (8 mm/0°); Exp 3 (3 mm/0°) |1x 5 cm KwK 39 (turret); 1x MG 34 / MG 42 (coaxial) |open-topped, radio, reconnaissance
+|Sd.Kfz. 250/8 (Stummel) |1943-1945 |24 |8 |3/- |fuel 3, logistics 5 |T 14/10/5; C 32/19/9; D 48/23/11 |F 15 (14 mm/19°); L 8 (8 mm/0°); R 8 (8 mm/0°); Exp 3 (3 mm/0°) |1x 7.5 cm KwK 37 L/24 (hull); 1x MG 34 / MG 42 (hull) |open-topped, half-track, radio
+|Sd.Kfz. 250/9 |1943-1945 |22 |8 |3/- |fuel 3, logistics 5 |T 14/10/5; C 32/19/9; D 48/23/11 |F 15 (14 mm/19°); L 8 (8 mm/0°); R 8 (8 mm/0°); Exp 3 (3 mm/0°) |1x 2 cm KwK 38 L/55 (turret); 1x MG 34 / MG 42 (coaxial) |open-topped, half-track, radio
+|Sd.Kfz. 251/1 |1939-1945 |12 |8 |3/- |fuel 3, logistics 3 |T 16/12/6; C 35/20/10; D 53/25/12 |F 15 (14 mm/19°); L 8 (8 mm/0°); R 8 (8 mm/0°); Exp 3 (3 mm/0°) |2x MG 34 / MG 42 (hull) |open-topped, half-track, transport-10, radio
+|Sd.Kfz. 251/1 II |1941-1944 |20 |8 |3/- |fuel 3, logistics 5 |T 16/12/6; C 35/20/10; D 53/25/12 |F 15 (14 mm/19°); L 8 (8 mm/0°); R 8 (8 mm/0°); Exp 3 (3 mm/0°) |1x Wurfrahmen 40 (hull) |open-topped, half-track, radio
+|===
+
+=== Motorizado
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Kradschützen |1939-1945 |12 |10 |3/10 |logistics 5 |T 12/8/3; C 24/14/6; D 35/20/9 |- |1x MG 34 / MG 42; 8x Mauser Kar 98k |reconnaissance
+|===
+
+=== Antiaéreo autopropulsado
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Flakpanzer IV "Möbelwagen" |1944-1945 |25 |10 |3/- |fuel 8, logistics 5 |T 18/14/7; C 32/24/12; D 40/30/15 |F 80 (80 mm/0°); L 25 (25 mm/0°); R 20 (20 mm/0°); Exp 3 (3 mm/0°) |1x 3.7 cm FlaK 43 L/89 (hull) |anti-air, open-topped, radio
+|Ostwind (Flakpanzer IV) |1944-1945 |30 |10 |3/- |fuel 8, logistics 5 |T 18/14/7; C 32/24/12; D 40/30/15 |F 80 (80 mm/0°); L 30 (30 mm/0°); R 20 (20 mm/0°); Exp 3 (3 mm/0°) |1x 3.7 cm FlaK 43 L/89 (turret) |anti-air, open-topped, radio
+|Sd.Kfz. 7/1 |1940-1945 |22 |8 |3/- |fuel 4, logistics 5 |T 14/10/4; C 25/16/7; D 38/20/9 |F 8 (8 mm/0°); L 8 (8 mm/0°); R 8 (8 mm/0°); Exp 3 (3 mm/0°) |1x 2 cm Flakvierling 38 (hull) |anti-air, open-topped, half-track, radio
+|===
+
+=== Artillería autopropulsada
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Hummel |1943-1945 |38 |10 |-/- |fuel 8, logistics 12 |T 12/9/5; C 24/18/9; D 40/30/15 |F 30 (30 mm/0°); L 20 (20 mm/0°); R 15 (15 mm/0°); Exp 5 (5 mm/0°) |1x 15 cm sFH 18 L/30 (hull) |open-topped, radio
+|Sd.Kfz. 4/1 (Panzerwerfer 42) |1943-1945 |28 |8 |3/- |fuel 5, logistics 6 |T 12/8/4; C 22/14/7; D 32/18/9 |F 8 (8 mm/0°); L 8 (8 mm/0°); R 8 (8 mm/0°); Exp 3 (3 mm/0°) |1x 15 cm Panzerwerfer 42 (hull) |half-track, radio
+|Sturmpanzer 38(t) Grille |1943-1944 |30 |10 |-/- |fuel 5, logistics 10 |T 12/9/5; C 24/18/9; D 40/30/15 |F 25 (25 mm/0°); L 15 (15 mm/0°); R 10 (10 mm/0°); Exp 5 (5 mm/0°) |1x 15 cm sIG 33 (hull) |radio
+|Wespe |1943-1945 |28 |10 |-/- |fuel 5, logistics 10 |T 12/9/5; C 24/18/9; D 40/30/15 |F 18 (18 mm/0°); L 8 (8 mm/0°); R 8 (8 mm/0°); Exp 5 (5 mm/0°) |- |radio
+|===
+
+=== Carro de combate
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Panther Ausf. A |1943-1944 |60 |10 |-/- |fuel 12, logistics 10 |T 18/14/7; C 35/26/13; D 46/35/17 |F 80 (80 mm/0°); L 40 (40 mm/0°); R 30 (30 mm/0°); Exp 15 (15 mm/0°) |1x 7.5 cm KwK 42 L/70 (turret); 1x MG 34 / MG 42 (coaxial) |radio
+|Panther Ausf. D |1943-1943 |55 |10 |-/- |fuel 12, logistics 10 |T 18/14/7; C 35/26/13; D 46/35/17 |F 80 (80 mm/0°); L 40 (40 mm/0°); R 30 (30 mm/0°); Exp 15 (15 mm/0°) |1x 7.5 cm KwK 42 L/70 (turret); 1x MG 34 / MG 42 (coaxial) |low-reliability, radio
+|Panther Ausf. G |1944-1945 |62 |10 |-/- |fuel 12, logistics 10 |T 18/14/7; C 35/26/13; D 46/35/17 |F 80 (80 mm/0°); L 50 (50 mm/0°); R 30 (30 mm/0°); Exp 15 (15 mm/0°) |1x 7.5 cm KwK 42 L/70 (turret); 1x MG 34 / MG 42 (coaxial) |radio
+|Panzer 38(t) Ausf. A |1939-1942 |20 |10 |-/- |fuel 4, logistics 4 |T 18/14/7; C 34/26/13; D 42/32/16 |F 25 (25 mm/0°); L 15 (15 mm/0°); R 15 (15 mm/0°); Exp 5 (5 mm/0°) |1x 3,7 cm KwK 38(t) (turret); 1x MG 37(t) (coaxial); 1x MG 37(t) (hull) |radio
+|Panzer I Ausf. A |1934-1941 |12 |10 |-/- |fuel 3, logistics 3 |T 18/14/7; C 32/24/12; D 40/30/15 |F 13 (13 mm/0°); L 13 (13 mm/0°); R 13 (13 mm/0°); Exp 5 (5 mm/0°) |2x MG 13 (turret) |radio
+|Panzer II Ausf. A |1936-1942 |18 |10 |-/- |fuel 4, logistics 4 |T 20/15/8; C 35/26/13; D 40/30/15 |F 14 (14 mm/0°); L 14 (14 mm/0°); R 14 (14 mm/0°); Exp 5 (5 mm/0°) |1x 2 cm KwK 30 L/55 (turret); 1x MG 34 / MG 42 (coaxial) |radio
+|Panzer III Ausf. J |1941-1943 |25 |10 |-/- |fuel 5, logistics 5 |T 20/15/8; C 35/26/13; D 40/30/15 |F 50 (50 mm/0°); L 30 (30 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 5 cm KwK 39 (turret); 1x MG 34 / MG 42 (coaxial) |radio
+|Panzer IV Ausf. A |1943-1945 |32 |10 |-/- |fuel 8, logistics 5 |T 18/14/7; C 32/24/12; D 40/30/15 |F 80 (80 mm/0°); L 30 (30 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 37 L/24 (turret); 1x MG 34 / MG 42 (coaxial) |radio
+|Panzer IV Ausf. B/C |1943-1945 |32 |10 |-/- |fuel 8, logistics 5 |T 18/14/7; C 32/24/12; D 40/30/15 |F 80 (80 mm/0°); L 30 (30 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 37 L/24 (turret); 1x MG 34 / MG 42 (coaxial) |radio
+|Panzer IV Ausf. D |1943-1945 |32 |10 |-/- |fuel 8, logistics 5 |T 18/14/7; C 32/24/12; D 40/30/15 |F 80 (80 mm/0°); L 30 (30 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 37 L/24 (turret); 1x MG 34 / MG 42 (coaxial) |radio
+|Panzer IV Ausf. G |1943-1945 |32 |10 |-/- |fuel 8, logistics 5 |T 18/14/7; C 32/24/12; D 40/30/15 |F 80 (80 mm/0°); L 30 (30 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 40 L/48 (turret); 1x MG 34 / MG 42 (coaxial) |radio
+|Tiger Ausf. H1 / E |1944-1945 |80 |10 |-/- |fuel 15, logistics 15 |T 12/9/5; C 24/18/9; D 38/29/14 |F 150 (150 mm/0°); L 90 (90 mm/0°); R 90 (90 mm/0°); Exp 30 (30 mm/0°) |1x 8.8 cm KwK 36 L/56 (turret); 1x MG 34 / MG 42 (coaxial); 2x MG 34 / MG 42 (turret) |radio
+|Tiger II |1942-1945 |50 |10 |-/- |fuel 10, logistics 10 |T 10/8/4; C 20/15/8; D 41/31/15 |F 102 (102 mm/0°); L 82 (82 mm/0°); R 82 (82 mm/0°); Exp 15 (15 mm/0°) |1x 8,8 cm KwK 43 (turret); 1x MG 34 / MG 42 (coaxial); 2x MG 34 / MG 42 (turret) |radio
+|===
+
+=== Cazacarros
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Elefant |1944-1944 |58 |10 |-/- |fuel 16, logistics 15 |T 8/5/2; C 20/10/4; D 30/15/6 |F 200 (200 mm/0°); L 80 (80 mm/0°); R 80 (80 mm/0°); Exp 30 (30 mm/0°) |1x 8.8 cm KwK 43 L/71 (hull); 1x MG 34 / MG 42 (hull) |radio
+|Ferdinand |1943-1943 |58 |10 |-/- |fuel 16, logistics 15 |T 8/5/2; C 20/10/4; D 30/15/6 |F 200 (200 mm/0°); L 80 (80 mm/0°); R 80 (80 mm/0°); Exp 30 (30 mm/0°) |1x 8.8 cm KwK 43 L/71 (hull) |radio, low-reliability
+|Jagdpanther |1944-1945 |60 |10 |-/- |fuel 12, logistics 12 |T 16/12/6; C 32/24/12; D 46/35/17 |F 80 (80 mm/0°); L 50 (50 mm/0°); R 40 (40 mm/0°); Exp 15 (15 mm/0°) |1x 8.8 cm KwK 43 L/71 (hull) |radio
+|Jagdpanzer IV |1944-1945 |40 |10 |-/- |fuel 8, logistics 8 |T 15/11/6; C 30/23/11; D 40/30/15 |F 60 (60 mm/0°); L 30 (30 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 7.5 cm KwK 40 L/48 (hull) |radio
+|Marder I |1942-1945 |26 |10 |-/- |fuel 5, logistics 8 |T 15/11/6; C 30/23/11; D 40/30/15 |F 12 (12 mm/0°); L 10 (10 mm/0°); R 8 (8 mm/0°); Exp 5 (5 mm/0°) |1x 7.5 cm PaK 40 L/46 (hull) |open-topped, radio
+|Marder II |1942-1945 |30 |10 |-/- |fuel 5, logistics 8 |T 15/11/6; C 30/23/11; D 40/30/15 |F 30 (30 mm/0°); L 15 (15 mm/0°); R 10 (10 mm/0°); Exp 5 (5 mm/0°) |1x 7.5 cm PaK 40 L/46 (hull) |open-topped, radio
+|Marder III |1942-1945 |33 |10 |-/- |fuel 5, logistics 8 |T 15/11/6; C 30/23/11; D 40/30/15 |F 50 (50 mm/0°); L 15 (15 mm/0°); R 10 (10 mm/0°); Exp 5 (5 mm/0°) |1x 7.5 cm PaK 40 L/46 (hull) |open-topped, radio
+|Nashorn (Hornisse) |1943-1945 |45 |10 |-/- |fuel 10, logistics 10 |T 15/11/6; C 30/23/11; D 42/32/16 |F 30 (30 mm/0°); L 15 (15 mm/0°); R 10 (10 mm/0°); Exp 5 (5 mm/0°) |1x 8.8 cm KwK 43 L/71 (hull) |radio
+|===
+
+=== Antiaéreo remolcado
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|8.8 cm FlaK 36 |1939-1945 |35 |10 |3/- |fuel 4, logistics 12 |T 0/0/0; C 6/4/2; D 9/6/4 |- |1x 8.8 cm FlaK 36 |anti-air
+|===
+
+=== Anticarro remolcado
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|7.5 cm PaK 40 |1942-1945 |24 |10 |3/- |fuel 3, logistics 8 |T 0/0/0; C 8/6/3; D 12/9/5 |- |1x 7.5 cm PaK 40 L/46 |-
+|8.8 cm PaK 43 |1943-1945 |42 |10 |3/- |fuel 3, logistics 12 |T 0/0/0; C 8/6/3; D 12/9/5 |- |1x 8.8 cm PaK 43 L/71 |-
+|===
+
+=== Artillería remolcada
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|10.5 cm leFH 18 |1939-1945 |21 |10 |3/- |fuel 3, logistics 10 |T 0/0/0; C 8/6/3; D 12/9/5 |- |1x 10.5 cm leFH 18 |-
+|15 cm Nebelwerfer 41 |1941-1945 |24 |8 |3/- |fuel 3, logistics 12 |T 0/0/0; C 8/6/3; D 12/9/5 |- |1x 15 cm Nebelwerfer 41 |-
+|15 cm sFH 18 |1939-1945 |28 |10 |3/- |fuel 4, logistics 14 |T 0/0/0; C 6/4/2; D 9/6/4 |- |1x 15 cm sFH 18 L/30 |-
+|7.5 cm leIG 18 |1939-1945 |14 |8 |3/- |fuel 2, logistics 6 |T 0/0/0; C 10/8/4; D 15/12/6 |- |1x 7.5 cm leIG 18 |-
+|===
+
+== Unión Soviética
+
+=== Aeronave
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Ilyushin Il-2 Shturmovik |1941-1945 |28 |3 |1/- |fuel 8, logistics 5 |T 200/200/200; C 320/320/320; D 414/414/414 |- |2x 23 mm VYa-23 (hull); 8x RS-82 (hull) |air-support
+|===
+
+=== Cañón de asalto
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|ISU-152 |1943-1945 |50 |10 |-/- |fuel 10, logistics 10 |T 13/8/3; C 27/14/6; D 37/20/8 |F 90 (90 mm/30°); L 60 (60 mm/0°); R 60 (60 mm/0°); Exp 20 (20 mm/0°) |1x 152 mm ML-20S (hull) |radio
+|===
+
+=== Infantería
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|Red Army Assault Squad |1941-1945 |12 |10 |3/10 |logistics 5 |T 10/8/4; C 20/15/8; D 30/23/11 |- |10x PPSh-41 |-
+|Red Army Field Medic |1941-1945 |7 |6 |2/5 |logistics 5 |T 8/6/3; C 16/12/6; D 25/19/9 |- |- |medic
+|Red Army Guards Rifle Squad |1942-1945 |14 |10 |3/10 |logistics 5 |T 10/8/4; C 20/15/8; D 30/23/11 |- |- |-
+|Red Army Heavy MG Team |1941-1945 |11 |10 |3/5 |logistics 5 |T 8/6/3; C 16/12/6; D 24/18/9 |- |1x Maxim M1910; 4x Mosin–Nagant M1891/30 |-
+|Red Army Rifle Squad |1941-1945 |9 |10 |3/10 |logistics 5 |T 10/8/4; C 20/15/8; D 30/23/11 |- |10x Mosin–Nagant M1891/30 |-
+|Red Army Sniper |1941-1945 |9 |5 |1/2 |intelligence 1 |T 8/6/3; C 16/12/6; D 25/19/9 |- |- |sniper
+|===
+
+=== Mecanizado
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|ZIS-5 |1939-1945 |6 |5 |1/- |fuel 2, logistics 2 |T 22/12/5; C 45/18/7; D 60/25/10 |F 1 (0 mm/0°); L 1 (0 mm/0°); R 1 (0 mm/0°); Exp 1 (0 mm/0°) |- |open-topped, transport-12
+|===
+
+=== Carro de combate
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|IS-1 |1943-1944 |45 |10 |-/- |fuel 10, logistics 10 |T 14/11/5; C 25/19/9; D 37/28/14 |F 120 (120 mm/0°); L 90 (90 mm/0°); R 60 (60 mm/0°); Exp 15 (15 mm/0°) |1x 85 mm D-5T (turret) |-
+|IS-2 |1943-1945 |52 |10 |-/- |fuel 10, logistics 10 |T 14/11/5; C 25/19/9; D 37/28/14 |F 120 (120 mm/0°); L 90 (90 mm/0°); R 60 (60 mm/0°); Exp 15 (15 mm/0°) |1x 122 mm D-25T (turret) |-
+|T-34-76 (1940) |1940-1944 |29 |10 |-/- |fuel 5, logistics 5 |T 22/17/8; C 40/30/15; D 55/41/21 |F 45 (45 mm/0°); L 15 (15 mm/0°); R 15 (15 mm/0°); Exp 10 (10 mm/0°) |1x 76.2 mm L-11 (turret) |-
+|T-34-76 (1941) |1941-1944 |39 |10 |-/- |fuel 5, logistics 5 |T 22/17/8; C 40/30/15; D 55/41/21 |F 52 (52 mm/0°); L 20 (20 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 76.2 mm F-32 (turret) |-
+|T-34-76 (1942) |1942-1944 |28 |10 |-/- |fuel 6, logistics 5 |T 22/17/8; C 40/30/15; D 55/41/21 |F 65 (65 mm/0°); L 20 (20 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 76.2 mm F-32 (turret) |-
+|T-34-76 (1943) |1943-1944 |20 |10 |-/- |fuel 8, logistics 5 |T 22/17/8; C 40/30/15; D 55/41/21 |F 70 (70 mm/0°); L 20 (20 mm/0°); R 20 (20 mm/0°); Exp 10 (10 mm/0°) |1x 76.2 mm F-34 (turret) |-
+|T-34/85 |1944-1945 |36 |10 |-/- |fuel 8, logistics 5 |T 22/17/8; C 40/30/15; D 55/41/21 |F 60 (60 mm/0°); L 45 (45 mm/0°); R 40 (40 mm/0°); Exp 12 (12 mm/0°) |- |-
+|===
+
+=== Cazacarros
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|SU-100 |1944-1945 |38 |10 |-/- |fuel 8, logistics 8 |T 18/12/5; C 37/20/8; D 50/28/11 |F 75 (75 mm/50°); L 45 (45 mm/0°); R 45 (45 mm/0°); Exp 20 (20 mm/0°) |1x 100 mm D-10S (hull) |radio
+|SU-76 |1942-1945 |18 |8 |-/- |fuel 4, logistics 4 |T 16/11/4; C 33/18/7; D 45/25/10 |F 35 (35 mm/0°); L 15 (15 mm/0°); R 10 (10 mm/0°); Exp 5 (5 mm/0°) |1x 76.2 mm ZiS-3 L/41.6 (hull) |open-topped, radio
+|SU-85 |1943-1945 |30 |10 |-/- |fuel 7, logistics 7 |T 20/14/5; C 41/22/9; D 55/30/12 |F 45 (45 mm/50°); L 45 (45 mm/0°); R 45 (45 mm/0°); Exp 20 (20 mm/0°) |1x 85 mm D-5T (hull) |radio
+|===
+
+=== Anticarro remolcado
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|100 mm BS-3 |1944-1945 |36 |10 |3/- |fuel 3, logistics 10 |T 0/0/0; C 8/6/3; D 12/9/5 |- |1x 100 mm BS-3 L/55.5 |-
+|45 mm M1937 (53-K) |1941-1943 |12 |10 |3/- |fuel 1, logistics 4 |T 0/0/0; C 12/10/5; D 18/14/7 |- |1x 45 mm M1937 (53-K) |-
+|45 mm M1942 (M-42) |1942-1945 |15 |10 |3/- |fuel 1, logistics 5 |T 0/0/0; C 12/10/5; D 18/14/7 |- |1x 45 mm M1942 (M-42) L/68.6 |-
+|57 mm ZiS-2 |1943-1945 |22 |10 |3/- |fuel 2, logistics 6 |T 0/0/0; C 10/8/4; D 15/12/6 |- |1x 57 mm ZiS-2 L/73 |-
+|76 mm ZiS-3 |1942-1945 |18 |10 |3/- |fuel 2, logistics 6 |T 0/0/0; C 10/8/4; D 15/12/6 |- |1x 76.2 mm ZiS-3 L/41.6 |-
+|===
+
+=== Artillería remolcada
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|122 mm howitzer M1938 (M-30) |1941-1945 |23 |10 |3/- |fuel 3, logistics 10 |T 0/0/0; C 8/6/3; D 12/9/5 |- |1x 122 mm M-30 |-
+|===
+
+== Estados Unidos
+
+=== Carro de combate
+
+[cols="2,1,1,1,1,1,2,3,3,3", options="header"]
+|===
+|Unidad |Periodo |Pts |Org. |Bajas/Combatientes |Recursos |Mov. |Blindaje |Armamento |Claves
+|M3 Stuart |1941-1945 |16 |8 |-/- |fuel 3, logistics 3 |T 20/13/5; C 43/22/10; D 58/30/14 |F 51 (51 mm/16°); L 28 (28 mm/0°); R 28 (28 mm/0°); Exp 13 (13 mm/0°) |1x 37 mm M6 L/53.5 (turret); 1x Browning M1919A4 (hull) |radio
+|M4 Sherman |1942-1945 |28 |10 |-/- |fuel 5, logistics 5 |T 13/8/4; C 28/18/9; D 38/24/12 |F 51 (51 mm/56°); L 38 (38 mm/0°); R 38 (38 mm/0°); Exp 25 (25 mm/0°) |1x 75 mm M3 L/40 (turret) |radio
+|M4A1 Sherman |1942-1945 |28 |10 |-/- |fuel 5, logistics 5 |T 13/8/4; C 28/18/9; D 38/24/12 |F 51 (51 mm/56°); L 38 (38 mm/0°); R 38 (38 mm/0°); Exp 25 (25 mm/0°) |1x 75 mm M3 L/40 (turret) |radio
+|M4A2 Sherman |1942-1945 |28 |10 |-/- |fuel 4, logistics 5 |T 13/8/4; C 28/18/9; D 38/24/12 |F 51 (51 mm/56°); L 38 (38 mm/0°); R 38 (38 mm/0°); Exp 25 (25 mm/0°) |1x 75 mm M3 L/40 (turret) |radio
+|M4A3 Sherman |1944-1945 |35 |10 |-/- |fuel 5, logistics 5 |T 13/8/4; C 28/18/9; D 38/24/12 |F 64 (64 mm/47°); L 38 (38 mm/0°); R 38 (38 mm/0°); Exp 25 (25 mm/0°) |1x 76 mm M1 A1/A2 (turret) |radio
+|M4A4 Sherman |1942-1945 |28 |10 |-/- |fuel 5, logistics 5 |T 13/8/4; C 28/18/9; D 38/24/12 |F 51 (51 mm/56°); L 38 (38 mm/0°); R 38 (38 mm/0°); Exp 25 (25 mm/0°) |1x 75 mm M3 L/40 (turret) |radio
+|===
