@@ -1,3 +1,123 @@
-# Fuego pesado
+= Fuego pesado
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
 WARNING: Borrador en desarrollo.
+
+== Penetración
+
+Cuando un vehículo sufre un impacto de un arma pesada se resolverá la tirada para determinar si el impacto ha sido exitoso o no. En caso de ser exitoso se determinará el tipo de impacto y posteriormente se resolverá el daño causado al vehículo.
+
+Las armas pesadas tendrán un valor de penetración base junto con un modificador por distancia del mismo modo que los bonificadores en la tirada de impacto.
+
+Las armas pesadas tienen un perfil de penetración expresado del mismo modo que los modificadores por distancia:
+
+----
+AP = {Distancia base}/{Rango}/{Modificador}
+----
+
+Siendo:
+
+* Distancia base: distancia a la que el arma tiene su penetración máxima
+* Rango: cada rango de distancia adicional a la distancia base
+* Modificador: penalización por cada rango adicional a la distancia base
+
+[NOTE]
+====
+El cañón 8.8 cm KwK 36 L/56 del Tiger I tiene un perfil de penetración 10 24/20/-1. Los valores de penetración efectivos serán:
+
+|===
+|Distancia | 0-24' | 24-44' | 44-64'
+|Penetración | 10 | 9 | 8
+|===
+====
+
+## Modificadores de penetración
+
+|===
+|Modificador          | Valor | Descripción
+|Desenfilado ligero   | -1    | Angulos de 15-30º
+|Desenfilado moderado | -2    | Angulos de 30-45º
+|Desenfilado severo   | -3    | Angulos superiores a 45º
+|===
+
+## Valores de blindaje
+
+Cada vehículo tiene cuatro niveles de blindaje. Cuando un vehiculo recibe un impacto se determinará el lugar del impacto. Para ello proyectaremos las lineas del los vértices del modelo.
+
+Resolución de impactos en carros de combate
+Cada perfil tendrá 3 valores de blindaje. Frontal, lateral y trasero. Dependiendo del éxito del disparo y del ángulo desde el que recibe el disparo se determinará el tipo de blindaje.
+
+Funcionará del mismo modo que en disparo, tiras un dado, aplicas los bonificadores y resuelves el blindaje afectado.
+
+Por cada valor en la tirada de impacto que sobrepase el valor necesario de acierto tendremos un +1 en la tirada de impacto (por ejemplo, si hemos sacado un 13 tendremos un +3).
+
+Cada arma tendrá un valor base de penetración definido como 12/20/-1. Esto será un valor base de penetración de 12 afectado por -1 por cada 20 cm de distancia al objetivo.
+
+Considerar una penalización por encarado de modo que se añada un -X si el tanque está encarado a 45º.
+
+Ejemplo
+El Panzer IV utiliza un cañon KwK 40 L/43 de 75 mm que tiene una penetración 10/30/-1.
+El KV-2 tiene un blindaje frontal de 14
+
+Tirada: 3
+Penetración base: 10
+Distancia (10/30/-1 a 70 cm): -1
+Éxito en el impacto (13): +3
+Total: 15
+
+Como el valor es superior al blindaje del objetivo penetra la armadura.
+
+
+Daño en carros de combate
+Este valor vendrá dado por el valor destructivo base determinado en el perfil del arma. Se tirará un dado y se sumarán los bonificadores. Cada punto en la tirada de penetración superior a la armadura añadirá +1.
+
+
+|===
+|0-6     |Daño superficial
+|7-10    |Daño normal
+|>10     |Daño crítico
+|===
+
+_Ejemplo:
+	Tirada: 5
+	Bonificación base KwK L/43: +2
+	Bonificación penetración (15 vs 14): +1
+	Total: 8
+Se realizará una tirada en la tabla de resolución de daños normal_
+
+
+
+Tablas de daño en carros de combate:
+
+Superficial:
+1-2: Sin efecto. El proyectil no afecta a la tripulación
+3-4: Tripulación acobardada
+5: Tripulación herida (D3 integrantes a determinar)
+6: Tripulación muerta (D3 integrantes a determinar) + Chequeo de fuego/explosión -3
+
+Normal:
+1-3: D3 Tripulación muerta + daños internos
+4-5: Tripulación muerta
+6: Explosión interna
+
+Crítico:
+	1: D3 integrantes muertos
+2-3: Tripulación muerta y vehículo inutilizado
+4-5: Explosión interna. La tripulación muere
+6: Explosión completa: Las unidades sin blindaje a X cm reciben una tirada de daño de explosión
+
+
+Cadencia
+Idea de que cada turno tengas 3 puntos de acción. Cada arma principal tiene que gastar X puntos de acción en el disparo (apuntado aparte). De este modo tanques alemanes entrenados podrán disparar 3 veces en los que un ISU-152 realizará un disparo. De los sturmtiger con tiempos de recarga medios de 15 minutos no hablamos. Serán como unidades de prácticamente un uso y luego se convertirán en un bunker andante.
+
+|===
+|Carro               |Cañón principal             |Cadencia teórica (disparos/minuto) |Cadencia real en combate (disparos/minuto)
+|Tiger I             |88 mm KwK 36 L/56           |6 - 8                              |4 - 6
+|Tiger II            |88 mm KwK 43 L/71           |6 - 8                              |3 - 5
+|Panzer IV           |75 mm KwK 40 L/43 o L/48    |10 - 12                            |6 - 8
+|T-34/76             |76.2 mm F-34                |6 - 9                              |4 - 6
+|T-34/85             |85 mm ZiS-S-53              |6 - 8                              |4 - 6
+|IS-2                |122 mm D-25T                |2 - 3                              |1 - 2
+|===

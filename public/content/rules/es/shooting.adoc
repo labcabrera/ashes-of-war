@@ -13,6 +13,10 @@ Las armas de disparo se dividen en las siguientes categorías:
 
 * link:/rules/shooting/light-fire[Fuego indirecto]: categoría de armas de fuego parabólico tales como artillería o morteros que pueden disparar sin visión directa al objetivo saturando un área. Estas arms tienen una precisión más limitada y requieren de mecánicas de observación y corrección de fuego, pero pueden ser devastadoras contra formaciones enemigas agrupadas y posiciones estáticas.
 
+== Línea de visión
+
+La linea de visión se trazará desde el punto de disparo hasta el objetivo. En los casos de disparos de armas instaladas en la torreta será necesario que el cañon tenga línea de visión al objetivo, mientras que en el caso de armas instaladas en la barcaza o en el casco del vehículo se trazará la línea de visión desde el punto de disparo hasta el objetivo. En el caso de disparos realizados por infantería se trazará la línea de visión desde la miniatura del soldado que dispara hasta el objetivo.
+
 == Tirada para impactar
 
 El disparo involucra dos valores definidos en el perfil de las unidades:

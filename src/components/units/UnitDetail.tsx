@@ -44,6 +44,7 @@ const UNIT_ICONS = {
   'sp-artillery': GpsFixedIcon,
   'sp-anti-aircraft': GpsFixedIcon,
   mechanised: DirectionsCarIcon,
+  motorised: DirectionsCarIcon,
   'towed-artillery': GpsFixedIcon,
   'towed-anti-tank': GpsFixedIcon,
   'towed-anti-aircraft': GpsFixedIcon,

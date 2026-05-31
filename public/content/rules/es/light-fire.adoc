@@ -1,3 +1,46 @@
 # Fuego ligero
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
 WARNING: Borrador en desarrollo.
+
+Los disparos ligeros implican el uso de armas de bajo calibre sin poder de penetración cubriendo armas de infantería, fusiles, subfusiles y armamento secundario de los carros de combate o aviones.
+Estas armas por lo general tienen una baja letalidad reflejando el hecho de que salvo escenarios de asalto frontal, en una batalla de intensidad moderada el número de bajas por compañía podía oscilar entre 5-10.
+
+Estas armas indicarán tendrán los siguientes perfiles:
+
+Número de ataques en cada tipo de estancia (por ejemplo una ametralladora podrá disparar ráfagas cortas apuntando o vaciar el cargador en un corto periodo de tiempo con la posibilidad de sobrecalentar el cañon y que tenga que ser cambiado).
+
+Puntería, indicador base de impacto. En la mayoría de los casos contra infantería serán valores por encima de 6 de tal modo que sólo en las tiradas abiertas se conseguirá acertar.
+
+Modificador por distancia. Este valor estará expresado de la misma forma que en las armas pesadas como 20/30/-1.
+
+Factor de supresión: número que indica el resultado de forzar un chequeo de organización en la unidad rival
+
+Modificadores base al impactar:
+Expuesto: +3 hit
+Bunker o cobertura pesada: -3 hit
+Unidad disparando en movimiento: -2 hit
+Emboscada / mejora de posición: +2 hit
+En posición elevada: +1 hit
+
+En primer lugar se calculan los impactos. Por cada impacto la unidad objetivo tiene que hacer un chequeo de supresión indicado por su perfil. En caso de fallarlo la unidad se considerará suprimida y también tendrá que hacer un chequeo para bajar la organización de la unidad.
+
+_Ejemplo:
+
+Un pelotón alemán formado por 10 hombres dispara una MG-34 y seis fusiles.
+
+La MG-34 tiene un perfil de disparo a media cadencia de 18 disparos, hit-on 9 y 30/20/-1 y un -1 en el chequeo a la supresión. Sin aplicar bonificadores el jugador necesitaría sacar un 9 para impactar (un 6 seguido de 3+), Tira 18 dados, saca 3 seis y después posteriormente saca un 2, un 5 y un 5 de modo que consigue dos impactos.
+
+El jugador sovietico realizará primero las tirada de supresión. La unidad es una unidad de infantería regular de modo que tiene un valor de supresión de 4+ modificado por -1 por la MG-34, saca un 4 y un 6 de modo que falla el chequeo y se considera suprimida. Al quedarse suprimida realiza un chequeo de organización a 4+ y saca un 5 con lo que supera el chequeo y no pierde organización.
+
+Posteriormente dispara los 6 fusiles. Cada fusil tiene 2 disparos, hit-on-10 y 40/30/-1, saca un único seis seguido de un tres de modo que no consigue ningún acierto. _
+
+
+=== Sobrecalentamiento
+Algunas armas podrán sobrecalentarse si se utilizan disparando ráfagas continuas. En este caso estará indicado en el perfil con la keyword “Sobrecalentamiento x+ (y)”. El primer valor será el valor utilizado para realizar el chequeo, el segundo el número de chequeos fallados que inutilizarían el arma.
+
+Ejemplo:
+
+Cuando se dispara en esta modalidad por cada 1 obtenido obligará a realizar un chequeo de sobrecalentamiento. Por ejemplo, en el ejemplo anterior la MG-34 dispara con el perfil sobrecalentado y saca 3 unos en la tirada. Como tiene “Sobrecalentamiento 3+ (2)” realiza 3 chequeos sacando 1, 3, 5. Al fallar el chequeo el arma queda inutilizada hasta que se reemplace el cañón lo que consumirá acciones durante los turnos siguientes. Como no ha sacado 2 fallos el arma no queda inutilizada. 
