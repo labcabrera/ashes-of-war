@@ -3,7 +3,7 @@
  * Returns filtered units and filter state setters.
  */
 import { useMemo, useState } from 'react';
-import { Unit, UnitType } from '../types/unit';
+import { Unit, UnitType, UnitKeyword } from '../types/unit';
 import unitsData from '../data/units/units.json';
 import type { FactionId } from '../types/faction';
 
@@ -11,18 +11,18 @@ interface UnitFilters {
   name: string;
   factions: FactionId[];
   types: UnitType[];
-  keywords: string[];
+  keywords: UnitKeyword[];
   year: number | '';
 }
 
 interface UseUnitDataResult {
   units: Unit[];
   filters: UnitFilters;
-  availableKeywords: string[];
+  availableKeywords: UnitKeyword[];
   setName: (name: string) => void;
   setFaction: (faction: FactionId | '') => void;
   setTypes: (types: UnitType[]) => void;
-  setKeywords: (keywords: string[]) => void;
+  setKeywords: (keywords: UnitKeyword[]) => void;
   setYear: (year: number | '') => void;
   isOutOfYear: (unit: Unit) => boolean;
 }
@@ -31,7 +31,9 @@ const allUnits = [...(unitsData.units as unknown as Unit[])].sort((first, second
   first.name.localeCompare(second.name),
 );
 
-const availableKeywords = [...new Set(allUnits.flatMap((u) => u.keywords ?? []))].sort();
+const availableKeywords = [...new Set(allUnits.flatMap((u) => u.keywords ?? []))]
+  .filter((kw) => !/-\d+$/.test(kw))
+  .sort() as UnitKeyword[];
 
 export function useUnitData(): UseUnitDataResult {
   const [filters, setFilters] = useState<UnitFilters>({
@@ -48,7 +50,7 @@ export function useUnitData(): UseUnitDataResult {
     setFilters((prev) => ({ ...prev, factions: faction ? [faction] : [] }));
   const setTypes = (types: UnitType[]) =>
     setFilters((prev) => ({ ...prev, types }));
-  const setKeywords = (keywords: string[]) =>
+  const setKeywords = (keywords: UnitKeyword[]) =>
     setFilters((prev) => ({ ...prev, keywords }));
   const setYear = (year: number | '') =>
     setFilters((prev) => ({ ...prev, year }));

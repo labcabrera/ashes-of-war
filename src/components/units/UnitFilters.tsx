@@ -5,7 +5,7 @@ import { Autocomplete, Box, Checkbox, TextField } from '@mui/material';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import { useTranslation } from 'react-i18next';
-import { UnitType } from '../../types/unit';
+import { UnitType, UnitKeyword } from '../../types/unit';
 import type { FactionId } from '../../types/faction';
 import FactionSelect from '../factions/FactionSelect';
 
@@ -20,13 +20,13 @@ interface Props {
   selectedFaction: FactionId | '';
   factions: FactionId[];
   selectedTypes: UnitType[];
-  selectedKeywords: string[];
-  availableKeywords: string[];
+  selectedKeywords: UnitKeyword[];
+  availableKeywords: UnitKeyword[];
   year: number | '';
   onNameChange: (v: string) => void;
   onFactionChange: (v: FactionId | '') => void;
   onTypesChange: (v: UnitType[]) => void;
-  onKeywordsChange: (v: string[]) => void;
+  onKeywordsChange: (v: UnitKeyword[]) => void;
   onYearChange: (v: number | '') => void;
 }
 

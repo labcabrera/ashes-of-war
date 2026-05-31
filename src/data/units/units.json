@@ -103,7 +103,10 @@
           "type": "turret"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-panzer-ii-a",
@@ -168,7 +171,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-panzer-38t-a",
@@ -238,7 +244,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-panzer-iv-a",
@@ -303,7 +312,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-panzer-iv-bc",
@@ -368,7 +380,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-panzer-iv-d",
@@ -434,7 +449,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-tank-01",
@@ -499,7 +517,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-panzer-iii-j",
@@ -564,7 +585,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-stug-iii-a-e",
@@ -624,7 +648,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-stug-iii-f",
@@ -684,7 +711,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-stug-iii-g",
@@ -744,7 +774,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-stug-iv",
@@ -809,7 +842,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-10.5-cm-lefH-18",
@@ -841,7 +877,14 @@
         "logistics": 10
       },
       "organizationThreshold": 10,
-      "casualtiesThreshold": 3
+      "casualtiesThreshold": 3,
+      "weapons": [
+        {
+          "id": "german-lefh-18",
+          "count": 1,
+          "type": "normal"
+        }
+      ]
     },
     {
       "id": "german-7.5-cm-pak-40",
@@ -951,7 +994,10 @@
         "intelligence": 1
       },
       "organizationThreshold": 10,
-      "casualtiesThreshold": 3
+      "casualtiesThreshold": 3,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-sniper-01",
@@ -978,10 +1024,13 @@
           "rough": 9
         }
       },
+      "combatants": 2,
       "resourceCosts": {
         "intelligence": 1
       },
-      "keywords": ["sniper"],
+      "keywords": [
+        "sniper"
+      ],
       "organizationThreshold": 6,
       "casualtiesThreshold": 1
     },
@@ -1010,6 +1059,7 @@
           "rough": 9
         }
       },
+      "combatants": 10,
       "resourceCosts": {
         "logistics": 10
       },
@@ -1045,6 +1095,7 @@
         "logistics": 10,
         "intelligence": 1
       },
+      "combatants": 10,
       "weapons": [
         {
           "id": "german-fg-42",
@@ -1123,7 +1174,10 @@
           "type": "turret"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-tiger-ii",
@@ -1193,7 +1247,10 @@
           "type": "turret"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-panther-d",
@@ -1259,7 +1316,8 @@
         }
       ],
       "keywords": [
-        "low-reliability"
+        "low-reliability",
+        "radio"
       ],
       "organizationThreshold": 10
     },
@@ -1326,7 +1384,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-panther-g",
@@ -1391,7 +1452,10 @@
           "type": "coaxial"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-nashorn",
@@ -1451,7 +1515,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-jagdpanzer-iv",
@@ -1511,7 +1578,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-jagdpanther",
@@ -1571,7 +1641,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-wespe",
@@ -1624,7 +1697,10 @@
           "armorInclination": 0
         }
       },
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-hummel",
@@ -1684,7 +1760,11 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "open-topped",
+        "radio"
+      ]
     },
     {
       "id": "german-grille",
@@ -1744,7 +1824,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-marder-i",
@@ -1804,7 +1887,11 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "open-topped",
+        "radio"
+      ]
     },
     {
       "id": "german-marder-ii",
@@ -1864,7 +1951,11 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "open-topped",
+        "radio"
+      ]
     },
     {
       "id": "german-marder-iii",
@@ -1924,7 +2015,11 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "open-topped",
+        "radio"
+      ]
     },
     {
       "id": "german-sturmtiger",
@@ -1984,7 +2079,10 @@
           "type": "hull"
         }
       ],
-      "organizationThreshold": 10
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
     },
     {
       "id": "german-sd-kfz-251-1",
@@ -2039,7 +2137,12 @@
       },
       "organizationThreshold": 8,
       "casualtiesThreshold": 3,
-      "keywords": ["open-topped", "half-track", "transport-10"],
+      "keywords": [
+        "open-topped",
+        "half-track",
+        "transport-10",
+        "radio"
+      ],
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -2079,7 +2182,10 @@
       },
       "organizationThreshold": 3,
       "casualtiesThreshold": 1,
-      "keywords": ["air-support"],
+      "keywords": [
+        "air-support",
+        "radio"
+      ],
       "weapons": [
         {
           "id": "german-mg-17",
@@ -2701,7 +2807,9 @@
       "from": 1941,
       "to": 1945,
       "cost": 7,
-      "keywords": ["medic"],
+      "keywords": [
+        "medic"
+      ],
       "movement": {
         "tactical": {
           "road": 8,
@@ -2722,6 +2830,7 @@
       "resourceCosts": {
         "logistics": 5
       },
+      "combatants": 5,
       "organizationThreshold": 6,
       "casualtiesThreshold": 2
     },
@@ -2733,7 +2842,9 @@
       "from": 1941,
       "to": 1945,
       "cost": 9,
-      "keywords": ["sniper"],
+      "keywords": [
+        "sniper"
+      ],
       "movement": {
         "tactical": {
           "road": 8,
@@ -2751,6 +2862,7 @@
           "rough": 9
         }
       },
+      "combatants": 2,
       "resourceCosts": {
         "intelligence": 1
       },
@@ -2788,7 +2900,9 @@
       },
       "organizationThreshold": 3,
       "casualtiesThreshold": 1,
-      "keywords": ["air-support"],
+      "keywords": [
+        "air-support"
+      ],
       "weapons": [
         {
           "id": "su-vya-23",

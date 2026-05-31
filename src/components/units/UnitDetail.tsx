@@ -28,7 +28,7 @@ import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import type { Unit, UnitType, UnitWeapon } from '../../types/unit';
+import type { Unit, UnitType, UnitKeyword, UnitWeapon } from '../../types/unit';
 import type { Weapon } from '../../types/weapon';
 import { unitImageUrl } from '../../utils/images';
 
@@ -165,6 +165,14 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
                 />
               )}
             </Stack>
+
+            {unit.keywords && unit.keywords.length > 0 && (
+              <Stack direction="row" spacing={0.75} useFlexGap sx={{ mb: 1.5, flexWrap: 'wrap' }}>
+                {(unit.keywords as UnitKeyword[]).map((kw) => (
+                  <Chip key={kw} label={t(`units.keywords.${kw}`, { defaultValue: kw })} size="small" variant="outlined" color="info" />
+                ))}
+              </Stack>
+            )}
 
             <Table size="small" sx={{ mb: 1.5 }}>
               <TableHead>

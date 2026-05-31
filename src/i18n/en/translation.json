@@ -154,7 +154,7 @@
       "selectPrompt": "Select a card to view its profile.",
       "expandPanel": "Expand unit menu",
       "collapsePanel": "Collapse unit menu",
-      "openFull": "Open full view",
+      "openFull": "Detail",
       "backToCatalogue": "Back to catalogue",
       "notFound": "Unit not found",
       "armour": "Armour Profile",
@@ -193,6 +193,7 @@
     },
     "keywords": {
       "low-reliability": "Low Reliability",
+      "radio": "Radio",
       "air-support": "Air Support",
       "half-track": "Half-track",
       "medic": "Medic",

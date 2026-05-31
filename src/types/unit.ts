@@ -23,6 +23,17 @@ export type UnitType =
   | 'aircraft'
   | 'special';
 
+/** All valid rule keyword tags. */
+export type UnitKeyword =
+  | 'air-support'
+  | 'half-track'
+  | 'low-reliability'
+  | 'medic'
+  | 'open-topped'
+  | 'radio'
+  | 'sniper'
+  | `transport-${number}`;
+
 /** Armour details for one vehicle facing. */
 export interface Armor {
   /** Game-facing armour rating used by combat resolution. */
@@ -86,7 +97,7 @@ interface BaseUnitFields {
   /** Optional resource costs keyed by ResourcePool.key. */
   resourceCosts?: Record<string, number>;
   /** Optional rule keywords (e.g. 'low-reliability', 'veteran'). */
-  keywords?: string[];
+  keywords?: UnitKeyword[];
 }
 
 /** Infantry roster entries with combatants and assigned weapons. */

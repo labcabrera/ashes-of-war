@@ -167,7 +167,7 @@
       "selectPrompt": "Selecciona una carta para consultar su ficha.",
       "expandPanel": "Expandir menú de unidad",
       "collapsePanel": "Colapsar menú de unidad",
-      "openFull": "Abrir vista completa",
+      "openFull": "Detalle",
       "backToCatalogue": "Volver al catálogo",
       "notFound": "Unidad no encontrada",
       "armour": "Perfil de blindaje",
@@ -206,6 +206,7 @@
     },
     "keywords": {
       "low-reliability": "Baja fiabilidad",
+      "radio": "Radio",
       "air-support": "Apoyo aéreo",
       "half-track": "Semioruga",
       "medic": "Médico",
