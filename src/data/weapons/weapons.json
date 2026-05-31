@@ -1378,6 +1378,111 @@
           ]
         }
       ]
+    },
+    {
+      "id": "german-stuh-43",
+      "name": "15 cm StuH 43 L/12",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 4,
+          "max": 6
+        },
+        "combat": {
+          "min": 2,
+          "max": 4
+        }
+      },
+      "profiles": [
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "20/8/-2",
+          "armourPenetration": 6,
+          "suppressionModifier": -5,
+          "characteristics": [
+            "area-12",
+            "indirect"
+          ]
+        },
+        {
+          "id": "heat",
+          "name": "HEAT",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "25/10/-2",
+          "armourPenetration": 10
+        }
+      ]
+    },
+    {
+      "id": "german-kwk-38",
+      "name": "2 cm KwK 38 L/55",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 420,
+          "max": 480
+        },
+        "combat": {
+          "min": 80,
+          "max": 120
+        }
+      },
+      "profiles": [
+        {
+          "id": "ap",
+          "name": "AP",
+          "shots": 4,
+          "hitOn": 6,
+          "rangeModifier": "30/15/-1",
+          "armourPenetration": 3
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 4,
+          "hitOn": 7,
+          "rangeModifier": "30/15/-1",
+          "suppressionModifier": -1,
+          "characteristics": [
+            "area-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "german-nebelwerfer-41",
+      "name": "15 cm Nebelwerfer 41",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 1,
+          "max": 2
+        },
+        "combat": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "profiles": [
+        {
+          "id": "salvo",
+          "name": "Salvo",
+          "shots": 6,
+          "hitOn": 5,
+          "rangeModifier": "35/18/-2",
+          "armourPenetration": 3,
+          "suppressionModifier": -3,
+          "characteristics": [
+            "area-8",
+            "indirect",
+            "limited-ammunition-6"
+          ]
+        }
+      ]
     }
   ]
 }

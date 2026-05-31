@@ -4009,6 +4009,255 @@
       ],
       "organizationThreshold": 10,
       "casualtiesThreshold": 3
+    },
+    {
+      "id": "german-sturmpanzer-iv",
+      "name": "Sturmpanzer IV",
+      "type": "assault-gun",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 42,
+      "movement": {
+        "tactical": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 25,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 38,
+          "crossCountry": 28,
+          "rough": 14
+        }
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 10
+      },
+      "profile": {
+        "front": {
+          "value": 100,
+          "armorMM": 100,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 50,
+          "armorMM": 50,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 20,
+          "armorMM": 20,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 15,
+          "armorMM": 15,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-stuh-43",
+          "count": 1,
+          "type": "hull"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "hull"
+        }
+      ],
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ]
+    },
+    {
+      "id": "german-sd-kfz-250-8",
+      "name": "Sd.Kfz. 250/8 (Stummel)",
+      "type": "mechanised",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 24,
+      "movement": {
+        "tactical": {
+          "road": 14,
+          "crossCountry": 10,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 19,
+          "rough": 9
+        },
+        "dash": {
+          "road": 48,
+          "crossCountry": 23,
+          "rough": 11
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 15,
+          "armorMM": 14,
+          "armorInclination": 19
+        },
+        "side": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 3,
+          "armorMM": 3,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-kwk-37-l24",
+          "count": 1,
+          "type": "hull"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "hull"
+        }
+      ],
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "keywords": [
+        "open-topped",
+        "half-track",
+        "radio"
+      ]
+    },
+    {
+      "id": "german-sd-kfz-250-9",
+      "name": "Sd.Kfz. 250/9",
+      "type": "mechanised",
+      "faction": "german",
+      "from": 1943,
+      "to": 1945,
+      "cost": 22,
+      "movement": {
+        "tactical": {
+          "road": 14,
+          "crossCountry": 10,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 32,
+          "crossCountry": 19,
+          "rough": 9
+        },
+        "dash": {
+          "road": 48,
+          "crossCountry": 23,
+          "rough": 11
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 15,
+          "armorMM": 14,
+          "armorInclination": 19
+        },
+        "side": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 3,
+          "armorMM": 3,
+          "armorInclination": 0
+        }
+      },
+      "weapons": [
+        {
+          "id": "german-kwk-38",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "coaxial"
+        }
+      ],
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "keywords": [
+        "open-topped",
+        "half-track",
+        "radio"
+      ]
+    },
+    {
+      "id": "german-nebelwerfer-41",
+      "name": "15 cm Nebelwerfer 41",
+      "type": "artillery-towed",
+      "faction": "german",
+      "from": 1941,
+      "to": 1945,
+      "cost": 24,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "dash": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 12
+      },
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "weapons": [
+        {
+          "id": "german-nebelwerfer-41",
+          "count": 1,
+          "type": "normal"
+        }
+      ]
     }
   ]
 }
