@@ -212,7 +212,8 @@
       "medic": "Médico",
       "open-topped": "Descubierto",
       "sniper": "Francotirador",
-      "transport-10": "Transporte (10)"
+      "transport-10": "Transporte (10)",
+      "transport-12": "Transporte (12)"
     },
     "weaponMounts": {
       "normal": "Normal",

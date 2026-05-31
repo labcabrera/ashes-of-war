@@ -2152,6 +2152,72 @@
       ]
     },
     {
+      "id": "german-sd-kfz-251-1-ii",
+      "name": "Sd.Kfz. 251/1 II",
+      "type": "mechanised",
+      "faction": "german",
+      "from": 1941,
+      "to": 1944,
+      "cost": 20,
+      "movement": {
+        "tactical": {
+          "road": 16,
+          "crossCountry": 12,
+          "rough": 6
+        },
+        "cruise": {
+          "road": 35,
+          "crossCountry": 20,
+          "rough": 10
+        },
+        "dash": {
+          "road": 53,
+          "crossCountry": 25,
+          "rough": 12
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 15,
+          "armorMM": 14,
+          "armorInclination": 19
+        },
+        "side": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 8,
+          "armorMM": 8,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 3,
+          "armorMM": 3,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "keywords": [
+        "open-topped",
+        "half-track",
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "german-wurfrahmen-40",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
+    },
+    {
       "id": "german-ju-87",
       "name": "Junkers Ju 87 Stuka",
       "type": "aircraft",
@@ -2735,6 +2801,379 @@
       "organizationThreshold": 10
     },
     {
+      "id": "united-states-m4-sherman",
+      "name": "M4 Sherman",
+      "type": "tank",
+      "faction": "united-states",
+      "from": 1942,
+      "to": 1945,
+      "cost": 28,
+      "movement": {
+        "tactical": {
+          "road": 13,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 28,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 38,
+          "crossCountry": 24,
+          "rough": 12
+        }
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 51,
+          "armorMM": 51,
+          "armorInclination": 56
+        },
+        "side": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 25,
+          "armorMM": 25,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-75mm-m3",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
+    },
+    {
+      "id": "united-states-m4a1-sherman",
+      "name": "M4A1 Sherman",
+      "type": "tank",
+      "faction": "united-states",
+      "from": 1942,
+      "to": 1945,
+      "cost": 28,
+      "movement": {
+        "tactical": {
+          "road": 13,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 28,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 38,
+          "crossCountry": 24,
+          "rough": 12
+        }
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 51,
+          "armorMM": 51,
+          "armorInclination": 56
+        },
+        "side": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 25,
+          "armorMM": 25,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-75mm-m3",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
+    },
+    {
+      "id": "united-states-m4a2-sherman",
+      "name": "M4A2 Sherman",
+      "type": "tank",
+      "faction": "united-states",
+      "from": 1942,
+      "to": 1945,
+      "cost": 28,
+      "movement": {
+        "tactical": {
+          "road": 13,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 28,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 38,
+          "crossCountry": 24,
+          "rough": 12
+        }
+      },
+      "resourceCosts": {
+        "fuel": 4,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 51,
+          "armorMM": 51,
+          "armorInclination": 56
+        },
+        "side": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 25,
+          "armorMM": 25,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-75mm-m3",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
+    },
+    {
+      "id": "united-states-m4a3-sherman",
+      "name": "M4A3 Sherman",
+      "type": "tank",
+      "faction": "united-states",
+      "from": 1944,
+      "to": 1945,
+      "cost": 35,
+      "movement": {
+        "tactical": {
+          "road": 13,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 28,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 38,
+          "crossCountry": 24,
+          "rough": 12
+        }
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 64,
+          "armorMM": 64,
+          "armorInclination": 47
+        },
+        "side": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 25,
+          "armorMM": 25,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-76mm-m1",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
+    },
+    {
+      "id": "united-states-m4a4-sherman",
+      "name": "M4A4 Sherman",
+      "type": "tank",
+      "faction": "united-states",
+      "from": 1942,
+      "to": 1945,
+      "cost": 28,
+      "movement": {
+        "tactical": {
+          "road": 13,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "cruise": {
+          "road": 28,
+          "crossCountry": 18,
+          "rough": 9
+        },
+        "dash": {
+          "road": 38,
+          "crossCountry": 24,
+          "rough": 12
+        }
+      },
+      "resourceCosts": {
+        "fuel": 5,
+        "logistics": 5
+      },
+      "profile": {
+        "front": {
+          "value": 51,
+          "armorMM": 51,
+          "armorInclination": 56
+        },
+        "side": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 38,
+          "armorMM": 38,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 25,
+          "armorMM": 25,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "su-75mm-m3",
+          "count": 1,
+          "type": "turret"
+        }
+      ]
+    },
+    {
+      "id": "soviet-union-zis-5",
+      "name": "ZIS-5",
+      "type": "mechanised",
+      "faction": "soviet-union",
+      "from": 1939,
+      "to": 1945,
+      "cost": 6,
+      "movement": {
+        "tactical": {
+          "road": 22,
+          "crossCountry": 12,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 45,
+          "crossCountry": 18,
+          "rough": 7
+        },
+        "dash": {
+          "road": 60,
+          "crossCountry": 25,
+          "rough": 10
+        }
+      },
+      "resourceCosts": {
+        "fuel": 2,
+        "logistics": 2
+      },
+      "profile": {
+        "front": {
+          "value": 1,
+          "armorMM": 0,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 1,
+          "armorMM": 0,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 1,
+          "armorMM": 0,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 1,
+          "armorMM": 0,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 5,
+      "casualtiesThreshold": 1,
+      "keywords": [
+        "open-topped",
+        "transport-12"
+      ]
+    },
+    {
       "id": "soviet-union-122mm-howitzer-m1938",
       "name": "122 mm howitzer M1938 (M-30)",
       "type": "artillery-towed",
@@ -2764,7 +3203,14 @@
         "logistics": 10
       },
       "organizationThreshold": 10,
-      "casualtiesThreshold": 3
+      "casualtiesThreshold": 3,
+      "weapons": [
+        {
+          "id": "su-m-30",
+          "count": 1,
+          "type": "normal"
+        }
+      ]
     },
     {
       "id": "soviet-union-guards-rifle-squad",

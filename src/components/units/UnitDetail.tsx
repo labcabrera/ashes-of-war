@@ -82,7 +82,18 @@ export default function UnitDetail({ unit, weapons, onClose }: Props) {
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
   const assignedWeapons = unit?.weapons ?? [];
 
-  if (!unit) return null;
+  if (!unit) return (
+    <Paper
+      component="aside"
+      elevation={0}
+      sx={{
+        minHeight: { xs: 0, lg: 600 },
+        position: { lg: 'sticky' },
+        top: { lg: 16 },
+        bgcolor: 'transparent',
+      }}
+    />
+  );
 
   return (
     <Paper

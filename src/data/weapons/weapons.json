@@ -775,6 +775,58 @@
       ]
     },
     {
+      "id": "su-76mm-m1",
+      "name": "76 mm M1 A1/A2",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "armourPenetration": 10
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "50/10/-1",
+          "suppressionModifier": -2,
+          "characteristics": [
+            "area-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "su-75mm-m3",
+      "name": "75 mm M3 L/40",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "apcbc",
+          "name": "APCBC",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "45/10/-1",
+          "armourPenetration": 7
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "45/10/-1",
+          "suppressionModifier": -2,
+          "characteristics": [
+            "area-3"
+          ]
+        }
+      ]
+    },
+    {
       "id": "german-rw-61",
       "name": "38 cm Raketen-Werfer 61",
       "type": "artillery",
@@ -990,6 +1042,57 @@
           "characteristics": [
             "area-8",
             "limited-ammunition-8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "su-m-30",
+      "name": "122 mm M-30",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 5,
+          "max": 6
+        },
+        "combat": {
+          "min": 3,
+          "max": 4
+        }
+      },
+      "profiles": [
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "55/28/-2",
+          "armourPenetration": 5,
+          "suppressionModifier": -5,
+          "characteristics": [
+            "area-12",
+            "indirect"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "german-wurfrahmen-40",
+      "name": "Wurfrahmen 40",
+      "type": "artillery",
+      "profiles": [
+        {
+          "id": "rocket",
+          "name": "Rocket",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "20/10/-3",
+          "armourPenetration": 5,
+          "suppressionModifier": -6,
+          "characteristics": [
+            "area-16",
+            "indirect",
+            "limited-ammunition-6"
           ]
         }
       ]

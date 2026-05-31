@@ -199,7 +199,8 @@
       "medic": "Medic",
       "open-topped": "Open-topped",
       "sniper": "Sniper",
-      "transport-10": "Transport (10)"
+      "transport-10": "Transport (10)",
+      "transport-12": "Transport (12)"
     },
     "weaponMounts": {
       "normal": "Normal",
