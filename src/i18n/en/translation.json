@@ -214,15 +214,11 @@
       "tank-destroyer": "Tank Destroyer",
       "assault-gun": "Assault Gun",
       "self-propelled-artillery": "Self-Propelled Artillery",
-      "motorised": "Motorised",
       "mechanised": "Mechanised",
-      "reconnaissance": "Reconnaissance",
       "engineer": "Engineer",
       "artillery-towed": "Towed Artillery",
-      "sniper": "Sniper",
-      "medic": "Medic",
-      "aircraft": "Aircraft",
-      "special": "Special"
+      "anti-tank-towed": "Towed Anti-Tank",
+      "aircraft": "Aircraft"
     }
   },
   "weapons": {

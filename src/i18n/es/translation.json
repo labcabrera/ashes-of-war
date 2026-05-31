@@ -227,15 +227,11 @@
       "tank-destroyer": "Cazacarros",
       "assault-gun": "Cañón de asalto",
       "self-propelled-artillery": "Artillería autopropulsada",
-      "motorised": "Motorizado",
       "mechanised": "Mecanizado",
-      "reconnaissance": "Reconocimiento",
       "engineer": "Ingenieros",
       "artillery-towed": "Artillería remolcada",
-      "sniper": "Francotirador",
-      "medic": "Médico",
-      "aircraft": "Aviación",
-      "special": "Especial"
+      "anti-tank-towed": "Antitanque remolcado",
+      "aircraft": "Aviación"
     }
   },
   "weapons": {

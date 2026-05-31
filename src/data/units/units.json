@@ -889,7 +889,7 @@
     {
       "id": "german-7.5-cm-pak-40",
       "name": "7.5 cm PaK 40",
-      "type": "artillery-towed",
+      "type": "anti-tank-towed",
       "faction": "german",
       "from": 1942,
       "to": 1945,
@@ -928,7 +928,7 @@
     {
       "id": "german-8.8-cm-pak-43",
       "name": "8.8 cm PaK 43",
-      "type": "artillery-towed",
+      "type": "anti-tank-towed",
       "faction": "german",
       "from": 1943,
       "to": 1945,
@@ -967,7 +967,7 @@
     {
       "id": "german-sd-kfz-222",
       "name": "Sd.Kfz. 222 Armoured Car",
-      "type": "reconnaissance",
+      "type": "mechanised",
       "faction": "german",
       "from": 1939,
       "to": 1944,
@@ -3814,6 +3814,201 @@
           "type": "hull"
         }
       ]
+    },
+    {
+      "id": "soviet-union-100mm-bs-3",
+      "name": "100 mm BS-3",
+      "type": "anti-tank-towed",
+      "faction": "soviet-union",
+      "from": 1944,
+      "to": 1945,
+      "cost": 36,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 8,
+          "crossCountry": 6,
+          "rough": 3
+        },
+        "dash": {
+          "road": 12,
+          "crossCountry": 9,
+          "rough": 5
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 10
+      },
+      "weapons": [
+        {
+          "id": "su-bs-3",
+          "count": 1,
+          "type": "normal"
+        }
+      ],
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3
+    },
+    {
+      "id": "soviet-union-76mm-zis-3",
+      "name": "76 mm ZiS-3",
+      "type": "anti-tank-towed",
+      "faction": "soviet-union",
+      "from": 1942,
+      "to": 1945,
+      "cost": 18,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "dash": {
+          "road": 15,
+          "crossCountry": 12,
+          "rough": 6
+        }
+      },
+      "resourceCosts": {
+        "fuel": 2,
+        "logistics": 6
+      },
+      "weapons": [
+        {
+          "id": "su-zis-3",
+          "count": 1,
+          "type": "normal"
+        }
+      ],
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3
+    },
+    {
+      "id": "soviet-union-57mm-zis-2",
+      "name": "57 mm ZiS-2",
+      "type": "anti-tank-towed",
+      "faction": "soviet-union",
+      "from": 1943,
+      "to": 1945,
+      "cost": 22,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "dash": {
+          "road": 15,
+          "crossCountry": 12,
+          "rough": 6
+        }
+      },
+      "resourceCosts": {
+        "fuel": 2,
+        "logistics": 6
+      },
+      "weapons": [
+        {
+          "id": "su-zis-2",
+          "count": 1,
+          "type": "normal"
+        }
+      ],
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3
+    },
+    {
+      "id": "soviet-union-45mm-m1937",
+      "name": "45 mm M1937 (53-K)",
+      "type": "anti-tank-towed",
+      "faction": "soviet-union",
+      "from": 1941,
+      "to": 1943,
+      "cost": 12,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 12,
+          "crossCountry": 10,
+          "rough": 5
+        },
+        "dash": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        }
+      },
+      "resourceCosts": {
+        "fuel": 1,
+        "logistics": 4
+      },
+      "weapons": [
+        {
+          "id": "su-45mm-m1937",
+          "count": 1,
+          "type": "normal"
+        }
+      ],
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3
+    },
+    {
+      "id": "soviet-union-45mm-m1942",
+      "name": "45 mm M1942 (M-42)",
+      "type": "anti-tank-towed",
+      "faction": "soviet-union",
+      "from": 1942,
+      "to": 1945,
+      "cost": 15,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 12,
+          "crossCountry": 10,
+          "rough": 5
+        },
+        "dash": {
+          "road": 18,
+          "crossCountry": 14,
+          "rough": 7
+        }
+      },
+      "resourceCosts": {
+        "fuel": 1,
+        "logistics": 5
+      },
+      "weapons": [
+        {
+          "id": "su-45mm-m1942",
+          "count": 1,
+          "type": "normal"
+        }
+      ],
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3
     }
   ]
 }

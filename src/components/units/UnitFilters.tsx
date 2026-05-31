@@ -5,15 +5,9 @@ import { Autocomplete, Box, Checkbox, TextField } from '@mui/material';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import { useTranslation } from 'react-i18next';
-import { UnitType, UnitKeyword } from '../../types/unit';
+import { UnitType, UnitKeyword, UNIT_TYPES } from '../../types/unit';
 import type { FactionId } from '../../types/faction';
 import FactionSelect from '../factions/FactionSelect';
-
-const UNIT_TYPES: UnitType[] = [
-  'infantry', 'tank', 'tank-destroyer', 'assault-gun', 'self-propelled-artillery', 'motorised', 'mechanised',
-  'reconnaissance', 'engineer', 'artillery-towed', 'sniper', 'medic',
-  'aircraft', 'special',
-];
 
 interface Props {
   name: string;

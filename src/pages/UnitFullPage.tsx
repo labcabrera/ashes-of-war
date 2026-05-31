@@ -23,7 +23,6 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import FlightIcon from '@mui/icons-material/Flight';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link as RouterLink, useParams } from 'react-router-dom';
@@ -41,15 +40,11 @@ const UNIT_ICONS = {
   'tank-destroyer': DirectionsCarIcon,
   'assault-gun': DirectionsCarIcon,
   'self-propelled-artillery': GpsFixedIcon,
-  motorised: DirectionsCarIcon,
   mechanised: DirectionsCarIcon,
-  reconnaissance: GpsFixedIcon,
   engineer: EngineeringIcon,
   'artillery-towed': GpsFixedIcon,
-  sniper: GpsFixedIcon,
-  medic: LocalHospitalIcon,
+  'anti-tank-towed': GpsFixedIcon,
   aircraft: FlightIcon,
-  special: MilitaryTechIcon,
 } satisfies Record<UnitType, typeof MilitaryTechIcon>;
 
 const units = unitsData.units as unknown as Unit[];

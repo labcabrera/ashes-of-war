@@ -13,15 +13,25 @@ export type UnitType =
   | 'tank-destroyer'
   | 'assault-gun'
   | 'self-propelled-artillery'
-  | 'motorised'
   | 'mechanised'
-  | 'reconnaissance'
   | 'engineer'
   | 'artillery-towed'
-  | 'sniper'
-  | 'medic'
-  | 'aircraft'
-  | 'special';
+  | 'anti-tank-towed'
+  | 'aircraft';
+
+/** Ordered list of all UnitType values for use in filters and UI. */
+export const UNIT_TYPES: UnitType[] = [
+  'infantry',
+  'tank',
+  'tank-destroyer',
+  'assault-gun',
+  'self-propelled-artillery',
+  'mechanised',
+  'engineer',
+  'artillery-towed',
+  'anti-tank-towed',
+  'aircraft',
+];
 
 /** All valid rule keyword tags. */
 export type UnitKeyword =

@@ -71,7 +71,7 @@ export default function UnitCard({ unit, isOutOfYear, selected, onClick }: Props
                 src={flagUrl}
                 alt={factionLabel}
                 title={factionLabel}
-                sx={{ height: 14, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
+                sx={{ height: 20, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
               />
             )}
             <Chip label={t(`units.types.${unit.type}`)} size="small" variant="outlined" />

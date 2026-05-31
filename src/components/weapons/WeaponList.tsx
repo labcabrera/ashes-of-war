@@ -145,7 +145,7 @@ export default function WeaponList({ weapons, selectedId, viewMode, onSelect }: 
                       src={flagUrl}
                       alt={factionLabel}
                       title={factionLabel}
-                      sx={{ height: 14, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
+                      sx={{ height: 20, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
                     />
                   )}
                   <Chip label={t(`weapons.types.${weapon.type}`)} size="small" color="secondary" />
