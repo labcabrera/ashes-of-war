@@ -4258,6 +4258,84 @@
           "type": "normal"
         }
       ]
+    },
+    {
+      "id": "german-15cm-sfh-18",
+      "name": "15 cm sFH 18",
+      "type": "artillery-towed",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 28,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 6,
+          "crossCountry": 4,
+          "rough": 2
+        },
+        "dash": {
+          "road": 9,
+          "crossCountry": 6,
+          "rough": 4
+        }
+      },
+      "resourceCosts": {
+        "fuel": 4,
+        "logistics": 14
+      },
+      "organizationThreshold": 10,
+      "casualtiesThreshold": 3,
+      "weapons": [
+        {
+          "id": "german-sfh-18",
+          "count": 1,
+          "type": "normal"
+        }
+      ]
+    },
+    {
+      "id": "german-7.5cm-leig-18",
+      "name": "7.5 cm leIG 18",
+      "type": "artillery-towed",
+      "faction": "german",
+      "from": 1939,
+      "to": 1945,
+      "cost": 14,
+      "movement": {
+        "tactical": {
+          "road": 0,
+          "crossCountry": 0,
+          "rough": 0
+        },
+        "cruise": {
+          "road": 10,
+          "crossCountry": 8,
+          "rough": 4
+        },
+        "dash": {
+          "road": 15,
+          "crossCountry": 12,
+          "rough": 6
+        }
+      },
+      "resourceCosts": {
+        "fuel": 2,
+        "logistics": 6
+      },
+      "organizationThreshold": 8,
+      "casualtiesThreshold": 3,
+      "weapons": [
+        {
+          "id": "german-leig-18",
+          "count": 1,
+          "type": "normal"
+        }
+      ]
     }
   ]
 }

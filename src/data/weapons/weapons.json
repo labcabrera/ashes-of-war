@@ -1483,6 +1483,36 @@
           ]
         }
       ]
+    },
+    {
+      "id": "german-leig-18",
+      "name": "7.5 cm leIG 18",
+      "type": "artillery",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 8,
+          "max": 12
+        },
+        "combat": {
+          "min": 4,
+          "max": 6
+        }
+      },
+      "profiles": [
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 1,
+          "hitOn": 4,
+          "rangeModifier": "20/10/-2",
+          "armourPenetration": 3,
+          "suppressionModifier": -3,
+          "characteristics": [
+            "area-8",
+            "indirect"
+          ]
+        }
+      ]
     }
   ]
 }
