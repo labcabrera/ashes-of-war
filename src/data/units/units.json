@@ -1458,6 +1458,138 @@
       ]
     },
     {
+      "id": "german-ferdinand",
+      "name": "Ferdinand",
+      "type": "tank-destroyer",
+      "faction": "german",
+      "from": 1943,
+      "to": 1943,
+      "cost": 58,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 5,
+          "rough": 2
+        },
+        "cruise": {
+          "road": 20,
+          "crossCountry": 10,
+          "rough": 4
+        },
+        "dash": {
+          "road": 30,
+          "crossCountry": 15,
+          "rough": 6
+        }
+      },
+      "resourceCosts": {
+        "fuel": 16,
+        "logistics": 15
+      },
+      "profile": {
+        "front": {
+          "value": 200,
+          "armorMM": 200,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio",
+        "low-reliability"
+      ],
+      "weapons": [
+        {
+          "id": "german-kwk-43-l71",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
+    },
+    {
+      "id": "german-elefant",
+      "name": "Elefant",
+      "type": "tank-destroyer",
+      "faction": "german",
+      "from": 1944,
+      "to": 1944,
+      "cost": 58,
+      "movement": {
+        "tactical": {
+          "road": 8,
+          "crossCountry": 5,
+          "rough": 2
+        },
+        "cruise": {
+          "road": 20,
+          "crossCountry": 10,
+          "rough": 4
+        },
+        "dash": {
+          "road": 30,
+          "crossCountry": 15,
+          "rough": 6
+        }
+      },
+      "resourceCosts": {
+        "fuel": 16,
+        "logistics": 15
+      },
+      "profile": {
+        "front": {
+          "value": 200,
+          "armorMM": 200,
+          "armorInclination": 0
+        },
+        "side": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 80,
+          "armorMM": 80,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 30,
+          "armorMM": 30,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 10,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "german-kwk-43-l71",
+          "count": 1,
+          "type": "hull"
+        },
+        {
+          "id": "german-mg-34-42",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
+    },
+    {
       "id": "german-nashorn",
       "name": "Nashorn (Hornisse)",
       "type": "tank-destroyer",
@@ -2799,6 +2931,74 @@
         }
       ],
       "organizationThreshold": 10
+    },
+    {
+      "id": "united-states-m3-stuart",
+      "name": "M3 Stuart",
+      "type": "tank",
+      "faction": "united-states",
+      "from": 1941,
+      "to": 1945,
+      "cost": 16,
+      "movement": {
+        "tactical": {
+          "road": 20,
+          "crossCountry": 13,
+          "rough": 5
+        },
+        "cruise": {
+          "road": 43,
+          "crossCountry": 22,
+          "rough": 10
+        },
+        "dash": {
+          "road": 58,
+          "crossCountry": 30,
+          "rough": 14
+        }
+      },
+      "resourceCosts": {
+        "fuel": 3,
+        "logistics": 3
+      },
+      "profile": {
+        "front": {
+          "value": 51,
+          "armorMM": 51,
+          "armorInclination": 16
+        },
+        "side": {
+          "value": 28,
+          "armorMM": 28,
+          "armorInclination": 0
+        },
+        "rear": {
+          "value": 28,
+          "armorMM": 28,
+          "armorInclination": 0
+        },
+        "exposed": {
+          "value": 13,
+          "armorMM": 13,
+          "armorInclination": 0
+        }
+      },
+      "organizationThreshold": 8,
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "us-37mm-m6",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "us-browning-m1919",
+          "count": 1,
+          "type": "hull"
+        }
+      ]
     },
     {
       "id": "united-states-m4-sherman",

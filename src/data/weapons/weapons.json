@@ -827,6 +827,54 @@
       ]
     },
     {
+      "id": "us-37mm-m6",
+      "name": "37 mm M6 L/53.5",
+      "type": "hard",
+      "profiles": [
+        {
+          "id": "ap",
+          "name": "AP",
+          "shots": 2,
+          "hitOn": 6,
+          "rangeModifier": "40/10/-1",
+          "armourPenetration": 5
+        },
+        {
+          "id": "he",
+          "name": "HE",
+          "shots": 2,
+          "hitOn": 6,
+          "rangeModifier": "40/10/-1",
+          "suppressionModifier": -1,
+          "characteristics": [
+            "area-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "us-browning-m1919",
+      "name": "Browning M1919A4",
+      "type": "soft",
+      "profiles": [
+        {
+          "id": "support",
+          "name": "Support",
+          "shots": 5,
+          "hitOn": 7,
+          "rangeModifier": "25/15/-1",
+          "suppressionModifier": -1
+        },
+        {
+          "id": "precision",
+          "name": "Precision",
+          "shots": 3,
+          "hitOn": 6,
+          "rangeModifier": "35/15/-1"
+        }
+      ]
+    },
+    {
       "id": "german-rw-61",
       "name": "38 cm Raketen-Werfer 61",
       "type": "artillery",
