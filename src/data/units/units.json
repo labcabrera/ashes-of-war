@@ -987,7 +987,7 @@
     {
       "id": "german-pionier-squad",
       "name": "Pionier Squad",
-      "type": "engineer",
+      "type": "infantry",
       "faction": "german",
       "from": 1939,
       "to": 1945,
@@ -1018,7 +1018,7 @@
     {
       "id": "german-fallschirmjager",
       "name": "Fallschirmjäger Squad",
-      "type": "special",
+      "type": "infantry",
       "faction": "german",
       "from": 1940,
       "to": 1944,
@@ -2646,6 +2646,51 @@
       },
       "organizationThreshold": 5,
       "casualtiesThreshold": 1
+    },
+    {
+      "id": "soviet-union-il-2",
+      "name": "Ilyushin Il-2 Shturmovik",
+      "type": "aircraft",
+      "faction": "soviet-union",
+      "from": 1941,
+      "to": 1945,
+      "cost": 28,
+      "movement": {
+        "tactical": {
+          "road": 200,
+          "crossCountry": 200,
+          "rough": 200
+        },
+        "cruise": {
+          "road": 320,
+          "crossCountry": 320,
+          "rough": 320
+        },
+        "dash": {
+          "road": 414,
+          "crossCountry": 414,
+          "rough": 414
+        }
+      },
+      "resourceCosts": {
+        "fuel": 8,
+        "logistics": 5
+      },
+      "organizationThreshold": 3,
+      "casualtiesThreshold": 1,
+      "keywords": ["air-support"],
+      "weapons": [
+        {
+          "id": "su-vya-23",
+          "count": 2,
+          "type": "hull"
+        },
+        {
+          "id": "su-rs-82",
+          "count": 8,
+          "type": "hull"
+        }
+      ]
     }
   ]
 }

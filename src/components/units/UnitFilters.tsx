@@ -1,15 +1,13 @@
 /**
- * UnitFilters — name, faction (chips), type (chips), and year controls for filtering units.
+ * UnitFilters — name, faction, type, and year controls for filtering units.
  */
-import { Avatar, Box, Chip, TextField, Typography } from '@mui/material';
+import { Autocomplete, Box, Checkbox, TextField } from '@mui/material';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import { useTranslation } from 'react-i18next';
 import { UnitType } from '../../types/unit';
-import { factionFlagUrl } from '../../utils/images';
-
-const FACTION_FLAGS: Record<string, string> = {
-  german: factionFlagUrl('german'),
-  'soviet-union': factionFlagUrl('soviet-union'),
-};
+import type { FactionId } from '../../types/faction';
+import FactionSelect from '../factions/FactionSelect';
 
 const UNIT_TYPES: UnitType[] = [
   'infantry', 'tank', 'tank-destroyer', 'assault-gun', 'self-propelled-artillery', 'motorised', 'mechanised',
@@ -19,25 +17,25 @@ const UNIT_TYPES: UnitType[] = [
 
 interface Props {
   name: string;
-  selectedFactions: string[];
-  factions: string[];
+  selectedFaction: FactionId | '';
+  factions: FactionId[];
   selectedTypes: UnitType[];
   year: number | '';
   onNameChange: (v: string) => void;
-  onFactionToggle: (v: string) => void;
-  onTypeToggle: (v: UnitType) => void;
+  onFactionChange: (v: FactionId | '') => void;
+  onTypesChange: (v: UnitType[]) => void;
   onYearChange: (v: number | '') => void;
 }
 
 export default function UnitFilters({
   name,
-  selectedFactions,
+  selectedFaction,
   factions,
   selectedTypes,
   year,
   onNameChange,
-  onFactionToggle,
-  onTypeToggle,
+  onFactionChange,
+  onTypesChange,
   onYearChange,
 }: Props) {
   const { t } = useTranslation();
@@ -65,50 +63,53 @@ export default function UnitFilters({
           slotProps={{ htmlInput: { min: 1939, max: 1945 } }}
           sx={{ width: 100 }}
         />
-      </Box>
 
-      {factions.length > 0 && (
-        <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', alignItems: 'center' }}>
-          <Typography variant="caption" color="text.secondary" sx={{ minWidth: 60 }}>
-            {t('units.filters.faction')}:
-          </Typography>
-          {factions.map((f) => {
-            const selected = selectedFactions.includes(f);
-            const label = t(`factions.${f}`, f);
+        <FactionSelect
+          value={selectedFaction}
+          label={t('units.filters.faction')}
+          allLabel={t('common.all')}
+          allowedFactionIds={factions}
+          minWidth={180}
+          onChange={onFactionChange}
+        />
+
+        <Autocomplete
+          multiple
+          disableCloseOnSelect
+          size="small"
+          limitTags={2}
+          options={UNIT_TYPES}
+          value={selectedTypes}
+          getOptionLabel={(option) => t(`units.types.${option}`)}
+          onChange={(_event, value) => onTypesChange(value)}
+          sx={{
+            minWidth: { xs: 260, sm: 360 },
+            flex: { xs: '1 1 100%', md: '1 1 360px' },
+            '& .MuiInputBase-root': {
+              flexWrap: 'nowrap',
+              height: '40px',
+              overflow: 'hidden',
+            },
+          }}
+          renderOption={(props, option, { selected }) => {
+            const { key, ...optionProps } = props;
+
             return (
-              <Chip
-                key={f}
-                label={label}
-                onClick={() => onFactionToggle(f)}
-                color={selected ? 'primary' : 'default'}
-                variant={selected ? 'filled' : 'outlined'}
-                avatar={
-                  FACTION_FLAGS[f]
-                    ? <Avatar src={FACTION_FLAGS[f]} alt={label} />
-                    : undefined
-                }
-              />
+              <Box component="li" key={key} {...optionProps}>
+                <Checkbox
+                  icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+                  checkedIcon={<CheckBoxIcon fontSize="small" />}
+                  checked={selected}
+                  sx={{ mr: 1 }}
+                />
+                {t(`units.types.${option}`)}
+              </Box>
             );
-          })}
-        </Box>
-      )}
-
-      <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', alignItems: 'center' }}>
-        <Typography variant="caption" color="text.secondary" sx={{ minWidth: 60 }}>
-          {t('units.filters.type')}:
-        </Typography>
-        {UNIT_TYPES.map((ut) => {
-          const selected = selectedTypes.includes(ut);
-          return (
-            <Chip
-              key={ut}
-              label={t(`units.types.${ut}`)}
-              onClick={() => onTypeToggle(ut)}
-              color={selected ? 'primary' : 'default'}
-              variant={selected ? 'filled' : 'outlined'}
-            />
-          );
-        })}
+          }}
+          renderInput={(params) => (
+            <TextField {...params} size="small" label={t('units.filters.type')} />
+          )}
+        />
       </Box>
     </Box>
   );

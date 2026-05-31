@@ -5,10 +5,11 @@
 import { useMemo, useState } from 'react';
 import { Unit, UnitType } from '../types/unit';
 import unitsData from '../data/units/units.json';
+import type { FactionId } from '../types/faction';
 
 interface UnitFilters {
   name: string;
-  factions: string[];
+  factions: FactionId[];
   types: UnitType[];
   year: number | '';
 }
@@ -17,8 +18,8 @@ interface UseUnitDataResult {
   units: Unit[];
   filters: UnitFilters;
   setName: (name: string) => void;
-  toggleFaction: (faction: string) => void;
-  toggleType: (type: UnitType) => void;
+  setFaction: (faction: FactionId | '') => void;
+  setTypes: (types: UnitType[]) => void;
   setYear: (year: number | '') => void;
   isOutOfYear: (unit: Unit) => boolean;
 }
@@ -37,20 +38,10 @@ export function useUnitData(): UseUnitDataResult {
 
   const setName = (name: string) =>
     setFilters((prev) => ({ ...prev, name }));
-  const toggleFaction = (faction: string) =>
-    setFilters((prev) => ({
-      ...prev,
-      factions: prev.factions.includes(faction)
-        ? prev.factions.filter((f) => f !== faction)
-        : [...prev.factions, faction],
-    }));
-  const toggleType = (type: UnitType) =>
-    setFilters((prev) => ({
-      ...prev,
-      types: prev.types.includes(type)
-        ? prev.types.filter((t) => t !== type)
-        : [...prev.types, type],
-    }));
+  const setFaction = (faction: FactionId | '') =>
+    setFilters((prev) => ({ ...prev, factions: faction ? [faction] : [] }));
+  const setTypes = (types: UnitType[]) =>
+    setFilters((prev) => ({ ...prev, types }));
   const setYear = (year: number | '') =>
     setFilters((prev) => ({ ...prev, year }));
 
@@ -70,5 +61,5 @@ export function useUnitData(): UseUnitDataResult {
     });
   }, [filters.name, filters.factions, filters.types]);
 
-  return { units, filters, setName, toggleFaction, toggleType, setYear, isOutOfYear };
+  return { units, filters, setName, setFaction, setTypes, setYear, isOutOfYear };
 }

@@ -39,7 +39,7 @@ export default function UnitsPage() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const [searchParams, setSearchParams] = useSearchParams();
-  const { units, filters, setName, toggleFaction, toggleType, setYear, isOutOfYear } = useUnitData();
+  const { units, filters, setName, setFaction, setTypes, setYear, isOutOfYear } = useUnitData();
   const activeTab: CatalogueTab = searchParams.get('tab') === 'weapons' ? 'weapons' : 'units';
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
@@ -140,13 +140,13 @@ export default function UnitsPage() {
         <>
           <UnitFilters
             name={filters.name}
-            selectedFactions={filters.factions}
+            selectedFaction={filters.factions[0] ?? ''}
             factions={factions}
             selectedTypes={filters.types}
             year={filters.year}
             onNameChange={setName}
-            onFactionToggle={toggleFaction}
-            onTypeToggle={toggleType}
+            onFactionChange={setFaction}
+            onTypesChange={setTypes}
             onYearChange={setYear}
           />
 

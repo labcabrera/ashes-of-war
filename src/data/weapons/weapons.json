@@ -864,6 +864,59 @@
           ]
         }
       ]
+    },
+    {
+      "id": "su-vya-23",
+      "name": "23 mm VYa-23",
+      "type": "hard",
+      "rateOfFirePerMinute": {
+        "theoretical": {
+          "min": 550,
+          "max": 600
+        },
+        "combat": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "profiles": [
+        {
+          "id": "ap",
+          "name": "AP",
+          "shots": 3,
+          "hitOn": 6,
+          "rangeModifier": "20/10/-2",
+          "armourPenetration": 3
+        },
+        {
+          "id": "strafing",
+          "name": "Strafing",
+          "shots": 6,
+          "hitOn": 7,
+          "rangeModifier": "20/10/-2",
+          "suppressionModifier": -2
+        }
+      ]
+    },
+    {
+      "id": "su-rs-82",
+      "name": "RS-82",
+      "type": "artillery",
+      "profiles": [
+        {
+          "id": "rocket",
+          "name": "Rocket",
+          "shots": 1,
+          "hitOn": 5,
+          "rangeModifier": "15/5/-2",
+          "armourPenetration": 5,
+          "suppressionModifier": -4,
+          "characteristics": [
+            "area-8",
+            "limited-ammunition-8"
+          ]
+        }
+      ]
     }
   ]
 }
