@@ -5,6 +5,9 @@
 
 import type { FactionId } from './faction';
 import type { WeaponFeatureModifier } from './weapon';
+import type { UnitKeyword } from './keyword';
+
+export type { UnitKeyword } from './keyword';
 
 /** All valid unit type discriminants. */
 export type UnitType =
@@ -34,18 +37,6 @@ export const UNIT_TYPES: UnitType[] = [
   'towed-anti-aircraft',
   'aircraft',
 ];
-
-/** All valid rule keyword tags. */
-export type UnitKeyword =
-  | 'air-support'
-  | 'half-track'
-  | 'low-reliability'
-  | 'medic'
-  | 'open-topped'
-  | 'radio'
-  | 'reconnaissance'
-  | 'sniper'
-  | `transport-${number}`;
 
 /** Armour details for one vehicle facing. */
 export interface Armor {

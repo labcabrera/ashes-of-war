@@ -53,9 +53,13 @@ export default function UnitsPage() {
 
   const unitPageCount = Math.ceil(units.length / UNITS_PER_PAGE);
   const paginatedUnits = useMemo(() => {
+    const sorted =
+      viewMode === 'cards'
+        ? [...units].sort((a, b) => a.name.localeCompare(b.name))
+        : units;
     const start = (unitPage - 1) * UNITS_PER_PAGE;
-    return units.slice(start, start + UNITS_PER_PAGE);
-  }, [units, unitPage]);
+    return sorted.slice(start, start + UNITS_PER_PAGE);
+  }, [units, unitPage, viewMode]);
 
   function getWeaponFaction(id: string): FactionId | '' {
     return weaponFactionId(id) ?? '';
