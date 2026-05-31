@@ -2,6 +2,7 @@
  * Army domain types for Ashes of War.
  * Covers resource pools, army types, individual armies, and budget tracking.
  */
+import type { FactionId } from './faction';
 
 /** A named resource pool that limits how many of a particular resource type can be spent. */
 export interface ResourcePool {
@@ -19,7 +20,7 @@ export interface ArmyType {
   pointBudget: number;
   resourcePools: ResourcePool[];
   /** Optional faction filter applied when building this army. */
-  faction?: string;
+  faction?: FactionId;
   /** Year range this army type covers. */
   yearRange?: { start: number; end: number };
 }

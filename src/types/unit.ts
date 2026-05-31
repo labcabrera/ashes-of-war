@@ -3,6 +3,7 @@
  * Defines unit categories, armour values, movement, weapons, and roster entries.
  */
 
+import type { FactionId } from './faction';
 import type { WeaponFeatureModifier } from './weapon';
 
 /** All valid unit type discriminants. */
@@ -71,7 +72,7 @@ export interface UnitWeapon {
 interface BaseUnitFields {
   id: string;
   name: string;
-  faction: string;
+  faction: FactionId;
   /** First year the unit was available (inclusive). */
   from: number;
   /** Last year the unit was available (inclusive). */

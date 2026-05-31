@@ -65,6 +65,18 @@
     "cost": "Points",
     "all": "All"
   },
+  "factions": {
+    "german": "German",
+    "soviet": "Soviet",
+    "united-states": "United States",
+    "united-kingdom": "United Kingdom",
+    "france": "France",
+    "italy": "Italy",
+    "japan": "Japan",
+    "finland": "Finland",
+    "romania": "Romania",
+    "china": "China"
+  },
   "footer": {
     "project": {
       "title": "Ashes of War",
@@ -239,9 +251,7 @@
     "faction": {
       "label": "Faction",
       "german": "German (Wehrmacht)",
-      "soviet": "Soviet (Red Army)",
-      "british": "British",
-      "american": "American"
+      "soviet": "Soviet (Red Army)"
     },
     "year": {
       "label": "Year"

@@ -21,6 +21,7 @@ const FACTION_FLAGS: Record<string, string> = {
 export default function UnitCard({ unit, isOutOfYear, selected, onClick }: Props) {
   const { t } = useTranslation();
   const flagUrl = FACTION_FLAGS[unit.faction];
+  const factionLabel = t(`factions.${unit.faction}`, unit.faction);
   const topImageUrl = unit.imageUrl ?? flagUrl;
   const isFlag = !unit.imageUrl && !!flagUrl;
 
@@ -66,8 +67,8 @@ export default function UnitCard({ unit, isOutOfYear, selected, onClick }: Props
               <Box
                 component="img"
                 src={flagUrl}
-                alt={unit.faction}
-                title={unit.faction}
+                alt={factionLabel}
+                title={factionLabel}
                 sx={{ height: 14, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
               />
             )}

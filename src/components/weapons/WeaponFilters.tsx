@@ -39,21 +39,24 @@ export default function WeaponFilters({ name, faction, factions, onNameChange, o
           onChange={(e) => onFactionChange(e.target.value)}
         >
           <MenuItem value="">{t('common.all')}</MenuItem>
-          {factions.map((f) => (
-            <MenuItem key={f} value={f}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                {FACTION_FLAGS[f] && (
-                  <Box
-                    component="img"
-                    src={FACTION_FLAGS[f]}
-                    alt={f}
-                    sx={{ height: 16, width: 'auto', borderRadius: 0.5 }}
-                  />
-                )}
-                {f}
-              </Box>
-            </MenuItem>
-          ))}
+          {factions.map((f) => {
+            const label = t(`factions.${f}`, f);
+            return (
+              <MenuItem key={f} value={f}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  {FACTION_FLAGS[f] && (
+                    <Box
+                      component="img"
+                      src={FACTION_FLAGS[f]}
+                      alt={label}
+                      sx={{ height: 16, width: 'auto', borderRadius: 0.5 }}
+                    />
+                  )}
+                  {label}
+                </Box>
+              </MenuItem>
+            );
+          })}
         </Select>
       </FormControl>
     </Box>

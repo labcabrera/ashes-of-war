@@ -5,6 +5,8 @@
 import { FormControl, InputLabel, MenuItem, Select, Stack } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { ArmyType } from '../../types/army';
+import { Faction } from '../../types/faction';
+import factionsData from '../../data/factions/factions.json';
 
 interface Props {
   armyTypes: ArmyType[];
@@ -18,7 +20,10 @@ export default function ArmyTypeSelector({ armyTypes, selectedId, onChange }: Pr
   const selectedType = armyTypes.find((at) => at.id === selectedId);
   const faction = selectedType?.faction ?? armyTypes[0]?.faction ?? '';
 
-  const factions = [...new Set(armyTypes.map((at) => at.faction).filter((f): f is string => !!f))];
+  const factions = factionsData.factions as Faction[];
+  const availableFactions = new Set(
+    armyTypes.map((at) => at.faction).filter((f): f is NonNullable<ArmyType['faction']> => !!f),
+  );
   const factionTypes = armyTypes.filter((at) => at.faction === faction);
 
   const handleFactionChange = (newFaction: string) => {
@@ -36,8 +41,8 @@ export default function ArmyTypeSelector({ armyTypes, selectedId, onChange }: Pr
           onChange={(e) => handleFactionChange(e.target.value)}
         >
           {factions.map((f) => (
-            <MenuItem key={f} value={f}>
-              {t(`army.faction.${f}`, f)}
+            <MenuItem key={f.id} value={f.id} disabled={!availableFactions.has(f.id)}>
+              {t(f.label)}
             </MenuItem>
           ))}
         </Select>

@@ -96,6 +96,7 @@ export default function WeaponList({ weapons, selectedId, viewMode, onSelect }: 
       {weapons.map((weapon) => {
         const faction = getWeaponFaction(weapon.id);
         const flagUrl = FACTION_FLAGS[faction];
+        const factionLabel = t(`factions.${faction}`, faction);
         const topImageUrl = weapon.imageUrl ?? flagUrl;
         const isFlag = !weapon.imageUrl && !!flagUrl;
         return (
@@ -137,8 +138,8 @@ export default function WeaponList({ weapons, selectedId, viewMode, onSelect }: 
                     <Box
                       component="img"
                       src={flagUrl}
-                      alt={faction}
-                      title={faction}
+                      alt={factionLabel}
+                      title={factionLabel}
                       sx={{ height: 14, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
                     />
                   )}

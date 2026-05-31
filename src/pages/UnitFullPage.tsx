@@ -214,7 +214,7 @@ export default function UnitFullPage() {
             </Typography>
             <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
               <Chip label={t(`units.types.${unit.type}`)} />
-              <Chip label={unit.faction} />
+              <Chip label={t(`factions.${unit.faction}`, unit.faction)} />
               <Chip label={`${unit.cost} pts`} color="secondary" />
               <Chip label={`${unit.from}-${unit.to}`} variant="outlined" sx={{ color: 'inherit', borderColor: 'currentColor' }} />
             </Stack>

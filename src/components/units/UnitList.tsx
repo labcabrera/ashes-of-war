@@ -70,7 +70,7 @@ export default function UnitList({ units, isOutOfYear, selectedId, viewMode, onS
                     </Button>
                   </TableCell>
                   <TableCell>{t(`units.types.${unit.type}`)}</TableCell>
-                  <TableCell>{unit.faction}</TableCell>
+                  <TableCell>{t(`factions.${unit.faction}`, unit.faction)}</TableCell>
                   <TableCell align="right">{unit.cost}</TableCell>
                   <TableCell>
                     <Chip

@@ -73,16 +73,17 @@ export default function UnitFilters({
           </Typography>
           {factions.map((f) => {
             const selected = selectedFactions.includes(f);
+            const label = t(`factions.${f}`, f);
             return (
               <Chip
                 key={f}
-                label={f}
+                label={label}
                 onClick={() => onFactionToggle(f)}
                 color={selected ? 'primary' : 'default'}
                 variant={selected ? 'filled' : 'outlined'}
                 avatar={
                   FACTION_FLAGS[f]
-                    ? <Avatar src={FACTION_FLAGS[f]} alt={f} />
+                    ? <Avatar src={FACTION_FLAGS[f]} alt={label} />
                     : undefined
                 }
               />
