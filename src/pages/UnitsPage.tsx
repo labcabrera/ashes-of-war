@@ -4,6 +4,7 @@
 import { useState, useMemo } from 'react';
 import {
   Box,
+  Pagination,
   Tab,
   Tabs,
   ToggleButton,
@@ -12,6 +13,9 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+
+const UNITS_PER_PAGE = 48;
+
 import GridViewIcon from '@mui/icons-material/GridView';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -43,8 +47,15 @@ export default function UnitsPage() {
   const activeTab: CatalogueTab = searchParams.get('tab') === 'weapons' ? 'weapons' : 'units';
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
+  const [unitPage, setUnitPage] = useState(1);
   const [weaponName, setWeaponName] = useState('');
   const [weaponFaction, setWeaponFaction] = useState<FactionId | ''>('');
+
+  const unitPageCount = Math.ceil(units.length / UNITS_PER_PAGE);
+  const paginatedUnits = useMemo(() => {
+    const start = (unitPage - 1) * UNITS_PER_PAGE;
+    return units.slice(start, start + UNITS_PER_PAGE);
+  }, [units, unitPage]);
 
   function getWeaponFaction(id: string): FactionId | '' {
     return weaponFactionId(id) ?? '';
@@ -146,11 +157,11 @@ export default function UnitsPage() {
             selectedKeywords={filters.keywords}
             availableKeywords={availableKeywords}
             year={filters.year}
-            onNameChange={setName}
-            onFactionChange={setFaction}
-            onTypesChange={setTypes}
-            onKeywordsChange={setKeywords}
-            onYearChange={setYear}
+            onNameChange={(v) => { setName(v); setUnitPage(1); }}
+            onFactionChange={(v) => { setFaction(v); setUnitPage(1); }}
+            onTypesChange={(v) => { setTypes(v); setUnitPage(1); }}
+            onKeywordsChange={(v) => { setKeywords(v); setUnitPage(1); }}
+            onYearChange={(v) => { setYear(v); setUnitPage(1); }}
           />
 
           <Box
@@ -164,13 +175,24 @@ export default function UnitsPage() {
               gap: 3,
             }}
           >
-            <UnitList
-              units={units}
-              isOutOfYear={isOutOfYear}
-              selectedId={selectedUnit?.id ?? null}
-              viewMode={viewMode}
-              onSelect={handleUnitSelect}
-            />
+            <Box>
+              <UnitList
+                units={paginatedUnits}
+                isOutOfYear={isOutOfYear}
+                selectedId={selectedUnit?.id ?? null}
+                viewMode={viewMode}
+                onSelect={handleUnitSelect}
+              />
+              {unitPageCount > 1 && (
+                <Pagination
+                  count={unitPageCount}
+                  page={unitPage}
+                  onChange={(_e, page) => setUnitPage(page)}
+                  color="secondary"
+                  sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}
+                />
+              )}
+            </Box>
 
             {isDesktop && (
               <UnitDetail
