@@ -1,0 +1,40 @@
+{
+  "id": "german-8,8-cm-kwk-43",
+  "name": "8,8 cm KwK 43",
+  "type": "hard",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 88,
+    "barrelLength": "L/71",
+    "mounting": ["turret", "casemate"],
+    "muzzleVelocityMps": {
+      "apcbc": 1000,
+      "he": 600
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 10, "max": 12 },
+      "combat": { "min": 6, "max": 8 }
+    },
+    "typicalAmmunition": ["APCBC PzGr.39/43", "HE Sprgr.43"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/8.8_cm_KwK_43",
+    "notes": "General designation for the long L/71 88mm gun family fitted to the Tiger II and the Nashorn and Jagdpanther tank destroyers from 1943. One of the most powerful tank guns of the war, capable of defeating almost any Allied or Soviet tank at standard combat ranges."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 10,
+        "characteristics": [
+          "sustained-fire-5-plus"
+        ]
+      }
+    ]
+  }
+}

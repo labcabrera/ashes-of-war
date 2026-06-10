@@ -1,0 +1,36 @@
+{
+  "id": "german-panzerschreck-rpzb-54",
+  "name": "Panzerschreck RPzB 54",
+  "type": "hard",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 88,
+    "barrelLength": "1640mm",
+    "mounting": ["infantry", "shoulder-fired"],
+    "muzzleVelocityMps": {
+      "heat": 110
+    },
+    "typicalAmmunition": ["RPzB.Gr. 4322 HEAT rocket"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panzerschreck",
+    "notes": "Reusable 88mm shoulder-fired rocket launcher introduced in late 1943, based on a scaled-up copy of the American bazooka. Its rocket-propelled HEAT warhead could defeat the frontal armour of most Allied tanks, but the back-blast and smoke trail forced operators to wear a protective mask/cape and often gave away their position."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "heat",
+        "name": "HEAT",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "30/10/-1",
+        "armourPenetration": 17,
+        "characteristics": [
+          "heat",
+          "one-shot"
+        ]
+      }
+    ]
+  }
+}

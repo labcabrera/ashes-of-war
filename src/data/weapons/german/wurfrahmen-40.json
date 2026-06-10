@@ -1,0 +1,34 @@
+{
+  "id": "german-wurfrahmen-40",
+  "name": "Wurfrahmen 40",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 280,
+    "mounting": ["vehicle-mounted"],
+    "typicalAmmunition": ["28cm Wurfkörper Spr (HE)", "32cm Wurfkörper M Flamm (incendiary)"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Nebelwerfer#28/32_cm_Nebelwerfer_41",
+    "notes": "Wooden launch frames carrying 28cm or 32cm rockets, mounted in racks of up to six on the sides of the Sd.Kfz. 251/1 half-track (the 'Stuka zu Fuss'). Highly inaccurate but devastating against area targets, fired from frames that were typically left behind after launch."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "rocket",
+        "name": "Rocket",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "20/10/-3",
+        "armourPenetration": 5,
+        "suppressionModifier": -6,
+        "characteristics": [
+          "area-16",
+          "indirect",
+          "limited-ammunition-6"
+        ]
+      }
+    ]
+  }
+}

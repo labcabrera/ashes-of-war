@@ -1,0 +1,42 @@
+{
+  "id": "german-rw-61",
+  "name": "38 cm Raketen-Werfer 61",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 380,
+    "barrelLength": "L/5.4",
+    "mounting": ["hull"],
+    "muzzleVelocityMps": {
+      "rocket": 250
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 1, "max": 2 },
+      "combat": { "min": 1, "max": 1 }
+    },
+    "typicalAmmunition": ["Raketen-Sprenggranate 4581 (RSprgr.)"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sturmtiger",
+    "notes": "Massive breech-loaded rocket-propelled mortar mounted on the Sturmtiger assault vehicle, derived from a naval anti-submarine rocket launcher. Its enormous high-explosive warhead was intended for demolishing fortified buildings and strongpoints in urban combat, particularly during the Warsaw Uprising and the defense of German cities."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "rocket",
+        "name": "Rocket",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "20/10/-1",
+        "armourPenetration": 14,
+        "suppressionModifier": -4,
+        "characteristics": [
+          "area-12",
+          "one-shot",
+          "limited-ammunition-1"
+        ]
+      }
+    ]
+  }
+}

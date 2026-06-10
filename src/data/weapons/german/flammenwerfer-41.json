@@ -1,0 +1,31 @@
+{
+  "id": "german-flammenwerfer-41",
+  "name": "Flammenwerfer 41",
+  "type": "soft",
+  "faction": "german",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "mounting": ["infantry", "backpack"],
+    "typicalAmmunition": ["Flammöl 19 fuel/tar mixture, nitrogen propellant"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Flammenwerfer_41",
+    "notes": "Backpack-mounted flamethrower introduced in 1941 as a lighter, faster-deploying replacement for the bulky Flammenwerfer 35. Carried about 7.5 liters of fuel, sufficient for roughly ten one-second bursts out to 25-30 meters, and was used by dedicated pioneer/flamethrower troops to clear bunkers, trenches and fortified buildings."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "flame",
+        "name": "Flame",
+        "shots": 3,
+        "hitOn": 4,
+        "rangeModifier": "8/4/-3",
+        "suppressionModifier": -4,
+        "characteristics": [
+          "area-6",
+          "limited-ammunition-3"
+        ]
+      }
+    ]
+  }
+}

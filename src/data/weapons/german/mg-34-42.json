@@ -1,0 +1,58 @@
+{
+  "id": "german-mg-34-42",
+  "name": "MG 34 / MG 42",
+  "type": "soft",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "L/61",
+    "mounting": ["infantry", "bipod", "tripod", "vehicle"],
+    "muzzleVelocityMps": {
+      "ball": 755
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 900, "max": 1500 },
+      "combat": { "min": 150, "max": 250 }
+    },
+    "typicalAmmunition": ["7.92x57mm Mauser"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/MG_34",
+    "notes": "The MG 34, introduced in 1936, was the world's first general-purpose machine gun and equipped infantry, vehicles and aircraft throughout the war. From 1942 it was progressively supplemented by the cheaper, faster-firing MG 42, which became famous for its extremely high cyclic rate and distinctive 'ripping cloth' sound."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "support-high",
+        "name": "Support - high cadence",
+        "shots": 18,
+        "hitOn": 9,
+        "rangeModifier": "30/20/-1",
+        "suppressionModifier": -2,
+        "characteristics": [
+          "reliability-4-plus"
+        ]
+      },
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 6,
+        "hitOn": 7,
+        "rangeModifier": "30/20/-1",
+        "suppressionModifier": -1,
+        "characteristics": [
+          "reliability-3-plus"
+        ]
+      },
+      {
+        "id": "precision",
+        "name": "Precision",
+        "shots": 3,
+        "hitOn": 6,
+        "rangeModifier": "40/20/-1",
+        "suppressionModifier": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "soviet-union-45mm-m1942",
+  "name": "45 mm M1942 (M-42) L/68.6",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 45,
+    "barrelLength": "L/68.6",
+    "mounting": ["towed", "turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 870,
+      "he": 335
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 15, "max": 20 },
+      "combat": { "min": 10, "max": 15 }
+    },
+    "typicalAmmunition": ["APCBC BR-240", "APCR BR-240P", "HE O-240"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/45_mm_anti-tank_gun_M1942_(M-42)",
+    "notes": "Lengthened-barrel evolution of the 53-K with a more powerful cartridge, introduced in 1942 to improve performance against up-armoured German tanks. Remained the standard light anti-tank gun and T-70 tank armament for the rest of the war."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "40/10/-1",
+        "armourPenetration": 7
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "40/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -1,
+        "characteristics": ["area-2"]
+      }
+    ]
+  }
+}

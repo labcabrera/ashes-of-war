@@ -1,0 +1,47 @@
+{
+  "id": "soviet-union-bs-3",
+  "name": "100 mm BS-3 L/55.5",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 100,
+    "barrelLength": "L/55.5",
+    "mounting": ["towed", "hull"],
+    "muzzleVelocityMps": {
+      "apcbc": 895,
+      "he": 900
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 8, "max": 10 },
+      "combat": { "min": 4, "max": 6 }
+    },
+    "typicalAmmunition": ["APCBC BR-412", "HE OF-412"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/100_mm_field_gun_M1944_(BS-3)",
+    "notes": "Powerful Soviet field/anti-tank gun introduced in 1944, derived from a naval gun and adapted for the SU-100 tank destroyer. Capable of defeating any German tank of the period at normal combat ranges."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/15/-1",
+        "armourPenetration": 16
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/15/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -3,
+        "characteristics": ["area-4"]
+      }
+    ]
+  }
+}

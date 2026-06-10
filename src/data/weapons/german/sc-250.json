@@ -1,0 +1,33 @@
+{
+  "id": "german-sc-250",
+  "name": "SC 250",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "mounting": ["aircraft"],
+    "typicalAmmunition": ["SC 250 general-purpose bomb"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sprengbombe_Cylindrisch",
+    "notes": "Standard 250 kg thin-walled, high-explosive general-purpose bomb used by the Luftwaffe throughout the war, carried by aircraft such as the Ju 87 Stuka, He 111 and Ju 88 for use against fortifications, vehicles, and area targets."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "dive-bomb",
+        "name": "Dive Bomb",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "5/5/-3",
+        "armourPenetration": 6,
+        "suppressionModifier": -6,
+        "characteristics": [
+          "area-16",
+          "one-shot",
+          "limited-ammunition-1"
+        ]
+      }
+    ]
+  }
+}

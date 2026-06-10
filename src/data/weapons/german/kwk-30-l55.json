@@ -1,0 +1,46 @@
+{
+  "id": "german-kwk-30-l55",
+  "name": "2 cm KwK 30 L/55",
+  "type": "hard",
+  "faction": "german",
+  "from": 1939,
+  "to": 1942,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 20,
+    "barrelLength": "L/55",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "ap": 780,
+      "he": 900
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 245, "max": 280 },
+      "combat": { "min": 120, "max": 180 }
+    },
+    "typicalAmmunition": ["Pzgr APCBC-HE", "Sprgr HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/2_cm_KwK_30",
+    "notes": "Automatic 20mm autocannon, derived from the Flak 30, fitted as the main armament of the Panzer II light tank and early armoured cars. Effective only against light vehicles and soft targets, it was largely obsolete against tanks by the time of Barbarossa."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "ap",
+        "name": "AP",
+        "shots": 3,
+        "hitOn": 6,
+        "rangeModifier": "30/15/-1",
+        "armourPenetration": 3
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 3,
+        "hitOn": 6,
+        "rangeModifier": "30/15/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -1
+      }
+    ]
+  }
+}

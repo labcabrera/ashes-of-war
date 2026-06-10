@@ -1,0 +1,45 @@
+{
+  "id": "soviet-union-f-32-76-2",
+  "name": "76.2 mm F-32",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1940,
+  "to": 1942,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 76,
+    "barrelLength": "L/31.5",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 612,
+      "he": 530
+    },
+    "typicalAmmunition": ["BR-350A APHE", "OF-350 HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/F-32_tank_gun",
+    "notes": "Improved 76.2mm tank gun fitted to early KV-1 heavy tanks from 1940. It shared the same low-velocity ballistics as the L-11 but was simpler and more reliable, before being superseded by the longer F-34 from late 1941."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 8
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -2,
+        "characteristics": [
+          "area-3"
+        ]
+      }
+    ]
+  }
+}

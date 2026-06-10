@@ -1,0 +1,36 @@
+{
+  "id": "soviet-union-mosin-nagant-m1891-30",
+  "name": "Mosin–Nagant M1891/30",
+  "type": "soft",
+  "faction": "soviet-union",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "L/72",
+    "mounting": ["infantry"],
+    "muzzleVelocityMps": {
+      "ball": 865
+    },
+    "typicalAmmunition": ["7.62x54mmR ball", "7.62x54mmR API"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Mosin%E2%80%93Nagant",
+    "notes": "The standard bolt-action rifle of the Red Army throughout the war, a modernised 1930 pattern of the original 1891 design. Robust and simple to mass-produce, it equipped the vast majority of Soviet riflemen and also formed the basis of the famous PU-scoped sniper variant."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "suppressionModifier": 0,
+        "characteristics": [
+          "reliability-2-plus",
+          "saturation-2-plus"
+        ]
+      }
+    ]
+  }
+}

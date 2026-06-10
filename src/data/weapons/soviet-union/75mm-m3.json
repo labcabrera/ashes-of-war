@@ -1,0 +1,43 @@
+{
+  "id": "soviet-union-75mm-m3",
+  "name": "75 mm M3 L/40",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 75,
+    "barrelLength": "L/40",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 619,
+      "he": 460
+    },
+    "typicalAmmunition": ["APCBC M61", "HE M48"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/75_mm_gun_M2/M3",
+    "notes": "American 75mm M3 tank gun, a derivative of the M2 fitted with a longer L/40 barrel. Lend-Leased to the Soviet Union in the M3 Lee/Grant and M4A2 Sherman, supplementing domestic 76mm-armed tanks in Red Army service."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "45/10/-1",
+        "armourPenetration": 7
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "45/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -2,
+        "characteristics": ["area-3"]
+      }
+    ]
+  }
+}

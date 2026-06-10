@@ -1,0 +1,40 @@
+{
+  "id": "german-mauser-kar-98k",
+  "name": "Mauser Kar 98k",
+  "type": "soft",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "600mm",
+    "mounting": ["infantry"],
+    "muzzleVelocityMps": {
+      "ball": 760
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 15, "max": 20 },
+      "combat": { "min": 10, "max": 15 }
+    },
+    "typicalAmmunition": ["7.92x57mm Mauser"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Karabiner_98k",
+    "notes": "The standard bolt-action service rifle of the Wehrmacht, adopted in 1935 and produced in the millions throughout the war. A shortened, modernized derivative of the Gewehr 98, fed from a 5-round internal magazine and frequently fitted with optics for designated marksmen."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "suppressionModifier": 0,
+        "characteristics": [
+          "reliability-2-plus",
+          "saturation-2-plus"
+        ]
+      }
+    ]
+  }
+}

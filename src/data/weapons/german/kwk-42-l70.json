@@ -1,0 +1,57 @@
+{
+  "id": "german-kwk-42-l70",
+  "name": "7.5 cm KwK 42 L/70",
+  "type": "hard",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 75,
+    "barrelLength": "L/70",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 935,
+      "apcr": 1120,
+      "he": 600
+    },
+    "typicalAmmunition": ["APCBC PzGr.39/42", "APCR PzGr.40/42", "HE Sprgr.42"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/7.5_cm_KwK_42",
+    "notes": "High-velocity 75mm gun fitted to the Panther medium tank from 1943. Combined a flat trajectory and excellent penetration with good HE performance, making it one of the most effective tank guns of the war and a serious threat to Allied and Soviet armour at long range."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "60/20/-1",
+        "armourPenetration": 14
+      },
+      {
+        "id": "apcr",
+        "name": "APCR",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "60/20/-1",
+        "armourPenetration": 19,
+        "characteristics": [
+          "limited-ammunition-1"
+        ]
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "60/20/-1",
+        "armourPenetration": 3,
+        "suppressionModifier": -2,
+        "characteristics": [
+          "area-4"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "soviet-union-ml-20s",
+  "name": "152 mm ML-20S",
+  "type": "artillery",
+  "faction": "soviet-union",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 152,
+    "barrelLength": "L/29",
+    "mounting": ["hull", "towed"],
+    "muzzleVelocityMps": {
+      "he": 655,
+      "heat": 600
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 3, "max": 4 },
+      "combat": { "min": 1, "max": 2 }
+    },
+    "typicalAmmunition": ["HE OF-540", "HEAT BP-540", "Concrete-piercing G-530"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/152_mm_gun-howitzer_M1937_(ML-20)",
+    "notes": "Casemate version of the ML-20 gun-howitzer fitted to the SU-152 and ISU-152 from 1943, prized for its devastating HE round against fortifications, infantry, and even heavy German tanks ('Zveroboy' - 'beast killer')."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "55/28/-2",
+        "armourPenetration": 8,
+        "suppressionModifier": -6,
+        "characteristics": ["area-16", "indirect"]
+      },
+      {
+        "id": "heat",
+        "name": "HEAT",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "35/15/-2",
+        "armourPenetration": 14
+      }
+    ]
+  }
+}

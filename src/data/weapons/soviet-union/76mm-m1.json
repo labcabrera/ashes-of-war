@@ -1,0 +1,45 @@
+{
+  "id": "soviet-union-76mm-m1",
+  "name": "76 mm M1 A1/A2",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 76,
+    "barrelLength": "L/52",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 792,
+      "he": 853
+    },
+    "typicalAmmunition": ["M62 APCBC", "M93 APCR", "M42A1 HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/76_mm_gun_M1",
+    "notes": "American 76mm gun fitted to late-production M4 Sherman tanks, a number of which were supplied to the Red Army under Lend-Lease and equipped Soviet tank and mechanised corps from 1943 onward as the 'Sherman'. Offered better armour penetration than the standard 75mm Sherman gun at the cost of a less effective HE round."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 10
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -2,
+        "characteristics": [
+          "area-3"
+        ]
+      }
+    ]
+  }
+}

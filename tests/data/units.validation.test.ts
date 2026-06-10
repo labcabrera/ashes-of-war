@@ -3,7 +3,7 @@
  */
 import { describe, expect, it } from 'vitest';
 import unitsData from '../../src/data/units/units.json';
-import weaponsData from '../../src/data/weapons/weapons.json';
+import { weaponCatalogueEntries } from '../../src/data/weapons';
 import { UNIT_TYPES, type UnitType, type UnitWeaponMountType } from '../../src/types/unit';
 
 type UnknownRecord = Record<string, unknown>;
@@ -27,16 +27,8 @@ function isNonNegativeInteger(value: unknown): value is number {
   return Number.isInteger(value) && Number(value) >= 0;
 }
 
-function collectWeaponIds(catalogue: unknown): Set<string> {
-  if (!isRecord(catalogue) || !Array.isArray(catalogue.weapons)) {
-    return new Set();
-  }
-
-  return new Set(
-    catalogue.weapons.flatMap((weapon) =>
-      isRecord(weapon) && isNonEmptyString(weapon.id) ? [weapon.id] : [],
-    ),
-  );
+function collectWeaponIds(): Set<string> {
+  return new Set(weaponCatalogueEntries.map((weapon) => weapon.id));
 }
 
 function validateWeaponAssignments(
@@ -232,7 +224,7 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
 
 describe('static unit catalogue validation', () => {
   it('validates every bundled unit and aggregates errors in its failure report', () => {
-    const errors = validateUnitCatalogue(unitsData, collectWeaponIds(weaponsData));
+    const errors = validateUnitCatalogue(unitsData, collectWeaponIds());
 
     if (errors.length > 0) {
       throw new Error(`Unit catalogue validation failed:\n${errors.map((error) => `- ${error}`).join('\n')}`);
@@ -266,7 +258,7 @@ describe('static unit catalogue validation', () => {
       ],
     };
 
-    const errors = validateUnitCatalogue(invalidCatalogue, collectWeaponIds(weaponsData));
+    const errors = validateUnitCatalogue(invalidCatalogue, collectWeaponIds());
     expect(errors).toEqual(
       expect.arrayContaining([
         'units[0].name must be a non-empty string.',

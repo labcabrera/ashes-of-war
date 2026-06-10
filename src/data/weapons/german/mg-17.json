@@ -1,0 +1,42 @@
+{
+  "id": "german-mg-17",
+  "name": "MG 17",
+  "type": "soft",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "L/100",
+    "mounting": ["aircraft"],
+    "muzzleVelocityMps": {
+      "ball": 905
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": {
+        "min": 1100,
+        "max": 1200
+      },
+      "combat": {
+        "min": 600,
+        "max": 800
+      }
+    },
+    "typicalAmmunition": ["7.92x57mm Mauser"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/MG_17",
+    "notes": "Rifle-caliber synchronized and wing-mounted machine gun fitted to most German fighters and bombers of the early-to-mid war, including the Bf 109 and Bf 110. Belt-fed and electrically primed, it was progressively supplemented or replaced by heavier 13mm and 20mm armament as the war progressed."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "strafing",
+        "name": "Strafing",
+        "shots": 6,
+        "hitOn": 7,
+        "rangeModifier": "20/10/-2",
+        "suppressionModifier": -2
+      }
+    ]
+  }
+}

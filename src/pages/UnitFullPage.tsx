@@ -29,11 +29,10 @@ import { Link as RouterLink, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { allUnits } from '../data/units';
 import { vehicles } from '../data/vehicles';
-import weaponsData from '../data/weapons/weapons.json';
+import { allWeapons } from '../data/weapons';
 import { getDescription } from '../i18n/descriptions';
 import type { Armor, Unit, UnitType, UnitWeapon } from '../types/unit';
 import type { VehicleCatalogueEntry } from '../types/vehicle';
-import type { Weapon } from '../types/weapon';
 import { unitImageUrl } from '../utils/images';
 
 const UNIT_ICONS = {
@@ -52,7 +51,7 @@ const UNIT_ICONS = {
 } satisfies Record<UnitType, typeof MilitaryTechIcon>;
 
 const units = allUnits;
-const weapons = weaponsData.weapons as unknown as Weapon[];
+const weapons = allWeapons;
 
 function getWeapon(assignment: UnitWeapon) {
   return weapons.find((weapon) => weapon.id === assignment.id);

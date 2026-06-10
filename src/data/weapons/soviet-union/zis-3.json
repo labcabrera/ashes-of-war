@@ -1,0 +1,45 @@
+{
+  "id": "soviet-union-zis-3",
+  "name": "76.2 mm ZiS-3 L/41.6",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 76,
+    "barrelLength": "L/41.6",
+    "mounting": ["towed"],
+    "muzzleVelocityMps": {
+      "apcbc": 655,
+      "he": 680
+    },
+    "typicalAmmunition": ["BR-350A APHE", "BR-354P APCR", "OF-350 HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/ZiS-3",
+    "notes": "The most widely produced Soviet field gun of the war, combining a divisional gun barrel with a lightweight split-trail carriage. Used in the dual anti-tank and general support role and also formed the main armament of the SU-76 self-propelled gun."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "45/10/-1",
+        "armourPenetration": 7
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "45/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -2,
+        "characteristics": [
+          "area-4"
+        ]
+      }
+    ]
+  }
+}

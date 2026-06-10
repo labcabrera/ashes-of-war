@@ -1,0 +1,41 @@
+{
+  "id": "german-sig-33",
+  "name": "15 cm sIG 33",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 150,
+    "barrelLength": "L/11",
+    "mounting": ["towed", "vehicle-mounted"],
+    "muzzleVelocityMps": {
+      "he": 240
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 2, "max": 3 },
+      "combat": { "min": 1, "max": 2 }
+    },
+    "typicalAmmunition": ["HE Wgr. 33", "Shaped-charge HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/15_cm_sIG_33",
+    "notes": "Heavy infantry gun providing close-support firepower to infantry regiments, towed by horse or half-track. Also mounted on Panzer I and Panzer II chassis as the Sturmpanzer I Bison and Sturmpanzer II self-propelled guns."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "40/20/-2",
+        "armourPenetration": 5,
+        "suppressionModifier": -5,
+        "characteristics": [
+          "area-14",
+          "indirect"
+        ]
+      }
+    ]
+  }
+}

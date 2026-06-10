@@ -1,0 +1,44 @@
+{
+  "id": "german-mg-37t",
+  "name": "MG 37(t)",
+  "type": "soft",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "733mm",
+    "mounting": ["infantry", "tripod", "vehicle"],
+    "muzzleVelocityMps": {
+      "ball": 850
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 500, "max": 550 },
+      "combat": { "min": 100, "max": 150 }
+    },
+    "typicalAmmunition": ["7.92x57mm Mauser"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/ZB_vz._37",
+    "notes": "German designation for the Czechoslovak ZB vz. 37 medium machine gun, large numbers of which were absorbed into Wehrmacht service following the occupation of Czechoslovakia in 1939. Valued for its accuracy and reliability, it was used both as an infantry support weapon and as a fixed fortification/vehicle gun, including on early Panzer 38(t) variants."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 4,
+        "hitOn": 7,
+        "rangeModifier": "25/15/-1",
+        "suppressionModifier": -1
+      },
+      {
+        "id": "precision",
+        "name": "Precision",
+        "shots": 2,
+        "hitOn": 6,
+        "rangeModifier": "30/15/-1",
+        "suppressionModifier": 0
+      }
+    ]
+  }
+}

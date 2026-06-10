@@ -1,0 +1,41 @@
+{
+  "id": "german-5cm-granatwerfer-36",
+  "name": "5 cm Granatwerfer 36",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 50,
+    "barrelLength": "L/8.8",
+    "mounting": ["infantry"],
+    "muzzleVelocityMps": {
+      "he": 75
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 15, "max": 25 },
+      "combat": { "min": 10, "max": 15 }
+    },
+    "typicalAmmunition": ["5cm Wurfgranate 36 (HE)"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/5_cm_leGrW_36",
+    "notes": "Light platoon-level mortar issued to infantry squads for close-range indirect fire support. Production officially ceased in 1941-42 due to its short range and limited effect against entrenched troops, but existing stocks remained in front-line service throughout the war."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 2,
+        "hitOn": 5,
+        "rangeModifier": "25/13/-2",
+        "armourPenetration": 2,
+        "suppressionModifier": -2,
+        "characteristics": [
+          "area-4",
+          "indirect"
+        ]
+      }
+    ]
+  }
+}

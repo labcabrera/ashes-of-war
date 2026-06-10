@@ -1,0 +1,45 @@
+{
+  "id": "soviet-union-l-11-76-2",
+  "name": "76.2 mm L-11",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1939,
+  "to": 1941,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 76,
+    "barrelLength": "L/30.5",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 612,
+      "he": 530
+    },
+    "typicalAmmunition": ["BR-350A APHE", "OF-350 HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/L-11_tank_gun",
+    "notes": "Short-barrelled 76.2mm gun fitted to early production KV-1 and T-34 Model 1940 tanks. Its low muzzle velocity and complex recoil mechanism made it inferior to the later F-32 and F-34, and it was quickly replaced once production allowed."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 7
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -2,
+        "characteristics": [
+          "area-3"
+        ]
+      }
+    ]
+  }
+}

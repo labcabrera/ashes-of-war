@@ -10,7 +10,8 @@ export function unitImageUrl(faction: FactionId, unitId: string) {
 
 export function weaponFactionId(weaponId: string): FactionId | undefined {
   if (weaponId.startsWith('german-')) return 'german';
-  if (weaponId.startsWith('soviet-union-') || weaponId.startsWith('su-')) return 'soviet-union';
+  if (weaponId.startsWith('soviet-union-')) return 'soviet-union';
+  if (weaponId.startsWith('united-states-')) return 'united-states';
   return undefined;
 }
 

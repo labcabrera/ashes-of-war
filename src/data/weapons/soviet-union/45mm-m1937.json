@@ -1,0 +1,47 @@
+{
+  "id": "soviet-union-45mm-m1937",
+  "name": "45 mm M1937 (53-K)",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 45,
+    "barrelLength": "L/46",
+    "mounting": ["towed", "turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 760,
+      "he": 335
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 15, "max": 25 },
+      "combat": { "min": 10, "max": 15 }
+    },
+    "typicalAmmunition": ["APCBC BR-240", "HE O-240"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/45_mm_anti-tank_gun_M1937_(53-K)",
+    "notes": "Standard Soviet light anti-tank gun at the start of the war, derived from a German Rheinmetall design and also used as the main armament of early T-26 and BT light tanks. Effective against early-war German armour but increasingly outclassed by 1942."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "35/10/-1",
+        "armourPenetration": 5
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "35/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -1,
+        "characteristics": ["area-2"]
+      }
+    ]
+  }
+}

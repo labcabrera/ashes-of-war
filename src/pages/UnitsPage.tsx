@@ -31,7 +31,7 @@ import { Unit } from '../types/unit';
 import { Weapon } from '../types/weapon';
 import type { FactionId } from '../types/faction';
 import { allUnits } from '../data/units';
-import weaponsData from '../data/weapons/weapons.json';
+import { allWeapons } from '../data/weapons';
 import { weaponFactionId } from '../utils/images';
 
 type CatalogueTab = 'units' | 'weapons';
@@ -71,7 +71,7 @@ export default function UnitsPage() {
   }, []);
 
   const catalogueUnits = allUnits;
-  const weapons = weaponsData.weapons as unknown as Weapon[];
+  const weapons = allWeapons;
   const selectedWeapon = useMemo(() => {
     const weaponId = searchParams.get('weapon');
     return weaponId ? (weapons.find((weapon) => weapon.id === weaponId) ?? null) : null;

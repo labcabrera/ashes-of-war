@@ -1,0 +1,41 @@
+{
+  "id": "german-mg-13",
+  "name": "MG 13",
+  "type": "soft",
+  "faction": "german",
+  "from": 1939,
+  "to": 1941,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "L/55",
+    "mounting": ["infantry", "bipod"],
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 550, "max": 600 },
+      "combat": { "min": 100, "max": 150 }
+    },
+    "typicalAmmunition": ["7.92x57mm Mauser"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/MG_13",
+    "notes": "Interwar Dreyse-designed light machine gun adopted by the Reichswehr in 1932 and used as the Wehrmacht's standard squad automatic weapon during the early campaigns of 1939-1941, before being progressively replaced by the MG 34. Fed from a 25-round saddle drum or 75-round drum magazine."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 4,
+        "hitOn": 7,
+        "rangeModifier": "25/15/-1",
+        "suppressionModifier": -1
+      },
+      {
+        "id": "precision",
+        "name": "Precision",
+        "shots": 2,
+        "hitOn": 6,
+        "rangeModifier": "30/15/-1",
+        "suppressionModifier": 0
+      }
+    ]
+  }
+}

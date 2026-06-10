@@ -1,0 +1,47 @@
+{
+  "id": "soviet-union-zis-2",
+  "name": "57 mm ZiS-2 L/73",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 57,
+    "barrelLength": "L/73",
+    "mounting": ["towed", "hull"],
+    "muzzleVelocityMps": {
+      "apcbc": 990,
+      "he": 706
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 20, "max": 25 },
+      "combat": { "min": 10, "max": 15 }
+    },
+    "typicalAmmunition": ["APCBC BR-271", "HE UO-271"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/57_mm_anti-tank_gun_M1943_(ZiS-2)",
+    "notes": "High-velocity Soviet anti-tank gun with exceptional penetration for its caliber, briefly produced in 1941 and resumed in 1943 once heavier German armour appeared. Also fitted to the SU-57 and ZSU-57-2."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "40/15/-1",
+        "armourPenetration": 10
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "40/15/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -1,
+        "characteristics": ["area-2"]
+      }
+    ]
+  }
+}

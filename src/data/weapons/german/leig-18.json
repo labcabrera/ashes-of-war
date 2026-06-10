@@ -1,0 +1,41 @@
+{
+  "id": "german-leig-18",
+  "name": "7.5 cm leIG 18",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 75,
+    "barrelLength": "L/11.4",
+    "mounting": ["towed", "infantry"],
+    "muzzleVelocityMps": {
+      "he": 210
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 8, "max": 12 },
+      "combat": { "min": 4, "max": 6 }
+    },
+    "typicalAmmunition": ["HE Igr. 18", "Shaped-charge HE", "Smoke"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/7.5_cm_leIG_18",
+    "notes": "Light infantry gun issued to the infantry-gun company of each infantry regiment, light enough to be man-handled by its crew over rough terrain. Provided organic close-support indirect and direct fire against strongpoints and machine-gun nests."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "20/10/-2",
+        "armourPenetration": 3,
+        "suppressionModifier": -3,
+        "characteristics": [
+          "area-8",
+          "indirect"
+        ]
+      }
+    ]
+  }
+}

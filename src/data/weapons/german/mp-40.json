@@ -1,0 +1,50 @@
+{
+  "id": "german-mp-40",
+  "name": "MP40",
+  "type": "soft",
+  "faction": "german",
+  "from": 1940,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 9,
+    "barrelLength": "251mm",
+    "mounting": ["infantry"],
+    "muzzleVelocityMps": {
+      "ball": 380
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 500, "max": 550 },
+      "combat": { "min": 80, "max": 120 }
+    },
+    "typicalAmmunition": ["9x19mm Parabellum"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/MP_40",
+    "notes": "Open-bolt blowback submachine gun developed from the MP38, issued from 1940 onward primarily to squad leaders, NCOs, paratroopers and vehicle crews. Its folding stock and 32-round magazine made it well suited to close-quarters and mechanized warfare."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "saturation",
+        "name": "Saturation",
+        "shots": 6,
+        "hitOn": 7,
+        "rangeModifier": "10/10/-2",
+        "suppressionModifier": -1,
+        "characteristics": [
+          "reliability-4-plus"
+        ]
+      },
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 3,
+        "hitOn": 6,
+        "rangeModifier": "10/10/-2",
+        "suppressionModifier": 0,
+        "characteristics": [
+          "reliability-4-plus"
+        ]
+      }
+    ]
+  }
+}

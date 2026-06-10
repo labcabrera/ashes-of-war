@@ -33,6 +33,7 @@ interface Props {
 const FACTION_FLAGS: Record<string, string> = {
   german: factionFlagUrl('german'),
   'soviet-union': factionFlagUrl('soviet-union'),
+  'united-states': factionFlagUrl('united-states'),
 };
 
 function WeaponCardMedia({ weaponId, flagUrl }: { weaponId: string; flagUrl: string | undefined }) {

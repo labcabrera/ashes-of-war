@@ -1,0 +1,41 @@
+{
+  "id": "german-sfh-18",
+  "name": "15 cm sFH 18 L/30",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 149,
+    "barrelLength": "L/30",
+    "mounting": ["towed"],
+    "muzzleVelocityMps": {
+      "he": 520
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 4, "max": 6 },
+      "combat": { "min": 2, "max": 3 }
+    },
+    "typicalAmmunition": ["HE Sprgr. 19", "HE Sprgr. 19 Stg (rocket-assisted)", "Smoke"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/15_cm_sFH_18",
+    "notes": "The standard heavy field howitzer of the German Army, organic to the heavy artillery battalions of divisional artillery regiments. Also formed the basis for the Hummel self-propelled gun's main armament."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "60/30/-2",
+        "armourPenetration": 6,
+        "suppressionModifier": -5,
+        "characteristics": [
+          "area-14",
+          "indirect"
+        ]
+      }
+    ]
+  }
+}

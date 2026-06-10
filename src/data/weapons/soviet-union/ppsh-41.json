@@ -1,0 +1,50 @@
+{
+  "id": "soviet-union-ppsh-41",
+  "name": "PPSh-41",
+  "type": "soft",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "L/35",
+    "mounting": ["infantry"],
+    "muzzleVelocityMps": {
+      "ball": 500
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 900, "max": 1000 },
+      "combat": { "min": 100, "max": 120 }
+    },
+    "typicalAmmunition": ["7.62x25mm Tokarev"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/PPSh-41",
+    "notes": "Mass-produced submachine gun that became a symbol of the Red Army infantryman from 1942 onward, often issued en masse to entire squads or 'tankodesantniki' to provide overwhelming close-range firepower. Fed from a 71-round drum or 35-round box magazine."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "saturation",
+        "name": "Saturation",
+        "shots": 7,
+        "hitOn": 7,
+        "rangeModifier": "10/10/-2",
+        "suppressionModifier": -1,
+        "characteristics": [
+          "reliability-4-plus"
+        ]
+      },
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 3,
+        "hitOn": 6,
+        "rangeModifier": "10/10/-2",
+        "suppressionModifier": 0,
+        "characteristics": [
+          "reliability-4-plus"
+        ]
+      }
+    ]
+  }
+}

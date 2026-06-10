@@ -1,0 +1,37 @@
+{
+  "id": "soviet-union-d-25t",
+  "name": "122 mm D-25T",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 122,
+    "barrelLength": "L/48",
+    "mounting": ["turret", "hull"],
+    "muzzleVelocityMps": {
+      "apcbc": 781,
+      "he": 800
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 2, "max": 3 },
+      "combat": { "min": 1, "max": 2 }
+    },
+    "typicalAmmunition": ["BR-471 APHE", "BR-471B APBC", "OF-471 HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/122_mm_gun_D-25T",
+    "notes": "Heavy 122mm gun fitted to the IS-2 heavy tank and ISU-122 self-propelled gun from 1943, capable of destroying any German tank with a single hit but limited by a slow reload due to separate-loading ammunition and a small ammunition stowage."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/20/-1",
+        "armourPenetration": 18
+      }
+    ]
+  }
+}

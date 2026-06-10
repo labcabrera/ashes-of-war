@@ -1,0 +1,61 @@
+{
+  "id": "german-kwk-36-l56",
+  "name": "8.8 cm KwK 36 L/56",
+  "type": "hard",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 88,
+    "barrelLength": "L/56",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 773,
+      "apcr": 930,
+      "he": 600
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 6, "max": 8 },
+      "combat": { "min": 4, "max": 6 }
+    },
+    "typicalAmmunition": ["APCBC PzGr.39", "APCR PzGr.40", "HE Sprgr.39"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/8.8_cm_KwK_36",
+    "notes": "Tank gun derived from the famous 8.8cm Flak 18/36/37, fitted as the main armament of the Tiger I heavy tank from 1942. Its outstanding penetration and accuracy gave the Tiger a decisive long-range advantage over almost all Allied and Soviet tanks for much of the war."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "50/20/-1",
+        "armourPenetration": 11
+      },
+      {
+        "id": "apcr",
+        "name": "APCR",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "50/20/-1",
+        "armourPenetration": 14,
+        "characteristics": [
+          "limited-ammunition-1"
+        ]
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "50/20/-1",
+        "armourPenetration": 3,
+        "suppressionModifier": -2,
+        "characteristics": [
+          "area-6"
+        ]
+      }
+    ]
+  }
+}

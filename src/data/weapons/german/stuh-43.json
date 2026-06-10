@@ -1,0 +1,50 @@
+{
+  "id": "german-stuh-43",
+  "name": "15 cm StuH 43 L/12",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 150,
+    "barrelLength": "L/12",
+    "mounting": ["hull"],
+    "muzzleVelocityMps": {
+      "he": 240,
+      "heat": 280
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 4, "max": 6 },
+      "combat": { "min": 2, "max": 4 }
+    },
+    "typicalAmmunition": ["HE Wgr. 33", "HEAT Gr. 39 H/C"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sturmpanzer_II",
+    "notes": "Short-barrelled 15cm howitzer fitted to the Sturmpanzer II 'Bison' close-support self-propelled gun, providing infantry with mobile heavy fire support against bunkers, fortified positions and massed infantry."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "20/8/-2",
+        "armourPenetration": 6,
+        "suppressionModifier": -5,
+        "characteristics": [
+          "area-12",
+          "indirect"
+        ]
+      },
+      {
+        "id": "heat",
+        "name": "HEAT",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "25/10/-2",
+        "armourPenetration": 10
+      }
+    ]
+  }
+}

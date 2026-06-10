@@ -1,0 +1,50 @@
+{
+  "id": "german-fg-42",
+  "name": "FG 42",
+  "type": "soft",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "502mm",
+    "mounting": ["infantry", "bipod"],
+    "muzzleVelocityMps": {
+      "ball": 760
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 750, "max": 800 },
+      "combat": { "min": 100, "max": 150 }
+    },
+    "typicalAmmunition": ["7.92x57mm Mauser"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/FG_42",
+    "notes": "A select-fire automatic rifle developed for the Fallschirmjäger after the costly Crete airborne operation, intended to replace the rifle, submachine gun and light machine gun in a single weapon. Fired the full-power 7.92x57mm cartridge from a side-mounted 20-round magazine and saw limited but notable use in elite paratrooper actions such as the Gran Sasso raid."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "assault",
+        "name": "Assault",
+        "shots": 4,
+        "hitOn": 6,
+        "rangeModifier": "20/20/-2",
+        "suppressionModifier": -1,
+        "characteristics": [
+          "reliability-3-plus"
+        ]
+      },
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 2,
+        "hitOn": 5,
+        "rangeModifier": "40/20/-1",
+        "suppressionModifier": 0,
+        "characteristics": [
+          "reliability-3-plus"
+        ]
+      }
+    ]
+  }
+}

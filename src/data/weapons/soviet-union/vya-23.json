@@ -1,0 +1,46 @@
+{
+  "id": "soviet-union-vya-23",
+  "name": "23 mm VYa-23",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 23,
+    "barrelLength": "L/80",
+    "mounting": ["aircraft"],
+    "muzzleVelocityMps": {
+      "ap": 905,
+      "strafing": 905
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 550, "max": 600 },
+      "combat": { "min": 300, "max": 400 }
+    },
+    "typicalAmmunition": ["BZT API-T", "OZT HE-T"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/VYa-23",
+    "notes": "High-velocity aircraft autocannon mounted in pairs on the Il-2 Sturmovik from 1941, replacing the earlier ShVAK. Effective against light armoured vehicles and soft-skinned transport during ground-attack sorties."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "ap",
+        "name": "AP",
+        "shots": 3,
+        "hitOn": 6,
+        "rangeModifier": "20/10/-2",
+        "armourPenetration": 3
+      },
+      {
+        "id": "strafing",
+        "name": "Strafing",
+        "shots": 6,
+        "hitOn": 7,
+        "rangeModifier": "20/10/-2",
+        "armourPenetration": 0,
+        "suppressionModifier": -2
+      }
+    ]
+  }
+}

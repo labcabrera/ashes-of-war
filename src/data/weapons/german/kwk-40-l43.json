@@ -1,0 +1,36 @@
+{
+  "id": "german-kwk-40-l43",
+  "name": "7.5 cm KwK 40 L/43",
+  "type": "hard",
+  "faction": "german",
+  "from": 1942,
+  "to": 1943,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 75,
+    "barrelLength": "L/43",
+    "mounting": ["turret", "hull"],
+    "muzzleVelocityMps": {
+      "apcbc": 740,
+      "apcr": 920
+    },
+    "typicalAmmunition": ["APCBC PzGr.39", "APCR PzGr.40", "HE Sprgr.34"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/7.5_cm_KwK_40",
+    "notes": "First long-barrelled 75mm gun fitted to the Panzer IV, introduced on the Ausf. F2/G in early 1942 to counter the T-34 and KV series. Quickly superseded in production by the slightly longer L/48 variant, but still used on early up-gunned Panzer IVs and the StuG III Ausf. F."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 9,
+        "characteristics": [
+          "sustained-fire-5-plus"
+        ]
+      }
+    ]
+  }
+}

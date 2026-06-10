@@ -1,0 +1,51 @@
+{
+  "id": "soviet-union-maxim-m1910",
+  "name": "Maxim M1910",
+  "type": "soft",
+  "faction": "soviet-union",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "L/72",
+    "mounting": ["infantry", "wheeled-mount"],
+    "muzzleVelocityMps": {
+      "ball": 865
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 520, "max": 600 },
+      "combat": { "min": 100, "max": 250 }
+    },
+    "typicalAmmunition": ["7.62x54mmR ball"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/PM_M1910",
+    "notes": "Water-cooled medium machine gun derived from the Maxim design and mounted on the distinctive Sokolov wheeled carriage. It remained the Red Army's standard heavy machine gun throughout the war, prized for its reliability and sustained-fire endurance despite its considerable weight."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 8,
+        "hitOn": 7,
+        "rangeModifier": "35/20/-1",
+        "suppressionModifier": -2,
+        "characteristics": [
+          "reliability-3-plus"
+        ]
+      },
+      {
+        "id": "sustained",
+        "name": "Sustained fire",
+        "shots": 12,
+        "hitOn": 8,
+        "rangeModifier": "35/20/-1",
+        "suppressionModifier": -2,
+        "characteristics": [
+          "reliability-3-plus",
+          "overheat"
+        ]
+      }
+    ]
+  }
+}

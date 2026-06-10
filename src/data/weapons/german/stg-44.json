@@ -1,0 +1,50 @@
+{
+  "id": "german-stg-44",
+  "name": "Sturmgewehr 44",
+  "type": "soft",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "barrelLength": "419mm",
+    "mounting": ["infantry"],
+    "muzzleVelocityMps": {
+      "ball": 685
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 500, "max": 600 },
+      "combat": { "min": 100, "max": 150 }
+    },
+    "typicalAmmunition": ["7.92x33mm Kurz"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/StG_44",
+    "notes": "Widely regarded as the world's first mass-produced assault rifle, the StG 44 fired the intermediate 7.92x33mm Kurz cartridge from a 30-round magazine, combining the firepower of a light machine gun with the handling of a carbine. Issued from mid-1944 in growing numbers to infantry and Waffen-SS units, mainly on the Eastern Front."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "assault",
+        "name": "Assault",
+        "shots": 4,
+        "hitOn": 6,
+        "rangeModifier": "20/20/-2",
+        "suppressionModifier": -1,
+        "characteristics": [
+          "reliability-4-plus"
+        ]
+      },
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "30/20/-1",
+        "suppressionModifier": 0,
+        "characteristics": [
+          "reliability-4-plus"
+        ]
+      }
+    ]
+  }
+}

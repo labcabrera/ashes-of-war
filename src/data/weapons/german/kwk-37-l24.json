@@ -1,0 +1,36 @@
+{
+  "id": "german-kwk-37-l24",
+  "name": "7.5 cm KwK 37 L/24",
+  "type": "hard",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 75,
+    "barrelLength": "L/24",
+    "mounting": ["turret", "hull"],
+    "muzzleVelocityMps": {
+      "apcbc": 385,
+      "he": 450
+    },
+    "typicalAmmunition": ["APCBC PzGr.39", "HEAT Gr.38 Hl", "HE Sprgr.34"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/7.5_cm_KwK_37",
+    "notes": "Short-barrelled, low-velocity infantry support gun fitted to the early Panzer IV (Ausf. A-F1) and the StuG III Ausf. A-E. Excellent HE performance for infantry support but weak anti-armour capability, partially compensated for later by hollow-charge HEAT rounds."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 2,
+        "hitOn": 5,
+        "rangeModifier": "40/20/-1",
+        "armourPenetration": 4,
+        "characteristics": [
+          "area-3"
+        ]
+      }
+    ]
+  }
+}

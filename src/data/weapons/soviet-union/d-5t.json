@@ -1,0 +1,33 @@
+{
+  "id": "soviet-union-d-5t",
+  "name": "85 mm D-5T",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 85,
+    "barrelLength": "L/51.6",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 792,
+      "he": 793
+    },
+    "typicalAmmunition": ["BR-365 APHE", "BR-365P APCR", "OF-365 HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/D-5T_tank_gun",
+    "notes": "85mm tank gun derived from the 52-K anti-aircraft gun, first fitted to the SU-85 self-propelled gun and the initial production batches of the T-34-85 and KV-85 in 1943-44 before being replaced in most T-34-85s by the cheaper, lighter ZiS-S-53."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 11
+      }
+    ]
+  }
+}

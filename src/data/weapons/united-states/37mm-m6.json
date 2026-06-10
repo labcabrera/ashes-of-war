@@ -1,0 +1,43 @@
+{
+  "id": "united-states-37mm-m6",
+  "name": "37 mm M6 L/53.5",
+  "type": "hard",
+  "faction": "united-states",
+  "from": 1940,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 37,
+    "barrelLength": "L/53.5",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "ap": 884,
+      "he": 610
+    },
+    "typicalAmmunition": ["AP M74", "APC M51", "HE M63"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/37_mm_gun_M3",
+    "notes": "Main armament of the M3/M5 Stuart light tank and the secondary turret gun of the M3 Lee. Adequate against early-war light armour but increasingly outclassed against medium and heavy tanks by 1943."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "ap",
+        "name": "AP",
+        "shots": 2,
+        "hitOn": 6,
+        "rangeModifier": "40/10/-1",
+        "armourPenetration": 5
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 2,
+        "hitOn": 6,
+        "rangeModifier": "40/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -1,
+        "characteristics": ["area-2"]
+      }
+    ]
+  }
+}

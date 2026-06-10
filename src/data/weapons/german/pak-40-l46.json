@@ -1,0 +1,33 @@
+{
+  "id": "german-pak-40-l46",
+  "name": "7.5 cm PaK 40 L/46",
+  "type": "hard",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 75,
+    "barrelLength": "L/46",
+    "mounting": ["towed"],
+    "muzzleVelocityMps": {
+      "apcbc": 790,
+      "he": 550
+    },
+    "typicalAmmunition": ["APCBC PzGr.39", "APCR PzGr.40", "HE Sprgr.34", "HL HEAT"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/7.5_cm_Pak_40",
+    "notes": "Germany's standard towed anti-tank gun from 1942 onward, capable of defeating almost all Allied tanks of the period at normal combat ranges. Produced in huge numbers and also fitted to numerous self-propelled chassis."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "50/20/-1",
+        "armourPenetration": 12
+      }
+    ]
+  }
+}

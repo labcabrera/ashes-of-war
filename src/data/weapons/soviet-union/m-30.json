@@ -1,0 +1,38 @@
+{
+  "id": "soviet-union-m-30",
+  "name": "122 mm M-30",
+  "type": "artillery",
+  "faction": "soviet-union",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 122,
+    "barrelLength": "L/22.7",
+    "mounting": ["towed", "hull"],
+    "muzzleVelocityMps": {
+      "he": 515
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 5, "max": 6 },
+      "combat": { "min": 3, "max": 4 }
+    },
+    "typicalAmmunition": ["HE OF-462", "Shrapnel", "HEAT BP-460A"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/122_mm_howitzer_M1938_(M-30)",
+    "notes": "Standard Soviet divisional howitzer of WWII, produced in large numbers from 1939. Towed by truck or horse team and also used as the main armament of the SU-122 self-propelled gun."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "55/28/-2",
+        "armourPenetration": 5,
+        "suppressionModifier": -5,
+        "characteristics": ["area-12", "indirect"]
+      }
+    ]
+  }
+}

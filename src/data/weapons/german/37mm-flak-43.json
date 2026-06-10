@@ -1,0 +1,48 @@
+{
+  "id": "german-37mm-flak-43",
+  "name": "3.7 cm FlaK 43 L/89",
+  "type": "hard",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 37,
+    "barrelLength": "L/89",
+    "mounting": ["towed"],
+    "muzzleVelocityMps": {
+      "ap": 820,
+      "aa": 820
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 150, "max": 250 },
+      "combat": { "min": 60, "max": 80 }
+    },
+    "typicalAmmunition": ["AP-T", "HE-T", "Sprenggranatpatrone"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/3.7_cm_FlaK_43",
+    "notes": "Improved light anti-aircraft gun with a simplified gas-operated mechanism that increased its rate of fire over the earlier FlaK 36/37. Widely used to defend airfields, columns, and key installations against low-flying Allied aircraft, and could also engage light vehicles."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "ap",
+        "name": "AP",
+        "shots": 5,
+        "hitOn": 6,
+        "rangeModifier": "25/12/-1",
+        "armourPenetration": 6
+      },
+      {
+        "id": "aa",
+        "name": "AA",
+        "shots": 5,
+        "hitOn": 5,
+        "rangeModifier": "25/20/-1",
+        "armourPenetration": 2,
+        "characteristics": [
+          "anti-aircraft"
+        ]
+      }
+    ]
+  }
+}

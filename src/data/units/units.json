@@ -32,7 +32,7 @@
       },
       "weapons": [
         {
-          "id": "su-bs-3",
+          "id": "soviet-union-bs-3",
           "count": 1,
           "type": "normal"
         }
@@ -73,7 +73,7 @@
       "casualtiesThreshold": 3,
       "weapons": [
         {
-          "id": "su-m-30",
+          "id": "soviet-union-m-30",
           "count": 1,
           "type": "normal"
         }
@@ -110,7 +110,7 @@
       },
       "weapons": [
         {
-          "id": "su-45mm-m1937",
+          "id": "soviet-union-45mm-m1937",
           "count": 1,
           "type": "normal"
         }
@@ -149,7 +149,7 @@
       },
       "weapons": [
         {
-          "id": "su-45mm-m1942",
+          "id": "soviet-union-45mm-m1942",
           "count": 1,
           "type": "normal"
         }
@@ -188,7 +188,7 @@
       },
       "weapons": [
         {
-          "id": "su-zis-2",
+          "id": "soviet-union-zis-2",
           "count": 1,
           "type": "normal"
         }
@@ -227,7 +227,7 @@
       },
       "weapons": [
         {
-          "id": "su-zis-3",
+          "id": "soviet-union-zis-3",
           "count": 1,
           "type": "normal"
         }
@@ -328,7 +328,7 @@
       },
       "weapons": [
         {
-          "id": "su-d-5t",
+          "id": "soviet-union-d-5t",
           "count": 1,
           "type": "turret"
         }
@@ -388,7 +388,7 @@
       },
       "weapons": [
         {
-          "id": "su-d-25t",
+          "id": "soviet-union-d-25t",
           "count": 1,
           "type": "turret"
         }
@@ -452,7 +452,7 @@
       ],
       "weapons": [
         {
-          "id": "su-ml-20s",
+          "id": "soviet-union-ml-20s",
           "count": 1,
           "type": "hull"
         }
@@ -494,12 +494,12 @@
       ],
       "weapons": [
         {
-          "id": "su-vya-23",
+          "id": "soviet-union-vya-23",
           "count": 2,
           "type": "hull"
         },
         {
-          "id": "su-rs-82",
+          "id": "soviet-union-rs-82",
           "count": 8,
           "type": "hull"
         }
@@ -610,12 +610,12 @@
       ],
       "weapons": [
         {
-          "id": "us-37mm-m6",
+          "id": "united-states-37mm-m6",
           "count": 1,
           "type": "turret"
         },
         {
-          "id": "us-browning-m1919",
+          "id": "united-states-browning-m1919",
           "count": 1,
           "type": "hull"
         }
@@ -678,7 +678,7 @@
       ],
       "weapons": [
         {
-          "id": "su-75mm-m3",
+          "id": "soviet-union-75mm-m3",
           "count": 1,
           "type": "turret"
         }
@@ -741,7 +741,7 @@
       ],
       "weapons": [
         {
-          "id": "su-75mm-m3",
+          "id": "soviet-union-75mm-m3",
           "count": 1,
           "type": "turret"
         }
@@ -804,7 +804,7 @@
       ],
       "weapons": [
         {
-          "id": "su-75mm-m3",
+          "id": "soviet-union-75mm-m3",
           "count": 1,
           "type": "turret"
         }
@@ -867,7 +867,7 @@
       ],
       "weapons": [
         {
-          "id": "su-76mm-m1",
+          "id": "soviet-union-76mm-m1",
           "count": 1,
           "type": "turret"
         }
@@ -930,7 +930,7 @@
       ],
       "weapons": [
         {
-          "id": "su-75mm-m3",
+          "id": "soviet-union-75mm-m3",
           "count": 1,
           "type": "turret"
         }
@@ -1347,7 +1347,7 @@
       ],
       "weapons": [
         {
-          "id": "su-d-10s",
+          "id": "soviet-union-d-10s",
           "count": 1,
           "type": "hull"
         }
@@ -1411,7 +1411,7 @@
       ],
       "weapons": [
         {
-          "id": "su-zis-3",
+          "id": "soviet-union-zis-3",
           "count": 1,
           "type": "hull"
         }
@@ -1474,7 +1474,7 @@
       ],
       "weapons": [
         {
-          "id": "su-d-5t",
+          "id": "soviet-union-d-5t",
           "count": 1,
           "type": "hull"
         }
@@ -1621,7 +1621,7 @@
       "organizationThreshold": 10,
       "weapons": [
         {
-          "id": "su-l-11-76-2",
+          "id": "soviet-union-l-11-76-2",
           "count": 1,
           "type": "turret"
         }
@@ -1681,7 +1681,7 @@
       "organizationThreshold": 10,
       "weapons": [
         {
-          "id": "su-f-32-76-2",
+          "id": "soviet-union-f-32-76-2",
           "count": 1,
           "type": "turret"
         }
@@ -1741,7 +1741,7 @@
       "organizationThreshold": 10,
       "weapons": [
         {
-          "id": "su-f-32-76-2",
+          "id": "soviet-union-f-32-76-2",
           "count": 1,
           "type": "turret"
         }
@@ -1801,7 +1801,7 @@
       "organizationThreshold": 10,
       "weapons": [
         {
-          "id": "su-f-34-76-2",
+          "id": "soviet-union-f-34-76-2",
           "count": 1,
           "type": "turret"
         }

@@ -1,0 +1,43 @@
+{
+  "id": "united-states-browning-m1919",
+  "name": "Browning M1919A4",
+  "type": "soft",
+  "faction": "united-states",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 8,
+    "mounting": ["infantry", "turret", "hull"],
+    "muzzleVelocityMps": {
+      "ball": 853
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 400, "max": 550 },
+      "combat": { "min": 100, "max": 150 }
+    },
+    "typicalAmmunition": [".30-06 Ball M2", ".30-06 AP M2", ".30-06 Tracer M1"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/M1919_Browning_machine_gun",
+    "notes": "Air-cooled, belt-fed medium machine gun used widely by US forces as an infantry support weapon on a tripod and as a coaxial/hull weapon on tanks such as the M4 Sherman. Reliable and ubiquitous throughout the war."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "support",
+        "name": "Support",
+        "shots": 5,
+        "hitOn": 7,
+        "rangeModifier": "25/15/-1",
+        "suppressionModifier": -1
+      },
+      {
+        "id": "precision",
+        "name": "Precision",
+        "shots": 3,
+        "hitOn": 6,
+        "rangeModifier": "35/15/-1",
+        "suppressionModifier": 0
+      }
+    ]
+  }
+}

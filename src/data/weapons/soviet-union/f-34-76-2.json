@@ -1,0 +1,45 @@
+{
+  "id": "soviet-union-f-34-76-2",
+  "name": "76.2 mm F-34",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 76,
+    "barrelLength": "L/41.5",
+    "mounting": ["turret", "hull"],
+    "muzzleVelocityMps": {
+      "apcbc": 662,
+      "he": 680
+    },
+    "typicalAmmunition": ["BR-350A APHE", "BR-350B APHE", "OF-350 HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/F-34_tank_gun",
+    "notes": "The definitive wartime 76.2mm tank gun, fitted to the T-34 from late 1941 and to the early KV-1S. Its longer barrel gave a marked improvement in armour penetration over the L-11 and F-32, and it remained in mass production until the T-34-85 introduced the larger 85mm gun."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 9
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -2,
+        "characteristics": [
+          "area-3"
+        ]
+      }
+    ]
+  }
+}

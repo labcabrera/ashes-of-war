@@ -1,0 +1,45 @@
+{
+  "id": "soviet-union-d-10s",
+  "name": "100 mm D-10S",
+  "type": "hard",
+  "faction": "soviet-union",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 100,
+    "barrelLength": "L/56",
+    "mounting": ["hull"],
+    "muzzleVelocityMps": {
+      "apcbc": 895,
+      "he": 900
+    },
+    "typicalAmmunition": ["BR-412 APHE", "BR-412B APBC", "OF-412 HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/D-10_tank_gun",
+    "notes": "Powerful 100mm gun developed from a naval/coastal piece and fitted to the SU-100 tank destroyer from 1944, giving it the firepower to defeat late-war German heavy tanks at long range. The D-10 family later became the standard armament of the postwar T-54/T-55."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/15/-1",
+        "armourPenetration": 15
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/15/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -3,
+        "characteristics": [
+          "area-4"
+        ]
+      }
+    ]
+  }
+}

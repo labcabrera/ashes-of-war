@@ -4,7 +4,6 @@
  */
 import { describe, expect, it } from 'vitest';
 import { vehicles } from '../../src/data/vehicles';
-import legacyWeaponsData from '../../src/data/weapons/weapons.json';
 import { weaponCatalogueEntries } from '../../src/data/weapons';
 import { UNIT_TYPES, type UnitType, type UnitWeaponMountType } from '../../src/types/unit';
 import type { FactionId } from '../../src/types/faction';
@@ -50,12 +49,7 @@ function isNonNegativeNumber(value: unknown): value is number {
 }
 
 function collectWeaponIds(): Set<string> {
-  const legacyIds =
-    isRecord(legacyWeaponsData) && Array.isArray(legacyWeaponsData.weapons)
-      ? legacyWeaponsData.weapons.flatMap((weapon) => (isRecord(weapon) && isNonEmptyString(weapon.id) ? [weapon.id] : []))
-      : [];
-
-  return new Set([...legacyIds, ...weaponCatalogueEntries.map((weapon) => weapon.id)]);
+  return new Set(weaponCatalogueEntries.map((weapon) => weapon.id));
 }
 
 function validateMeta(value: UnknownRecord, path: string): string[] {
@@ -251,7 +245,7 @@ describe('vehicle catalogue validation', () => {
   });
 
   it('loads the migrated Panzer IV Ausf. G entry with historical and game data', () => {
-    const panzerIV = vehicles.find((vehicle) => vehicle.id === 'german-panzer-iv-ausf-g');
+    const panzerIV = vehicles.find((vehicle) => vehicle.id === 'german-panzer-iv-g');
 
     expect(panzerIV).toBeDefined();
     expect(panzerIV?.type).toBe('tank');

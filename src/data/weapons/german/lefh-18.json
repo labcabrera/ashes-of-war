@@ -1,0 +1,41 @@
+{
+  "id": "german-lefh-18",
+  "name": "10.5 cm leFH 18",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 105,
+    "barrelLength": "L/28",
+    "mounting": ["towed"],
+    "muzzleVelocityMps": {
+      "he": 470
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 4, "max": 6 },
+      "combat": { "min": 3, "max": 4 }
+    },
+    "typicalAmmunition": ["HE Sprgr. 34", "Smoke", "HEAT (Gr. 39 rot Pz)"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/10.5_cm_leFH_18",
+    "notes": "Standard divisional field howitzer of the German Army throughout WWII, equipping the light artillery battalions of infantry and panzer divisions. Later production switched to the leFH 18M with a muzzle brake and the leFH 18/40 on the PaK 40 carriage."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "50/25/-2",
+        "armourPenetration": 4,
+        "suppressionModifier": -4,
+        "characteristics": [
+          "area-12",
+          "indirect"
+        ]
+      }
+    ]
+  }
+}

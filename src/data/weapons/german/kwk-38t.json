@@ -1,0 +1,42 @@
+{
+  "id": "german-kwk-38t",
+  "name": "3,7 cm KwK 38(t)",
+  "type": "hard",
+  "faction": "german",
+  "from": 1939,
+  "to": 1942,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 37,
+    "barrelLength": "L/47.8",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "ap": 750,
+      "he": 530
+    },
+    "typicalAmmunition": ["Pancéřová granát APHE", "Trhavý granát HE"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/3.7_cm_KwK_38(t)",
+    "notes": "Czechoslovak-designed Skoda A7 gun, produced as the main armament of the Panzer 38(t) used extensively by the Wehrmacht in the early war years, including Poland, France and the opening of Barbarossa. Adequate against early-war light and medium tanks but increasingly outclassed from 1941 onward."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "ap",
+        "name": "AP",
+        "shots": 2,
+        "hitOn": 6,
+        "rangeModifier": "40/20/-1",
+        "armourPenetration": 4
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 2,
+        "hitOn": 6,
+        "rangeModifier": "40/20/-1",
+        "armourPenetration": 0,
+        "suppressionModifier": -1
+      }
+    ]
+  }
+}

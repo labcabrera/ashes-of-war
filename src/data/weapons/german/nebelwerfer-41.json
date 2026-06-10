@@ -1,0 +1,42 @@
+{
+  "id": "german-nebelwerfer-41",
+  "name": "15 cm Nebelwerfer 41",
+  "type": "artillery",
+  "faction": "german",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 150,
+    "barrelLength": "L/1.3",
+    "mounting": ["towed"],
+    "muzzleVelocityMps": {
+      "rocket": 340
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 1, "max": 2 },
+      "combat": { "min": 1, "max": 1 }
+    },
+    "typicalAmmunition": ["15cm Wurfgranate 41 Spreng (HE)", "15cm Wurfgranate 41 Nebel (smoke/chemical)"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Nebelwerfer",
+    "notes": "Six-barrelled towed rocket launcher operated by Nebeltruppen units, capable of firing a full salvo of spin-stabilized rockets in about ten seconds. Distinctive howling sound earned it the nickname 'Moaning Minnie' from Allied troops, though its long reload time left crews vulnerable to counter-battery fire."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "salvo",
+        "name": "Salvo",
+        "shots": 6,
+        "hitOn": 5,
+        "rangeModifier": "35/18/-2",
+        "armourPenetration": 3,
+        "suppressionModifier": -3,
+        "characteristics": [
+          "area-8",
+          "indirect",
+          "limited-ammunition-6"
+        ]
+      }
+    ]
+  }
+}

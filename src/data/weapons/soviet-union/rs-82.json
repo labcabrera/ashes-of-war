@@ -1,0 +1,33 @@
+{
+  "id": "soviet-union-rs-82",
+  "name": "RS-82",
+  "type": "artillery",
+  "faction": "soviet-union",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 82,
+    "mounting": ["aircraft"],
+    "muzzleVelocityMps": {
+      "rocket": 340
+    },
+    "typicalAmmunition": ["RS-82 HE rocket"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/RS-82",
+    "notes": "Unguided air-to-ground rocket used by Soviet fighters and the Il-2 Sturmovik against armour, vehicle columns, and troop concentrations. Carried in racks of up to eight under the wings, with poor accuracy compensated by salvo firing."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "rocket",
+        "name": "Rocket",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "15/5/-2",
+        "armourPenetration": 5,
+        "suppressionModifier": -4,
+        "characteristics": ["area-8", "limited-ammunition-8"]
+      }
+    ]
+  }
+}

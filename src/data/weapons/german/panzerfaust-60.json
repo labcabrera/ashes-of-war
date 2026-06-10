@@ -1,0 +1,35 @@
+{
+  "id": "german-panzerfaust-60",
+  "name": "Panzerfaust 60",
+  "type": "hard",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 149,
+    "mounting": ["infantry"],
+    "muzzleVelocityMps": {
+      "heat": 45
+    },
+    "typicalAmmunition": ["HEAT warhead"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panzerfaust",
+    "notes": "Improved version of the disposable recoilless anti-tank weapon, with an effective range of around 60 meters and a shaped-charge warhead capable of penetrating up to 200mm of armour. Issued in vast numbers to infantry and Volkssturm in the final year of the war."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "heat",
+        "name": "HEAT",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "20/10/-1",
+        "armourPenetration": 20,
+        "characteristics": [
+          "heat",
+          "one-shot"
+        ]
+      }
+    ]
+  }
+}

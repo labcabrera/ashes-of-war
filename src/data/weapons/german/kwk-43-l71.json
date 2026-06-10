@@ -1,0 +1,61 @@
+{
+  "id": "german-kwk-43-l71",
+  "name": "8.8 cm KwK 43 L/71",
+  "type": "hard",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 88,
+    "barrelLength": "L/71",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 1000,
+      "apcr": 1130,
+      "he": 600
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 6, "max": 8 },
+      "combat": { "min": 3, "max": 5 }
+    },
+    "typicalAmmunition": ["APCBC PzGr.39/43", "APCR PzGr.40/43", "HE Sprgr.43"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/8.8_cm_KwK_43",
+    "notes": "Definitive long-barrelled 88mm tank gun, fitted to the Tiger II (King Tiger) heavy tank from 1943. Its exceptional muzzle velocity and penetration allowed it to defeat virtually any opposing tank's armour at extreme ranges, though its size and weight strained the chassis it was mounted on."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "50/20/-1",
+        "armourPenetration": 19
+      },
+      {
+        "id": "apcr",
+        "name": "APCR",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "50/20/-1",
+        "armourPenetration": 22,
+        "characteristics": [
+          "limited-ammunition-1"
+        ]
+      },
+      {
+        "id": "he",
+        "name": "HE",
+        "shots": 1,
+        "hitOn": 4,
+        "rangeModifier": "50/20/-1",
+        "armourPenetration": 4,
+        "suppressionModifier": -3,
+        "characteristics": [
+          "area-8"
+        ]
+      }
+    ]
+  }
+}

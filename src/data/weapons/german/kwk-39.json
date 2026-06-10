@@ -1,0 +1,33 @@
+{
+  "id": "german-kwk-39",
+  "name": "5 cm KwK 39",
+  "type": "hard",
+  "faction": "german",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 50,
+    "barrelLength": "L/60",
+    "mounting": ["turret"],
+    "muzzleVelocityMps": {
+      "apcbc": 835,
+      "apcr": 1180
+    },
+    "typicalAmmunition": ["APCBC PzGr.39", "APCR PzGr.40", "HE Sprgr.38"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/5_cm_KwK_39",
+    "notes": "Long-barrelled 50mm gun fitted to the Panzer III Ausf. J-N from 1941, replacing the shorter L/42 KwK 38. It significantly improved the Panzer III's anti-tank performance against Soviet armour, though it was eventually outclassed by heavier Soviet tanks from late 1942 onward."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 2,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 7
+      }
+    ]
+  }
+}
