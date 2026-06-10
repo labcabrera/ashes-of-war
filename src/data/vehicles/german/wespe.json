@@ -1,0 +1,87 @@
+{
+  "id": "german-wespe",
+  "name": "Wespe",
+  "type": "sp-artillery",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "FAMO",
+    "modelFamily": "Panzer II",
+    "crew": 5,
+    "combatWeightTons": 11.0,
+    "engine": "Maybach HL 62 TR, 140 PS",
+    "unitsBuilt": 676,
+    "productionStart": 1943,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 40,
+      "offRoad": 18,
+      "sustainedMarch": 25
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 18,
+        "inclinationDeg": 8
+      },
+      "side": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 5,
+        "inclinationDeg": 0,
+        "notes": "Open-topped fighting compartment housing the 10.5cm leFH 18 howitzer."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Wespe",
+    "notes": "Self-propelled 10.5cm leFH 18/2 light field howitzer on the modified Panzer II Ausf. F chassis, providing the mobile artillery component of panzer division artillery battalions on the Eastern Front."
+  },
+  "game": {
+    "cost": 28,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 24,
+        "crossCountry": 18,
+        "rough": 9
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 18
+      },
+      "side": {
+        "value": 8
+      },
+      "rear": {
+        "value": 8
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 10
+    },
+    "keywords": [
+      "radio"
+    ]
+  }
+}

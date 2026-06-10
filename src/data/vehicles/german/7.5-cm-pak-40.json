@@ -1,0 +1,53 @@
+{
+  "id": "german-7.5-cm-pak-40",
+  "name": "7.5 cm PaK 40",
+  "type": "towed-anti-tank",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Rheinmetall-Borsig",
+    "modelFamily": "PaK 40",
+    "crew": 6,
+    "combatWeightTons": 1.5,
+    "unitsBuilt": 23303,
+    "productionStart": 1941,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/7.5_cm_PaK_40",
+    "notes": "The standard German medium anti-tank gun from 1942 onward, capable of defeating most Allied tanks of the period at normal combat ranges. Its weight made it difficult to manhandle, often requiring the crew to leave it behind during retreats."
+  },
+  "game": {
+    "cost": 24,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 8,
+        "crossCountry": 6,
+        "rough": 3
+      },
+      "dash": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 8
+    },
+    "weapons": [
+      {
+        "id": "german-pak-40-l46",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

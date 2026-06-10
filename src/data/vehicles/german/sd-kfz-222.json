@@ -1,0 +1,55 @@
+{
+  "id": "german-sd-kfz-222",
+  "name": "Sd.Kfz. 222 Armoured Car",
+  "type": "mechanised",
+  "faction": "german",
+  "from": 1939,
+  "to": 1944,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Eisenwerke Weserhütte / Schichau",
+    "modelFamily": "Sd.Kfz. 221/222/223",
+    "crew": 3,
+    "combatWeightTons": 4.8,
+    "engine": "Horch/Auto Union V8, 81 PS",
+    "unitsBuilt": 989,
+    "productionStart": 1936,
+    "productionEnd": 1943,
+    "speedKmh": {
+      "road": 80,
+      "offRoad": 40,
+      "sustainedMarch": 50
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sd._Kfz._222",
+    "notes": "Light 4x4 armoured reconnaissance car widely used by Panzer division reconnaissance battalions, armed with a 2cm KwK 30/38 autocannon and coaxial machine gun in an open-topped turret."
+  },
+  "game": {
+    "cost": 14,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 25,
+        "crossCountry": 19,
+        "rough": 9
+      },
+      "cruise": {
+        "road": 55,
+        "crossCountry": 41,
+        "rough": 21
+      },
+      "dash": {
+        "road": 80,
+        "crossCountry": 60,
+        "rough": 30
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 5,
+      "intelligence": 1
+    },
+    "keywords": [
+      "radio"
+    ]
+  }
+}

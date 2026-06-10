@@ -1,0 +1,100 @@
+{
+  "id": "german-elefant",
+  "name": "Elefant",
+  "type": "tank-destroyer",
+  "faction": "german",
+  "from": 1944,
+  "to": 1944,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Nibelungenwerk (rebuild of Porsche Tiger hulls)",
+    "modelFamily": "Elefant",
+    "crew": 6,
+    "combatWeightTons": 65.0,
+    "engine": "2x Maybach HL 120 TRM, 300 PS each (petrol-electric drive)",
+    "unitsBuilt": 48,
+    "productionStart": 1944,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 20,
+      "offRoad": 10,
+      "sustainedMarch": 13
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 200,
+        "inclinationDeg": 38,
+        "notes": "Bolted 100mm appliqué plate over the original 100mm casemate front."
+      },
+      "side": {
+        "thicknessMM": 80,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 80,
+        "inclinationDeg": 10
+      },
+      "exposed": {
+        "thicknessMM": 30,
+        "inclinationDeg": 0,
+        "notes": "Hull and casemate roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Elefant",
+    "notes": "1944 rebuild of the surviving Ferdinands following the Kursk losses, renamed Elefant by Hitler's order. Improvements included a hull-mounted MG 34 for close defence (a major weakness of the Ferdinand), a commander's cupola, and additional bolted-on glacis armour, at the cost of even higher weight."
+  },
+  "game": {
+    "cost": 58,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 8,
+        "crossCountry": 5,
+        "rough": 2
+      },
+      "cruise": {
+        "road": 20,
+        "crossCountry": 10,
+        "rough": 4
+      },
+      "dash": {
+        "road": 30,
+        "crossCountry": 15,
+        "rough": 6
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 200
+      },
+      "side": {
+        "value": 80
+      },
+      "rear": {
+        "value": 80
+      },
+      "exposed": {
+        "value": 30
+      }
+    },
+    "resourceCosts": {
+      "fuel": 16,
+      "logistics": 15
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-43-l71",
+        "count": 1,
+        "type": "hull"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

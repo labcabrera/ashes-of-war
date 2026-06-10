@@ -1,0 +1,53 @@
+{
+  "id": "german-10.5-cm-lefH-18",
+  "name": "10.5 cm leFH 18",
+  "type": "towed-artillery",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Rheinmetall",
+    "modelFamily": "leFH 18",
+    "crew": 6,
+    "combatWeightTons": 1.985,
+    "unitsBuilt": 11828,
+    "productionStart": 1935,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/10.5_cm_leFH_18",
+    "notes": "Standard light field howitzer of the German divisional artillery throughout the war. Later production switched to the leFH 18M with a muzzle brake to allow more powerful charges, and the leFH 18/40 combined the barrel with the PaK 40 carriage."
+  },
+  "game": {
+    "cost": 21,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 8,
+        "crossCountry": 6,
+        "rough": 3
+      },
+      "dash": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "german-lefh-18",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

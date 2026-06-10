@@ -12,12 +12,10 @@ import ArmySaveManager from '../components/army/ArmySaveManager';
 import ArmyExportImport from '../components/army/ArmyExportImport';
 import ArmyFlowEditor from '../components/army/ArmyFlowEditor';
 import { Army, ArmyNode, ArmyType } from '../types/army';
-import { Unit } from '../types/unit';
 import armyTypesData from '../data/army-types/army-types.json';
-import unitsData from '../data/units/units.json';
+import { allUnits } from '../data/units';
 
 const allArmyTypes = armyTypesData.armyTypes as unknown as ArmyType[];
-const allUnits = unitsData.units as unknown as Unit[];
 
 function rootNode(army: Army): ArmyNode | undefined {
   return army.nodes.find((node) => node.kind === 'army');

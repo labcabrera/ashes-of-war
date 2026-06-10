@@ -1,0 +1,95 @@
+{
+  "id": "german-hummel",
+  "name": "Hummel",
+  "type": "sp-artillery",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Deutsche Eisenwerke / Alkett",
+    "modelFamily": "Geschützwagen III/IV",
+    "crew": 5,
+    "combatWeightTons": 24.0,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 714,
+    "productionStart": 1943,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 42,
+      "offRoad": 18,
+      "sustainedMarch": 25
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 30,
+        "inclinationDeg": 8
+      },
+      "side": {
+        "thicknessMM": 20,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0,
+        "notes": "Open-topped fighting compartment; crew protected only by thin shields against shrapnel."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hummel_(vehicle)",
+    "notes": "Self-propelled heavy howitzer mounting the 15cm sFH 18/1 on a hybrid Panzer III/IV chassis (Geschützwagen III/IV). Provided mobile heavy artillery support to panzer divisions from the Eastern Front campaigns of 1943 onward."
+  },
+  "game": {
+    "cost": 38,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 24,
+        "crossCountry": 18,
+        "rough": 9
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 30
+      },
+      "side": {
+        "value": 20
+      },
+      "rear": {
+        "value": 15
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 12
+    },
+    "weapons": [
+      {
+        "id": "german-sfh-18",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "open-topped",
+      "radio"
+    ]
+  }
+}

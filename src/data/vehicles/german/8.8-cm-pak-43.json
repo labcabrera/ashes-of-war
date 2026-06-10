@@ -1,0 +1,53 @@
+{
+  "id": "german-8.8-cm-pak-43",
+  "name": "8.8 cm PaK 43",
+  "type": "towed-anti-tank",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Krupp / Rheinmetall-Borsig",
+    "modelFamily": "PaK 43",
+    "crew": 8,
+    "combatWeightTons": 4.4,
+    "unitsBuilt": 2098,
+    "productionStart": 1943,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/8.8_cm_PaK_43",
+    "notes": "Late-war high-velocity heavy anti-tank gun, the towed counterpart of the gun fitted to the Tiger II and Jagdpanther. Capable of penetrating any Allied tank of the war at long range, but its great weight and low silhouette-to-bulk ratio made emplacement and concealment slow and difficult."
+  },
+  "game": {
+    "cost": 42,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 8,
+        "crossCountry": 6,
+        "rough": 3
+      },
+      "dash": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 12
+    },
+    "weapons": [
+      {
+        "id": "german-pak-43-l71",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "german-jagdpanther",
+  "name": "Jagdpanther",
+  "type": "tank-destroyer",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "MIAG / MNH",
+    "modelFamily": "Panther",
+    "crew": 5,
+    "combatWeightTons": 45.5,
+    "engine": "Maybach HL 230 P30, 700 PS",
+    "unitsBuilt": 415,
+    "productionStart": 1944,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 46,
+      "offRoad": 24,
+      "sustainedMarch": 30
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 80,
+        "inclinationDeg": 50,
+        "notes": "Sloped casemate front plate."
+      },
+      "side": {
+        "thicknessMM": 50,
+        "inclinationDeg": 30
+      },
+      "rear": {
+        "thicknessMM": 40,
+        "inclinationDeg": 30
+      },
+      "exposed": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0,
+        "notes": "Hull and casemate roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jagdpanther",
+    "notes": "Widely regarded as one of the most effective tank destroyers of the war, combining the Panther's mobility and sloped armour with the powerful 8.8 cm PaK 43/3 in a low fixed casemate. Chronic shortages limited numbers fielded despite its excellent design."
+  },
+  "game": {
+    "cost": 60,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 16,
+        "crossCountry": 12,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 32,
+        "crossCountry": 24,
+        "rough": 12
+      },
+      "dash": {
+        "road": 46,
+        "crossCountry": 35,
+        "rough": 17
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 80
+      },
+      "side": {
+        "value": 50
+      },
+      "rear": {
+        "value": 40
+      },
+      "exposed": {
+        "value": 15
+      }
+    },
+    "resourceCosts": {
+      "fuel": 12,
+      "logistics": 12
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-43-l71",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

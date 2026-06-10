@@ -1,0 +1,97 @@
+{
+  "id": "german-sd-kfz-251-1",
+  "name": "Sd.Kfz. 251/1",
+  "type": "mechanised",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Hanomag (chassis) / Büssing-NAG (hull)",
+    "modelFamily": "Sd.Kfz. 251",
+    "crew": 2,
+    "combatWeightTons": 8.0,
+    "engine": "Maybach HL 42 TUKRM, 100 PS",
+    "unitsBuilt": 15252,
+    "productionStart": 1939,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 53,
+      "offRoad": 25,
+      "sustainedMarch": 35
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 14.5,
+        "inclinationDeg": 15
+      },
+      "side": {
+        "thicknessMM": 8,
+        "inclinationDeg": 15
+      },
+      "rear": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 6,
+        "inclinationDeg": 0,
+        "notes": "Open-topped troop compartment roof and floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sd._Kfz._251",
+    "notes": "The standard German medium half-track personnel carrier ('Hanomag'), forming the backbone of the Panzergrenadier units. The /1 variant carried a squad of infantry with two MG 34/42 machine guns, one on a front pedestal mount and one at the rear."
+  },
+  "game": {
+    "cost": 12,
+    "organizationThreshold": 8,
+    "movement": {
+      "tactical": {
+        "road": 16,
+        "crossCountry": 12,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 35,
+        "crossCountry": 20,
+        "rough": 10
+      },
+      "dash": {
+        "road": 53,
+        "crossCountry": 25,
+        "rough": 12
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 15
+      },
+      "side": {
+        "value": 8
+      },
+      "rear": {
+        "value": 8
+      },
+      "exposed": {
+        "value": 3
+      }
+    },
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 3
+    },
+    "weapons": [
+      {
+        "id": "german-mg-34-42",
+        "count": 2,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "open-topped",
+      "half-track",
+      "transport-10",
+      "radio"
+    ]
+  }
+}

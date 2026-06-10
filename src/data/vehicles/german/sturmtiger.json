@@ -1,0 +1,68 @@
+{
+  "id": "german-sturmtiger",
+  "name": "Sturmtiger",
+  "type": "assault-gun",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Alkett",
+    "modelFamily": "Sturmtiger",
+    "crew": 5,
+    "combatWeightTons": 65.0,
+    "engine": "Maybach HL 230 P45, 700 PS",
+    "unitsBuilt": 18,
+    "productionStart": 1944,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 38,
+      "offRoad": 14,
+      "sustainedMarch": 18
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 150,
+        "inclinationDeg": 47,
+        "notes": "Heavily sloped cast superstructure front, based on the Tiger I hull glacis with an additional armoured mantlet for the rocket launcher."
+      },
+      "side": {
+        "thicknessMM": 80,
+        "inclinationDeg": 0,
+        "notes": "Tiger I hull side armour, retained unchanged."
+      },
+      "rear": {
+        "thicknessMM": 80,
+        "inclinationDeg": 8,
+        "notes": "Tiger I hull rear plate."
+      },
+      "exposed": {
+        "thicknessMM": 25,
+        "inclinationDeg": 0,
+        "notes": "Superstructure and hull roof."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sturmtiger",
+    "notes": "Extremely rare close-assault vehicle built on the Tiger I chassis, mounting the 38 cm RW 61 rocket launcher firing massive demolition rockets primarily intended for reducing fortified urban positions, as seen during the Warsaw Uprising."
+  },
+  "game": {
+    "cost": 75,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": { "road": 8, "crossCountry": 6, "rough": 3 },
+      "cruise": { "road": 18, "crossCountry": 14, "rough": 7 },
+      "dash": { "road": 40, "crossCountry": 30, "rough": 15 }
+    },
+    "armor": {
+      "front": { "value": 150 },
+      "side": { "value": 80 },
+      "rear": { "value": 80 },
+      "exposed": { "value": 25 }
+    },
+    "resourceCosts": { "fuel": 15, "logistics": 15 },
+    "weapons": [
+      { "id": "german-rw-61", "count": 1, "type": "hull" }
+    ],
+    "keywords": ["radio"]
+  }
+}

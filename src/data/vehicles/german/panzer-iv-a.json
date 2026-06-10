@@ -1,0 +1,100 @@
+{
+  "id": "german-panzer-iv-a",
+  "name": "Panzer IV Ausf. A",
+  "type": "tank",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Krupp-Gruson",
+    "modelFamily": "Panzer IV",
+    "crew": 5,
+    "combatWeightTons": 17.3,
+    "engine": "Maybach HL 108 TR, 250 PS",
+    "unitsBuilt": 35,
+    "productionStart": 1936,
+    "productionEnd": 1937,
+    "speedKmh": {
+      "road": 31,
+      "offRoad": 14,
+      "sustainedMarch": 20
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 15,
+        "inclinationDeg": 12,
+        "notes": "Hull glacis and turret front; thin pre-war armour basis."
+      },
+      "side": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 10,
+        "inclinationDeg": 8
+      },
+      "exposed": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0,
+        "notes": "Hull and turret roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panzer_IV",
+    "notes": "Initial production version, fitted with the short 7.5 cm KwK 37 L/24 support gun and only lightly armoured; built in small numbers and used in the Polish campaign of 1939."
+  },
+  "game": {
+    "cost": 32,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
+      },
+      "cruise": {
+        "road": 32,
+        "crossCountry": 24,
+        "rough": 12
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 80
+      },
+      "side": {
+        "value": 30
+      },
+      "rear": {
+        "value": 20
+      },
+      "exposed": {
+        "value": 10
+      }
+    },
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-37-l24",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "coaxial"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

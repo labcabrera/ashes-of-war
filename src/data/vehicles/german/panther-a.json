@@ -1,0 +1,100 @@
+{
+  "id": "german-panther-a",
+  "name": "Panther Ausf. A",
+  "type": "tank",
+  "faction": "german",
+  "from": 1943,
+  "to": 1944,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "MAN / Daimler-Benz / MNH / Demag",
+    "modelFamily": "Panther",
+    "crew": 5,
+    "combatWeightTons": 45.5,
+    "engine": "Maybach HL 230 P30, 700 PS",
+    "unitsBuilt": 2200,
+    "productionStart": 1943,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 46,
+      "offRoad": 24,
+      "sustainedMarch": 30
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 80,
+        "inclinationDeg": 55,
+        "notes": "Glacis plate; turret mantlet was a thicker rounded casting."
+      },
+      "side": {
+        "thicknessMM": 40,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 40,
+        "inclinationDeg": 30
+      },
+      "exposed": {
+        "thicknessMM": 16,
+        "inclinationDeg": 0,
+        "notes": "Hull and turret roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panther_tank",
+    "notes": "The Ausf. A introduced a new cast turret with a ball-mounted hull machine gun and an improved commander's cupola, replacing the Ausf. D's turret design."
+  },
+  "game": {
+    "cost": 60,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
+      },
+      "cruise": {
+        "road": 35,
+        "crossCountry": 26,
+        "rough": 13
+      },
+      "dash": {
+        "road": 46,
+        "crossCountry": 35,
+        "rough": 17
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 80
+      },
+      "side": {
+        "value": 40
+      },
+      "rear": {
+        "value": 30
+      },
+      "exposed": {
+        "value": 15
+      }
+    },
+    "resourceCosts": {
+      "fuel": 12,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-42-l70",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "coaxial"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

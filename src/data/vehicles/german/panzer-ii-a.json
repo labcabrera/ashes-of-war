@@ -1,0 +1,99 @@
+{
+  "id": "german-panzer-ii-a",
+  "name": "Panzer II Ausf. A",
+  "type": "tank",
+  "faction": "german",
+  "from": 1936,
+  "to": 1942,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "MAN / Daimler-Benz / Henschel / Wegmann and others",
+    "modelFamily": "Panzer II",
+    "crew": 3,
+    "combatWeightTons": 8.9,
+    "engine": "Maybach HL 62 TR, 140 PS",
+    "unitsBuilt": 1088,
+    "productionStart": 1936,
+    "productionEnd": 1937,
+    "speedKmh": {
+      "road": 40,
+      "offRoad": 20,
+      "sustainedMarch": 26
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 14,
+        "inclinationDeg": 10
+      },
+      "side": {
+        "thicknessMM": 14,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 14,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 6,
+        "inclinationDeg": 0,
+        "notes": "Hull and turret roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panzer_II",
+    "notes": "Light tank intended as a stop-gap pending production of the Panzer III and IV; armed with a 2 cm KwK 30 autocannon, it formed a major part of the panzer divisions during the early war years before being relegated to reconnaissance roles."
+  },
+  "game": {
+    "cost": 18,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 20,
+        "crossCountry": 15,
+        "rough": 8
+      },
+      "cruise": {
+        "road": 35,
+        "crossCountry": 26,
+        "rough": 13
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 14
+      },
+      "side": {
+        "value": 14
+      },
+      "rear": {
+        "value": 14
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 4,
+      "logistics": 4
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-30-l55",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "coaxial"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

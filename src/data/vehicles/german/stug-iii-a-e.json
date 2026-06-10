@@ -1,0 +1,66 @@
+{
+  "id": "german-stug-iii-a-e",
+  "name": "StuG III Ausf. A-E",
+  "type": "assault-gun",
+  "faction": "german",
+  "from": 1940,
+  "to": 1940,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Daimler-Benz / Alkett",
+    "modelFamily": "StuG III",
+    "crew": 4,
+    "combatWeightTons": 20.2,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 850,
+    "productionStart": 1940,
+    "productionEnd": 1942,
+    "speedKmh": {
+      "road": 40,
+      "offRoad": 17,
+      "sustainedMarch": 25
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 50,
+        "inclinationDeg": 9,
+        "notes": "Superstructure and hull glacis; some late Ausf. E vehicles received appliqué plates raising this to ~80mm."
+      },
+      "side": {
+        "thicknessMM": 30,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 30,
+        "inclinationDeg": 10
+      },
+      "exposed": {
+        "thicknessMM": 11,
+        "inclinationDeg": 0,
+        "notes": "Superstructure and hull roof."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/StuG_III",
+    "notes": "Early production batches (Ausf. A through E) armed with the short 7.5 cm StuK 37 L/24 for direct-fire infantry support; Ausf. D and E added radio equipment and slightly thicker armour."
+  },
+  "game": {
+    "cost": 25,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": { "road": 15, "crossCountry": 11, "rough": 6 },
+      "cruise": { "road": 30, "crossCountry": 23, "rough": 11 },
+      "dash": { "road": 40, "crossCountry": 30, "rough": 15 }
+    },
+    "armor": {
+      "front": { "value": 50 },
+      "side": { "value": 30 },
+      "rear": { "value": 30 },
+      "exposed": { "value": 10 }
+    },
+    "resourceCosts": { "fuel": 5, "logistics": 5 },
+    "weapons": [
+      { "id": "german-kwk-37-l24", "count": 1, "type": "hull" }
+    ],
+    "keywords": ["radio"]
+  }
+}

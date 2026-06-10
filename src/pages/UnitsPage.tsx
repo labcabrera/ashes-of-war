@@ -30,7 +30,7 @@ import WeaponFilters from '../components/weapons/WeaponFilters';
 import { Unit } from '../types/unit';
 import { Weapon } from '../types/weapon';
 import type { FactionId } from '../types/faction';
-import unitsData from '../data/units/units.json';
+import { allUnits } from '../data/units';
 import weaponsData from '../data/weapons/weapons.json';
 import { weaponFactionId } from '../utils/images';
 
@@ -66,11 +66,11 @@ export default function UnitsPage() {
   }
 
   const factions = useMemo(() => {
-    const all = (unitsData.units as unknown as Unit[]).map((u) => u.faction);
+    const all = allUnits.map((u) => u.faction);
     return [...new Set(all)].sort();
   }, []);
 
-  const catalogueUnits = unitsData.units as unknown as Unit[];
+  const catalogueUnits = allUnits;
   const weapons = weaponsData.weapons as unknown as Weapon[];
   const selectedWeapon = useMemo(() => {
     const weaponId = searchParams.get('weapon');

@@ -1,0 +1,95 @@
+{
+  "id": "german-nashorn",
+  "name": "Nashorn (Hornisse)",
+  "type": "tank-destroyer",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Deutsche Eisenwerke / Alkett",
+    "modelFamily": "Geschützwagen III/IV",
+    "crew": 5,
+    "combatWeightTons": 24.0,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 494,
+    "productionStart": 1943,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 40,
+      "offRoad": 20,
+      "sustainedMarch": 26
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 30,
+        "inclinationDeg": 21,
+        "notes": "Geschützwagen III/IV hull glacis."
+      },
+      "side": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 5,
+        "inclinationDeg": 0,
+        "notes": "Tall open-topped fighting compartment with thin shielding only."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Nashorn",
+    "notes": "Originally named Hornisse ('Hornet'), renamed Nashorn ('Rhinoceros') in early 1944. Built on a purpose-designed hybrid Panzer III/IV chassis to mount the powerful 8.8 cm PaK 43/1, giving it the firepower to defeat any Allied tank at long range despite its thin, open-topped armour."
+  },
+  "game": {
+    "cost": 45,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 15,
+        "crossCountry": 11,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
+      },
+      "dash": {
+        "road": 42,
+        "crossCountry": 32,
+        "rough": 16
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 30
+      },
+      "side": {
+        "value": 15
+      },
+      "rear": {
+        "value": 10
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 10,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-43-l71",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "german-kwk-40-l48",
+  "name": "7.5 cm KwK 40 L/48",
+  "type": "hard",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "caliberMM": 75,
+    "barrelLength": "L/48",
+    "mounting": ["turret", "hull"],
+    "muzzleVelocityMps": {
+      "apcbc": 750,
+      "apcr": 930
+    },
+    "rateOfFirePerMinute": {
+      "theoretical": { "min": 10, "max": 12 },
+      "combat": { "min": 6, "max": 8 }
+    },
+    "typicalAmmunition": ["APCBC PzGr.39", "APCR PzGr.40", "HE Sprgr.34"],
+    "sourceUrl": "https://en.wikipedia.org/wiki/7.5_cm_KwK_40",
+    "notes": "Long-barrelled 75mm tank gun fitted to the Panzer IV Ausf. G-J and the StuG III/IV from 1942 onward."
+  },
+  "game": {
+    "profiles": [
+      {
+        "id": "apcbc",
+        "name": "APCBC",
+        "shots": 1,
+        "hitOn": 5,
+        "rangeModifier": "50/10/-1",
+        "armourPenetration": 10,
+        "characteristics": ["sustained-fire-5-plus"]
+      }
+    ]
+  }
+}

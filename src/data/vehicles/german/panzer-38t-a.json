@@ -1,0 +1,104 @@
+{
+  "id": "german-panzer-38t-a",
+  "name": "Panzer 38(t) Ausf. A",
+  "type": "tank",
+  "faction": "german",
+  "from": 1939,
+  "to": 1942,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "ČKD (BMM)",
+    "modelFamily": "Panzer 38(t)",
+    "crew": 4,
+    "combatWeightTons": 9.4,
+    "engine": "Praga EPA, 125 PS",
+    "unitsBuilt": 150,
+    "productionStart": 1939,
+    "productionEnd": 1939,
+    "speedKmh": {
+      "road": 42,
+      "offRoad": 20,
+      "sustainedMarch": 28
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 25,
+        "inclinationDeg": 12
+      },
+      "side": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 15,
+        "inclinationDeg": 8
+      },
+      "exposed": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0,
+        "notes": "Hull and turret roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panzer_38(t)",
+    "notes": "Originally the Czechoslovak LT vz. 38, absorbed into Wehrmacht service after the occupation of Czechoslovakia and renamed Panzer 38(t); the Ausf. A was the first German production batch, used extensively in the Polish and French campaigns."
+  },
+  "game": {
+    "cost": 20,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
+      },
+      "cruise": {
+        "road": 34,
+        "crossCountry": 26,
+        "rough": 13
+      },
+      "dash": {
+        "road": 42,
+        "crossCountry": 32,
+        "rough": 16
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 25
+      },
+      "side": {
+        "value": 15
+      },
+      "rear": {
+        "value": 15
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 4,
+      "logistics": 4
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-38t",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "german-mg-37t",
+        "count": 1,
+        "type": "coaxial"
+      },
+      {
+        "id": "german-mg-37t",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

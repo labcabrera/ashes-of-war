@@ -1,0 +1,53 @@
+{
+  "id": "german-15cm-sfh-18",
+  "name": "15 cm sFH 18",
+  "type": "towed-artillery",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Rheinmetall / Krupp",
+    "modelFamily": "sFH 18",
+    "crew": 8,
+    "combatWeightTons": 5.51,
+    "unitsBuilt": 5403,
+    "productionStart": 1933,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/15_cm_sFH_18",
+    "notes": "Standard heavy field howitzer of German corps-level artillery, designed jointly by Rheinmetall (carriage) and Krupp (barrel). Its weight made it slow to redeploy, leading to the later self-propelled Hummel mounting."
+  },
+  "game": {
+    "cost": 28,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 6,
+        "crossCountry": 4,
+        "rough": 2
+      },
+      "dash": {
+        "road": 9,
+        "crossCountry": 6,
+        "rough": 4
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 4,
+      "logistics": 14
+    },
+    "weapons": [
+      {
+        "id": "german-sfh-18",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

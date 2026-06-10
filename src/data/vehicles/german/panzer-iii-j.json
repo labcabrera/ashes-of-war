@@ -1,0 +1,100 @@
+{
+  "id": "german-panzer-iii-j",
+  "name": "Panzer III Ausf. J",
+  "type": "tank",
+  "faction": "german",
+  "from": 1941,
+  "to": 1943,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Daimler-Benz / MAN / Henschel and others",
+    "modelFamily": "Panzer III",
+    "crew": 5,
+    "combatWeightTons": 21.5,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 2616,
+    "productionStart": 1941,
+    "productionEnd": 1942,
+    "speedKmh": {
+      "road": 40,
+      "offRoad": 19,
+      "sustainedMarch": 25
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 50,
+        "inclinationDeg": 9,
+        "notes": "Hull glacis and turret front; some late Ausf. J received an additional 20mm bolted appliqué plate."
+      },
+      "side": {
+        "thicknessMM": 30,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 30,
+        "inclinationDeg": 10
+      },
+      "exposed": {
+        "thicknessMM": 16,
+        "inclinationDeg": 0,
+        "notes": "Hull and turret roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panzer_III",
+    "notes": "The most numerous Panzer III variant, introducing the 5 cm KwK 38 L/42 gun (later upgraded to the longer L/60 on the Ausf. J/1) and increased base armour of 50mm; formed the backbone of the panzer divisions during 1941-1942."
+  },
+  "game": {
+    "cost": 25,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 20,
+        "crossCountry": 15,
+        "rough": 8
+      },
+      "cruise": {
+        "road": 35,
+        "crossCountry": 26,
+        "rough": 13
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 50
+      },
+      "side": {
+        "value": 30
+      },
+      "rear": {
+        "value": 20
+      },
+      "exposed": {
+        "value": 10
+      }
+    },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-39",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "coaxial"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

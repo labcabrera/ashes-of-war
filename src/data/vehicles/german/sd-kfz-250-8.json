@@ -1,0 +1,101 @@
+{
+  "id": "german-sd-kfz-250-8",
+  "name": "Sd.Kfz. 250/8 (Stummel)",
+  "type": "mechanised",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Demag / Büssing-NAG",
+    "modelFamily": "Sd.Kfz. 250",
+    "crew": 4,
+    "combatWeightTons": 6.0,
+    "engine": "Maybach HL 42 TRKM, 100 PS",
+    "unitsBuilt": 250,
+    "productionStart": 1943,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 60,
+      "offRoad": 25,
+      "sustainedMarch": 35
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 15,
+        "inclinationDeg": 30
+      },
+      "side": {
+        "thicknessMM": 8,
+        "inclinationDeg": 22
+      },
+      "rear": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 6,
+        "inclinationDeg": 0,
+        "notes": "Open-topped fighting compartment."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sd._Kfz._250",
+    "notes": "Light half-track variant fitted with the short 7.5cm KwK 37 L/24 gun (the same as on early Panzer IVs and the Sd.Kfz. 251/9) in an open pedestal mount, providing close support fire for armoured reconnaissance units. Nicknamed 'Stummel' (stump) due to the short gun barrel."
+  },
+  "game": {
+    "cost": 24,
+    "organizationThreshold": 8,
+    "movement": {
+      "tactical": {
+        "road": 14,
+        "crossCountry": 10,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 32,
+        "crossCountry": 19,
+        "rough": 9
+      },
+      "dash": {
+        "road": 48,
+        "crossCountry": 23,
+        "rough": 11
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 15
+      },
+      "side": {
+        "value": 8
+      },
+      "rear": {
+        "value": 8
+      },
+      "exposed": {
+        "value": 3
+      }
+    },
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-37-l24",
+        "count": 1,
+        "type": "hull"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "open-topped",
+      "half-track",
+      "radio"
+    ]
+  }
+}

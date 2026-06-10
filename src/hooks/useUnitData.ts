@@ -5,7 +5,7 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Unit, UnitType, UnitKeyword } from '../types/unit';
-import unitsData from '../data/units/units.json';
+import { allUnits } from '../data/units';
 import type { FactionId } from '../types/faction';
 
 interface UnitFilters {
@@ -27,8 +27,6 @@ interface UseUnitDataResult {
   setYear: (year: number | '') => void;
   isOutOfYear: (unit: Unit) => boolean;
 }
-
-const allUnits = unitsData.units as unknown as Unit[];
 
 const availableKeywords = [...new Set(allUnits.flatMap((u) => u.keywords ?? []))]
   .filter((kw) => !/-\d+$/.test(kw))

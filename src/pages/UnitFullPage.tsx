@@ -8,6 +8,7 @@ import {
   Chip,
   Container,
   Divider,
+  Link as MuiLink,
   Paper,
   Stack,
   Table,
@@ -26,10 +27,12 @@ import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link as RouterLink, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import unitsData from '../data/units/units.json';
+import { allUnits } from '../data/units';
+import { vehicles } from '../data/vehicles';
 import weaponsData from '../data/weapons/weapons.json';
 import { getDescription } from '../i18n/descriptions';
 import type { Armor, Unit, UnitType, UnitWeapon } from '../types/unit';
+import type { VehicleCatalogueEntry } from '../types/vehicle';
 import type { Weapon } from '../types/weapon';
 import { unitImageUrl } from '../utils/images';
 
@@ -48,7 +51,7 @@ const UNIT_ICONS = {
   aircraft: FlightIcon,
 } satisfies Record<UnitType, typeof MilitaryTechIcon>;
 
-const units = unitsData.units as unknown as Unit[];
+const units = allUnits;
 const weapons = weaponsData.weapons as unknown as Weapon[];
 
 function getWeapon(assignment: UnitWeapon) {
@@ -154,6 +157,84 @@ function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
   );
 }
 
+function HistoricalSpecs({ entry }: { entry: VehicleCatalogueEntry }) {
+  const { t } = useTranslation();
+  const { historical } = entry;
+
+  const fields: Array<{ label: string; value: string }> = [];
+  if (historical.speedKmh) {
+    const { road, offRoad, sustainedMarch } = historical.speedKmh;
+    fields.push({
+      label: t('units.detail.historical.speed'),
+      value: `${t('units.detail.historical.road')} ${road} · ${t('units.detail.historical.offRoad')} ${offRoad} · ${t('units.detail.historical.sustainedMarch')} ${sustainedMarch}`,
+    });
+  }
+  if (historical.crew !== undefined) {
+    fields.push({ label: t('units.detail.historical.crew'), value: String(historical.crew) });
+  }
+  if (historical.combatWeightTons !== undefined) {
+    fields.push({ label: t('units.detail.historical.weight'), value: `${historical.combatWeightTons} t` });
+  }
+  if (historical.engine) {
+    fields.push({ label: t('units.detail.historical.engine'), value: historical.engine });
+  }
+  if (historical.manufacturer) {
+    fields.push({
+      label: t('units.detail.historical.manufacturer'),
+      value: historical.modelFamily ? `${historical.manufacturer} (${historical.modelFamily})` : historical.manufacturer,
+    });
+  }
+  if (historical.productionStart !== undefined || historical.productionEnd !== undefined) {
+    fields.push({
+      label: t('units.detail.historical.production'),
+      value: `${historical.productionStart ?? '?'}-${historical.productionEnd ?? '?'}`,
+    });
+  }
+  if (historical.unitsBuilt !== undefined) {
+    fields.push({ label: t('units.detail.historical.unitsBuilt'), value: historical.unitsBuilt.toLocaleString() });
+  }
+
+  if (fields.length === 0 && !historical.notes && !historical.sourceUrl) {
+    return null;
+  }
+
+  return (
+    <>
+      <Divider sx={{ my: 3 }} />
+      <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
+        {t('units.detail.historical.title')}
+      </Typography>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 2, mb: 2 }}>
+        {fields.map((field) => (
+          <Box key={field.label}>
+            <Typography variant="caption" color="text.secondary">
+              {field.label}
+            </Typography>
+            <Typography variant="body1">{field.value}</Typography>
+          </Box>
+        ))}
+      </Box>
+      {historical.notes && (
+        <Typography color="text.secondary" sx={{ mb: 1.5, whiteSpace: 'pre-line' }}>
+          {historical.notes}
+        </Typography>
+      )}
+      {historical.sourceUrl && (
+        <Button
+          component={MuiLink}
+          href={historical.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          endIcon={<OpenInNewIcon fontSize="small" />}
+          sx={{ textTransform: 'none', px: 0 }}
+        >
+          {t('units.detail.historical.source')}
+        </Button>
+      )}
+    </>
+  );
+}
+
 export default function UnitFullPage() {
   const { t, i18n } = useTranslation();
   const { unitId } = useParams();
@@ -172,6 +253,7 @@ export default function UnitFullPage() {
   }
 
   const assignedWeapons = unit.weapons ?? [];
+  const vehicleEntry = vehicles.find((vehicle) => vehicle.id === unit.id);
   const description =
     getDescription('units', unit.id, i18n.resolvedLanguage) ??
     getDescription('types', unit.type, i18n.resolvedLanguage);
@@ -341,6 +423,8 @@ export default function UnitFullPage() {
           )}
         </Box>
       </Box>
+
+      {vehicleEntry && <HistoricalSpecs entry={vehicleEntry} />}
 
       {description && (
         <>

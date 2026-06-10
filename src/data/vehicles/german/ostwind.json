@@ -1,0 +1,98 @@
+{
+  "id": "german-ostwind",
+  "name": "Ostwind (Flakpanzer IV)",
+  "type": "sp-anti-aircraft",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Deutsche Eisenwerke / Ostbau Sagan",
+    "modelFamily": "Panzer IV",
+    "crew": 5,
+    "combatWeightTons": 25.0,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 43,
+    "productionStart": 1944,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 38,
+      "offRoad": 16,
+      "sustainedMarch": 25
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 80,
+        "inclinationDeg": 10,
+        "notes": "Panzer IV hull glacis retained unchanged from the gun-tank chassis."
+      },
+      "side": {
+        "thicknessMM": 30,
+        "inclinationDeg": 0,
+        "notes": "Hull side plate plus the open nine-sided turret's vertical armour."
+      },
+      "rear": {
+        "thicknessMM": 20,
+        "inclinationDeg": 8
+      },
+      "exposed": {
+        "thicknessMM": 3,
+        "inclinationDeg": 0,
+        "notes": "Open-topped turret roof, fully exposing the gun crew to overhead fire and air attack."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Flakpanzer_IV",
+    "notes": "Improved Flakpanzer IV mounting a single 3.7cm FlaK 43 in a fully rotating, open-topped nine-sided turret, giving better all-round protection and traverse than the Möbelwagen. Built in small numbers in the closing months of the war."
+  },
+  "game": {
+    "cost": 30,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
+      },
+      "cruise": {
+        "road": 32,
+        "crossCountry": 24,
+        "rough": 12
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 80
+      },
+      "side": {
+        "value": 30
+      },
+      "rear": {
+        "value": 20
+      },
+      "exposed": {
+        "value": 3
+      }
+    },
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "german-37mm-flak-43",
+        "count": 1,
+        "type": "turret"
+      }
+    ],
+    "keywords": [
+      "anti-air",
+      "open-topped",
+      "radio"
+    ]
+  }
+}

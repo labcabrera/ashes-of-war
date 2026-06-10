@@ -13,10 +13,9 @@ import {
   isCurrentArmiesStore,
   migrateArmiesStore,
 } from './migrations/armies';
-import unitsData from '../data/units/units.json';
+import { allUnits } from '../data/units';
 
 const ARMIES_KEY = 'aow:armies';
-const allUnits = unitsData.units as unknown as Unit[];
 
 function findUnit(unitId: string): Unit | undefined {
   return allUnits.find((unit) => unit.id === unitId);

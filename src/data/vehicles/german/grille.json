@@ -1,0 +1,94 @@
+{
+  "id": "german-grille",
+  "name": "Sturmpanzer 38(t) Grille",
+  "type": "sp-artillery",
+  "faction": "german",
+  "from": 1943,
+  "to": 1944,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "BMM (Böhmisch-Mährische Maschinenfabrik)",
+    "modelFamily": "Panzer 38(t)",
+    "crew": 4,
+    "combatWeightTons": 11.5,
+    "engine": "Praga AC/2, 150 PS",
+    "unitsBuilt": 478,
+    "productionStart": 1943,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 35,
+      "offRoad": 16,
+      "sustainedMarch": 22
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 25,
+        "inclinationDeg": 10
+      },
+      "side": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0,
+        "notes": "Fully enclosed but lightly armoured fighting compartment roof."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sturmpanzer_38(t)_Grille",
+    "notes": "Self-propelled 15cm sIG 33 heavy infantry gun on the lengthened Panzer 38(t) chassis, replacing the earlier Bison conversions. Issued to the heavy infantry-gun companies of panzergrenadier regiments."
+  },
+  "game": {
+    "cost": 30,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 24,
+        "crossCountry": 18,
+        "rough": 9
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 25
+      },
+      "side": {
+        "value": 15
+      },
+      "rear": {
+        "value": 10
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "german-sig-33",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

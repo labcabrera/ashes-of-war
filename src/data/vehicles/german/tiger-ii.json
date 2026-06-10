@@ -1,0 +1,105 @@
+{
+  "id": "german-tiger-ii",
+  "name": "Tiger II",
+  "type": "tank",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Henschel & Sohn",
+    "modelFamily": "Tiger II",
+    "crew": 5,
+    "combatWeightTons": 69.8,
+    "engine": "Maybach HL 230 P30, 700 PS",
+    "unitsBuilt": 492,
+    "productionStart": 1944,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 38,
+      "offRoad": 17,
+      "sustainedMarch": 24
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 150,
+        "inclinationDeg": 50,
+        "notes": "Sloped hull glacis; turret front (Henschel design) was a curved 180mm casting."
+      },
+      "side": {
+        "thicknessMM": 80,
+        "inclinationDeg": 25
+      },
+      "rear": {
+        "thicknessMM": 80,
+        "inclinationDeg": 30
+      },
+      "exposed": {
+        "thicknessMM": 40,
+        "inclinationDeg": 0,
+        "notes": "Hull and turret roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tiger_II",
+    "notes": "The heaviest German production tank of the war, combining Panther-style sloped armour with the long 8.8 cm KwK 43 L/71 gun capable of defeating any Allied tank at long range, but hampered by its enormous weight, fuel consumption and limited mobility/reliability."
+  },
+  "game": {
+    "cost": 50,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 10,
+        "crossCountry": 8,
+        "rough": 4
+      },
+      "cruise": {
+        "road": 20,
+        "crossCountry": 15,
+        "rough": 8
+      },
+      "dash": {
+        "road": 41,
+        "crossCountry": 31,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 102
+      },
+      "side": {
+        "value": 82
+      },
+      "rear": {
+        "value": 82
+      },
+      "exposed": {
+        "value": 15
+      }
+    },
+    "resourceCosts": {
+      "fuel": 10,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "german-8,8-cm-kwk-43",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "coaxial"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 2,
+        "type": "turret"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

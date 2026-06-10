@@ -1,0 +1,95 @@
+{
+  "id": "german-jagdpanzer-iv",
+  "name": "Jagdpanzer IV",
+  "type": "tank-destroyer",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Vomag",
+    "modelFamily": "Panzer IV",
+    "crew": 4,
+    "combatWeightTons": 24.0,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 1976,
+    "productionStart": 1944,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 40,
+      "offRoad": 20,
+      "sustainedMarch": 26
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 60,
+        "inclinationDeg": 50,
+        "notes": "Sloped glacis/casemate front."
+      },
+      "side": {
+        "thicknessMM": 30,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 20,
+        "inclinationDeg": 10
+      },
+      "exposed": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0,
+        "notes": "Hull and casemate roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jagdpanzer_IV",
+    "notes": "Built on the Panzer IV chassis with a low, well-sloped casemate, originally armed with the 7.5 cm PaK 39 L/48; later production (the L/70 'Vomag' variant) used the longer L/70 gun, but this entry represents the L/48-armed early/mid production used as a stopgap tank destroyer."
+  },
+  "game": {
+    "cost": 40,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 15,
+        "crossCountry": 11,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 60
+      },
+      "side": {
+        "value": 30
+      },
+      "rear": {
+        "value": 20
+      },
+      "exposed": {
+        "value": 10
+      }
+    },
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 8
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-40-l48",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

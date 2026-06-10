@@ -1,0 +1,105 @@
+{
+  "id": "german-tiger-i",
+  "name": "Tiger Ausf. H1 / E",
+  "type": "tank",
+  "faction": "german",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Henschel & Sohn",
+    "modelFamily": "Tiger I",
+    "crew": 5,
+    "combatWeightTons": 56.9,
+    "engine": "Maybach HL 230 P45, 700 PS",
+    "unitsBuilt": 1347,
+    "productionStart": 1942,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 38,
+      "offRoad": 18,
+      "sustainedMarch": 25
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 100,
+        "inclinationDeg": 9,
+        "notes": "Hull glacis (100mm, near-vertical) and turret front (~100-120mm rounded mantlet) simplified into a single facing."
+      },
+      "side": {
+        "thicknessMM": 80,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 80,
+        "inclinationDeg": 8
+      },
+      "exposed": {
+        "thicknessMM": 25,
+        "inclinationDeg": 0,
+        "notes": "Hull and turret roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tiger_I",
+    "notes": "Heavy tank built around the powerful 8.8 cm KwK 36 L/56, feared for its frontal armour and gun but mechanically complex, fuel-hungry and expensive to produce; first deployed near Leningrad in late 1942."
+  },
+  "game": {
+    "cost": 80,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 24,
+        "crossCountry": 18,
+        "rough": 9
+      },
+      "dash": {
+        "road": 38,
+        "crossCountry": 29,
+        "rough": 14
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 150
+      },
+      "side": {
+        "value": 90
+      },
+      "rear": {
+        "value": 90
+      },
+      "exposed": {
+        "value": 30
+      }
+    },
+    "resourceCosts": {
+      "fuel": 15,
+      "logistics": 15
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-36-l56",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "coaxial"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 2,
+        "type": "turret"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

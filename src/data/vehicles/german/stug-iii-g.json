@@ -1,0 +1,66 @@
+{
+  "id": "german-stug-iii-g",
+  "name": "StuG III Ausf. G",
+  "type": "assault-gun",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Alkett / MIAG",
+    "modelFamily": "StuG III",
+    "crew": 4,
+    "combatWeightTons": 23.9,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 7720,
+    "productionStart": 1942,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 38,
+      "offRoad": 16,
+      "sustainedMarch": 24
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 80,
+        "inclinationDeg": 9,
+        "notes": "Single-piece 80mm glacis plate (some early Ausf. G used 50+30mm appliqué); plus 5mm Schürzen side skirts standoff armour from 1943, not separately modelled."
+      },
+      "side": {
+        "thicknessMM": 30,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 30,
+        "inclinationDeg": 10
+      },
+      "exposed": {
+        "thicknessMM": 11,
+        "inclinationDeg": 0,
+        "notes": "Superstructure and hull roof; commander's cupola added from late 1942."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/StuG_III",
+    "notes": "Most numerous variant and the most-produced German armoured fighting vehicle of the war, armed with the long 7.5 cm StuK 40 L/48; late production added a remote-controlled roof MG, a coaxial machine gun, and Schürzen anti-bazooka skirts."
+  },
+  "game": {
+    "cost": 34,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": { "road": 15, "crossCountry": 11, "rough": 6 },
+      "cruise": { "road": 30, "crossCountry": 23, "rough": 11 },
+      "dash": { "road": 40, "crossCountry": 30, "rough": 15 }
+    },
+    "armor": {
+      "front": { "value": 80 },
+      "side": { "value": 30 },
+      "rear": { "value": 30 },
+      "exposed": { "value": 10 }
+    },
+    "resourceCosts": { "fuel": 5, "logistics": 5 },
+    "weapons": [
+      { "id": "german-kwk-40-l48", "count": 1, "type": "hull" }
+    ],
+    "keywords": ["radio"]
+  }
+}

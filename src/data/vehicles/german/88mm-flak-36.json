@@ -1,0 +1,56 @@
+{
+  "id": "german-88mm-flak-36",
+  "name": "8.8 cm FlaK 36",
+  "type": "towed-anti-aircraft",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Krupp",
+    "modelFamily": "FlaK 36",
+    "crew": 8,
+    "combatWeightTons": 7.0,
+    "unitsBuilt": 21000,
+    "productionStart": 1936,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/8.8_cm_Flak_18/36/37/41",
+    "notes": "The famous \"88\", a dual-purpose anti-aircraft and anti-tank gun whose flat trajectory and high muzzle velocity made it deadly against Allied armour when deployed in the direct-fire role, most notably during the Battle of France and in North Africa."
+  },
+  "game": {
+    "cost": 35,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 6,
+        "crossCountry": 4,
+        "rough": 2
+      },
+      "dash": {
+        "road": 9,
+        "crossCountry": 6,
+        "rough": 4
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 4,
+      "logistics": 12
+    },
+    "weapons": [
+      {
+        "id": "german-88mm-flak-36",
+        "count": 1,
+        "type": "normal"
+      }
+    ],
+    "keywords": [
+      "anti-air"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "german-sd-kfz-7-1",
+  "name": "Sd.Kfz. 7/1",
+  "type": "sp-anti-aircraft",
+  "faction": "german",
+  "from": 1940,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Krauss-Maffei / Borgward / Saurer",
+    "modelFamily": "Sd.Kfz. 7",
+    "crew": 8,
+    "combatWeightTons": 11.55,
+    "engine": "Maybach HL 62 TUK, 140 PS",
+    "unitsBuilt": 750,
+    "productionStart": 1940,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 50,
+      "offRoad": 25,
+      "sustainedMarch": 30
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0,
+        "notes": "Optional bolt-on armoured cab plating fitted to many vehicles."
+      },
+      "side": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 3,
+        "inclinationDeg": 0,
+        "notes": "Open cargo bed mounting the unshielded 2cm Flakvierling 38 quad gun and its standing crew."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sd.Kfz._7",
+    "notes": "8-tonne half-track artillery tractor fitted with a 2cm Flakvierling 38 quadruple autocannon on the cargo bed for self-defence and divisional anti-aircraft work, with drop-down sides to form a firing platform."
+  },
+  "game": {
+    "cost": 22,
+    "organizationThreshold": 8,
+    "movement": {
+      "tactical": {
+        "road": 14,
+        "crossCountry": 10,
+        "rough": 4
+      },
+      "cruise": {
+        "road": 25,
+        "crossCountry": 16,
+        "rough": 7
+      },
+      "dash": {
+        "road": 38,
+        "crossCountry": 20,
+        "rough": 9
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 8
+      },
+      "side": {
+        "value": 8
+      },
+      "rear": {
+        "value": 8
+      },
+      "exposed": {
+        "value": 3
+      }
+    },
+    "resourceCosts": {
+      "fuel": 4,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "german-2cm-flakvierling-38",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "anti-air",
+      "open-topped",
+      "half-track",
+      "radio"
+    ]
+  }
+}

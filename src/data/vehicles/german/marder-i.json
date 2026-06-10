@@ -1,0 +1,96 @@
+{
+  "id": "german-marder-i",
+  "name": "Marder I",
+  "type": "tank-destroyer",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Alkett / Becker",
+    "modelFamily": "Lorraine 37L",
+    "crew": 5,
+    "combatWeightTons": 8.3,
+    "engine": "Delahaye 135, 70 PS",
+    "unitsBuilt": 184,
+    "productionStart": 1942,
+    "productionEnd": 1943,
+    "speedKmh": {
+      "road": 35,
+      "offRoad": 18,
+      "sustainedMarch": 24
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 12,
+        "inclinationDeg": 12,
+        "notes": "Captured French Lorraine 37L hull front plate."
+      },
+      "side": {
+        "thicknessMM": 9,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 9,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 5,
+        "inclinationDeg": 0,
+        "notes": "Open-topped fighting compartment with thin gun-shield only."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Marder_I",
+    "notes": "Improvised conversion of captured French Lorraine 37L tracked tractors, mounting the 7.5 cm PaK 40 in an open-topped superstructure. Most served with infantry divisions in France until being committed to the Eastern Front and Normandy fighting."
+  },
+  "game": {
+    "cost": 26,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 15,
+        "crossCountry": 11,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 12
+      },
+      "side": {
+        "value": 10
+      },
+      "rear": {
+        "value": 8
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 8
+    },
+    "weapons": [
+      {
+        "id": "german-pak-40-l46",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "open-topped",
+      "radio"
+    ]
+  }
+}

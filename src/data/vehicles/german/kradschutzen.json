@@ -1,0 +1,66 @@
+{
+  "id": "german-kradschutzen",
+  "name": "Kradschützen",
+  "type": "motorised",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "BMW / Zündapp",
+    "modelFamily": "BMW R75 / Zündapp KS 750",
+    "crew": 3,
+    "combatWeightTons": 0.42,
+    "engine": "BMW R75 OHV flat-twin (boxer), 26 PS, 745cc",
+    "unitsBuilt": 16500,
+    "productionStart": 1941,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 95,
+      "offRoad": 35,
+      "sustainedMarch": 50
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/BMW_R75",
+    "notes": "Kradschützen (motorcycle rifle troops) rode heavy motorcycle-and-sidecar combinations such as the BMW R75 and Zündapp KS 750, which featured a driven sidecar wheel and lockable differential for excellent cross-country mobility. Each combination carried a driver, a sidecar gunner (often manning a pintle-mounted MG 34), and sometimes a third rifleman on the pillion seat."
+  },
+  "game": {
+    "cost": 12,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 12,
+        "crossCountry": 8,
+        "rough": 3
+      },
+      "cruise": {
+        "road": 24,
+        "crossCountry": 14,
+        "rough": 6
+      },
+      "dash": {
+        "road": 35,
+        "crossCountry": 20,
+        "rough": 9
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "normal"
+      },
+      {
+        "id": "german-mauser-kar-98k",
+        "count": 8,
+        "type": "normal"
+      }
+    ],
+    "keywords": [
+      "reconnaissance"
+    ]
+  }
+}

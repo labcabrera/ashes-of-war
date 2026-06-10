@@ -1,0 +1,96 @@
+{
+  "id": "german-sd-kfz-251-1-ii",
+  "name": "Sd.Kfz. 251/1 II",
+  "type": "mechanised",
+  "faction": "german",
+  "from": 1941,
+  "to": 1944,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Hanomag (chassis) / Büssing-NAG (hull)",
+    "modelFamily": "Sd.Kfz. 251",
+    "crew": 3,
+    "combatWeightTons": 8.0,
+    "engine": "Maybach HL 42 TUKRM, 100 PS",
+    "unitsBuilt": 380,
+    "productionStart": 1941,
+    "productionEnd": 1943,
+    "speedKmh": {
+      "road": 53,
+      "offRoad": 25,
+      "sustainedMarch": 35
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 14.5,
+        "inclinationDeg": 15
+      },
+      "side": {
+        "thicknessMM": 8,
+        "inclinationDeg": 15
+      },
+      "rear": {
+        "thicknessMM": 8,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 6,
+        "inclinationDeg": 0,
+        "notes": "Open-topped troop compartment roof and floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sd._Kfz._251",
+    "notes": "'Stuka zu Fuß' variant of the Sd.Kfz. 251/1 fitted with side-mounted launch frames for six 28cm or 32cm Wurfkörper rockets, providing Panzergrenadier units with mobile, short-range bombardment firepower. The crew typically dismounted before firing due to the rockets' large backblast."
+  },
+  "game": {
+    "cost": 20,
+    "organizationThreshold": 8,
+    "movement": {
+      "tactical": {
+        "road": 16,
+        "crossCountry": 12,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 35,
+        "crossCountry": 20,
+        "rough": 10
+      },
+      "dash": {
+        "road": 53,
+        "crossCountry": 25,
+        "rough": 12
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 15
+      },
+      "side": {
+        "value": 8
+      },
+      "rear": {
+        "value": 8
+      },
+      "exposed": {
+        "value": 3
+      }
+    },
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "german-wurfrahmen-40",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "open-topped",
+      "half-track",
+      "radio"
+    ]
+  }
+}

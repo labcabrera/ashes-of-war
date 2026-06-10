@@ -203,7 +203,22 @@
       "unarmed": "Sin armamento asignado.",
       "weapons": "Armamento",
       "keywords": "Reglas especiales",
-      "weaponUnavailable": "No existe información de esta arma en el catálogo."
+      "weaponUnavailable": "No existe información de esta arma en el catálogo.",
+      "historical": {
+        "title": "Datos históricos",
+        "speed": "Velocidad (km/h)",
+        "road": "Carretera",
+        "offRoad": "Campo a través",
+        "sustainedMarch": "Marcha sostenida",
+        "crew": "Tripulación",
+        "weight": "Peso de combate",
+        "engine": "Motor",
+        "manufacturer": "Fabricante",
+        "production": "Producción",
+        "unitsBuilt": "Unidades construidas",
+        "source": "Fuente",
+        "notes": "Notas"
+      }
     },
     "keywords": {
       "low-reliability": "Baja fiabilidad",

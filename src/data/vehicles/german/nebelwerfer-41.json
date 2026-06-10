@@ -1,0 +1,53 @@
+{
+  "id": "german-nebelwerfer-41",
+  "name": "15 cm Nebelwerfer 41",
+  "type": "towed-artillery",
+  "faction": "german",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Rheinmetall",
+    "modelFamily": "Nebelwerfer",
+    "crew": 5,
+    "combatWeightTons": 0.54,
+    "unitsBuilt": 5283,
+    "productionStart": 1940,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Nebelwerfer",
+    "notes": "Six-barrel towed rocket launcher firing 15 cm spin-stabilized rockets, used for high-explosive and smoke/chemical bombardment. Its distinctive launch sound earned Allied troops' nickname \"Moaning Minnie\"."
+  },
+  "game": {
+    "cost": 24,
+    "organizationThreshold": 8,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 8,
+        "crossCountry": 6,
+        "rough": 3
+      },
+      "dash": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 12
+    },
+    "weapons": [
+      {
+        "id": "german-nebelwerfer-41",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

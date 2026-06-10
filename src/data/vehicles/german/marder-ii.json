@@ -1,0 +1,96 @@
+{
+  "id": "german-marder-ii",
+  "name": "Marder II",
+  "type": "tank-destroyer",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "FAMO / Daimler-Benz / MAN",
+    "modelFamily": "Panzer II",
+    "crew": 4,
+    "combatWeightTons": 10.8,
+    "engine": "Maybach HL 62 TR, 140 PS",
+    "unitsBuilt": 1217,
+    "productionStart": 1942,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 40,
+      "offRoad": 22,
+      "sustainedMarch": 28
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 30,
+        "inclinationDeg": 21,
+        "notes": "Panzer II hull glacis plate."
+      },
+      "side": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 5,
+        "inclinationDeg": 0,
+        "notes": "Open-topped superstructure with thin gun-shield only."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Marder_II",
+    "notes": "The most numerous Marder variant, built on the obsolescent Panzer II chassis (Ausf. D/E and later the purpose-built Ausf. M/Sd.Kfz. 131) to mount the 7.5 cm PaK 40, giving infantry and panzer divisions a mobile anti-tank gun able to defeat most Soviet armour at range."
+  },
+  "game": {
+    "cost": 30,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 15,
+        "crossCountry": 11,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 30
+      },
+      "side": {
+        "value": 15
+      },
+      "rear": {
+        "value": 10
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 8
+    },
+    "weapons": [
+      {
+        "id": "german-pak-40-l46",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "open-topped",
+      "radio"
+    ]
+  }
+}

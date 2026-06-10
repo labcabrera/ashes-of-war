@@ -190,7 +190,22 @@
       "unarmed": "No weapons assigned.",
       "weapons": "Weapons",
       "keywords": "Special Rules",
-      "weaponUnavailable": "Weapon information is not available in the catalogue."
+      "weaponUnavailable": "Weapon information is not available in the catalogue.",
+      "historical": {
+        "title": "Historical specifications",
+        "speed": "Speed (km/h)",
+        "road": "Road",
+        "offRoad": "Off-road",
+        "sustainedMarch": "Sustained march",
+        "crew": "Crew",
+        "weight": "Combat weight",
+        "engine": "Engine",
+        "manufacturer": "Manufacturer",
+        "production": "Production",
+        "unitsBuilt": "Units built",
+        "source": "Source",
+        "notes": "Notes"
+      }
     },
     "keywords": {
       "low-reliability": "Low Reliability",

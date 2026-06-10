@@ -4,26 +4,11 @@
 import { describe, expect, it } from 'vitest';
 import unitsData from '../../src/data/units/units.json';
 import weaponsData from '../../src/data/weapons/weapons.json';
-import type { UnitType, UnitWeaponMountType } from '../../src/types/unit';
+import { UNIT_TYPES, type UnitType, type UnitWeaponMountType } from '../../src/types/unit';
 
 type UnknownRecord = Record<string, unknown>;
 
-const UNIT_TYPES = new Set<UnitType>([
-  'infantry',
-  'tank',
-  'tank-destroyer',
-  'assault-gun',
-  'self-propelled-artillery',
-  'motorised',
-  'mechanised',
-  'reconnaissance',
-  'engineer',
-  'artillery-towed',
-  'sniper',
-  'medic',
-  'aircraft',
-  'special',
-]);
+const SUPPORTED_UNIT_TYPES = new Set<UnitType>(UNIT_TYPES);
 const WEAPON_MOUNTS = new Set<UnitWeaponMountType>(['normal', 'turret', 'coaxial', 'hull']);
 
 function isRecord(value: unknown): value is UnknownRecord {
@@ -154,7 +139,7 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
       errors.push(`${path}.${field} must be a non-empty string.`);
     }
   }
-  if (typeof value.type !== 'string' || !UNIT_TYPES.has(value.type as UnitType)) {
+  if (typeof value.type !== 'string' || !SUPPORTED_UNIT_TYPES.has(value.type as UnitType)) {
     errors.push(`${path}.type must be a supported unit type.`);
   }
   if (!isNonNegativeInteger(value.cost)) {

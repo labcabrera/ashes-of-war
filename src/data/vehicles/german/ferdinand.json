@@ -1,0 +1,96 @@
+{
+  "id": "german-ferdinand",
+  "name": "Ferdinand",
+  "type": "tank-destroyer",
+  "faction": "german",
+  "from": 1943,
+  "to": 1943,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Nibelungenwerk (rebuild of Porsche Tiger hulls)",
+    "modelFamily": "Ferdinand",
+    "crew": 6,
+    "combatWeightTons": 65.0,
+    "engine": "2x Maybach HL 120 TRM, 300 PS each (petrol-electric drive)",
+    "unitsBuilt": 91,
+    "productionStart": 1943,
+    "productionEnd": 1943,
+    "speedKmh": {
+      "road": 20,
+      "offRoad": 10,
+      "sustainedMarch": 13
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 200,
+        "inclinationDeg": 38,
+        "notes": "Bolted 100mm appliqué plate over the original 100mm casemate front."
+      },
+      "side": {
+        "thicknessMM": 80,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 80,
+        "inclinationDeg": 10
+      },
+      "exposed": {
+        "thicknessMM": 30,
+        "inclinationDeg": 0,
+        "notes": "Hull and casemate roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ferdinand_(tank_destroyer)",
+    "notes": "Built on rejected Porsche Tiger (VK 4501 (P)) chassis, the Ferdinand mounted the 8.8 cm PaK 43/2 in a fixed casemate and first saw action at Kursk in July 1943. Its lack of any secondary machine gun left it vulnerable to infantry assault at close range, a flaw corrected in the later Elefant rebuild."
+  },
+  "game": {
+    "cost": 58,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 8,
+        "crossCountry": 5,
+        "rough": 2
+      },
+      "cruise": {
+        "road": 20,
+        "crossCountry": 10,
+        "rough": 4
+      },
+      "dash": {
+        "road": 30,
+        "crossCountry": 15,
+        "rough": 6
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 200
+      },
+      "side": {
+        "value": 80
+      },
+      "rear": {
+        "value": 80
+      },
+      "exposed": {
+        "value": 30
+      }
+    },
+    "resourceCosts": {
+      "fuel": 16,
+      "logistics": 15
+    },
+    "weapons": [
+      {
+        "id": "german-kwk-43-l71",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio",
+      "low-reliability"
+    ]
+  }
+}

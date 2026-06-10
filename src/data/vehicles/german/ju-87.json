@@ -1,0 +1,63 @@
+{
+  "id": "german-ju-87",
+  "name": "Junkers Ju 87 Stuka",
+  "type": "aircraft",
+  "faction": "german",
+  "from": 1939,
+  "to": 1944,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Junkers",
+    "modelFamily": "Ju 87",
+    "crew": 2,
+    "combatWeightTons": 4.4,
+    "engine": "Junkers Jumo 211 J, 1,420 PS",
+    "unitsBuilt": 6500,
+    "productionStart": 1937,
+    "productionEnd": 1944,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Junkers_Ju_87",
+    "notes": "Iconic dive bomber of the early war years, fitted with the \"Jericho Trumpet\" wind-driven sirens on its undercarriage legs to terrify troops and civilians during dive attacks. The B/D variants typically carried a single 250 kg bomb under the fuselage plus smaller wing bombs, escorted by twin forward-firing 7.92mm MG 17 machine guns and a rear-mounted defensive gun."
+  },
+  "game": {
+    "cost": 22,
+    "organizationThreshold": 3,
+    "movement": {
+      "tactical": {
+        "road": 150,
+        "crossCountry": 150,
+        "rough": 150
+      },
+      "cruise": {
+        "road": 280,
+        "crossCountry": 280,
+        "rough": 280
+      },
+      "dash": {
+        "road": 370,
+        "crossCountry": 370,
+        "rough": 370
+      }
+    },
+    "casualtiesThreshold": 1,
+    "resourceCosts": {
+      "fuel": 7,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "german-mg-17",
+        "count": 2,
+        "type": "hull"
+      },
+      {
+        "id": "german-sc-250",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "air-support",
+      "radio"
+    ]
+  }
+}

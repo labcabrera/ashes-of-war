@@ -1,0 +1,68 @@
+{
+  "id": "german-sturmpanzer-iv",
+  "name": "Sturmpanzer IV (Brummbär)",
+  "type": "assault-gun",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Alkett / Deutsche Eisenwerke",
+    "modelFamily": "Sturmpanzer IV",
+    "crew": 5,
+    "combatWeightTons": 28.2,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 306,
+    "productionStart": 1943,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 40,
+      "offRoad": 15,
+      "sustainedMarch": 20
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 100,
+        "inclinationDeg": 40,
+        "notes": "Heavily sloped cast/welded superstructure front, the thickest of any Panzer IV-based vehicle."
+      },
+      "side": {
+        "thicknessMM": 50,
+        "inclinationDeg": 0,
+        "notes": "Superstructure sides; hull sides retained the standard 30mm."
+      },
+      "rear": {
+        "thicknessMM": 20,
+        "inclinationDeg": 10
+      },
+      "exposed": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0,
+        "notes": "Superstructure and hull roof."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sturmpanzer_IV",
+    "notes": "Heavy infantry-support vehicle nicknamed 'Brummbär' ('Grumbler'), mounting the short 15 cm StuH 43 howitzer in a heavily armoured fixed casemate on a Panzer IV chassis; used to devastating effect in urban fighting at Kursk, Anzio, and Warsaw."
+  },
+  "game": {
+    "cost": 42,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": { "road": 12, "crossCountry": 9, "rough": 5 },
+      "cruise": { "road": 25, "crossCountry": 18, "rough": 9 },
+      "dash": { "road": 38, "crossCountry": 28, "rough": 14 }
+    },
+    "armor": {
+      "front": { "value": 100 },
+      "side": { "value": 50 },
+      "rear": { "value": 20 },
+      "exposed": { "value": 15 }
+    },
+    "resourceCosts": { "fuel": 8, "logistics": 10 },
+    "weapons": [
+      { "id": "german-stuh-43", "count": 1, "type": "hull" },
+      { "id": "german-mg-34-42", "count": 1, "type": "hull" }
+    ],
+    "keywords": ["radio"]
+  }
+}

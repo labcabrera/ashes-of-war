@@ -1,0 +1,68 @@
+{
+  "id": "german-stug-iv",
+  "name": "StuG IV",
+  "type": "assault-gun",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "Krupp",
+    "modelFamily": "StuG IV",
+    "crew": 4,
+    "combatWeightTons": 23.0,
+    "engine": "Maybach HL 120 TRM, 300 PS",
+    "unitsBuilt": 1141,
+    "productionStart": 1943,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 38,
+      "offRoad": 16,
+      "sustainedMarch": 24
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 80,
+        "inclinationDeg": 9,
+        "notes": "StuG III Ausf. G-pattern superstructure front plate mounted on the Panzer IV hull glacis."
+      },
+      "side": {
+        "thicknessMM": 30,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 20,
+        "inclinationDeg": 8,
+        "notes": "Panzer IV hull rear plate, thinner than the StuG III-based rear."
+      },
+      "exposed": {
+        "thicknessMM": 11,
+        "inclinationDeg": 0,
+        "notes": "Superstructure and hull roof."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/StuG_IV",
+    "notes": "Stop-gap design combining the StuG III Ausf. G fighting compartment with the Panzer IV chassis, ordered after Alkett's StuG III plant was bombed in late 1943; armed with the same 7.5 cm StuK 40 L/48 and fitted with Schürzen skirts and a forward-mounted MG shield."
+  },
+  "game": {
+    "cost": 36,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": { "road": 15, "crossCountry": 11, "rough": 6 },
+      "cruise": { "road": 30, "crossCountry": 23, "rough": 11 },
+      "dash": { "road": 40, "crossCountry": 30, "rough": 15 }
+    },
+    "armor": {
+      "front": { "value": 80 },
+      "side": { "value": 30 },
+      "rear": { "value": 30 },
+      "exposed": { "value": 10 }
+    },
+    "resourceCosts": { "fuel": 5, "logistics": 5 },
+    "weapons": [
+      { "id": "german-kwk-40-l48", "count": 1, "type": "hull" },
+      { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+    ],
+    "keywords": ["radio"]
+  }
+}

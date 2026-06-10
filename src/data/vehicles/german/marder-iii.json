@@ -1,0 +1,96 @@
+{
+  "id": "german-marder-iii",
+  "name": "Marder III",
+  "type": "tank-destroyer",
+  "faction": "german",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-10",
+  "historical": {
+    "manufacturer": "BMM (Böhmisch-Mährische Maschinenfabrik)",
+    "modelFamily": "Panzer 38(t)",
+    "crew": 4,
+    "combatWeightTons": 10.7,
+    "engine": "Praga AC/2, 150 PS",
+    "unitsBuilt": 2252,
+    "productionStart": 1942,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 42,
+      "offRoad": 22,
+      "sustainedMarch": 28
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 50,
+        "inclinationDeg": 12,
+        "notes": "Panzer 38(t) hull glacis (front opening retains the original 50mm plate on the late H/M variants)."
+      },
+      "side": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 5,
+        "inclinationDeg": 0,
+        "notes": "Open-topped superstructure with thin gun-shield only."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Marder_III",
+    "notes": "Built on the Czech-designed Panzer 38(t) chassis, the Marder III (Sd.Kfz. 138, Ausf. H and M) mounted the 7.5 cm PaK 40 and was produced in greater numbers than any other Marder type, serving on all fronts as a cheap, mobile tank-killer."
+  },
+  "game": {
+    "cost": 33,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 15,
+        "crossCountry": 11,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 50
+      },
+      "side": {
+        "value": 15
+      },
+      "rear": {
+        "value": 10
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 8
+    },
+    "weapons": [
+      {
+        "id": "german-pak-40-l46",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "open-topped",
+      "radio"
+    ]
+  }
+}
