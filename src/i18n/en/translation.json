@@ -147,6 +147,20 @@
       "keyword": "Keywords",
       "year": "Year"
     },
+    "sidebar": {
+      "search": "Search",
+      "searchPlaceholder": "Unit name...",
+      "faction": "Faction",
+      "allFactions": "All factions",
+      "unitType": "Unit type",
+      "allTypes": "All",
+      "serviceYear": "Service year",
+      "cost": "Point cost",
+      "costUnit": "pts",
+      "keywords": "Keywords",
+      "filters": "Filters",
+      "addFilter": "Add filter"
+    },
     "outOfYear": "Out of era",
     "noResults": "No units match the current filters.",
     "detail": {

@@ -160,6 +160,20 @@
       "keyword": "Palabras clave",
       "year": "Año"
     },
+    "sidebar": {
+      "search": "Buscar",
+      "searchPlaceholder": "Nombre de unidad...",
+      "faction": "Facción",
+      "allFactions": "Todas las facciones",
+      "unitType": "Tipo de unidad",
+      "allTypes": "Todas",
+      "serviceYear": "Año de servicio",
+      "cost": "Coste en puntos",
+      "costUnit": "pts",
+      "keywords": "Palabras clave",
+      "filters": "Filtros",
+      "addFilter": "Añade filtro"
+    },
     "outOfYear": "Fuera de era",
     "noResults": "Ninguna unidad coincide con los filtros actuales.",
     "detail": {

@@ -1,89 +1,123 @@
 /**
- * UnitCard - selectable card displaying a unit's key stats.
+ * UnitCard - displays a unit's portrait and key stats; clicking opens its full detail page.
  * Renders at reduced opacity when the unit is outside the selected year range (FR-019).
  */
-import { Card, CardActionArea, CardContent, CardMedia, Typography, Chip, Box } from '@mui/material';
+import { Box, Card, CardActionArea, CardContent, CardMedia, Chip, Tooltip, Typography } from '@mui/material';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Unit } from '../../types/unit';
+import { factionColor } from '../../utils/factionColors';
 import { factionFlagUrl, unitImageUrl } from '../../utils/images';
 
 interface Props {
   unit: Unit;
   isOutOfYear: boolean;
-  selected: boolean;
   onClick: () => void;
 }
 
-const FACTION_FLAGS: Record<string, string> = {
-  german: factionFlagUrl('german'),
-  'soviet-union': factionFlagUrl('soviet-union'),
-};
-
-export default function UnitCard({ unit, isOutOfYear, selected, onClick }: Props) {
+export default function UnitCard({ unit, isOutOfYear, onClick }: Props) {
   const { t } = useTranslation();
-  const flagUrl = FACTION_FLAGS[unit.faction];
+  const flagUrl = factionFlagUrl(unit.faction);
   const factionLabel = t(`factions.${unit.faction}`, unit.faction);
   const [topImageUrl, setTopImageUrl] = useState(unitImageUrl(unit.faction, unit.id));
+  const isFlagFallback = topImageUrl === flagUrl;
 
   return (
     <Card
       sx={{
-        opacity: isOutOfYear ? 0.38 : 1,
+        opacity: isOutOfYear ? 0.45 : 1,
         display: 'flex',
         flexDirection: 'column',
-        border: 2,
-        borderColor: selected ? 'secondary.main' : 'transparent',
-        transition: 'opacity 0.2s, border-color 0.2s',
+        height: '100%',
+        transition: 'transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, opacity 0.2s ease',
+        '&:hover': {
+          transform: 'translateY(-4px)',
+          boxShadow: 6,
+          borderColor: 'secondary.main',
+        },
       }}
     >
       <CardActionArea
         onClick={onClick}
-        aria-pressed={selected}
         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', flex: 1 }}
       >
-        {topImageUrl && (
+        <Box sx={{ position: 'relative', overflow: 'hidden' }}>
           <CardMedia
             component="img"
-            height={140}
+            height={160}
             image={topImageUrl}
             alt=""
             aria-hidden="true"
-            onError={() => flagUrl && setTopImageUrl(flagUrl)}
+            onError={() => setTopImageUrl(flagUrl)}
             sx={{
-              objectFit: topImageUrl === flagUrl ? 'contain' : 'cover',
-              p: topImageUrl === flagUrl ? 1.5 : 0,
+              objectFit: isFlagFallback ? 'contain' : 'cover',
+              p: isFlagFallback ? 2 : 0,
               bgcolor: 'background.default',
+              transition: 'transform 0.3s ease',
+              ...(isFlagFallback ? {} : { '.MuiCardActionArea-root:hover &': { transform: 'scale(1.06)' } }),
             }}
           />
-        )}
-        <CardContent sx={{ flex: 1, p: 2, '&:last-child': { pb: 2 } }}>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1.5 }}>
-            <Typography variant="h6" sx={{ fontWeight: 600, pr: 1, lineHeight: 1.2, fontSize: '1rem' }}>
+          <Chip
+            label={`${unit.cost} pts`}
+            size="small"
+            color="secondary"
+            sx={{ position: 'absolute', top: 8, right: 8, fontWeight: 700 }}
+          />
+        </Box>
+        <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1, p: 2, '&:last-child': { pb: 2 } }}>
+          <Tooltip title={unit.name}>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 600,
+                lineHeight: 1.25,
+                fontSize: '1rem',
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+              }}
+            >
               {unit.name}
             </Typography>
-            <Chip label={`${unit.cost} pts`} size="small" color="secondary" sx={{ flexShrink: 0 }} />
+          </Tooltip>
+
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Box
+              component="img"
+              src={flagUrl}
+              alt=""
+              aria-hidden="true"
+              sx={{ height: 18, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
+            />
+            <Typography variant="body2" color="text.secondary" noWrap>
+              {factionLabel}
+            </Typography>
+            <Box
+              aria-hidden="true"
+              sx={{
+                ml: 'auto',
+                width: 10,
+                height: 10,
+                borderRadius: '50%',
+                bgcolor: factionColor(unit.faction),
+                flexShrink: 0,
+              }}
+            />
           </Box>
-          <Box sx={{ display: 'flex', gap: 0.75, flexWrap: 'wrap', alignItems: 'center' }}>
-            {flagUrl && (
-              <Box
-                component="img"
-                src={flagUrl}
-                alt={factionLabel}
-                title={factionLabel}
-                sx={{ height: 20, width: 'auto', borderRadius: 0.5, flexShrink: 0 }}
-              />
-            )}
+
+          <Box sx={{ display: 'flex', gap: 0.75, flexWrap: 'wrap', alignItems: 'center', mt: 'auto' }}>
             <Chip label={t(`units.types.${unit.type}`)} size="small" variant="outlined" />
             <Chip
-              label={`${unit.from}\u2013${unit.to}`}
+              label={`${unit.from}–${unit.to}`}
               size="small"
               variant="outlined"
               color={isOutOfYear ? 'warning' : 'default'}
             />
           </Box>
+
           {isOutOfYear && (
-            <Typography variant="caption" color="warning.main" sx={{ mt: 0.5, display: 'block' }}>
+            <Typography variant="caption" color="warning.main" sx={{ display: 'block' }}>
               {t('units.outOfYear')}
             </Typography>
           )}

@@ -25,12 +25,13 @@ data/
       tiger-i-ausf-e.json
     usa/
       m4a3-sherman.json
-
+  towed/
+    germany/
+      7.5-cm-pak-40.json
   weapons/
     germany/
       75mm-kwk-42-l70.json
       88mm-kwk-36-l56.json
-
   infantry-units/
     germany/
       panzergrenadier-squad-1944.json

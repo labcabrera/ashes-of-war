@@ -22,12 +22,11 @@ import UnitCard from './UnitCard';
 interface Props {
   units: Unit[];
   isOutOfYear: (unit: Unit) => boolean;
-  selectedId: string | null;
   viewMode: 'cards' | 'table';
   onSelect: (unit: Unit) => void;
 }
 
-export default function UnitList({ units, isOutOfYear, selectedId, viewMode, onSelect }: Props) {
+export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Props) {
   const { t } = useTranslation();
 
   if (units.length === 0) {
@@ -55,15 +54,10 @@ export default function UnitList({ units, isOutOfYear, selectedId, viewMode, onS
             {units.map((unit) => {
               const outOfYear = isOutOfYear(unit);
               return (
-                <TableRow
-                  key={unit.id}
-                  selected={selectedId === unit.id}
-                  sx={{ opacity: outOfYear ? 0.38 : 1 }}
-                >
+                <TableRow key={unit.id} sx={{ opacity: outOfYear ? 0.38 : 1 }}>
                   <TableCell>
                     <Button
                       onClick={() => onSelect(unit)}
-                      aria-pressed={selectedId === unit.id}
                       sx={{ justifyContent: 'flex-start', textTransform: 'none' }}
                     >
                       {unit.name}
@@ -102,7 +96,6 @@ export default function UnitList({ units, isOutOfYear, selectedId, viewMode, onS
           key={unit.id}
           unit={unit}
           isOutOfYear={isOutOfYear(unit)}
-          selected={selectedId === unit.id}
           onClick={() => onSelect(unit)}
         />
       ))}

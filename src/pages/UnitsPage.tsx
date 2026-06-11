@@ -4,6 +4,8 @@
 import { useState, useMemo } from 'react';
 import {
   Box,
+  Drawer,
+  IconButton,
   Pagination,
   Tab,
   Tabs,
@@ -16,14 +18,15 @@ import {
 
 const UNITS_PER_PAGE = 48;
 
+import CloseIcon from '@mui/icons-material/Close';
 import GridViewIcon from '@mui/icons-material/GridView';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useUnitData } from '../hooks/useUnitData';
-import UnitFilters from '../components/units/UnitFilters';
+import UnitFilterSidebar from '../components/units/UnitFilterSidebar';
+import UnitFilterChips from '../components/units/UnitFilterChips';
 import UnitList from '../components/units/UnitList';
-import UnitDetail from '../components/units/UnitDetail';
 import WeaponList from '../components/weapons/WeaponList';
 import WeaponDetail from '../components/weapons/WeaponDetail';
 import WeaponFilters from '../components/weapons/WeaponFilters';
@@ -41,13 +44,29 @@ export default function UnitsPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  const isSidebarVisible = useMediaQuery(theme.breakpoints.up('md'));
   const [searchParams, setSearchParams] = useSearchParams();
-  const { units, filters, availableKeywords, setName, setFaction, setTypes, setKeywords, setYear, isOutOfYear } = useUnitData();
+  const {
+    units,
+    filters,
+    availableFactions,
+    availableKeywords,
+    yearBounds,
+    costBounds,
+    typeCounts,
+    totalCount,
+    setName,
+    setFactions,
+    setTypes,
+    setKeywords,
+    setYearRange,
+    setCostRange,
+    isOutOfYear,
+  } = useUnitData();
   const activeTab: CatalogueTab = searchParams.get('tab') === 'weapons' ? 'weapons' : 'units';
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
-  const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
   const [unitPage, setUnitPage] = useState(1);
+  const [filterDrawerOpen, setFilterDrawerOpen] = useState(false);
   const [weaponName, setWeaponName] = useState('');
   const [weaponFaction, setWeaponFaction] = useState<FactionId | ''>('');
 
@@ -64,11 +83,6 @@ export default function UnitsPage() {
   function getWeaponFaction(id: string): FactionId | '' {
     return weaponFactionId(id) ?? '';
   }
-
-  const factions = useMemo(() => {
-    const all = allUnits.map((u) => u.faction);
-    return [...new Set(all)].sort();
-  }, []);
 
   const catalogueUnits = allUnits;
   const weapons = allWeapons;
@@ -99,12 +113,29 @@ export default function UnitsPage() {
   }
 
   function handleUnitSelect(unit: Unit) {
-    if (isDesktop) {
-      setSelectedUnit(unit);
-      return;
-    }
     navigate(`/units/${encodeURIComponent(unit.id)}`);
   }
+
+  const sidebarProps = {
+    name: filters.name,
+    selectedFactions: filters.factions,
+    availableFactions,
+    selectedTypes: filters.types,
+    typeCounts,
+    totalCount,
+    selectedKeywords: filters.keywords,
+    availableKeywords,
+    yearRange: [filters.yearFrom, filters.yearTo] as [number, number],
+    yearBounds,
+    costRange: [filters.costMin, filters.costMax] as [number, number],
+    costBounds,
+    onNameChange: (v: string) => { setName(v); setUnitPage(1); },
+    onFactionsChange: (v: FactionId[]) => { setFactions(v); setUnitPage(1); },
+    onTypesChange: (v: typeof filters.types) => { setTypes(v); setUnitPage(1); },
+    onKeywordsChange: (v: typeof filters.keywords) => { setKeywords(v); setUnitPage(1); },
+    onYearRangeChange: (v: [number, number]) => { setYearRange(v); setUnitPage(1); },
+    onCostRangeChange: (v: [number, number]) => { setCostRange(v); setUnitPage(1); },
+  };
 
   return (
     <Box>
@@ -157,61 +188,53 @@ export default function UnitsPage() {
       </Box>
 
       {activeTab === 'units' ? (
-        <>
-          <UnitFilters
-            name={filters.name}
-            selectedFaction={filters.factions[0] ?? ''}
-            factions={factions}
-            selectedTypes={filters.types}
-            selectedKeywords={filters.keywords}
-            availableKeywords={availableKeywords}
-            year={filters.year}
-            onNameChange={(v) => { setName(v); setUnitPage(1); }}
-            onFactionChange={(v) => { setFaction(v); setUnitPage(1); }}
-            onTypesChange={(v) => { setTypes(v); setUnitPage(1); }}
-            onKeywordsChange={(v) => { setKeywords(v); setUnitPage(1); }}
-            onYearChange={(v) => { setYear(v); setUnitPage(1); }}
-          />
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', md: '260px 1fr' },
+            alignItems: 'start',
+            gap: 3,
+          }}
+        >
+          {isSidebarVisible && <UnitFilterSidebar {...sidebarProps} />}
 
-          <Box
-            sx={{
-              display: 'grid',
-              gridTemplateColumns: {
-                xs: '1fr',
-                lg: 'minmax(0, 1fr) minmax(420px, 560px)',
-              },
-              alignItems: 'start',
-              gap: 3,
-            }}
-          >
-            <Box>
-              <UnitList
-                units={paginatedUnits}
-                isOutOfYear={isOutOfYear}
-                selectedId={selectedUnit?.id ?? null}
-                viewMode={viewMode}
-                onSelect={handleUnitSelect}
-              />
-              {unitPageCount > 1 && (
-                <Pagination
-                  count={unitPageCount}
-                  page={unitPage}
-                  onChange={(_e, page) => setUnitPage(page)}
-                  color="secondary"
-                  sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}
-                />
-              )}
-            </Box>
+          <Box>
+            <UnitFilterChips
+              {...sidebarProps}
+              onOpenFilters={isSidebarVisible ? undefined : () => setFilterDrawerOpen(true)}
+            />
 
-            {isDesktop && (
-              <UnitDetail
-                unit={selectedUnit}
-                weapons={weapons}
-                onClose={() => setSelectedUnit(null)}
+            <UnitList
+              units={paginatedUnits}
+              isOutOfYear={isOutOfYear}
+              viewMode={viewMode}
+              onSelect={handleUnitSelect}
+            />
+            {unitPageCount > 1 && (
+              <Pagination
+                count={unitPageCount}
+                page={unitPage}
+                onChange={(_e, page) => setUnitPage(page)}
+                color="secondary"
+                sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}
               />
             )}
           </Box>
-        </>
+
+          {!isSidebarVisible && (
+            <Drawer anchor="left" open={filterDrawerOpen} onClose={() => setFilterDrawerOpen(false)}>
+              <Box sx={{ width: 280, p: 2 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                  <Typography variant="h6">{t('units.sidebar.filters')}</Typography>
+                  <IconButton onClick={() => setFilterDrawerOpen(false)} aria-label={t('common.close')}>
+                    <CloseIcon />
+                  </IconButton>
+                </Box>
+                <UnitFilterSidebar {...sidebarProps} />
+              </Box>
+            </Drawer>
+          )}
+        </Box>
       ) : (
         <Box
           sx={{
