@@ -179,9 +179,6 @@
       "exposed": "Exposed",
       "armourFacing": "Facing",
       "armourValue": "Value",
-      "armourMM": "Armour (mm)",
-      "armourInclination": "Inclination",
-      "armourNotes": "Notes",
       "resources": "Resource Costs",
       "availability": "Availability",
       "description": "Description",
@@ -208,6 +205,7 @@
       "weaponUnavailable": "Weapon information is not available in the catalogue.",
       "historical": {
         "title": "Historical specifications",
+        "armour": "Armour",
         "speed": "Speed (km/h)",
         "road": "Road",
         "offRoad": "Off-road",

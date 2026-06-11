@@ -1,6 +1,6 @@
 {
   "id": "german-tiger-i",
-  "name": "Tiger Ausf. H1 / E",
+  "name": "Tiger I",
   "type": "tank",
   "faction": "german",
   "from": 1944,
@@ -94,7 +94,7 @@
       },
       {
         "id": "german-mg-34-42",
-        "count": 2,
+        "count": 1,
         "type": "turret"
       }
     ],

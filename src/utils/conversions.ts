@@ -1,7 +1,6 @@
 /**
  * Transformation helpers between historical real-world reference values and their
- * in-game representation, per AGENT.md ("Habrá fórmulas de transformación entre estos
- * valores y los del juego").
+ * in-game representation.
  *
  * These are first-draft formulas: the game rules are still in design, so the resulting
  * values are a starting point for content authors rather than an enforced constraint.
@@ -23,7 +22,7 @@ export function speedKmhToGameInches(kmh: number, pace: MovementPace): number {
 
 /** Effective armour thickness accounting for plate slope (simple secant law). */
 export function effectiveArmorThicknessMM(thicknessMM: number, inclinationDeg: number): number {
-  return thicknessMM / Math.cos((inclinationDeg * Math.PI) / 180);
+  return (thicknessMM / Math.cos((inclinationDeg * Math.PI) / 180)) / 10;
 }
 
 /** Converts a historical armour facing (thickness + inclination) into a game armour value. */

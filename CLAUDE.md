@@ -8,7 +8,7 @@ La web estará desarrollada principalmente en React usando Typescript y MUI como
 
 Las reglas del juego están en fase de diseño.
 
-Este proyecto tendrá una colección de ficheros con formato JSON donde se definirán los perfiles de cada vehículo, carro de combate, unidad de infantería, o arma.
+Este proyecto tendrá una colección de ficheros con formato JSON donde se definirán los perfiles de cada vehículo, carro de combate, arma remolcada, unidad de infantería, o arma.
 
 Dentro de cada JSON por un lado tendremos información histórica real como por ejemplo los valores de velocidad máxima de una unidad en KM/h y una serie de datos de juego como por ejemplo una velocidad de 15 pulgadas por turno.
 

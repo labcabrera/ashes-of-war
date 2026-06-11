@@ -35,6 +35,7 @@ import { Link as RouterLink, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { allUnits } from '../data/units';
 import { vehicles } from '../data/vehicles';
+import { towedWeapons } from '../data/towed';
 import { allWeapons } from '../data/weapons';
 import { getDescription } from '../i18n/descriptions';
 import type { Armor, Unit, UnitType, UnitWeapon } from '../types/unit';
@@ -58,6 +59,7 @@ const UNIT_ICONS = {
 
 const units = allUnits;
 const weapons = allWeapons;
+const vehicleCatalogue = [...vehicles, ...towedWeapons];
 
 function getWeapon(assignment: UnitWeapon) {
   return weapons.find((weapon) => weapon.id === assignment.id);
@@ -181,65 +183,108 @@ function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
   );
 }
 
-function HistoricalSpecsSection({ entry }: { entry: VehicleCatalogueEntry }) {
+function HistoricalSpecsSection({ unit, entry }: { unit: Unit; entry?: VehicleCatalogueEntry }) {
   const { t } = useTranslation();
-  const { historical } = entry;
+  const historical = entry?.historical;
 
   const fields: Array<{ label: string; value: string }> = [];
-  if (historical.speedKmh) {
-    const { road, offRoad, sustainedMarch } = historical.speedKmh;
-    fields.push({
-      label: t('units.detail.historical.speed'),
-      value: `${t('units.detail.historical.road')} ${road} · ${t('units.detail.historical.offRoad')} ${offRoad} · ${t('units.detail.historical.sustainedMarch')} ${sustainedMarch}`,
-    });
-  }
-  if (historical.crew !== undefined) {
+  if (historical?.crew !== undefined) {
     fields.push({ label: t('units.detail.historical.crew'), value: String(historical.crew) });
   }
-  if (historical.combatWeightTons !== undefined) {
+  if (historical?.combatWeightTons !== undefined) {
     fields.push({ label: t('units.detail.historical.weight'), value: `${historical.combatWeightTons} t` });
   }
-  if (historical.engine) {
+  if (historical?.engine) {
     fields.push({ label: t('units.detail.historical.engine'), value: historical.engine });
   }
-  if (historical.manufacturer) {
+  if (historical?.manufacturer) {
     fields.push({
       label: t('units.detail.historical.manufacturer'),
       value: historical.modelFamily ? `${historical.manufacturer} (${historical.modelFamily})` : historical.manufacturer,
     });
   }
-  if (historical.productionStart !== undefined || historical.productionEnd !== undefined) {
+  if (historical?.productionStart !== undefined || historical?.productionEnd !== undefined) {
     fields.push({
       label: t('units.detail.historical.production'),
       value: `${historical.productionStart ?? '?'}-${historical.productionEnd ?? '?'}`,
     });
   }
-  if (historical.unitsBuilt !== undefined) {
+  if (historical?.unitsBuilt !== undefined) {
     fields.push({ label: t('units.detail.historical.unitsBuilt'), value: historical.unitsBuilt.toLocaleString() });
   }
 
-  if (fields.length === 0 && !historical.notes && !historical.sourceUrl) {
+  const speedRows = historical?.speedKmh
+    ? ([
+        ['road', historical.speedKmh.road],
+        ['offRoad', historical.speedKmh.offRoad],
+        ['sustainedMarch', historical.speedKmh.sustainedMarch],
+      ] as const)
+    : [];
+
+  const armorEntries = unit.profile ? armorRows(unit.profile) : [];
+
+  if (fields.length === 0 && speedRows.length === 0 && armorEntries.length === 0 && !historical?.notes && !historical?.sourceUrl) {
     return null;
   }
 
+  const hasFooter = Boolean(historical?.notes || historical?.sourceUrl);
+
   return (
     <Section title={t('units.detail.historical.title')} icon={HistoryEduIcon}>
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 2, mb: historical.notes || historical.sourceUrl ? 2 : 0 }}>
-        {fields.map((field) => (
-          <Box key={field.label}>
-            <Typography variant="caption" color="text.secondary">
-              {field.label}
-            </Typography>
-            <Typography variant="body1">{field.value}</Typography>
-          </Box>
-        ))}
-      </Box>
-      {historical.notes && (
+      {(speedRows.length > 0 || fields.length > 0) && (
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+            gap: 2,
+            mb: armorEntries.length > 0 || hasFooter ? 2 : 0,
+          }}
+        >
+          {speedRows.length > 0 && (
+            <Box>
+              <Typography variant="caption" color="text.secondary">
+                {t('units.detail.historical.speed')}
+              </Typography>
+              <Stack>
+                {speedRows.map(([key, value]) => (
+                  <Typography key={key} variant="body1">
+                    {t(`units.detail.historical.${key}`)}: {value} km/h
+                  </Typography>
+                ))}
+              </Stack>
+            </Box>
+          )}
+          {fields.map((field) => (
+            <Box key={field.label}>
+              <Typography variant="caption" color="text.secondary">
+                {field.label}
+              </Typography>
+              <Typography variant="body1">{field.value}</Typography>
+            </Box>
+          ))}
+        </Box>
+      )}
+      {armorEntries.length > 0 && (
+        <Box sx={{ mb: hasFooter ? 2 : 0 }}>
+          <Typography variant="caption" color="text.secondary">
+            {t('units.detail.historical.armour')}
+          </Typography>
+          <Stack>
+            {armorEntries.map(([facing, armor]) => (
+              <Typography key={facing} variant="body1">
+                {t(`units.detail.${facing}`)}: {armor.armorMM} mm · {armor.armorInclination}°
+                {armor.notes ? ` — ${armor.notes}` : ''}
+              </Typography>
+            ))}
+          </Stack>
+        </Box>
+      )}
+      {historical?.notes && (
         <Typography color="text.secondary" sx={{ mb: historical.sourceUrl ? 1.5 : 0, whiteSpace: 'pre-line' }}>
           {historical.notes}
         </Typography>
       )}
-      {historical.sourceUrl && (
+      {historical?.sourceUrl && (
         <Button
           component={MuiLink}
           href={historical.sourceUrl}
@@ -273,7 +318,7 @@ export default function UnitFullPage() {
   }
 
   const assignedWeapons = unit.weapons ?? [];
-  const vehicleEntry = vehicles.find((vehicle) => vehicle.id === unit.id);
+  const vehicleEntry = vehicleCatalogue.find((vehicle) => vehicle.id === unit.id);
   const description =
     getDescription('units', unit.id, i18n.resolvedLanguage) ??
     getDescription('types', unit.type, i18n.resolvedLanguage);
@@ -400,9 +445,6 @@ export default function UnitFullPage() {
                       <TableRow>
                         <TableCell>{t('units.detail.armourFacing')}</TableCell>
                         <TableCell align="right">{t('units.detail.armourValue')}</TableCell>
-                        <TableCell align="right">{t('units.detail.armourMM')}</TableCell>
-                        <TableCell align="right">{t('units.detail.armourInclination')}</TableCell>
-                        <TableCell>{t('units.detail.armourNotes')}</TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -410,9 +452,6 @@ export default function UnitFullPage() {
                         <TableRow key={facing}>
                           <TableCell>{t(`units.detail.${facing}`)}</TableCell>
                           <TableCell align="right">{armor.value}</TableCell>
-                          <TableCell align="right">{armor.armorMM}</TableCell>
-                          <TableCell align="right">{armor.armorInclination} deg</TableCell>
-                          <TableCell>{armor.notes ?? '-'}</TableCell>
                         </TableRow>
                       ))}
                     </TableBody>
@@ -439,7 +478,7 @@ export default function UnitFullPage() {
           </Stack>
         </Box>
 
-        {vehicleEntry && <HistoricalSpecsSection entry={vehicleEntry} />}
+        <HistoricalSpecsSection unit={unit} entry={vehicleEntry} />
 
         {description && (
           <Section title={t('units.detail.description')} icon={DescriptionIcon}>
