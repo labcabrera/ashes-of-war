@@ -156,6 +156,14 @@
         "en": "/content/rules/es/keywords.adoc",
         "es": "/content/rules/es/keywords.adoc"
       }
+    },
+    {
+      "id": "discussions",
+      "titleKey": "rules.chapter.discussions",
+      "files": {
+        "en": "/content/rules/es/discussions.adoc",
+        "es": "/content/rules/es/discussions.adoc"
+      }
     }
   ]
 }

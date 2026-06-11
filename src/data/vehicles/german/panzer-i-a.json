@@ -39,8 +39,7 @@
         "notes": "Hull and turret roof/floor."
       }
     },
-    "sourceUrl": "https://en.wikipedia.org/wiki/Panzer_I",
-    "notes": "Germany's first mass-produced tank, intended primarily as a training vehicle and armed only with twin machine guns. Obsolete by the start of the war but still used in the Polish and French campaigns due to shortages of better tanks."
+    "sourceUrl": "https://en.wikipedia.org/wiki/Panzer_I"
   },
   "game": {
     "cost": 12,

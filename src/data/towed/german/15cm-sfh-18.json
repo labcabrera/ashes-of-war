@@ -14,8 +14,7 @@
     "unitsBuilt": 5403,
     "productionStart": 1933,
     "productionEnd": 1945,
-    "sourceUrl": "https://en.wikipedia.org/wiki/15_cm_sFH_18",
-    "notes": "Standard heavy field howitzer of German corps-level artillery, designed jointly by Rheinmetall (carriage) and Krupp (barrel). Its weight made it slow to redeploy, leading to the later self-propelled Hummel mounting."
+    "sourceUrl": "https://en.wikipedia.org/wiki/15_cm_sFH_18"
   },
   "game": {
     "cost": 28,

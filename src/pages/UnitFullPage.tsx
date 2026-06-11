@@ -226,11 +226,11 @@ function HistoricalSpecsSection({ unit, entry }: { unit: Unit; entry?: VehicleCa
 
   const armorEntries = unit.profile ? armorRows(unit.profile) : [];
 
-  if (fields.length === 0 && speedRows.length === 0 && armorEntries.length === 0 && !historical?.notes && !historical?.sourceUrl) {
+  if (fields.length === 0 && speedRows.length === 0 && armorEntries.length === 0 && !historical?.sourceUrl) {
     return null;
   }
 
-  const hasFooter = Boolean(historical?.notes || historical?.sourceUrl);
+  const hasFooter = Boolean(historical?.sourceUrl);
 
   return (
     <Section title={t('units.detail.historical.title')} icon={HistoryEduIcon}>
@@ -281,11 +281,6 @@ function HistoricalSpecsSection({ unit, entry }: { unit: Unit; entry?: VehicleCa
             ))}
           </Stack>
         </Box>
-      )}
-      {historical?.notes && (
-        <Typography color="text.secondary" sx={{ mb: historical.sourceUrl ? 1.5 : 0, whiteSpace: 'pre-line' }}>
-          {historical.notes}
-        </Typography>
       )}
       {historical?.sourceUrl && (
         <Button

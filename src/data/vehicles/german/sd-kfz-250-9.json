@@ -39,8 +39,7 @@
         "notes": "Open-topped turret roof and hull floor."
       }
     },
-    "sourceUrl": "https://en.wikipedia.org/wiki/Sd._Kfz._250",
-    "notes": "Light half-track fitted with the same hexagonal turret and 2cm KwK 38 autocannon as the Sd.Kfz. 222 armoured car, used to re-equip armoured reconnaissance battalions with a more mobile and protected platform than the wheeled cars from 1943."
+    "sourceUrl": "https://en.wikipedia.org/wiki/Sd._Kfz._250"
   },
   "game": {
     "cost": 22,

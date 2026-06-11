@@ -37,7 +37,6 @@ export interface VehicleHistoricalProfile {
   /** Required for armoured types (tank, tank-destroyer, assault-gun, sp-artillery, sp-anti-aircraft). */
   armor?: ArmorProfile<ArmorFacingHistorical>;
   sourceUrl?: string;
-  notes?: string;
 }
 
 /** In-game profile for a vehicle. */

@@ -40,8 +40,7 @@
         "notes": "Hull and casemate roof/floor."
       }
     },
-    "sourceUrl": "https://en.wikipedia.org/wiki/Jagdpanzer_IV",
-    "notes": "Built on the Panzer IV chassis with a low, well-sloped casemate, originally armed with the 7.5 cm PaK 39 L/48; later production (the L/70 'Vomag' variant) used the longer L/70 gun, but this entry represents the L/48-armed early/mid production used as a stopgap tank destroyer."
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jagdpanzer_IV"
   },
   "game": {
     "cost": 40,

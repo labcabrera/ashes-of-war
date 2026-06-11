@@ -119,7 +119,8 @@
       "skills": "Habilidades",
       "morale": "Moral",
       "missions": "Misiones",
-      "keywords": "Claves de unidad",
+      "discussions": "Discusiones y diseño",
+      "keywords": "Keywords",
       "lightFire": "Fuego ligero",
       "heavyFire": "Fuego pesado",
       "indirectFire": "Fuego indirecto",
@@ -249,8 +250,7 @@
         "manufacturer": "Fabricante",
         "production": "Producción",
         "unitsBuilt": "Unidades construidas",
-        "source": "Fuente",
-        "notes": "Notas"
+        "source": "Fuente"
       }
     },
     "keywords": {

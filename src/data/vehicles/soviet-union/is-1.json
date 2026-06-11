@@ -23,25 +23,22 @@
     "armor": {
       "front": {
         "thicknessMM": 120,
-        "inclinationDeg": 0,
-        "notes": "Cast turret and glacis."
+        "inclinationDeg": 60
       },
       "side": {
         "thicknessMM": 90,
-        "inclinationDeg": 0
+        "inclinationDeg": 90
       },
       "rear": {
         "thicknessMM": 60,
-        "inclinationDeg": 0
+        "inclinationDeg": 55
       },
       "exposed": {
         "thicknessMM": 15,
-        "inclinationDeg": 0,
-        "notes": "Hull roof and floor."
+        "inclinationDeg": 0
       }
     },
-    "sourceUrl": "https://en.wikipedia.org/wiki/IS_tank",
-    "notes": "A short-lived transitional heavy tank, essentially a KV-13 derived hull armed with the 85 mm D-5T gun. Built only briefly before being superseded by the more heavily armed IS-2."
+    "sourceUrl": "https://en.wikipedia.org/wiki/IS_tank"
   },
   "game": {
     "cost": 45,

@@ -1,0 +1,32 @@
+= Discusiones
+:toc:
+:toclevels: 3
+:toc-title: Contenido
+
+WARNING: Borrador en desarrollo.
+
+Esta sección recoge discusiones abiertas sobre decisiones de diseño, reglas pendientes de cerrar y alternativas que necesitan pruebas en mesa.
+
+== Organización decreciente o decreciente
+
+Podemos medir la organización por el valor entero o por la pérdida de esta.
+
+Al hacerlo como una pérdida podemos considerar la organización como una pérdida de puntos de vida en otros juegos y por ejemplo llevar la cuenta con un dado de un determinado color o token al lado de la miniatura.
+
+Hacerlo de este modo y usando principalmente D6 para el juego esto provoca que sea menos granular.
+
+== Artillería
+
+Optiones:
+
+- Artillería dentro de la mesa (poco realista).
+- Artillería fuera de la mesa con miniaturas.
+- Artillería sólo como abstracción en la construcción de lista.
+
+Mi idea inicial es que la artillería funcione como un juego independiente al de la mesa. Tendremos nuestras miniaturas en un margen de la mesa con un indicador de sus estados.
+
+Cuando dispare una unidad de artillería su posición podrá ser detectada y ser objetivo de fuego contra-bateria (esto bonifica el uso de unidades autopropulsadas que pueden disparar desde una posición y moverse rápidamente).
+
+Para disparar, la artillería deberá haber sido informada de las coordenadas del objetivo a través de alguna unidad que tenga la correspondiente keyword.
+
+Una vez una artillería ha disparado podrías usar tu artillería para contrarestarla o utilizar las unidades de areas de apoyo cercano para neutralizarla.

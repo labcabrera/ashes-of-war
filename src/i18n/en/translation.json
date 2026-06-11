@@ -110,7 +110,8 @@
       "unitTypes": "Unit Types",
       "unitProfile": "Unit Profiles",
       "infantry": "Infantry",
-      "vehicles": "Vehicles"
+      "vehicles": "Vehicles",
+      "discussions": "Discussions"
     }
   },
   "wiki": {
@@ -235,8 +236,7 @@
         "manufacturer": "Manufacturer",
         "production": "Production",
         "unitsBuilt": "Units built",
-        "source": "Source",
-        "notes": "Notes"
+        "source": "Source"
       }
     },
     "keywords": {

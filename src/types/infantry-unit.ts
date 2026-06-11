@@ -16,7 +16,6 @@ export interface InfantryHistoricalProfile {
   /** Free-text references to the small arms historically issued (e.g. "1x MG34, 7x Kar98k"). */
   smallArms?: string[];
   sourceUrl?: string;
-  notes?: string;
 }
 
 /** In-game profile for an infantry unit. */

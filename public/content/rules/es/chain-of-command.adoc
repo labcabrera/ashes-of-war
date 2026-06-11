@@ -5,6 +5,8 @@
 
 WARNING: Borrador en desarrollo.
 
+_A diferencia de otros juegos de estrategia donde las unidades se pueden mover libremente por el campo de batalla, las reglas de AoW han sido diseñadas para reflejar la estructura de combate de las unidades dentro de la Segunda Guerra Mundial donde las escuadras no operan independientemente conociendo la situación del campo de batalla. Para que una unidad que estaba defendiendo una posición pueda lanzar un ataque será necesario que un oficial haya transmitido esa orden. La pérdida de los oficiales implicará severas penalizaciones a la capacidad combativa del resto de unidades._
+
 == Estructura de mando
 
 Normalmente a la escala del juego que seriá por compañias donde tendremos un jefe de compañía (rango Capitán), varios jefes de sección (rango Teniente/Sargento) y varios jefes de escuadra (rango Cabo).
@@ -19,17 +21,25 @@ Hay dos tipos de mando, el de los jefes de compañía y el de los jefes de secci
 
 === HQ
 
-`HQ Y'`: los jefes de cada compaía tendrán esta keword donde Y es el rango en pulgadas del mando de la unidad. Los jefes de sección dentro de este rango se considerarán en cadeba de mando.
+`HQ {X} {Y}'`
+
+* *X*: número máximo de secciones que puede administrar el jefe de compañía.
+* *Y*: Distancia en pulgadas a las que el jefe está en mando con sus oficiales de sección.
 
 La eliminación de un jefe de compañía afectará muy negativamente a toda la cadena de mando aplicando bonificadores a la reorganización, la moral y la capacidad de realizar determinadas maniobras.
 
 === Section Command
 
-`Section Command X Y'` : siendo X el número de unidades máximas que se consideran en cadena de mando bajo su mando e Y la distancia en pulgadas.
+`Section Command {X} {Y}'`
+
+* *X*: número máximo de modelos que que pueden estar en mando con el oficial de la sección.
+* *Y*: Distancia en pulgadas a las que el jefe está en mando con sus oficiales de sección.
 
 _Ejemplo, un Teniente con *Section Command 8 16'* haría que hasta 8 peanas de infantería a rango de 16 pulgadas se consideraran en cadena de mando._
 
 Un jefe de sección deberá mantener la cadena de mando con el lider de la compañía para que sus unidades puedan beneficiarse de las órdenes del jefe de compañía. Si no es posible ya sea por la distancia o la eliminación de alguno de ellos las unidades bajo su mando tendrán diferentes penalizaciones.
+
+TIP: Durante la partida muchos pelotones pueden haber perdido el contacto con su jefe de sección ya sea porque se han alejado o porque este ha causado baja. En estos casos otras unidades con Section Command pueden asumir el control de estas unidades. De este modo no se requiere establecer a nivel de miniaturas cual es la cadena de mando de cada una de ellas. Esta regla sólo aplica a unidades que sean del mismo tipo que la composición original. Un sargento de infantería no ofrecerá su mando a una sección de carros de combate por ejemplo.
 
 === Independent
 
@@ -38,6 +48,14 @@ Un jefe de sección deberá mantener la cadena de mando con el lider de la compa
 === Radio
 
 `RADIO`: esta keyword se aplicará a unidades que pueden recibir órdenes a través de radio, lo que les permite ignorar la distancia de mando.
+
+== Restos de otras companías
+
+Durante la creación de listas podemos añadir unidades que estén fuera de mando de la unidad principal. Por ejemplo una compañía de infantería que quiera introducir un par de Tiger I sin estar integrados dentro de la compañía.
+
+De este modo podemos realizar listas más creativas (o más meta-game) sin tener que preocuparnos de una estructura rígida.
+
+No obstante, estas unidades tendrán limitaciones al no estar bajo ninguna cadena de mando y tendrán más complicado realizar maniobras integradas dentro del resto de unidades. Actuarán más como lobos solitarios o requerirán de un esfuerzo adicional para que algún capitán coordine sus acciones, penalizando al resto de unidades bajo su mando.
 
 == Notas de diseño
 

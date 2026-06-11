@@ -197,6 +197,9 @@ function validateVehicle(value: unknown, index: number, weaponIds: ReadonlySet<s
   if (!isRecord(value.historical)) {
     errors.push(`${path}.historical must be an object.`);
   } else {
+    if (value.historical.notes !== undefined) {
+      errors.push(`${path}.historical.notes is deprecated; use i18n descriptions instead.`);
+    }
     errors.push(...validateSpeedKmh(value.historical.speedKmh, `${path}.historical.speedKmh`));
     if (isArmoured || value.historical.armor !== undefined) {
       errors.push(...validateArmorProfile(value.historical.armor, `${path}.historical.armor`, validateArmorFacingHistorical));
@@ -264,6 +267,7 @@ describe('vehicle catalogue validation', () => {
       to: 1940,
       reviewedAt: 'yesterday',
       historical: {
+        notes: 'Use i18n descriptions.',
         speedKmh: { road: -1, offRoad: 10, sustainedMarch: 5 },
       },
       game: {
@@ -285,6 +289,7 @@ describe('vehicle catalogue validation', () => {
         'vehicles[0].faction must be a supported faction id.',
         'vehicles[0].from must be less than or equal to vehicles[0].to.',
         'vehicles[0].reviewedAt must be an ISO date (YYYY-MM-DD).',
+        'vehicles[0].historical.notes is deprecated; use i18n descriptions instead.',
         'vehicles[0].historical.speedKmh.road must be a non-negative number.',
         'vehicles[0].historical.armor must be an object.',
         'vehicles[0].game.cost must be a non-negative integer.',
