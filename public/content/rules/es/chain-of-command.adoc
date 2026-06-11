@@ -1,0 +1,40 @@
+= Cadena de Mando
+:toc:
+:toclevels: 3
+:toc-title: Contenido
+
+WARNING: Borrador en desarrollo.
+
+== Estructura de mando
+
+Normalmente a la escala del juego que seriá por compañias donde tendremos un jefe de compañía (rango Capitán), varios jefes de sección (rango Teniente/Sargento) y varios jefes de escuadra (rango Cabo).
+
+El grado de organización de cada una de las compañías estará afectado por el estado de la cadena de mando. Por ejemplo, si el jefe de una sección resulta eliminado las escuadras bajo su mando sufrirán una penalización en la recuperación organización y no podrán realizar determinadas acciones.
+
+Cada ejercito tendrá reglas especiales que afectan a la cadena de mando. Por ejemplo, una compañía de la Wehrmacht del comienzo de la guerra donde los suboficiales están muy bien entrenados tendrá menos penalizadores para reflejar que cada escuadra opera mejor de forma independiente. Por el contrario, una compañía del ejército rojo tendrá un funcionamiento más rígido donde las escuadras que con una cadena de mando dañada sufrirán penalizaciones más severas.
+
+== Keywords
+
+Hay dos tipos de mando, el de los jefes de compañía y el de los jefes de sección. Los jefes de compañía pueden transmitir órdenes a cualquier unidad bajo su mando, mientras que los jefes de sección solo pueden transmitir órdenes a las unidades directamente bajo su mando.
+
+=== HQ
+
+`HQ Y'`: los jefes de cada compaía tendrán esta keword donde Y es el rango en pulgadas del mando de la unidad. Los jefes de sección dentro de este rango se considerarán en cadeba de mando.
+
+La eliminación de un jefe de compañía afectará muy negativamente a toda la cadena de mando aplicando bonificadores a la reorganización, la moral y la capacidad de realizar determinadas maniobras.
+
+=== Section Command
+
+`Section Command X Y'` : siendo X el número de unidades máximas que se consideran en cadena de mando bajo su mando e Y la distancia en pulgadas.
+
+_Ejemplo, un Teniente con *Section Command 8 16'* haría que hasta 8 peanas de infantería a rango de 16 pulgadas se consideraran en cadena de mando._
+
+Un jefe de sección deberá mantener la cadena de mando con el lider de la compañía para que sus unidades puedan beneficiarse de las órdenes del jefe de compañía. Si no es posible ya sea por la distancia o la eliminación de alguno de ellos las unidades bajo su mando tendrán diferentes penalizaciones.
+
+=== Independent
+
+`Independent`: esta keyword se aplicará a unidades que no se ven penalizadas por operar fuera de la cadena de mando, por ejemplo unidades de reconomiento, francotiradores, unidades de élite que operan de forma independiente, etc.
+
+=== Radio
+
+`RADIO`: esta keyword se aplicará a unidades que pueden recibir órdenes a través de radio, lo que les permite ignorar la distancia de mando.

@@ -47,10 +47,19 @@ export default function AppHeader() {
 
   const navButtonSx = {
     justifyContent: 'flex-start',
+    borderRadius: 0,
+    fontWeight: 700,
+    letterSpacing: '0.04em',
+    color: 'text.secondary',
     '&.active': {
-      fontWeight: 700,
+      color: 'secondary.light',
       borderBottom: '2px solid',
-      borderColor: 'secondary.main',
+      borderColor: 'secondary.light',
+      bgcolor: 'rgba(159, 176, 170, 0.08)',
+    },
+    '&:hover': {
+      bgcolor: 'rgba(159, 176, 170, 0.1)',
+      color: 'text.primary',
     },
   };
 
@@ -73,9 +82,9 @@ export default function AppHeader() {
           to="/"
           sx={{
             mr: { xs: 0.5, md: 2 },
-            fontWeight: 700,
-            letterSpacing: 1,
-            color: 'inherit',
+            fontWeight: 900,
+            letterSpacing: '0.08em',
+            color: 'secondary.light',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
           }}

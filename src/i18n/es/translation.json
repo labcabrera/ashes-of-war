@@ -122,7 +122,8 @@
       "lightFire": "Fuego ligero",
       "heavyFire": "Fuego pesado",
       "indirectFire": "Fuego indirecto",
-      "organization": "Organización y bajas"
+      "organization": "Organización y bajas",
+      "chainOfCommand": "Cadena de mando"
     }
   },
   "wiki": {

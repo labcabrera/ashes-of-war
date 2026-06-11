@@ -126,6 +126,14 @@
       }
     },
     {
+      "id": "chain-of-command",
+      "titleKey": "rules.chapter.chainOfCommand",
+      "files": {
+        "en": "/content/rules/es/chain-of-command.adoc",
+        "es": "/content/rules/es/chain-of-command.adoc"
+      }
+    },
+    {
       "id": "morale",
       "titleKey": "rules.chapter.morale",
       "files": {

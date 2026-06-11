@@ -17,44 +17,44 @@ const theme = createTheme({
     mode: 'dark',
 
     primary: {
-      main:          '#4b5058',  // Feldgrau 600
-      light:         '#7a7568',  // Feldgrau 400
-      dark:          '#2b2f35',  // Dunkelgrau
-      contrastText:  '#f0ede8',  // Feldgrau 50
+      main:          '#53606a',
+      light:         '#7d8b93',
+      dark:          '#303941',
+      contrastText:  '#edf0ec',
     },
 
     secondary: {
-      main:          '#c8a84b',  // Sandgelb 400 — acento dorado
-      light:         '#d8c270',  // Sandgelb 200
-      dark:          '#a07830',  // Sandgelb 600
-      contrastText:  '#3a2808',  // Sandgelb 900
+      main:          '#9fb0aa',
+      light:         '#c2cbc5',
+      dark:          '#6f817b',
+      contrastText:  '#11161a',
     },
 
     error: {
-      main:          '#8a2020',  // Blutrot 600
-      light:         '#c87070',
-      dark:          '#601010',
-      contrastText:  '#f8eaea',
+      main:          '#9a3732',
+      light:         '#c86d68',
+      dark:          '#68201d',
+      contrastText:  '#f5eded',
     },
 
     background: {
-      default:       '#14161a',  // Schwarz — página
-      paper:         '#1e2228',  // Dunkelgrau suave — cards
+      default:       '#0d1115',
+      paper:         '#171d22',
     },
 
     text: {
-      primary:       '#c4bba8',  // Khaki hell — texto principal
-      secondary:     '#7a7568',  // Feldgrau 400 — texto muted
-      disabled:      '#3a3830',
+      primary:       '#d4d7d0',
+      secondary:     '#9aa29b',
+      disabled:      '#59625d',
     },
 
-    divider:         '#2b2f35',  // Dunkelgrau
+    divider:         '#2f3941',
 
     action: {
-      active:        '#c4bba8',
-      hover:         'rgba(75, 80, 88, 0.12)',
-      selected:      'rgba(200, 168, 75, 0.16)',
-      disabledBackground: '#1e2228',
+      active:        '#c2cbc5',
+      hover:         'rgba(125, 139, 147, 0.14)',
+      selected:      'rgba(159, 176, 170, 0.16)',
+      disabledBackground: '#171d22',
     },
   },
 
@@ -74,25 +74,47 @@ const theme = createTheme({
   shape: { borderRadius: 3 },  // esquinas cuadradas estilo militar
 
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: '#0d1115',
+          backgroundImage:
+            'linear-gradient(180deg, rgba(83,96,106,0.08), rgba(13,17,21,0) 260px),'
+            + 'repeating-linear-gradient(0deg, rgba(237,240,236,0.015) 0, rgba(237,240,236,0.015) 1px, transparent 1px, transparent 4px)',
+        },
+      },
+    },
+
     MuiAppBar: {
       styleOverrides: {
-        root: { backgroundColor: '#0f1114',
-                borderBottom: '2px solid #2b2f35' },
+        root: {
+          backgroundColor: '#171b20',
+          backgroundImage: 'linear-gradient(180deg, #20262d 0%, #15191e 100%)',
+          borderTop: '1px solid #53606a',
+          borderBottom: '2px solid #303941',
+          boxShadow: '0 4px 14px rgba(0,0,0,0.35)',
+        },
+      },
+    },
+
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#171d22',
+          backgroundImage: 'linear-gradient(180deg, rgba(83,96,106,0.16), rgba(83,96,106,0.03))',
+          border: '1px solid #303941',
+        },
       },
     },
 
     MuiCard: {
       styleOverrides: {
-        root: { backgroundColor: '#1a1c20',
-                border: '1px solid #2b2f35',
-                // dashed top accent via backgroundImage:
-                backgroundImage: 'repeating-linear-gradient(90deg,'
-                  + '#c8a84b 0,#c8a84b 8px,transparent 8px,transparent 14px)'
-                  + ',none',
-                backgroundSize: '100% 2px',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'top',
-                paddingTop: '2px' },
+        root: {
+          backgroundColor: '#171d22',
+          border: '1px solid #303941',
+          backgroundImage: 'linear-gradient(180deg, rgba(83,96,106,0.14), rgba(17,22,26,0.02))',
+          paddingTop: '2px',
+        },
       },
     },
 
@@ -101,12 +123,12 @@ const theme = createTheme({
         root: { borderRadius: 3, letterSpacing: '0.06em',
                 // fontFamily: '"Share Tech Mono", monospace',
                 fontSize: '0.7rem' },
-        colorPrimary:   { backgroundColor: '#1e2a38', color: '#6090c0',
-                          border: '1px solid #2a4058' },
-        colorSecondary: { backgroundColor: '#281e10', color: '#c8a84b',
-                          border: '1px solid #503810' },
-        colorError:     { backgroundColor: '#280e0e', color: '#c07070',
-                          border: '1px solid #4a1818' },
+        colorPrimary:   { backgroundColor: '#1b252c', color: '#9fb0aa',
+                          border: '1px solid #3d4b52' },
+        colorSecondary: { backgroundColor: '#202824', color: '#c2cbc5',
+                          border: '1px solid #53605a' },
+        colorError:     { backgroundColor: '#2a1717', color: '#c86d68',
+                          border: '1px solid #68201d' },
       },
     },
 
@@ -121,13 +143,13 @@ const theme = createTheme({
     },
 
     MuiDivider: {
-      styleOverrides: { root: { borderColor: '#2b2f35' } },
+      styleOverrides: { root: { borderColor: '#303941' } },
     },
 
     MuiTooltip: {
       styleOverrides: {
-        tooltip: { backgroundColor: '#0f1114', border: '1px solid #2b2f35',
-                   color: '#c4bba8',
+        tooltip: { backgroundColor: '#11161a', border: '1px solid #303941',
+                   color: '#d4d7d0',
                   //  fontFamily: '"Share Tech Mono", monospace',
                    fontSize: '0.7rem', letterSpacing: '0.05em' },
       },

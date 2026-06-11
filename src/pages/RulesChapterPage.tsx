@@ -54,11 +54,23 @@ export default function RulesChapterPage() {
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
       {isDesktop ? (
-        <Paper sx={{ width: 280, flexShrink: 0, alignSelf: 'flex-start', position: 'sticky', top: 82, maxHeight: 'calc(100vh - 98px)', overflow: 'auto' }}>
+        <Paper
+          sx={{
+            width: 280,
+            flexShrink: 0,
+            alignSelf: 'flex-start',
+            position: 'sticky',
+            top: 82,
+            maxHeight: 'calc(100vh - 98px)',
+            overflow: 'auto',
+            borderRadius: 0.75,
+            boxShadow: '0 14px 28px rgba(0,0,0,0.28)',
+          }}
+        >
           {sidebar}
         </Paper>
       ) : (
-        <Paper sx={{ p: 1, position: 'sticky', top: 58, zIndex: 1 }}>
+        <Paper sx={{ p: 1, position: 'sticky', top: 58, zIndex: 1, borderRadius: 0.75 }}>
           {index ? (
             <RulesChapterList
               chapters={index.chapters}
