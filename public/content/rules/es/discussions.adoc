@@ -30,3 +30,15 @@ Cuando dispare una unidad de artillería su posición podrá ser detectada y ser
 Para disparar, la artillería deberá haber sido informada de las coordenadas del objetivo a través de alguna unidad que tenga la correspondiente keyword.
 
 Una vez una artillería ha disparado podrías usar tu artillería para contrarestarla o utilizar las unidades de areas de apoyo cercano para neutralizarla.
+
+NOTE: Representación de diferentes doctrinas como podría ser la sovietica de hacer un bombardeo masivo con artillería previo a la ofensiva pero luego sin mucha capacidad de correción de tiro o la alemana de usar la artillería de forma más precisa y con capacidad de corrección de tiro.
+
+Al final la artillería es un elemento clave en la guerra y debería tener un papel importante en el juego.
+
+== Ajuste temporal
+
+Algunas acciones como solicitar apoyo de artillería o aéreo en la práctica podrían requerir de tiempos muy superiores a los que se juegan a una escala táctica por turnos.
+
+Representado puede parecer que se juega a dos tiempos: el puramente táctico de la infantería y los vehículos y el de otros elementos como la artillería o el apoyo aéreos.
+
+No incluir estos elementos hace que el juego sea como un shooter realista que representa un instante de tiempo pero no el conjunto de la guerra.

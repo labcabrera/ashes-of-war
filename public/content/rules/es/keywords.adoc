@@ -12,8 +12,17 @@ Estas unidades pueden permanecer ocultas en el tablero hasta que se cumplan cier
 
 NOTE: Pendiente de revisión. Considerar modelo de despliegue fuera del tablero y luego entrar en el tablero al atacar o ser detectados. Podría ser necesario definir de forma secreta su localización para evitar que aparezcan en cualquier lado. Otra opción es que estas unidades no puedan ser detectadas inicialmente y ser objetivo de disparos enemigos. 
 
-[#area]
-== Area X
+[#artillery-observer]
+== Artillery Observer
+
+Estas unidades tendrán capacidades para transmitir a las unidades de artillería las coordenadas de los objetivos enemigos.
+
+NOTE: No sólo es suficiente que puedan transmitir las coordenadas, también se requiere que una unidad con la keyword de HQ autorice dicha acción.
+
+[#bunker]
+
+[#blast]
+== Blast X
 
 _Representa la naturaleza de las armas de área como morteros, artillería o lanzacohetes que pueden causar daños significativos en un área amplia._
 
@@ -76,6 +85,11 @@ Estas unidades pueden desplegarse fuera del área de despliegue hasta X pulgadas
 == Stationary
 
 Las unidades con esta palabra clave no pueden realizar ningún movimiento durante la partida. Estas unidades por lo general serán emplazamientos fijos de armas pesadas que requieren de una preparación previa para ser desplegadas.
+
+[#towed]
+== Towed
+
+Las unidades de este tipo no pueden moverse por si mismas, sólo ajustar el ángulo en el que están desplegadas.
 
 [#transport]
 == Transport X

@@ -1,9 +1,32 @@
 # Misiones
-
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
 WARNING: Borrador en desarrollo.
 
-* Aniquilación
-* Ruptura del frente / defensa de posición
-* Destrucción de objetivo
-* Recuperación de inteligencia
+== Aniquilación
+
+Estas misiones estarán centradas en la destrucción mútua de las fuerzas enemigas. Más allá de cualquier consideración estrateǵica, el objetivo de esa misión es eliminar cuantas mas unidades del objetivo mejor y el ganador será aquel que finalizada la partida haya destruido mas unidades del objetivo rival.
+
+Para esta misión se tendrá en cuenta el valor de la unidad destruida ya que no será lo mismo acabar con un Panzer I que un Tiger II.
+
+Tipos de mapa: simétricos.
+
+== Ruptura del frente
+
+En esta misión el objetivo es romper el frente enemigo y conseguir que las unidades del atacante penetren dentro de las defensas enemigas. 
+
+El defensor contará con limitaciones en el despligue y podrá contar con acceso a posiciones defensivas, minas, trincheras y otros elementos que beneficien la defensa.
+
+El atacante contará con una ventaja en su capacidad de despliegue.
+
+En estas misiones el defensor utilizará las reglas de llegada de reservas.
+
+Tipos de mapa: asimétricos.
+
+== Control de objetivos
+
+El objetivo de esta misión es ir controlando los objetivos repartidos por el mapa. Cada turno el control de los objetivos aportará una cantidad de puntos al jugador que los controle. Al finalizar los turnos de juego ganará el jugador que haya acumulado mas puntos.
+
+Tipos de mapa: simétricos.

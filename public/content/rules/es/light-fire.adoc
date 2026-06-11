@@ -1,4 +1,4 @@
-# Fuego ligero
+# Disparo ligero
 :toc:
 :toclevels: 3
 :toc-title: Contenido

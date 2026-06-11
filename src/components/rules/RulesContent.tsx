@@ -72,7 +72,7 @@ export default function RulesContent({ chapter, basePath }: Props) {
   }
 
   return (
-    <Box sx={{ maxWidth: 880, px: 2, pb: 4 }}>
+    <Box sx={{ width: '100%', maxWidth: { md: 960, lg: 1280, xl: 1520 }, px: 2, pb: 4 }}>
       <Box ref={contentRef} sx={asciidocSx} dangerouslySetInnerHTML={{ __html: html }} />
       {chapter.children && chapter.children.length > 0 && (
         <Box sx={{ mt: 3 }}>

@@ -5,6 +5,32 @@
 
 WARNING: Borrador en desarrollo.
 
+El disparo pesado abarca el uso de municiones y calibres más potentes que los usados por armas ligeras de infantería. Principalmente abarca:
+
+- Municiones de alto explosivo centradas en el daño a la infantería y vehículos sin blindaje con grandes áreas de efecto con daño de fragmentación.
+- Municiones perforantes destinadas a la destrucción de vehículos blindados.
+- Armas de infantería anti-carro ya sean panzerfaust, minas magnéticas o cócteles molotov.
+- Armas de asedio como obuses pesados orientados a la destrucción de fortificaciones.
+- Minas terrestres.
+- Armas usadas por las unidades de apoyo aéreo cercano como bombas o cañones.
+
+== Impactos contra vehículos
+
+Los vehículos tienen definido en su perfil unos valores de blindaje que determinarán la resistencia a los impactos de armas con capacidad de penetración.
+
+Al resolver un disparo contra un vehículo la secuencia será la siguiente:
+
+* Determinar el impacto
+* Determinar la penetración
+* Determinar el daño causado
+* Determinar la pérdida de organización
+
+La tirada para impactar estará modificada por valores que implican la puntería del tirador (_balistic skill_), el grado de organización de la unidad, la geometría del objetivo (_la diferencia entre un KV-2 y un Hetzer_), distancia, tipo de cobertura, velocidades de movimiento y elementos ambientales.
+
+La tirada de penetración dependerá del perfil de penetración del arma, el blindaje del vehículo, la distancia al objetivo y el ángulo de impacto.
+
+La tirada de daño dependerá del valor destructivo del arma y el resultado de la tirada de penetración. Cuanto mayor haya sido la diferencia entre la penetracion requerida y el resultado de la tirada mayores serán los daños causados.
+
 == Penetración
 
 Cuando un vehículo sufre un impacto de un arma pesada se resolverá la tirada para determinar si el impacto ha sido exitoso o no. En caso de ser exitoso se determinará el tipo de impacto y posteriormente se resolverá el daño causado al vehículo.
