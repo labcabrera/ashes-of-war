@@ -81,6 +81,68 @@ function validateRateRange(value: unknown, path: string): string[] {
   return errors;
 }
 
+function validatePenetrationTable(value: unknown, path: string): string[] {
+  if (!Array.isArray(value)) {
+    return [`${path} must be an array when provided.`];
+  }
+
+  const errors: string[] = [];
+  value.forEach((row, index) => {
+    const rowPath = `${path}[${index}]`;
+    if (!isRecord(row)) {
+      errors.push(`${rowPath} must be an object.`);
+      return;
+    }
+    if (!isPositiveInteger(row.rangeM)) {
+      errors.push(`${rowPath}.rangeM must be a positive integer.`);
+    }
+    if (row.penetrationMM !== undefined && !isNonNegativeInteger(row.penetrationMM)) {
+      errors.push(`${rowPath}.penetrationMM must be a non-negative integer when provided.`);
+    }
+    for (const field of ['hitProbabilityTraining', 'hitProbabilityCombat']) {
+      const probability = row[field];
+      if (probability !== undefined && (!Number.isInteger(probability) || Number(probability) < 0 || Number(probability) > 100)) {
+        errors.push(`${rowPath}.${field} must be an integer between 0 and 100 when provided.`);
+      }
+    }
+  });
+  return errors;
+}
+
+function validateAmmunition(value: unknown, path: string): string[] {
+  if (!isRecord(value)) {
+    return [`${path} must be an object when provided.`];
+  }
+
+  const errors: string[] = [];
+  for (const [ammunitionId, ammunition] of Object.entries(value)) {
+    const ammunitionPath = `${path}.${ammunitionId}`;
+    if (!isRecord(ammunition)) {
+      errors.push(`${ammunitionPath} must be an object.`);
+      continue;
+    }
+    if (ammunition.name !== undefined && !isNonEmptyString(ammunition.name)) {
+      errors.push(`${ammunitionPath}.name must be a non-empty string when provided.`);
+    }
+    if (ammunition.description !== undefined && !isNonEmptyString(ammunition.description)) {
+      errors.push(`${ammunitionPath}.description must be a non-empty string when provided.`);
+    }
+    if (ammunition.projectileWeightKg !== undefined && !(typeof ammunition.projectileWeightKg === 'number' && ammunition.projectileWeightKg > 0)) {
+      errors.push(`${ammunitionPath}.projectileWeightKg must be a positive number when provided.`);
+    }
+    if (ammunition.explosiveChargeKg !== undefined && !(typeof ammunition.explosiveChargeKg === 'number' && ammunition.explosiveChargeKg >= 0)) {
+      errors.push(`${ammunitionPath}.explosiveChargeKg must be a non-negative number when provided.`);
+    }
+    if (ammunition.penetrationAngleDeg !== undefined && !isNonNegativeInteger(ammunition.penetrationAngleDeg)) {
+      errors.push(`${ammunitionPath}.penetrationAngleDeg must be a non-negative integer when provided.`);
+    }
+    if (ammunition.penetrationTable !== undefined) {
+      errors.push(...validatePenetrationTable(ammunition.penetrationTable, `${ammunitionPath}.penetrationTable`));
+    }
+  }
+  return errors;
+}
+
 function validateHistorical(value: unknown, path: string): string[] {
   if (!isRecord(value)) {
     return [`${path} must be an object.`];
@@ -121,6 +183,9 @@ function validateHistorical(value: unknown, path: string): string[] {
     if (!Array.isArray(value.typicalAmmunition) || !value.typicalAmmunition.every(isNonEmptyString)) {
       errors.push(`${path}.typicalAmmunition must be an array of non-empty strings when provided.`);
     }
+  }
+  if (value.ammunition !== undefined) {
+    errors.push(...validateAmmunition(value.ammunition, `${path}.ammunition`));
   }
   if (value.sourceUrl !== undefined && !isNonEmptyString(value.sourceUrl)) {
     errors.push(`${path}.sourceUrl must be a non-empty string when provided.`);
@@ -221,6 +286,23 @@ describe('weapon catalogue validation', () => {
     expect(kwk40?.historical.caliberMM).toBe(75);
     expect(kwk40?.historical.muzzleVelocityMps?.apcbc).toBe(750);
     expect(kwk40?.game.profiles[0]).toMatchObject({ id: 'apcbc', armourPenetration: 10 });
+  });
+
+  it('loads the 8.8 cm KwK 36 PzGr.39 historical penetration table', () => {
+    const kwk36 = weaponCatalogueEntries.find((weapon) => weapon.id === 'german-kwk-36-l56');
+    const apcbc = kwk36?.historical.ammunition?.apcbc;
+
+    expect(apcbc).toBeDefined();
+    expect(apcbc?.name).toBe('PzGr. 39');
+    expect(apcbc?.penetrationAngleDeg).toBe(30);
+    expect(apcbc?.penetrationTable).toHaveLength(7);
+    expect(apcbc?.penetrationTable?.[0]).toMatchObject({
+      rangeM: 100,
+      penetrationMM: 132,
+      hitProbabilityTraining: 100,
+      hitProbabilityCombat: 100,
+    });
+    expect(apcbc?.penetrationTable?.[5]).toMatchObject({ rangeM: 2500, hitProbabilityCombat: 31 });
   });
 
   it('reports multiple errors for an invalid entry', () => {

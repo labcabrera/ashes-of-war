@@ -5,7 +5,7 @@
   "faction": "german",
   "from": 1942,
   "to": 1945,
-  "reviewedAt": "2026-06-10",
+  "reviewedAt": "2026-06-11",
   "historical": {
     "caliberMM": 88,
     "barrelLength": "L/56",
@@ -20,6 +20,24 @@
       "combat": { "min": 4, "max": 6 }
     },
     "typicalAmmunition": ["APCBC PzGr.39", "APCR PzGr.40", "HE Sprgr.39"],
+    "ammunition": {
+      "apcbc": {
+        "name": "PzGr. 39",
+        "description": "Munición antiblindaje con cubierta balística, carga explosiva y trazadora.",
+        "projectileWeightKg": 10.2,
+        "explosiveChargeKg": 0.059,
+        "penetrationAngleDeg": 30,
+        "penetrationTable": [
+          { "rangeM": 100, "penetrationMM": 132, "hitProbabilityTraining": 100, "hitProbabilityCombat": 100 },
+          { "rangeM": 500, "penetrationMM": 110, "hitProbabilityTraining": 100, "hitProbabilityCombat": 100 },
+          { "rangeM": 1000, "penetrationMM": 99, "hitProbabilityTraining": 100, "hitProbabilityCombat": 93 },
+          { "rangeM": 1500, "penetrationMM": 91, "hitProbabilityTraining": 98, "hitProbabilityCombat": 74 },
+          { "rangeM": 2000, "penetrationMM": 83, "hitProbabilityTraining": 87, "hitProbabilityCombat": 50 },
+          { "rangeM": 2500, "hitProbabilityTraining": 71, "hitProbabilityCombat": 31 },
+          { "rangeM": 3000, "hitProbabilityTraining": 53, "hitProbabilityCombat": 19 }
+        ]
+      }
+    },
     "sourceUrl": "https://en.wikipedia.org/wiki/8.8_cm_KwK_36",
     "notes": "Tank gun derived from the famous 8.8cm Flak 18/36/37, fitted as the main armament of the Tiger I heavy tank from 1942. Its outstanding penetration and accuracy gave the Tiger a decisive long-range advantage over almost all Allied and Soviet tanks for much of the war."
   },
