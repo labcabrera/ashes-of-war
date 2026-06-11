@@ -19,6 +19,7 @@ import { UnitType, UnitKeyword, UNIT_TYPES } from '../../types/unit';
 import type { FactionId } from '../../types/faction';
 import type { NumericRange } from '../../hooks/useUnitData';
 import { factionColor } from '../../utils/factionColors';
+import { formatUnitKeyword } from '../../utils/unitKeywords';
 import { FilterSection, OptionRow, optionRowSx, toggleValue } from '../common/FilterSidebarPrimitives';
 
 interface Props {
@@ -224,7 +225,7 @@ export default function UnitFilterSidebar({
           size="small"
           options={availableKeywords}
           value={selectedKeywords}
-          getOptionLabel={(option) => t(`units.keywords.${option}`, { defaultValue: option })}
+          getOptionLabel={(option) => formatUnitKeyword(option, t)}
           onChange={(_event, value) => onKeywordsChange(value)}
           renderOption={(props, option, { selected }) => {
             const { key, ...optionProps } = props;
@@ -236,7 +237,7 @@ export default function UnitFilterSidebar({
                   checked={selected}
                   sx={{ mr: 1 }}
                 />
-                {t(`units.keywords.${option}`, { defaultValue: option })}
+                {formatUnitKeyword(option, t)}
               </Box>
             );
           }}

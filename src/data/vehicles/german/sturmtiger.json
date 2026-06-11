@@ -63,6 +63,6 @@
     "weapons": [
       { "id": "german-rw-61", "count": 1, "type": "hull" }
     ],
-    "keywords": ["radio"]
+    "keywords": ["radio", "rare"]
   }
 }

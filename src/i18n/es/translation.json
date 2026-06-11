@@ -58,6 +58,7 @@
     "add": "Añadir",
     "remove": "Eliminar",
     "close": "Cerrar",
+    "view": "Ver",
     "name": "Nombre",
     "faction": "Facción",
     "type": "Tipo",
@@ -177,6 +178,24 @@
     },
     "outOfYear": "Fuera de era",
     "noResults": "Ninguna unidad coincide con los filtros actuales.",
+    "compare": {
+      "action": "Comparar",
+      "title": "Comparación de unidades",
+      "dialogTitle": "Comparar unidad",
+      "searchLabel": "Unidad comparable",
+      "searchPlaceholder": "Buscar unidad...",
+      "noOptions": "No hay unidades comparables.",
+      "notFound": "Comparación no disponible",
+      "gameProfile": "Perfil de juego",
+      "attribute": "Atributo",
+      "terrain": "Terreno",
+      "categories": {
+        "infantry": "Infantería con infantería",
+        "vehicle": "Vehículos con vehículos",
+        "towed": "Armas remolcadas con armas remolcadas",
+        "aircraft": "Aviación con aviación"
+      }
+    },
     "detail": {
       "title": "Detalle de unidad",
       "compactTitle": "Menú de unidad",
@@ -237,6 +256,11 @@
     "keywords": {
       "low-reliability": "Baja fiabilidad",
       "radio": "Radio",
+      "rare": "Rara",
+      "independent": "Independiente",
+      "hq": "HQ",
+      "hqWithValue": "HQ ({{value}})",
+      "sectionCommand": "Mando de sección ({{command}}/{{radius}})",
       "air-support": "Apoyo aéreo",
       "anti-air": "Antiaéreo",
       "half-track": "Semioruga",

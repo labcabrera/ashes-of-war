@@ -58,6 +58,7 @@
     "add": "Add",
     "remove": "Remove",
     "close": "Close",
+    "view": "View",
     "name": "Name",
     "faction": "Faction",
     "type": "Type",
@@ -163,6 +164,24 @@
     },
     "outOfYear": "Out of era",
     "noResults": "No units match the current filters.",
+    "compare": {
+      "action": "Compare",
+      "title": "Unit comparison",
+      "dialogTitle": "Compare unit",
+      "searchLabel": "Comparable unit",
+      "searchPlaceholder": "Search unit...",
+      "noOptions": "No comparable units available.",
+      "notFound": "Comparison unavailable",
+      "gameProfile": "Game profile",
+      "attribute": "Attribute",
+      "terrain": "Terrain",
+      "categories": {
+        "infantry": "Infantry with infantry",
+        "vehicle": "Vehicles with vehicles",
+        "towed": "Towed weapons with towed weapons",
+        "aircraft": "Aircraft with aircraft"
+      }
+    },
     "detail": {
       "title": "Unit details",
       "compactTitle": "Unit menu",
@@ -223,6 +242,11 @@
     "keywords": {
       "low-reliability": "Low Reliability",
       "radio": "Radio",
+      "rare": "Rare",
+      "independent": "Independent",
+      "hq": "HQ",
+      "hqWithValue": "HQ ({{value}})",
+      "sectionCommand": "Section Command ({{command}}/{{radius}})",
       "air-support": "Air Support",
       "anti-air": "Anti-Air",
       "half-track": "Half-track",

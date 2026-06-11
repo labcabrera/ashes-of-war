@@ -38,3 +38,11 @@ Un jefe de sección deberá mantener la cadena de mando con el lider de la compa
 === Radio
 
 `RADIO`: esta keyword se aplicará a unidades que pueden recibir órdenes a través de radio, lo que les permite ignorar la distancia de mando.
+
+== Notas de diseño
+
+* La cadena de mando debe de ser uno de los elementos centrales dentro de la partida ya que determina la capacidad de una compañía para organizarse y reaccionar a los eventos del campo de batalla.
+
+* Añade una capa de profundidad táctica que ofrece diferentes sabores de juego en función de ejércitos mas rígidos o mas flexibles.
+
+* Ejércitos con radios se ven muy beneficiados ya que pueden permanecer en mando aunque sus unidades estén dispersas por el campo de batalla. Por ejemplo, una seccińo de 4 Tigers I con su comandante con radio podrá desplegar todas sus unidades en cualquier lugar del campo de batalla mientras que una sección de T-34-76 donde el comandante tiene que indicar las órdenes con banderas, bengalas o dando gritos tendrá que hacer que los tanques de la sección estén en un rango cercano.

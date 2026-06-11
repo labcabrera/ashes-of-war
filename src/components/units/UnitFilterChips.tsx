@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { UnitType, UnitKeyword } from '../../types/unit';
 import type { FactionId } from '../../types/faction';
 import type { NumericRange } from '../../hooks/useUnitData';
+import { formatUnitKeyword } from '../../utils/unitKeywords';
 
 interface Props {
   name: string;
@@ -88,7 +89,7 @@ export default function UnitFilterChips({
       {selectedKeywords.map((keyword) => (
         <Chip
           key={keyword}
-          label={t(`units.keywords.${keyword}`, { defaultValue: keyword })}
+          label={formatUnitKeyword(keyword, t)}
           size="small"
           color="secondary"
           variant="outlined"

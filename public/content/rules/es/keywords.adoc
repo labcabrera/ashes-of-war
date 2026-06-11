@@ -31,10 +31,21 @@ Las armas con este perfil tendrán una penalización de -X a su tirada de impact
 
 TODO
 
+[#hidden]
+== HQ
+
+Estas unidades actúan como los lideres de cada compañía. TODO: link a cadena de mando.
+
 [#medic]
 == Medic
 
 TODO
+
+[#independent]
+== Independent
+
+Estas unidades no sufren penalizadores al estar fuera de la cadena de mando.
+
 
 [#overheat]
 == Overheat X
@@ -49,6 +60,11 @@ Al disparar la unidad, si el número de unos en la tirada de impacto es igual o 
 Las unidades con esta palabra clave pueden comunicarse a distancia con otras unidades aliadas para coordinar ataques, solicitar apoyo o compartir información sobre el campo de batalla. Estas unidades pueden ser oficiales de mando, operadores de radio o cualquier unidad equipada con un dispositivo de comunicación. Esto mejora la capacidad de mando y organización al no tener que depender de la línea de visión directa para transmitir órdenes o información entre unidades.
 
 Alguna características del juego como por ejemplo solicitar apoyo de artillería requieren que la unidad tenga esta palabra clave para poder realizar esa acción.
+
+[#rare]
+== Rare
+
+Estas unidades son extremadamente raras y difíciles de encontrar en el campo de batalla. Representan modelos de vehículos de los que se produjeron pocas unidades como el _Sturmtiger_ o unidades de élite que se emplearon en cantidades limitadas durante la guerra.
 
 == Recon X
 

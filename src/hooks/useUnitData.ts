@@ -43,7 +43,7 @@ interface UseUnitDataResult {
 }
 
 const availableKeywords = [...new Set(allUnits.flatMap((u) => u.keywords ?? []))]
-  .filter((kw) => !/-\d+$/.test(kw))
+  .filter((kw) => !/^transport-\d+$/.test(kw))
   .sort() as UnitKeyword[];
 
 const availableFactions = [...new Set(allUnits.map((u) => u.faction))].sort() as FactionId[];

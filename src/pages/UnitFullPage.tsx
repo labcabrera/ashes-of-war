@@ -21,6 +21,7 @@ import {
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import DescriptionIcon from '@mui/icons-material/Description';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import FlightIcon from '@mui/icons-material/Flight';
@@ -30,9 +31,10 @@ import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ShieldIcon from '@mui/icons-material/Shield';
 import SpeedIcon from '@mui/icons-material/Speed';
-import type { ReactNode } from 'react';
-import { Link as RouterLink, useParams } from 'react-router-dom';
+import { useState, type ReactNode } from 'react';
+import { Link as RouterLink, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import UnitCompareDialog from '../components/units/UnitCompareDialog';
 import { allUnits } from '../data/units';
 import { vehicles } from '../data/vehicles';
 import { towedWeapons } from '../data/towed';
@@ -41,6 +43,7 @@ import { getDescription } from '../i18n/descriptions';
 import type { Armor, Unit, UnitType, UnitWeapon } from '../types/unit';
 import type { VehicleCatalogueEntry } from '../types/vehicle';
 import { unitImageUrl } from '../utils/images';
+import { formatUnitKeyword } from '../utils/unitKeywords';
 
 const UNIT_ICONS = {
   infantry: MilitaryTechIcon,
@@ -302,7 +305,9 @@ function HistoricalSpecsSection({ unit, entry }: { unit: Unit; entry?: VehicleCa
 
 export default function UnitFullPage() {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const { unitId } = useParams();
+  const [compareDialogOpen, setCompareDialogOpen] = useState(false);
   const unit = units.find((candidate) => candidate.id === unitId);
   const UnitIcon = unit ? UNIT_ICONS[unit.type] : MilitaryTechIcon;
 
@@ -325,9 +330,20 @@ export default function UnitFullPage() {
 
   return (
     <Container maxWidth="lg">
-      <Button component={RouterLink} to="/units" startIcon={<ArrowBackIcon />} sx={{ mb: 2 }}>
-        {t('units.detail.backToCatalogue')}
-      </Button>
+      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ justifyContent: 'space-between', mb: 2 }}>
+        <Button component={RouterLink} to="/units" startIcon={<ArrowBackIcon />} sx={{ alignSelf: { xs: 'flex-start', sm: 'center' } }}>
+          {t('units.detail.backToCatalogue')}
+        </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          startIcon={<CompareArrowsIcon />}
+          onClick={() => setCompareDialogOpen(true)}
+          sx={{ alignSelf: { xs: 'stretch', sm: 'center' } }}
+        >
+          {t('units.compare.action')}
+        </Button>
+      </Stack>
 
       <Stack spacing={3}>
         <Paper sx={{ overflow: 'hidden' }}>
@@ -470,7 +486,7 @@ export default function UnitFullPage() {
               <Section title={t('units.detail.keywords')} icon={BookmarksIcon}>
                 <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
                   {unit.keywords.map((keyword) => (
-                    <Chip key={keyword} label={t(`units.keywords.${keyword}`, keyword)} color="warning" />
+                    <Chip key={keyword} label={formatUnitKeyword(keyword, t)} color="warning" />
                   ))}
                 </Stack>
               </Section>
@@ -488,6 +504,16 @@ export default function UnitFullPage() {
           </Section>
         )}
       </Stack>
+      <UnitCompareDialog
+        open={compareDialogOpen}
+        unit={unit}
+        units={units}
+        onClose={() => setCompareDialogOpen(false)}
+        onView={(target) => {
+          setCompareDialogOpen(false);
+          navigate(`/units/${encodeURIComponent(unit.id)}/compare/${encodeURIComponent(target.id)}`);
+        }}
+      />
     </Container>
   );
 }

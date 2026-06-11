@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import RulesChapterPage from './pages/RulesChapterPage';
 import UnitsPage from './pages/UnitsPage';
 import UnitFullPage from './pages/UnitFullPage';
+import UnitComparePage from './pages/UnitComparePage';
 import CampaignPage from './pages/CampaignPage';
 import WikiPage from './pages/WikiPage';
 import WikiArticlePage from './pages/WikiArticlePage';
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: 'rules/:chapterId', element: <RulesChapterPage /> },
       { path: 'rules/:chapterId/:subchapterId', element: <RulesChapterPage /> },
       { path: 'units', element: <UnitsPage /> },
+      { path: 'units/:unitId/compare/:compareUnitId', element: <UnitComparePage /> },
       { path: 'units/:unitId', element: <UnitFullPage /> },
       { path: 'army-builder', element: <ArmyBuilderPage /> },
       { path: 'campaign', element: <CampaignPage /> },
