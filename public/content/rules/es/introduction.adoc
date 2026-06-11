@@ -17,10 +17,16 @@ Aunque las reglas de juego y los perfiles de las unidades se han creado a partir
 Habitualmente estos juegos se basan en un sistema en el que:
 
 * La infantería es débil contra los tanques pero fuerte contra la artillería y las armas remolcadas.
-* La artillería es fuerte contra la infantería pero fuerte contra los tanques.
-* Los tanques con fuertes contra todo excepto otros tanques y las piezas antitanques remolcadas.
+* La artillería es fuerte contra la infantería pero débil contra los tanques.
+* Los tanques con fuertes contra todo pero son costosos y débiles contra otros tanques, cazacarros e infantería con armas anti-tanque.
 
 Con más variantes y unidades como unidades motorizadas, artillería auto-propulsada, aviación, etc. Esto hace que la experiencia de juego muchas veces resulte aburrida y repetitiva, especialmente con versiones de lista que explotan alguna de estas ventajas. Y aunque debiera ser posible crear escenarios desbalanceados de juego donde la victoria y la derrota no pasen por el desempeño absoluto sino por los objetivos de cada misión, el elemento central de diseño del juego es evitar este tipo de situaciones. Un pelotón de Tiger I deberá poder pasearse sobre la mesa contra infantería y T-34-76 pero deberá respetar las armas anti-tanque del rival y no jugar alrededor de beneficiarse de su invulnerabilidad.
+
+=== Letalidad y organización
+
+El diseño de las reglas se centra más en la capacidad de las unidades para operar en conjunto y adoptar estrategias de combate que en la mera letalidad de las unidades.
+
+La organización representa el grado de cohesión y coordinación entre las unidades desempeñando un determinado objetivo. El desempeño de cada unidad no será la suma de todas las individualidades tratando de ganar la guerra por si mismas sino de la elaboración de una táctica conjunta en la que esté representada la capacidad de la cadena de mando para realizar las maniobras necesarias para alcanzar los objetivos.
 
 === Rangos
 
@@ -34,14 +40,13 @@ Asumiendo que la mayor parte de las partidas se jugarán en una mesa de cerca de
 
 - Evitar que las unidades con mayor alcance tengan un alcance tan grande que puedan atacar a cualquier unidad en la mesa sin importar su posición.
 
-
 - Hacer un escalado progresivo de los factores de penetración de modo que unidades con un gran blindaje sigan siendo muy efectivas en rangos cortos pero no sean invulnerables.
 
-=== Letalidad y organización
+=== Consistencia histórica
 
-El diseño de las reglas se centra más en la capacidad de las unidades para operar en conjunto y adoptar estrategias de combate que en la mera letalidad de las unidades.
+El juego pretenderá mantener una consistencis histórica en la medida de los posible cuando no impacte en la jugabilidad. Por ejemplo, los valores de blindajes, penetraciones o velocidades se han creado a partir de fórmulas partiendo de los valores reales.
 
-La organización representa el grado de cohesión y coordinación entre las unidades desempeñando un determinado objetivo. El desempeño de cada unidad no será la suma de todas las individualidades tratando de ganar la guerra por si mismas sino de la elaboración de una táctica conjunta en la que esté representada la capacidad de la cadena de mando para realizar las maniobras necesarias para alcanzar los objetivos.
+No obstante, como se prima la jugabilidad algunas de estas características se han corregido.
 
 === Escenografía
 
