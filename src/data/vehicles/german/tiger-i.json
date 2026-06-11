@@ -44,7 +44,7 @@
     "notes": "Heavy tank built around the powerful 8.8 cm KwK 36 L/56, feared for its frontal armour and gun but mechanically complex, fuel-hungry and expensive to produce. First deployed near Leningrad in late 1942."
   },
   "game": {
-    "cost": 80,
+    "cost": 68,
     "organizationThreshold": 10,
     "movement": {
       "tactical": {

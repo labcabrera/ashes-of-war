@@ -46,7 +46,7 @@
     "notes": "Extremely rare close-assault vehicle built on the Tiger I chassis, mounting the 38 cm RW 61 rocket launcher firing massive demolition rockets primarily intended for reducing fortified urban positions, as seen during the Warsaw Uprising."
   },
   "game": {
-    "cost": 75,
+    "cost": 105,
     "organizationThreshold": 10,
     "movement": {
       "tactical": { "road": 8, "crossCountry": 6, "rough": 3 },

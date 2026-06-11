@@ -79,6 +79,50 @@ Build the production bundle:
 npm run build
 ----
 
+== Updating Game Data From Historical Data
+
+Some catalogue entries store historical reference data and game-facing values in the same JSON file.
+This is currently used by vehicle-like entries under `src/data/vehicles` and towed weapon entries under `src/data/towed`.
+
+The transformation formulas live in `src/utils/conversions.ts`.
+The update flow recalculates only derived fields:
+
+* `game.movement`, when `historical.speedKmh.road` exists.
+* `game.armor`, when `historical.armor` exists.
+
+Manual balancing data is preserved, including `game.cost`, `game.organizationThreshold`, `game.casualtiesThreshold`, `game.resourceCosts`, `game.weapons`, and `game.keywords`.
+The formulas are intentionally a first draft for content authors; generated values should be reviewed before committing them.
+
+To update the JSON files in place:
+
+[source,bash]
+----
+npm run update:game-data
+----
+
+To preview the files that would change without writing anything:
+
+[source,bash]
+----
+npm run update:game-data -- --dry-run
+----
+
+To use the updater as a consistency check in CI or before a review:
+
+[source,bash]
+----
+npm run update:game-data -- --check
+----
+
+The `--check` mode exits with an error when any derived game data differs from the current historical conversion output.
+After updating data, run the normal validation commands:
+
+[source,bash]
+----
+npm run test:run
+npm run build
+----
+
 == Architecture Notes
 
 Ashes of War is intentionally frontend-only.

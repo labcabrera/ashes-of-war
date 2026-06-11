@@ -44,7 +44,7 @@
     "notes": "1944 rebuild of the surviving Ferdinands following the Kursk losses, renamed Elefant by Hitler's order. Improvements included a hull-mounted MG 34 for close defence (a major weakness of the Ferdinand), a commander's cupola, and additional bolted-on glacis armour, at the cost of even higher weight."
   },
   "game": {
-    "cost": 58,
+    "cost": 62,
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
@@ -94,7 +94,8 @@
       }
     ],
     "keywords": [
-      "radio"
+      "radio",
+      "rare"
     ]
   }
 }

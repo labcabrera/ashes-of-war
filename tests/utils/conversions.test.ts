@@ -4,8 +4,11 @@ import {
   armorToGameValue,
   effectiveArmorThicknessMM,
   hitProbabilityToHitOn,
+  speedKmhToGameMovement,
   speedKmhToGameInches,
+  updateGameDataFromHistorical,
 } from '../../src/utils/conversions';
+import type { VehicleCatalogueEntry } from '../../src/types/vehicle';
 
 describe('speedKmhToGameInches', () => {
   it('matches the bundled Panzer IV cruise and dash movement values', () => {
@@ -19,6 +22,16 @@ describe('speedKmhToGameInches', () => {
 
   it('rounds to the nearest whole inch', () => {
     expect(speedKmhToGameInches(38, 'cruise')).toBe(30);
+  });
+});
+
+describe('speedKmhToGameMovement', () => {
+  it('derives road, cross-country, and rough movement from historical road speed', () => {
+    expect(speedKmhToGameMovement(40)).toEqual({
+      tactical: { road: 18, crossCountry: 14, rough: 7 },
+      cruise: { road: 32, crossCountry: 24, rough: 12 },
+      dash: { road: 40, crossCountry: 30, rough: 15 },
+    });
   });
 });
 
@@ -70,5 +83,55 @@ describe('hitProbabilityToHitOn', () => {
     expect(hitProbabilityToHitOn(50)).toBe(4);
     expect(hitProbabilityToHitOn(31)).toBe(5);
     expect(hitProbabilityToHitOn(19)).toBe(6);
+  });
+});
+
+describe('updateGameDataFromHistorical', () => {
+  it('updates derived movement and armour while preserving manually balanced fields', () => {
+    const entry: VehicleCatalogueEntry = {
+      id: 'test-vehicle',
+      name: 'Test Vehicle',
+      type: 'tank',
+      faction: 'german',
+      from: 1944,
+      to: 1945,
+      reviewedAt: '2026-06-11',
+      historical: {
+        speedKmh: { road: 40, offRoad: 16, sustainedMarch: 24 },
+        armor: {
+          front: { thicknessMM: 80, inclinationDeg: 10 },
+          side: { thicknessMM: 30, inclinationDeg: 0 },
+          rear: { thicknessMM: 20, inclinationDeg: 0 },
+          exposed: { thicknessMM: 10, inclinationDeg: 0 },
+        },
+      },
+      game: {
+        cost: 32,
+        organizationThreshold: 10,
+        movement: {
+          tactical: { road: 1, crossCountry: 1, rough: 1 },
+          cruise: { road: 1, crossCountry: 1, rough: 1 },
+          dash: { road: 1, crossCountry: 1, rough: 1 },
+        },
+        armor: {
+          front: { value: 1, notes: 'manual weak spot' },
+          side: { value: 1 },
+          rear: { value: 1 },
+          exposed: { value: 1 },
+        },
+        resourceCosts: { fuel: 8 },
+        weapons: [{ id: 'german-kwk-40-l48', count: 1, type: 'turret' }],
+        keywords: ['radio'],
+      },
+    };
+
+    const updated = updateGameDataFromHistorical(entry);
+
+    expect(updated.game.movement).toEqual(speedKmhToGameMovement(40));
+    expect(updated.game.armor?.front).toEqual({ value: 81, notes: 'manual weak spot' });
+    expect(updated.game.cost).toBe(32);
+    expect(updated.game.resourceCosts).toEqual({ fuel: 8 });
+    expect(updated.game.weapons).toEqual([{ id: 'german-kwk-40-l48', count: 1, type: 'turret' }]);
+    expect(updated.game.keywords).toEqual(['radio']);
   });
 });

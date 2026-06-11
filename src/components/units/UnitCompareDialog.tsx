@@ -1,7 +1,7 @@
 /**
  * Dialog for selecting a comparable unit from the same gameplay category.
  */
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
   Autocomplete,
   Button,
@@ -30,12 +30,13 @@ export default function UnitCompareDialog({ open, unit, units, onClose, onView }
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
   const options = useMemo(() => comparableUnits(unit, units), [unit, units]);
 
-  useEffect(() => {
-    if (!open) setSelectedUnit(null);
-  }, [open]);
+  function handleClose() {
+    setSelectedUnit(null);
+    onClose();
+  }
 
   return (
-    <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
+    <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
       <DialogTitle sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
         <CompareArrowsIcon color="secondary" />
         {t('units.compare.dialogTitle')}
@@ -62,13 +63,16 @@ export default function UnitCompareDialog({ open, unit, units, onClose, onView }
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>{t('common.cancel')}</Button>
+        <Button onClick={handleClose}>{t('common.cancel')}</Button>
         <Button
           variant="contained"
           color="secondary"
           disabled={!selectedUnit}
           onClick={() => {
-            if (selectedUnit) onView(selectedUnit);
+            if (selectedUnit) {
+              onView(selectedUnit);
+              setSelectedUnit(null);
+            }
           }}
         >
           {t('common.view')}

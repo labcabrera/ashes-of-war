@@ -45,7 +45,7 @@
     "notes": "Heavy infantry-support vehicle nicknamed 'Brummbär' ('Grumbler'), mounting the short 15 cm StuH 43 howitzer in a heavily armoured fixed casemate on a Panzer IV chassis; used to devastating effect in urban fighting at Kursk, Anzio, and Warsaw."
   },
   "game": {
-    "cost": 42,
+    "cost": 52,
     "organizationThreshold": 10,
     "movement": {
       "tactical": { "road": 12, "crossCountry": 9, "rough": 5 },

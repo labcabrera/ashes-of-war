@@ -6,6 +6,14 @@
  * values are a starting point for content authors rather than an enforced constraint.
  */
 
+import type {
+  ArmorFacingGame,
+  ArmorFacingHistorical,
+  ArmorProfile,
+  MovementProfile,
+} from '../types/catalogue';
+import type { VehicleCatalogueEntry, VehicleGameProfile } from '../types/vehicle';
+
 /** Fraction of historical road speed (km/h) applied at each movement pace. */
 export const SPEED_PACE_SCALE = {
   tactical: 0.45,
@@ -20,6 +28,34 @@ export function speedKmhToGameInches(kmh: number, pace: MovementPace): number {
   return Math.round(kmh * SPEED_PACE_SCALE[pace]);
 }
 
+/** Terrain fractions applied after deriving movement from historical road speed. */
+export const TERRAIN_MOVEMENT_SCALE = {
+  road: 1,
+  crossCountry: 0.75,
+  rough: 0.375,
+} as const;
+
+/** Converts historical road speed into a complete in-game movement profile. */
+export function speedKmhToGameMovement(speedKmh: number): MovementProfile {
+  return {
+    tactical: {
+      road: speedKmhToGameInches(speedKmh, 'tactical'),
+      crossCountry: Math.round(speedKmhToGameInches(speedKmh, 'tactical') * TERRAIN_MOVEMENT_SCALE.crossCountry),
+      rough: Math.round(speedKmhToGameInches(speedKmh, 'tactical') * TERRAIN_MOVEMENT_SCALE.rough),
+    },
+    cruise: {
+      road: speedKmhToGameInches(speedKmh, 'cruise'),
+      crossCountry: Math.round(speedKmhToGameInches(speedKmh, 'cruise') * TERRAIN_MOVEMENT_SCALE.crossCountry),
+      rough: Math.round(speedKmhToGameInches(speedKmh, 'cruise') * TERRAIN_MOVEMENT_SCALE.rough),
+    },
+    dash: {
+      road: speedKmhToGameInches(speedKmh, 'dash'),
+      crossCountry: Math.round(speedKmhToGameInches(speedKmh, 'dash') * TERRAIN_MOVEMENT_SCALE.crossCountry),
+      rough: Math.round(speedKmhToGameInches(speedKmh, 'dash') * TERRAIN_MOVEMENT_SCALE.rough),
+    },
+  };
+}
+
 /** Effective armour thickness accounting for plate slope (simple secant law). */
 export function effectiveArmorThicknessMM(thicknessMM: number, inclinationDeg: number): number {
   return thicknessMM / Math.cos((inclinationDeg * Math.PI) / 180);
@@ -28,6 +64,47 @@ export function effectiveArmorThicknessMM(thicknessMM: number, inclinationDeg: n
 /** Converts a historical armour facing (thickness + inclination) into a game armour value. */
 export function armorToGameValue(thicknessMM: number, inclinationDeg: number): number {
   return Math.round(effectiveArmorThicknessMM(thicknessMM, inclinationDeg));
+}
+
+/** Converts a complete historical armour profile into game-facing armour values. */
+export function armorProfileToGameValues(
+  armor: ArmorProfile<ArmorFacingHistorical>,
+  existingArmor?: ArmorProfile<ArmorFacingGame>,
+): ArmorProfile<ArmorFacingGame> {
+  return {
+    front: armorFacingToGameValue(armor.front, existingArmor?.front),
+    side: armorFacingToGameValue(armor.side, existingArmor?.side),
+    rear: armorFacingToGameValue(armor.rear, existingArmor?.rear),
+    exposed: armorFacingToGameValue(armor.exposed, existingArmor?.exposed),
+  };
+}
+
+/** Recalculates derived game fields from historical data while preserving manual game data. */
+export function updateGameDataFromHistorical(entry: VehicleCatalogueEntry): VehicleCatalogueEntry {
+  const game: VehicleGameProfile = { ...entry.game };
+
+  if (entry.historical.speedKmh) {
+    game.movement = speedKmhToGameMovement(entry.historical.speedKmh.road);
+  }
+
+  if (entry.historical.armor) {
+    game.armor = armorProfileToGameValues(entry.historical.armor, entry.game.armor);
+  }
+
+  return {
+    ...entry,
+    game,
+  };
+}
+
+function armorFacingToGameValue(
+  facing: ArmorFacingHistorical,
+  existingFacing?: ArmorFacingGame,
+): ArmorFacingGame {
+  return {
+    value: armorToGameValue(facing.thicknessMM, facing.inclinationDeg),
+    ...(existingFacing?.notes ? { notes: existingFacing.notes } : {}),
+  };
 }
 
 /** Converts a historical armour penetration figure (mm) into a game `armourPenetration` value. */
