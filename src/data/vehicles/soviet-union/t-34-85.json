@@ -1,0 +1,85 @@
+{
+  "id": "soviet-union-t-34-85",
+  "name": "T-34-85",
+  "type": "tank",
+  "faction": "soviet-union",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Plant No. 183 (Nizhny Tagil) / Plant No. 112 (Gorky) / Plant No. 174",
+    "modelFamily": "T-34",
+    "crew": 5,
+    "combatWeightTons": 32.0,
+    "engine": "V-2-34 V12 diesel, 500 PS",
+    "unitsBuilt": 22000,
+    "productionStart": 1944,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 55,
+      "offRoad": 25,
+      "sustainedMarch": 40
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 60,
+        "inclinationDeg": 0,
+        "notes": "Sloped glacis plate; new cast turret with thicker frontal armour."
+      },
+      "side": {
+        "thicknessMM": 45,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 40,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 12,
+        "inclinationDeg": 0,
+        "notes": "Hull roof and floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/T-34-85",
+    "notes": "Fitted with a new, larger three-man turret mounting the 85 mm ZiS-S-53 gun, finally giving the T-34 a dedicated gunner and commander's cupola. Produced in vast numbers from 1944 onward and remained in frontline and export service for decades after the war."
+  },
+  "game": {
+    "cost": 36,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 22,
+        "crossCountry": 17,
+        "rough": 8
+      },
+      "cruise": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      },
+      "dash": {
+        "road": 55,
+        "crossCountry": 41,
+        "rough": 21
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 60
+      },
+      "side": {
+        "value": 45
+      },
+      "rear": {
+        "value": 40
+      },
+      "exposed": {
+        "value": 12
+      }
+    },
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 5
+    }
+  }
+}

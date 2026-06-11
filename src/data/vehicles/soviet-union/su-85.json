@@ -1,0 +1,95 @@
+{
+  "id": "soviet-union-su-85",
+  "name": "SU-85",
+  "type": "tank-destroyer",
+  "faction": "soviet-union",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "UZTM (Uralmash), Sverdlovsk",
+    "modelFamily": "T-34 chassis",
+    "crew": 4,
+    "combatWeightTons": 29.6,
+    "engine": "V-2-34 V12 diesel, 500 PS",
+    "unitsBuilt": 2650,
+    "productionStart": 1943,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 55,
+      "offRoad": 20,
+      "sustainedMarch": 40
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 45,
+        "inclinationDeg": 50,
+        "notes": "Sloped casemate front plate."
+      },
+      "side": {
+        "thicknessMM": 45,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 45,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 20,
+        "inclinationDeg": 0,
+        "notes": "Hull and casemate roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/SU-85",
+    "notes": "Built on the T-34 chassis to counter the appearance of the Tiger and Panther, mounting an 85 mm D-5T gun. It served as a stopgap until the more powerful SU-100 entered production."
+  },
+  "game": {
+    "cost": 30,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 20,
+        "crossCountry": 14,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 41,
+        "crossCountry": 22,
+        "rough": 9
+      },
+      "dash": {
+        "road": 55,
+        "crossCountry": 30,
+        "rough": 12
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 45
+      },
+      "side": {
+        "value": 45
+      },
+      "rear": {
+        "value": 45
+      },
+      "exposed": {
+        "value": 20
+      }
+    },
+    "resourceCosts": {
+      "fuel": 7,
+      "logistics": 7
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-d-5t",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

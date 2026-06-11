@@ -1,0 +1,95 @@
+{
+  "id": "soviet-union-su-76",
+  "name": "SU-76",
+  "type": "tank-destroyer",
+  "faction": "soviet-union",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "GAZ (Gorky) / Plant No. 38, Kirov",
+    "modelFamily": "SU-76 (T-70 chassis)",
+    "crew": 4,
+    "combatWeightTons": 10.5,
+    "engine": "2x GAZ-202 inline-6 petrol, 70 PS each (140 PS combined)",
+    "unitsBuilt": 14292,
+    "productionStart": 1942,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 45,
+      "offRoad": 15,
+      "sustainedMarch": 30
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 35,
+        "inclinationDeg": 0
+      },
+      "side": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 5,
+        "inclinationDeg": 0,
+        "notes": "Open-topped fighting compartment."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/SU-76",
+    "notes": "The second most-produced Soviet armoured fighting vehicle of the war, mounting a 76 mm ZiS-3 gun in an open-topped superstructure on a lengthened T-70 light tank chassis. Its twin parallel petrol engines were notoriously unreliable, earning it the crude nickname \"Suka\" (bitch), but its light weight and gun made it invaluable for infantry support."
+  },
+  "game": {
+    "cost": 18,
+    "organizationThreshold": 8,
+    "movement": {
+      "tactical": {
+        "road": 16,
+        "crossCountry": 11,
+        "rough": 4
+      },
+      "cruise": {
+        "road": 33,
+        "crossCountry": 18,
+        "rough": 7
+      },
+      "dash": {
+        "road": 45,
+        "crossCountry": 25,
+        "rough": 10
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 35
+      },
+      "side": {
+        "value": 15
+      },
+      "rear": {
+        "value": 10
+      },
+      "exposed": {
+        "value": 5
+      }
+    },
+    "resourceCosts": {
+      "fuel": 4,
+      "logistics": 4
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-zis-3",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "open-topped",
+      "radio"
+    ]
+  }
+}

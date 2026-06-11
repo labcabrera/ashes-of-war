@@ -1,0 +1,53 @@
+{
+  "id": "soviet-union-122mm-howitzer-m1938",
+  "name": "122 mm howitzer M1938 (M-30)",
+  "type": "towed-artillery",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Plant No. 172 (Motovilikha), Perm",
+    "modelFamily": "M-30 (M1938)",
+    "crew": 8,
+    "combatWeightTons": 2.45,
+    "unitsBuilt": 19266,
+    "productionStart": 1939,
+    "productionEnd": 1955,
+    "sourceUrl": "https://en.wikipedia.org/wiki/M-30_howitzer",
+    "notes": "The standard Soviet divisional howitzer of the war, prized for its rugged simplicity, reliable split-trail carriage, and powerful high-explosive shell. Its design lineage continued into the post-war D-30 howitzer."
+  },
+  "game": {
+    "cost": 23,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 8,
+        "crossCountry": 6,
+        "rough": 3
+      },
+      "dash": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-m-30",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

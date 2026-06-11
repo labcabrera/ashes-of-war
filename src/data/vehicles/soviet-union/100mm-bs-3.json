@@ -1,0 +1,53 @@
+{
+  "id": "soviet-union-100mm-bs-3",
+  "name": "100 mm BS-3",
+  "type": "towed-anti-tank",
+  "faction": "soviet-union",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Plant No. 9 (Uralmash)",
+    "modelFamily": "BS-3 (M1944)",
+    "crew": 6,
+    "combatWeightTons": 3.65,
+    "unitsBuilt": 3816,
+    "productionStart": 1944,
+    "productionEnd": 1951,
+    "sourceUrl": "https://en.wikipedia.org/wiki/100_mm_field_gun_M1944_(BS-3)",
+    "notes": "A powerful dual-purpose field and anti-tank gun developed from a naval/anti-aircraft barrel mated to a new split-trail carriage. Capable of defeating any German tank of the war at long range, crews nicknamed it \"Zveroboy\" (Beast Slayer)."
+  },
+  "game": {
+    "cost": 36,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 8,
+        "crossCountry": 6,
+        "rough": 3
+      },
+      "dash": {
+        "road": 12,
+        "crossCountry": 9,
+        "rough": 5
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-bs-3",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

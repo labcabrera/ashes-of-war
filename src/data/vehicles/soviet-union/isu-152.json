@@ -1,0 +1,95 @@
+{
+  "id": "soviet-union-isu-152",
+  "name": "ISU-152",
+  "type": "assault-gun",
+  "faction": "soviet-union",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Chelyabinsk Kirov Plant (ChKZ)",
+    "modelFamily": "IS (Iosif Stalin) chassis",
+    "crew": 5,
+    "combatWeightTons": 46,
+    "engine": "V-2-IS V12 diesel, 520 PS",
+    "unitsBuilt": 4635,
+    "productionStart": 1943,
+    "productionEnd": 1947,
+    "speedKmh": {
+      "road": 37,
+      "offRoad": 13,
+      "sustainedMarch": 27
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 90,
+        "inclinationDeg": 30,
+        "notes": "Sloped casemate front plate."
+      },
+      "side": {
+        "thicknessMM": 60,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 60,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 20,
+        "inclinationDeg": 0,
+        "notes": "Hull and casemate roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/ISU-152",
+    "notes": "A heavy self-propelled gun mounting the massive 152 mm ML-20S gun-howitzer on the IS tank chassis. Originally built for bunker-busting, it proved devastatingly effective against German heavy tanks, earning the nickname \"Zveroboy\" (Beast Slayer)."
+  },
+  "game": {
+    "cost": 50,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 13,
+        "crossCountry": 8,
+        "rough": 3
+      },
+      "cruise": {
+        "road": 27,
+        "crossCountry": 14,
+        "rough": 6
+      },
+      "dash": {
+        "road": 37,
+        "crossCountry": 20,
+        "rough": 8
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 90
+      },
+      "side": {
+        "value": 60
+      },
+      "rear": {
+        "value": 60
+      },
+      "exposed": {
+        "value": 20
+      }
+    },
+    "resourceCosts": {
+      "fuel": 10,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-ml-20s",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

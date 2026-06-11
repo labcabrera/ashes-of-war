@@ -1,0 +1,53 @@
+{
+  "id": "soviet-union-45mm-m1937",
+  "name": "45 mm M1937 (53-K)",
+  "type": "towed-anti-tank",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1943,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Plant No. 8 (Kalinin), Podlipki",
+    "modelFamily": "53-K (M1937)",
+    "crew": 5,
+    "combatWeightTons": 0.56,
+    "unitsBuilt": 37354,
+    "productionStart": 1937,
+    "productionEnd": 1943,
+    "sourceUrl": "https://en.wikipedia.org/wiki/45_mm_anti-tank_gun_M1937_(53-K)",
+    "notes": "The Red Army's standard early-war anti-tank gun, derived from a German Rheinmetall design bored out to 45 mm. Effective against light and early medium armour, but increasingly outclassed as German tanks were up-armoured, earning it the grim nickname \"Proshchay, Rodina\" (Farewell, Motherland)."
+  },
+  "game": {
+    "cost": 12,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 12,
+        "crossCountry": 10,
+        "rough": 5
+      },
+      "dash": {
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 1,
+      "logistics": 4
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-45mm-m1937",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

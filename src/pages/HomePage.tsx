@@ -57,7 +57,7 @@ export default function HomePage() {
               <Button component={RouterLink} to="/rules/introduction" variant="contained" size="large" startIcon={<AutoStoriesIcon />}>
                 {t('home.hero.primaryAction')}
               </Button>
-              <Button component={RouterLink} to="/units" variant="outlined" size="large" startIcon={<MilitaryTechIcon />}>
+              <Button component={RouterLink} to="/units" variant="contained" size="large" startIcon={<MilitaryTechIcon />}>
                 {t('home.hero.secondaryAction')}
               </Button>
             </Stack>

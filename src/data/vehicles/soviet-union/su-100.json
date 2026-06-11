@@ -1,0 +1,95 @@
+{
+  "id": "soviet-union-su-100",
+  "name": "SU-100",
+  "type": "tank-destroyer",
+  "faction": "soviet-union",
+  "from": 1944,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "UZTM (Uralmash), Sverdlovsk",
+    "modelFamily": "T-34 chassis",
+    "crew": 4,
+    "combatWeightTons": 31.6,
+    "engine": "V-2-34 V12 diesel, 500 PS",
+    "unitsBuilt": 4976,
+    "productionStart": 1944,
+    "productionEnd": 1947,
+    "speedKmh": {
+      "road": 50,
+      "offRoad": 20,
+      "sustainedMarch": 35
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 75,
+        "inclinationDeg": 50,
+        "notes": "Sloped casemate front plate."
+      },
+      "side": {
+        "thicknessMM": 45,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 45,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 20,
+        "inclinationDeg": 0,
+        "notes": "Hull and casemate roof/floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/SU-100",
+    "notes": "A late-war tank destroyer built on the reliable T-34 chassis, armed with the high-velocity 100 mm D-10S gun. Capable of penetrating any German tank fielded, it remained in service and license-production well into the post-war era."
+  },
+  "game": {
+    "cost": 38,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 18,
+        "crossCountry": 12,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 37,
+        "crossCountry": 20,
+        "rough": 8
+      },
+      "dash": {
+        "road": 50,
+        "crossCountry": 28,
+        "rough": 11
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 75
+      },
+      "side": {
+        "value": 45
+      },
+      "rear": {
+        "value": 45
+      },
+      "exposed": {
+        "value": 20
+      }
+    },
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 8
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-d-10s",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ]
+  }
+}

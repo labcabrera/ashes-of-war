@@ -1,0 +1,62 @@
+{
+  "id": "soviet-union-il-2",
+  "name": "Ilyushin Il-2 Shturmovik",
+  "type": "aircraft",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Ilyushin (Plants No. 1, No. 18, No. 30)",
+    "modelFamily": "Il-2",
+    "crew": 2,
+    "combatWeightTons": 6.36,
+    "engine": "Mikulin AM-38F V12 liquid-cooled, 1,720 PS",
+    "unitsBuilt": 36183,
+    "productionStart": 1941,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Ilyushin_Il-2",
+    "notes": "The most-produced military aircraft in history. Its integral armoured hull earned it the nickname 'flying tank', protecting the engine, cockpit, and fuel tanks from ground fire during low-level strafing and bombing runs. Armed with cannon, rockets, and bombs against armour and troop concentrations."
+  },
+  "game": {
+    "cost": 28,
+    "organizationThreshold": 3,
+    "movement": {
+      "tactical": {
+        "road": 200,
+        "crossCountry": 200,
+        "rough": 200
+      },
+      "cruise": {
+        "road": 320,
+        "crossCountry": 320,
+        "rough": 320
+      },
+      "dash": {
+        "road": 414,
+        "crossCountry": 414,
+        "rough": 414
+      }
+    },
+    "casualtiesThreshold": 1,
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-vya-23",
+        "count": 2,
+        "type": "hull"
+      },
+      {
+        "id": "soviet-union-rs-82",
+        "count": 8,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "air-support"
+    ]
+  }
+}

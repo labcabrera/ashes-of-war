@@ -1,0 +1,56 @@
+{
+  "id": "soviet-union-zis-5",
+  "name": "ZIS-5",
+  "type": "mechanised",
+  "faction": "soviet-union",
+  "from": 1939,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "ZIS (Moscow Automobile Plant)",
+    "modelFamily": "ZIS-5",
+    "crew": 2,
+    "combatWeightTons": 3.1,
+    "engine": "ZIS-5 inline-6 petrol, 73 PS",
+    "unitsBuilt": 1000000,
+    "productionStart": 1933,
+    "productionEnd": 1948,
+    "speedKmh": {
+      "road": 60,
+      "offRoad": 25,
+      "sustainedMarch": 45
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/ZIS-5",
+    "notes": "The Red Army's standard 3-tonne cargo truck, ubiquitous as a troop and supply transport and as the towing vehicle and launch platform for the BM-13 'Katyusha' rocket artillery. Production continued at the relocated Ural plant as the Ural-ZIS-5 after the Moscow factory was evacuated in 1941."
+  },
+  "game": {
+    "cost": 6,
+    "organizationThreshold": 5,
+    "movement": {
+      "tactical": {
+        "road": 22,
+        "crossCountry": 12,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 45,
+        "crossCountry": 18,
+        "rough": 7
+      },
+      "dash": {
+        "road": 60,
+        "crossCountry": 25,
+        "rough": 10
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 2,
+      "logistics": 2
+    },
+    "keywords": [
+      "open-topped",
+      "transport-12"
+    ]
+  }
+}

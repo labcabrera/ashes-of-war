@@ -1,0 +1,92 @@
+{
+  "id": "soviet-union-t-34-76-1940",
+  "name": "T-34-76 (1940)",
+  "type": "tank",
+  "faction": "soviet-union",
+  "from": 1940,
+  "to": 1944,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "KhPZ Plant No. 183, Kharkiv",
+    "modelFamily": "T-34",
+    "crew": 4,
+    "combatWeightTons": 26.0,
+    "engine": "V-2-34 V12 diesel, 500 PS",
+    "unitsBuilt": 115,
+    "productionStart": 1940,
+    "productionEnd": 1940,
+    "speedKmh": {
+      "road": 54,
+      "offRoad": 22,
+      "sustainedMarch": 40
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 45,
+        "inclinationDeg": 0,
+        "notes": "Sloped glacis plate."
+      },
+      "side": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0,
+        "notes": "Hull roof and floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/T-34",
+    "notes": "The original production model of the T-34, fielding a two-man turret with the L-11 76.2 mm gun. Its sloped armour and wide tracks gave it a major qualitative edge over contemporary German tanks, though early production was hampered by quality-control issues."
+  },
+  "game": {
+    "cost": 29,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 22,
+        "crossCountry": 17,
+        "rough": 8
+      },
+      "cruise": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      },
+      "dash": {
+        "road": 55,
+        "crossCountry": 41,
+        "rough": 21
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 45
+      },
+      "side": {
+        "value": 15
+      },
+      "rear": {
+        "value": 15
+      },
+      "exposed": {
+        "value": 10
+      }
+    },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-l-11-76-2",
+        "count": 1,
+        "type": "turret"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "soviet-union-t-34-76-1943",
+  "name": "T-34-76 (1943)",
+  "type": "tank",
+  "faction": "soviet-union",
+  "from": 1943,
+  "to": 1944,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Plant No. 183 (Nizhny Tagil) / Plant No. 112 (Gorky) / Plant No. 174",
+    "modelFamily": "T-34",
+    "crew": 4,
+    "combatWeightTons": 30.9,
+    "engine": "V-2-34 V12 diesel, 500 PS",
+    "unitsBuilt": 10000,
+    "productionStart": 1943,
+    "productionEnd": 1944,
+    "speedKmh": {
+      "road": 53,
+      "offRoad": 22,
+      "sustainedMarch": 38
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 70,
+        "inclinationDeg": 0,
+        "notes": "Sloped glacis plate."
+      },
+      "side": {
+        "thicknessMM": 20,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 20,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 10,
+        "inclinationDeg": 0,
+        "notes": "Hull roof and floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/T-34",
+    "notes": "The final evolution of the original hexagonal-turret T-34-76, adding a commander's cupola for improved situational awareness and further increased frontal armour, ahead of the switch to the 85 mm-armed T-34/85."
+  },
+  "game": {
+    "cost": 20,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 22,
+        "crossCountry": 17,
+        "rough": 8
+      },
+      "cruise": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      },
+      "dash": {
+        "road": 55,
+        "crossCountry": 41,
+        "rough": 21
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 70
+      },
+      "side": {
+        "value": 20
+      },
+      "rear": {
+        "value": 20
+      },
+      "exposed": {
+        "value": 10
+      }
+    },
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-f-34-76-2",
+        "count": 1,
+        "type": "turret"
+      }
+    ]
+  }
+}

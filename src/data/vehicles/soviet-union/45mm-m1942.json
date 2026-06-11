@@ -1,0 +1,53 @@
+{
+  "id": "soviet-union-45mm-m1942",
+  "name": "45 mm M1942 (M-42)",
+  "type": "towed-anti-tank",
+  "faction": "soviet-union",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Plant No. 172 (Motovilikha), Perm",
+    "modelFamily": "M-42 (M1942)",
+    "crew": 5,
+    "combatWeightTons": 0.625,
+    "unitsBuilt": 10843,
+    "productionStart": 1942,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/45_mm_anti-tank_gun_M1942_(M-42)",
+    "notes": "A lengthened-barrel, uparmoured derivative of the 53-K with a more powerful charge, restoring some parity against German medium tank armour while keeping the same light, towable carriage."
+  },
+  "game": {
+    "cost": 15,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 12,
+        "crossCountry": 10,
+        "rough": 5
+      },
+      "dash": {
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 1,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-45mm-m1942",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

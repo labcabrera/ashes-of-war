@@ -1,0 +1,53 @@
+{
+  "id": "soviet-union-76mm-zis-3",
+  "name": "76 mm ZiS-3",
+  "type": "towed-anti-tank",
+  "faction": "soviet-union",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Plant No. 92 (Gorky)",
+    "modelFamily": "ZiS-3 (M1942)",
+    "crew": 6,
+    "combatWeightTons": 1.2,
+    "unitsBuilt": 103000,
+    "productionStart": 1941,
+    "productionEnd": 1945,
+    "sourceUrl": "https://en.wikipedia.org/wiki/ZiS-3",
+    "notes": "The most-produced Soviet artillery piece of the war, a versatile divisional gun used for direct anti-tank fire, indirect support, and as the primary armament of the SU-76 self-propelled gun."
+  },
+  "game": {
+    "cost": 18,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 0,
+        "crossCountry": 0,
+        "rough": 0
+      },
+      "cruise": {
+        "road": 10,
+        "crossCountry": 8,
+        "rough": 4
+      },
+      "dash": {
+        "road": 15,
+        "crossCountry": 12,
+        "rough": 6
+      }
+    },
+    "casualtiesThreshold": 3,
+    "resourceCosts": {
+      "fuel": 2,
+      "logistics": 6
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-zis-3",
+        "count": 1,
+        "type": "normal"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "soviet-union-is-2",
+  "name": "IS-2",
+  "type": "tank",
+  "faction": "soviet-union",
+  "from": 1943,
+  "to": 1945,
+  "reviewedAt": "2026-06-11",
+  "historical": {
+    "manufacturer": "Chelyabinsk Kirov Plant (ChKZ)",
+    "modelFamily": "IS (Iosif Stalin)",
+    "crew": 4,
+    "combatWeightTons": 46,
+    "engine": "V-2-IS V12 diesel, 520 PS",
+    "unitsBuilt": 3854,
+    "productionStart": 1943,
+    "productionEnd": 1945,
+    "speedKmh": {
+      "road": 37,
+      "offRoad": 15,
+      "sustainedMarch": 25
+    },
+    "armor": {
+      "front": {
+        "thicknessMM": 120,
+        "inclinationDeg": 0,
+        "notes": "Cast turret and glacis."
+      },
+      "side": {
+        "thicknessMM": 90,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 60,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 15,
+        "inclinationDeg": 0,
+        "notes": "Hull roof and floor."
+      }
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/IS-2",
+    "notes": "The Red Army's primary heavy breakthrough tank from late 1943, armed with a massive 122 mm D-25T gun that could destroy any German tank with a single hit. Used to spearhead assaults on fortified positions and urban strongpoints, including the storming of Berlin."
+  },
+  "game": {
+    "cost": 52,
+    "organizationThreshold": 10,
+    "movement": {
+      "tactical": {
+        "road": 14,
+        "crossCountry": 11,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 25,
+        "crossCountry": 19,
+        "rough": 9
+      },
+      "dash": {
+        "road": 37,
+        "crossCountry": 28,
+        "rough": 14
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 120
+      },
+      "side": {
+        "value": 90
+      },
+      "rear": {
+        "value": 60
+      },
+      "exposed": {
+        "value": 15
+      }
+    },
+    "resourceCosts": {
+      "fuel": 10,
+      "logistics": 10
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-d-25t",
+        "count": 1,
+        "type": "turret"
+      }
+    ]
+  }
+}
