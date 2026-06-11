@@ -10,7 +10,7 @@
     "manufacturer": "Krupp",
     "modelFamily": "StuG IV",
     "crew": 4,
-    "combatWeightTons": 23.0,
+    "combatWeightTons": 23,
     "engine": "Maybach HL 120 TRM, 300 PS",
     "unitsBuilt": 1141,
     "productionStart": 1943,
@@ -48,21 +48,54 @@
     "cost": 36,
     "organizationThreshold": 10,
     "movement": {
-      "tactical": { "road": 15, "crossCountry": 11, "rough": 6 },
-      "cruise": { "road": 30, "crossCountry": 23, "rough": 11 },
-      "dash": { "road": 40, "crossCountry": 30, "rough": 15 }
+      "tactical": {
+        "road": 17,
+        "crossCountry": 13,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
+      },
+      "dash": {
+        "road": 38,
+        "crossCountry": 29,
+        "rough": 14
+      }
     },
     "armor": {
-      "front": { "value": 80 },
-      "side": { "value": 30 },
-      "rear": { "value": 30 },
-      "exposed": { "value": 10 }
+      "front": {
+        "value": 8
+      },
+      "side": {
+        "value": 3
+      },
+      "rear": {
+        "value": 2
+      },
+      "exposed": {
+        "value": 1
+      }
     },
-    "resourceCosts": { "fuel": 5, "logistics": 5 },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 5
+    },
     "weapons": [
-      { "id": "german-kwk-40-l48", "count": 1, "type": "hull" },
-      { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+      {
+        "id": "german-kwk-40-l48",
+        "count": 1,
+        "type": "hull"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "coaxial"
+      }
     ],
-    "keywords": ["radio"]
+    "keywords": [
+      "radio"
+    ]
   }
 }

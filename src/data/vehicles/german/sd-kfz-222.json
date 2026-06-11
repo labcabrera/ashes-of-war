@@ -28,14 +28,14 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 25,
-        "crossCountry": 19,
-        "rough": 9
+        "road": 36,
+        "crossCountry": 27,
+        "rough": 14
       },
       "cruise": {
-        "road": 55,
-        "crossCountry": 41,
-        "rough": 21
+        "road": 64,
+        "crossCountry": 48,
+        "rough": 24
       },
       "dash": {
         "road": 80,

@@ -10,7 +10,7 @@
     "manufacturer": "Plant No. 183 (Nizhny Tagil) / Plant No. 112 (Gorky) / Plant No. 174",
     "modelFamily": "T-34",
     "crew": 5,
-    "combatWeightTons": 32.0,
+    "combatWeightTons": 32,
     "engine": "V-2-34 V12 diesel, 500 PS",
     "unitsBuilt": 22000,
     "productionStart": 1944,
@@ -48,14 +48,14 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 22,
-        "crossCountry": 17,
-        "rough": 8
+        "road": 25,
+        "crossCountry": 19,
+        "rough": 9
       },
       "cruise": {
-        "road": 40,
-        "crossCountry": 30,
-        "rough": 15
+        "road": 44,
+        "crossCountry": 33,
+        "rough": 17
       },
       "dash": {
         "road": 55,
@@ -65,16 +65,16 @@
     },
     "armor": {
       "front": {
-        "value": 60
+        "value": 6
       },
       "side": {
-        "value": 45
+        "value": 5
       },
       "rear": {
-        "value": 40
+        "value": 4
       },
       "exposed": {
-        "value": 12
+        "value": 1
       }
     },
     "resourceCosts": {

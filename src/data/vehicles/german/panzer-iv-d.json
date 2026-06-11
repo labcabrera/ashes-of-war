@@ -10,7 +10,7 @@
     "manufacturer": "Krupp-Gruson / Vomag",
     "modelFamily": "Panzer IV",
     "crew": 5,
-    "combatWeightTons": 20.0,
+    "combatWeightTons": 20,
     "engine": "Maybach HL 120 TRM, 300 PS",
     "unitsBuilt": 248,
     "productionStart": 1939,
@@ -65,16 +65,16 @@
     },
     "armor": {
       "front": {
-        "value": 80
+        "value": 3
       },
       "side": {
-        "value": 30
+        "value": 2
       },
       "rear": {
-        "value": 20
+        "value": 2
       },
       "exposed": {
-        "value": 10
+        "value": 1
       }
     },
     "resourceCosts": {

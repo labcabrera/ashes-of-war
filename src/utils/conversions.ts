@@ -56,14 +56,20 @@ export function speedKmhToGameMovement(speedKmh: number): MovementProfile {
   };
 }
 
-/** Effective armour thickness accounting for plate slope (simple secant law). */
+/**
+ * Effective armour thickness accounting for plate slope (simple secant law).
+ * Returns an integer value (rounded).
+ */
 export function effectiveArmorThicknessMM(thicknessMM: number, inclinationDeg: number): number {
-  return thicknessMM / Math.cos((inclinationDeg * Math.PI) / 180);
+  const radians = (inclinationDeg * Math.PI) / 180;
+  const effective = thicknessMM / Math.cos(radians);
+  const inCm = effective / 10; // convert mm to cm-equivalent game units
+  return Math.round(inCm);
 }
 
 /** Converts a historical armour facing (thickness + inclination) into a game armour value. */
 export function armorToGameValue(thicknessMM: number, inclinationDeg: number): number {
-  return Math.round(effectiveArmorThicknessMM(thicknessMM, inclinationDeg));
+  return effectiveArmorThicknessMM(thicknessMM, inclinationDeg);
 }
 
 /** Converts a complete historical armour profile into game-facing armour values. */

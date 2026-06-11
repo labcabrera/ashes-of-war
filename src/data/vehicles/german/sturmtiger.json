@@ -10,7 +10,7 @@
     "manufacturer": "Alkett",
     "modelFamily": "Sturmtiger",
     "crew": 5,
-    "combatWeightTons": 65.0,
+    "combatWeightTons": 65,
     "engine": "Maybach HL 230 P45, 700 PS",
     "unitsBuilt": 18,
     "productionStart": 1944,
@@ -49,20 +49,50 @@
     "cost": 105,
     "organizationThreshold": 10,
     "movement": {
-      "tactical": { "road": 8, "crossCountry": 6, "rough": 3 },
-      "cruise": { "road": 18, "crossCountry": 14, "rough": 7 },
-      "dash": { "road": 40, "crossCountry": 30, "rough": 15 }
+      "tactical": {
+        "road": 17,
+        "crossCountry": 13,
+        "rough": 6
+      },
+      "cruise": {
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
+      },
+      "dash": {
+        "road": 38,
+        "crossCountry": 29,
+        "rough": 14
+      }
     },
     "armor": {
-      "front": { "value": 150 },
-      "side": { "value": 80 },
-      "rear": { "value": 80 },
-      "exposed": { "value": 25 }
+      "front": {
+        "value": 22
+      },
+      "side": {
+        "value": 8
+      },
+      "rear": {
+        "value": 8
+      },
+      "exposed": {
+        "value": 3
+      }
     },
-    "resourceCosts": { "fuel": 15, "logistics": 15 },
+    "resourceCosts": {
+      "fuel": 15,
+      "logistics": 15
+    },
     "weapons": [
-      { "id": "german-rw-61", "count": 1, "type": "hull" }
+      {
+        "id": "german-rw-61",
+        "count": 1,
+        "type": "hull"
+      }
     ],
-    "keywords": ["radio", "rare"]
+    "keywords": [
+      "radio",
+      "rare"
+    ]
   }
 }

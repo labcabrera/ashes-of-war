@@ -28,19 +28,19 @@
     "organizationThreshold": 5,
     "movement": {
       "tactical": {
-        "road": 22,
-        "crossCountry": 12,
-        "rough": 5
+        "road": 27,
+        "crossCountry": 20,
+        "rough": 10
       },
       "cruise": {
-        "road": 45,
-        "crossCountry": 18,
-        "rough": 7
+        "road": 48,
+        "crossCountry": 36,
+        "rough": 18
       },
       "dash": {
         "road": 60,
-        "crossCountry": 25,
-        "rough": 10
+        "crossCountry": 45,
+        "rough": 23
       }
     },
     "casualtiesThreshold": 3,

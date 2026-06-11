@@ -7,7 +7,7 @@
 Ashes of War is a frontend-only companion application for a World War II tabletop wargame system.
 It provides a searchable rules reference, a curated catalogue of historical units and weapons, and an army builder for composing force lists directly in the browser.
 
-The application is deployed at link:https://aow.labcabrera.com/[https://aow.labcabrera.com/].
+The application is deployed at link:https://aow.labcabrera.com/[https://aow.labcabrera.com/]
 
 == Project Goals
 

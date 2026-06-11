@@ -47,7 +47,7 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 18,
+        "road": 19,
         "crossCountry": 14,
         "rough": 7
       },
@@ -64,16 +64,16 @@
     },
     "armor": {
       "front": {
-        "value": 25
+        "value": 3
       },
       "side": {
-        "value": 15
+        "value": 2
       },
       "rear": {
-        "value": 15
+        "value": 2
       },
       "exposed": {
-        "value": 5
+        "value": 1
       }
     },
     "resourceCosts": {

@@ -10,7 +10,7 @@
     "manufacturer": "Deutsche Eisenwerke / Alkett",
     "modelFamily": "Geschützwagen III/IV",
     "crew": 5,
-    "combatWeightTons": 24.0,
+    "combatWeightTons": 24,
     "engine": "Maybach HL 120 TRM, 300 PS",
     "unitsBuilt": 494,
     "productionStart": 1943,
@@ -48,33 +48,33 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 15,
-        "crossCountry": 11,
-        "rough": 6
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
       },
       "cruise": {
-        "road": 30,
-        "crossCountry": 23,
-        "rough": 11
+        "road": 32,
+        "crossCountry": 24,
+        "rough": 12
       },
       "dash": {
-        "road": 42,
-        "crossCountry": 32,
-        "rough": 16
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
       }
     },
     "armor": {
       "front": {
-        "value": 30
+        "value": 3
       },
       "side": {
-        "value": 15
+        "value": 2
       },
       "rear": {
-        "value": 10
+        "value": 1
       },
       "exposed": {
-        "value": 5
+        "value": 1
       }
     },
     "resourceCosts": {
@@ -89,7 +89,8 @@
       }
     ],
     "keywords": [
-      "radio", "rare"
+      "radio",
+      "rare"
     ]
   }
 }

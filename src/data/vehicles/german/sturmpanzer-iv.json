@@ -48,21 +48,54 @@
     "cost": 52,
     "organizationThreshold": 10,
     "movement": {
-      "tactical": { "road": 12, "crossCountry": 9, "rough": 5 },
-      "cruise": { "road": 25, "crossCountry": 18, "rough": 9 },
-      "dash": { "road": 38, "crossCountry": 28, "rough": 14 }
+      "tactical": {
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
+      },
+      "cruise": {
+        "road": 32,
+        "crossCountry": 24,
+        "rough": 12
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
     },
     "armor": {
-      "front": { "value": 100 },
-      "side": { "value": 50 },
-      "rear": { "value": 20 },
-      "exposed": { "value": 15 }
+      "front": {
+        "value": 13
+      },
+      "side": {
+        "value": 5
+      },
+      "rear": {
+        "value": 2
+      },
+      "exposed": {
+        "value": 2
+      }
     },
-    "resourceCosts": { "fuel": 8, "logistics": 10 },
+    "resourceCosts": {
+      "fuel": 8,
+      "logistics": 10
+    },
     "weapons": [
-      { "id": "german-stuh-43", "count": 1, "type": "hull" },
-      { "id": "german-mg-34-42", "count": 1, "type": "hull" }
+      {
+        "id": "german-stuh-43",
+        "count": 1,
+        "type": "hull"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "hull"
+      }
     ],
-    "keywords": ["radio"]
+    "keywords": [
+      "radio"
+    ]
   }
 }

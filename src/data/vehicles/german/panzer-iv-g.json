@@ -49,35 +49,53 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 18,
-        "crossCountry": 14,
-        "rough": 7
+        "road": 17,
+        "crossCountry": 13,
+        "rough": 6
       },
       "cruise": {
-        "road": 32,
-        "crossCountry": 24,
-        "rough": 12
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
       },
       "dash": {
-        "road": 40,
-        "crossCountry": 30,
-        "rough": 15
+        "road": 38,
+        "crossCountry": 29,
+        "rough": 14
       }
     },
     "armor": {
-      "front": { "value": 80 },
-      "side": { "value": 30 },
-      "rear": { "value": 20 },
-      "exposed": { "value": 10 }
+      "front": {
+        "value": 8
+      },
+      "side": {
+        "value": 3
+      },
+      "rear": {
+        "value": 2
+      },
+      "exposed": {
+        "value": 1
+      }
     },
     "resourceCosts": {
       "fuel": 8,
       "logistics": 5
     },
     "weapons": [
-      { "id": "german-kwk-40-l48", "count": 1, "type": "turret" },
-      { "id": "german-mg-34-42", "count": 1, "type": "coaxial" }
+      {
+        "id": "german-kwk-40-l48",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "german-mg-34-42",
+        "count": 1,
+        "type": "coaxial"
+      }
     ],
-    "keywords": ["radio"]
+    "keywords": [
+      "radio"
+    ]
   }
 }

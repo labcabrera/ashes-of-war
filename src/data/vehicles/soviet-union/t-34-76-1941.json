@@ -10,7 +10,7 @@
     "manufacturer": "Plant No. 183 (Kharkiv) / STZ (Stalingrad) / Plant No. 112 (Gorky)",
     "modelFamily": "T-34",
     "crew": 4,
-    "combatWeightTons": 28.0,
+    "combatWeightTons": 28,
     "engine": "V-2-34 V12 diesel, 500 PS",
     "unitsBuilt": 3014,
     "productionStart": 1941,
@@ -48,33 +48,33 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 22,
-        "crossCountry": 17,
-        "rough": 8
+        "road": 24,
+        "crossCountry": 18,
+        "rough": 9
       },
       "cruise": {
-        "road": 40,
-        "crossCountry": 30,
-        "rough": 15
+        "road": 43,
+        "crossCountry": 32,
+        "rough": 16
       },
       "dash": {
-        "road": 55,
+        "road": 54,
         "crossCountry": 41,
-        "rough": 21
+        "rough": 20
       }
     },
     "armor": {
       "front": {
-        "value": 52
+        "value": 5
       },
       "side": {
-        "value": 20
+        "value": 2
       },
       "rear": {
-        "value": 20
+        "value": 2
       },
       "exposed": {
-        "value": 10
+        "value": 1
       }
     },
     "resourceCosts": {

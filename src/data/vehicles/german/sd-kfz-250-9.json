@@ -10,7 +10,7 @@
     "manufacturer": "Demag / Büssing-NAG",
     "modelFamily": "Sd.Kfz. 250",
     "crew": 3,
-    "combatWeightTons": 6.0,
+    "combatWeightTons": 6,
     "engine": "Maybach HL 42 TRKM, 100 PS",
     "unitsBuilt": 339,
     "productionStart": 1943,
@@ -47,33 +47,33 @@
     "organizationThreshold": 8,
     "movement": {
       "tactical": {
-        "road": 14,
-        "crossCountry": 10,
-        "rough": 5
+        "road": 27,
+        "crossCountry": 20,
+        "rough": 10
       },
       "cruise": {
-        "road": 32,
-        "crossCountry": 19,
-        "rough": 9
+        "road": 48,
+        "crossCountry": 36,
+        "rough": 18
       },
       "dash": {
-        "road": 48,
-        "crossCountry": 23,
-        "rough": 11
+        "road": 60,
+        "crossCountry": 45,
+        "rough": 23
       }
     },
     "armor": {
       "front": {
-        "value": 15
+        "value": 2
       },
       "side": {
-        "value": 8
+        "value": 1
       },
       "rear": {
-        "value": 8
+        "value": 1
       },
       "exposed": {
-        "value": 3
+        "value": 1
       }
     },
     "resourceCosts": {

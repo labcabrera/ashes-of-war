@@ -10,7 +10,7 @@
     "manufacturer": "Hanomag (chassis) / Büssing-NAG (hull)",
     "modelFamily": "Sd.Kfz. 251",
     "crew": 3,
-    "combatWeightTons": 8.0,
+    "combatWeightTons": 8,
     "engine": "Maybach HL 42 TUKRM, 100 PS",
     "unitsBuilt": 380,
     "productionStart": 1941,
@@ -47,33 +47,33 @@
     "organizationThreshold": 8,
     "movement": {
       "tactical": {
-        "road": 16,
-        "crossCountry": 12,
-        "rough": 6
+        "road": 24,
+        "crossCountry": 18,
+        "rough": 9
       },
       "cruise": {
-        "road": 35,
-        "crossCountry": 20,
-        "rough": 10
+        "road": 42,
+        "crossCountry": 32,
+        "rough": 16
       },
       "dash": {
         "road": 53,
-        "crossCountry": 25,
-        "rough": 12
+        "crossCountry": 40,
+        "rough": 20
       }
     },
     "armor": {
       "front": {
-        "value": 15
+        "value": 2
       },
       "side": {
-        "value": 8
+        "value": 1
       },
       "rear": {
-        "value": 8
+        "value": 1
       },
       "exposed": {
-        "value": 3
+        "value": 1
       }
     },
     "resourceCosts": {

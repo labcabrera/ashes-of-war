@@ -48,33 +48,33 @@
     "organizationThreshold": 8,
     "movement": {
       "tactical": {
-        "road": 18,
-        "crossCountry": 14,
-        "rough": 7
+        "road": 36,
+        "crossCountry": 27,
+        "rough": 14
       },
       "cruise": {
-        "road": 36,
-        "crossCountry": 22,
-        "rough": 11
+        "road": 64,
+        "crossCountry": 48,
+        "rough": 24
       },
       "dash": {
-        "road": 56,
-        "crossCountry": 34,
-        "rough": 14
+        "road": 80,
+        "crossCountry": 60,
+        "rough": 30
       }
     },
     "armor": {
       "front": {
-        "value": 40
+        "value": 4
       },
       "side": {
-        "value": 8
+        "value": 1
       },
       "rear": {
-        "value": 8
+        "value": 1
       },
       "exposed": {
-        "value": 3
+        "value": 1
       }
     },
     "resourceCosts": {

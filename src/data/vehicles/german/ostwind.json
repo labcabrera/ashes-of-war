@@ -10,7 +10,7 @@
     "manufacturer": "Deutsche Eisenwerke / Ostbau Sagan",
     "modelFamily": "Panzer IV",
     "crew": 5,
-    "combatWeightTons": 25.0,
+    "combatWeightTons": 25,
     "engine": "Maybach HL 120 TRM, 300 PS",
     "unitsBuilt": 43,
     "productionStart": 1944,
@@ -49,33 +49,33 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 18,
-        "crossCountry": 14,
-        "rough": 7
+        "road": 17,
+        "crossCountry": 13,
+        "rough": 6
       },
       "cruise": {
-        "road": 32,
-        "crossCountry": 24,
-        "rough": 12
+        "road": 30,
+        "crossCountry": 23,
+        "rough": 11
       },
       "dash": {
-        "road": 40,
-        "crossCountry": 30,
-        "rough": 15
+        "road": 38,
+        "crossCountry": 29,
+        "rough": 14
       }
     },
     "armor": {
       "front": {
-        "value": 80
+        "value": 8
       },
       "side": {
-        "value": 30
+        "value": 3
       },
       "rear": {
-        "value": 20
+        "value": 2
       },
       "exposed": {
-        "value": 3
+        "value": 0
       }
     },
     "resourceCosts": {

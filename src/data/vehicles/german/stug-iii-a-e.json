@@ -47,20 +47,49 @@
     "cost": 25,
     "organizationThreshold": 10,
     "movement": {
-      "tactical": { "road": 15, "crossCountry": 11, "rough": 6 },
-      "cruise": { "road": 30, "crossCountry": 23, "rough": 11 },
-      "dash": { "road": 40, "crossCountry": 30, "rough": 15 }
+      "tactical": {
+        "road": 18,
+        "crossCountry": 14,
+        "rough": 7
+      },
+      "cruise": {
+        "road": 32,
+        "crossCountry": 24,
+        "rough": 12
+      },
+      "dash": {
+        "road": 40,
+        "crossCountry": 30,
+        "rough": 15
+      }
     },
     "armor": {
-      "front": { "value": 50 },
-      "side": { "value": 30 },
-      "rear": { "value": 30 },
-      "exposed": { "value": 10 }
+      "front": {
+        "value": 5
+      },
+      "side": {
+        "value": 3
+      },
+      "rear": {
+        "value": 3
+      },
+      "exposed": {
+        "value": 1
+      }
     },
-    "resourceCosts": { "fuel": 5, "logistics": 5 },
+    "resourceCosts": {
+      "fuel": 5,
+      "logistics": 5
+    },
     "weapons": [
-      { "id": "german-kwk-37-l24", "count": 1, "type": "hull" }
+      {
+        "id": "german-kwk-37-l24",
+        "count": 1,
+        "type": "hull"
+      }
     ],
-    "keywords": ["radio"]
+    "keywords": [
+      "radio"
+    ]
   }
 }

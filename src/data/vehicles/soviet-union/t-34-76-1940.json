@@ -10,7 +10,7 @@
     "manufacturer": "KhPZ Plant No. 183, Kharkiv",
     "modelFamily": "T-34",
     "crew": 4,
-    "combatWeightTons": 26.0,
+    "combatWeightTons": 26,
     "engine": "V-2-34 V12 diesel, 500 PS",
     "unitsBuilt": 115,
     "productionStart": 1940,
@@ -48,33 +48,33 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 22,
-        "crossCountry": 17,
-        "rough": 8
+        "road": 24,
+        "crossCountry": 18,
+        "rough": 9
       },
       "cruise": {
-        "road": 40,
-        "crossCountry": 30,
-        "rough": 15
+        "road": 43,
+        "crossCountry": 32,
+        "rough": 16
       },
       "dash": {
-        "road": 55,
+        "road": 54,
         "crossCountry": 41,
-        "rough": 21
+        "rough": 20
       }
     },
     "armor": {
       "front": {
-        "value": 45
+        "value": 5
       },
       "side": {
-        "value": 15
+        "value": 2
       },
       "rear": {
-        "value": 15
+        "value": 2
       },
       "exposed": {
-        "value": 10
+        "value": 1
       }
     },
     "resourceCosts": {

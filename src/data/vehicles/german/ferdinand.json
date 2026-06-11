@@ -10,7 +10,7 @@
     "manufacturer": "Nibelungenwerk (rebuild of Porsche Tiger hulls)",
     "modelFamily": "Ferdinand",
     "crew": 6,
-    "combatWeightTons": 65.0,
+    "combatWeightTons": 65,
     "engine": "2x Maybach HL 120 TRM, 300 PS each (petrol-electric drive)",
     "unitsBuilt": 91,
     "productionStart": 1943,
@@ -48,33 +48,33 @@
     "organizationThreshold": 10,
     "movement": {
       "tactical": {
-        "road": 8,
-        "crossCountry": 5,
-        "rough": 2
+        "road": 9,
+        "crossCountry": 7,
+        "rough": 3
       },
       "cruise": {
-        "road": 20,
-        "crossCountry": 10,
-        "rough": 4
+        "road": 16,
+        "crossCountry": 12,
+        "rough": 6
       },
       "dash": {
-        "road": 30,
+        "road": 20,
         "crossCountry": 15,
-        "rough": 6
+        "rough": 8
       }
     },
     "armor": {
       "front": {
-        "value": 200
+        "value": 25
       },
       "side": {
-        "value": 80
+        "value": 8
       },
       "rear": {
-        "value": 80
+        "value": 8
       },
       "exposed": {
-        "value": 30
+        "value": 3
       }
     },
     "resourceCosts": {
