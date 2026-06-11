@@ -4,6 +4,9 @@
 
 export type WeaponType = 'soft' | 'hard' | 'artillery' | 'anti-aircraft';
 
+/** Ordered list of all WeaponType values for use in filters and UI. */
+export const WEAPON_TYPES: WeaponType[] = ['soft', 'hard', 'artillery', 'anti-aircraft'];
+
 export type WeaponFeature = 'supression' | 'overheat' | 'area';
 
 export interface WeaponFeatureModifier {

@@ -1,21 +1,10 @@
 /**
- * UnitFilterSidebar — collapsible sidebar with search, faction, unit type, service year
- * and cost filters for the unit catalogue.
+ * WeaponFilterSidebar — collapsible sidebar with search, faction, weapon type and service
+ * year filters for the weapon catalogue, mirroring UnitFilterSidebar.
  */
-import {
-  Autocomplete,
-  Box,
-  Checkbox,
-  FormControlLabel,
-  InputAdornment,
-  Slider,
-  TextField,
-  Typography,
-} from '@mui/material';
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import { Box, Checkbox, FormControlLabel, Slider, TextField, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { UnitType, UnitKeyword, UNIT_TYPES } from '../../types/unit';
+import { WeaponType, WEAPON_TYPES } from '../../types/weapon';
 import type { FactionId } from '../../types/faction';
 import type { NumericRange } from '../../hooks/useUnitData';
 import { factionColor } from '../../utils/factionColors';
@@ -25,50 +14,38 @@ interface Props {
   name: string;
   selectedFactions: FactionId[];
   availableFactions: FactionId[];
-  selectedTypes: UnitType[];
-  typeCounts: Record<UnitType, number>;
+  selectedTypes: WeaponType[];
+  typeCounts: Record<WeaponType, number>;
   totalCount: number;
-  selectedKeywords: UnitKeyword[];
-  availableKeywords: UnitKeyword[];
   yearRange: [number, number];
   yearBounds: NumericRange;
-  costRange: [number, number];
-  costBounds: NumericRange;
   onNameChange: (v: string) => void;
   onFactionsChange: (v: FactionId[]) => void;
-  onTypesChange: (v: UnitType[]) => void;
-  onKeywordsChange: (v: UnitKeyword[]) => void;
+  onTypesChange: (v: WeaponType[]) => void;
   onYearRangeChange: (v: [number, number]) => void;
-  onCostRangeChange: (v: [number, number]) => void;
 }
 
-export default function UnitFilterSidebar({
+export default function WeaponFilterSidebar({
   name,
   selectedFactions,
   availableFactions,
   selectedTypes,
   typeCounts,
   totalCount,
-  selectedKeywords,
-  availableKeywords,
   yearRange,
   yearBounds,
-  costRange,
-  costBounds,
   onNameChange,
   onFactionsChange,
   onTypesChange,
-  onKeywordsChange,
   onYearRangeChange,
-  onCostRangeChange,
 }: Props) {
   const { t } = useTranslation();
 
-  const visibleTypes = [...UNIT_TYPES]
+  const visibleTypes = [...WEAPON_TYPES]
     .filter((type) => typeCounts[type] > 0 || selectedTypes.includes(type))
     .sort((a, b) => {
       const diff = typeCounts[b] - typeCounts[a];
-      return diff !== 0 ? diff : t(`units.types.${a}`).localeCompare(t(`units.types.${b}`));
+      return diff !== 0 ? diff : t(`weapons.types.${a}`).localeCompare(t(`weapons.types.${b}`));
     });
 
   return (
@@ -78,7 +55,7 @@ export default function UnitFilterSidebar({
           fullWidth
           size="small"
           type="search"
-          placeholder={t('units.sidebar.searchPlaceholder')}
+          placeholder={t('weapons.sidebar.searchPlaceholder')}
           value={name}
           onChange={(e) => onNameChange(e.target.value)}
         />
@@ -125,7 +102,7 @@ export default function UnitFilterSidebar({
         ))}
       </FilterSection>
 
-      <FilterSection title={t('units.sidebar.unitType')}>
+      <FilterSection title={t('weapons.sidebar.weaponType')}>
         <FormControlLabel
           sx={optionRowSx}
           control={
@@ -160,7 +137,7 @@ export default function UnitFilterSidebar({
                 onChange={() => onTypesChange(toggleValue(selectedTypes, type))}
               />
             }
-            label={<OptionRow count={typeCounts[type]}>{t(`units.types.${type}`)}</OptionRow>}
+            label={<OptionRow count={typeCounts[type]}>{t(`weapons.types.${type}`)}</OptionRow>}
           />
         ))}
       </FilterSection>
@@ -183,65 +160,6 @@ export default function UnitFilterSidebar({
             sx={{ '& .MuiSlider-markLabel': { fontSize: '0.7rem', color: 'text.secondary' } }}
           />
         </Box>
-      </FilterSection>
-
-      <FilterSection title={t('units.sidebar.cost')}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, width: '100%' }}>
-          <TextField
-            size="small"
-            type="number"
-            value={costRange[0]}
-            onChange={(e) => {
-              const value = Math.max(costBounds.min, Math.min(Number(e.target.value), costRange[1]));
-              onCostRangeChange([value, costRange[1]]);
-            }}
-            slotProps={{ htmlInput: { min: costBounds.min, max: costBounds.max } }}
-            sx={{ width: 80 }}
-          />
-          <Typography color="text.secondary">—</Typography>
-          <TextField
-            size="small"
-            type="number"
-            value={costRange[1]}
-            onChange={(e) => {
-              const value = Math.min(costBounds.max, Math.max(Number(e.target.value), costRange[0]));
-              onCostRangeChange([costRange[0], value]);
-            }}
-            slotProps={{
-              htmlInput: { min: costBounds.min, max: costBounds.max },
-              input: { endAdornment: <InputAdornment position="end">{t('units.sidebar.costUnit')}</InputAdornment> },
-            }}
-            sx={{ width: 100 }}
-          />
-        </Box>
-      </FilterSection>
-
-      <FilterSection title={t('units.sidebar.keywords')}>
-        <Autocomplete
-          multiple
-          disableCloseOnSelect
-          fullWidth
-          size="small"
-          options={availableKeywords}
-          value={selectedKeywords}
-          getOptionLabel={(option) => t(`units.keywords.${option}`, { defaultValue: option })}
-          onChange={(_event, value) => onKeywordsChange(value)}
-          renderOption={(props, option, { selected }) => {
-            const { key, ...optionProps } = props;
-            return (
-              <Box component="li" key={key} {...optionProps}>
-                <Checkbox
-                  icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
-                  checkedIcon={<CheckBoxIcon fontSize="small" />}
-                  checked={selected}
-                  sx={{ mr: 1 }}
-                />
-                {t(`units.keywords.${option}`, { defaultValue: option })}
-              </Box>
-            );
-          }}
-          renderInput={(params) => <TextField {...params} size="small" />}
-        />
       </FilterSection>
     </Box>
   );
