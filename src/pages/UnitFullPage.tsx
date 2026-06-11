@@ -7,7 +7,6 @@ import {
   Button,
   Chip,
   Container,
-  Divider,
   Link as MuiLink,
   Paper,
   Stack,
@@ -20,11 +19,18 @@ import {
   Typography,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import BookmarksIcon from '@mui/icons-material/Bookmarks';
+import DescriptionIcon from '@mui/icons-material/Description';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import FlightIcon from '@mui/icons-material/Flight';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import ShieldIcon from '@mui/icons-material/Shield';
+import SpeedIcon from '@mui/icons-material/Speed';
+import type { ReactNode } from 'react';
 import { Link as RouterLink, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { allUnits } from '../data/units';
@@ -80,6 +86,25 @@ function movementValue(value: number) {
 
 function isNonVehicleUnit(unit: Unit) {
   return !unit.profile;
+}
+
+/** Card-like container for a labeled group of unit details. */
+function Section({ title, icon: Icon, children }: { title: string; icon: typeof MilitaryTechIcon; children: ReactNode }) {
+  return (
+    <Paper sx={{ p: { xs: 2, sm: 2.5 } }}>
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{ alignItems: 'center', mb: 2, pb: 1, borderBottom: 1, borderColor: 'divider' }}
+      >
+        <Icon sx={{ fontSize: 20, color: 'secondary.main' }} />
+        <Typography variant="subtitle1" sx={{ fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+          {title}
+        </Typography>
+      </Stack>
+      {children}
+    </Paper>
+  );
 }
 
 function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
@@ -156,7 +181,7 @@ function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
   );
 }
 
-function HistoricalSpecs({ entry }: { entry: VehicleCatalogueEntry }) {
+function HistoricalSpecsSection({ entry }: { entry: VehicleCatalogueEntry }) {
   const { t } = useTranslation();
   const { historical } = entry;
 
@@ -198,12 +223,8 @@ function HistoricalSpecs({ entry }: { entry: VehicleCatalogueEntry }) {
   }
 
   return (
-    <>
-      <Divider sx={{ my: 3 }} />
-      <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-        {t('units.detail.historical.title')}
-      </Typography>
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 2, mb: 2 }}>
+    <Section title={t('units.detail.historical.title')} icon={HistoryEduIcon}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 2, mb: historical.notes || historical.sourceUrl ? 2 : 0 }}>
         {fields.map((field) => (
           <Box key={field.label}>
             <Typography variant="caption" color="text.secondary">
@@ -214,7 +235,7 @@ function HistoricalSpecs({ entry }: { entry: VehicleCatalogueEntry }) {
         ))}
       </Box>
       {historical.notes && (
-        <Typography color="text.secondary" sx={{ mb: 1.5, whiteSpace: 'pre-line' }}>
+        <Typography color="text.secondary" sx={{ mb: historical.sourceUrl ? 1.5 : 0, whiteSpace: 'pre-line' }}>
           {historical.notes}
         </Typography>
       )}
@@ -230,7 +251,7 @@ function HistoricalSpecs({ entry }: { entry: VehicleCatalogueEntry }) {
           {t('units.detail.historical.source')}
         </Button>
       )}
-    </>
+    </Section>
   );
 }
 
@@ -263,179 +284,171 @@ export default function UnitFullPage() {
         {t('units.detail.backToCatalogue')}
       </Button>
 
-      <Paper sx={{ overflow: 'hidden', mb: 3 }}>
-        <Box
-          sx={{
-            minHeight: 260,
-            bgcolor: 'primary.dark',
-            display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: 'minmax(280px, 0.9fr) minmax(0, 1.4fr)' },
-          }}
-        >
-          <Avatar
-            variant="rounded"
-            src={unitImageUrl(unit.faction, unit.id)}
-            alt={unit.name}
+      <Stack spacing={3}>
+        <Paper sx={{ overflow: 'hidden' }}>
+          <Box
             sx={{
-              width: '100%',
-              height: { xs: 260, md: '100%' },
-              borderRadius: 0,
+              minHeight: 260,
               bgcolor: 'primary.dark',
-              '& img': { objectFit: 'cover' },
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', md: 'minmax(280px, 0.9fr) minmax(0, 1.4fr)' },
             }}
           >
-            <UnitIcon sx={{ fontSize: 144, color: 'secondary.main' }} />
-          </Avatar>
-          <Box sx={{ p: { xs: 3, md: 4 }, color: 'primary.contrastText' }}>
-            <Typography variant="h3" sx={{ fontWeight: 800, mb: 2 }}>
-              {unit.name}
-            </Typography>
-            <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
-              <Chip label={t(`units.types.${unit.type}`)} />
-              <Chip label={t(`factions.${unit.faction}`, unit.faction)} />
-              <Chip label={`${unit.cost} pts`} color="secondary" />
-              <Chip label={`${unit.from}-${unit.to}`} variant="outlined" sx={{ color: 'inherit', borderColor: 'currentColor' }} />
-            </Stack>
-          </Box>
-        </Box>
-      </Paper>
-
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '0.85fr 1.15fr' }, gap: 3 }}>
-        <Box>
-          <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-            {t('units.detail.movement.title')}
-          </Typography>
-          <TableContainer component={Paper} sx={{ mb: 3 }}>
-            <Table size="small">
-              <TableHead>
-                <TableRow>
-                  <TableCell>{t('units.detail.movement.speed')}</TableCell>
-                  <TableCell align="right">{t('units.detail.movement.road')}</TableCell>
-                  <TableCell align="right">{t('units.detail.movement.crossCountry')}</TableCell>
-                  <TableCell align="right">{t('units.detail.movement.rough')}</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {(['tactical', 'cruise', 'dash'] as const).map((speed) => (
-                  <TableRow key={speed}>
-                    <TableCell>{t(`units.detail.movement.${speed}`)}</TableCell>
-                    <TableCell align="right">{movementValue(unit.movement[speed].road)}</TableCell>
-                    <TableCell align="right">{movementValue(unit.movement[speed].crossCountry)}</TableCell>
-                    <TableCell align="right">{movementValue(unit.movement[speed].rough)}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-
-          {unit.resourceCosts && (
-            <>
-              <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-                {t('units.detail.resources')}
+            <Avatar
+              variant="rounded"
+              src={unitImageUrl(unit.faction, unit.id)}
+              alt={unit.name}
+              sx={{
+                width: '100%',
+                height: { xs: 260, md: '100%' },
+                borderRadius: 0,
+                bgcolor: 'primary.dark',
+                '& img': { objectFit: 'cover' },
+              }}
+            >
+              <UnitIcon sx={{ fontSize: 144, color: 'secondary.main' }} />
+            </Avatar>
+            <Box sx={{ p: { xs: 3, md: 4 }, color: 'primary.contrastText' }}>
+              <Typography variant="h3" sx={{ fontWeight: 800, mb: 2 }}>
+                {unit.name}
               </Typography>
-              <Stack direction="row" spacing={1} useFlexGap sx={{ mb: 3, flexWrap: 'wrap' }}>
-                {Object.entries(unit.resourceCosts).map(([resource, cost]) => (
-                  <Chip key={resource} label={`${t(`army.resources.${resource}`)}: ${cost}`} />
-                ))}
+              <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
+                <Chip label={t(`units.types.${unit.type}`)} />
+                <Chip label={t(`factions.${unit.faction}`, unit.faction)} />
+                <Chip label={`${unit.cost} pts`} color="secondary" />
+                <Chip label={`${unit.from}-${unit.to}`} variant="outlined" sx={{ color: 'inherit', borderColor: 'currentColor' }} />
               </Stack>
-            </>
-          )}
+            </Box>
+          </Box>
+        </Paper>
 
-          <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-            {t('units.detail.thresholds')}
-          </Typography>
-          <Stack direction="row" spacing={1} useFlexGap sx={{ mb: 3, flexWrap: 'wrap' }}>
-            <Chip
-              label={`${t('units.detail.organizationThreshold')}: ${unit.organizationThreshold}`}
-              color="secondary"
-              variant="outlined"
-            />
-            {isNonVehicleUnit(unit) && (
-              <Chip
-                label={`${t('units.detail.casualtiesThreshold')}: ${unit.casualtiesThreshold}`}
-                color="secondary"
-                variant="outlined"
-              />
-            )}
-            {unit.type === 'infantry' && (
-              <Chip
-                label={`${t('units.detail.combatants')}: ${unit.combatants}`}
-                color="secondary"
-                variant="outlined"
-              />
-            )}
-          </Stack>
-
-          {unit.profile && (
-            <>
-              <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-                {t('units.detail.armour')}
-              </Typography>
-              <TableContainer component={Paper} sx={{ mb: 3 }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '0.85fr 1.15fr' }, gap: 3, alignItems: 'start' }}>
+          <Stack spacing={3}>
+            <Section title={t('units.detail.movement.title')} icon={SpeedIcon}>
+              <TableContainer>
                 <Table size="small">
                   <TableHead>
                     <TableRow>
-                      <TableCell>{t('units.detail.armourFacing')}</TableCell>
-                      <TableCell align="right">{t('units.detail.armourValue')}</TableCell>
-                      <TableCell align="right">{t('units.detail.armourMM')}</TableCell>
-                      <TableCell align="right">{t('units.detail.armourInclination')}</TableCell>
-                      <TableCell>{t('units.detail.armourNotes')}</TableCell>
+                      <TableCell>{t('units.detail.movement.speed')}</TableCell>
+                      <TableCell align="right">{t('units.detail.movement.road')}</TableCell>
+                      <TableCell align="right">{t('units.detail.movement.crossCountry')}</TableCell>
+                      <TableCell align="right">{t('units.detail.movement.rough')}</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
-                    {armorRows(unit.profile).map(([facing, armor]) => (
-                      <TableRow key={facing}>
-                        <TableCell>{t(`units.detail.${facing}`)}</TableCell>
-                        <TableCell align="right">{armor.value}</TableCell>
-                        <TableCell align="right">{armor.armorMM}</TableCell>
-                        <TableCell align="right">{armor.armorInclination} deg</TableCell>
-                        <TableCell>{armor.notes ?? '-'}</TableCell>
+                    {(['tactical', 'cruise', 'dash'] as const).map((speed) => (
+                      <TableRow key={speed}>
+                        <TableCell>{t(`units.detail.movement.${speed}`)}</TableCell>
+                        <TableCell align="right">{movementValue(unit.movement[speed].road)}</TableCell>
+                        <TableCell align="right">{movementValue(unit.movement[speed].crossCountry)}</TableCell>
+                        <TableCell align="right">{movementValue(unit.movement[speed].rough)}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
                 </Table>
               </TableContainer>
-            </>
-          )}
-        </Box>
+            </Section>
 
-        <Box>
-          <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-            {t('units.detail.weapons')}
-          </Typography>
-          <Paper sx={{ p: 2.25 }}>
-            <WeaponAssignments assignments={assignedWeapons} />
-          </Paper>
-
-          {unit.keywords && unit.keywords.length > 0 && (
-            <>
-              <Divider sx={{ my: 3 }} />
-              <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-                {t('units.detail.keywords')}
-              </Typography>
-              <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
-                {unit.keywords.map((keyword) => (
-                  <Chip key={keyword} label={t(`units.keywords.${keyword}`, keyword)} color="warning" />
-                ))}
+            <Section title={t('units.detail.summary')} icon={AssignmentIcon}>
+              <Stack spacing={2}>
+                {unit.resourceCosts && (
+                  <Box>
+                    <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1, letterSpacing: '0.06em' }}>
+                      {t('units.detail.resources')}
+                    </Typography>
+                    <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
+                      {Object.entries(unit.resourceCosts).map(([resource, cost]) => (
+                        <Chip key={resource} label={`${t(`army.resources.${resource}`)}: ${cost}`} />
+                      ))}
+                    </Stack>
+                  </Box>
+                )}
+                <Box>
+                  <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1, letterSpacing: '0.06em' }}>
+                    {t('units.detail.thresholds')}
+                  </Typography>
+                  <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
+                    <Chip
+                      label={`${t('units.detail.organizationThreshold')}: ${unit.organizationThreshold}`}
+                      color="secondary"
+                      variant="outlined"
+                    />
+                    {isNonVehicleUnit(unit) && (
+                      <Chip
+                        label={`${t('units.detail.casualtiesThreshold')}: ${unit.casualtiesThreshold}`}
+                        color="secondary"
+                        variant="outlined"
+                      />
+                    )}
+                    {unit.type === 'infantry' && (
+                      <Chip
+                        label={`${t('units.detail.combatants')}: ${unit.combatants}`}
+                        color="secondary"
+                        variant="outlined"
+                      />
+                    )}
+                  </Stack>
+                </Box>
               </Stack>
-            </>
-          )}
+            </Section>
+
+            {unit.profile && (
+              <Section title={t('units.detail.armour')} icon={ShieldIcon}>
+                <TableContainer>
+                  <Table size="small">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>{t('units.detail.armourFacing')}</TableCell>
+                        <TableCell align="right">{t('units.detail.armourValue')}</TableCell>
+                        <TableCell align="right">{t('units.detail.armourMM')}</TableCell>
+                        <TableCell align="right">{t('units.detail.armourInclination')}</TableCell>
+                        <TableCell>{t('units.detail.armourNotes')}</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {armorRows(unit.profile).map(([facing, armor]) => (
+                        <TableRow key={facing}>
+                          <TableCell>{t(`units.detail.${facing}`)}</TableCell>
+                          <TableCell align="right">{armor.value}</TableCell>
+                          <TableCell align="right">{armor.armorMM}</TableCell>
+                          <TableCell align="right">{armor.armorInclination} deg</TableCell>
+                          <TableCell>{armor.notes ?? '-'}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </Section>
+            )}
+          </Stack>
+
+          <Stack spacing={3}>
+            <Section title={t('units.detail.weapons')} icon={GpsFixedIcon}>
+              <WeaponAssignments assignments={assignedWeapons} />
+            </Section>
+
+            {unit.keywords && unit.keywords.length > 0 && (
+              <Section title={t('units.detail.keywords')} icon={BookmarksIcon}>
+                <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
+                  {unit.keywords.map((keyword) => (
+                    <Chip key={keyword} label={t(`units.keywords.${keyword}`, keyword)} color="warning" />
+                  ))}
+                </Stack>
+              </Section>
+            )}
+          </Stack>
         </Box>
-      </Box>
 
-      {vehicleEntry && <HistoricalSpecs entry={vehicleEntry} />}
+        {vehicleEntry && <HistoricalSpecsSection entry={vehicleEntry} />}
 
-      {description && (
-        <>
-          <Divider sx={{ my: 3 }} />
-          <Typography variant="h5" sx={{ fontWeight: 700, mb: 1.5 }}>
-            {t('units.detail.description')}
-          </Typography>
-          <Typography color="text.secondary" sx={{ whiteSpace: 'pre-line' }}>
-            {description}
-          </Typography>
-        </>
-      )}
+        {description && (
+          <Section title={t('units.detail.description')} icon={DescriptionIcon}>
+            <Typography color="text.secondary" sx={{ whiteSpace: 'pre-line' }}>
+              {description}
+            </Typography>
+          </Section>
+        )}
+      </Stack>
     </Container>
   );
 }

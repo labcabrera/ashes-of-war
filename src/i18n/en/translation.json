@@ -185,6 +185,7 @@
       "resources": "Resource Costs",
       "availability": "Availability",
       "description": "Description",
+      "summary": "Summary",
       "thresholds": "Thresholds",
       "combatants": "Combatants",
       "organizationThreshold": "Organization",

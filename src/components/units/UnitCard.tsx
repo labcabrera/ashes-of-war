@@ -29,10 +29,25 @@ export default function UnitCard({ unit, isOutOfYear, onClick }: Props) {
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
+        // Replace the theme's dashed top accent with a worn-document texture.
+        backgroundColor: '#1a1c20',
+        backgroundImage: [
+          'radial-gradient(ellipse at 12% 15%, rgba(184,152,92,0.10) 0%, transparent 38%)',
+          'radial-gradient(ellipse at 88% 8%, rgba(140,112,64,0.08) 0%, transparent 35%)',
+          'radial-gradient(ellipse at 78% 95%, rgba(110,90,55,0.10) 0%, transparent 45%)',
+          'radial-gradient(ellipse at 18% 96%, rgba(150,122,70,0.07) 0%, transparent 40%)',
+          'repeating-linear-gradient(115deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px)',
+        ].join(', '),
+        backgroundSize: 'auto',
+        backgroundPosition: 'initial',
+        backgroundRepeat: 'no-repeat',
+        paddingTop: 0,
+        border: '1px solid #4a4030',
+        boxShadow: 'inset 0 0 24px rgba(0,0,0,0.55)',
         transition: 'transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, opacity 0.2s ease',
         '&:hover': {
           transform: 'translateY(-4px)',
-          boxShadow: 6,
+          boxShadow: 'inset 0 0 24px rgba(0,0,0,0.55), 0 8px 18px rgba(0,0,0,0.45)',
           borderColor: 'secondary.main',
         },
       }}
@@ -54,7 +69,12 @@ export default function UnitCard({ unit, isOutOfYear, onClick }: Props) {
               p: isFlagFallback ? 2 : 0,
               bgcolor: 'background.default',
               transition: 'transform 0.3s ease',
-              ...(isFlagFallback ? {} : { '.MuiCardActionArea-root:hover &': { transform: 'scale(1.06)' } }),
+              ...(isFlagFallback
+                ? {}
+                : {
+                    filter: 'sepia(0.45) saturate(0.85) contrast(1.05) brightness(0.92)',
+                    '.MuiCardActionArea-root:hover &': { transform: 'scale(1.06)' },
+                  }),
             }}
           />
           <Chip
