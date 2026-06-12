@@ -13,6 +13,7 @@ import UnitComparePage from './pages/UnitComparePage';
 import CampaignPage from './pages/CampaignPage';
 import WikiPage from './pages/WikiPage';
 import WikiArticlePage from './pages/WikiArticlePage';
+import { DisplaySettingsProvider } from './hooks/useDisplaySettings';
 
 const ArmyBuilderPage = lazy(() => import('./pages/ArmyBuilderPage'));
 const CompaniesPage = lazy(() => import('./pages/CompaniesPage'));
@@ -42,5 +43,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <DisplaySettingsProvider>
+      <RouterProvider router={router} />
+    </DisplaySettingsProvider>
+  );
 }

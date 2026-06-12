@@ -22,9 +22,11 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import LanguageIcon from '@mui/icons-material/Language';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { LOCALE_KEY } from '../../i18n';
+import { useDisplaySettings, UnitTypeIconStyle } from '../../hooks/useDisplaySettings';
 
 const NAV_LINKS = [
   { to: '/rules/introduction', label: 'nav.rules', end: false },
@@ -37,8 +39,10 @@ const NAV_LINKS = [
 
 export default function AppHeader() {
   const { t, i18n } = useTranslation();
+  const { unitTypeIconStyle, setUnitTypeIconStyle } = useDisplaySettings();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [languageAnchor, setLanguageAnchor] = useState<null | HTMLElement>(null);
+  const [settingsAnchor, setSettingsAnchor] = useState<null | HTMLElement>(null);
 
   const handleLanguage = (newLang: string) => {
     i18n.changeLanguage(newLang);
@@ -110,6 +114,36 @@ export default function AppHeader() {
         </Stack>
 
         <Box sx={{ flexGrow: 1 }} />
+
+        <IconButton
+          color="inherit"
+          onClick={(event) => setSettingsAnchor(event.currentTarget)}
+          aria-label={t('display.select')}
+          aria-controls={settingsAnchor ? 'display-settings-menu' : undefined}
+          aria-haspopup="menu"
+          aria-expanded={settingsAnchor ? 'true' : undefined}
+        >
+          <SettingsIcon />
+        </IconButton>
+        <Menu
+          id="display-settings-menu"
+          anchorEl={settingsAnchor}
+          open={Boolean(settingsAnchor)}
+          onClose={() => setSettingsAnchor(null)}
+        >
+          {(['pictogram', 'nato'] as UnitTypeIconStyle[]).map((style) => (
+            <MenuItem
+              key={style}
+              selected={unitTypeIconStyle === style}
+              onClick={() => {
+                setUnitTypeIconStyle(style);
+                setSettingsAnchor(null);
+              }}
+            >
+              {t(`display.unitTypeIcons.${style}`)}
+            </MenuItem>
+          ))}
+        </Menu>
 
         <IconButton
           color="inherit"

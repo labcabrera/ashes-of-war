@@ -1,5 +1,6 @@
 import type { FactionId } from '../types/faction';
 import type { UnitType } from '../types/unit';
+import type { UnitTypeIconStyle } from '../hooks/useDisplaySettings';
 
 export function factionFlagUrl(faction: FactionId) {
   return `/images/factions/${faction}.jpg`;
@@ -9,8 +10,8 @@ export function unitImageUrl(faction: FactionId, unitId: string) {
   return `/images/units/${faction}/${unitId}.jpg`;
 }
 
-export function unitTypeIconUrl(type: UnitType) {
-  return `/images/unit-types/${type}.png`;
+export function unitTypeIconUrl(type: UnitType, style: UnitTypeIconStyle = 'pictogram') {
+  return style === 'nato' ? `/images/unit-types/nato/${type}.png` : `/images/unit-types/${type}.png`;
 }
 
 export function weaponFactionId(weaponId: string): FactionId | undefined {

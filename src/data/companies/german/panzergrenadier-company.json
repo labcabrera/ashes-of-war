@@ -1,0 +1,65 @@
+{
+  "id": "german-panzergrenadier-company",
+  "name": "Panzergrenadierkompanie",
+  "faction": "german",
+  "classification": "mechanised",
+  "description": "Compañía alemana de panzergranaderos organizada para combatir junto a vehículos blindados. Combina mando de compañía, secciones mecanizadas, escuadras de panzergranaderos y apoyos móviles o agregados.",
+  "rules": [
+    {
+      "id": "company-hq",
+      "role": "captain",
+      "label": "Mando de compañía",
+      "unitType": "infantry",
+      "min": 1,
+      "max": 1
+    },
+    {
+      "id": "mechanised-sections",
+      "role": "section",
+      "label": "Secciones mecanizadas",
+      "unitType": "mechanised",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": "panzergrenadier-squads",
+      "role": "squad",
+      "label": "Escuadras de panzergranaderos",
+      "unitType": "infantry",
+      "min": 2,
+      "max": 6
+    },
+    {
+      "id": "half-track-transport",
+      "role": "support",
+      "label": "Semiorugas",
+      "unitType": "mechanised",
+      "min": 1,
+      "max": 6
+    },
+    {
+      "id": "assault-gun-support",
+      "role": "support",
+      "label": "Cañones de asalto",
+      "unitType": "assault-gun",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "id": "anti-tank-support",
+      "role": "support",
+      "label": "Cazacarros",
+      "unitType": "tank-destroyer",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "id": "artillery-support",
+      "role": "support",
+      "label": "Artillería autopropulsada",
+      "unitType": "sp-artillery",
+      "min": 0,
+      "max": 2
+    }
+  ]
+}

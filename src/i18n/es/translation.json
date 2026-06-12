@@ -80,6 +80,13 @@
     "romania": "Rumanía",
     "china": "China"
   },
+  "display": {
+    "select": "Configurar visualización",
+    "unitTypeIcons": {
+      "pictogram": "Iconos ilustrados",
+      "nato": "Símbolos OTAN"
+    }
+  },
   "footer": {
     "project": {
       "title": "Ashes of War",

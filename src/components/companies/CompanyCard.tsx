@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import type { CompanyType } from '../../types/company';
 import { factionColor } from '../../utils/factionColors';
 import { factionFlagUrl, unitTypeIconUrl } from '../../utils/images';
+import { useDisplaySettings } from '../../hooks/useDisplaySettings';
 
 interface Props {
   company: CompanyType;
@@ -14,6 +15,7 @@ interface Props {
 
 export default function CompanyCard({ company, onClick }: Props) {
   const { t } = useTranslation();
+  const { unitTypeIconStyle } = useDisplaySettings();
   const factionLabel = t(`factions.${company.faction}`, company.faction);
   const requiredRules = company.rules.filter((rule) => rule.min > 0).length;
   const supportRules = company.rules.filter((rule) => rule.role === 'support').length;
@@ -49,7 +51,7 @@ export default function CompanyCard({ company, onClick }: Props) {
           <Box sx={{ height: 150, display: 'grid', placeItems: 'center', bgcolor: 'rgba(10, 12, 10, 0.68)' }}>
             <CardMedia
               component="img"
-              image={unitTypeIconUrl(company.classification)}
+              image={unitTypeIconUrl(company.classification, unitTypeIconStyle)}
               alt=""
               aria-hidden="true"
               sx={{ width: 118, height: 118, objectFit: 'contain', filter: 'drop-shadow(0 8px 8px rgba(0,0,0,0.5))' }}

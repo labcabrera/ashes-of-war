@@ -7,8 +7,10 @@ import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const outDir = join(process.cwd(), 'public/images/unit-types');
+const natoOutDir = join(outDir, 'nato');
 const tmpDir = join(process.cwd(), 'node_modules/.tmp/unit-type-icons');
 mkdirSync(outDir, { recursive: true });
+mkdirSync(natoOutDir, { recursive: true });
 mkdirSync(tmpDir, { recursive: true });
 
 const common = {
@@ -22,6 +24,17 @@ function svg(body) {
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
   <rect width="512" height="512" fill="none"/>
   <g fill="${common.fill}" stroke="${common.stroke}" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    ${body}
+  </g>
+</svg>`;
+}
+
+function natoSvg(body) {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="none"/>
+  <g fill="none" stroke="#151713" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="78" y="146" width="356" height="220" rx="8" fill="#f3f0df"/>
     ${body}
   </g>
 </svg>`;
@@ -131,9 +144,76 @@ const icons = {
   `),
 };
 
+const natoIcons = {
+  infantry: natoSvg(`
+    <path d="M100 166l312 180"/>
+    <path d="M412 166L100 346"/>
+  `),
+  tank: natoSvg(`
+    <ellipse cx="256" cy="256" rx="104" ry="52"/>
+  `),
+  'tank-destroyer': natoSvg(`
+    <ellipse cx="240" cy="260" rx="94" ry="48"/>
+    <path d="M316 250h78"/>
+    <path d="M356 220l38 30-38 30"/>
+  `),
+  'assault-gun': natoSvg(`
+    <ellipse cx="234" cy="260" rx="92" ry="46"/>
+    <path d="M310 260h86"/>
+  `),
+  'sp-artillery': natoSvg(`
+    <ellipse cx="226" cy="272" rx="82" ry="42"/>
+    <circle cx="308" cy="240" r="34"/>
+    <path d="M330 218l60-54"/>
+  `),
+  'sp-anti-aircraft': natoSvg(`
+    <ellipse cx="222" cy="278" rx="82" ry="42"/>
+    <path d="M292 306l70-122"/>
+    <path d="M330 306l64-112"/>
+  `),
+  mechanised: natoSvg(`
+    <path d="M100 166l312 180"/>
+    <path d="M412 166L100 346"/>
+    <ellipse cx="256" cy="296" rx="86" ry="36"/>
+  `),
+  motorised: natoSvg(`
+    <path d="M100 166l312 180"/>
+    <path d="M412 166L100 346"/>
+    <circle cx="204" cy="316" r="24"/>
+    <circle cx="308" cy="316" r="24"/>
+  `),
+  'towed-artillery': natoSvg(`
+    <circle cx="256" cy="256" r="46"/>
+    <path d="M256 302v52"/>
+  `),
+  'towed-anti-tank': natoSvg(`
+    <circle cx="230" cy="264" r="42"/>
+    <path d="M272 264h100"/>
+    <path d="M334 224l38 40-38 40"/>
+  `),
+  'towed-anti-aircraft': natoSvg(`
+    <circle cx="220" cy="292" r="38"/>
+    <path d="M268 324l66-136"/>
+    <path d="M306 324l62-126"/>
+  `),
+  aircraft: natoSvg(`
+    <path d="M256 180v152"/>
+    <path d="M144 258h224"/>
+    <path d="M198 208l58 50 58-50"/>
+    <path d="M210 332l46-42 46 42"/>
+  `),
+};
+
 for (const [name, source] of Object.entries(icons)) {
   const svgPath = join(tmpDir, `${name}.svg`);
   const pngPath = join(outDir, `${name}.png`);
+  writeFileSync(svgPath, source);
+  execFileSync('convert', ['-background', 'none', svgPath, '-resize', '512x512', pngPath], { stdio: 'inherit' });
+}
+
+for (const [name, source] of Object.entries(natoIcons)) {
+  const svgPath = join(tmpDir, `nato-${name}.svg`);
+  const pngPath = join(natoOutDir, `${name}.png`);
   writeFileSync(svgPath, source);
   execFileSync('convert', ['-background', 'none', svgPath, '-resize', '512x512', pngPath], { stdio: 'inherit' });
 }

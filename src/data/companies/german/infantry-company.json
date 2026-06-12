@@ -27,12 +27,12 @@
       "label": "Escuadras de fusileros",
       "unitType": "infantry",
       "min": 2,
-      "max": 9
+      "max": 4
     },
     {
       "id": "machine-gun-support",
       "role": "support",
-      "label": "Apoyo de ametralladoras",
+      "label": "Ametralladoras",
       "unitType": "infantry",
       "min": 0,
       "max": 2
@@ -40,7 +40,7 @@
     {
       "id": "anti-tank-support",
       "role": "support",
-      "label": "Apoyo cazacarros",
+      "label": "Cazacarros",
       "unitType": "tank-destroyer",
       "min": 0,
       "max": 1
@@ -48,7 +48,7 @@
     {
       "id": "artillery-support",
       "role": "support",
-      "label": "Apoyo de artillería",
+      "label": "Artillería",
       "unitType": "towed-artillery",
       "min": 0,
       "max": 1

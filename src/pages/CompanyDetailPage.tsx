@@ -8,9 +8,11 @@ import { useTranslation } from 'react-i18next';
 import CompanyStructure from '../components/companies/CompanyStructure';
 import { allCompanies } from '../data/companies';
 import { factionFlagUrl, unitTypeIconUrl } from '../utils/images';
+import { useDisplaySettings } from '../hooks/useDisplaySettings';
 
 export default function CompanyDetailPage() {
   const { t } = useTranslation();
+  const { unitTypeIconStyle } = useDisplaySettings();
   const { companyId } = useParams();
   const company = allCompanies.find((entry) => entry.id === companyId);
 
@@ -37,7 +39,7 @@ export default function CompanyDetailPage() {
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ alignItems: { sm: 'center' } }}>
           <Box
             component="img"
-            src={unitTypeIconUrl(company.classification)}
+            src={unitTypeIconUrl(company.classification, unitTypeIconStyle)}
             alt=""
             aria-hidden="true"
             sx={{
