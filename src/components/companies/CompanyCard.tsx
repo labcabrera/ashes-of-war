@@ -5,7 +5,7 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Chip, Tooltip, Typog
 import { useTranslation } from 'react-i18next';
 import type { CompanyType } from '../../types/company';
 import { factionColor } from '../../utils/factionColors';
-import { factionFlagUrl } from '../../utils/images';
+import { factionFlagUrl, unitTypeIconUrl } from '../../utils/images';
 
 interface Props {
   company: CompanyType;
@@ -46,14 +46,15 @@ export default function CompanyCard({ company, onClick }: Props) {
         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', flex: 1 }}
       >
         <Box sx={{ position: 'relative', overflow: 'hidden' }}>
-          <CardMedia
-            component="img"
-            height={150}
-            image={factionFlagUrl(company.faction)}
-            alt=""
-            aria-hidden="true"
-            sx={{ objectFit: 'cover', filter: 'sepia(0.35) saturate(0.82) contrast(1.05) brightness(0.82)' }}
-          />
+          <Box sx={{ height: 150, display: 'grid', placeItems: 'center', bgcolor: 'rgba(10, 12, 10, 0.68)' }}>
+            <CardMedia
+              component="img"
+              image={unitTypeIconUrl(company.classification)}
+              alt=""
+              aria-hidden="true"
+              sx={{ width: 118, height: 118, objectFit: 'contain', filter: 'drop-shadow(0 8px 8px rgba(0,0,0,0.5))' }}
+            />
+          </Box>
           <Chip
             label={t(`units.types.${company.classification}`)}
             size="small"

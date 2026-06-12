@@ -1,6 +1,6 @@
 /**
  * AppHeader — top navigation bar with route links and language switcher.
- * Navigation: Rules, Units, Army Builder, Companies, Campaign, Wiki.
+ * Navigation: Rules, Units, Companies, Army Builder, Campaign, Wiki.
  * The "AoW" title links to the home page.
  * Language switcher persists selection to localStorage key "aow:i18n-locale".
  */
@@ -29,8 +29,8 @@ import { LOCALE_KEY } from '../../i18n';
 const NAV_LINKS = [
   { to: '/rules/introduction', label: 'nav.rules', end: false },
   { to: '/units', label: 'nav.units', end: false },
-  { to: '/army-builder', label: 'nav.armyBuilder', end: false },
   { to: '/companies', label: 'nav.companies', end: false },
+  { to: '/army-builder', label: 'nav.armyBuilder', end: false },
   { to: '/campaign', label: 'nav.campaign', end: false },
   { to: '/wiki', label: 'nav.wiki', end: false },
 ];

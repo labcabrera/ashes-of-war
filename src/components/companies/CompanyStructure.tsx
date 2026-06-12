@@ -6,9 +6,9 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import GroupsIcon from '@mui/icons-material/Groups';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
-import ShieldIcon from '@mui/icons-material/Shield';
 import { useTranslation } from 'react-i18next';
 import type { CompanySlotRole, CompanyType, CompanyUnitRule } from '../../types/company';
+import { unitTypeIconUrl } from '../../utils/images';
 
 const ROLE_ORDER: CompanySlotRole[] = ['captain', 'section', 'squad', 'support'];
 
@@ -41,7 +41,13 @@ function RuleCard({ rule }: { rule: CompanyUnitRule }) {
     >
       <CardContent sx={{ p: 1.25, '&:last-child': { pb: 1.25 } }}>
         <Stack direction="row" spacing={1} sx={{ alignItems: 'flex-start' }}>
-          <ShieldIcon fontSize="small" sx={{ mt: 0.25, color: 'secondary.light' }} />
+          <Box
+            component="img"
+            src={unitTypeIconUrl(rule.unitType)}
+            alt=""
+            aria-hidden="true"
+            sx={{ width: 34, height: 34, objectFit: 'contain', flexShrink: 0 }}
+          />
           <Box sx={{ minWidth: 0, flex: 1 }}>
             <Typography variant="subtitle2" sx={{ fontWeight: 800 }}>
               {rule.label}

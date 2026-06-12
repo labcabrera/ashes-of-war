@@ -7,7 +7,7 @@ import { Link as RouterLink, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import CompanyStructure from '../components/companies/CompanyStructure';
 import { allCompanies } from '../data/companies';
-import { factionFlagUrl } from '../utils/images';
+import { factionFlagUrl, unitTypeIconUrl } from '../utils/images';
 
 export default function CompanyDetailPage() {
   const { t } = useTranslation();
@@ -37,16 +37,37 @@ export default function CompanyDetailPage() {
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ alignItems: { sm: 'center' } }}>
           <Box
             component="img"
-            src={factionFlagUrl(company.faction)}
-            alt={t(`factions.${company.faction}`)}
-            sx={{ width: 92, height: 58, objectFit: 'cover', borderRadius: 1, border: '1px solid', borderColor: 'divider' }}
+            src={unitTypeIconUrl(company.classification)}
+            alt=""
+            aria-hidden="true"
+            sx={{
+              width: 92,
+              height: 92,
+              objectFit: 'contain',
+              borderRadius: 1,
+              bgcolor: 'rgba(10, 12, 10, 0.68)',
+              border: '1px solid',
+              borderColor: 'divider',
+              p: 1,
+            }}
           />
           <Box sx={{ minWidth: 0, flex: 1 }}>
             <Typography variant="h4" sx={{ fontWeight: 800 }}>
               {company.name}
             </Typography>
             <Stack direction="row" spacing={1} sx={{ mt: 1, flexWrap: 'wrap', rowGap: 1 }}>
-              <Chip label={t(`factions.${company.faction}`)} />
+              <Chip
+                avatar={
+                  <Box
+                    component="img"
+                    src={factionFlagUrl(company.faction)}
+                    alt=""
+                    aria-hidden="true"
+                    sx={{ objectFit: 'cover' }}
+                  />
+                }
+                label={t(`factions.${company.faction}`)}
+              />
               <Chip label={t(`units.types.${company.classification}`)} color="secondary" />
             </Stack>
           </Box>

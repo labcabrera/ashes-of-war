@@ -1,4 +1,5 @@
 import type { FactionId } from '../types/faction';
+import type { UnitType } from '../types/unit';
 
 export function factionFlagUrl(faction: FactionId) {
   return `/images/factions/${faction}.jpg`;
@@ -6,6 +7,10 @@ export function factionFlagUrl(faction: FactionId) {
 
 export function unitImageUrl(faction: FactionId, unitId: string) {
   return `/images/units/${faction}/${unitId}.jpg`;
+}
+
+export function unitTypeIconUrl(type: UnitType) {
+  return `/images/unit-types/${type}.png`;
 }
 
 export function weaponFactionId(weaponId: string): FactionId | undefined {
