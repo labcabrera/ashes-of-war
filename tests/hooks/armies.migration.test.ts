@@ -20,7 +20,9 @@ describe('army storage migrations', () => {
       }],
     });
 
-    expect(migrated._version).toBe(2);
+    expect(migrated._version).toBe(3);
+    expect(migrated.armies[0]?.faction).toBe('german');
+    expect(migrated.armies[0]?.pointBudget).toBe(1000);
     expect(migrated.armies[0]?.nodes.map((node) => node.kind)).toEqual(['army', 'company', 'unit', 'unit']);
     expect(
       migrated.armies[0]?.nodes.filter((node) => node.kind === 'unit').map((node) => node.quantity),

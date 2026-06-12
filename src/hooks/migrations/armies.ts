@@ -4,8 +4,21 @@
  */
 import { v4 as uuidv4 } from 'uuid';
 import { Army, ArmyNode } from '../../types/army';
+import type { FactionId } from '../../types/faction';
+import armyTypesData from '../../data/army-types/army-types.json';
 
-export const ARMIES_SCHEMA_VERSION = 2;
+export const ARMIES_SCHEMA_VERSION = 3;
+
+const DEFAULT_POINT_BUDGET = 1000;
+const armyTypeDefaults = new Map(
+  armyTypesData.armyTypes.map((armyType) => [
+    armyType.id,
+    {
+      faction: armyType.faction as FactionId | undefined,
+      pointBudget: armyType.pointBudget,
+    },
+  ]),
+);
 
 interface LegacyArmyUnit {
   unitId: string;
@@ -97,10 +110,21 @@ function isArmy(value: unknown): value is Army {
     typeof candidate.id === 'string'
     && typeof candidate.name === 'string'
     && typeof candidate.armyTypeId === 'string'
+    && (candidate.faction === undefined || typeof candidate.faction === 'string')
+    && (candidate.pointBudget === undefined || (Number.isFinite(candidate.pointBudget) && candidate.pointBudget > 0))
     && Array.isArray(candidate.nodes)
     && candidate.nodes.every(isNode)
     && isValidHierarchy(candidate.nodes)
   );
+}
+
+function normalizeArmy(army: Army): Army {
+  const defaults = armyTypeDefaults.get(army.armyTypeId);
+  return {
+    ...army,
+    faction: army.faction ?? defaults?.faction,
+    pointBudget: army.pointBudget ?? DEFAULT_POINT_BUDGET,
+  };
 }
 
 function migrateLegacyArmy(army: LegacyArmy): Army {
@@ -136,6 +160,8 @@ function migrateLegacyArmy(army: LegacyArmy): Army {
     id: army.id,
     name: army.name,
     armyTypeId: army.armyTypeId,
+    faction: armyTypeDefaults.get(army.armyTypeId)?.faction,
+    pointBudget: DEFAULT_POINT_BUDGET,
     nodes: [rootNode, companyNode, ...unitNodes],
     savedAt: army.savedAt ?? new Date().toISOString(),
   };
@@ -150,7 +176,14 @@ export function migrateArmiesStore(raw: unknown): ArmiesStore {
   if (store._version === ARMIES_SCHEMA_VERSION) {
     return {
       _version: ARMIES_SCHEMA_VERSION,
-      armies: store.armies.filter(isArmy),
+      armies: store.armies.filter(isArmy).map(normalizeArmy),
+    };
+  }
+
+  if (store._version === 2) {
+    return {
+      _version: ARMIES_SCHEMA_VERSION,
+      armies: store.armies.filter(isArmy).map(normalizeArmy),
     };
   }
 

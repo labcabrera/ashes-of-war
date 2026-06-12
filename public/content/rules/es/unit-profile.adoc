@@ -9,95 +9,50 @@ El perfil de una unidad reúne los valores que se utilizan durante la partida pa
 
 Este documento explica el significado de cada valor del perfil de juego. No es una lista de unidades ni una clasificación de tipos de unidad.
 
+== Características
+
+Las características describen cómo se comporta una unidad cuando intenta actuar bajo presión, soportar castigo o funcionar sin depender por completo de la estructura de mando.
+
+* `Organización`: nivel establecido durante la partida que medirá la capacidad de una unidad de realizar cualquier tipo de acción.
+* `Coordinación`: habilidad de una unidad para actuar de forma activa y coordinada con otras unidades. Es la que será usara generalmente para acciones ofensivas.
+* `Obstinación`: capacidad de una unidad para tolerar bajas y mantener la linea cuando ante ataques enemigos.
+
 == Valores de infantería
 
 La infantería usa valores adicionales para representar el número de combatientes y su tolerancia a las bajas.
 
-=== Combatientes
+* *Número de integrantes*: número de individuos en la unidad. Este valor se utilizará para determinar la capacidad operativa de la unidad y su moral.
 
-Indica cuántos individuos forman la unidad en términos de juego.
+== Vehículos
 
-Este valor se usa para representar volumen de fuego, ocupación de terreno, transporte, bajas y efectos que dependen del tamaño de la unidad.
+* *Blindaje*: el valor que representa la el grado de protección contra armas con capacidades de penetración. Cada vehiculo tendrá cuatro valores de blindaje correspondientes a los diferentes encaramientos:
 
-No tiene por qué reproducir siempre una plantilla histórica exacta. Puede representar una escuadra, equipo reducido o agrupación ajustada para el escenario.
+* Frontal
+* Lateral
+* Trasero
+* Expuesto
 
-=== Umbral de bajas
 
-Indica cuántas bajas puede sufrir la unidad antes de quedar destruida, retirada o incapaz de seguir actuando como elemento de combate.
+// TODO: notas en desarrollo
 
-Este valor abstrae heridas, muertos, desorganización, pérdida de mandos, abandono de posición y agotamiento. No todos los impactos representan necesariamente una baja mortal.
+// === Umbral de bajas
 
-Un umbral bajo indica una unidad frágil o pequeña. Un umbral alto indica mayor capacidad para absorber pérdidas sin desaparecer inmediatamente del combate.
+// Algunas plataformas sin blindaje significativo usan umbral de bajas en lugar de un perfil completo de blindaje.
 
-=== Armas individuales y de equipo
+// Este valor representa la resistencia del equipo, dotación o estructura antes de quedar fuera de combate.
 
-Las armas de infantería pueden representar armamento individual, armas automáticas, granadas, lanzacohetes, morteros ligeros u otros equipos servidos por varios combatientes.
+// === Armamento montado
 
-Cuando una unidad tiene varias armas, cada una aporta su perfil de disparo correspondiente. Las reglas de escenario o acciones disponibles pueden limitar cuántas armas pueden utilizarse a la vez.
+// Las armas montadas suelen estar limitadas por su posición física.
 
-== Valores de vehículos y plataformas
+// Un arma en torreta puede tener mejor capacidad de orientación que un arma de casco. Un arma coaxial suele depender del arma principal. Un arma fija puede requerir girar la unidad o cumplir condiciones de orientación.
 
-Las unidades que no se resuelven como infantería pueden usar valores de blindaje, tripulación, armamento montado y, en algunos casos, umbral de bajas.
+// Estas limitaciones deben resolverse con las reglas de disparo, línea de visión y encaramiento cuando estén definidas por el escenario o por el capítulo correspondiente.
 
-=== Blindaje
+// === Tripulación y datos históricos
 
-El blindaje representa la protección de la unidad frente a fuego enemigo.
+// Algunos perfiles muestran datos históricos como tripulación, peso, motor, fabricante, producción, velocidad real o fuente.
 
-El perfil de blindaje se divide por encaramiento:
+// Estos valores sirven como referencia documental y como base para derivar algunos valores de juego, pero no sustituyen a los valores jugables del perfil.
 
-[cols="1,3", options="header"]
-|===
-|Encaramiento |Significado
-
-|Frontal
-|Protección principal de la unidad, usada cuando el ataque llega desde el arco delantero.
-
-|Lateral
-|Protección de los flancos, normalmente más vulnerable que el frontal.
-
-|Trasero
-|Protección de la parte posterior, a menudo más débil por motor, accesos y menor espesor.
-
-|Expuesto
-|Zonas superiores, inferiores, abiertas o especialmente vulnerables.
-|===
-
-Cada encaramiento puede mostrar tres datos:
-
-[cols="1,3", options="header"]
-|===
-|Dato |Significado
-
-|Valor
-|Número usado por las reglas de juego para resolver penetración y daño.
-
-|Milímetros
-|Espesor histórico o representativo del blindaje.
-
-|Inclinación
-|Ángulo representativo de la placa de blindaje. Puede influir en cómo se ha convertido el dato histórico al valor de juego.
-|===
-
-El valor de juego no tiene por qué ser idéntico al espesor en milímetros. Puede incorporar inclinación, simplificaciones, zonas débiles y necesidades de equilibrio.
-
-=== Umbral de bajas
-
-Algunas plataformas sin blindaje significativo usan umbral de bajas en lugar de un perfil completo de blindaje.
-
-Este valor representa la resistencia del equipo, dotación o estructura antes de quedar fuera de combate.
-
-=== Armamento montado
-
-Las armas montadas suelen estar limitadas por su posición física.
-
-Un arma en torreta puede tener mejor capacidad de orientación que un arma de casco. Un arma coaxial suele depender del arma principal. Un arma fija puede requerir girar la unidad o cumplir condiciones de orientación.
-
-Estas limitaciones deben resolverse con las reglas de disparo, línea de visión y encaramiento cuando estén definidas por el escenario o por el capítulo correspondiente.
-
-=== Tripulación y datos históricos
-
-Algunos perfiles muestran datos históricos como tripulación, peso, motor, fabricante, producción, velocidad real o fuente.
-
-Estos valores sirven como referencia documental y como base para derivar algunos valores de juego, pero no sustituyen a los valores jugables del perfil.
-
-Durante la partida se usan los valores de juego: movimiento en pulgadas, organización, coste, armamento, blindaje y reglas especiales.
+// Durante la partida se usan los valores de juego: movimiento en pulgadas, organización, coste, armamento, blindaje y reglas especiales.

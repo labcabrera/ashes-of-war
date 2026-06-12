@@ -15,6 +15,8 @@ import WikiPage from './pages/WikiPage';
 import WikiArticlePage from './pages/WikiArticlePage';
 
 const ArmyBuilderPage = lazy(() => import('./pages/ArmyBuilderPage'));
+const CompaniesPage = lazy(() => import('./pages/CompaniesPage'));
+const CompanyDetailPage = lazy(() => import('./pages/CompanyDetailPage'));
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,9 @@ const router = createBrowserRouter([
       { path: 'units/:unitId/compare/:compareUnitId', element: <UnitComparePage /> },
       { path: 'units/:unitId', element: <UnitFullPage /> },
       { path: 'army-builder', element: <ArmyBuilderPage /> },
+      { path: 'companies', element: <CompaniesPage /> },
+      { path: 'companies/:companyId', element: <CompanyDetailPage /> },
+      { path: 'company-editor', element: <Navigate to="/companies" replace /> },
       { path: 'campaign', element: <CampaignPage /> },
       { path: 'wiki', element: <WikiPage /> },
       { path: 'wiki/:articleId', element: <WikiArticlePage /> },

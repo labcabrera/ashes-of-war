@@ -5,6 +5,7 @@
     "rules": "Reglamento",
     "units": "Unidades",
     "armyBuilder": "Constructor de Ejércitos",
+    "companies": "Compañías",
     "campaign": "Campaña",
     "wiki": "Wiki"
   },
@@ -53,6 +54,7 @@
     "save": "Guardar",
     "cancel": "Cancelar",
     "delete": "Eliminar",
+    "edit": "Editar",
     "export": "Exportar",
     "import": "Importar",
     "add": "Añadir",
@@ -325,7 +327,6 @@
   },
   "army": {
     "title": "Constructor de Ejércitos",
-    "selectType": "Seleccionar tipo de ejército",
     "faction": {
       "label": "Facción",
       "german": "Alemán (Wehrmacht)",
@@ -342,16 +343,23 @@
     "units": {
       "title": "Unidades del ejército",
       "empty": "Aún no se han añadido unidades.",
+      "selectTitle": "Añadir unidad",
       "add": "Añadir al ejército",
       "remove": "Eliminar"
     },
     "graph": {
       "title": "Estructura de mando",
-      "instructions": "Selecciona un nodo para añadir unidades. Arrastra para ordenar y conecta un mando a un subordinado para cambiar la jerarquía.",
+      "instructions": "Usa el árbol para organizar el ejército. Cada elemento de mando permite añadir unidades debajo; el ejército también permite añadir nuevas formaciones.",
       "createPrompt": "Crea o selecciona un ejército para comenzar su estructura jerárquica.",
+      "navigation": "Árbol de navegación",
+      "children": "Elementos subordinados",
+      "childrenCount_one": "{{count}} subordinado",
+      "childrenCount_other": "{{count}} subordinados",
+      "noChildren": "Este elemento todavía no tiene subordinados.",
+      "unitLeaf": "Las unidades no pueden tener elementos subordinados.",
       "addFormation": "Añadir formación subordinada",
       "addTo": "Añadir bajo: {{parent}}",
-      "selectParent": "Selecciona un nodo de mando en el grafo para añadir unidades.",
+      "selectParent": "Selecciona un elemento de mando en el árbol para añadir unidades.",
       "edit": "Modificar",
       "label": "Nombre del elemento",
       "formationType": "Tipo de formación",
@@ -371,6 +379,7 @@
     },
     "save": {
       "title": "Guardar ejército",
+      "new": "Nuevo ejército",
       "name": "Nombre del ejército",
       "saved": "Ejército guardado.",
       "deleted": "Ejército eliminado."
@@ -388,6 +397,34 @@
       "fuel": "Combustible",
       "logistics": "Logística",
       "intelligence": "Inteligencia"
+    }
+  },
+  "companies": {
+    "title": "Compañías",
+    "subtitle": "Consulta los tipos de compañía disponibles por facción y sus requisitos de organización.",
+    "noResults": "No hay compañías disponibles.",
+    "notFound": "Compañía no encontrada.",
+    "back": "Volver a compañías",
+    "cards": {
+      "required": "{{count}} requeridas",
+      "support": "{{count}} apoyos"
+    },
+    "sidebar": {
+      "filters": "Filtros",
+      "search": "Buscar",
+      "searchPlaceholder": "Nombre de la compañía",
+      "faction": "Facción",
+      "allFactions": "Todas las facciones"
+    },
+    "roles": {
+      "captain": "Capitán",
+      "section": "Secciones",
+      "squad": "Escuadras",
+      "support": "Apoyos"
+    },
+    "rules": {
+      "min": "Mínimo",
+      "max": "Máximo"
     }
   },
   "campaign": {

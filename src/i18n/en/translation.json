@@ -5,6 +5,7 @@
     "rules": "Rules",
     "units": "Units",
     "armyBuilder": "Army Builder",
+    "companies": "Companies",
     "campaign": "Campaign",
     "wiki": "Wiki"
   },
@@ -53,6 +54,7 @@
     "save": "Save",
     "cancel": "Cancel",
     "delete": "Delete",
+    "edit": "Edit",
     "export": "Export",
     "import": "Import",
     "add": "Add",
@@ -311,7 +313,6 @@
   },
   "army": {
     "title": "Army Builder",
-    "selectType": "Select Army Type",
     "faction": {
       "label": "Faction",
       "german": "German (Wehrmacht)",
@@ -328,16 +329,23 @@
     "units": {
       "title": "Army Units",
       "empty": "No units added yet.",
+      "selectTitle": "Add unit",
       "add": "Add to Army",
       "remove": "Remove"
     },
     "graph": {
       "title": "Command Structure",
-      "instructions": "Select a node to add units. Drag to arrange and connect a command node to a subordinate to change hierarchy.",
+      "instructions": "Use the tree to organize the army. Each command element can add units below it; the army can also add new formations.",
       "createPrompt": "Create or select an army to begin its hierarchical structure.",
+      "navigation": "Navigation tree",
+      "children": "Subordinate elements",
+      "childrenCount_one": "{{count}} subordinate",
+      "childrenCount_other": "{{count}} subordinates",
+      "noChildren": "This element has no subordinates yet.",
+      "unitLeaf": "Units cannot have subordinate elements.",
       "addFormation": "Add subordinate formation",
       "addTo": "Add under: {{parent}}",
-      "selectParent": "Select a command node in the graph before adding units.",
+      "selectParent": "Select a command element in the tree before adding units.",
       "edit": "Edit",
       "label": "Element name",
       "formationType": "Formation type",
@@ -357,6 +365,7 @@
     },
     "save": {
       "title": "Save Army",
+      "new": "New army",
       "name": "Army Name",
       "saved": "Army saved.",
       "deleted": "Army deleted."
@@ -374,6 +383,34 @@
       "fuel": "Fuel",
       "logistics": "Logistics",
       "intelligence": "Intelligence"
+    }
+  },
+  "companies": {
+    "title": "Companies",
+    "subtitle": "Browse available company types by faction and their organization requirements.",
+    "noResults": "No companies available.",
+    "notFound": "Company not found.",
+    "back": "Back to companies",
+    "cards": {
+      "required": "{{count}} required",
+      "support": "{{count}} support"
+    },
+    "sidebar": {
+      "filters": "Filters",
+      "search": "Search",
+      "searchPlaceholder": "Company name",
+      "faction": "Faction",
+      "allFactions": "All factions"
+    },
+    "roles": {
+      "captain": "Captain",
+      "section": "Sections",
+      "squad": "Squads",
+      "support": "Support"
+    },
+    "rules": {
+      "min": "Minimum",
+      "max": "Maximum"
     }
   },
   "campaign": {

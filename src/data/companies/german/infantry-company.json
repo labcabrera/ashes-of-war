@@ -1,0 +1,57 @@
+{
+  "id": "german-infantry-company",
+  "name": "Infanteriekompanie",
+  "faction": "german",
+  "classification": "infantry",
+  "description": "Compañía de infantería alemana organizada alrededor de un mando de compañía, secciones de fusileros, escuadras de infantería y elementos de apoyo orgánico o agregado.",
+  "rules": [
+    {
+      "id": "company-hq",
+      "role": "captain",
+      "label": "Mando de compañía",
+      "unitType": "infantry",
+      "min": 1,
+      "max": 1
+    },
+    {
+      "id": "rifle-sections",
+      "role": "section",
+      "label": "Secciones de fusileros",
+      "unitType": "infantry",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": "rifle-squads",
+      "role": "squad",
+      "label": "Escuadras de fusileros",
+      "unitType": "infantry",
+      "min": 2,
+      "max": 9
+    },
+    {
+      "id": "machine-gun-support",
+      "role": "support",
+      "label": "Apoyo de ametralladoras",
+      "unitType": "infantry",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "id": "anti-tank-support",
+      "role": "support",
+      "label": "Apoyo cazacarros",
+      "unitType": "tank-destroyer",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "id": "artillery-support",
+      "role": "support",
+      "label": "Apoyo de artillería",
+      "unitType": "towed-artillery",
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

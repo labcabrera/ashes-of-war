@@ -1,5 +1,5 @@
 /**
- * ArmyNodeDialog captures labels, formation kinds and quantities for graph edits.
+ * ArmyNodeDialog captures labels, formation kinds and quantities for hierarchy edits.
  */
 import { useState } from 'react';
 import {
@@ -16,7 +16,7 @@ import {
   TextField,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { ArmyNode, ArmyNodeKind } from '../../../types/army';
+import { ArmyNode, ArmyNodeKind } from '../../types/army';
 
 type FormationKind = Exclude<ArmyNodeKind, 'army' | 'unit'>;
 

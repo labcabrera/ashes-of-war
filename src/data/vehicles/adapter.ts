@@ -35,6 +35,7 @@ export function vehicleCatalogueEntryToUnit(entry: VehicleCatalogueEntry): Vehic
     faction: entry.faction,
     from: entry.from,
     to: entry.to,
+    imageUrl: entry.imageUrl,
     type: entry.type,
     cost: entry.game.cost,
     movement: entry.game.movement,

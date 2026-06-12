@@ -1,11 +1,12 @@
 /**
  * useArmyList manages hierarchical saved armies in localStorage.
- * It provides graph editing operations, schema migration, budget totals, and import/export.
+ * It provides hierarchy editing operations, schema migration, budget totals, and import/export.
  */
 import { useCallback, useEffect, useMemo } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Army, ArmyBudget, ArmyNode, ArmyNodeKind, ArmyNodePosition, ArmyType } from '../types/army';
 import { Unit } from '../types/unit';
+import type { FactionId } from '../types/faction';
 import { useLocalStorage } from './useLocalStorage';
 import {
   ARMIES_SCHEMA_VERSION,
@@ -62,7 +63,7 @@ function cloneImportedArmy(army: Army): Army {
 
 export interface UseArmyListResult {
   armies: Army[];
-  createArmy: (name: string, armyTypeId: string) => Army;
+  createArmy: (name: string, faction: FactionId, pointBudget?: number) => Army;
   deleteArmy: (id: string) => void;
   addFormation: (armyId: string, parentId: string, kind: Exclude<ArmyNodeKind, 'army' | 'unit'>, label: string) => void;
   addUnit: (armyId: string, parentId: string, unitId: string) => void;
@@ -99,7 +100,7 @@ export function useArmyList(): UseArmyListResult {
   );
 
   const createArmy = useCallback(
-    (name: string, armyTypeId: string): Army => {
+    (name: string, faction: FactionId, pointBudget = 1000): Army => {
       const root: ArmyNode = {
         id: uuidv4(),
         kind: 'army',
@@ -110,7 +111,9 @@ export function useArmyList(): UseArmyListResult {
       const army: Army = {
         id: uuidv4(),
         name,
-        armyTypeId,
+        armyTypeId: `custom-${faction}`,
+        faction,
+        pointBudget,
         nodes: [root],
         savedAt: new Date().toISOString(),
       };

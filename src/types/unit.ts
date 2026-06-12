@@ -94,6 +94,8 @@ interface BaseUnitFields {
   from: number;
   /** Last year the unit was available (inclusive). */
   to: number;
+  /** Optional image path used by catalogue and army cards. */
+  imageUrl?: string;
   /** Point cost. */
   cost: number;
   /** Required movement ratings for the unit. */

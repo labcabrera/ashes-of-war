@@ -25,16 +25,16 @@ export interface ArmyType {
   yearRange?: { start: number; end: number };
 }
 
-/** Kinds of hierarchical organization elements available in the visual editor. */
+/** Kinds of hierarchical organization elements available in the army editor. */
 export type ArmyNodeKind = 'army' | 'company' | 'platoon' | 'section' | 'unit';
 
-/** Persisted canvas coordinates for one organization element. */
+/** Persisted layout coordinates retained for compatibility with saved armies. */
 export interface ArmyNodePosition {
   x: number;
   y: number;
 }
 
-/** An organizational element or individual catalogue-unit occurrence in an army graph. */
+/** An organizational element or individual catalogue-unit occurrence in an army hierarchy. */
 export interface ArmyNode {
   id: string;
   kind: ArmyNodeKind;
@@ -53,6 +53,8 @@ export interface Army {
   id: string;
   name: string;
   armyTypeId: string;
+  faction?: FactionId;
+  pointBudget?: number;
   nodes: ArmyNode[];
   savedAt: string;
 }
