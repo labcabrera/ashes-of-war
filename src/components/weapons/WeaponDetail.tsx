@@ -22,12 +22,15 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { Unit, UnitWeapon } from '../../types/unit';
 import { Weapon } from '../../types/weapon';
+import { weaponCatalogueEntries } from '../../data/weapons';
 import { getDescription } from '../../i18n/descriptions';
 
 interface Props {
   weapon: Weapon | null;
   units: Unit[];
 }
+
+const catalogueEntriesById = new Map(weaponCatalogueEntries.map((entry) => [entry.id, entry]));
 
 function weaponAssignments(unit: Unit): UnitWeapon[] {
   return unit.weapons ?? [];
@@ -37,6 +40,10 @@ function unitWeaponCount(unit: Unit, weaponId: string) {
   return weaponAssignments(unit)
     .filter((assignment) => assignment.id === weaponId)
     .reduce((total, assignment) => total + assignment.count, 0);
+}
+
+function formatRate(min: number, max: number) {
+  return min === max ? String(min) : `${min}-${max}`;
 }
 
 export default function WeaponDetail({ weapon, units }: Props) {
@@ -49,6 +56,12 @@ export default function WeaponDetail({ weapon, units }: Props) {
   const description = weapon
     ? getDescription('weapons', weapon.id, i18n.resolvedLanguage)
     : undefined;
+  const catalogueEntry = weapon ? catalogueEntriesById.get(weapon.id) : undefined;
+  const historical = catalogueEntry?.historical;
+  const ammunitionEntries = Object.entries(historical?.ammunition ?? {});
+  const hasPenetration = Boolean(weapon?.profiles.some((profile) => profile.armourPenetration !== undefined));
+  const hasSuppression = Boolean(weapon?.profiles.some((profile) => profile.suppressionModifier !== undefined));
+  const hasCharacteristics = Boolean(weapon?.profiles.some((profile) => profile.characteristics?.length));
 
   return (
     <Paper
@@ -82,34 +95,73 @@ export default function WeaponDetail({ weapon, units }: Props) {
             <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
               {weapon.name}
             </Typography>
-            <Chip label={t(`weapons.types.${weapon.type}`)} color="secondary" size="small" />
+            <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
+              <Chip label={t(`weapons.types.${weapon.type}`)} color="secondary" size="small" />
+              <Chip label={t('weapons.profileCount', { count: weapon.profiles.length })} size="small" variant="outlined" />
+              {historical?.caliberMM !== undefined && (
+                <Chip label={`${historical.caliberMM} mm`} size="small" variant="outlined" />
+              )}
+              {historical?.barrelLength && (
+                <Chip label={historical.barrelLength} size="small" variant="outlined" />
+              )}
+            </Stack>
+
+            {(historical?.mounting?.length || historical?.typicalAmmunition?.length) && (
+              <>
+                <Divider sx={{ my: 2 }} />
+                <Typography variant="subtitle2" gutterBottom>
+                  {t('weapons.technicalDetails')}
+                </Typography>
+                <Stack spacing={0.75}>
+                  {historical.mounting?.length && (
+                    <Box>
+                      <Typography variant="caption" color="text.secondary">
+                        {t('weapons.mounting')}
+                      </Typography>
+                      <Typography variant="body2">{historical.mounting.join(' · ')}</Typography>
+                    </Box>
+                  )}
+                  {historical.typicalAmmunition?.length && (
+                    <Box>
+                      <Typography variant="caption" color="text.secondary">
+                        {t('weapons.ammunition')}
+                      </Typography>
+                      <Typography variant="body2">{historical.typicalAmmunition.join(' · ')}</Typography>
+                    </Box>
+                  )}
+                </Stack>
+              </>
+            )}
 
             {weapon.rateOfFirePerMinute && (
               <>
                 <Divider sx={{ my: 2 }} />
                 <Typography variant="subtitle2">{t('weapons.rateOfFire')}</Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {t('weapons.theoretical')}: {weapon.rateOfFirePerMinute.theoretical.min}-
-                  {weapon.rateOfFirePerMinute.theoretical.max} / {t('weapons.combat')}:{' '}
-                  {weapon.rateOfFirePerMinute.combat.min}-{weapon.rateOfFirePerMinute.combat.max}
+                  {t('weapons.theoretical')}: {formatRate(
+                    weapon.rateOfFirePerMinute.theoretical.min,
+                    weapon.rateOfFirePerMinute.theoretical.max,
+                  )} / {t('weapons.combat')}:{' '}
+                  {formatRate(weapon.rateOfFirePerMinute.combat.min, weapon.rateOfFirePerMinute.combat.max)}
                 </Typography>
               </>
             )}
 
             <Divider sx={{ my: 2 }} />
             <Typography variant="subtitle2" gutterBottom>
-              {t('weapons.profiles')}
+              {t('weapons.gameDetails')}
             </Typography>
             <TableContainer>
               <Table size="small">
                 <TableHead>
                   <TableRow>
-                    <TableCell>{t('weapons.profile')}</TableCell>
+                    <TableCell>{t('weapons.fireType')}</TableCell>
                     <TableCell align="right">{t('weapons.shots')}</TableCell>
                     <TableCell align="right">{t('weapons.hitOn')}</TableCell>
                     <TableCell>{t('weapons.range')}</TableCell>
-                    <TableCell align="right">{t('weapons.penetration')}</TableCell>
-                    <TableCell align="right">{t('weapons.suppression')}</TableCell>
+                    {hasPenetration && <TableCell align="right">{t('weapons.penetration')}</TableCell>}
+                    {hasSuppression && <TableCell align="right">{t('weapons.suppression')}</TableCell>}
+                    {hasCharacteristics && <TableCell>{t('weapons.characteristics')}</TableCell>}
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -119,13 +171,100 @@ export default function WeaponDetail({ weapon, units }: Props) {
                       <TableCell align="right">{profile.shots}</TableCell>
                       <TableCell align="right">{profile.hitOn}</TableCell>
                       <TableCell>{profile.rangeModifier}</TableCell>
-                      <TableCell align="right">{profile.armourPenetration ?? '-'}</TableCell>
-                      <TableCell align="right">{profile.suppressionModifier ?? '-'}</TableCell>
+                      {hasPenetration && <TableCell align="right">{profile.armourPenetration ?? '-'}</TableCell>}
+                      {hasSuppression && <TableCell align="right">{profile.suppressionModifier ?? '-'}</TableCell>}
+                      {hasCharacteristics && (
+                        <TableCell>
+                          {profile.characteristics?.length ? (
+                            <Stack direction="row" spacing={0.5} useFlexGap sx={{ flexWrap: 'wrap' }}>
+                              {profile.characteristics.map((characteristic) => (
+                                <Chip key={characteristic} label={characteristic} size="small" variant="outlined" />
+                              ))}
+                            </Stack>
+                          ) : (
+                            '-'
+                          )}
+                        </TableCell>
+                      )}
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
             </TableContainer>
+
+            {ammunitionEntries.length > 0 && (
+              <>
+                <Divider sx={{ my: 2 }} />
+                <Typography variant="subtitle2" gutterBottom>
+                  {t('weapons.ammunitionProfiles')}
+                </Typography>
+                <Stack spacing={1.5}>
+                  {ammunitionEntries.map(([profileId, ammunition]) => (
+                    <Box key={profileId}>
+                      <Typography variant="body2" sx={{ fontWeight: 700 }}>
+                        {ammunition.name ?? profileId}
+                      </Typography>
+                      {ammunition.description && (
+                        <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 0.75 }}>
+                          {ammunition.description}
+                        </Typography>
+                      )}
+                      <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap', mb: 1 }}>
+                        {ammunition.projectileWeightKg !== undefined && (
+                          <Chip
+                            label={`${t('weapons.projectileWeight')}: ${ammunition.projectileWeightKg} kg`}
+                            size="small"
+                            variant="outlined"
+                          />
+                        )}
+                        {ammunition.explosiveChargeKg !== undefined && (
+                          <Chip
+                            label={`${t('weapons.explosiveCharge')}: ${ammunition.explosiveChargeKg} kg`}
+                            size="small"
+                            variant="outlined"
+                          />
+                        )}
+                        {ammunition.penetrationAngleDeg !== undefined && (
+                          <Chip
+                            label={`${t('weapons.penetrationAngle')}: ${ammunition.penetrationAngleDeg}°`}
+                            size="small"
+                            variant="outlined"
+                          />
+                        )}
+                      </Stack>
+                      {ammunition.penetrationTable?.length && (
+                        <TableContainer>
+                          <Table size="small">
+                            <TableHead>
+                              <TableRow>
+                                <TableCell>{t('weapons.rangeMeters')}</TableCell>
+                                <TableCell align="right">{t('weapons.penetrationMm')}</TableCell>
+                                <TableCell align="right">{t('weapons.trainingHit')}</TableCell>
+                                <TableCell align="right">{t('weapons.combatHit')}</TableCell>
+                              </TableRow>
+                            </TableHead>
+                            <TableBody>
+                              {ammunition.penetrationTable.map((row) => (
+                                <TableRow key={row.rangeM}>
+                                  <TableCell>{row.rangeM}</TableCell>
+                                  <TableCell align="right">{row.penetrationMM ?? '-'}</TableCell>
+                                  <TableCell align="right">
+                                    {row.hitProbabilityTraining !== undefined ? `${row.hitProbabilityTraining}%` : '-'}
+                                  </TableCell>
+                                  <TableCell align="right">
+                                    {row.hitProbabilityCombat !== undefined ? `${row.hitProbabilityCombat}%` : '-'}
+                                  </TableCell>
+                                </TableRow>
+                              ))}
+                            </TableBody>
+                          </Table>
+                        </TableContainer>
+                      )}
+                    </Box>
+                  ))}
+                </Stack>
+              </>
+            )}
 
             <Divider sx={{ my: 2 }} />
             <Typography variant="subtitle2" gutterBottom>
@@ -170,27 +309,6 @@ export default function WeaponDetail({ weapon, units }: Props) {
               <Typography variant="body2" color="text.secondary">
                 {t('weapons.noCarriers')}
               </Typography>
-            )}
-
-            {weapon.profiles.some((profile) => profile.characteristics?.length) && (
-              <>
-                <Divider sx={{ my: 2 }} />
-                <Typography variant="subtitle2" gutterBottom>
-                  {t('weapons.characteristics')}
-                </Typography>
-                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                  {weapon.profiles.flatMap((profile) =>
-                    (profile.characteristics ?? []).map((characteristic) => (
-                      <Chip
-                        key={`${profile.id}-${characteristic}`}
-                        label={characteristic}
-                        size="small"
-                        variant="outlined"
-                      />
-                    )),
-                  )}
-                </Box>
-              </>
             )}
 
             {description && (
