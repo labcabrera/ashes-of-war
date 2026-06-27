@@ -12,8 +12,10 @@ export interface CompanyUnitRule {
   role: CompanySlotRole;
   label: string;
   unitType: UnitType;
+  unitId?: string;
   min: number;
   max: number;
+  children?: CompanyUnitRule[];
 }
 
 export interface CompanyType {

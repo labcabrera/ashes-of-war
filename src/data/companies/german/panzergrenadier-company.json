@@ -3,61 +3,115 @@
   "name": "Panzergrenadierkompanie",
   "faction": "german",
   "classification": "mechanised",
-  "description": "Compañía alemana de panzergranaderos organizada para combatir junto a vehículos blindados. Combina mando de compañía, secciones mecanizadas, escuadras de panzergranaderos y apoyos móviles o agregados.",
+  "description": "Compañía alemana de panzergranaderos organizada alrededor de un mando de compañía, secciones de panzergranaderos y apoyos orgánicos o agregados. Cada sección despliega mando, escuadras de panzergranaderos y transporte opcional.",
   "rules": [
     {
       "id": "company-hq",
       "role": "captain",
-      "label": "Mando de compañía",
+      "label": "Company HQ",
       "unitType": "infantry",
       "min": 1,
-      "max": 1
+      "max": 1,
+      "children": [
+        {
+          "id": "company-command-stand",
+          "role": "captain",
+          "label": "Peana de mando de compañía",
+          "unitType": "infantry",
+          "unitId": "german-kompanietrupp",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "id": "company-medic-stand",
+          "role": "support",
+          "label": "Peana sanitaria",
+          "unitType": "infantry",
+          "unitId": "german-sanitatsunteroffizier",
+          "min": 0,
+          "max": 1
+        }
+      ]
     },
     {
-      "id": "mechanised-sections",
+      "id": "panzergrenadier-sections",
       "role": "section",
-      "label": "Secciones mecanizadas",
-      "unitType": "mechanised",
-      "min": 1,
-      "max": 3
-    },
-    {
-      "id": "panzergrenadier-squads",
-      "role": "squad",
-      "label": "Escuadras de panzergranaderos",
+      "label": "Panzergrenadier Platoon / Section",
       "unitType": "infantry",
       "min": 2,
-      "max": 6
+      "max": 3,
+      "children": [
+        {
+          "id": "section-command-stand",
+          "role": "section",
+          "label": "Peana de mando de sección",
+          "unitType": "infantry",
+          "unitId": "german-kompanietrupp",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "id": "panzergrenadier-squad-group",
+          "role": "squad",
+          "label": "Escuadra",
+          "unitType": "infantry",
+          "min": 2,
+          "max": 3,
+          "children": [
+            {
+              "id": "panzergrenadier-squad",
+              "role": "squad",
+              "label": "Escuadra de panzergranaderos",
+              "unitType": "infantry",
+              "unitId": "german-panzergrenadier-squad",
+              "min": 1,
+              "max": 1
+            },
+            {
+              "id": "squad-transport",
+              "role": "support",
+              "label": "Transporte o semioruga de transporte",
+              "unitType": "mechanised",
+              "unitId": "german-sd-kfz-251-1",
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": "half-track-transport",
+      "id": "hmg-support",
       "role": "support",
-      "label": "Semiorugas",
-      "unitType": "mechanised",
-      "min": 1,
-      "max": 6
-    },
-    {
-      "id": "assault-gun-support",
-      "role": "support",
-      "label": "Cañones de asalto",
-      "unitType": "assault-gun",
+      "label": "Peanas de HMG",
+      "unitType": "infantry",
+      "unitId": "german-mg42-team",
       "min": 0,
       "max": 2
     },
     {
-      "id": "anti-tank-support",
+      "id": "8cm-mortar-support",
       "role": "support",
-      "label": "Cazacarros",
-      "unitType": "tank-destroyer",
+      "label": "Peanas de mortero de 8 cm",
+      "unitType": "infantry",
       "min": 0,
       "max": 2
     },
     {
-      "id": "artillery-support",
+      "id": "towed-anti-tank-support",
       "role": "support",
-      "label": "Artillería autopropulsada",
-      "unitType": "sp-artillery",
+      "label": "Equipo antitanque remolcado",
+      "unitType": "towed-anti-tank",
+      "unitId": "german-7.5-cm-pak-40",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "id": "towed-anti-aircraft-support",
+      "role": "support",
+      "label": "Antiaéreo remolcado",
+      "unitType": "towed-anti-aircraft",
+      "unitId": "german-88mm-flak-36",
       "min": 0,
       "max": 2
     }

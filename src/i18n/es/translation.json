@@ -188,6 +188,11 @@
     },
     "outOfYear": "Fuera de era",
     "noResults": "Ninguna unidad coincide con los filtros actuales.",
+    "table": {
+      "thresholds": "Umbrales",
+      "movementHelp": "T/C/D: carretera/CC/terreno difícil",
+      "armourHelp": "Frontal/lateral/trasero/expuesto"
+    },
     "compare": {
       "action": "Comparar",
       "title": "Comparación de unidades",

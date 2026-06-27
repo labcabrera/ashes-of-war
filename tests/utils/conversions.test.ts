@@ -36,22 +36,22 @@ describe('speedKmhToGameMovement', () => {
 });
 
 describe('effectiveArmorThicknessMM', () => {
-  it('returns the nominal thickness for a vertical (unsloped) plate', () => {
-    expect(effectiveArmorThicknessMM(80, 0)).toBe(80);
+  it('returns the rounded game value for a vertical plate', () => {
+    expect(effectiveArmorThicknessMM(80, 0)).toBe(8);
   });
 
   it('increases the effective thickness as inclination increases', () => {
-    expect(effectiveArmorThicknessMM(80, 60)).toBeCloseTo(160, 5);
+    expect(effectiveArmorThicknessMM(80, 60)).toBe(16);
   });
 });
 
 describe('armorToGameValue', () => {
-  it('matches the bundled Panzer IV front armour value for an unsloped plate', () => {
-    expect(armorToGameValue(80, 0)).toBe(80);
+  it('matches the bundled Panzer IV front armour game scale for an unsloped plate', () => {
+    expect(armorToGameValue(80, 0)).toBe(8);
   });
 
-  it('rounds the sloped effective thickness to the nearest integer', () => {
-    expect(armorToGameValue(80, 10)).toBe(81);
+  it('rounds the sloped game armour value to the nearest integer', () => {
+    expect(armorToGameValue(80, 10)).toBe(8);
   });
 });
 
@@ -128,7 +128,7 @@ describe('updateGameDataFromHistorical', () => {
     const updated = updateGameDataFromHistorical(entry);
 
     expect(updated.game.movement).toEqual(speedKmhToGameMovement(40));
-    expect(updated.game.armor?.front).toEqual({ value: 81, notes: 'manual weak spot' });
+    expect(updated.game.armor?.front).toEqual({ value: 8, notes: 'manual weak spot' });
     expect(updated.game.cost).toBe(32);
     expect(updated.game.resourceCosts).toEqual({ fuel: 8 });
     expect(updated.game.weapons).toEqual([{ id: 'german-kwk-40-l48', count: 1, type: 'turret' }]);

@@ -253,7 +253,7 @@ describe('vehicle catalogue validation', () => {
     expect(panzerIV).toBeDefined();
     expect(panzerIV?.type).toBe('tank');
     expect(panzerIV?.historical.speedKmh.road).toBe(38);
-    expect(panzerIV?.game.armor?.front.value).toBe(80);
+    expect(panzerIV?.game.armor?.front.value).toBe(8);
     expect(panzerIV?.game.weapons?.[0]).toEqual({ id: 'german-kwk-40-l48', count: 1, type: 'turret' });
   });
 

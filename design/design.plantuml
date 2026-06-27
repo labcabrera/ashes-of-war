@@ -1,0 +1,42 @@
+@startmindmap
+
+' top to bottom direction
+
+' * Debian
+' ** Ubuntu
+' *** Linux Mint
+' *** Kubuntu
+' *** Lubuntu
+' *** KDE Neon
+' ** LMDE
+' ** SolydXK
+' ** SteamOS
+' ** Raspbian with a very long name
+' *** <s>Raspmbc</s> => OSMC
+' *** <s>Raspyfi</s> => Volumio
+
+* Disparo
+** Ligero
+*** Impactar\n+ Balistic\n- Distance\n- Cover\n- Ambient\n+ Geometry
+**** Herir\n+ Potencia ligera\n- Cover
+***** Organización
+
+** Pesado
+*** Impactar\n(Balistic + Modifiers)
+**** Penetrar\n+ AP\n- Blindaje\n- Distancia\n- Encaramiento
+***** Efecto de penetración\n+ Potencia explosiva
+****** Organización
+
+** Indirecto
+*** Estimación
+**** Dispersión
+***** Efecto
+****** Organización
+
+legend
+  [1]: La salvación de la infanteria es comun, la de otros elementos como armas
+  remolcadas puede ser diferente.
+  [2]: TODO
+endlegend
+
+@endmindmap

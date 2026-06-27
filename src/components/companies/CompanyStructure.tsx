@@ -9,6 +9,12 @@ import { useDisplaySettings } from '../../hooks/useDisplaySettings';
 
 const ROLE_ORDER: CompanySlotRole[] = ['captain', 'section', 'squad', 'support'];
 
+interface ExpandedRuleCard {
+  key: string;
+  rule: CompanyUnitRule;
+  required: boolean;
+}
+
 function groupedRules(company: CompanyType): Record<CompanySlotRole, CompanyUnitRule[]> {
   return ROLE_ORDER.reduce((acc, role) => {
     acc[role] = company.rules.filter((rule) => rule.role === role);
@@ -25,7 +31,7 @@ function FormationCard({ rule, required }: { rule: CompanyUnitRule; required: bo
       variant="outlined"
       sx={{
         width: 166,
-        minHeight: 78,
+        minHeight: 92,
         overflow: 'hidden',
         borderRadius: 1,
         borderColor: required ? 'grey.900' : 'grey.400',
@@ -44,7 +50,7 @@ function FormationCard({ rule, required }: { rule: CompanyUnitRule; required: bo
           m: 0.55,
           px: 0.75,
           py: 0.55,
-          minHeight: 50,
+          minHeight: 64,
           bgcolor: 'grey.100',
           color: 'grey.900',
           clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)',
@@ -57,12 +63,12 @@ function FormationCard({ rule, required }: { rule: CompanyUnitRule; required: bo
           <Typography
             variant="body2"
             sx={{
-              fontSize: '0.74rem',
+              fontSize: '0.78rem',
               fontWeight: 900,
-              lineHeight: 1.05,
+              lineHeight: 1.12,
               textTransform: 'uppercase',
               display: '-webkit-box',
-              WebkitLineClamp: 2,
+              WebkitLineClamp: 3,
               WebkitBoxOrient: 'vertical',
               overflow: 'hidden',
             }}
@@ -79,8 +85,8 @@ function FormationCard({ rule, required }: { rule: CompanyUnitRule; required: bo
           alt=""
           aria-hidden="true"
           sx={{
-            width: 34,
-            height: 34,
+            width: 32,
+            height: 32,
             objectFit: 'contain',
             flexShrink: 0,
             mr: 1.25,
@@ -92,7 +98,7 @@ function FormationCard({ rule, required }: { rule: CompanyUnitRule; required: bo
   );
 }
 
-function expandedRuleCards(rules: CompanyUnitRule[]) {
+function expandedRuleCards(rules: CompanyUnitRule[]): ExpandedRuleCard[] {
   return rules.flatMap((rule) => {
     const required = Array.from({ length: Math.max(0, rule.min) }, (_, index) => ({
       key: `${rule.id}-required-${index}`,
@@ -123,8 +129,31 @@ function RuleRow({ rules, stacked = false }: { rules: CompanyUnitRule[]; stacked
       }}
     >
       {cards.map((card) => (
-        <FormationCard key={card.key} rule={card.rule} required={card.required} />
+        <FormationNode key={card.key} card={card} stackedChildren={stacked} />
       ))}
+    </Box>
+  );
+}
+
+function FormationNode({ card, stackedChildren = false }: { card: ExpandedRuleCard; stackedChildren?: boolean }) {
+  const hasChildren = Boolean(card.rule.children && card.rule.children.length > 0);
+
+  return (
+    <Box sx={{ minWidth: 166 }}>
+      <FormationCard rule={card.rule} required={card.required} />
+      {hasChildren && (
+        <Box
+          sx={{
+            mt: 1,
+            ml: 1.25,
+            pl: 1.25,
+            borderLeft: '2px solid',
+            borderLeftColor: card.required ? 'grey.700' : 'grey.400',
+          }}
+        >
+          <RuleRow rules={card.rule.children ?? []} stacked={stackedChildren} />
+        </Box>
+      )}
     </Box>
   );
 }
@@ -144,7 +173,7 @@ function SupportRows({ rules }: { rules: CompanyUnitRule[] }) {
           }}
         >
           {expandedRuleCards([rule]).map((card) => (
-            <FormationCard key={card.key} rule={card.rule} required={card.required} />
+            <FormationNode key={card.key} card={card} />
           ))}
         </Box>
       ))}
@@ -152,16 +181,84 @@ function SupportRows({ rules }: { rules: CompanyUnitRule[] }) {
   );
 }
 
-function TreeLevel({
-  rules,
-  stacked = false,
-}: {
-  rules: CompanyUnitRule[];
-  stacked?: boolean;
-}) {
+function TreeLevel({ rules, stacked = false }: { rules: CompanyUnitRule[]; stacked?: boolean }) {
   return (
     <Box>
       <RuleRow rules={rules} stacked={stacked} />
+    </Box>
+  );
+}
+
+function SectionTree({ rules }: { rules: CompanyUnitRule[] }) {
+  const sectionCards = expandedRuleCards(rules);
+
+  return (
+    <Box
+      sx={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(206px, 206px))',
+        alignItems: 'start',
+        justifyContent: 'start',
+        gap: 1.75,
+      }}
+    >
+      {sectionCards.map((card) => (
+        <Box
+          key={card.key}
+          sx={{
+            minWidth: 206,
+            position: 'relative',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 78,
+              bottom: 0,
+              left: 10,
+              width: '2px',
+              bgcolor: card.required ? 'grey.700' : 'grey.400',
+            },
+          }}
+        >
+          <FormationCard rule={card.rule} required={card.required} />
+          {card.rule.children && card.rule.children.length > 0 && (
+            <Stack spacing={1.15} sx={{ mt: 1.15, pl: 2.25 }}>
+              {expandedRuleCards(card.rule.children).map((childCard) => (
+                <SectionChildNode key={childCard.key} card={childCard} />
+              ))}
+            </Stack>
+          )}
+        </Box>
+      ))}
+    </Box>
+  );
+}
+
+function SectionChildNode({ card }: { card: ExpandedRuleCard }) {
+  const hasChildren = Boolean(card.rule.children && card.rule.children.length > 0);
+
+  return (
+    <Box
+      sx={{
+        position: 'relative',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: 38,
+          left: -26,
+          width: 22,
+          borderTop: '2px solid',
+          borderColor: card.required ? 'grey.700' : 'grey.400',
+        },
+      }}
+    >
+      <FormationCard rule={card.rule} required={card.required} />
+      {hasChildren && (
+        <Stack spacing={0.9} sx={{ mt: 0.9, pl: 1.8, borderLeft: '2px solid', borderLeftColor: card.required ? 'grey.700' : 'grey.400' }}>
+          {expandedRuleCards(card.rule.children ?? []).map((grandChildCard) => (
+            <FormationNode key={grandChildCard.key} card={grandChildCard} stackedChildren />
+          ))}
+        </Stack>
+      )}
     </Box>
   );
 }
@@ -185,7 +282,7 @@ export default function CompanyStructure({ company }: { company: CompanyType }) 
         overflowX: 'auto',
       }}
     >
-      <Box sx={{ minWidth: 760 }}>
+      <Box sx={{ minWidth: { xs: 820, lg: 1120 } }}>
         <Box
           sx={{
             mb: 2,
@@ -209,35 +306,52 @@ export default function CompanyStructure({ company }: { company: CompanyType }) 
           {company.description}
         </Typography>
 
-        <Box
-          sx={{
-            pr: 5,
-          }}
-        >
+        <Box sx={{ pr: { xs: 0, md: 2 } }}>
           <Stack spacing={1.5} sx={{ alignItems: 'stretch' }}>
             <TreeLevel rules={hqRules} />
-            {sectionRules.length > 0 && <TreeLevel rules={sectionRules} />}
-            {squadRules.length > 0 && <TreeLevel rules={squadRules} />}
-            {supportRules.length > 0 && (
-              <Box>
+
+            <Box
+              sx={{
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', lg: supportRules.length > 0 ? 'minmax(0, 1fr) 220px' : '1fr' },
+                alignItems: 'start',
+                gap: 2,
+              }}
+            >
+              <Stack spacing={1.5}>
+                {sectionRules.length > 0 && <SectionTree rules={sectionRules} />}
+                {squadRules.length > 0 && <TreeLevel rules={squadRules} />}
+              </Stack>
+
+              {supportRules.length > 0 && (
                 <Box
                   sx={{
-                    my: 0.5,
-                    py: 0.45,
-                    px: 1.25,
-                    bgcolor: 'grey.800',
-                    color: 'common.white',
-                    borderRadius: 0.75,
-                    width: '100%',
+                    position: { lg: 'sticky' },
+                    top: { lg: 86 },
+                    borderLeft: { lg: '3px solid' },
+                    borderLeftColor: { lg: 'grey.600' },
+                    pl: { lg: 1.5 },
                   }}
                 >
-                  <Typography variant="overline" sx={{ fontWeight: 900, letterSpacing: '0.12em' }}>
-                    {t('companies.roles.support')}
-                  </Typography>
+                  <Box
+                    sx={{
+                      mb: 1,
+                      py: 0.45,
+                      px: 1.25,
+                      bgcolor: 'grey.800',
+                      color: 'common.white',
+                      borderRadius: 0.75,
+                      width: '100%',
+                    }}
+                  >
+                    <Typography variant="overline" sx={{ fontWeight: 900, letterSpacing: '0.12em' }}>
+                      {t('companies.roles.support')}
+                    </Typography>
+                  </Box>
+                  <SupportRows rules={supportRules} />
                 </Box>
-                <SupportRows rules={supportRules} />
-              </Box>
-            )}
+              )}
+            </Box>
           </Stack>
         </Box>
       </Box>

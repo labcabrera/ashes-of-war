@@ -9,4 +9,6 @@ node_modules
 specs
 .env.aws
 
+design/*.md
+
 initial-notes.adoc

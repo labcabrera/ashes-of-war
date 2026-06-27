@@ -79,6 +79,7 @@ export default function UnitsPage() {
     const start = (unitPage - 1) * UNITS_PER_PAGE;
     return sorted.slice(start, start + UNITS_PER_PAGE);
   }, [units, unitPage, viewMode]);
+  const visibleUnits = viewMode === 'table' ? units : paginatedUnits;
 
   function getWeaponFaction(id: string): FactionId | '' {
     return weaponFactionId(id) ?? '';
@@ -205,12 +206,12 @@ export default function UnitsPage() {
             />
 
             <UnitList
-              units={paginatedUnits}
+              units={visibleUnits}
               isOutOfYear={isOutOfYear}
               viewMode={viewMode}
               onSelect={handleUnitSelect}
             />
-            {unitPageCount > 1 && (
+            {viewMode === 'cards' && unitPageCount > 1 && (
               <Pagination
                 count={unitPageCount}
                 page={unitPage}
