@@ -3,37 +3,34 @@
 :toclevels: 3
 :toc-title: Contenido
 
-// WARNING: Considerar sistemas de activación simultánea.
+Durante la partida cada jugador irá jugando su turno de forma alternada con el rival.
 
-WARNING: Considerar modelo sin turnos fijos para que la activación de ambos jugadores sea simultánea.
+Los turnos se dividen en las siguientes fases:
 
-Cada turno representa una secuencia aproximada de 30 segundos de combate.
+- *Comandancia*
+- *Movimiento*
+- *Acciones*
+- *Combate*
 
-El turno se divide en varias fases:
+== Comandancia
 
-* Fase de organización
-//  (comprobar el estado de cada unidad afectada por el combate)
-* Fase de activación
-//  (declarar órdenes y acciones como cuerpo tierra, comunicación entre unidades para detectar unidades o solicitar apoyo de artillería)
-* Fase de recuperación
-
-NOTE: Como muchas unidades pueden tener diferentes interacciones con puntos de acción complejas de llevar podría estudiarse un sistema de activación simultáneo unidad por unidad en el que cuando seleccionas una unidad realiza todas las acciones (moral, acciones, movimiento, etc) hasta realizar la activación de la siguiente unidad.
-
-== Fase de organización
-
-En esta fase realizaremos las acciones de recuperación de organización, declaración de acciones de comandancia y otras acciones de mantenimiento de las unidades.
+En esta fase realizaremos las acciones de recuperación de organización, declaración de acciones de comandancia, chequeos de moral del ejército y otras acciones de mantenimiento de las unidades.
 
 Los oficiales que puedan realizar acciones de mando aplicarán las bonificaciones de mando a las unidades bajo su control.
 
-== Fase de activación
+== Movimiento
 
-Esta es la fase principal donde iremos, unidad por unidad, declarando las acciones que va a realizar cada unidad presente durante la partida.
+En la fase de movimiento realizaremos el movimiento de todas la unidades que pudieran hacerlo.
 
-Para agilizar la partida, en lugar de tener una fase de movimiento, una fase de disparo, etc, realizaremos todas las acciones de una unidad durante su activación. Es decir, cuando seleccionamos una unidad, esta realizará todas las acciones que pueda realizar (mover, disparar, etc) y luego pasaremos a la siguiente unidad.
+== Acciones
 
-== Fase de recuperación
+En la fase de acciones cada unidad podrá declarar una acción diferente a la de combate. Estas acciones pueden ser por ejemplo solicitar apoyo de artillería, atrincherarse o declarar fuego de reacción.
 
+== Combate
+
+Durante la fase de disparo resolveremos todas las acciones de combate simultaneamente.
 TODO: moral y demás
 
-// En esta fase se aplicarán los efectos de las acciones realizadas durante la fase de activación, como el daño recibido, la supresión, etc. También se podrán realizar acciones de recuperación como reagruparse o reorganizarse para recuperar moral o reducir los efectos de la supresión.
+== Notas de diseño
 
+Se podría agilizar el turno haciendo una activación completa de cada unidad (moviendo y disparando). No obstante esta opción hace que en función de los resultados del disparo las unidades realicen otra acción a la que hubieras previsto inicialmente y esto desvirtue la toma de decisiones.

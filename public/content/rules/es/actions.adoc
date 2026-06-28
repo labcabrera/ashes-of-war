@@ -1,6 +1,56 @@
 = Acciones
+:toc:
+:toclevels: 3
+:toc-title: Contenido
 
 WARNING: Borrador en desarrollo.
+
+== Acciones
+
+Al realizar una acción dicha unidad no podrá combatir dicho turno.
+
+=== Controlar objetivo
+
+Determinadas misiones pueden requerir de realizar una determinada acción en un objetivo. Esto podría ser desde recuperar información valiosa de inteligencia de un cuartel de mando a colocar cargas explosivas en un puente.
+
+=== Apuntado meticuloso
+
+_Una dotación de un PaK 40 decide apuntar concienzudamente contra un T-34 calculando con precisión los parámetros de disparo antes de disparar apresuradamente._
+
+Esta acción consume la próxima fase de disparo para obtener un bonificador al impactar en la siguiente.
+
+=== Overwatch
+
+_La unidad permanece apostada esperando la posibilidad de disparar a un rival._
+
+La unidad no debe de haber movido durante su fase de movimiento. Esta unidad podrá realizar un disparo de oportunidad durante la fase de disparo del rival con un bonus negativo.
+
+Esta habilidad permite por ejemplo disparar a un tanque mientras pasa por una calle que de otro modo sería imposible de ser disparado y evitar que las unidades se vayan moviendo a través de zonas sin linea de visión.
+
+=== Atrincherarse
+
+Una unidad de infantería consumirá una activación buscando la mejor cobertura posible.
+
+=== Solicitar apoyo
+
+Las unidades con la keyword correspondiente podrán comunicarse con la unidad de coordinación de artillería o solicitar apoyo aéreo cercano.
+
+=== Reorganización
+
+Una unidad de la cadena de mando puede tratar de coordinar un plan táctico con las unidades en mando. Las unidades de la cadena de mando afectadas no podrán realizar ninguna otra acción o combatir ya que estarán organizándo su próximo plan.
+
+=== Detección
+
+_Antes de sacrificar un valioso Tiger I avanzando hacia una aldea, un Sd.Kfz. 222 podrá realizar el reconocimiento de una zona para detectar cañones antitanque._
+
+Una unidad de reconocimiento realizará esta acción para detectar unidades emboscadas.
+
+Esta acción también se puede realizar para detectar zonas minadas y trampas.
+
+
+
+
+WARNING: Versión anterior pendiente de ser borrada
 
 * *Órdenes de ataque* (muchas unidades que no tienen orden de atacar no podrán hacerlo a menos que un oficial intermedio les de la orden). Dependiendo de la cantidad de tiempo en la planificación del ataque se tendrá un bonus a las acciones. No es lo mismo gritar: “¡Todos adelante!” que decir: “Cabo X, usted y dos hombres avanzan hasta esa esquina mientras les damos apoyo de cobertura, después Y y Z se acercarán hacia esa ruina y apoyarán con granadas las posiciones de las MGs)”.
 * *Atrincherarse*

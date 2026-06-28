@@ -64,6 +64,12 @@ De este modo en el perfil de una unidad tendremos:
 |Dash |24' |18' |9'
 |===
 
+== Vehículos
+
+Los vehículos tienen más complicado el cambiar la velocidad que la infantería. Para representar este factor un vehículo solo podrá aumentar en un punto la velocidad que tuviera. Por ejemplo, un vehículo estacionario sólo podría moverse a velocidad _Tactical_.
+
+WARNING: Considerar quitar esta regla para simplificar el juego ya que esto obligaría a tener que estar marcando todas las unidades con un token de la velocidad actual. O considerar simplemente que no se puede pasar de estacionario a velocidad _Dash_ para evitar por ejemplo estar quieto para disparar, luego avanzar una gran distancia y volver a estar quieto. Considerar el uso de una keyword para representar vehiculos con muy poca movilidad para esto o con gran movilidad.
+
 == Transportes
 
 WARNING: TODO

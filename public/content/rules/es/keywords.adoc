@@ -81,6 +81,10 @@ _Algunas unidades están especializadas en el reconocimiento y la obtención de 
 
 Estas unidades pueden desplegarse fuera del área de despliegue hasta X pulgadas de este.
 
+== Slow Fire X
+
+Después de disparar la unidad no podrá volver a hacerlo hasta pasados X turnos.
+
 [#stationary]
 == Stationary
 
