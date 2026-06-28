@@ -43,7 +43,6 @@
   },
   "game": {
     "cost": 12,
-    "organizationThreshold": 8,
     "movement": {
       "tactical": {
         "road": 24,
@@ -91,6 +90,9 @@
       "half-track",
       "transport-10",
       "radio"
-    ]
+    ],
+    "resilience": 8,
+    "recover": "3+",
+    "morale": "4+"
   }
 }

@@ -42,7 +42,6 @@
   },
   "game": {
     "cost": 45,
-    "organizationThreshold": 10,
     "movement": {
       "tactical": {
         "road": 17,
@@ -84,6 +83,9 @@
         "count": 1,
         "type": "turret"
       }
-    ]
+    ],
+    "resilience": 10,
+    "recover": "4+",
+    "morale": "4+"
   }
 }

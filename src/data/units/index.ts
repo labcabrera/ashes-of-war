@@ -8,7 +8,7 @@ import { vehicles } from '../vehicles';
 import { towedWeapons } from '../towed';
 import { vehicleCatalogueEntryToUnit } from '../vehicles/adapter';
 import type { MovementProfile } from '../../types/catalogue';
-import type { Unit, UnitArmorProfile, UnitKeyword, UnitWeapon } from '../../types/unit';
+import type { CheckValue, Unit, UnitArmorProfile, UnitKeyword, UnitWeapon } from '../../types/unit';
 
 export const allUnits: Unit[] = [
   ...(unitsData.units as LegacyUnit[]).map(legacyUnitToUnit),
@@ -26,18 +26,15 @@ type LegacyUnit = {
   imageUrl?: string;
   cost: number;
   movement: MovementProfile;
-  organizationThreshold?: number;
   resilience?: number;
-  recover?: number;
-  morale?: number;
+  recover?: CheckValue;
+  morale?: CheckValue;
   overrun?: number;
   resourceCosts?: Record<string, number>;
   keywords?: UnitKeyword[];
   weapons?: UnitWeapon[];
-  combatants?: number;
   members?: number;
   casualtiesThreshold?: number;
-  profile?: UnitArmorProfile;
   armor?: UnitArmorProfile;
 };
 
@@ -59,7 +56,7 @@ function legacyUnitToUnit(unit: LegacyUnit): Unit {
     type: unit.type,
     cost: unit.cost,
     movement: unit.movement,
-    resilience: requiredNumber(unit.resilience ?? unit.organizationThreshold, unit.id, 'resilience'),
+    resilience: requiredNumber(unit.resilience, unit.id, 'resilience'),
     recover: unit.recover,
     morale: unit.morale,
     resourceCosts: unit.resourceCosts,
@@ -71,7 +68,7 @@ function legacyUnitToUnit(unit: LegacyUnit): Unit {
     return {
       ...base,
       type: 'infantry',
-      members: requiredNumber(unit.members ?? unit.combatants, unit.id, 'members'),
+      members: requiredNumber(unit.members, unit.id, 'members'),
       casualtiesThreshold: requiredNumber(unit.casualtiesThreshold, unit.id, 'casualtiesThreshold'),
     };
   }
@@ -81,6 +78,6 @@ function legacyUnitToUnit(unit: LegacyUnit): Unit {
     type: unit.type,
     casualtiesThreshold: unit.casualtiesThreshold,
     overrun: unit.overrun,
-    armor: unit.armor ?? unit.profile,
+    armor: unit.armor,
   };
 }

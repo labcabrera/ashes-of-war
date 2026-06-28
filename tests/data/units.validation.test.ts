@@ -23,6 +23,10 @@ function isPositiveInteger(value: unknown): value is number {
   return Number.isInteger(value) && Number(value) > 0;
 }
 
+function isCheckValue(value: unknown): value is string {
+  return typeof value === 'string' && /^[1-6]\+$/.test(value);
+}
+
 function isNonNegativeInteger(value: unknown): value is number {
   return Number.isInteger(value) && Number(value) >= 0;
 }
@@ -137,8 +141,14 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
   if (!isNonNegativeInteger(value.cost)) {
     errors.push(`${path}.cost must be a non-negative integer.`);
   }
-  if (!isPositiveInteger(value.organizationThreshold)) {
-    errors.push(`${path}.organizationThreshold must be a positive integer.`);
+  if (!isPositiveInteger(value.resilience)) {
+    errors.push(`${path}.resilience must be a positive integer.`);
+  }
+  if (!isCheckValue(value.recover)) {
+    errors.push(`${path}.recover must use N+ check notation.`);
+  }
+  if (!isCheckValue(value.morale)) {
+    errors.push(`${path}.morale must use N+ check notation.`);
   }
   errors.push(...validateMovement(value.movement, `${path}.movement`));
   if (!Number.isInteger(value.from) || !Number.isInteger(value.to)) {
@@ -158,18 +168,28 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
       }
     }
   }
+  if (value.organizationThreshold !== undefined) {
+    errors.push(`${path}.organizationThreshold is no longer supported; use resilience.`);
+  }
+  if (value.profile !== undefined) {
+    errors.push(`${path}.profile is no longer supported; use armor.`);
+  }
+
   if (value.type === 'tank') {
-    errors.push(...validateTankProfile(value.profile, `${path}.profile`));
-  } else if (value.profile !== undefined) {
-    errors.push(...validateTankProfile(value.profile, `${path}.profile`));
+    errors.push(...validateTankProfile(value.armor, `${path}.armor`));
+  } else if (value.armor !== undefined) {
+    errors.push(...validateTankProfile(value.armor, `${path}.armor`));
   }
 
   if (value.type === 'infantry') {
-    if (!isPositiveInteger(value.combatants)) {
-      errors.push(`${path}.combatants must be a positive integer for infantry units.`);
+    if (!isPositiveInteger(value.members)) {
+      errors.push(`${path}.members must be a positive integer for infantry units.`);
     }
     if (!isPositiveInteger(value.casualtiesThreshold)) {
       errors.push(`${path}.casualtiesThreshold must be a positive integer for non-vehicle units.`);
+    }
+    if (value.combatants !== undefined) {
+      errors.push(`${path}.combatants is no longer supported; use members.`);
     }
     if (value.bases !== undefined) {
       errors.push(`${path}.bases is no longer supported for infantry units.`);
@@ -179,10 +199,10 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
     if (value.bases !== undefined) {
       errors.push(`${path}.bases is no longer supported.`);
     }
-    if (value.combatants !== undefined) {
-      errors.push(`${path}.combatants is only supported for infantry units.`);
+    if (value.combatants !== undefined || value.members !== undefined) {
+      errors.push(`${path}.members is only supported for infantry units.`);
     }
-    if (value.profile === undefined) {
+    if (value.armor === undefined) {
       if (!isPositiveInteger(value.casualtiesThreshold)) {
         errors.push(`${path}.casualtiesThreshold must be a positive integer for non-vehicle units.`);
       }
@@ -201,8 +221,8 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
   }
 
   const errors: string[] = [];
-  if (catalogue._version !== 8) {
-    errors.push('Unit catalogue _version must be 8.');
+  if (catalogue._version !== 9) {
+    errors.push('Unit catalogue _version must be 9.');
   }
   if (!Array.isArray(catalogue.units)) {
     errors.push('Unit catalogue units must be an array.');
@@ -234,7 +254,7 @@ describe('static unit catalogue validation', () => {
 
   it('reports multiple model and weapon-reference errors together', () => {
     const invalidCatalogue = {
-      _version: 8,
+      _version: 9,
       units: [
         {
           id: 'broken-infantry',
@@ -244,8 +264,10 @@ describe('static unit catalogue validation', () => {
           from: 1945,
           to: 1941,
           cost: 1,
-          organizationThreshold: 0,
-          combatants: 0,
+          resilience: 0,
+          recover: '7+',
+          morale: 'bad',
+          members: 0,
           casualtiesThreshold: 0,
           movement: {
             tactical: { road: -1, crossCountry: 6, rough: 3 },
@@ -262,8 +284,10 @@ describe('static unit catalogue validation', () => {
     expect(errors).toEqual(
       expect.arrayContaining([
         'units[0].name must be a non-empty string.',
-        'units[0].organizationThreshold must be a positive integer.',
-        'units[0].combatants must be a positive integer for infantry units.',
+        'units[0].resilience must be a positive integer.',
+        'units[0].recover must use N+ check notation.',
+        'units[0].morale must use N+ check notation.',
+        'units[0].members must be a positive integer for infantry units.',
         'units[0].casualtiesThreshold must be a positive integer for non-vehicle units.',
         'units[0].movement.tactical.road must be a non-negative number.',
         'units[0].from must be less than or equal to units[0].to.',

@@ -18,7 +18,6 @@
   },
   "game": {
     "cost": 18,
-    "organizationThreshold": 10,
     "movement": {
       "tactical": {
         "road": 0,
@@ -47,6 +46,9 @@
         "count": 1,
         "type": "normal"
       }
-    ]
+    ],
+    "resilience": 10,
+    "recover": "4+",
+    "morale": "4+"
   }
 }

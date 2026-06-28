@@ -120,7 +120,7 @@ function ProfileValue({
 }: {
   icon: typeof ShieldIcon;
   label: string;
-  value?: number;
+  value?: number | string;
 }) {
   return (
     <Tooltip title={label}>

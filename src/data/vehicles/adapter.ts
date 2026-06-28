@@ -46,7 +46,7 @@ export function vehicleCatalogueEntryToUnit(entry: VehicleCatalogueEntry): Vehic
     type: entry.type,
     cost: entry.game.cost,
     movement: entry.game.movement,
-    resilience: requiredNumber(entry.game.resilience ?? entry.game.organizationThreshold, entry.id, 'resilience'),
+    resilience: requiredNumber(entry.game.resilience, entry.id, 'resilience'),
     recover: entry.game.recover,
     morale: entry.game.morale,
     overrun: entry.game.overrun,

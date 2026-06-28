@@ -24,7 +24,6 @@
   },
   "game": {
     "cost": 6,
-    "organizationThreshold": 5,
     "movement": {
       "tactical": {
         "road": 27,
@@ -50,6 +49,9 @@
     "keywords": [
       "open-topped",
       "transport-12"
-    ]
+    ],
+    "resilience": 5,
+    "recover": "4+",
+    "morale": "4+"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_version": 8,
+  "_version": 9,
   "units": [
     {
       "id": "german-fallschirmjager",
@@ -30,7 +30,6 @@
         "logistics": 10,
         "intelligence": 1
       },
-      "combatants": 10,
       "weapons": [
         {
           "id": "german-fg-42",
@@ -38,8 +37,11 @@
           "type": "normal"
         }
       ],
-      "organizationThreshold": 10,
-      "casualtiesThreshold": 3
+      "casualtiesThreshold": 3,
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "german-kompanietrupp",
@@ -69,9 +71,7 @@
       "resourceCosts": {
         "logistics": 4
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10,
       "weapons": [
         {
           "id": "german-mp-40",
@@ -87,7 +87,11 @@
       "keywords": [
         "radio",
         "hq"
-      ]
+      ],
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "united-states-m3-stuart",
@@ -118,7 +122,25 @@
         "fuel": 3,
         "logistics": 3
       },
-      "profile": {
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "united-states-37mm-m6",
+          "count": 1,
+          "type": "turret"
+        },
+        {
+          "id": "united-states-browning-m1919",
+          "count": 1,
+          "type": "hull"
+        }
+      ],
+      "resilience": 8,
+      "recover": "4+",
+      "morale": "4+",
+      "armor": {
         "front": {
           "value": 51,
           "armorMM": 51,
@@ -139,23 +161,7 @@
           "armorMM": 13,
           "armorInclination": 0
         }
-      },
-      "organizationThreshold": 8,
-      "keywords": [
-        "radio"
-      ],
-      "weapons": [
-        {
-          "id": "united-states-37mm-m6",
-          "count": 1,
-          "type": "turret"
-        },
-        {
-          "id": "united-states-browning-m1919",
-          "count": 1,
-          "type": "hull"
-        }
-      ]
+      }
     },
     {
       "id": "united-states-m4-sherman",
@@ -186,7 +192,20 @@
         "fuel": 5,
         "logistics": 5
       },
-      "profile": {
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "soviet-union-75mm-m3",
+          "count": 1,
+          "type": "turret"
+        }
+      ],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "armor": {
         "front": {
           "value": 51,
           "armorMM": 51,
@@ -207,18 +226,7 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      },
-      "organizationThreshold": 10,
-      "keywords": [
-        "radio"
-      ],
-      "weapons": [
-        {
-          "id": "soviet-union-75mm-m3",
-          "count": 1,
-          "type": "turret"
-        }
-      ]
+      }
     },
     {
       "id": "united-states-m4a1-sherman",
@@ -249,7 +257,20 @@
         "fuel": 5,
         "logistics": 5
       },
-      "profile": {
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "soviet-union-75mm-m3",
+          "count": 1,
+          "type": "turret"
+        }
+      ],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "armor": {
         "front": {
           "value": 51,
           "armorMM": 51,
@@ -270,18 +291,7 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      },
-      "organizationThreshold": 10,
-      "keywords": [
-        "radio"
-      ],
-      "weapons": [
-        {
-          "id": "soviet-union-75mm-m3",
-          "count": 1,
-          "type": "turret"
-        }
-      ]
+      }
     },
     {
       "id": "united-states-m4a2-sherman",
@@ -312,7 +322,20 @@
         "fuel": 4,
         "logistics": 5
       },
-      "profile": {
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "soviet-union-75mm-m3",
+          "count": 1,
+          "type": "turret"
+        }
+      ],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "armor": {
         "front": {
           "value": 51,
           "armorMM": 51,
@@ -333,18 +356,7 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      },
-      "organizationThreshold": 10,
-      "keywords": [
-        "radio"
-      ],
-      "weapons": [
-        {
-          "id": "soviet-union-75mm-m3",
-          "count": 1,
-          "type": "turret"
-        }
-      ]
+      }
     },
     {
       "id": "united-states-m4a3-sherman",
@@ -375,7 +387,20 @@
         "fuel": 5,
         "logistics": 5
       },
-      "profile": {
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "soviet-union-76mm-m1",
+          "count": 1,
+          "type": "turret"
+        }
+      ],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "armor": {
         "front": {
           "value": 64,
           "armorMM": 64,
@@ -396,18 +421,7 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      },
-      "organizationThreshold": 10,
-      "keywords": [
-        "radio"
-      ],
-      "weapons": [
-        {
-          "id": "soviet-union-76mm-m1",
-          "count": 1,
-          "type": "turret"
-        }
-      ]
+      }
     },
     {
       "id": "united-states-m4a4-sherman",
@@ -438,7 +452,20 @@
         "fuel": 5,
         "logistics": 5
       },
-      "profile": {
+      "keywords": [
+        "radio"
+      ],
+      "weapons": [
+        {
+          "id": "soviet-union-75mm-m3",
+          "count": 1,
+          "type": "turret"
+        }
+      ],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "armor": {
         "front": {
           "value": 51,
           "armorMM": 51,
@@ -459,18 +486,7 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      },
-      "organizationThreshold": 10,
-      "keywords": [
-        "radio"
-      ],
-      "weapons": [
-        {
-          "id": "soviet-union-75mm-m3",
-          "count": 1,
-          "type": "turret"
-        }
-      ]
+      }
     },
     {
       "id": "german-mg42-team",
@@ -500,9 +516,7 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 5,
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -514,7 +528,11 @@
           "count": 4,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 5
     },
     {
       "id": "german-panzergrenadier-squad",
@@ -544,9 +562,7 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10,
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -558,7 +574,11 @@
           "count": 8,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "german-panzerschreck-team",
@@ -585,7 +605,6 @@
           "rough": 9
         }
       },
-      "combatants": 3,
       "weapons": [
         {
           "id": "german-panzerschreck-rpzb-54",
@@ -598,8 +617,11 @@
           "type": "normal"
         }
       ],
-      "organizationThreshold": 6,
-      "casualtiesThreshold": 1
+      "casualtiesThreshold": 1,
+      "resilience": 6,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 3
     },
     {
       "id": "soviet-union-assault-squad",
@@ -629,16 +651,18 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10,
       "weapons": [
         {
           "id": "soviet-union-ppsh-41",
           "count": 10,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "soviet-union-field-medic",
@@ -671,9 +695,11 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "combatants": 5,
-      "organizationThreshold": 6,
-      "casualtiesThreshold": 2
+      "casualtiesThreshold": 2,
+      "resilience": 6,
+      "recover": "4+",
+      "morale": "4+",
+      "members": 5
     },
     {
       "id": "soviet-union-guards-rifle-squad",
@@ -703,10 +729,12 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10,
-      "weapons": []
+      "weapons": [],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "soviet-union-heavy-mg-team",
@@ -736,9 +764,7 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 5,
       "weapons": [
         {
           "id": "soviet-union-maxim-m1910",
@@ -750,7 +776,11 @@
           "count": 4,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "members": 5
     },
     {
       "id": "soviet-union-rifle-squad",
@@ -780,16 +810,18 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10,
       "weapons": [
         {
           "id": "soviet-union-mosin-nagant-m1891-30",
           "count": 10,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "4+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "soviet-union-sniper",
@@ -819,12 +851,14 @@
           "rough": 9
         }
       },
-      "combatants": 2,
       "resourceCosts": {
         "intelligence": 1
       },
-      "organizationThreshold": 5,
-      "casualtiesThreshold": 1
+      "casualtiesThreshold": 1,
+      "resilience": 5,
+      "recover": "4+",
+      "morale": "4+",
+      "members": 2
     },
     {
       "id": "german-sanitatsunteroffizier",
@@ -857,9 +891,11 @@
       "resourceCosts": {
         "logistics": 4
       },
-      "combatants": 5,
-      "organizationThreshold": 6,
-      "casualtiesThreshold": 2
+      "casualtiesThreshold": 2,
+      "resilience": 6,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 5
     },
     {
       "id": "german-sturmpionier-squad",
@@ -889,9 +925,7 @@
       "resourceCosts": {
         "logistics": 6
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 8,
       "keywords": [
         "explosives"
       ],
@@ -911,7 +945,11 @@
           "count": 6,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 8
     },
     {
       "id": "german-pionier-squad",
@@ -938,12 +976,14 @@
           "rough": 9
         }
       },
-      "combatants": 10,
       "resourceCosts": {
         "logistics": 10
       },
-      "organizationThreshold": 10,
-      "casualtiesThreshold": 3
+      "casualtiesThreshold": 3,
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "german-sniper-01",
@@ -970,15 +1010,17 @@
           "rough": 9
         }
       },
-      "combatants": 2,
       "resourceCosts": {
         "intelligence": 1
       },
       "keywords": [
         "sniper"
       ],
-      "organizationThreshold": 6,
-      "casualtiesThreshold": 1
+      "casualtiesThreshold": 1,
+      "resilience": 6,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 2
     },
     {
       "id": "german-wehrmacht-assault-squad",
@@ -1008,16 +1050,18 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10,
       "weapons": [
         {
           "id": "german-mp-40",
           "count": 10,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "german-wehrmacht-grenadier-squad",
@@ -1047,9 +1091,7 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10,
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -1061,7 +1103,11 @@
           "count": 8,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 10
     },
     {
       "id": "german-wehrmacht-light-mortar-team",
@@ -1091,9 +1137,7 @@
       "resourceCosts": {
         "logistics": 4
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 5,
       "keywords": [
         "indirect-fire"
       ],
@@ -1108,7 +1152,11 @@
           "count": 4,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 5
     },
     {
       "id": "german-wehrmacht-volksgrenadier-squad",
@@ -1138,9 +1186,7 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "organizationThreshold": 10,
       "casualtiesThreshold": 3,
-      "combatants": 10,
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -1157,7 +1203,11 @@
           "count": 1,
           "type": "normal"
         }
-      ]
+      ],
+      "resilience": 10,
+      "recover": "3+",
+      "morale": "4+",
+      "members": 10
     }
   ]
 }

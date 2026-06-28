@@ -45,7 +45,6 @@
   },
   "game": {
     "cost": 30,
-    "organizationThreshold": 10,
     "movement": {
       "tactical": {
         "road": 17,
@@ -92,6 +91,9 @@
       "anti-air",
       "open-topped",
       "radio"
-    ]
+    ],
+    "resilience": 10,
+    "recover": "3+",
+    "morale": "4+"
   }
 }

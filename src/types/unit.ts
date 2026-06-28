@@ -91,6 +91,9 @@ export interface UnitWeapon {
   features?: WeaponFeatureModifier[];
 }
 
+/** D6 check target notation, e.g. `3+`. */
+export type CheckValue = `${number}+`;
+
 /** Common fields included in every roster entry. */
 interface BaseUnitFields {
   id: string;
@@ -109,9 +112,9 @@ interface BaseUnitFields {
   /** Resistance to organization loss, expressed as the required check value. */
   resilience: number;
   /** Optional threshold used to recover lost organization points. */
-  recover?: number;
+  recover?: CheckValue;
   /** Optional morale threshold used when the unit suffers heavy casualties. */
-  morale?: number;
+  morale?: CheckValue;
   /** Optional resource costs keyed by ResourcePool.key. */
   resourceCosts?: Record<string, number>;
   /** Optional weapon assignments resolved against the weapon catalogue. */

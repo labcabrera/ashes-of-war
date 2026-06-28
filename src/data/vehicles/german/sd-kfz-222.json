@@ -24,7 +24,6 @@
   },
   "game": {
     "cost": 14,
-    "organizationThreshold": 10,
     "movement": {
       "tactical": {
         "road": 36,
@@ -49,6 +48,9 @@
     },
     "keywords": [
       "radio"
-    ]
+    ],
+    "resilience": 10,
+    "recover": "3+",
+    "morale": "4+"
   }
 }

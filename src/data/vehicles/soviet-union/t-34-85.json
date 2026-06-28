@@ -44,7 +44,6 @@
   },
   "game": {
     "cost": 36,
-    "organizationThreshold": 10,
     "movement": {
       "tactical": {
         "road": 25,
@@ -79,6 +78,9 @@
     "resourceCosts": {
       "fuel": 8,
       "logistics": 5
-    }
+    },
+    "resilience": 10,
+    "recover": "4+",
+    "morale": "4+"
   }
 }

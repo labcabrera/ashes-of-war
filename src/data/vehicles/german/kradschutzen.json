@@ -24,7 +24,6 @@
   },
   "game": {
     "cost": 12,
-    "organizationThreshold": 10,
     "movement": {
       "tactical": {
         "road": 43,
@@ -60,6 +59,9 @@
     ],
     "keywords": [
       "reconnaissance"
-    ]
+    ],
+    "resilience": 10,
+    "recover": "3+",
+    "morale": "4+"
   }
 }

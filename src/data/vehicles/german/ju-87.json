@@ -19,7 +19,6 @@
   },
   "game": {
     "cost": 22,
-    "organizationThreshold": 3,
     "movement": {
       "tactical": {
         "road": 150,
@@ -57,6 +56,9 @@
     "keywords": [
       "air-support",
       "radio"
-    ]
+    ],
+    "resilience": 3,
+    "recover": "3+",
+    "morale": "4+"
   }
 }
