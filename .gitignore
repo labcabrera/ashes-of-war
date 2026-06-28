@@ -10,5 +10,6 @@ specs
 .env.aws
 
 design/*.md
+design/*.adoc
 
 initial-notes.adoc

@@ -18,11 +18,14 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
+import CommuteIcon from '@mui/icons-material/Commute';
+import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
+import SpeedIcon from '@mui/icons-material/Speed';
 import WarehouseIcon from '@mui/icons-material/Warehouse';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Fragment, useMemo, useState } from 'react';
@@ -47,14 +50,13 @@ const resourceIcons = {
   intelligence: PsychologyAltIcon,
 } as const;
 
-function movementSummary(unit: Unit) {
-  return (['tactical', 'cruise', 'dash'] as const)
-    .map((speed) => {
-      const profile = unit.movement[speed];
-      return `${speed.charAt(0).toUpperCase()}: ${profile.road}/${profile.crossCountry}/${profile.rough}`;
-    })
-    .join(' · ');
-}
+const movementSpeeds = ['tactical', 'cruise', 'dash'] as const;
+const movementTerrains = ['road', 'crossCountry', 'rough'] as const;
+const movementSpeedIcons = {
+  tactical: DirectionsRunIcon,
+  cruise: CommuteIcon,
+  dash: SpeedIcon,
+} as const;
 
 function armourSummary(unit: Unit) {
   if (!unit.armor) return '-';
@@ -105,6 +107,56 @@ function CostResourcesCell({ unit }: { unit: Unit }) {
               aria-label={`${label}: ${value}`}
             />
           </Tooltip>
+        );
+      })}
+    </Stack>
+  );
+}
+
+function MovementCell({ unit }: { unit: Unit }) {
+  const { t } = useTranslation();
+  const rows = movementSpeeds
+    .map((speed) => ({
+      speed,
+      values: movementTerrains
+        .map((terrain) => ({
+          terrain,
+          value: unit.movement[speed][terrain],
+        }))
+        .filter(({ value }) => value !== 0),
+    }))
+    .filter(({ values }) => values.length > 0);
+
+  if (rows.length === 0) {
+    return (
+      <Typography variant="caption" color="text.disabled">
+        -
+      </Typography>
+    );
+  }
+
+  return (
+    <Stack spacing={0.25} aria-label={t('units.detail.movement.title')}>
+      {rows.map(({ speed, values }) => {
+        const Icon = movementSpeedIcons[speed];
+
+        return (
+          <Stack key={speed} direction="row" spacing={0.75} sx={{ alignItems: 'center', minHeight: 20 }}>
+            <Tooltip title={t(`units.detail.movement.${speed}`)}>
+              <Icon
+                fontSize="inherit"
+                color="secondary"
+                aria-hidden="true"
+                sx={{ fontSize: 16, flexShrink: 0 }}
+              />
+            </Tooltip>
+            <Typography variant="caption" sx={{ fontWeight: 700, minWidth: 48 }}>
+              {t(`units.detail.movement.${speed}`)}
+            </Typography>
+            <Typography variant="caption" color="text.secondary">
+              {values.map(({ value }) => value).join('/')}
+            </Typography>
+          </Stack>
         );
       })}
     </Stack>
@@ -343,10 +395,12 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                         <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
                           <ProfileValue label={t('units.detail.morale')} value={unit.morale} />
                         </TableCell>
-                        <TableCell sx={{ minWidth: 185 }}>
-                          <Typography variant="caption" title={t('units.table.movementHelp')}>
-                            {movementSummary(unit)}
-                          </Typography>
+                        <TableCell sx={{ minWidth: 240 }}>
+                          <Tooltip title={t('units.table.movementHelp')}>
+                            <Box>
+                              <MovementCell unit={unit} />
+                            </Box>
+                          </Tooltip>
                         </TableCell>
                         <TableCell sx={{ whiteSpace: 'nowrap' }}>
                           <Typography variant="caption" title={t('units.table.armourHelp')}>

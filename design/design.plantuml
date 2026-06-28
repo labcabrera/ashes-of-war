@@ -2,19 +2,6 @@
 
 ' top to bottom direction
 
-' * Debian
-' ** Ubuntu
-' *** Linux Mint
-' *** Kubuntu
-' *** Lubuntu
-' *** KDE Neon
-' ** LMDE
-' ** SolydXK
-' ** SteamOS
-' ** Raspbian with a very long name
-' *** <s>Raspmbc</s> => OSMC
-' *** <s>Raspyfi</s> => Volumio
-
 * Disparo
 ** Ligero
 *** Impactar\n+ Balistic\n- Distance\n- Cover\n- Ambient\n+ Geometry
@@ -26,6 +13,13 @@
 **** Penetrar\n+ AP\n- Blindaje\n- Distancia\n- Encaramiento
 ***** Efecto de penetración\n+ Potencia explosiva
 ****** Organización
+
+** Blast
+*** Impactar\n(Balistic + Modifiers)
+**** Dispersión
+***** Penetrar\n+ AP\n- Blindaje\n- Distancia\n- Encaramiento
+****** Herir\n(Ligero/Pesado)
+******* Organización
 
 ** Indirecto
 *** Estimación
