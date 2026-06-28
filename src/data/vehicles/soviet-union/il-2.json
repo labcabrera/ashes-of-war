@@ -57,7 +57,7 @@
       "air-support"
     ],
     "resilience": 3,
-    "recover": "4+",
-    "morale": "4+"
+    "recover": 4,
+    "morale": 4
   }
 }

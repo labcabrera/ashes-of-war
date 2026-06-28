@@ -80,7 +80,7 @@
       "logistics": 5
     },
     "resilience": 10,
-    "recover": "4+",
-    "morale": "4+"
+    "recover": 4,
+    "morale": 4
   }
 }

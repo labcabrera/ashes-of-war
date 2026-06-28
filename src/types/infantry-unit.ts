@@ -5,7 +5,7 @@
  */
 
 import type { CatalogueEntryMeta, MovementProfile } from './catalogue';
-import type { CheckValue, UnitKeyword, UnitWeapon } from './unit';
+import type { UnitKeyword, UnitWeapon } from './unit';
 
 /** Real-world reference data for an infantry unit. */
 export interface InfantryHistoricalProfile {
@@ -25,9 +25,9 @@ export interface InfantryGameProfile {
   /** Resistance to organization loss, expressed as the required check value. */
   resilience: number;
   /** Optional threshold used to recover lost organization points. */
-  recover?: CheckValue;
+  recover?: number;
   /** Optional morale threshold used when the unit suffers heavy casualties. */
-  morale?: CheckValue;
+  morale?: number;
   /** Number of individual members represented by this unit. */
   members: number;
   /** Casualties threshold before the unit is considered destroyed. */

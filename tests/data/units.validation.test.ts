@@ -23,8 +23,8 @@ function isPositiveInteger(value: unknown): value is number {
   return Number.isInteger(value) && Number(value) > 0;
 }
 
-function isCheckValue(value: unknown): value is string {
-  return typeof value === 'string' && /^[1-6]\+$/.test(value);
+function isD6CheckTarget(value: unknown): value is number {
+  return Number.isInteger(value) && Number(value) >= 1 && Number(value) <= 6;
 }
 
 function isNonNegativeInteger(value: unknown): value is number {
@@ -144,11 +144,11 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
   if (!isPositiveInteger(value.resilience)) {
     errors.push(`${path}.resilience must be a positive integer.`);
   }
-  if (!isCheckValue(value.recover)) {
-    errors.push(`${path}.recover must use N+ check notation.`);
+  if (!isD6CheckTarget(value.recover)) {
+    errors.push(`${path}.recover must be a numeric D6 check target.`);
   }
-  if (!isCheckValue(value.morale)) {
-    errors.push(`${path}.morale must use N+ check notation.`);
+  if (!isD6CheckTarget(value.morale)) {
+    errors.push(`${path}.morale must be a numeric D6 check target.`);
   }
   errors.push(...validateMovement(value.movement, `${path}.movement`));
   if (!Number.isInteger(value.from) || !Number.isInteger(value.to)) {
@@ -265,8 +265,8 @@ describe('static unit catalogue validation', () => {
           to: 1941,
           cost: 1,
           resilience: 0,
-          recover: '7+',
-          morale: 'bad',
+          recover: 7,
+          morale: 0,
           members: 0,
           casualtiesThreshold: 0,
           movement: {
@@ -285,8 +285,8 @@ describe('static unit catalogue validation', () => {
       expect.arrayContaining([
         'units[0].name must be a non-empty string.',
         'units[0].resilience must be a positive integer.',
-        'units[0].recover must use N+ check notation.',
-        'units[0].morale must use N+ check notation.',
+        'units[0].recover must be a numeric D6 check target.',
+        'units[0].morale must be a numeric D6 check target.',
         'units[0].members must be a positive integer for infantry units.',
         'units[0].casualtiesThreshold must be a positive integer for non-vehicle units.',
         'units[0].movement.tactical.road must be a non-negative number.',

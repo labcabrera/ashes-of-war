@@ -51,7 +51,7 @@
       "anti-air"
     ],
     "resilience": 10,
-    "recover": "3+",
-    "morale": "4+"
+    "recover": 3,
+    "morale": 4
   }
 }

@@ -98,7 +98,7 @@
       "rare"
     ],
     "resilience": 8,
-    "recover": "3+",
-    "morale": "4+"
+    "recover": 3,
+    "morale": 4
   }
 }

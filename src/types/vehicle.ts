@@ -10,7 +10,7 @@ import type {
   CatalogueEntryMeta,
   MovementProfile,
 } from './catalogue';
-import type { CheckValue, UnitKeyword, UnitType, UnitWeapon } from './unit';
+import type { UnitKeyword, UnitType, UnitWeapon } from './unit';
 
 /** All vehicle and support categories (every UnitType except infantry). */
 export type VehicleType = Exclude<UnitType, 'infantry'>;
@@ -46,9 +46,9 @@ export interface VehicleGameProfile {
   /** Resistance to organization loss, expressed as the required check value. */
   resilience: number;
   /** Optional threshold used to recover lost organization points. */
-  recover?: CheckValue;
+  recover?: number;
   /** Optional morale threshold used when the unit suffers heavy casualties. */
-  morale?: CheckValue;
+  morale?: number;
   /** Optional vehicle capability to cross obstacles or force through rough terrain. */
   overrun?: number;
   /** Movement ratings for the unit. */

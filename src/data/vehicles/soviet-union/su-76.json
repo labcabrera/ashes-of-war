@@ -90,7 +90,7 @@
       "radio"
     ],
     "resilience": 8,
-    "recover": "4+",
-    "morale": "4+"
+    "recover": 4,
+    "morale": 4
   }
 }

@@ -8,7 +8,7 @@ import { vehicles } from '../vehicles';
 import { towedWeapons } from '../towed';
 import { vehicleCatalogueEntryToUnit } from '../vehicles/adapter';
 import type { MovementProfile } from '../../types/catalogue';
-import type { CheckValue, Unit, UnitArmorProfile, UnitKeyword, UnitWeapon } from '../../types/unit';
+import type { Unit, UnitArmorProfile, UnitKeyword, UnitWeapon } from '../../types/unit';
 
 export const allUnits: Unit[] = [
   ...(unitsData.units as LegacyUnit[]).map(legacyUnitToUnit),
@@ -27,8 +27,8 @@ type LegacyUnit = {
   cost: number;
   movement: MovementProfile;
   resilience?: number;
-  recover?: CheckValue;
-  morale?: CheckValue;
+  recover?: number;
+  morale?: number;
   overrun?: number;
   resourceCosts?: Record<string, number>;
   keywords?: UnitKeyword[];

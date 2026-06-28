@@ -12,6 +12,7 @@
     "coverage": "vitest run --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "migrate:unit-check-values": "node scripts/migrate-unit-check-values.mjs",
     "update:game-data": "tsc src/utils/conversions.ts --target ES2022 --module ES2022 --moduleResolution bundler --outDir node_modules/.tmp/game-data-conversions --skipLibCheck && node scripts/update-game-data.mjs",
     "create-release": "bash scripts/create-release.sh"
   },

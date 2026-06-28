@@ -108,8 +108,8 @@ describe('updateGameDataFromHistorical', () => {
       game: {
         cost: 32,
         resilience: 10,
-        recover: '3+',
-        morale: '4+',
+        recover: 3,
+        morale: 4,
         movement: {
           tactical: { road: 1, crossCountry: 1, rough: 1 },
           cruise: { road: 1, crossCountry: 1, rough: 1 },

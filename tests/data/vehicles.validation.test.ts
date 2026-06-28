@@ -40,8 +40,8 @@ function isPositiveInteger(value: unknown): value is number {
   return Number.isInteger(value) && Number(value) > 0;
 }
 
-function isCheckValue(value: unknown): value is string {
-  return typeof value === 'string' && /^[1-6]\+$/.test(value);
+function isD6CheckTarget(value: unknown): value is number {
+  return Number.isInteger(value) && Number(value) >= 1 && Number(value) <= 6;
 }
 
 function isNonNegativeInteger(value: unknown): value is number {
@@ -219,11 +219,11 @@ function validateVehicle(value: unknown, index: number, weaponIds: ReadonlySet<s
     if (!isPositiveInteger(value.game.resilience)) {
       errors.push(`${path}.game.resilience must be a positive integer.`);
     }
-    if (!isCheckValue(value.game.recover)) {
-      errors.push(`${path}.game.recover must use N+ check notation.`);
+    if (!isD6CheckTarget(value.game.recover)) {
+      errors.push(`${path}.game.recover must be a numeric D6 check target.`);
     }
-    if (!isCheckValue(value.game.morale)) {
-      errors.push(`${path}.game.morale must use N+ check notation.`);
+    if (!isD6CheckTarget(value.game.morale)) {
+      errors.push(`${path}.game.morale must be a numeric D6 check target.`);
     }
     if (value.game.organizationThreshold !== undefined) {
       errors.push(`${path}.game.organizationThreshold is no longer supported; use resilience.`);
@@ -286,8 +286,8 @@ describe('vehicle catalogue validation', () => {
       game: {
         cost: -1,
         resilience: 0,
-        recover: '7+',
-        morale: 'bad',
+        recover: 7,
+        morale: 0,
         movement: {
           tactical: { road: 1, crossCountry: 1, rough: 1 },
           cruise: { road: 1, crossCountry: 1, rough: 1 },
@@ -309,8 +309,8 @@ describe('vehicle catalogue validation', () => {
         'vehicles[0].historical.armor must be an object.',
         'vehicles[0].game.cost must be a non-negative integer.',
         'vehicles[0].game.resilience must be a positive integer.',
-        'vehicles[0].game.recover must use N+ check notation.',
-        'vehicles[0].game.morale must use N+ check notation.',
+        'vehicles[0].game.recover must be a numeric D6 check target.',
+        'vehicles[0].game.morale must be a numeric D6 check target.',
         'vehicles[0].game.armor must be an object.',
         'vehicles[0].game.weapons[0].id references unknown weapon "missing-weapon".',
         'vehicles[0].game.weapons[0].count must be a positive integer.',

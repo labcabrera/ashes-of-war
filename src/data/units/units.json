@@ -39,8 +39,8 @@
       ],
       "casualtiesThreshold": 3,
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 10
     },
     {
@@ -89,8 +89,8 @@
         "hq"
       ],
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 10
     },
     {
@@ -138,8 +138,8 @@
         }
       ],
       "resilience": 8,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "armor": {
         "front": {
           "value": 51,
@@ -203,8 +203,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "armor": {
         "front": {
           "value": 51,
@@ -268,8 +268,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "armor": {
         "front": {
           "value": 51,
@@ -333,8 +333,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "armor": {
         "front": {
           "value": 51,
@@ -398,8 +398,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "armor": {
         "front": {
           "value": 64,
@@ -463,8 +463,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "armor": {
         "front": {
           "value": 51,
@@ -530,8 +530,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 5
     },
     {
@@ -576,8 +576,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 10
     },
     {
@@ -619,8 +619,8 @@
       ],
       "casualtiesThreshold": 1,
       "resilience": 6,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 3
     },
     {
@@ -660,8 +660,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "members": 10
     },
     {
@@ -697,8 +697,8 @@
       },
       "casualtiesThreshold": 2,
       "resilience": 6,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "members": 5
     },
     {
@@ -732,8 +732,8 @@
       "casualtiesThreshold": 3,
       "weapons": [],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "members": 10
     },
     {
@@ -778,8 +778,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "members": 5
     },
     {
@@ -819,8 +819,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "members": 10
     },
     {
@@ -856,8 +856,8 @@
       },
       "casualtiesThreshold": 1,
       "resilience": 5,
-      "recover": "4+",
-      "morale": "4+",
+      "recover": 4,
+      "morale": 4,
       "members": 2
     },
     {
@@ -893,8 +893,8 @@
       },
       "casualtiesThreshold": 2,
       "resilience": 6,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 5
     },
     {
@@ -947,8 +947,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 8
     },
     {
@@ -981,8 +981,8 @@
       },
       "casualtiesThreshold": 3,
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 10
     },
     {
@@ -1018,8 +1018,8 @@
       ],
       "casualtiesThreshold": 1,
       "resilience": 6,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 2
     },
     {
@@ -1059,8 +1059,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 10
     },
     {
@@ -1105,8 +1105,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 10
     },
     {
@@ -1154,8 +1154,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 5
     },
     {
@@ -1205,8 +1205,8 @@
         }
       ],
       "resilience": 10,
-      "recover": "3+",
-      "morale": "4+",
+      "recover": 3,
+      "morale": 4,
       "members": 10
     }
   ]
