@@ -43,6 +43,8 @@ export interface VehicleHistoricalProfile {
 export interface VehicleGameProfile {
   /** Point cost. */
   cost: number;
+  /** Total damage capacity before the unit is removed. */
+  hitPoints: number;
   /** Resistance to organization loss, expressed as the required check value. */
   resilience: number;
   /** Optional threshold used to recover lost organization points. */

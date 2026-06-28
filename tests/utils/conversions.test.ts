@@ -107,6 +107,7 @@ describe('updateGameDataFromHistorical', () => {
       },
       game: {
         cost: 32,
+        hitPoints: 8,
         resilience: 10,
         recover: 3,
         morale: 4,

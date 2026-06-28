@@ -22,6 +22,8 @@ export interface InfantryHistoricalProfile {
 export interface InfantryGameProfile {
   /** Point cost. */
   cost: number;
+  /** Total damage capacity before the unit is removed. */
+  hitPoints: number;
   /** Resistance to organization loss, expressed as the required check value. */
   resilience: number;
   /** Optional threshold used to recover lost organization points. */
@@ -30,8 +32,8 @@ export interface InfantryGameProfile {
   morale?: number;
   /** Number of individual members represented by this unit. */
   members: number;
-  /** Casualties threshold before the unit is considered destroyed. */
-  casualtiesThreshold: number;
+  /** Number of infantry bases represented by this unit. */
+  baseCount: number;
   /** Movement ratings for the unit. */
   movement: MovementProfile;
   /** Optional resource costs keyed by ResourcePool.key. */

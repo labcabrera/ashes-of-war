@@ -216,6 +216,9 @@ function validateVehicle(value: unknown, index: number, weaponIds: ReadonlySet<s
     if (!isNonNegativeInteger(value.game.cost)) {
       errors.push(`${path}.game.cost must be a non-negative integer.`);
     }
+    if (!isPositiveInteger(value.game.hitPoints)) {
+      errors.push(`${path}.game.hitPoints must be a positive integer.`);
+    }
     if (!isPositiveInteger(value.game.resilience)) {
       errors.push(`${path}.game.resilience must be a positive integer.`);
     }
@@ -285,6 +288,7 @@ describe('vehicle catalogue validation', () => {
       },
       game: {
         cost: -1,
+        hitPoints: 0,
         resilience: 0,
         recover: 7,
         morale: 0,
@@ -308,6 +312,7 @@ describe('vehicle catalogue validation', () => {
         'vehicles[0].historical.speedKmh.road must be a non-negative number.',
         'vehicles[0].historical.armor must be an object.',
         'vehicles[0].game.cost must be a non-negative integer.',
+        'vehicles[0].game.hitPoints must be a positive integer.',
         'vehicles[0].game.resilience must be a positive integer.',
         'vehicles[0].game.recover must be a numeric D6 check target.',
         'vehicles[0].game.morale must be a numeric D6 check target.',

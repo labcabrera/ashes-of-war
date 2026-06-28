@@ -45,6 +45,7 @@ export function vehicleCatalogueEntryToUnit(entry: VehicleCatalogueEntry): Vehic
     imageUrl: entry.imageUrl,
     type: entry.type,
     cost: entry.game.cost,
+    hitPoints: requiredNumber(entry.game.hitPoints, entry.id, 'hitPoints'),
     movement: entry.game.movement,
     resilience: requiredNumber(entry.game.resilience, entry.id, 'resilience'),
     recover: entry.game.recover,

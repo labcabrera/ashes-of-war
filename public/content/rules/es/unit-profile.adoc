@@ -37,9 +37,13 @@ La capacidad de una unidad para recuperar puntos de organización perdidos. Dura
 
 TODO: Considerar si tirar por cada punto perdido o expresarlo como 3/4+ tirando 3 dados y recuperando el valor con 4+ independientemente de la organización perdida. A priori y sin hacer testing me gusta más el primero ya que hace que la organización se recupere más cuando está en niveles bajos y dificulta llegar a 0. 
 
+=== Puntos de vida (Hit points)
+
+Este valor indica el umbral de daño que puede soportar una unidad antes de considerarse baja. En términos de infantería sería el equivalente a un soldado caído. En terminos de vehículos la cantidad de daño estructural que puede soportar.
+
 === Moral (Morale)
 
-Valor que determina la tendencia de una unidad cuando recibe gran número de bajas para no huir o rendirse. 
+Valor que determina la tendencia de una unidad cuando recibe gran número de bajas para no huir o rendirse.
 
 == Valores de infantería y armas remolcadas
 
@@ -48,6 +52,12 @@ La infantería usa valores adicionales para representar el número de combatient
 === Integrantes (Members)
 
 Número de integrantes de la unidad. Este valor se utilizará para determinar la capacidad operativa de la unidad y su moral.
+
+=== Número de peanas (Base Count)
+
+Algunas unidades de infantería de tamaño pelotón pueden estar divididas en diferentes número de peanas. Por ejemplo una escuadra de Panzergrenadiers estará formada por una peana de 5 integrantes con una MG y otra peana con 5 fusileros con rifles Mauser.
+
+Los puntos de vida se aplican a cada peana, no al conjunto de la unidad.
 
 == Vehículos
 

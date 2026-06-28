@@ -92,6 +92,7 @@
     ],
     "resilience": 3,
     "recover": 3,
-    "morale": 4
+    "morale": 4,
+    "hitPoints": 8
   }
 }

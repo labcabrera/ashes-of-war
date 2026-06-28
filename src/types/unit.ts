@@ -104,6 +104,8 @@ interface BaseUnitFields {
   imageUrl?: string;
   /** Point cost. */
   cost: number;
+  /** Total damage capacity before the unit is removed. */
+  hitPoints: number;
   /** Required movement ratings for the unit. */
   movement: MovementProfile;
   /** Resistance to organization loss, expressed as the required check value. */
@@ -124,7 +126,7 @@ interface BaseUnitFields {
 export interface InfantryUnit extends BaseUnitFields {
   type: 'infantry';
   members: number;
-  casualtiesThreshold: number;
+  baseCount: number;
   armor?: never;
 }
 

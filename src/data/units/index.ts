@@ -25,6 +25,7 @@ type LegacyUnit = {
   to: number;
   imageUrl?: string;
   cost: number;
+  hitPoints?: number;
   movement: MovementProfile;
   resilience?: number;
   recover?: number;
@@ -34,6 +35,7 @@ type LegacyUnit = {
   keywords?: UnitKeyword[];
   weapons?: UnitWeapon[];
   members?: number;
+  baseCount?: number;
   casualtiesThreshold?: number;
   armor?: UnitArmorProfile;
 };
@@ -55,6 +57,7 @@ function legacyUnitToUnit(unit: LegacyUnit): Unit {
     imageUrl: unit.imageUrl,
     type: unit.type,
     cost: unit.cost,
+    hitPoints: requiredNumber(unit.hitPoints, unit.id, 'hitPoints'),
     movement: unit.movement,
     resilience: requiredNumber(unit.resilience, unit.id, 'resilience'),
     recover: unit.recover,
@@ -69,15 +72,15 @@ function legacyUnitToUnit(unit: LegacyUnit): Unit {
       ...base,
       type: 'infantry',
       members: requiredNumber(unit.members, unit.id, 'members'),
-      casualtiesThreshold: requiredNumber(unit.casualtiesThreshold, unit.id, 'casualtiesThreshold'),
+      baseCount: requiredNumber(unit.baseCount, unit.id, 'baseCount'),
     };
   }
 
   return {
     ...base,
     type: unit.type,
-    casualtiesThreshold: unit.casualtiesThreshold,
     overrun: unit.overrun,
+    casualtiesThreshold: unit.casualtiesThreshold,
     armor: unit.armor,
   };
 }

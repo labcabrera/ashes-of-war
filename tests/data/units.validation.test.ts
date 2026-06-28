@@ -141,6 +141,9 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
   if (!isNonNegativeInteger(value.cost)) {
     errors.push(`${path}.cost must be a non-negative integer.`);
   }
+  if (!isPositiveInteger(value.hitPoints)) {
+    errors.push(`${path}.hitPoints must be a positive integer.`);
+  }
   if (!isPositiveInteger(value.resilience)) {
     errors.push(`${path}.resilience must be a positive integer.`);
   }
@@ -185,8 +188,11 @@ function validateUnit(value: unknown, index: number, weaponIds: ReadonlySet<stri
     if (!isPositiveInteger(value.members)) {
       errors.push(`${path}.members must be a positive integer for infantry units.`);
     }
-    if (!isPositiveInteger(value.casualtiesThreshold)) {
-      errors.push(`${path}.casualtiesThreshold must be a positive integer for non-vehicle units.`);
+    if (!isPositiveInteger(value.baseCount)) {
+      errors.push(`${path}.baseCount must be a positive integer for infantry units.`);
+    }
+    if (value.casualtiesThreshold !== undefined) {
+      errors.push(`${path}.casualtiesThreshold is no longer supported for infantry units; use hitPoints.`);
     }
     if (value.combatants !== undefined) {
       errors.push(`${path}.combatants is no longer supported; use members.`);
@@ -264,10 +270,12 @@ describe('static unit catalogue validation', () => {
           from: 1945,
           to: 1941,
           cost: 1,
+          hitPoints: 0,
           resilience: 0,
           recover: 7,
           morale: 0,
           members: 0,
+          baseCount: 0,
           casualtiesThreshold: 0,
           movement: {
             tactical: { road: -1, crossCountry: 6, rough: 3 },
@@ -285,10 +293,12 @@ describe('static unit catalogue validation', () => {
       expect.arrayContaining([
         'units[0].name must be a non-empty string.',
         'units[0].resilience must be a positive integer.',
+        'units[0].hitPoints must be a positive integer.',
         'units[0].recover must be a numeric D6 check target.',
         'units[0].morale must be a numeric D6 check target.',
         'units[0].members must be a positive integer for infantry units.',
-        'units[0].casualtiesThreshold must be a positive integer for non-vehicle units.',
+        'units[0].baseCount must be a positive integer for infantry units.',
+        'units[0].casualtiesThreshold is no longer supported for infantry units; use hitPoints.',
         'units[0].movement.tactical.road must be a non-negative number.',
         'units[0].from must be less than or equal to units[0].to.',
         'units[0].bases is no longer supported for infantry units.',

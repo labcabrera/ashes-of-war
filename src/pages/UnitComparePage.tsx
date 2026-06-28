@@ -68,14 +68,15 @@ function comparisonRows(unit: Unit, t: ReturnType<typeof useTranslation>['t']): 
     [t('common.type'), t(`units.types.${unit.type}`)],
     [t('common.faction'), t(`factions.${unit.faction}`, unit.faction)],
     [t('common.cost'), unit.cost],
+    [t('units.detail.hitPoints'), unit.hitPoints],
     [t('units.detail.availability'), `${unit.from}-${unit.to}`],
     [t('units.detail.resilience'), unit.resilience],
     [t('units.detail.resources'), formatResources(unit, t)],
     [t('units.detail.keywords'), formatKeywords(unit, t)],
   ];
 
-  if ('members' in unit) rows.splice(5, 0, [t('units.detail.members'), unit.members]);
-  if (unit.casualtiesThreshold !== undefined) rows.splice(6, 0, [t('units.detail.casualtiesThreshold'), unit.casualtiesThreshold]);
+  if ('members' in unit) rows.splice(6, 0, [t('units.detail.members'), unit.members]);
+  if ('baseCount' in unit) rows.splice(7, 0, [t('units.detail.baseCount'), unit.baseCount]);
   return rows;
 }
 

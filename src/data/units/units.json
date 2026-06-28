@@ -37,11 +37,12 @@
           "type": "normal"
         }
       ],
-      "casualtiesThreshold": 3,
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-kompanietrupp",
@@ -71,7 +72,6 @@
       "resourceCosts": {
         "logistics": 4
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "german-mp-40",
@@ -91,7 +91,9 @@
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "united-states-m3-stuart",
@@ -161,7 +163,8 @@
           "armorMM": 13,
           "armorInclination": 0
         }
-      }
+      },
+      "hitPoints": 8
     },
     {
       "id": "united-states-m4-sherman",
@@ -226,7 +229,8 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      }
+      },
+      "hitPoints": 8
     },
     {
       "id": "united-states-m4a1-sherman",
@@ -291,7 +295,8 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      }
+      },
+      "hitPoints": 8
     },
     {
       "id": "united-states-m4a2-sherman",
@@ -356,7 +361,8 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      }
+      },
+      "hitPoints": 8
     },
     {
       "id": "united-states-m4a3-sherman",
@@ -421,7 +427,8 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      }
+      },
+      "hitPoints": 8
     },
     {
       "id": "united-states-m4a4-sherman",
@@ -486,7 +493,8 @@
           "armorMM": 25,
           "armorInclination": 0
         }
-      }
+      },
+      "hitPoints": 8
     },
     {
       "id": "german-mg42-team",
@@ -516,7 +524,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -532,7 +539,9 @@
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 5
+      "members": 5,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-panzergrenadier-squad",
@@ -562,7 +571,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -578,7 +586,9 @@
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-panzerschreck-team",
@@ -617,11 +627,12 @@
           "type": "normal"
         }
       ],
-      "casualtiesThreshold": 1,
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 3
+      "members": 3,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "soviet-union-assault-squad",
@@ -651,7 +662,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "soviet-union-ppsh-41",
@@ -662,7 +672,9 @@
       "resilience": 3,
       "recover": 4,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "soviet-union-field-medic",
@@ -695,11 +707,12 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 2,
       "resilience": 3,
       "recover": 4,
       "morale": 4,
-      "members": 5
+      "members": 5,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "soviet-union-guards-rifle-squad",
@@ -729,12 +742,13 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [],
       "resilience": 3,
       "recover": 4,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "soviet-union-heavy-mg-team",
@@ -764,7 +778,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "soviet-union-maxim-m1910",
@@ -780,7 +793,9 @@
       "resilience": 3,
       "recover": 4,
       "morale": 4,
-      "members": 5
+      "members": 5,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "soviet-union-rifle-squad",
@@ -810,7 +825,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "soviet-union-mosin-nagant-m1891-30",
@@ -821,7 +835,9 @@
       "resilience": 3,
       "recover": 4,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "soviet-union-sniper",
@@ -854,11 +870,12 @@
       "resourceCosts": {
         "intelligence": 1
       },
-      "casualtiesThreshold": 1,
       "resilience": 3,
       "recover": 4,
       "morale": 4,
-      "members": 2
+      "members": 2,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-sanitatsunteroffizier",
@@ -891,11 +908,12 @@
       "resourceCosts": {
         "logistics": 4
       },
-      "casualtiesThreshold": 2,
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 5
+      "members": 5,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-sturmpionier-squad",
@@ -925,7 +943,6 @@
       "resourceCosts": {
         "logistics": 6
       },
-      "casualtiesThreshold": 3,
       "keywords": [
         "explosives"
       ],
@@ -949,7 +966,9 @@
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 8
+      "members": 8,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-pionier-squad",
@@ -979,11 +998,12 @@
       "resourceCosts": {
         "logistics": 10
       },
-      "casualtiesThreshold": 3,
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-sniper-01",
@@ -1016,11 +1036,12 @@
       "keywords": [
         "sniper"
       ],
-      "casualtiesThreshold": 1,
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 2
+      "members": 2,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-wehrmacht-assault-squad",
@@ -1050,7 +1071,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "german-mp-40",
@@ -1061,7 +1081,9 @@
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-wehrmacht-grenadier-squad",
@@ -1091,7 +1113,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -1107,7 +1128,9 @@
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-wehrmacht-light-mortar-team",
@@ -1137,7 +1160,6 @@
       "resourceCosts": {
         "logistics": 4
       },
-      "casualtiesThreshold": 3,
       "keywords": [
         "indirect-fire"
       ],
@@ -1156,7 +1178,9 @@
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 5
+      "members": 5,
+      "hitPoints": 3,
+      "baseCount": 1
     },
     {
       "id": "german-wehrmacht-volksgrenadier-squad",
@@ -1186,7 +1210,6 @@
       "resourceCosts": {
         "logistics": 5
       },
-      "casualtiesThreshold": 3,
       "weapons": [
         {
           "id": "german-mg-34-42",
@@ -1207,7 +1230,9 @@
       "resilience": 3,
       "recover": 3,
       "morale": 4,
-      "members": 10
+      "members": 10,
+      "hitPoints": 3,
+      "baseCount": 1
     }
   ]
 }

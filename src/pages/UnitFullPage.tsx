@@ -2,6 +2,9 @@
  * UnitFullPage - full-page extended view for one unit.
  */
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Avatar,
   Box,
   Button,
@@ -22,8 +25,10 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import DataObjectIcon from '@mui/icons-material/DataObject';
 import DescriptionIcon from '@mui/icons-material/Description';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FlightIcon from '@mui/icons-material/Flight';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import GroupsIcon from '@mui/icons-material/Groups';
@@ -39,6 +44,7 @@ import { Link as RouterLink, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import UnitCompareDialog from '../components/units/UnitCompareDialog';
 import { allUnits } from '../data/units';
+import unitsData from '../data/units/units.json';
 import { vehicles } from '../data/vehicles';
 import { towedWeapons } from '../data/towed';
 import { allWeapons } from '../data/weapons';
@@ -67,6 +73,9 @@ const units = allUnits;
 const weapons = allWeapons;
 const vehicleCatalogue = [...vehicles, ...towedWeapons];
 
+type SourceJson = Record<string, unknown> & { id: string };
+const legacyUnitSources = unitsData.units as SourceJson[];
+
 function getWeapon(assignment: UnitWeapon) {
   return weapons.find((weapon) => weapon.id === assignment.id);
 }
@@ -90,10 +99,6 @@ function armorRows(armorProfile: NonNullable<Unit['armor']>): Array<[string, Arm
 
 function movementValue(value: number) {
   return `${value}'`;
-}
-
-function isNonVehicleUnit(unit: Unit) {
-  return !unit.armor;
 }
 
 function checkValue(value?: number) {
@@ -268,11 +273,12 @@ function UnitProfileSection({ unit }: { unit: Unit }) {
         }}
       >
         <ProfileStat label={t('common.cost')} value={`${unit.cost} pts`} icon={MilitaryTechIcon} />
+        <ProfileStat label={t('units.detail.hitPoints')} value={unit.hitPoints} icon={GpsFixedIcon} />
         {unit.type === 'infantry' && (
           <ProfileStat label={t('units.detail.members')} value={unit.members} icon={GroupsIcon} />
         )}
-        {isNonVehicleUnit(unit) && (
-          <ProfileStat label={t('units.detail.casualtiesThreshold')} value={unit.casualtiesThreshold ?? '-'} icon={GpsFixedIcon} />
+        {unit.type === 'infantry' && (
+          <ProfileStat label={t('units.detail.baseCount')} value={unit.baseCount} icon={AssignmentIcon} />
         )}
       </Box>
       {unit.resourceCosts && (
@@ -406,6 +412,50 @@ function HistoricalSpecsSection({ unit, entry }: { unit: Unit; entry?: VehicleCa
   );
 }
 
+function SourceJsonSection({ source }: { source: unknown }) {
+  const { t } = useTranslation();
+  const sourceJson = JSON.stringify(source, null, 2);
+
+  return (
+    <Accordion disableGutters>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="unit-source-json-content"
+        id="unit-source-json-header"
+      >
+        <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+          <DataObjectIcon sx={{ fontSize: 20, color: 'secondary.main' }} />
+          <Typography variant="subtitle1" sx={{ fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            {t('units.detail.sourceJson')}
+          </Typography>
+        </Stack>
+      </AccordionSummary>
+      <AccordionDetails sx={{ pt: 0 }}>
+        <Box
+          component="pre"
+          sx={{
+            m: 0,
+            p: 2,
+            maxHeight: 480,
+            overflow: 'auto',
+            border: 1,
+            borderColor: 'divider',
+            borderRadius: 1,
+            bgcolor: 'background.default',
+            color: 'text.secondary',
+            fontFamily: 'monospace',
+            fontSize: '0.8125rem',
+            lineHeight: 1.55,
+            whiteSpace: 'pre',
+          }}
+        >
+          {sourceJson}
+        </Box>
+      </AccordionDetails>
+    </Accordion>
+  );
+}
+
 export default function UnitFullPage() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
@@ -427,6 +477,8 @@ export default function UnitFullPage() {
 
   const assignedWeapons = unit.weapons ?? [];
   const vehicleEntry = vehicleCatalogue.find((vehicle) => vehicle.id === unit.id);
+  const legacyUnitSource = legacyUnitSources.find((source) => source.id === unit.id);
+  const sourceJson = legacyUnitSource ?? vehicleEntry ?? unit;
   const description =
     getDescription('units', unit.id, i18n.resolvedLanguage) ??
     getDescription('types', unit.type, i18n.resolvedLanguage);
@@ -565,6 +617,8 @@ export default function UnitFullPage() {
             </Typography>
           </Section>
         )}
+
+        <SourceJsonSection source={sourceJson} />
       </Stack>
       <UnitCompareDialog
         open={compareDialogOpen}
