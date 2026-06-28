@@ -237,6 +237,7 @@
       "resources": "Costes de recursos",
       "availability": "Disponibilidad",
       "description": "Descripción",
+      "gameProfile": "Perfil de juego",
       "summary": "Resumen",
       "thresholds": "Umbrales",
       "members": "Integrantes",

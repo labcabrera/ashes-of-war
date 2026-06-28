@@ -223,6 +223,7 @@
       "resources": "Resource Costs",
       "availability": "Availability",
       "description": "Description",
+      "gameProfile": "Game profile",
       "summary": "Summary",
       "thresholds": "Thresholds",
       "members": "Members",

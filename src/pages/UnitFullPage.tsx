@@ -26,11 +26,14 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import FlightIcon from '@mui/icons-material/Flight';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import GroupsIcon from '@mui/icons-material/Groups';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 import ShieldIcon from '@mui/icons-material/Shield';
 import SpeedIcon from '@mui/icons-material/Speed';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import { useState, type ReactNode } from 'react';
 import { Link as RouterLink, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -91,6 +94,10 @@ function movementValue(value: number) {
 
 function isNonVehicleUnit(unit: Unit) {
   return !unit.armor;
+}
+
+function checkValue(value?: number) {
+  return value === undefined ? '-' : `${value}+`;
 }
 
 /** Card-like container for a labeled group of unit details. */
@@ -183,6 +190,107 @@ function WeaponAssignments({ assignments }: { assignments: UnitWeapon[] }) {
         );
       })}
     </Stack>
+  );
+}
+
+function ProfileStat({
+  label,
+  value,
+  icon: Icon,
+  emphasis = false,
+}: {
+  label: string;
+  value: string | number;
+  icon: typeof MilitaryTechIcon;
+  emphasis?: boolean;
+}) {
+  return (
+    <Box
+      sx={{
+        borderLeft: 3,
+        borderColor: emphasis ? 'secondary.main' : 'divider',
+        bgcolor: emphasis ? 'rgba(197, 167, 106, 0.07)' : 'transparent',
+        px: { xs: 1.25, sm: 1.5 },
+        py: { xs: 1.25, sm: 1.5 },
+        minHeight: emphasis ? 112 : 78,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      }}
+    >
+      <Stack direction="row" spacing={1} sx={{ alignItems: 'center', color: emphasis ? 'secondary.main' : 'text.secondary' }}>
+        <Icon sx={{ fontSize: emphasis ? 24 : 20 }} />
+        <Typography
+          variant="caption"
+          sx={{ fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase' }}
+        >
+          {label}
+        </Typography>
+      </Stack>
+      <Typography
+        variant={emphasis ? 'h3' : 'h5'}
+        sx={{
+          mt: 1,
+          fontWeight: 900,
+          lineHeight: 1,
+          color: emphasis ? 'secondary.light' : 'text.primary',
+          letterSpacing: 0,
+        }}
+      >
+        {value}
+      </Typography>
+    </Box>
+  );
+}
+
+function UnitProfileSection({ unit }: { unit: Unit }) {
+  const { t } = useTranslation();
+
+  return (
+    <Section title={t('units.detail.gameProfile')} icon={AssignmentIcon}>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, minmax(0, 1fr))' },
+          gap: { xs: 1, sm: 1.5 },
+          mb: 2,
+        }}
+      >
+        <ProfileStat label={t('units.detail.resilience')} value={checkValue(unit.resilience)} icon={ShieldIcon} emphasis />
+        <ProfileStat label={t('units.detail.recover')} value={checkValue(unit.recover)} icon={VolunteerActivismIcon} emphasis />
+        <ProfileStat label={t('units.detail.morale')} value={checkValue(unit.morale)} icon={PsychologyAltIcon} emphasis />
+      </Box>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, minmax(0, 1fr))' },
+          gap: { xs: 1, sm: 1.5 },
+        }}
+      >
+        <ProfileStat label={t('common.cost')} value={`${unit.cost} pts`} icon={MilitaryTechIcon} />
+        {unit.type === 'infantry' && (
+          <ProfileStat label={t('units.detail.members')} value={unit.members} icon={GroupsIcon} />
+        )}
+        {isNonVehicleUnit(unit) && (
+          <ProfileStat label={t('units.detail.casualtiesThreshold')} value={unit.casualtiesThreshold ?? '-'} icon={GpsFixedIcon} />
+        )}
+      </Box>
+      {unit.resourceCosts && (
+        <Stack
+          direction={{ xs: 'column', sm: 'row' }}
+          spacing={1}
+          useFlexGap
+          sx={{ mt: 2, flexWrap: 'wrap', alignItems: { xs: 'stretch', sm: 'center' } }}
+        >
+          <Typography variant="caption" color="text.secondary" sx={{ mr: { sm: 0.5 }, letterSpacing: '0.06em' }}>
+            {t('units.detail.resources')}
+          </Typography>
+          {Object.entries(unit.resourceCosts).map(([resource, cost]) => (
+            <Chip key={resource} label={`${t(`army.resources.${resource}`)}: ${cost}`} size="small" />
+          ))}
+        </Stack>
+      )}
+    </Section>
   );
 }
 
@@ -378,6 +486,8 @@ export default function UnitFullPage() {
           </Box>
         </Paper>
 
+        <UnitProfileSection unit={unit} />
+
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '0.85fr 1.15fr' }, gap: 3, alignItems: 'start' }}>
           <Stack spacing={3}>
             <Section title={t('units.detail.movement.title')} icon={SpeedIcon}>
@@ -403,49 +513,6 @@ export default function UnitFullPage() {
                   </TableBody>
                 </Table>
               </TableContainer>
-            </Section>
-
-            <Section title={t('units.detail.summary')} icon={AssignmentIcon}>
-              <Stack spacing={2}>
-                {unit.resourceCosts && (
-                  <Box>
-                    <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1, letterSpacing: '0.06em' }}>
-                      {t('units.detail.resources')}
-                    </Typography>
-                    <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
-                      {Object.entries(unit.resourceCosts).map(([resource, cost]) => (
-                        <Chip key={resource} label={`${t(`army.resources.${resource}`)}: ${cost}`} />
-                      ))}
-                    </Stack>
-                  </Box>
-                )}
-                <Box>
-                  <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1, letterSpacing: '0.06em' }}>
-                    {t('units.detail.thresholds')}
-                  </Typography>
-                  <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
-                    <Chip
-                      label={`${t('units.detail.resilience')}: ${unit.resilience}`}
-                      color="secondary"
-                      variant="outlined"
-                    />
-                    {isNonVehicleUnit(unit) && (
-                      <Chip
-                        label={`${t('units.detail.casualtiesThreshold')}: ${unit.casualtiesThreshold}`}
-                        color="secondary"
-                        variant="outlined"
-                      />
-                    )}
-                    {unit.type === 'infantry' && (
-                      <Chip
-                        label={`${t('units.detail.members')}: ${unit.members}`}
-                        color="secondary"
-                        variant="outlined"
-                      />
-                    )}
-                  </Stack>
-                </Box>
-              </Stack>
             </Section>
 
             {unit.armor && (
