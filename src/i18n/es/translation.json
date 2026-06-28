@@ -337,6 +337,8 @@
     "hitOn": "Hit-On",
     "range": "Distancia",
     "rangeMeters": "Distancia (m)",
+    "caliber": "Calibre",
+    "barrelLength": "Longitud del cañón",
     "penetration": "Pen.",
     "penetrationMm": "Penetración (mm)",
     "penetrationAngle": "Ángulo de penetración",

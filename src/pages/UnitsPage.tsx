@@ -1,7 +1,7 @@
 /**
- * UnitsPage - tabbed unit and weapon catalogue with card/table views and detail panels.
+ * UnitsPage - tabbed unit and weapon catalogue with card/table views.
  */
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import {
   Box,
   Drawer,
@@ -28,12 +28,10 @@ import UnitFilterSidebar from '../components/units/UnitFilterSidebar';
 import UnitFilterChips from '../components/units/UnitFilterChips';
 import UnitList from '../components/units/UnitList';
 import WeaponList from '../components/weapons/WeaponList';
-import WeaponDetail from '../components/weapons/WeaponDetail';
 import WeaponFilters from '../components/weapons/WeaponFilters';
 import { Unit } from '../types/unit';
 import { Weapon } from '../types/weapon';
 import type { FactionId } from '../types/faction';
-import { allUnits } from '../data/units';
 import { allWeapons } from '../data/weapons';
 import { weaponFactionId } from '../utils/images';
 
@@ -85,12 +83,7 @@ export default function UnitsPage() {
     return weaponFactionId(id) ?? '';
   }
 
-  const catalogueUnits = allUnits;
   const weapons = allWeapons;
-  const selectedWeapon = useMemo(() => {
-    const weaponId = searchParams.get('weapon');
-    return weaponId ? (weapons.find((weapon) => weapon.id === weaponId) ?? null) : null;
-  }, [searchParams, weapons]);
 
   const weaponFactions = useMemo(() => {
     const all = weapons.map((w) => getWeaponFaction(w.id)).filter((f): f is FactionId => !!f);
@@ -110,7 +103,7 @@ export default function UnitsPage() {
   }
 
   function handleWeaponSelect(weapon: Weapon) {
-    setSearchParams({ tab: 'weapons', weapon: weapon.id });
+    navigate(`/weapons/${encodeURIComponent(weapon.id)}`);
   }
 
   function handleUnitSelect(unit: Unit) {
@@ -240,7 +233,7 @@ export default function UnitsPage() {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr', lg: 'minmax(0, 2fr) minmax(360px, 1fr)' },
+            gridTemplateColumns: '1fr',
             alignItems: 'start',
             gap: 3,
           }}
@@ -255,13 +248,11 @@ export default function UnitsPage() {
             />
             <WeaponList
               weapons={filteredWeapons}
-              selectedId={selectedWeapon?.id ?? null}
+              selectedId={null}
               viewMode={viewMode}
               onSelect={handleWeaponSelect}
             />
           </Box>
-
-          <WeaponDetail weapon={selectedWeapon} units={catalogueUnits} />
         </Box>
       )}
     </Box>

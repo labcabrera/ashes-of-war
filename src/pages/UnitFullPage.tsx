@@ -85,7 +85,7 @@ function weaponLabel(assignment: UnitWeapon) {
 }
 
 function weaponHref(weaponId: string) {
-  return `/units?tab=weapons&weapon=${encodeURIComponent(weaponId)}`;
+  return `/weapons/${encodeURIComponent(weaponId)}`;
 }
 
 function armorRows(armorProfile: NonNullable<Unit['armor']>): Array<[string, Armor]> {

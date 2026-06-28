@@ -10,6 +10,7 @@ import RulesChapterPage from './pages/RulesChapterPage';
 import UnitsPage from './pages/UnitsPage';
 import UnitFullPage from './pages/UnitFullPage';
 import UnitComparePage from './pages/UnitComparePage';
+import WeaponFullPage from './pages/WeaponFullPage';
 import CampaignPage from './pages/CampaignPage';
 import WikiPage from './pages/WikiPage';
 import WikiArticlePage from './pages/WikiArticlePage';
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: 'units', element: <UnitsPage /> },
       { path: 'units/:unitId/compare/:compareUnitId', element: <UnitComparePage /> },
       { path: 'units/:unitId', element: <UnitFullPage /> },
+      { path: 'weapons/:weaponId', element: <WeaponFullPage /> },
       { path: 'army-builder', element: <ArmyBuilderPage /> },
       { path: 'companies', element: <CompaniesPage /> },
       { path: 'companies/:companyId', element: <CompanyDetailPage /> },

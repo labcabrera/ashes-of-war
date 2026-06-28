@@ -7,6 +7,7 @@ import {
   Chip,
   Collapse,
   IconButton,
+  Link,
   Paper,
   Stack,
   Table,
@@ -30,8 +31,10 @@ import WarehouseIcon from '@mui/icons-material/Warehouse';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Fragment, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link as RouterLink } from 'react-router-dom';
 import { Unit, UnitWeapon } from '../../types/unit';
 import { allWeapons } from '../../data/weapons';
+import { factionFlagUrl } from '../../utils/images';
 import { formatUnitKeyword } from '../../utils/unitKeywords';
 import UnitCard from './UnitCard';
 
@@ -64,17 +67,12 @@ function armourSummary(unit: Unit) {
   return `${front.value}/${side.value}/${rear.value}/${exposed.value}`;
 }
 
-function weaponSummary(unit: Unit) {
-  const assignments = unit.weapons ?? [];
-  if (assignments.length === 0) return '-';
-
-  return assignments
-    .map((assignment) => `${assignment.count} x ${weaponsById.get(assignment.id) ?? assignment.id}`)
-    .join(' · ');
-}
-
 function weaponName(assignment: UnitWeapon) {
   return weaponsById.get(assignment.id) ?? assignment.id;
+}
+
+function weaponHref(weaponId: string) {
+  return `/weapons/${encodeURIComponent(weaponId)}`;
 }
 
 function CostResourcesCell({ unit }: { unit: Unit }) {
@@ -159,6 +157,40 @@ function MovementCell({ unit }: { unit: Unit }) {
           </Stack>
         );
       })}
+    </Stack>
+  );
+}
+
+function WeaponsCell({ unit }: { unit: Unit }) {
+  const assignments = unit.weapons ?? [];
+
+  if (assignments.length === 0) {
+    return (
+      <Typography variant="caption" color="text.disabled">
+        -
+      </Typography>
+    );
+  }
+
+  return (
+    <Stack spacing={0.25}>
+      {assignments.map((assignment, index) => (
+        <Link
+          key={`${assignment.type}-${assignment.id}-${index}`}
+          component={RouterLink}
+          to={weaponHref(assignment.id)}
+          underline="hover"
+          color="secondary.light"
+          sx={{
+            display: 'block',
+            fontSize: '0.98rem',
+            fontWeight: 600,
+            lineHeight: 1.35,
+          }}
+        >
+          {assignment.count} x {weaponName(assignment)}
+        </Link>
+      ))}
     </Stack>
   );
 }
@@ -311,7 +343,26 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
   if (viewMode === 'table') {
     return (
       <TableContainer component={Paper}>
-        <Table size="small" aria-label={t('catalogue.tabs.units')} sx={{ minWidth: 1280 }}>
+        <Table
+          size="small"
+          aria-label={t('catalogue.tabs.units')}
+          sx={{
+            minWidth: 1280,
+            '& > thead > tr > th': {
+              fontSize: '1rem',
+              fontWeight: 700,
+            },
+            '& > tbody > tr > td': {
+              fontSize: '1.05rem',
+            },
+            '& > tbody > tr > td .MuiTypography-body2': {
+              fontSize: '1.05rem',
+            },
+            '& > tbody > tr > td .MuiTypography-caption': {
+              fontSize: '0.98rem',
+            },
+          }}
+        >
           <TableHead>
             <TableRow>
               <TableCell>{t('units.table.actions')}</TableCell>
@@ -349,6 +400,7 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                 </TableRow>
                 {group.items.map((unit) => {
                   const outOfYear = isOutOfYear(unit);
+                  const factionLabel = t(`factions.${unit.faction}`, unit.faction);
                   const keywords = unit.keywords?.map((keyword) => formatUnitKeyword(keyword, t)).join(' · ') ?? '-';
                   const assignments = unit.weapons ?? [];
                   const isExpanded = expandedUnitIds.has(unit.id);
@@ -385,7 +437,24 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                           {unit.name}
                           </Typography>
                         </TableCell>
-                        <TableCell sx={{ whiteSpace: 'nowrap' }}>{t(`factions.${unit.faction}`, unit.faction)}</TableCell>
+                        <TableCell sx={{ whiteSpace: 'nowrap' }}>
+                          <Tooltip title={factionLabel}>
+                            <Box
+                              component="img"
+                              src={factionFlagUrl(unit.faction)}
+                              alt={factionLabel}
+                              sx={{
+                                display: 'block',
+                                width: 36,
+                                height: 24,
+                                borderRadius: 0.5,
+                                objectFit: 'cover',
+                                border: 1,
+                                borderColor: 'divider',
+                              }}
+                            />
+                          </Tooltip>
+                        </TableCell>
                         <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
                           <ProfileValue label={t('units.detail.resilience')} value={unit.resilience} />
                         </TableCell>
@@ -411,7 +480,7 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                           <Typography variant="caption">{keywords}</Typography>
                         </TableCell>
                         <TableCell sx={{ minWidth: 260 }}>
-                          <Typography variant="caption">{weaponSummary(unit)}</Typography>
+                          <WeaponsCell unit={unit} />
                         </TableCell>
                         <TableCell sx={{ minWidth: 170 }}>
                           <CostResourcesCell unit={unit} />

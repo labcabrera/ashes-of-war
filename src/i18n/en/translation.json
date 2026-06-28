@@ -323,6 +323,8 @@
     "hitOn": "Hit-On",
     "range": "Range",
     "rangeMeters": "Range (m)",
+    "caliber": "Caliber",
+    "barrelLength": "Barrel length",
     "penetration": "Pen.",
     "penetrationMm": "Penetration (mm)",
     "penetrationAngle": "Penetration angle",
