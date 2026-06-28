@@ -48,14 +48,14 @@ function movementSummary(unit: Unit) {
 }
 
 function armourSummary(unit: Unit) {
-  if (!unit.profile) return '-';
-  const { front, side, rear, exposed } = unit.profile;
+  if (!unit.armor) return '-';
+  const { front, side, rear, exposed } = unit.armor;
   return `${front.value}/${side.value}/${rear.value}/${exposed.value}`;
 }
 
 function thresholdsSummary(unit: Unit, t: ReturnType<typeof useTranslation>['t']) {
   const values = [
-    `${t('units.detail.organizationThresholdShort')} ${unit.organizationThreshold}`,
+    `${t('units.detail.resilienceShort')} ${unit.resilience}`,
   ];
 
   if ('casualtiesThreshold' in unit && unit.casualtiesThreshold !== undefined) {
@@ -63,7 +63,7 @@ function thresholdsSummary(unit: Unit, t: ReturnType<typeof useTranslation>['t']
   }
 
   if (unit.type === 'infantry') {
-    values.push(`${t('units.detail.combatants')} ${unit.combatants}`);
+    values.push(`${t('units.detail.members')} ${unit.members}`);
   }
 
   return values.join(' · ');

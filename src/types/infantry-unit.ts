@@ -22,10 +22,18 @@ export interface InfantryHistoricalProfile {
 export interface InfantryGameProfile {
   /** Point cost. */
   cost: number;
-  /** Organization loss threshold used by morale and disruption rules. */
-  organizationThreshold: number;
-  /** Number of individual combatants represented by this unit. */
-  combatants: number;
+  /** Resistance to organization loss, expressed as the required check value. */
+  resilience?: number;
+  /** @deprecated Use resilience. */
+  organizationThreshold?: number;
+  /** Optional threshold used to recover lost organization points. */
+  recover?: number;
+  /** Optional morale threshold used when the unit suffers heavy casualties. */
+  morale?: number;
+  /** Number of individual members represented by this unit. */
+  members?: number;
+  /** @deprecated Use members. */
+  combatants?: number;
   /** Casualties threshold before the unit is considered destroyed. */
   casualtiesThreshold: number;
   /** Movement ratings for the unit. */

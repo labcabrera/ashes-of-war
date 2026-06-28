@@ -76,12 +76,12 @@ function weaponHref(weaponId: string) {
   return `/units?tab=weapons&weapon=${encodeURIComponent(weaponId)}`;
 }
 
-function armorRows(profile: NonNullable<Unit['profile']>): Array<[string, Armor]> {
+function armorRows(armorProfile: NonNullable<Unit['armor']>): Array<[string, Armor]> {
   return [
-    ['front', profile.front],
-    ['side', profile.side],
-    ['rear', profile.rear],
-    ['exposed', profile.exposed],
+    ['front', armorProfile.front],
+    ['side', armorProfile.side],
+    ['rear', armorProfile.rear],
+    ['exposed', armorProfile.exposed],
   ];
 }
 
@@ -90,7 +90,7 @@ function movementValue(value: number) {
 }
 
 function isNonVehicleUnit(unit: Unit) {
-  return !unit.profile;
+  return !unit.armor;
 }
 
 /** Card-like container for a labeled group of unit details. */
@@ -224,7 +224,7 @@ function HistoricalSpecsSection({ unit, entry }: { unit: Unit; entry?: VehicleCa
       ] as const)
     : [];
 
-  const armorEntries = unit.profile ? armorRows(unit.profile) : [];
+  const armorEntries = unit.armor ? armorRows(unit.armor) : [];
 
   if (fields.length === 0 && speedRows.length === 0 && armorEntries.length === 0 && !historical?.sourceUrl) {
     return null;
@@ -425,7 +425,7 @@ export default function UnitFullPage() {
                   </Typography>
                   <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
                     <Chip
-                      label={`${t('units.detail.organizationThreshold')}: ${unit.organizationThreshold}`}
+                      label={`${t('units.detail.resilience')}: ${unit.resilience}`}
                       color="secondary"
                       variant="outlined"
                     />
@@ -438,7 +438,7 @@ export default function UnitFullPage() {
                     )}
                     {unit.type === 'infantry' && (
                       <Chip
-                        label={`${t('units.detail.combatants')}: ${unit.combatants}`}
+                        label={`${t('units.detail.members')}: ${unit.members}`}
                         color="secondary"
                         variant="outlined"
                       />
@@ -448,7 +448,7 @@ export default function UnitFullPage() {
               </Stack>
             </Section>
 
-            {unit.profile && (
+            {unit.armor && (
               <Section title={t('units.detail.armour')} icon={ShieldIcon}>
                 <TableContainer>
                   <Table size="small">
@@ -459,7 +459,7 @@ export default function UnitFullPage() {
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                      {armorRows(unit.profile).map(([facing, armor]) => (
+                      {armorRows(unit.armor).map(([facing, armor]) => (
                         <TableRow key={facing}>
                           <TableCell>{t(`units.detail.${facing}`)}</TableCell>
                           <TableCell align="right">{armor.value}</TableCell>

@@ -43,8 +43,16 @@ export interface VehicleHistoricalProfile {
 export interface VehicleGameProfile {
   /** Point cost. */
   cost: number;
-  /** Organization loss threshold used by morale and disruption rules. */
-  organizationThreshold: number;
+  /** Resistance to organization loss, expressed as the required check value. */
+  resilience?: number;
+  /** @deprecated Use resilience. */
+  organizationThreshold?: number;
+  /** Optional threshold used to recover lost organization points. */
+  recover?: number;
+  /** Optional morale threshold used when the unit suffers heavy casualties. */
+  morale?: number;
+  /** Optional vehicle capability to cross obstacles or force through rough terrain. */
+  overrun?: number;
   /** Movement ratings for the unit. */
   movement: MovementProfile;
   /** Required for armoured types (tank, tank-destroyer, assault-gun, sp-artillery, sp-anti-aircraft). */

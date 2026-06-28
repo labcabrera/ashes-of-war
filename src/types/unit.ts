@@ -1,6 +1,6 @@
 /**
  * Unit domain types for Ashes of War.
- * Defines unit categories, armour values, movement, weapons, and roster entries.
+ * Defines unit categories, armor values, movement, weapons, and roster entries.
  */
 
 import type { FactionId } from './faction';
@@ -40,25 +40,31 @@ export const UNIT_TYPES: UnitType[] = [
   'aircraft',
 ];
 
-/** Armour details for one vehicle facing. */
-export interface Armor {
-  /** Game-facing armour rating used by combat resolution. */
+/** Armor details for one vehicle facing. */
+export interface ArmorFacing {
+  /** Game-facing armor rating used by combat resolution. */
   value: number;
-  /** Historical or representative armour thickness in millimetres. */
+  /** Historical or representative armor thickness in millimetres. */
   armorMM: number;
-  /** Representative armour plate inclination in degrees. */
+  /** Representative armor plate inclination in degrees. */
   armorInclination: number;
   /** Optional context for ranges, curved mantlets, or exposed weak spots. */
   notes?: string;
 }
 
-/** Armour ratings for armoured vehicle units. */
-export interface TankProfile {
-  front: Armor;
-  side: Armor;
-  rear: Armor;
-  exposed: Armor;
+/** Armor ratings for armored vehicle units. */
+export interface UnitArmorProfile {
+  front: ArmorFacing;
+  side: ArmorFacing;
+  rear: ArmorFacing;
+  exposed: ArmorFacing;
 }
+
+/** @deprecated Use ArmorFacing. */
+export type Armor = ArmorFacing;
+
+/** @deprecated Use UnitArmorProfile. */
+export type TankProfile = UnitArmorProfile;
 
 /** Movement rating for one operating pace across terrain types. */
 export interface MovementSpeedProfile {
@@ -100,21 +106,27 @@ interface BaseUnitFields {
   cost: number;
   /** Required movement ratings for the unit. */
   movement: MovementProfile;
-  /** Organization loss threshold used by morale and disruption rules. */
-  organizationThreshold: number;
+  /** Resistance to organization loss, expressed as the required check value. */
+  resilience: number;
+  /** Optional threshold used to recover lost organization points. */
+  recover?: number;
+  /** Optional morale threshold used when the unit suffers heavy casualties. */
+  morale?: number;
+  /** Optional vehicle capability to cross obstacles or force through rough terrain. */
+  overrun?: number;
   /** Optional resource costs keyed by ResourcePool.key. */
   resourceCosts?: Record<string, number>;
   /** Optional rule keywords (e.g. 'low-reliability', 'veteran'). */
   keywords?: UnitKeyword[];
 }
 
-/** Infantry roster entries with combatants and assigned weapons. */
+/** Infantry roster entries with members and assigned weapons. */
 export interface InfantryUnit extends BaseUnitFields {
   type: 'infantry';
-  combatants: number;
+  members: number;
   casualtiesThreshold: number;
   weapons?: UnitWeapon[];
-  profile?: never;
+  armor?: never;
 }
 
 /** Vehicle and support roster entries that are not infantry formations. */
@@ -124,8 +136,8 @@ export interface VehicleUnit extends BaseUnitFields {
   casualtiesThreshold?: number;
   /** Optional weapon assignments resolved against the weapon catalogue. */
   weapons?: UnitWeapon[];
-  /** Optional armour profile for armoured vehicle entries. */
-  profile?: TankProfile;
+  /** Optional armor profile for armored vehicle entries. */
+  armor?: UnitArmorProfile;
 }
 
 /** A unit roster entry, discriminated by its category. */

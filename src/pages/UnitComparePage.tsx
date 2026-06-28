@@ -45,10 +45,10 @@ function weaponById(id: string): Weapon | undefined {
 
 function armourRows(unit: Unit): Array<[string, Armor | undefined]> {
   return [
-    ['front', unit.profile?.front],
-    ['side', unit.profile?.side],
-    ['rear', unit.profile?.rear],
-    ['exposed', unit.profile?.exposed],
+    ['front', unit.armor?.front],
+    ['side', unit.armor?.side],
+    ['rear', unit.armor?.rear],
+    ['exposed', unit.armor?.exposed],
   ];
 }
 
@@ -69,12 +69,12 @@ function comparisonRows(unit: Unit, t: ReturnType<typeof useTranslation>['t']): 
     [t('common.faction'), t(`factions.${unit.faction}`, unit.faction)],
     [t('common.cost'), unit.cost],
     [t('units.detail.availability'), `${unit.from}-${unit.to}`],
-    [t('units.detail.organizationThreshold'), unit.organizationThreshold],
+    [t('units.detail.resilience'), unit.resilience],
     [t('units.detail.resources'), formatResources(unit, t)],
     [t('units.detail.keywords'), formatKeywords(unit, t)],
   ];
 
-  if ('combatants' in unit) rows.splice(5, 0, [t('units.detail.combatants'), unit.combatants]);
+  if ('members' in unit) rows.splice(5, 0, [t('units.detail.members'), unit.members]);
   if (unit.casualtiesThreshold !== undefined) rows.splice(6, 0, [t('units.detail.casualtiesThreshold'), unit.casualtiesThreshold]);
   return rows;
 }
@@ -181,7 +181,7 @@ function MovementTable({ left, right }: { left: Unit; right: Unit }) {
 
 function ArmourTable({ left, right }: { left: Unit; right: Unit }) {
   const { t } = useTranslation();
-  if (!left.profile && !right.profile) return null;
+  if (!left.armor && !right.armor) return null;
   const rightRows = armourRows(right);
 
   return (
