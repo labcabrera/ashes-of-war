@@ -62,7 +62,6 @@ function legacyUnitToUnit(unit: LegacyUnit): Unit {
     resilience: requiredNumber(unit.resilience ?? unit.organizationThreshold, unit.id, 'resilience'),
     recover: unit.recover,
     morale: unit.morale,
-    overrun: unit.overrun,
     resourceCosts: unit.resourceCosts,
     weapons: unit.weapons,
     keywords: unit.keywords,
@@ -81,6 +80,7 @@ function legacyUnitToUnit(unit: LegacyUnit): Unit {
     ...base,
     type: unit.type,
     casualtiesThreshold: unit.casualtiesThreshold,
+    overrun: unit.overrun,
     armor: unit.armor ?? unit.profile,
   };
 }

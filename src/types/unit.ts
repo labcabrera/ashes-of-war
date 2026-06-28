@@ -112,10 +112,10 @@ interface BaseUnitFields {
   recover?: number;
   /** Optional morale threshold used when the unit suffers heavy casualties. */
   morale?: number;
-  /** Optional vehicle capability to cross obstacles or force through rough terrain. */
-  overrun?: number;
   /** Optional resource costs keyed by ResourcePool.key. */
   resourceCosts?: Record<string, number>;
+  /** Optional weapon assignments resolved against the weapon catalogue. */
+  weapons?: UnitWeapon[];
   /** Optional rule keywords (e.g. 'low-reliability', 'veteran'). */
   keywords?: UnitKeyword[];
 }
@@ -125,7 +125,6 @@ export interface InfantryUnit extends BaseUnitFields {
   type: 'infantry';
   members: number;
   casualtiesThreshold: number;
-  weapons?: UnitWeapon[];
   armor?: never;
 }
 
@@ -134,8 +133,8 @@ export interface VehicleUnit extends BaseUnitFields {
   type: Exclude<UnitType, 'infantry'>;
   /** Required for non-vehicle support units that do not have an armour profile. */
   casualtiesThreshold?: number;
-  /** Optional weapon assignments resolved against the weapon catalogue. */
-  weapons?: UnitWeapon[];
+  /** Optional vehicle capability to cross obstacles or force through rough terrain. */
+  overrun?: number;
   /** Optional armor profile for armored vehicle entries. */
   armor?: UnitArmorProfile;
 }
