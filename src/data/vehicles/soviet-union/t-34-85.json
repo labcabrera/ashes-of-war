@@ -79,7 +79,7 @@
       "fuel": 8,
       "logistics": 5
     },
-    "resilience": 10,
+    "resilience": 3,
     "recover": 4,
     "morale": 4
   }

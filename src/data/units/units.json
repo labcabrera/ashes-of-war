@@ -38,7 +38,7 @@
         }
       ],
       "casualtiesThreshold": 3,
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 10
@@ -88,7 +88,7 @@
         "radio",
         "hq"
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 10
@@ -137,7 +137,7 @@
           "type": "hull"
         }
       ],
-      "resilience": 8,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "armor": {
@@ -202,7 +202,7 @@
           "type": "turret"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "armor": {
@@ -267,7 +267,7 @@
           "type": "turret"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "armor": {
@@ -332,7 +332,7 @@
           "type": "turret"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "armor": {
@@ -397,7 +397,7 @@
           "type": "turret"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "armor": {
@@ -462,7 +462,7 @@
           "type": "turret"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "armor": {
@@ -529,7 +529,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 5
@@ -575,7 +575,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 10
@@ -618,7 +618,7 @@
         }
       ],
       "casualtiesThreshold": 1,
-      "resilience": 6,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 3
@@ -659,7 +659,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "members": 10
@@ -696,7 +696,7 @@
         "logistics": 5
       },
       "casualtiesThreshold": 2,
-      "resilience": 6,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "members": 5
@@ -731,7 +731,7 @@
       },
       "casualtiesThreshold": 3,
       "weapons": [],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "members": 10
@@ -777,7 +777,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "members": 5
@@ -818,7 +818,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "members": 10
@@ -855,7 +855,7 @@
         "intelligence": 1
       },
       "casualtiesThreshold": 1,
-      "resilience": 5,
+      "resilience": 3,
       "recover": 4,
       "morale": 4,
       "members": 2
@@ -892,7 +892,7 @@
         "logistics": 4
       },
       "casualtiesThreshold": 2,
-      "resilience": 6,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 5
@@ -946,7 +946,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 8
@@ -980,7 +980,7 @@
         "logistics": 10
       },
       "casualtiesThreshold": 3,
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 10
@@ -1017,7 +1017,7 @@
         "sniper"
       ],
       "casualtiesThreshold": 1,
-      "resilience": 6,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 2
@@ -1058,7 +1058,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 10
@@ -1104,7 +1104,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 10
@@ -1153,7 +1153,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 5
@@ -1204,7 +1204,7 @@
           "type": "normal"
         }
       ],
-      "resilience": 10,
+      "resilience": 3,
       "recover": 3,
       "morale": 4,
       "members": 10

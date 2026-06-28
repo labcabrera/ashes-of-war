@@ -50,7 +50,7 @@
       "open-topped",
       "transport-12"
     ],
-    "resilience": 5,
+    "resilience": 3,
     "recover": 4,
     "morale": 4
   }

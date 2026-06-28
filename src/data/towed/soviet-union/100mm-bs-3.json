@@ -47,7 +47,7 @@
         "type": "normal"
       }
     ],
-    "resilience": 10,
+    "resilience": 3,
     "recover": 4,
     "morale": 4
   }

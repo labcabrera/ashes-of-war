@@ -23,8 +23,6 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
-import ShieldIcon from '@mui/icons-material/Shield';
-import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import WarehouseIcon from '@mui/icons-material/Warehouse';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Fragment, useMemo, useState } from 'react';
@@ -114,27 +112,22 @@ function CostResourcesCell({ unit }: { unit: Unit }) {
 }
 
 function ProfileValue({
-  icon: Icon,
   label,
   value,
 }: {
-  icon: typeof ShieldIcon;
   label: string;
   value?: number;
 }) {
   return (
     <Tooltip title={label}>
-      <Stack direction="row" spacing={0.75} sx={{ alignItems: 'center', justifyContent: 'flex-end' }}>
-        <Icon sx={{ fontSize: 18, color: value === undefined ? 'text.disabled' : 'secondary.main' }} />
-        <Typography
-          component="span"
-          variant="body2"
-          aria-label={`${label}: ${value ?? '-'}`}
-          sx={{ minWidth: 24, fontWeight: value === undefined ? 400 : 700, color: value === undefined ? 'text.disabled' : 'text.primary' }}
-        >
-          {value ?? '-'}
-        </Typography>
-      </Stack>
+      <Typography
+        component="span"
+        variant="body2"
+        aria-label={`${label}: ${value === undefined ? '-' : `${value}+`}`}
+        sx={{ fontWeight: value === undefined ? 400 : 700, color: value === undefined ? 'text.disabled' : 'text.primary' }}
+      >
+        {value === undefined ? '-' : `${value}+`}
+      </Typography>
     </Tooltip>
   );
 }
@@ -272,7 +265,6 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
               <TableCell>{t('units.table.actions')}</TableCell>
               <TableCell>{t('common.name')}</TableCell>
               <TableCell>{t('common.faction')}</TableCell>
-              <TableCell>{t('units.table.costs')}</TableCell>
               <TableCell align="right">{t('units.detail.resilience')}</TableCell>
               <TableCell align="right">{t('units.detail.recover')}</TableCell>
               <TableCell align="right">{t('units.detail.morale')}</TableCell>
@@ -280,7 +272,7 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
               <TableCell>{t('units.detail.armour')}</TableCell>
               <TableCell>{t('units.detail.keywords')}</TableCell>
               <TableCell>{t('units.detail.weapons')}</TableCell>
-              <TableCell>{t('units.detail.availability')}</TableCell>
+              <TableCell>{t('units.table.costs')}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -288,7 +280,7 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
               <Fragment key={group.type}>
                 <TableRow>
                   <TableCell
-                    colSpan={12}
+                    colSpan={11}
                     sx={{
                       bgcolor: 'action.hover',
                       color: 'secondary.main',
@@ -342,17 +334,14 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                           </Typography>
                         </TableCell>
                         <TableCell sx={{ whiteSpace: 'nowrap' }}>{t(`factions.${unit.faction}`, unit.faction)}</TableCell>
-                        <TableCell sx={{ minWidth: 170 }}>
-                          <CostResourcesCell unit={unit} />
+                        <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
+                          <ProfileValue label={t('units.detail.resilience')} value={unit.resilience} />
                         </TableCell>
                         <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
-                          <ProfileValue icon={ShieldIcon} label={t('units.detail.resilience')} value={unit.resilience} />
+                          <ProfileValue label={t('units.detail.recover')} value={unit.recover} />
                         </TableCell>
                         <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
-                          <ProfileValue icon={VolunteerActivismIcon} label={t('units.detail.recover')} value={unit.recover} />
-                        </TableCell>
-                        <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
-                          <ProfileValue icon={PsychologyAltIcon} label={t('units.detail.morale')} value={unit.morale} />
+                          <ProfileValue label={t('units.detail.morale')} value={unit.morale} />
                         </TableCell>
                         <TableCell sx={{ minWidth: 185 }}>
                           <Typography variant="caption" title={t('units.table.movementHelp')}>
@@ -370,17 +359,12 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                         <TableCell sx={{ minWidth: 260 }}>
                           <Typography variant="caption">{weaponSummary(unit)}</Typography>
                         </TableCell>
-                        <TableCell>
-                          <Chip
-                            label={`${unit.from}-${unit.to}`}
-                            size="small"
-                            variant="outlined"
-                            color={outOfYear ? 'warning' : 'default'}
-                          />
+                        <TableCell sx={{ minWidth: 170 }}>
+                          <CostResourcesCell unit={unit} />
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell colSpan={12} sx={{ py: 0, borderBottom: isExpanded ? undefined : 0 }}>
+                        <TableCell colSpan={11} sx={{ py: 0, borderBottom: isExpanded ? undefined : 0 }}>
                           <Collapse in={isExpanded} timeout="auto" unmountOnExit>
                             <Box sx={{ py: 1.5, px: 2 }}>
                               <Typography variant="subtitle2" sx={{ mb: 1, color: 'secondary.main' }}>

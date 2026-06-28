@@ -95,7 +95,7 @@
       "low-reliability",
       "radio"
     ],
-    "resilience": 10,
+    "resilience": 3,
     "recover": 3,
     "morale": 4
   }
