@@ -7,30 +7,66 @@ WARNING: Borrador en desarrollo.
 
 El perfil de una unidad reúne los valores que se utilizan durante la partida para desplegarla, moverla, resolver su resistencia al daño, usar su armamento y aplicar reglas especiales.
 
-Este documento explica el significado de cada valor del perfil de juego. No es una lista de unidades ni una clasificación de tipos de unidad.
-
 == Características
 
-Las características describen cómo se comporta una unidad cuando intenta actuar bajo presión, soportar castigo o funcionar sin depender por completo de la estructura de mando.
+=== Movimiento (Movement)
 
-* `Organización`: nivel establecido durante la partida que medirá la capacidad de una unidad de realizar cualquier tipo de acción.
-* `Coordinación`: habilidad de una unidad para actuar de forma activa y coordinada con otras unidades. Es la que será usara generalmente para acciones ofensivas.
-* `Obstinación`: capacidad de una unidad para tolerar bajas y mantener la linea cuando ante ataques enemigos.
+Este valor indica la velocidad de movimiento en cada tipo de terreno y su velocidad.
 
-== Valores de infantería
+Hay tres tipos base de terreno:
+
+- *Carretera*
+- *Campo a través*
+- *Difícil*
+
+Y tres velocidades:
+
+- *Táctico*
+- *Crucero*
+- *Dash*
+
+Algunas unidades no podrán moverse a determinadas velocidades (por ejemplo una pieza ligera de artillería) y otras unidades no podrán moverse en absoluto (un Flak 8.8 emplazado). 
+
+=== Resistencia (Resilence)
+
+Resistencia a la pérdida de organización. Este valor estará expresado como X+. Al recibir ataques se deberá tirar un dado por cada efecto del ataque y igualando o superando este número se superará el chequeo. Por cada fallo la unidad acumulará un punto de organización perdida.
+
+=== Recuperación (Recover)
+
+La capacidad de una unidad para recuperar puntos de organización perdidos. Durante la fase de mando se tirará un dado por cada valor de organización perdido, si el resultado es igual o superior al valor de recuperación se recuperará dicho punto.
+
+TODO: Considerar si tirar por cada punto perdido o expresarlo como 3/4+ tirando 3 dados y recuperando el valor con 4+ independientemente de la organización perdida. A priori y sin hacer testing me gusta más el primero ya que hace que la organización se recupere más cuando está en niveles bajos y dificulta llegar a 0. 
+
+=== Moral (Morale)
+
+Valor que determina la tendencia de una unidad cuando recibe gran número de bajas para no huir o rendirse. 
+
+== Valores de infantería y armas remolcadas
 
 La infantería usa valores adicionales para representar el número de combatientes y su tolerancia a las bajas.
 
-* *Número de integrantes*: número de individuos en la unidad. Este valor se utilizará para determinar la capacidad operativa de la unidad y su moral.
+=== Integrantes (Members)
+
+Número de integrantes de la unidad. Este valor se utilizará para determinar la capacidad operativa de la unidad y su moral.
 
 == Vehículos
 
-* *Blindaje*: el valor que representa la el grado de protección contra armas con capacidades de penetración. Cada vehiculo tendrá cuatro valores de blindaje correspondientes a los diferentes encaramientos:
+=== Blindaje (Armor)
+
+El valor que representa la el grado de protección contra armas con capacidades de penetración. Cada vehiculo tendrá cuatro valores de blindaje correspondientes a los diferentes encaramientos:
 
 * Frontal
 * Lateral
 * Trasero
 * Expuesto
+
+Algunas armas remolcadas pueden tener blindaje frontal que pueda proteger a la dotación de ataques de armas de bajo calibre.
+
+=== Arrollamiento (Overrun)
+
+Capacidad de un vehículo para atravesar obstáculos. Un Tiger I podrá atravesar vegetación y muros de forma sencilla mientras que un camión lo tendrá casi imposible.
+
+El fallo de esta tirada podrá implicar una penalización de organización o una tirada en la tabla de errores al atravesar terreno difícil pudiendo quedar inmovilizado.
 
 
 // TODO: notas en desarrollo

@@ -3,40 +3,52 @@
 :toclevels: 3
 :toc-title: Contenido
 
-A nivel de juego las unidades tendrán dos valores que determinarán el estado de la unidad:
+A nivel de juego las unidades tendrán dos contadores que determinarán el estado de la unidad:
 
 - *Organización*: Representa la capacidad de la unidad para mantener la cohesión y efectividad en combate.
-- *Bajas*: Representa el número de bajas sufridas por una unidad de infantería.
+- *Bajas*: Representa el número de bajas sufridas o el daño estructural de un vehículo.
 
-Ambos valores en la partida se representarán con contadores asociados a cada unidad.
-
-A diferencia de la infantería, el daño de los vehículos se resolverá de otro modo tirando en las tablas de daños estructurales.
-
-Cada unidad tendrá un valor máximo de pérdida de organización y bajas. Superado este valor la unidad se considerará baja y será retirada del campo de batalla.
-
-TIP: Podemos usar dados de colores para representar ambos valores, por ejemplo un dado azul para la organización y un dado rojo para las bajas.
+TIP: La recomendación del juego es utilizar dados o tokens de diferentes colores para establecer los valores de cada unidad, por ejemplo un D6 azul para la organización y otro rojo para las bajas.
 
 ## Organización
 
-El valor de organización de una unidad representa su capacidad para mantener la *cohesión y efectividad en combate*.
+El valor de organización de una unidad representa su capacidad para mantener la *cohesión y efectividad en combate*. Su valor oscilará entre 0 (organización perfecta) y 6 cuando los niveles de organización sean mínimos.
 
-Una unidad con valores bajos de organización tendrá un bajo desempeño a la hora de realizar acciones representado por modificadores negativos a las tiradas de acciones.
+A efectos de juego la organización funciona como un valor de energía que se va recuperando cada turno.
 
-Hay muchos valores que determinarán el nivel de organización de una unidad, como su experiencia, entrenamiento, liderazgo, cercanía a unidades de mando. Esto se representará en la fase de organización como un bonus en la recuperación de los puntos de organización perdidos.
+|===
+|Organización | Efecto
+|0            | Ninguno
+|1            | -1 Acciones
+|2            | -1 Acciones
+|3            | -2 Acciones
+|4            | -2 Acciones
+|5            | -3 Acciones
+|6            | -3 Acciones y efectos adicionales
+|===
+
+El sufrir fuego enemigo o el realizar acciones provocará un chequeo de organización de la unidad.
+
+Hay muchos valores que determinarán el nivel de organización de una unidad, como su experiencia, entrenamiento, liderazgo, cercanía a unidades de mando.
+
+Cada perfil de unidad tendrá dos atributos expresados como X+.
+
+- *Resistencia*: la capacidad de una unidad a recibir daño sin desorganizarse.
+- *Recuperación (RENOMBRAR)*: la capacidad de una unidad de recuperar cada turno la organización perdida.
 
 TIP: Mientras que una unidad bien entrenada de la Wehrmacht en 1941 podría recuperar por ejemplo 3 puntos de organización por turno, una unidad de infantería inexperta podría recuperar solo 1 punto de organización por turno.
 
-A nivel de juego funciona como un contador asociado a cada unidad donde reflejaremos la pérdida de puntos de organización de una unidad.
-
-Al realizar acciones, sufrir fuego enemigo, sufrir bajas u otras situaciones del campo de batalla la unidad perderá puntos de organización.
-
 Las unidades de oficiales y suboficiales podrán contribuir a la recuperación de organización de la unidad representando su capacidad de liderazgo y toma de decisiones.
+
+[NOTE]
+====
+_Ejemplo: una unidad de Panzergrenadiers recibe 2 impactos de fusiles. Si tiene un valor de resistencia de 3+ deberá realizar dos chequeos. Saca un 2 y un 4 de modo que pierde un punto de organización y su contador de organización pasa a 1. Al comienzo de la fase de mando si la unidad tiene un 4+ en su valor de recuperación tira un D6 y por cada 4+ recupera la organización perdida. 
+====
+
 
 // La organización de una unidad en un instante determina las capacidades combativas de esta y su capacidad para realizar acciones tales como disparar, cargar o maniobrar.
 
 // Unidades bien entrenadas y experimentadas mantendrán niveles de organización más altos, mientras que unidades con poca experiencia o que hayan sufrido bajas importantes verán su organización reducida.
-
-Cuando una unidad realiza determinadas acciones o sufre determinadas situaciones en el campo de batalla, esta podrá perder puntos de organización en función del resultado de una tirada de pericia.
 
 Hay varios aspectos que afectan negativamente a la organización de la unidad tales como:
 
