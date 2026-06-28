@@ -3,7 +3,6 @@
  */
 import { describe, expect, it } from 'vitest';
 import { infantryUnits } from '../../src/data/infantry';
-import unitsData from '../../src/data/units/units.json';
 import { weaponCatalogueEntries } from '../../src/data/weapons';
 import { UNIT_TYPES, type UnitType, type UnitWeaponMountType } from '../../src/types/unit';
 
@@ -250,10 +249,10 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
 }
 
 describe('static unit catalogue validation', () => {
-  it('validates every bundled and per-file infantry unit and aggregates errors in its failure report', () => {
+  it('validates every per-file infantry unit and aggregates errors in its failure report', () => {
     const catalogue = {
-      ...unitsData,
-      units: [...unitsData.units, ...infantryUnits],
+      _version: 9,
+      units: infantryUnits,
     };
     const errors = validateUnitCatalogue(catalogue, collectWeaponIds());
 
@@ -263,8 +262,7 @@ describe('static unit catalogue validation', () => {
     expect(errors).toEqual([]);
   });
 
-  it('keeps infantry units out of the bundled legacy units catalogue', () => {
-    expect(unitsData.units.every((unit) => unit.type !== 'infantry')).toBe(true);
+  it('loads infantry units from the per-file catalogue', () => {
     expect(infantryUnits.length).toBeGreaterThan(0);
   });
 

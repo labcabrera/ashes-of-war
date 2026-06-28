@@ -45,7 +45,6 @@ import { useTranslation } from 'react-i18next';
 import UnitCompareDialog from '../components/units/UnitCompareDialog';
 import { infantryUnits } from '../data/infantry';
 import { allUnits } from '../data/units';
-import unitsData from '../data/units/units.json';
 import { vehicles } from '../data/vehicles';
 import { towedWeapons } from '../data/towed';
 import { allWeapons } from '../data/weapons';
@@ -75,7 +74,7 @@ const weapons = allWeapons;
 const vehicleCatalogue = [...vehicles, ...towedWeapons];
 
 type SourceJson = Record<string, unknown> & { id: string };
-const unitSources = [...(unitsData.units as SourceJson[]), ...(infantryUnits as unknown as SourceJson[])];
+const unitSources = infantryUnits as unknown as SourceJson[];
 
 function getWeapon(assignment: UnitWeapon) {
   return weapons.find((weapon) => weapon.id === assignment.id);

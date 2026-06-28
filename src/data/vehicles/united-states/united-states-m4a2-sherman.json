@@ -1,0 +1,81 @@
+{
+  "id": "united-states-m4a2-sherman",
+  "name": "M4A2 Sherman",
+  "type": "tank",
+  "faction": "united-states",
+  "from": 1942,
+  "to": 1945,
+  "reviewedAt": "2026-06-28",
+  "historical": {
+    "armor": {
+      "front": {
+        "thicknessMM": 51,
+        "inclinationDeg": 56
+      },
+      "side": {
+        "thicknessMM": 38,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 38,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 25,
+        "inclinationDeg": 0
+      }
+    }
+  },
+  "game": {
+    "cost": 28,
+    "movement": {
+      "tactical": {
+        "road": 13,
+        "crossCountry": 8,
+        "rough": 4
+      },
+      "cruise": {
+        "road": 28,
+        "crossCountry": 18,
+        "rough": 9
+      },
+      "dash": {
+        "road": 38,
+        "crossCountry": 24,
+        "rough": 12
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 51
+      },
+      "side": {
+        "value": 38
+      },
+      "rear": {
+        "value": 38
+      },
+      "exposed": {
+        "value": 25
+      }
+    },
+    "resourceCosts": {
+      "fuel": 4,
+      "logistics": 5
+    },
+    "weapons": [
+      {
+        "id": "soviet-union-75mm-m3",
+        "count": 1,
+        "type": "turret"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ],
+    "resilience": 3,
+    "recover": 4,
+    "morale": 4,
+    "hitPoints": 8
+  }
+}

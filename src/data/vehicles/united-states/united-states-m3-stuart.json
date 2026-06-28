@@ -1,0 +1,86 @@
+{
+  "id": "united-states-m3-stuart",
+  "name": "M3 Stuart",
+  "type": "tank",
+  "faction": "united-states",
+  "from": 1941,
+  "to": 1945,
+  "reviewedAt": "2026-06-28",
+  "historical": {
+    "armor": {
+      "front": {
+        "thicknessMM": 51,
+        "inclinationDeg": 16
+      },
+      "side": {
+        "thicknessMM": 28,
+        "inclinationDeg": 0
+      },
+      "rear": {
+        "thicknessMM": 28,
+        "inclinationDeg": 0
+      },
+      "exposed": {
+        "thicknessMM": 13,
+        "inclinationDeg": 0
+      }
+    }
+  },
+  "game": {
+    "cost": 16,
+    "movement": {
+      "tactical": {
+        "road": 20,
+        "crossCountry": 13,
+        "rough": 5
+      },
+      "cruise": {
+        "road": 43,
+        "crossCountry": 22,
+        "rough": 10
+      },
+      "dash": {
+        "road": 58,
+        "crossCountry": 30,
+        "rough": 14
+      }
+    },
+    "armor": {
+      "front": {
+        "value": 51
+      },
+      "side": {
+        "value": 28
+      },
+      "rear": {
+        "value": 28
+      },
+      "exposed": {
+        "value": 13
+      }
+    },
+    "resourceCosts": {
+      "fuel": 3,
+      "logistics": 3
+    },
+    "weapons": [
+      {
+        "id": "united-states-37mm-m6",
+        "count": 1,
+        "type": "turret"
+      },
+      {
+        "id": "united-states-browning-m1919",
+        "count": 1,
+        "type": "hull"
+      }
+    ],
+    "keywords": [
+      "radio"
+    ],
+    "resilience": 3,
+    "recover": 4,
+    "morale": 4,
+    "hitPoints": 8
+  }
+}

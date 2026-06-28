@@ -12,7 +12,6 @@ const dataRoots = [
   path.join(rootDir, 'src/data/vehicles'),
   path.join(rootDir, 'src/data/towed'),
 ];
-const unitCataloguePath = path.join(rootDir, 'src/data/units/units.json');
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -60,18 +59,6 @@ function migrateProfile(profile, filePath, fieldPrefix) {
   return changed;
 }
 
-function migrateUnitCatalogue(filePath) {
-  const catalogue = readJson(filePath);
-  let changed = false;
-  for (const [index, unit] of catalogue.units.entries()) {
-    changed = migrateProfile(unit, filePath, `units[${index}]`) || changed;
-  }
-  if (changed && !dryRun) {
-    writeJson(filePath, catalogue);
-  }
-  return changed;
-}
-
 function migrateEntry(filePath) {
   const entry = readJson(filePath);
   const profile = entry.game ?? entry;
@@ -84,9 +71,6 @@ function migrateEntry(filePath) {
 }
 
 const changedFiles = [];
-if (migrateUnitCatalogue(unitCataloguePath)) {
-  changedFiles.push(unitCataloguePath);
-}
 for (const filePath of dataRoots.flatMap(jsonFilesUnder)) {
   if (migrateEntry(filePath)) {
     changedFiles.push(filePath);

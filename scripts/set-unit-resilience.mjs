@@ -8,7 +8,6 @@ import process from 'node:process';
 const rootDir = process.cwd();
 const targetResilience = 3;
 const checkOnly = process.argv.includes('--check');
-const unitCataloguePath = path.join(rootDir, 'src/data/units/units.json');
 const dataRoots = [
   path.join(rootDir, 'src/data/infantry'),
   path.join(rootDir, 'src/data/vehicles'),
@@ -47,18 +46,6 @@ function setResilience(profile, filePath, fieldPath) {
   return true;
 }
 
-function updateUnitCatalogue(filePath) {
-  const catalogue = readJson(filePath);
-  let changed = false;
-  for (const [index, unit] of catalogue.units.entries()) {
-    changed = setResilience(unit, filePath, `units[${index}]`) || changed;
-  }
-  if (changed && !checkOnly) {
-    writeJson(filePath, catalogue);
-  }
-  return changed;
-}
-
 function updatePerFileUnit(filePath) {
   const entry = readJson(filePath);
   const profile = entry.game ?? entry;
@@ -71,9 +58,6 @@ function updatePerFileUnit(filePath) {
 }
 
 const changedFiles = [];
-if (updateUnitCatalogue(unitCataloguePath)) {
-  changedFiles.push(unitCataloguePath);
-}
 for (const filePath of dataRoots.flatMap(jsonFilesUnder)) {
   if (updatePerFileUnit(filePath)) {
     changedFiles.push(filePath);
