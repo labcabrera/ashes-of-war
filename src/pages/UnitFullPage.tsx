@@ -43,6 +43,7 @@ import { useState, type ReactNode } from 'react';
 import { Link as RouterLink, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import UnitCompareDialog from '../components/units/UnitCompareDialog';
+import { infantryUnits } from '../data/infantry';
 import { allUnits } from '../data/units';
 import unitsData from '../data/units/units.json';
 import { vehicles } from '../data/vehicles';
@@ -74,7 +75,7 @@ const weapons = allWeapons;
 const vehicleCatalogue = [...vehicles, ...towedWeapons];
 
 type SourceJson = Record<string, unknown> & { id: string };
-const legacyUnitSources = unitsData.units as SourceJson[];
+const unitSources = [...(unitsData.units as SourceJson[]), ...(infantryUnits as unknown as SourceJson[])];
 
 function getWeapon(assignment: UnitWeapon) {
   return weapons.find((weapon) => weapon.id === assignment.id);
@@ -477,8 +478,8 @@ export default function UnitFullPage() {
 
   const assignedWeapons = unit.weapons ?? [];
   const vehicleEntry = vehicleCatalogue.find((vehicle) => vehicle.id === unit.id);
-  const legacyUnitSource = legacyUnitSources.find((source) => source.id === unit.id);
-  const sourceJson = legacyUnitSource ?? vehicleEntry ?? unit;
+  const unitSource = unitSources.find((source) => source.id === unit.id);
+  const sourceJson = unitSource ?? vehicleEntry ?? unit;
   const description =
     getDescription('units', unit.id, i18n.resolvedLanguage) ??
     getDescription('types', unit.type, i18n.resolvedLanguage);

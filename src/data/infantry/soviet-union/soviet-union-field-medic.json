@@ -1,0 +1,38 @@
+{
+  "id": "soviet-union-field-medic",
+  "name": "Red Army Field Medic",
+  "type": "infantry",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "cost": 7,
+  "keywords": [
+    "medic"
+  ],
+  "movement": {
+    "tactical": {
+      "road": 8,
+      "crossCountry": 6,
+      "rough": 3
+    },
+    "cruise": {
+      "road": 16,
+      "crossCountry": 12,
+      "rough": 6
+    },
+    "dash": {
+      "road": 25,
+      "crossCountry": 19,
+      "rough": 9
+    }
+  },
+  "resourceCosts": {
+    "logistics": 5
+  },
+  "resilience": 3,
+  "recover": 4,
+  "morale": 4,
+  "members": 5,
+  "hitPoints": 3,
+  "baseCount": 1
+}

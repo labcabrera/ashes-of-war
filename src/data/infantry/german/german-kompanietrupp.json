@@ -1,0 +1,51 @@
+{
+  "id": "german-kompanietrupp",
+  "name": "Kompanietrupp (HQ)",
+  "type": "infantry",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "cost": 10,
+  "movement": {
+    "tactical": {
+      "road": 10,
+      "crossCountry": 8,
+      "rough": 4
+    },
+    "cruise": {
+      "road": 20,
+      "crossCountry": 15,
+      "rough": 8
+    },
+    "dash": {
+      "road": 30,
+      "crossCountry": 23,
+      "rough": 11
+    }
+  },
+  "resourceCosts": {
+    "logistics": 4
+  },
+  "weapons": [
+    {
+      "id": "german-mp-40",
+      "count": 5,
+      "type": "normal"
+    },
+    {
+      "id": "german-mauser-kar-98k",
+      "count": 5,
+      "type": "normal"
+    }
+  ],
+  "keywords": [
+    "radio",
+    "hq"
+  ],
+  "resilience": 3,
+  "recover": 3,
+  "morale": 4,
+  "members": 10,
+  "hitPoints": 3,
+  "baseCount": 2
+}

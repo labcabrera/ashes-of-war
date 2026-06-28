@@ -1,0 +1,38 @@
+{
+  "id": "german-sanitatsunteroffizier",
+  "name": "Sanitätsunteroffizier",
+  "type": "infantry",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "cost": 8,
+  "keywords": [
+    "medic"
+  ],
+  "movement": {
+    "tactical": {
+      "road": 8,
+      "crossCountry": 6,
+      "rough": 3
+    },
+    "cruise": {
+      "road": 16,
+      "crossCountry": 12,
+      "rough": 6
+    },
+    "dash": {
+      "road": 25,
+      "crossCountry": 19,
+      "rough": 9
+    }
+  },
+  "resourceCosts": {
+    "logistics": 4
+  },
+  "resilience": 3,
+  "recover": 3,
+  "morale": 4,
+  "members": 5,
+  "hitPoints": 3,
+  "baseCount": 1
+}

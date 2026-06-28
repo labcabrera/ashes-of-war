@@ -1,0 +1,50 @@
+{
+  "id": "german-wehrmacht-light-mortar-team",
+  "name": "Wehrmacht Light Mortar Team",
+  "type": "infantry",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "cost": 10,
+  "movement": {
+    "tactical": {
+      "road": 8,
+      "crossCountry": 6,
+      "rough": 3
+    },
+    "cruise": {
+      "road": 16,
+      "crossCountry": 12,
+      "rough": 6
+    },
+    "dash": {
+      "road": 25,
+      "crossCountry": 19,
+      "rough": 9
+    }
+  },
+  "resourceCosts": {
+    "logistics": 4
+  },
+  "keywords": [
+    "indirect-fire"
+  ],
+  "weapons": [
+    {
+      "id": "german-5cm-granatwerfer-36",
+      "count": 1,
+      "type": "normal"
+    },
+    {
+      "id": "german-mauser-kar-98k",
+      "count": 4,
+      "type": "normal"
+    }
+  ],
+  "resilience": 3,
+  "recover": 3,
+  "morale": 4,
+  "members": 5,
+  "hitPoints": 3,
+  "baseCount": 1
+}

@@ -10,6 +10,7 @@ const targetResilience = 3;
 const checkOnly = process.argv.includes('--check');
 const unitCataloguePath = path.join(rootDir, 'src/data/units/units.json');
 const dataRoots = [
+  path.join(rootDir, 'src/data/infantry'),
   path.join(rootDir, 'src/data/vehicles'),
   path.join(rootDir, 'src/data/towed'),
 ];
@@ -60,7 +61,9 @@ function updateUnitCatalogue(filePath) {
 
 function updatePerFileUnit(filePath) {
   const entry = readJson(filePath);
-  const changed = setResilience(entry.game, filePath, 'game');
+  const profile = entry.game ?? entry;
+  const fieldPath = entry.game ? 'game' : 'unit';
+  const changed = setResilience(profile, filePath, fieldPath);
   if (changed && !checkOnly) {
     writeJson(filePath, entry);
   }

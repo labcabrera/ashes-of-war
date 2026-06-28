@@ -1,0 +1,44 @@
+{
+  "id": "german-panzerschreck-team",
+  "name": "Panzerschreck Team",
+  "type": "infantry",
+  "faction": "german",
+  "from": 1943,
+  "to": 1945,
+  "cost": 12,
+  "movement": {
+    "tactical": {
+      "road": 8,
+      "crossCountry": 6,
+      "rough": 3
+    },
+    "cruise": {
+      "road": 16,
+      "crossCountry": 12,
+      "rough": 6
+    },
+    "dash": {
+      "road": 25,
+      "crossCountry": 19,
+      "rough": 9
+    }
+  },
+  "weapons": [
+    {
+      "id": "german-panzerschreck-rpzb-54",
+      "count": 1,
+      "type": "normal"
+    },
+    {
+      "id": "german-mauser-kar-98k",
+      "count": 2,
+      "type": "normal"
+    }
+  ],
+  "resilience": 3,
+  "recover": 3,
+  "morale": 4,
+  "members": 3,
+  "hitPoints": 3,
+  "baseCount": 1
+}

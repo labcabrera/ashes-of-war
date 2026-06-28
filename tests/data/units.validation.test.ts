@@ -2,6 +2,7 @@
  * Validates every static unit catalogue entry against its domain constraints and weapon links.
  */
 import { describe, expect, it } from 'vitest';
+import { infantryUnits } from '../../src/data/infantry';
 import unitsData from '../../src/data/units/units.json';
 import { weaponCatalogueEntries } from '../../src/data/weapons';
 import { UNIT_TYPES, type UnitType, type UnitWeaponMountType } from '../../src/types/unit';
@@ -249,13 +250,22 @@ function validateUnitCatalogue(catalogue: unknown, weaponIds: ReadonlySet<string
 }
 
 describe('static unit catalogue validation', () => {
-  it('validates every bundled unit and aggregates errors in its failure report', () => {
-    const errors = validateUnitCatalogue(unitsData, collectWeaponIds());
+  it('validates every bundled and per-file infantry unit and aggregates errors in its failure report', () => {
+    const catalogue = {
+      ...unitsData,
+      units: [...unitsData.units, ...infantryUnits],
+    };
+    const errors = validateUnitCatalogue(catalogue, collectWeaponIds());
 
     if (errors.length > 0) {
       throw new Error(`Unit catalogue validation failed:\n${errors.map((error) => `- ${error}`).join('\n')}`);
     }
     expect(errors).toEqual([]);
+  });
+
+  it('keeps infantry units out of the bundled legacy units catalogue', () => {
+    expect(unitsData.units.every((unit) => unit.type !== 'infantry')).toBe(true);
+    expect(infantryUnits.length).toBeGreaterThan(0);
   });
 
   it('reports multiple model and weapon-reference errors together', () => {

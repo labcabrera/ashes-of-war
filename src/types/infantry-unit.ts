@@ -44,7 +44,7 @@ export interface InfantryGameProfile {
   keywords?: UnitKeyword[];
 }
 
-/** An infantry unit catalogue entry, e.g. `src/data/infantry-units/german/panzergrenadier-squad-1944.json`. */
+/** An infantry unit catalogue entry, e.g. `src/data/infantry/german/panzergrenadier-squad-1944.json`. */
 export interface InfantryUnitCatalogueEntry extends CatalogueEntryMeta {
   type: 'infantry';
   historical: InfantryHistoricalProfile;

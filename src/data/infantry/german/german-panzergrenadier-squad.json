@@ -1,0 +1,47 @@
+{
+  "id": "german-panzergrenadier-squad",
+  "name": "Panzergrenadier Squad",
+  "type": "infantry",
+  "faction": "german",
+  "from": 1939,
+  "to": 1945,
+  "cost": 11,
+  "movement": {
+    "tactical": {
+      "road": 10,
+      "crossCountry": 8,
+      "rough": 4
+    },
+    "cruise": {
+      "road": 20,
+      "crossCountry": 15,
+      "rough": 8
+    },
+    "dash": {
+      "road": 30,
+      "crossCountry": 23,
+      "rough": 11
+    }
+  },
+  "resourceCosts": {
+    "logistics": 5
+  },
+  "weapons": [
+    {
+      "id": "german-mg-34-42",
+      "count": 1,
+      "type": "normal"
+    },
+    {
+      "id": "german-mauser-kar-98k",
+      "count": 8,
+      "type": "normal"
+    }
+  ],
+  "resilience": 3,
+  "recover": 3,
+  "morale": 4,
+  "members": 10,
+  "hitPoints": 3,
+  "baseCount": 2
+}

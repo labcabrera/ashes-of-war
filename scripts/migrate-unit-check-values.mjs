@@ -8,6 +8,7 @@ import process from 'node:process';
 const rootDir = process.cwd();
 const dryRun = process.argv.includes('--check');
 const dataRoots = [
+  path.join(rootDir, 'src/data/infantry'),
   path.join(rootDir, 'src/data/vehicles'),
   path.join(rootDir, 'src/data/towed'),
 ];
@@ -73,7 +74,9 @@ function migrateUnitCatalogue(filePath) {
 
 function migrateEntry(filePath) {
   const entry = readJson(filePath);
-  const changed = migrateProfile(entry.game, filePath, 'game');
+  const profile = entry.game ?? entry;
+  const fieldPrefix = entry.game ? 'game' : 'unit';
+  const changed = migrateProfile(profile, filePath, fieldPrefix);
   if (changed && !dryRun) {
     writeJson(filePath, entry);
   }

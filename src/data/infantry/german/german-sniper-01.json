@@ -1,0 +1,38 @@
+{
+  "id": "german-sniper-01",
+  "name": "Wehrmacht Sniper Team",
+  "type": "infantry",
+  "faction": "german",
+  "from": 1941,
+  "to": 1945,
+  "cost": 9,
+  "movement": {
+    "tactical": {
+      "road": 8,
+      "crossCountry": 6,
+      "rough": 3
+    },
+    "cruise": {
+      "road": 16,
+      "crossCountry": 12,
+      "rough": 6
+    },
+    "dash": {
+      "road": 25,
+      "crossCountry": 19,
+      "rough": 9
+    }
+  },
+  "resourceCosts": {
+    "intelligence": 1
+  },
+  "keywords": [
+    "sniper"
+  ],
+  "resilience": 3,
+  "recover": 3,
+  "morale": 4,
+  "members": 2,
+  "hitPoints": 3,
+  "baseCount": 1
+}

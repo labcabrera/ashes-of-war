@@ -1,0 +1,47 @@
+{
+  "id": "soviet-union-heavy-mg-team",
+  "name": "Red Army Heavy MG Team",
+  "type": "infantry",
+  "faction": "soviet-union",
+  "from": 1941,
+  "to": 1945,
+  "cost": 11,
+  "movement": {
+    "tactical": {
+      "road": 8,
+      "crossCountry": 6,
+      "rough": 3
+    },
+    "cruise": {
+      "road": 16,
+      "crossCountry": 12,
+      "rough": 6
+    },
+    "dash": {
+      "road": 24,
+      "crossCountry": 18,
+      "rough": 9
+    }
+  },
+  "resourceCosts": {
+    "logistics": 5
+  },
+  "weapons": [
+    {
+      "id": "soviet-union-maxim-m1910",
+      "count": 1,
+      "type": "normal"
+    },
+    {
+      "id": "soviet-union-mosin-nagant-m1891-30",
+      "count": 4,
+      "type": "normal"
+    }
+  ],
+  "resilience": 3,
+  "recover": 4,
+  "morale": 4,
+  "members": 5,
+  "hitPoints": 3,
+  "baseCount": 1
+}
