@@ -181,6 +181,7 @@
       "equippedWeapons": "Equipped weapons",
       "weapon": "Weapon",
       "mount": "Mount",
+      "costs": "Cost & resources",
       "thresholds": "Thresholds",
       "movementHelp": "T/C/D: road/CC/rough",
       "armourHelp": "Front/side/rear/exposed"
@@ -227,6 +228,8 @@
       "members": "Members",
       "resilience": "Resilience",
       "resilienceShort": "Res",
+      "recover": "Recover",
+      "morale": "Morale",
       "combatants": "Combatants",
       "organizationThreshold": "Organization",
       "organizationThresholdShort": "Org",

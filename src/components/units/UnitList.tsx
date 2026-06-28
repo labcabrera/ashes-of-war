@@ -20,6 +20,12 @@ import {
 } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
+import ShieldIcon from '@mui/icons-material/Shield';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import WarehouseIcon from '@mui/icons-material/Warehouse';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Fragment, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -37,6 +43,11 @@ interface Props {
 
 const weaponsById = new Map(allWeapons.map((weapon) => [weapon.id, weapon.name]));
 const weaponsByCatalogueId = new Map(allWeapons.map((weapon) => [weapon.id, weapon]));
+const resourceIcons = {
+  fuel: LocalGasStationIcon,
+  logistics: WarehouseIcon,
+  intelligence: PsychologyAltIcon,
+} as const;
 
 function movementSummary(unit: Unit) {
   return (['tactical', 'cruise', 'dash'] as const)
@@ -53,31 +64,6 @@ function armourSummary(unit: Unit) {
   return `${front.value}/${side.value}/${rear.value}/${exposed.value}`;
 }
 
-function thresholdsSummary(unit: Unit, t: ReturnType<typeof useTranslation>['t']) {
-  const values = [
-    `${t('units.detail.resilienceShort')} ${unit.resilience}`,
-  ];
-
-  if ('casualtiesThreshold' in unit && unit.casualtiesThreshold !== undefined) {
-    values.push(`${t('units.detail.casualtiesThresholdShort')} ${unit.casualtiesThreshold}`);
-  }
-
-  if (unit.type === 'infantry') {
-    values.push(`${t('units.detail.members')} ${unit.members}`);
-  }
-
-  return values.join(' · ');
-}
-
-function resourceSummary(unit: Unit, t: ReturnType<typeof useTranslation>['t']) {
-  const resources = Object.entries(unit.resourceCosts ?? {});
-  if (resources.length === 0) return '-';
-
-  return resources
-    .map(([key, value]) => `${t(`army.resources.${key}`, { defaultValue: key })} ${value}`)
-    .join(' · ');
-}
-
 function weaponSummary(unit: Unit) {
   const assignments = unit.weapons ?? [];
   if (assignments.length === 0) return '-';
@@ -89,6 +75,68 @@ function weaponSummary(unit: Unit) {
 
 function weaponName(assignment: UnitWeapon) {
   return weaponsById.get(assignment.id) ?? assignment.id;
+}
+
+function CostResourcesCell({ unit }: { unit: Unit }) {
+  const { t } = useTranslation();
+  const resources = Object.entries(unit.resourceCosts ?? {});
+
+  return (
+    <Stack direction="row" spacing={0.75} useFlexGap sx={{ flexWrap: 'wrap', minWidth: 150 }}>
+      <Tooltip title={t('common.cost')}>
+        <Chip
+          icon={<MilitaryTechIcon />}
+          label={unit.cost}
+          size="small"
+          color="secondary"
+          variant="outlined"
+          aria-label={`${t('common.cost')}: ${unit.cost}`}
+        />
+      </Tooltip>
+      {resources.map(([resource, value]) => {
+        const Icon = resourceIcons[resource as keyof typeof resourceIcons] ?? WarehouseIcon;
+        const label = t(`army.resources.${resource}`, { defaultValue: resource });
+
+        return (
+          <Tooltip key={resource} title={label}>
+            <Chip
+              icon={<Icon />}
+              label={value}
+              size="small"
+              variant="outlined"
+              aria-label={`${label}: ${value}`}
+            />
+          </Tooltip>
+        );
+      })}
+    </Stack>
+  );
+}
+
+function ProfileValue({
+  icon: Icon,
+  label,
+  value,
+}: {
+  icon: typeof ShieldIcon;
+  label: string;
+  value?: number;
+}) {
+  return (
+    <Tooltip title={label}>
+      <Stack direction="row" spacing={0.75} sx={{ alignItems: 'center', justifyContent: 'flex-end' }}>
+        <Icon sx={{ fontSize: 18, color: value === undefined ? 'text.disabled' : 'secondary.main' }} />
+        <Typography
+          component="span"
+          variant="body2"
+          aria-label={`${label}: ${value ?? '-'}`}
+          sx={{ minWidth: 24, fontWeight: value === undefined ? 400 : 700, color: value === undefined ? 'text.disabled' : 'text.primary' }}
+        >
+          {value ?? '-'}
+        </Typography>
+      </Stack>
+    </Tooltip>
+  );
 }
 
 function EquippedWeaponsTable({ unitId, assignments }: { unitId: string; assignments: UnitWeapon[] }) {
@@ -224,11 +272,12 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
               <TableCell>{t('units.table.actions')}</TableCell>
               <TableCell>{t('common.name')}</TableCell>
               <TableCell>{t('common.faction')}</TableCell>
-              <TableCell align="right">{t('common.cost')}</TableCell>
-              <TableCell>{t('units.table.thresholds')}</TableCell>
+              <TableCell>{t('units.table.costs')}</TableCell>
+              <TableCell align="right">{t('units.detail.resilience')}</TableCell>
+              <TableCell align="right">{t('units.detail.recover')}</TableCell>
+              <TableCell align="right">{t('units.detail.morale')}</TableCell>
               <TableCell>{t('units.detail.movement.title')}</TableCell>
               <TableCell>{t('units.detail.armour')}</TableCell>
-              <TableCell>{t('units.detail.resources')}</TableCell>
               <TableCell>{t('units.detail.keywords')}</TableCell>
               <TableCell>{t('units.detail.weapons')}</TableCell>
               <TableCell>{t('units.detail.availability')}</TableCell>
@@ -239,7 +288,7 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
               <Fragment key={group.type}>
                 <TableRow>
                   <TableCell
-                    colSpan={11}
+                    colSpan={12}
                     sx={{
                       bgcolor: 'action.hover',
                       color: 'secondary.main',
@@ -293,11 +342,17 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                           </Typography>
                         </TableCell>
                         <TableCell sx={{ whiteSpace: 'nowrap' }}>{t(`factions.${unit.faction}`, unit.faction)}</TableCell>
-                        <TableCell align="right" sx={{ whiteSpace: 'nowrap', fontWeight: 700 }}>
-                          {unit.cost}
+                        <TableCell sx={{ minWidth: 170 }}>
+                          <CostResourcesCell unit={unit} />
                         </TableCell>
-                        <TableCell sx={{ minWidth: 150 }}>
-                          <Typography variant="caption">{thresholdsSummary(unit, t)}</Typography>
+                        <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
+                          <ProfileValue icon={ShieldIcon} label={t('units.detail.resilience')} value={unit.resilience} />
+                        </TableCell>
+                        <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
+                          <ProfileValue icon={VolunteerActivismIcon} label={t('units.detail.recover')} value={unit.recover} />
+                        </TableCell>
+                        <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
+                          <ProfileValue icon={PsychologyAltIcon} label={t('units.detail.morale')} value={unit.morale} />
                         </TableCell>
                         <TableCell sx={{ minWidth: 185 }}>
                           <Typography variant="caption" title={t('units.table.movementHelp')}>
@@ -308,9 +363,6 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                           <Typography variant="caption" title={t('units.table.armourHelp')}>
                             {armourSummary(unit)}
                           </Typography>
-                        </TableCell>
-                        <TableCell sx={{ minWidth: 140 }}>
-                          <Typography variant="caption">{resourceSummary(unit, t)}</Typography>
                         </TableCell>
                         <TableCell sx={{ minWidth: 170 }}>
                           <Typography variant="caption">{keywords}</Typography>
@@ -328,7 +380,7 @@ export default function UnitList({ units, isOutOfYear, viewMode, onSelect }: Pro
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell colSpan={11} sx={{ py: 0, borderBottom: isExpanded ? undefined : 0 }}>
+                        <TableCell colSpan={12} sx={{ py: 0, borderBottom: isExpanded ? undefined : 0 }}>
                           <Collapse in={isExpanded} timeout="auto" unmountOnExit>
                             <Box sx={{ py: 1.5, px: 2 }}>
                               <Typography variant="subtitle2" sx={{ mb: 1, color: 'secondary.main' }}>

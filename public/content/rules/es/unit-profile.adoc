@@ -27,7 +27,7 @@ Y tres velocidades:
 
 Algunas unidades no podrán moverse a determinadas velocidades (por ejemplo una pieza ligera de artillería) y otras unidades no podrán moverse en absoluto (un Flak 8.8 emplazado). 
 
-=== Resistencia (Resilence)
+=== Resistencia (Resilience)
 
 Resistencia a la pérdida de organización. Este valor estará expresado como X+. Al recibir ataques se deberá tirar un dado por cada efecto del ataque y igualando o superando este número se superará el chequeo. Por cada fallo la unidad acumulará un punto de organización perdida.
 
