@@ -357,6 +357,11 @@
     "description": "Descripción",
     "carriedBy": "Unidades que la llevan",
     "noCarriers": "Ninguna unidad del catálogo lleva esta arma.",
+    "sidebar": {
+      "filters": "Filtros",
+      "searchPlaceholder": "Nombre del arma...",
+      "weaponType": "Tipo de ataque"
+    },
     "detail": {
       "title": "Detalle de arma",
       "selectPrompt": "Selecciona un arma para consultar sus perfiles."

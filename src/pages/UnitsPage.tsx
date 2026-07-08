@@ -24,16 +24,17 @@ import TableRowsIcon from '@mui/icons-material/TableRows';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useUnitData } from '../hooks/useUnitData';
+import { useWeaponData } from '../hooks/useWeaponData';
 import UnitFilterSidebar from '../components/units/UnitFilterSidebar';
 import UnitFilterChips from '../components/units/UnitFilterChips';
 import UnitList from '../components/units/UnitList';
+import WeaponFilterChips from '../components/weapons/WeaponFilterChips';
+import WeaponFilterSidebar from '../components/weapons/WeaponFilterSidebar';
 import WeaponList from '../components/weapons/WeaponList';
-import WeaponFilters from '../components/weapons/WeaponFilters';
 import { Unit } from '../types/unit';
 import { Weapon } from '../types/weapon';
 import type { FactionId } from '../types/faction';
-import { allWeapons } from '../data/weapons';
-import { weaponFactionId } from '../utils/images';
+import { weaponCatalogueEntryToWeapon } from '../data/weapons/adapter';
 
 type CatalogueTab = 'units' | 'weapons';
 type ViewMode = 'cards' | 'table';
@@ -61,12 +62,22 @@ export default function UnitsPage() {
     setCostRange,
     isOutOfYear,
   } = useUnitData();
+  const {
+    weapons: weaponEntries,
+    filters: weaponFilters,
+    availableFactions: weaponAvailableFactions,
+    yearBounds: weaponYearBounds,
+    typeCounts: weaponTypeCounts,
+    totalCount: weaponTotalCount,
+    setName: setWeaponName,
+    setFactions: setWeaponFactions,
+    setTypes: setWeaponTypes,
+    setYearRange: setWeaponYearRange,
+  } = useWeaponData();
   const activeTab: CatalogueTab = searchParams.get('tab') === 'weapons' ? 'weapons' : 'units';
   const [viewMode, setViewMode] = useState<ViewMode>('cards');
   const [unitPage, setUnitPage] = useState(1);
   const [filterDrawerOpen, setFilterDrawerOpen] = useState(false);
-  const [weaponName, setWeaponName] = useState('');
-  const [weaponFaction, setWeaponFaction] = useState<FactionId | ''>('');
 
   const unitPageCount = Math.ceil(units.length / UNITS_PER_PAGE);
   const paginatedUnits = useMemo(() => {
@@ -78,25 +89,10 @@ export default function UnitsPage() {
     return sorted.slice(start, start + UNITS_PER_PAGE);
   }, [units, unitPage, viewMode]);
   const visibleUnits = viewMode === 'table' ? units : paginatedUnits;
-
-  function getWeaponFaction(id: string): FactionId | '' {
-    return weaponFactionId(id) ?? '';
-  }
-
-  const weapons = allWeapons;
-
-  const weaponFactions = useMemo(() => {
-    const all = weapons.map((w) => getWeaponFaction(w.id)).filter((f): f is FactionId => !!f);
-    return [...new Set(all)].sort();
-  }, [weapons]);
-
-  const filteredWeapons = useMemo(() => {
-    return weapons.filter((w) => {
-      const matchesName = weaponName === '' || w.name.toLowerCase().includes(weaponName.toLowerCase());
-      const matchesFaction = weaponFaction === '' || getWeaponFaction(w.id) === weaponFaction;
-      return matchesName && matchesFaction;
-    });
-  }, [weapons, weaponName, weaponFaction]);
+  const visibleWeapons = useMemo(
+    () => weaponEntries.map(weaponCatalogueEntryToWeapon),
+    [weaponEntries],
+  );
 
   function handleTabChange(value: CatalogueTab) {
     setSearchParams(value === 'weapons' ? { tab: 'weapons' } : {});
@@ -129,6 +125,21 @@ export default function UnitsPage() {
     onKeywordsChange: (v: typeof filters.keywords) => { setKeywords(v); setUnitPage(1); },
     onYearRangeChange: (v: [number, number]) => { setYearRange(v); setUnitPage(1); },
     onCostRangeChange: (v: [number, number]) => { setCostRange(v); setUnitPage(1); },
+  };
+
+  const weaponSidebarProps = {
+    name: weaponFilters.name,
+    selectedFactions: weaponFilters.factions,
+    availableFactions: weaponAvailableFactions,
+    selectedTypes: weaponFilters.types,
+    typeCounts: weaponTypeCounts,
+    totalCount: weaponTotalCount,
+    yearRange: [weaponFilters.yearFrom, weaponFilters.yearTo] as [number, number],
+    yearBounds: weaponYearBounds,
+    onNameChange: setWeaponName,
+    onFactionsChange: setWeaponFactions,
+    onTypesChange: setWeaponTypes,
+    onYearRangeChange: setWeaponYearRange,
   };
 
   return (
@@ -233,26 +244,39 @@ export default function UnitsPage() {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: '1fr',
+            gridTemplateColumns: { xs: '1fr', md: '260px 1fr' },
             alignItems: 'start',
             gap: 3,
           }}
         >
+          {isSidebarVisible && <WeaponFilterSidebar {...weaponSidebarProps} />}
+
           <Box>
-            <WeaponFilters
-              name={weaponName}
-              faction={weaponFaction}
-              factions={weaponFactions}
-              onNameChange={setWeaponName}
-              onFactionChange={setWeaponFaction}
+            <WeaponFilterChips
+              {...weaponSidebarProps}
+              onOpenFilters={isSidebarVisible ? undefined : () => setFilterDrawerOpen(true)}
             />
             <WeaponList
-              weapons={filteredWeapons}
+              weapons={visibleWeapons}
               selectedId={null}
               viewMode={viewMode}
               onSelect={handleWeaponSelect}
             />
           </Box>
+
+          {!isSidebarVisible && (
+            <Drawer anchor="left" open={filterDrawerOpen} onClose={() => setFilterDrawerOpen(false)}>
+              <Box sx={{ width: 280, p: 2 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                  <Typography variant="h6">{t('weapons.sidebar.filters')}</Typography>
+                  <IconButton onClick={() => setFilterDrawerOpen(false)} aria-label={t('common.close')}>
+                    <CloseIcon />
+                  </IconButton>
+                </Box>
+                <WeaponFilterSidebar {...weaponSidebarProps} />
+              </Box>
+            </Drawer>
+          )}
         </Box>
       )}
     </Box>

@@ -343,6 +343,11 @@
     "description": "Description",
     "carriedBy": "Carried by",
     "noCarriers": "No catalogue units carry this weapon.",
+    "sidebar": {
+      "filters": "Filters",
+      "searchPlaceholder": "Weapon name...",
+      "weaponType": "Attack type"
+    },
     "detail": {
       "title": "Weapon details",
       "selectPrompt": "Select a weapon to view its profiles."

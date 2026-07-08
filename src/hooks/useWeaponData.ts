@@ -48,6 +48,7 @@ function matchesFilters(weapon: WeaponCatalogueEntry, filters: WeaponFilters, sk
   if (normalizedName && !weapon.name.toLocaleLowerCase().includes(normalizedName)) return false;
   if (filters.factions.length > 0 && !filters.factions.includes(weapon.faction)) return false;
   if (!skipTypes && filters.types.length > 0 && !filters.types.includes(weapon.type)) return false;
+  if (weapon.to < filters.yearFrom || weapon.from > filters.yearTo) return false;
   return true;
 }
 
